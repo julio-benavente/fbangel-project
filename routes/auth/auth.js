@@ -1,0 +1,321 @@
+const router = require("express").Router();
+const jwt = require("jsonwebtoken");
+
+// Models
+const User = require("../../models/User");
+const AdminUser = require("../../models/AdminUser");
+
+// Middlewares and utils
+const { createToken } = require("../../utils/createToken");
+const checkAuthLevel = require("../../middlewares/checkAuthLevel");
+const {
+  emailVerification,
+} = require("../../utils/emailsTemplates/emailVerification");
+const {
+  forgotPasswordEmail,
+} = require("../../utils/emailsTemplates/forgotPasswordEmail");
+const {
+  paypalEmailVerification,
+} = require("../../utils/emailsTemplates/paypalEmailVerification");
+
+const handleError = (err) => {
+  const errorMessage = {};
+  // If the email has already been used
+
+  if (err.code == 11000) {
+    errorMessage.email = "The email has already been used";
+  }
+
+  // Valadation error
+  if (err.errors && err.message.includes("user validation failed")) {
+    Object.keys(err.errors).forEach((i) => {
+      errorMessage[i] = err.errors[i].properties.message;
+    });
+  }
+
+  // If the password is wrong
+  if (err.message == "Invalid password") {
+    errorMessage.password = "The email or password is incorrect";
+  }
+
+  // if the email is wrong
+  if (err.message == "Invalid email") {
+    errorMessage.email = "The email or password is incorrect";
+  }
+
+  // if the email is wrong
+  if (err.message == "User doesn't exist") {
+    errorMessage.email = "The email or password is incorrect";
+  }
+
+  return errorMessage;
+};
+
+// @route GET /auth
+// @desc Verifies authorization (cookie)
+// @access Public
+router.post("/", checkAuthLevel, (req, res) => {
+  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+  const tokenApi = process.env.JWT_KEY;
+  const token = req.cookies.fbangelJWT;
+
+  try {
+    if (token) {
+      jwt.verify(token, tokenApi, async (err, decodedToken) => {
+        if (err) {
+          throw Error("The user is not authenticated");
+        } else {
+          const {
+            _doc: { _id, ...user },
+          } = await model.findById(decodedToken.data, {
+            email: 1,
+            firstName: 1,
+            lastName: 1,
+          });
+          res.json({ user: user });
+        }
+      });
+    } else {
+      throw Error("The user is not authenticated");
+    }
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+//@route GET /auth/logout
+//@desc Logout user
+//@access Pulbic
+router.get("/logout", (req, res) => {
+  try {
+    const token = req.cookies.fbangelJWT;
+    if (token) {
+      res.cookie("fbangelJWT", "token", { maxAge: 1 });
+      res.json({ message: "User logged out" });
+    } else {
+      throw Error("There is no user logged in");
+    }
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// @route GET /auth/login
+// @desc Users login
+// @access Public
+router.post("/login", checkAuthLevel, async (req, res) => {
+  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+  const { email, password } = req.body;
+
+  try {
+    const { emailVerified, ...user } = await model.login(email, password);
+
+    if (!emailVerified) {
+      const error = new Error("User has not been verfied");
+      error.emailVerified = "The email has not been verified";
+
+      res.status(400).json({ error });
+      return;
+    }
+
+    const token = createToken(user._id, "1d");
+
+    res.cookie("fbangelJWT", token, { httpOnly: true });
+    res.json({ user });
+  } catch (e) {
+    const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+// @route GET /auth/send-confirmation-email
+// @desc Users login
+// @access Public
+router.get("/send-confirmation-email", checkAuthLevel, async (req, res) => {
+  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+  const { email } = req.body;
+
+  try {
+    const user = await model.findOne({ email }, { emailVerified: 1 });
+    if (user.emailVerified) {
+      return res.json({ message: "The email has already been verified" });
+    }
+
+    if (!user) {
+      throw Error("User doesn't exist");
+    }
+
+    emailVerification(user._id, email);
+
+    res.json({
+      message:
+        "The confirmation email has already been sent. Check your email.",
+    });
+  } catch (e) {
+    const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+// @route PUT /auth/confirmation/:token
+// @desc Users login
+// @access Public
+router.get("/confirmation/:token", async (req, res) => {
+  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+
+  const tokenKey = process.env.EMAIL_VERIFICATION_KEY;
+  const { token } = req.params;
+
+  try {
+    await jwt.verify(token, tokenKey, async (error, decodedToken) => {
+      if (error) throw Error(error);
+
+      const user = await model.findById(decodedToken.data);
+
+      if (user) {
+        // Validate is users is already been verified
+        if (user.emailVerified) {
+          res.json({ message: "Account it's been already verified" });
+          return;
+        }
+
+        // Set verification True
+        await user.update({ $set: { emailVerified: true } });
+        res.json({ message: "Account verified" });
+      } else {
+        throw Error("User doesn't exist");
+      }
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// @route PUT /auth/forgot-password/
+// @desc Users login
+// @access Public
+router.put("/forgot-password", async (req, res) => {
+  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+  const { email } = req.body;
+
+  try {
+    const user = await model.findOne({ email });
+
+    if (!user) {
+      throw Error("User doesn't exist");
+    }
+
+    forgotPasswordEmail(user._id, email, model);
+
+    res.json({
+      message:
+        "The link to reset your password has already ben sent. Check your email.",
+    });
+  } catch (e) {
+    const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+router.put("/reset-password/:token", async (req, res) => {
+  const { password } = req.body;
+
+  const tokenKey = process.env.FORGOT_PASSWORD_KEY;
+  const { token } = req.params;
+
+  try {
+    await jwt.verify(token, tokenKey, async (error, decodedToken) => {
+      if (error) {
+        throw Error("The url token is incorrect or has expired");
+      }
+
+      var user = null;
+      user = await User.findById(decodedToken.data);
+
+      if (!user) {
+        user = await AdminUser.findById(decodedToken.data);
+      }
+
+      if (user) {
+        if (user.resetPasswordToken !== token) {
+          console.log("user.resetPasswordToken", user.resetPasswordToken);
+          console.log("token", token);
+          throw Error("Incorrect reset password URL");
+        }
+
+        // Set verification True
+        user.password = password;
+        user.resetPasswordToken = "";
+        user.save();
+
+        res.json({ message: "The password has already been changed" });
+      } else {
+        throw Error("User doesn't exist");
+      }
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+router.put("/send-paypal-email-confirmation", async (req, res) => {
+  const { email } = req.body;
+
+  try {
+    const user = await User.findOne(
+      { email },
+      { paypalEmailVerification: 1, paypalEmail: 1 }
+    );
+
+    if (!user) {
+      throw Error("User doesn't exist");
+    }
+
+    if (paypalEmailVerification === true) {
+      res.json({
+        message: "Your paypal email has already been confirmed",
+      });
+      return;
+    }
+
+    paypalEmailVerification(user, user.paypalEmail);
+
+    res.json({
+      message:
+        "The link to confirm your paypal email has already been sent. Check your email.",
+    });
+  } catch (e) {
+    const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+router.get("/confirm-paypal-email/:token", async (req, res) => {
+  const tokenKey = process.env.PAYPAL_EMAIL_CONFIRMATION;
+  const { token } = req.params;
+
+  try {
+    await jwt.verify(token, tokenKey, async (error, decodedToken) => {
+      if (error) {
+        throw Error("The url token is incorrect or has expired");
+        return;
+      }
+
+      const user = await User.findById(decodedToken.data);
+
+      if (user) {
+        // Set verification True
+        await user.updateOne({
+          $set: { paypalEmailVerified: true },
+        });
+        res.json({ message: "Your paypal account has been verified" });
+      } else {
+        throw Error("User doesn't exist");
+      }
+    });
+  } catch (error) {
+    res.status(400).json({ error });
+  }
+});
+
+module.exports = router;
