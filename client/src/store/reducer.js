@@ -10,7 +10,6 @@ const combinedReducer = combineReducers({
 const rootReducer = (state, action) => {
   if (["auth/logoutSucceeded", "auth/logoutRequested"].includes(action.type)) {
     state = undefined;
-    return state;
   }
   return combinedReducer(state, action);
 };
