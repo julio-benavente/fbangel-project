@@ -3,11 +3,11 @@ import { authRequestBegan } from "../actions/auth";
 
 const initialState = () => ({
   user: {
-    firstName: "Jose",
-    lastName: "Luis",
-    id: "609eb3b0bc713531e40391c3",
-    email: "jose.luis",
-    authLevel: "user",
+    firstName: "",
+    lastName: "",
+    id: "",
+    email: "",
+    authLevel: "",
   },
   loading: false,
   errors: {
@@ -24,6 +24,8 @@ const request = (auth, action) => {
 };
 
 const authenticate = (auth, action) => {
+  // console.log("action.payload", action.payload);
+
   const { _id, firstName, lastName, email, authLevel } = action.payload.user;
   auth = initialState();
   auth.user.firstName = firstName || initialState().user.firstName;
@@ -36,11 +38,16 @@ const authenticate = (auth, action) => {
 };
 
 const error = (auth, action) => {
+  // console.log("action.payload", action.payload);
+
   const { email, password } = action.payload.error;
   auth = initialState();
   auth.loading = false;
-  auth.errors.email = email || initialState().errors.email;
-  auth.errors.password = password || initialState().errors.password;
+
+  if (action.payload.error) {
+    auth.errors.email = email || initialState().errors.email;
+    auth.errors.password = password || initialState().errors.password;
+  }
 
   return auth;
 };
@@ -57,7 +64,7 @@ const slice = createSlice({
     loginFailed: error,
     logoutRequested: request,
     logoutSucceeded: (auth, action) => {
-      return initialState();
+      // return initialState();
     },
     logoutFailed: error,
   },
@@ -80,7 +87,7 @@ export const {
 // Actions
 const url = "/auth";
 
-export const getAuth = () => (dispatch, getState) => {
+export const requestAuth = () => (dispatch, getState) => {
   return dispatch(
     authRequestBegan({
       url,

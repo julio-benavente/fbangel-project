@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
-import { requestUsers, getUsers } from "../../../store/entities/users";
+import {
+  requestUsers,
+  getUsers,
+  getUsersState,
+} from "../../../store/entities/users";
 import { useDispatch, useSelector } from "react-redux";
 
 // Components
@@ -27,22 +31,27 @@ const UsersPage = () => {
         const columns = [
           {
             column: "name",
-            width: 20,
+            width: 15,
             min: 100,
           },
           {
             column: "status",
-            width: 10,
+            width: 8,
+            min: 100,
+          },
+          {
+            column: "userType",
+            width: 8,
             min: 100,
           },
           {
             column: "email",
-            width: 20,
+            width: 18,
             min: 100,
           },
           {
             column: "country",
-            width: 10,
+            width: 8,
             min: 100,
           },
           {
@@ -52,7 +61,7 @@ const UsersPage = () => {
           },
           {
             column: "payments",
-            width: 10,
+            width: 8,
             min: 100,
           },
           {
@@ -86,13 +95,12 @@ const UsersPage = () => {
     return () => window.removeEventListener("resize", setUsersTableWidth);
   }, []);
 
+  const { loading } = useSelector(getUsersState);
   const dispatch = useDispatch();
   const users = useSelector(getUsers);
   useEffect(() => {
     dispatch(requestUsers());
   }, []);
-
-  console.log(users);
 
   return (
     <Users className="Users">
@@ -102,6 +110,7 @@ const UsersPage = () => {
           <div className="tr" style={{ ...usersTableWidth }}>
             <div className="th name">Nombre</div>
             <div className="th status">Estado</div>
+            <div className="th userType">Tipo de usuario</div>
             <div className="th email">Email</div>
             <div className="th country">Pais</div>
             <div className="th phone">Telefono</div>
@@ -110,7 +119,13 @@ const UsersPage = () => {
           </div>
         </div>
         <div className="tbody">
-          {users.length !== 0 &&
+          {loading && (
+            <div className="tr loading" style={{ ...usersTableWidth }}>
+              Cargando...
+            </div>
+          )}
+          {!loading &&
+            users.length !== 0 &&
             users.map((user, index) => (
               <UserRow
                 user={user}

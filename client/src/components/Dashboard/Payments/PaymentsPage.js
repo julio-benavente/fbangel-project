@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  userPaymentsRequest,
+  requestUserPayments,
+  requestPayments,
   getUserPayments,
+  getPaymentsState,
 } from "../../../store/entities/payments";
 import { getUser } from "../../../store/auth/auth";
 
@@ -16,6 +18,7 @@ import {
 const PaymentsPage = () => {
   const dispatch = useDispatch();
 
+  const { loading } = useSelector(getPaymentsState);
   const payments = useSelector(getUserPayments);
   const user = useSelector(getUser);
 
@@ -80,79 +83,121 @@ const PaymentsPage = () => {
     return () => window.removeEventListener("resize", setTableWidth);
   }, []);
 
-  useEffect(async () => {
-    const response = await dispatch(
-      userPaymentsRequest({
-        id: user.id,
-      })
-    );
+  useEffect(() => {
+    const request = async () => {
+      if (user.authLevel === "user") {
+        const response = await dispatch(
+          requestUserPayments({
+            id: user.id,
+          })
+        );
+      }
+
+      if (user.authLevel === "admin") {
+        const response = await dispatch(requestPayments());
+      }
+    };
+
+    request();
   }, []);
 
   return (
     <Payments className="Payments">
       <Title>Payments</Title>
-      <Table>
-        <div className="thead">
-          <div className="tr" style={{ ...tableWidth }}>
-            <div className="th">Concepto</div>
-            <div className="th">Cuenta de paypal</div>
-            <div className="th">Fecha de pago</div>
-            <div className="th">Estado</div>
-            <div className="th">Monto</div>
+      {user.authLevel === "user" && (
+        <Table className="displayUser">
+          <div className="thead">
+            <div className="tr" style={{ ...tableWidth }}>
+              <div className="th">Concepto</div>
+              <div className="th">Cuenta de paypal</div>
+              <div className="th">Fecha de pago</div>
+              <div className="th">Estado</div>
+              <div className="th">Monto</div>
+            </div>
           </div>
-        </div>
-        <div className="tbody">
-          {payments.map((payment, index) => {
-            const { concept, paypalEmail, creationDate, amount, status } =
-              payment;
-
-            const date = new Date(creationDate).toLocaleDateString([], {
-              day: "numeric",
-              month: "2-digit",
-              year: "numeric",
-            });
-
-            return (
-              <div className="tr" style={{ ...tableWidth }}>
-                <div className="td">{concept}</div>
-                <div className="td">{paypalEmail}</div>
-                <div className="td">{date}</div>
-                <div className={`td ${status}`}>{status}</div>
-                <div className="td">
-                  ${" "}
-                  {(Math.round((amount + Number.EPSILON) * 100) / 100).toFixed(
-                    2
-                  )}
-                </div>
+          <div className="tbody">
+            {loading && (
+              <div className="tr loading" style={{ ...tableWidth }}>
+                Cargando...
               </div>
-            );
-          })}
-        </div>
+            )}
 
-        {/* 
-        <div className="tbody">
-          <div className="tr" style={{ ...tableWidth }}>
-            <div className="td">Usuario referido : marco.aurelio@gmail.com</div>
-            <div className="td">jose.luis@gmail.com</div>
-            <div className="td">02/06/2021</div>
-            <div className="td approved">Aprobado</div>
-            <div className="td">$ 5.00</div>
+            {!loading &&
+              payments.map((payment, index) => {
+                const { concept, paypalEmail, creationDate, amount, status } =
+                  payment;
+
+                const date = new Date(creationDate).toLocaleDateString([], {
+                  day: "numeric",
+                  month: "2-digit",
+                  year: "numeric",
+                });
+
+                return (
+                  <div className="tr" key={index} style={{ ...tableWidth }}>
+                    <div className="td">{concept}</div>
+                    <div className="td">{paypalEmail}</div>
+                    <div className="td">{date}</div>
+                    <div className={`td ${status}`}>{status}</div>
+                    <div className="td">
+                      ${" "}
+                      {(
+                        Math.round((amount + Number.EPSILON) * 100) / 100
+                      ).toFixed(2)}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
-          <div className="tr" style={{ ...tableWidth }}>
-            <div className="td">Pago mensual por alquiler : JUN-2021</div>
-            <div className="td">jose.luis@gmail.com</div>
-            <div className="td">-</div>
-            <div className="td pending">Pendiente</div>
-            <div className="td">$ 30.00</div>
+        </Table>
+      )}
+
+      {user.authLevel === "admin" && (
+        <Table className="displayAdmin">
+          <div className="thead">
+            <div className="tr" style={{ ...tableWidth }}>
+              <div className="th">Concepto</div>
+              <div className="th">Cuenta de paypal</div>
+              <div className="th">Fecha de pago</div>
+              <div className="th">Estado</div>
+              <div className="th">Monto</div>
+            </div>
           </div>
-          <div className="tr" style={{ ...tableWidth }}>
-            <div className="td">Pago mensual por alquiler : JUN-2021</div>
-            <div className="td">jose.luis@gmail.com</div>
-            <div className="td">-</div>
-            <div className="td pending">Pendiente</div>
-            <div className="td">$ 30.00</div>
-          </div> */}
-      </Table>
+          <div className="tbody">
+            {loading && (
+              <div className="tr loading" style={{ ...tableWidth }}>
+                Cargando...
+              </div>
+            )}
+            {!loading &&
+              payments.map((payment, index) => {
+                const { concept, paypalEmail, creationDate, amount, status } =
+                  payment;
+
+                const date = new Date(creationDate).toLocaleDateString([], {
+                  day: "numeric",
+                  month: "2-digit",
+                  year: "numeric",
+                });
+
+                return (
+                  <div className="tr" key={index} style={{ ...tableWidth }}>
+                    <div className="td">{concept}</div>
+                    <div className="td">{paypalEmail}</div>
+                    <div className="td">{date}</div>
+                    <div className={`td ${status}`}>{status}</div>
+                    <div className="td">
+                      ${" "}
+                      {(
+                        Math.round((amount + Number.EPSILON) * 100) / 100
+                      ).toFixed(2)}
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </Table>
+      )}
     </Payments>
   );
 };

@@ -16,6 +16,7 @@ import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditio
 import ReferralRegistration from "./components/ReferralRegistration/ReferralRegistrationPage";
 import Login from "./components/Login/LoginPage";
 import Dashboard from "./components/Dashboard/DashboardPage";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 // Styles
 import GlobalStyle from "./styles/GlobalStyles";
@@ -42,7 +43,9 @@ const App = () => {
             component={ReferralRegistration}
           />
           <Route path="/login" component={Login} />
-          <Route path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
           <Route path="*" render={() => <h1>Pagina no encontrada</h1>} />
         </Switch>
         <Footer />

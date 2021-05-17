@@ -19,6 +19,7 @@ const slice = createSlice({
     paymentsRequestSucceeded: (payments, action) => {
       const { payments: paymentsResponse } = action.payload;
       payments.list = paymentsResponse;
+      payments.loading = false;
 
       return payments;
     },
@@ -38,7 +39,7 @@ export const {
 // Actions
 const url = "/api/payments";
 
-export const userPaymentsRequest =
+export const requestUserPayments =
   ({ id }) =>
   (dispatch, getState) => {
     return dispatch(
@@ -51,7 +52,7 @@ export const userPaymentsRequest =
     );
   };
 
-export const paymentsRequest = (dispatch, getState) => {
+export const requestPayments = () => (dispatch, getState) => {
   return dispatch(
     apiCallBegan({
       url,
@@ -66,4 +67,9 @@ export const paymentsRequest = (dispatch, getState) => {
 export const getUserPayments = createSelector(
   (state) => state.entities.payments.list,
   (list) => list
+);
+
+export const getPaymentsState = createSelector(
+  (state) => state.entities.payments,
+  (paymentsState) => paymentsState
 );

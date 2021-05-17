@@ -38,13 +38,13 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm({ mode: "all" });
 
-  useEffect(() => {
-    const navbar = document.querySelector(".Navbar");
-    const footer = document.querySelector(".Footer");
+  // useEffect(() => {
+  //   const navbar = document.querySelector(".Navbar");
+  //   const footer = document.querySelector(".Footer");
 
-    navbar.classList.add("display-none");
-    footer.classList.add("display-none");
-  }, []);
+  //   navbar.classList.add("display-none");
+  //   footer.classList.add("display-none");
+  // }, []);
 
   const authErrors = useSelector(getErrors);
   const user = useSelector(getUser);

@@ -19,6 +19,7 @@ const slice = createSlice({
     usersRequestSucceeded: (users, action) => {
       const { users: usersResponse } = action.payload;
       users.list = usersResponse;
+      users.loading = false;
 
       return users;
     },
@@ -52,4 +53,9 @@ export const requestUsers = () => (dispatch, getState) => {
 export const getUsers = createSelector(
   (state) => state.entities.users.list,
   (list) => list
+);
+
+export const getUsersState = createSelector(
+  (state) => state.entities.users,
+  (usersState) => usersState
 );

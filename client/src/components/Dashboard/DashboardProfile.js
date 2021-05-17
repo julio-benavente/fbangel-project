@@ -27,8 +27,6 @@ const MainComponent = () => {
   const logout = async () => {
     const response = await dispatch(logOut());
 
-    console.log(response);
-
     if ([logoutSucceeded.type, logoutFailed.type].includes(response.type)) {
       push("/");
     }

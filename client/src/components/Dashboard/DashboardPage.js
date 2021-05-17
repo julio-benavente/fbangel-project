@@ -11,13 +11,13 @@ import Users from "./Users/UsersPage";
 import { Dashboard, Main } from "../../styles/Dashboard/DashboardPageStyles";
 
 const DashboardPage = () => {
-  useEffect(() => {
-    const navbar = document.querySelector(".Navbar");
-    const footer = document.querySelector(".Footer");
+  // useEffect(() => {
+  //   const navbar = document.querySelector(".Navbar");
+  //   const footer = document.querySelector(".Footer");
 
-    navbar.classList.add("display-none");
-    footer.classList.add("display-none");
-  });
+  //   navbar.classList.add("display-none");
+  //   footer.classList.add("display-none");
+  // });
 
   const { path } = useRouteMatch();
 

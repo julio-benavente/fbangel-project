@@ -54,8 +54,7 @@ const handleError = (err) => {
 // @route GET /auth
 // @desc Verifies authorization (cookie)
 // @access Public
-router.post("/", checkAuthLevel, (req, res) => {
-  const model = req.userAuthLevel === "admin" ? AdminUser : User;
+router.get("/", (req, res) => {
   const tokenApi = process.env.JWT_KEY;
   const token = req.cookies.fbangelJWT;
 
@@ -64,16 +63,32 @@ router.post("/", checkAuthLevel, (req, res) => {
       jwt.verify(token, tokenApi, async (err, decodedToken) => {
         if (err) {
           throw Error("The user is not authenticated");
-        } else {
-          const {
-            _doc: { _id, ...user },
-          } = await model.findById(decodedToken.data, {
-            email: 1,
+        }
+
+        var user = null;
+        user = await User.findById(decodedToken.data, {
+          firstName: 1,
+          lastName: 1,
+          id: 1,
+          email: 1,
+          authLevel: 1,
+        });
+
+        if (!user) {
+          user = await AdminUser.findById(decodedToken.data, {
             firstName: 1,
             lastName: 1,
+            id: 1,
+            email: 1,
+            authLevel: 1,
           });
-          res.json({ user: user });
         }
+
+        if (!user) {
+          throw Error("The user doesn't exist");
+        }
+
+        res.json({ user });
       });
     } else {
       throw Error("The user is not authenticated");
@@ -238,8 +253,6 @@ router.put("/reset-password/:token", async (req, res) => {
 
       if (user) {
         if (user.resetPasswordToken !== token) {
-          console.log("user.resetPasswordToken", user.resetPasswordToken);
-          console.log("token", token);
           throw Error("Incorrect reset password URL");
         }
 
