@@ -1,9 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import {
-  authRequestBegan,
-  authRequestFailed,
-  authRequestSucceded,
-} from "../actions/auth";
+import { authRequestBegan } from "../actions/auth";
 
 const initialState = () => ({
   user: {
