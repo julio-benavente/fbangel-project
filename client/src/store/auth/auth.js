@@ -62,11 +62,11 @@ const slice = createSlice({
     loginRequested: request,
     loginSucceeded: authenticate,
     loginFailed: error,
-    logoutRequested: request,
+    logoutRequested: (auth, action) => {},
     logoutSucceeded: (auth, action) => {
       // return initialState();
     },
-    logoutFailed: error,
+    logoutFailed: (auth, action) => {},
   },
 });
 
