@@ -209,7 +209,7 @@ router.get("/confirmation/:token", async (req, res) => {
 // @route PUT /auth/forgot-password/
 // @desc Users login
 // @access Public
-router.put("/forgot-password", async (req, res) => {
+router.post("/forgotten-password", async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
   const { email } = req.body;
 
@@ -227,6 +227,7 @@ router.put("/forgot-password", async (req, res) => {
         "The link to reset your password has already ben sent. Check your email.",
     });
   } catch (e) {
+    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }

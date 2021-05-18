@@ -136,9 +136,15 @@ router.post("/registration/:userType", async (req, res) => {
 //@route /api/referrals/testing
 //@desc
 //@access Public
+
+const os = require("os");
 router.get("/testing", async (req, res) => {
   const { modelName } = User;
-  console.log(modelName);
+  res.json({
+    hostname: req.hostname,
+    osHostname: os.hostname(),
+    hostnameHost: req.header("host"),
+  });
 });
 
 //@route /api/referrals/testing

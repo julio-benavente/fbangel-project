@@ -15,6 +15,7 @@ import NoValid from "./components/NoValid/NoValidPage";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditionsPage";
 import ReferralRegistration from "./components/ReferralRegistration/ReferralRegistrationPage";
 import Login from "./components/Login/LoginPage";
+import ForgotPassword from "./components/ForgotPassword/ForgotPasswordPage";
 import Dashboard from "./components/Dashboard/DashboardPage";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -43,6 +44,7 @@ const App = () => {
             component={ReferralRegistration}
           />
           <Route path="/login" component={Login} />
+          <Route path="/forgot-password" component={ForgotPassword} />
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>

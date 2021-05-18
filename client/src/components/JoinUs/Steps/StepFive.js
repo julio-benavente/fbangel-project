@@ -14,9 +14,10 @@ const StepFive = () => {
     stepFour: { paymentMethod },
   } = getValues();
 
-  const [emailConfirmationMessage, setEmailConfirmatioMessage] = useState(null);
+  const [emailConfirmationMessage, setEmailConfirmationMessage] =
+    useState(null);
   const sendEmailConfirmation = (email) => {
-    setEmailConfirmatioMessage("The email has already been sent");
+    setEmailConfirmationMessage("The email has already been sent");
     axios.post("/auth/send-confirmation-email", {
       email,
     });

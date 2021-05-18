@@ -57,6 +57,11 @@ export const LoginForm = styled.form`
       color: ${(props) => props.theme.color.secondary};
       font-size: 0.75rem;
       bottom: 0;
+
+      &.sendEmailConfirmation {
+        font-weight: 600;
+        cursor: pointer;
+      }
     }
   }
 `;

@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 import {
   logIn,
   getUser,
@@ -64,6 +65,14 @@ const LoginPage = () => {
     response.type === loginSucceeded.type && push("/dashboard");
   };
 
+  const [emailConfirmationSent, setEmailConfirmationSent] = useState(false);
+  const sendEmailConfirmation = (email) => {
+    setEmailConfirmationSent(true);
+    axios.post("/auth/send-confirmation-email", {
+      email,
+    });
+  };
+
   return (
     <Login>
       <HomeLink to="/">
@@ -122,9 +131,22 @@ const LoginPage = () => {
             {authErrors.password && (
               <p className="error">{authErrors.password}</p>
             )}
+            {authErrors.emailVerified && (
+              <p
+                className="error sendEmailConfirmation"
+                onClick={() => sendEmailConfirmation(email)}
+              >
+                Tu cuenta no está verificada. Haz click aquí para recibir un
+                nuevo correo de confirmación
+              </p>
+            )}
+            {emailConfirmationSent && (
+              <p className="error">The email has already been sent</p>
+            )}
           </div>
-          <a href="/#/login">¿No recuerdas tu contraseña? Haz click aquí</a>
-          <a href="/#/login">Reenviar email de confirmación</a>
+          <Link to="/forgot-password">
+            ¿No recuerdas tu contraseña? Haz click aquí
+          </Link>
           <Submit>Log in</Submit>
         </LoginForm>
       </LoginFormSide>

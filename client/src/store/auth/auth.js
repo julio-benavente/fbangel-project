@@ -14,6 +14,7 @@ const initialState = () => ({
     email: "",
     password: "",
     other: "",
+    emailVerified: "",
   },
 });
 
@@ -24,8 +25,6 @@ const request = (auth, action) => {
 };
 
 const authenticate = (auth, action) => {
-  // console.log("action.payload", action.payload);
-
   const { _id, firstName, lastName, email, authLevel } = action.payload.user;
   auth = initialState();
   auth.user.firstName = firstName || initialState().user.firstName;
@@ -38,15 +37,16 @@ const authenticate = (auth, action) => {
 };
 
 const error = (auth, action) => {
-  // console.log("action.payload", action.payload);
-
-  const { email, password } = action.payload.error;
   auth = initialState();
   auth.loading = false;
 
   if (action.payload.error) {
+    const { email, password, emailVerified } = action.payload.error;
+
     auth.errors.email = email || initialState().errors.email;
     auth.errors.password = password || initialState().errors.password;
+    auth.errors.emailVerified =
+      emailVerified || initialState().errors.emailVerified;
   }
 
   return auth;
@@ -63,9 +63,7 @@ const slice = createSlice({
     loginSucceeded: authenticate,
     loginFailed: error,
     logoutRequested: (auth, action) => {},
-    logoutSucceeded: (auth, action) => {
-      // return initialState();
-    },
+    logoutSucceeded: (auth, action) => {},
     logoutFailed: (auth, action) => {},
   },
 });
