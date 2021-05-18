@@ -28,20 +28,18 @@ const OptionInput = ({
       <Options width={width}>
         {options.map((option, index) => {
           return (
-            <>
-              <Option key={index}>
-                <input
-                  style={{ opacity: 0 }}
-                  type={type}
-                  value={option[1]}
-                  // {register}
-                  {...register}
-                />
+            <Option key={index}>
+              <input
+                style={{ opacity: 0 }}
+                type={type}
+                value={option[1]}
+                // {register}
+                {...register}
+              />
 
-                {option[0]}
-                <span className={`box ${type}`}></span>
-              </Option>
-            </>
+              {option[0]}
+              <span className={`box ${type}`}></span>
+            </Option>
           );
         })}
       </Options>

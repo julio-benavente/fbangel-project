@@ -29,6 +29,7 @@ const StepTwo = ({
     register,
     control,
     trigger,
+    getValues,
     formState: { errors },
   } = methods;
 
@@ -228,7 +229,8 @@ const StepTwo = ({
                 message: t("join_us.step_two.phone.error_1"),
               },
               pattern: {
-                value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                value:
+                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
                 message: t("join_us.step_two.phone.error_2"),
               },
             }}
@@ -263,8 +265,52 @@ const StepTwo = ({
             message: t("join_us.step_two.email.error_1"),
           },
           pattern: {
-            value: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+            value:
+              /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
             message: t("join_us.step_two.email.error_2"),
+          },
+        })}
+      />
+
+      <TextInput
+        className="password"
+        question="Registre una contraseña"
+        type="password"
+        error={
+          errors.stepTwo &&
+          errors.stepTwo.password &&
+          errors.stepTwo.password.message
+        }
+        register={register("stepTwo.password", {
+          required: {
+            value: true,
+            message: "Por favor, registre este campo",
+          },
+          validate: {
+            min: (v) => (v.length < 8 ? "Mínimo 8 caracteres" : true),
+          },
+        })}
+      />
+
+      <TextInput
+        className="passwordConfirmation"
+        question="Confirme su contraseña"
+        type="password"
+        error={
+          errors.stepTwo &&
+          errors.stepTwo.passwordConfirmation &&
+          errors.stepTwo.passwordConfirmation.message
+        }
+        register={register("stepTwo.passwordConfirmation", {
+          required: {
+            value: true,
+            message: "Por favor, registre este campo",
+          },
+          validate: {
+            isTheSame: (v) =>
+              !(v === getValues("stepTwo.password"))
+                ? "Las contraseñas no coinciden"
+                : true,
           },
         })}
       />

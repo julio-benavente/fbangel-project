@@ -12,12 +12,13 @@ export const UsersTable = styled.div`
 
   .tr {
     display: grid;
+    align-items: center;
     grid-auto-columns: auto;
     grid-auto-flow: column;
     background: ${(props) => props.theme.color.white};
     height: 55px;
     margin-bottom: 10px;
-    padding: 10px 20px;
+    padding: 0px 20px;
     align-items: center;
     border-radius: 5px;
     box-shadow: 3px 3px 7px ${(props) => props.theme.color.gray300};
@@ -51,6 +52,7 @@ export const UsersTable = styled.div`
       &.status,
       &.country,
       &.phone,
+      &.userType,
       &.email {
         justify-self: center;
       }

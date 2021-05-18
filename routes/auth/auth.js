@@ -146,7 +146,7 @@ router.post("/login", checkAuthLevel, async (req, res) => {
 // @route GET /auth/send-confirmation-email
 // @desc Users login
 // @access Public
-router.get("/send-confirmation-email", checkAuthLevel, async (req, res) => {
+router.post("/send-confirmation-email", checkAuthLevel, async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
   const { email } = req.body;
 

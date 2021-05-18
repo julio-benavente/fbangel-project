@@ -32,7 +32,6 @@ const Form = () => {
   const { t } = useTranslation();
   const [formStep, setFormStep] = useState(1);
   const formData = useRef();
-  const [isRequesting, setIsRequesting] = useState(false);
 
   const defaultValues = {
     stepOne: {
@@ -43,11 +42,13 @@ const Form = () => {
       haveFriends: "yes",
     },
     stepTwo: {
-      name: "julio",
-      lastname: "julio",
-      email: "julio@julio.com",
+      firstName: "emanuel",
+      lastName: "emanuel",
+      email: "emmanuela6@monsterhom.com",
       country: "Peru",
       city: "Lima",
+      password: "emanuel132",
+      passwordConfirmation: "emanuel132",
       // birthday: "1982-10-06T05:00:00.000Z",
       phone: "51934988135",
     },
@@ -55,14 +56,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      username: "julio@julio.com",
-      password: "julio1234",
+      fbUsername: "emmanuela6@monsterhom.com",
+      fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "julio@julio.com",
-      paypalEmailConfirmation: "julio@julio.com",
+      paypalEmail: "emmanuela6@monsterhom.com",
+      paypalEmailConfirmation: "emmanuela6@monsterhom.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -71,39 +72,32 @@ const Form = () => {
   const methods = useForm({
     mode: "all",
   });
-  const history = useHistory();
 
   const {
     handleSubmit,
     trigger,
     getValues,
     watch,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isSubmitting },
   } = methods;
 
+  const history = useHistory();
+
   const onSubmit = async (data) => {
-    // Spinner on
-    setIsRequesting(true);
-    const response = await fetchCandidateInformation(data);
-    console.log(response);
-    const { status } = response;
+    if (!isSubmitting) {
+      const response = await fetchCandidateInformation(data);
+      const { status } = response;
 
-    if (status && status === 200) {
-      handleFormStep(1, formStep);
-    } else {
-      console.log("incomplete");
-      setIsRequesting(true);
-      const incompleteCandidate = await fetchCandidateInformation(
-        data,
-        "incomplete"
-      );
-      console.log(incompleteCandidate);
+      if (status && status === 200) {
+        handleFormStep(1, formStep);
+      } else {
+        const incompleteCandidate = await fetchCandidateInformation(
+          data,
+          "incomplete"
+        );
+      }
+      return null;
     }
-
-    // Spinner off
-    setIsRequesting(false);
-
-    return null;
   };
 
   const fetchCandidateInformation = async (data, type = "complete") => {
@@ -143,13 +137,8 @@ const Form = () => {
         (await encodeImage(documentImage[0])),
     };
 
-    console.log(candidateInformation);
     try {
-      const response = await axios.post(
-        "api/users/registration/incompleteRental",
-        candidateInformation
-      );
-      console.log(response);
+      const response = await axios.post(url, candidateInformation);
       return response;
     } catch (error) {
       return { error: error.message, response: error.response };
@@ -238,7 +227,7 @@ const Form = () => {
               {t("join_us.button.previous")}
             </Button>
             <SubmitButton type="submit">
-              {isRequesting ? <LoadingSvg /> : t("join_us.button.send")}
+              {isSubmitting ? <LoadingSvg /> : t("join_us.button.send")}
             </SubmitButton>
           </Buttons>
         );

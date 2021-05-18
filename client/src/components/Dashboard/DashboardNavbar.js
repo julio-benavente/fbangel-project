@@ -1,5 +1,7 @@
 import React from "react";
 import { useRouteMatch, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../store/auth/auth";
 
 // Styles
 import {
@@ -17,6 +19,9 @@ import { ReactComponent as ConfigurationSvg } from "../../assets/svgs/configurat
 const MainComponent = () => {
   const { path } = useRouteMatch();
   const { pathname } = useLocation();
+
+  const { authLevel } = useSelector(getUser);
+
   return (
     <DashboardNavbar>
       <Logo>fbangel</Logo>
@@ -41,10 +46,12 @@ const MainComponent = () => {
           <p>Configuration</p>
         </NavbarItem>
 
-        <NavbarItem activeClassName="active" to={() => `${path}/users`}>
-          <UsersSvg />
-          <p>Users</p>
-        </NavbarItem>
+        {authLevel === "admin" && (
+          <NavbarItem activeClassName="active" to={() => `${path}/users`}>
+            <UsersSvg />
+            <p>Users</p>
+          </NavbarItem>
+        )}
       </NavbarWrapper>
     </DashboardNavbar>
   );

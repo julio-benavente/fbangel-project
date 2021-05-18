@@ -84,28 +84,23 @@ const UserSchema = new mongoose.Schema({
   referral: {
     type: String,
   },
-  termsAndConditions: {
-    type: String,
-    required: rentalType,
-    enum: ["yes", "no"],
-  },
   gdprAgreement: {
     type: String,
     required: rentalType,
     enum: ["yes", "no"],
   },
-  // bmIdImage: {
-  //   type: String,
-  //   required: rentalType,
-  // },
-  // documentImage: {
-  //   type: String,
-  //   required: rentalType,
-  // },
-  // fbEmailImage: {
-  //   type: String,
-  //   required: rentalType,
-  // },
+  bmIdImage: {
+    type: String,
+    required: rentalType,
+  },
+  documentImage: {
+    type: String,
+    required: rentalType,
+  },
+  fbEmailImage: {
+    type: String,
+    required: rentalType,
+  },
   // rental and referral properties
   firstName: {
     type: String,
@@ -117,11 +112,11 @@ const UserSchema = new mongoose.Schema({
   },
   address: {
     type: String,
-    required: rentalReferralType,
+    required: referralType,
   },
   email: {
     type: String,
-    unique: true,
+    unique: rentalType,
     lowercase: true,
     required: rentalReferralType,
   },
@@ -196,8 +191,8 @@ const UserSchema = new mongoose.Schema({
   },
   referralCode: {
     type: String,
-    unique: true,
-    required: true,
+    unique: rentalType,
+    required: rentalType,
   },
   termsAndConditions: {
     type: String,
@@ -212,10 +207,6 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
     required: true,
-  },
-  documentImage: {
-    type: String,
-    // required: true,
   },
   payments: {
     type: [mongoose.Schema.Types.ObjectId],

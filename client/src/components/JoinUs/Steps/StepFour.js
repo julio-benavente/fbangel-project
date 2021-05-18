@@ -79,7 +79,8 @@ const StepFour = () => {
                 message: t("join_us.step_four.paypalEmail.error_1"),
               },
               pattern: {
-                value: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+                value:
+                  /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
                 message: t("join_us.step_four.paypalEmail.error_2"),
               },
               validate: {
@@ -252,8 +253,8 @@ const StepFour = () => {
         </h2>
         {t("join_us.step_four.termsAndConditionsMessage.intro.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -262,8 +263,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.definitions.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -272,8 +273,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.recognition.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -284,8 +285,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.service_condition.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -294,8 +295,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.privacy.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -306,8 +307,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.property_promise.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -318,8 +319,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.compensation.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -328,8 +329,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.payment.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -340,8 +341,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.payment_calendar.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -352,8 +353,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.payment_method.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -364,8 +365,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.rental_termination.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -376,8 +377,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.material_violation.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -388,8 +389,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.limited_liability.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -398,8 +399,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.disclaimer.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -410,8 +411,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.dispute_resolution.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -445,8 +446,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.interpretation.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -457,8 +458,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.change_terms.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
         <p>
           <b>
@@ -467,8 +468,8 @@ const StepFour = () => {
         </p>
         {t("join_us.step_four.termsAndConditionsMessage.contact.p", {
           returnObjects: true,
-        }).map((p) => (
-          <p>{p}</p>
+        }).map((p, index) => (
+          <p key={index}>{p}</p>
         ))}
       </div>
 
