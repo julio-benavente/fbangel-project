@@ -1,9 +1,11 @@
 const { transporter } = require("../emailTransporter");
 const { createToken } = require("../createToken");
 
-const forgotPasswordEmail = async (id, to, model) => {
+const forgotPasswordEmail = async (id, to, model, hostname) => {
   const token = createToken(id, "1d", process.env.FORGOT_PASSWORD_KEY);
-  const url = `http://localhost:3000/password-reset/${token}`;
+  const url = `${
+    hostname === "localhost" ? "http://localhost:3000/#" : hostname
+  }/reset-password/${token}`;
   try {
     const emailResponse = await transporter.sendMail({
       to,

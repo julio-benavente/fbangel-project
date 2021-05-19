@@ -15,7 +15,8 @@ import NoValid from "./components/NoValid/NoValidPage";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditionsPage";
 import ReferralRegistration from "./components/ReferralRegistration/ReferralRegistrationPage";
 import Login from "./components/Login/LoginPage";
-import ForgotPassword from "./components/ForgotPassword/ForgotPasswordPage";
+import ForgotPassword from "./components/PasswordPages/ForgotPasswordPage";
+import ResetPassword from "./components/PasswordPages/ResetPasswordPage";
 import Dashboard from "./components/Dashboard/DashboardPage";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
@@ -45,6 +46,7 @@ const App = () => {
           />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/reset-password/:token" component={ResetPassword} />
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>

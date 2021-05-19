@@ -220,7 +220,7 @@ router.post("/forgotten-password", async (req, res) => {
       throw Error("User doesn't exist");
     }
 
-    forgotPasswordEmail(user._id, email, model);
+    forgotPasswordEmail(user._id, email, model, req.hostname);
 
     res.json({
       message:
@@ -242,7 +242,7 @@ router.put("/reset-password/:token", async (req, res) => {
   try {
     await jwt.verify(token, tokenKey, async (error, decodedToken) => {
       if (error) {
-        throw Error("The url token is incorrect or has expired");
+        throw Error("The reset password url is incorrect or has expired");
       }
 
       var user = null;
@@ -254,7 +254,7 @@ router.put("/reset-password/:token", async (req, res) => {
 
       if (user) {
         if (user.resetPasswordToken !== token) {
-          throw Error("Incorrect reset password URL");
+          throw Error("The reset password url is incorrect or has expired");
         }
 
         // Set verification True

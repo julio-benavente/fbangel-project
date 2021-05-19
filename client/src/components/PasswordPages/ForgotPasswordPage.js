@@ -42,24 +42,20 @@ const LoginPage = () => {
   const email = useWatch({ control, name: "email" });
 
   const [resetEmailSent, setResetEmailSent] = useState(false);
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
     if (!isSubmitting) {
-      // setResetEmailSent(true);
-      // axios.post("/auth/forgotten-password", {
-      //   email,
-      // });
-      const response = await axios.get("/api/users/testing");
-      console.log(response.data);
-      return response;
+      setResetEmailSent(true);
+      axios.post("/auth/forgotten-password", {
+        email,
+      });
     }
-    return;
   };
 
   return (
     <Login>
       <LoginLink to="/login">
         <Arrow />
-        {isSubmitting && <p>Login</p>}
+        <p>Login</p>
       </LoginLink>
       <ImageSide>
         <Image>
