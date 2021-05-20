@@ -9,7 +9,7 @@ export const Dashboard = styled.div`
   grid-template-areas:
     "navbar profile"
     "navbar main";
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   background: ${(props) => props.theme.color.gray200};
 `;

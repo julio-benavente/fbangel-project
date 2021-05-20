@@ -1,7 +1,7 @@
 const { transporter } = require("../emailTransporter");
 const { createToken } = require("../createToken");
 
-const emailVerification = async (userId, to) => {
+const emailVerification = async (userId, to, hostname) => {
   const token = createToken(userId, "1d", process.env.EMAIL_VERIFICATION_KEY);
   const url = `http://localhost:5000/auth/confirmation/${token}`;
   try {

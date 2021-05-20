@@ -37,6 +37,10 @@ export const NavbarItem = styled(NavLink)`
     height: 50px;
     display: block;
     fill: ${(props) => props.theme.color.white};
+
+    path {
+      fill: ${(props) => props.theme.color.white};
+    }
   }
 
   &.active {

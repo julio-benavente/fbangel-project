@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+const jwt = require("jsonwebtoken");
 // Models
 const User = require("../../models/User");
 const IncompleteUser = require("../../models/IncompleteUser");
@@ -8,6 +8,9 @@ const IncompleteUser = require("../../models/IncompleteUser");
 const auth = require("../../middlewares/auth");
 const { uploadImageAndGetUrl } = require("../../utils/cloudinary");
 const getNextSequence = require("../../utils/getNextSequence");
+const {
+  paypalEmailVerification,
+} = require("../../utils/emailsTemplates/paypalEmailVerification");
 
 const {
   emailVerification,
@@ -114,10 +117,18 @@ router.post("/registration/:userType", async (req, res) => {
     // Create a auto incrementing referral code
 
     const number = `0000000${await getNextSequence("referralid")}`.slice(-6);
-    userInformation.referralCode = `FBA-${number}`;
+    const referralCode = `FBA-${number}`;
+    userInformation.referralCode = referralCode;
+    userInformation.referralCodeLink = `${
+      req.hostname === "localhost" ? "http://localhost:3000/#/" : req.hostname
+    }/${referralCode}`;
 
     const newUser = await new Model({ ...userInformation }).save();
 
+    // Add user is to user who referred him
+    // Model.findOneAndUpdate({ referral: referral }, { $push });
+
+    // Just send email confirmation when is rental or referral user
     Model.modelName === "user" &&
       emailVerification(newUser._id, req.body.email);
 
@@ -127,8 +138,48 @@ router.post("/registration/:userType", async (req, res) => {
 
     res.json({ message: "Succesful user registration" });
   } catch (e) {
-    console.log(e);
     const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+router.post("/get-referrals", async (req, res) => {
+  const { id } = req.body;
+  try {
+    const user = await User.findOne({ _id: id }).populate({
+      path: "referrals",
+      select: "firstName lastName status email creationDate statusObservation",
+    });
+
+    if (!user) {
+      throw Error("User doens't exist");
+    }
+
+    res.json({ referrals: user.referrals });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+router.get("/get-user-information/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    user = await User.findById(id, {
+      password: 0,
+      haveFriends: 0,
+      isFirstTime: 0,
+      isOneYear: 0,
+      isAdult: 0,
+      accountIsReal: 0,
+    });
+
+    if (!user) {
+      throw Error("The user doesn't exist");
+    }
+
+    res.json({ user });
+  } catch (error) {
     res.status(400).json({ error });
   }
 });
@@ -136,7 +187,6 @@ router.post("/registration/:userType", async (req, res) => {
 //@route /api/referrals/testing
 //@desc
 //@access Public
-
 const os = require("os");
 router.get("/testing", async (req, res) => {
   const { modelName } = User;
@@ -159,6 +209,66 @@ router.post("/testing", async (req, res) => {
     res.json({ message: response });
   } catch (error) {
     res.status(400).json({ error });
+  }
+});
+
+router.put("/send-paypal-email-confirmation", async (req, res) => {
+  const { id } = req.body;
+
+  try {
+    const user = await User.findOne(
+      { _id: id },
+      { paypalEmailVerification: 1, paypalEmail: 1 }
+    );
+
+    if (!user) {
+      throw Error("User doesn't exist");
+    }
+
+    if (paypalEmailVerification === true) {
+      res.json({
+        message: "Your paypal email has already been confirmed",
+      });
+      return;
+    }
+
+    paypalEmailVerification(user, user.paypalEmail, req.hostname);
+
+    res.json({
+      message:
+        "The link to confirm your paypal email has already been sent. Check your email.",
+    });
+  } catch (e) {
+    const error = handleError(e);
+    res.status(400).json({ error });
+  }
+});
+
+router.get("/confirm-paypal-email/:token", async (req, res) => {
+  const tokenKey = process.env.PAYPAL_EMAIL_CONFIRMATION;
+  const { token } = req.params;
+
+  try {
+    await jwt.verify(token, tokenKey, async (error, decodedToken) => {
+      if (error) {
+        throw Error("The url token is incorrect or has expired");
+        return;
+      }
+
+      const user = await User.findById(decodedToken.data);
+
+      if (user) {
+        // Set verification True
+        await user.updateOne({
+          $set: { paypalEmailVerified: true },
+        });
+        res.json({ message: "Your paypal account has been verified" });
+      } else {
+        throw Error("User doesn't exist");
+      }
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 

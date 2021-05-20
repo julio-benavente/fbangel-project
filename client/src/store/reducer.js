@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import auth from "./auth/auth";
-import entities from "./entities/entittiesReducer";
+import entities from "./entities/entitiesReducer";
 
 const combinedReducer = combineReducers({
   auth,

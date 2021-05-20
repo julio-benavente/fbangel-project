@@ -1,13 +1,15 @@
 const { transporter } = require("../emailTransporter");
 const { createToken } = require("../createToken");
 
-const paypalEmailVerification = async (user, to) => {
+const paypalEmailVerification = async (user, to, hostname) => {
   const token = createToken(
     user._id,
     "1d",
     process.env.PAYPAL_EMAIL_CONFIRMATION
   );
-  const url = `http://localhost:5000/auth/confirm-paypal-email/${token}`;
+  const url = `${
+    hostname === "localhost" ? "http://localhost:3000/#" : hostname
+  }/confirm-paypal-email/${token}`;
 
   try {
     const emailResponse = await transporter.sendMail({

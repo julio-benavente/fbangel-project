@@ -8,6 +8,7 @@ const initialState = () => ({
     id: "",
     email: "",
     authLevel: "",
+    paypalEmailVerified: "",
   },
   loading: false,
   errors: {
@@ -25,13 +26,16 @@ const request = (auth, action) => {
 };
 
 const authenticate = (auth, action) => {
-  const { _id, firstName, lastName, email, authLevel } = action.payload.user;
+  const { _id, firstName, lastName, email, authLevel, paypalEmailVerified } =
+    action.payload.user;
   auth = initialState();
-  auth.user.firstName = firstName || initialState().user.firstName;
-  auth.user.lastName = lastName || initialState().user.lastName;
-  auth.user.email = email || initialState().user.email;
-  auth.user.id = _id || initialState().user._id;
-  auth.user.authLevel = authLevel || initialState().user.authLevel;
+  auth.user.firstName = firstName || auth.user.firstName;
+  auth.user.lastName = lastName || auth.user.lastName;
+  auth.user.email = email || auth.user.email;
+  auth.user.id = _id || auth.user._id;
+  auth.user.authLevel = authLevel || auth.user.authLevel;
+  auth.user.paypalEmailVerified =
+    paypalEmailVerified === false ? paypalEmailVerified : true;
 
   return auth;
 };

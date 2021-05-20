@@ -5,20 +5,14 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 import DashboardNavbar from "./DashboardNavbar";
 import DashboardProfile from "./DashboardProfile";
 import Payments from "./Payments/PaymentsPage";
+import Profile from "./Profile/ProfilePage";
 import Users from "./Users/UsersPage";
+import Referrals from "./Referrals/ReferralsPage";
 
 // Styles
 import { Dashboard, Main } from "../../styles/Dashboard/DashboardPageStyles";
 
 const DashboardPage = () => {
-  // useEffect(() => {
-  //   const navbar = document.querySelector(".Navbar");
-  //   const footer = document.querySelector(".Footer");
-
-  //   navbar.classList.add("display-none");
-  //   footer.classList.add("display-none");
-  // });
-
   const { path } = useRouteMatch();
 
   return (
@@ -29,11 +23,8 @@ const DashboardPage = () => {
         <Switch>
           <Route path={`${path}/payments`} component={Payments} />
           <Route path={`${path}/users`} component={Users} />
-
-          <Route
-            path={`${path}/configuration`}
-            render={() => <h1>PConfiguration</h1>}
-          />
+          <Route path={`${path}/profile`} component={Profile} />
+          <Route path={`${path}/referrals`} component={Referrals} />
           <Route exact path={path} component={Payments} />
           <Route
             path={`${path}/*`}

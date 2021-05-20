@@ -19,6 +19,7 @@ import ForgotPassword from "./components/PasswordPages/ForgotPasswordPage";
 import ResetPassword from "./components/PasswordPages/ResetPasswordPage";
 import Dashboard from "./components/Dashboard/DashboardPage";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import ConfirmationPage from "./components/Confirmation/ConfirmationPage";
 
 // Styles
 import GlobalStyle from "./styles/GlobalStyles";
@@ -47,6 +48,11 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <Route path="/reset-password/:token" component={ResetPassword} />
+          <Route
+            path="/confirm-paypal-email/:token"
+            component={ConfirmationPage}
+          />
+          <Route path="/confirm-email/:token" component={ConfirmationPage} />
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>

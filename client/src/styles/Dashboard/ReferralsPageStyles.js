@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { H2 } from "../GlobalStyles";
 
-export const Payments = styled.div``;
+export const Referrals = styled.div``;
 
 export const Title = styled(H2)``;
 
@@ -23,8 +23,8 @@ export const Table = styled.div`
     box-shadow: 2px 2px 4px ${(props) => props.theme.color.gray300};
     .td {
       font-size: 0.8rem;
-      &:nth-child(4) {
-        padding: 3px 5px;
+      &.status {
+        padding: 1px 5px;
         font-size: 0.75rem;
         border-radius: 5px;
 

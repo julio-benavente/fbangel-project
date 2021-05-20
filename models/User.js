@@ -13,209 +13,249 @@ function rentalReferralType() {
   return this.userType === "rental" || this.userType === "referral";
 }
 
-const UserSchema = new mongoose.Schema({
-  userType: {
-    type: String,
-    enum: ["rental", "referral"],
-    required: true,
-  },
-  authLevel: {
-    type: String,
-    required: true,
-    default: "user",
-  },
-  // rental properties
-  haveFriends: {
-    type: String,
-    enum: ["yes", "no"],
-    required: rentalType,
-  },
-  isAdult: {
-    type: String,
-    enum: ["yes", "no"],
-    required: rentalType,
-  },
-  accountIsReal: {
-    type: String,
-    enum: ["yes", "no"],
-    required: rentalType,
-  },
-  isFirstTime: {
-    type: String,
+const obfuscate = (email) => {
+  console.log(email);
 
-    enum: ["yes", "no"],
-    required: rentalType,
-  },
-  isOneYear: {
-    type: String,
-    enum: ["yes", "no"],
-    required: rentalType,
-  },
-  status: {
-    type: String,
-    default: "pending",
-    enum: ["pending", "validated", "rejected"],
-    required: rentalType,
-  },
-  frecuency: {
-    type: String,
-    required: rentalType,
-  },
-  devices: {
-    type: [String],
-    required: rentalType,
-  },
-  os: {
-    type: [String],
-    required: rentalType,
-  },
-  fbUsername: {
-    type: String,
-    required: rentalType,
-  },
-  fbPassword: {
-    type: String,
-    required: rentalType,
-  },
-  code2FA: {
-    type: Number,
-    required: rentalType,
-  },
-  referral: {
-    type: String,
-  },
-  gdprAgreement: {
-    type: String,
-    required: rentalType,
-    enum: ["yes", "no"],
-  },
-  bmIdImage: {
-    type: String,
-    required: rentalType,
-  },
-  documentImage: {
-    type: String,
-    required: rentalType,
-  },
-  fbEmailImage: {
-    type: String,
-    required: rentalType,
-  },
-  // rental and referral properties
-  firstName: {
-    type: String,
-    required: rentalReferralType,
-  },
-  lastName: {
-    type: String,
-    required: rentalReferralType,
-  },
-  address: {
-    type: String,
-    required: referralType,
-  },
-  email: {
-    type: String,
-    unique: rentalType,
-    lowercase: true,
-    required: rentalReferralType,
-  },
-  emailVerified: {
-    type: Boolean,
-    required: true,
-    default: false,
-  },
-  country: {
-    type: String,
-    required: rentalReferralType,
-  },
-  city: {
-    type: String,
-    required: rentalReferralType,
-  },
-  zipCode: {
-    type: String,
-    required: referralType,
-  },
-  birthday: {
-    type: Date,
-    required: rentalReferralType,
-  },
-  phone: {
-    type: Number,
-    required: rentalReferralType,
-  },
-  password: {
-    type: String,
-    required: rentalReferralType,
-  },
-  paymentMethod: {
-    type: String,
-    required: rentalReferralType,
-  },
-  paypalEmail: {
-    type: String,
-    required: function () {
-      return rentalReferralType() && this.paymentMethod === "paypal";
+  const separatorIndex = email.indexOf("@");
+  if (separatorIndex < 3) {
+    // 'ab@gmail.com' -> '**@gmail.com'
+    return (
+      email.slice(0, separatorIndex).replace(/./g, "*") +
+      email.slice(separatorIndex)
+    );
+  }
+  // 'test42@gmail.com' -> 'te****@gmail.com'
+  return (
+    email.slice(0, 2) +
+    email.slice(2, separatorIndex).replace(/./g, "*") +
+    email.slice(separatorIndex)
+  );
+};
+
+const UserSchema = new mongoose.Schema(
+  {
+    userType: {
+      type: String,
+      enum: ["rental", "referral"],
+      required: true,
+    },
+    authLevel: {
+      type: String,
+      required: true,
+      default: "user",
+    },
+    // rental properties
+    haveFriends: {
+      type: String,
+      enum: ["yes", "no"],
+      required: rentalType,
+    },
+    isAdult: {
+      type: String,
+      enum: ["yes", "no"],
+      required: rentalType,
+    },
+    accountIsReal: {
+      type: String,
+      enum: ["yes", "no"],
+      required: rentalType,
+    },
+    isFirstTime: {
+      type: String,
+      enum: ["yes", "no"],
+      required: rentalType,
+    },
+    isOneYear: {
+      type: String,
+      enum: ["yes", "no"],
+      required: rentalType,
+    },
+    status: {
+      type: String,
+      default: "pending",
+      enum: ["pending", "validated", "rejected"],
+      get: (v) => v[0].toUpperCase() + v.slice(1),
+      required: rentalType,
+    },
+    statusObservation: {
+      type: String,
+      default: "",
+    },
+    frecuency: {
+      type: String,
+      required: rentalType,
+    },
+    devices: {
+      type: [String],
+      required: rentalType,
+    },
+    os: {
+      type: [String],
+      required: rentalType,
+    },
+    fbUsername: {
+      type: String,
+      required: rentalType,
+    },
+    fbPassword: {
+      type: String,
+      required: rentalType,
+    },
+    code2FA: {
+      type: Number,
+      required: rentalType,
+    },
+    referral: {
+      type: String,
+    },
+    gdprAgreement: {
+      type: String,
+      required: rentalType,
+      enum: ["yes", "no"],
+    },
+    bmIdImage: {
+      type: String,
+      required: rentalType,
+    },
+    documentImage: {
+      type: String,
+      required: rentalType,
+    },
+    fbEmailImage: {
+      type: String,
+      required: rentalType,
+    },
+    // rental and referral properties
+    firstName: {
+      type: String,
+      required: rentalReferralType,
+      lowercase: true,
+      get: (v) => v[0].toUpperCase() + v.slice(1),
+    },
+    lastName: {
+      type: String,
+      lowercase: true,
+      get: (v) => v[0].toUpperCase() + v.slice(1),
+      required: rentalReferralType,
+    },
+    address: {
+      type: String,
+      required: referralType,
+    },
+    email: {
+      type: String,
+      get: obfuscate,
+      unique: rentalType,
+      lowercase: true,
+      required: rentalReferralType,
+    },
+    emailVerified: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    country: {
+      type: String,
+      required: rentalReferralType,
+    },
+    city: {
+      type: String,
+      required: rentalReferralType,
+    },
+    zipCode: {
+      type: String,
+      required: referralType,
+    },
+    birthday: {
+      type: Date,
+      required: rentalReferralType,
+    },
+    phone: {
+      type: Number,
+      required: rentalReferralType,
+    },
+    password: {
+      type: String,
+      required: rentalReferralType,
+    },
+    paymentMethod: {
+      type: String,
+      required: rentalReferralType,
+    },
+    paypalEmail: {
+      type: String,
+      required: function () {
+        return rentalReferralType() && this.paymentMethod === "paypal";
+      },
+    },
+    paypalEmailHistory: {
+      type: [String],
+    },
+    paypalEmailVerified: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
+    holderName: {
+      type: String,
+      required: function () {
+        return rentalReferralType() && this.paymentMethod === "bank-peru";
+      },
+    },
+    bankAngency: {
+      type: String,
+      required: function () {
+        return rentalReferralType() && this.paymentMethod === "bank-peru";
+      },
+    },
+    bankAccountCode: {
+      type: Number,
+      required: function () {
+        return rentalReferralType() && this.paymentMethod === "bank-peru";
+      },
+    },
+    oldReferralCode: {
+      type: String,
+      default: "",
+    },
+    referralCode: {
+      type: String,
+      unique: rentalReferralType,
+      required: rentalReferralType,
+    },
+    referralCodeLink: {
+      type: String,
+      unique: rentalReferralType,
+      required: rentalReferralType,
+    },
+    termsAndConditions: {
+      type: String,
+      required: true,
+      enum: ["yes", "no"],
+    },
+    ip: {
+      type: String,
+      required: true,
+    },
+    creationDate: {
+      type: Date,
+      default: Date.now,
+      required: true,
+    },
+    payments: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "payment",
+    },
+    referrals: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "user",
+    },
+    resetPasswordToken: {
+      type: String,
     },
   },
-  paypalEmailHistory: {
-    type: [String],
-  },
-  paypalEmailVerified: {
-    type: Boolean,
-    default: false,
-    required: true,
-  },
-  holderName: {
-    type: String,
-    required: function () {
-      return rentalReferralType() && this.paymentMethod === "bank-peru";
-    },
-  },
-  bankAngency: {
-    type: String,
-    required: function () {
-      return rentalReferralType() && this.paymentMethod === "bank-peru";
-    },
-  },
-  bankAccountCode: {
-    type: Number,
-    required: function () {
-      return rentalReferralType() && this.paymentMethod === "bank-peru";
-    },
-  },
-  oldReferralCode: {
-    type: String,
-    default: "",
-  },
-  referralCode: {
-    type: String,
-    unique: rentalType,
-    required: rentalType,
-  },
-  termsAndConditions: {
-    type: String,
-    required: true,
-    enum: ["yes", "no"],
-  },
-  ip: {
-    type: String,
-    required: true,
-  },
-  creationDate: {
-    type: Date,
-    default: Date.now,
-    required: true,
-  },
-  payments: {
-    type: [mongoose.Schema.Types.ObjectId],
-    ref: "payment",
-  },
-  resetPasswordToken: {
-    type: String,
-  },
-});
+  { toJSON: { getters: true } }
+);
 
 UserSchema.pre("save", async function (next) {
   const salt = await bcrypt.genSalt();

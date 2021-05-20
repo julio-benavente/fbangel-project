@@ -14,9 +14,6 @@ const {
 const {
   forgotPasswordEmail,
 } = require("../../utils/emailsTemplates/forgotPasswordEmail");
-const {
-  paypalEmailVerification,
-} = require("../../utils/emailsTemplates/paypalEmailVerification");
 
 const handleError = (err) => {
   const errorMessage = {};
@@ -72,6 +69,7 @@ router.get("/", (req, res) => {
           id: 1,
           email: 1,
           authLevel: 1,
+          paypalEmailVerified: 1,
         });
 
         if (!user) {
@@ -160,7 +158,7 @@ router.post("/send-confirmation-email", checkAuthLevel, async (req, res) => {
       throw Error("User doesn't exist");
     }
 
-    emailVerification(user._id, email);
+    emailVerification(user._id, email, req.hostname);
 
     res.json({
       message:
@@ -227,7 +225,6 @@ router.post("/forgotten-password", async (req, res) => {
         "The link to reset your password has already ben sent. Check your email.",
     });
   } catch (e) {
-    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }
@@ -269,66 +266,6 @@ router.put("/reset-password/:token", async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({ error: error.message });
-  }
-});
-
-router.put("/send-paypal-email-confirmation", async (req, res) => {
-  const { email } = req.body;
-
-  try {
-    const user = await User.findOne(
-      { email },
-      { paypalEmailVerification: 1, paypalEmail: 1 }
-    );
-
-    if (!user) {
-      throw Error("User doesn't exist");
-    }
-
-    if (paypalEmailVerification === true) {
-      res.json({
-        message: "Your paypal email has already been confirmed",
-      });
-      return;
-    }
-
-    paypalEmailVerification(user, user.paypalEmail);
-
-    res.json({
-      message:
-        "The link to confirm your paypal email has already been sent. Check your email.",
-    });
-  } catch (e) {
-    const error = handleError(e);
-    res.status(400).json({ error });
-  }
-});
-
-router.get("/confirm-paypal-email/:token", async (req, res) => {
-  const tokenKey = process.env.PAYPAL_EMAIL_CONFIRMATION;
-  const { token } = req.params;
-
-  try {
-    await jwt.verify(token, tokenKey, async (error, decodedToken) => {
-      if (error) {
-        throw Error("The url token is incorrect or has expired");
-        return;
-      }
-
-      const user = await User.findById(decodedToken.data);
-
-      if (user) {
-        // Set verification True
-        await user.updateOne({
-          $set: { paypalEmailVerified: true },
-        });
-        res.json({ message: "Your paypal account has been verified" });
-      } else {
-        throw Error("User doesn't exist");
-      }
-    });
-  } catch (error) {
-    res.status(400).json({ error });
   }
 });
 
