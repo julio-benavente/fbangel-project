@@ -243,8 +243,18 @@ const UserSchema = new mongoose.Schema(
       required: true,
     },
     payments: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: "payment",
+      tier: {
+        type: String,
+        default: "tierOne",
+      },
+      firstRentPayed: {
+        type: Boolean,
+        default: false,
+      },
+      list: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "payment",
+      },
     },
     referrals: {
       type: [mongoose.Schema.Types.ObjectId],

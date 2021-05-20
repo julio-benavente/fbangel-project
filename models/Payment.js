@@ -44,6 +44,10 @@ const PaymentSchema = new mongoose.Schema({
   paymentDate: {
     type: Date,
   },
+  whatsAppMessage: {
+    type: Boolean,
+    default: false,
+  },
   payee: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",

@@ -4,6 +4,8 @@ import { createSelector } from "reselect";
 
 const initialState = () => ({
   loading: false,
+  tier: "tierOne",
+  firstRentPayed: false,
   list: [],
 });
 
@@ -17,8 +19,12 @@ const slice = createSlice({
       return payments;
     },
     paymentsRequestSucceeded: (payments, action) => {
-      const { payments: paymentsResponse } = action.payload;
-      payments.list = paymentsResponse;
+      const {
+        payments: { list, firstRentPayed, tier },
+      } = action.payload;
+      payments.list = list;
+      payments.tier = tier;
+      payments.firstRentPayed = firstRentPayed;
       payments.loading = false;
 
       return payments;

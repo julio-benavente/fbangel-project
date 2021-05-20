@@ -72,3 +72,22 @@ export const Table = styled.div`
     }
   }
 `;
+
+export const PaypalEmailMessage = styled.div`
+  padding: 10px;
+  border: ${(props) =>
+    props.bg === false
+      ? `2px ${props.theme.color.secondary} solid`
+      : `2px ${props.theme.color.green} solid`};
+
+  background: ${(props) =>
+    props.bg === false
+      ? transparentize(0.9, props.theme.color.secondary)
+      : transparentize(0.9, props.theme.color.green)};
+
+  span {
+    font-weight: 700;
+    color: ${(props) => props.theme.color.secondary};
+    cursor: pointer;
+  }
+`;

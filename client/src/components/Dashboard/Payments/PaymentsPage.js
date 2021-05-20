@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 import {
   requestUserPayments,
   requestPayments,
@@ -13,6 +14,7 @@ import {
   Payments,
   Title,
   Table,
+  PaypalEmailMessage,
 } from "../../../styles/Dashboard/PaymentsPageStyle";
 
 const PaymentsPage = () => {
@@ -101,8 +103,54 @@ const PaymentsPage = () => {
     request();
   }, []);
 
+  const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
+  const sendPaypalEmail = async (id) => {
+    try {
+      setPaypalEmailIsSent(true);
+      const response = await axios.put(
+        "/api/users/send-paypal-email-confirmation",
+        {
+          id,
+        }
+      );
+      console.log("response", response);
+    } catch (error) {
+      console.log("error", error.message);
+    }
+  };
+
   return (
     <Payments className="Payments">
+      {!user.paypalEmailVerified && (
+        <PaypalEmailMessage bg={paypalEmailIsSent}>
+          {!paypalEmailIsSent && (
+            <p className="message">
+              Tu email de paypal no ha sido verificado. Por favor,{" "}
+              <span
+                className="sendPaypalEmail"
+                onClick={() => sendPaypalEmail(user.id)}
+                to="/dashboard/profile"
+              >
+                HAZ CLICK AQUI
+              </span>{" "}
+              para enviar un correo de confirmación.
+            </p>
+          )}
+          {paypalEmailIsSent && (
+            <p className="emailSent">
+              An email has been sent to your PayPal email. Check it out and
+              verify your PayPal email. Si no te ha llegado{" "}
+              <span
+                className="sendPaypalEmail"
+                onClick={() => sendPaypalEmail(user.id)}
+                to="/dashboard/profile"
+              >
+                HAZ CLICK AQUI.
+              </span>
+            </p>
+          )}
+        </PaypalEmailMessage>
+      )}
       <Title>Payments</Title>
       {user.authLevel === "user" && (
         <Table className="displayUser">

@@ -28,11 +28,11 @@ router.get("/:id", async (req, res) => {
       payments: 1,
       _id: -1,
     }).populate({
-      path: "payments",
+      path: "payments.list",
       select: "status _id amount concept paypalEmail creationDate",
     });
 
-    res.json({ payments });
+    res.json({ payments: payments });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
