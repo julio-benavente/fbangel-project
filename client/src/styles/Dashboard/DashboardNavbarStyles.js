@@ -45,6 +45,9 @@ export const NavbarItem = styled(NavLink)`
 
   &.active {
     background: ${(props) => transparentize(0.9, props.theme.color.white)};
+    p {
+      color: ${(props) => props.theme.color.white};
+    }
   }
 
   &:hover {

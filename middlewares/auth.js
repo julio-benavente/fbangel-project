@@ -21,6 +21,7 @@ const authMiddleware = (req, res, next) => {
           if (!user || user.authLevel !== "admin") {
             throw Error("The user doesn't exist or have admin privileges");
           }
+          req.adminId = user._id;
           next();
           return;
         } catch (error) {

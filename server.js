@@ -14,15 +14,19 @@ app.use(cookie());
 app.use(cors());
 
 // Routes
+const auth = require("./routes/auth/auth");
 const users = require("./routes/api/users");
 const adminUsers = require("./routes/api/adminUsers");
 const payments = require("./routes/api/payments");
-const auth = require("./routes/auth/auth");
+const products = require("./routes/api/products");
+const orders = require("./routes/api/orders");
 const email = require("./routes/email");
 
 app.use("/api/users", users);
 app.use("/api/adminUsers", adminUsers);
 app.use("/api/payments", payments);
+app.use("/api/products", products);
+app.use("/api/orders", orders);
 app.use("/auth", auth);
 app.use("/email", email);
 

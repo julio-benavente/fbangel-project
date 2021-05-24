@@ -1,28 +1,47 @@
 const mongoose = require("mongoose");
 
 const PaymentSchema = new mongoose.Schema({
-  creationDate: {
-    type: Date,
-    default: Date.now,
+  product: {
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
+    ref: "product",
+  },
+  concept: {
+    type: String,
+    required: true,
+    // unique: true,
+    default: function () {
+      return this.product;
+    },
   },
   amount: {
     type: Number,
     required: true,
   },
-  notificated: {
+  payee: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user",
+    required: true,
+  },
+  creationDate: {
+    type: Date,
+    default: Date.now,
+    required: true,
+  },
+  emailNotification: {
     type: Boolean,
     required: true,
     default: false,
   },
-  concept: {
-    type: String,
+  whatsAppNotification: {
+    type: Boolean,
     required: true,
+    default: false,
   },
   status: {
     type: String,
     required: true,
-    enum: ["pending", "error", "success", "rejected"],
+    enum: ["pending", "error", "payed", "canceled"],
     default: "pending",
   },
   paypalEmail: {
@@ -32,6 +51,9 @@ const PaymentSchema = new mongoose.Schema({
   paypalCode: {
     type: String,
   },
+  paymentDate: {
+    type: Date,
+  },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "adminUser",
@@ -40,18 +62,6 @@ const PaymentSchema = new mongoose.Schema({
   approvedBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "adminUser",
-  },
-  paymentDate: {
-    type: Date,
-  },
-  whatsAppMessage: {
-    type: Boolean,
-    default: false,
-  },
-  payee: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
-    required: true,
   },
 });
 

@@ -16,6 +16,7 @@ import { ReactComponent as UsersSvg } from "../../assets/svgs/user.svg";
 import { ReactComponent as PaymentsSvg } from "../../assets/svgs/payments.svg";
 import { ReactComponent as ConfigurationSvg } from "../../assets/svgs/configuration.svg";
 import { ReactComponent as PeopleSvg } from "../../assets/svgs/people.svg";
+import { ReactComponent as OrderSvg } from "../../assets/svgs/order.svg";
 
 const MainComponent = () => {
   const { path } = useRouteMatch();
@@ -57,6 +58,13 @@ const MainComponent = () => {
           <NavbarItem activeClassName="active" to={() => `${path}/users`}>
             <UsersSvg />
             <p>Users</p>
+          </NavbarItem>
+        )}
+
+        {authLevel === "admin" && (
+          <NavbarItem activeClassName="active" to={() => `${path}/orders`}>
+            <OrderSvg />
+            <p>Orders</p>
           </NavbarItem>
         )}
       </NavbarWrapper>

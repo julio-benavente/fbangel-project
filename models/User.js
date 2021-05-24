@@ -73,8 +73,7 @@ const UserSchema = new mongoose.Schema(
     status: {
       type: String,
       default: "pending",
-      enum: ["pending", "validated", "rejected"],
-      get: (v) => v[0].toUpperCase() + v.slice(1),
+      enum: ["pending", "active", "rejected"],
       required: rentalType,
     },
     statusObservation: {
@@ -107,6 +106,10 @@ const UserSchema = new mongoose.Schema(
     },
     referral: {
       type: String,
+    },
+    referralHasBeenPayed: {
+      type: Boolean,
+      default: false,
     },
     gdprAgreement: {
       type: String,
@@ -241,6 +244,14 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
       required: true,
+    },
+    fortnight: {
+      type: Number,
+      default: () => {
+        const day = new Date().getDate();
+        const fortnight = day <= 15 ? 1 : 2;
+        return fortnight;
+      },
     },
     payments: {
       tier: {

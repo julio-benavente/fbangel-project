@@ -44,7 +44,7 @@ const slice = createSlice({
       return user;
     },
     userRequestFailed: (user, action) => {
-      user = initialState();
+      user.loading = false;
 
       return user;
     },

@@ -22,15 +22,15 @@ const slice = createSlice({
       const {
         payments: { list, firstRentPayed, tier },
       } = action.payload;
-      payments.list = list;
-      payments.tier = tier;
-      payments.firstRentPayed = firstRentPayed;
+      payments.list = list || payments.list;
+      payments.tier = tier || payments.tier;
+      payments.firstRentPayed = firstRentPayed || payments.firstRentPayed;
       payments.loading = false;
 
       return payments;
     },
     paymentsRequestFailed: (payments, action) => {
-      payments = initialState();
+      payments.loading = false;
     },
   },
 });

@@ -13,7 +13,7 @@ router.get("/", auth, async (req, res) => {
       .populate({ path: "approvedBy", select: "email" })
       .populate({ path: "payee", select: "email firstName lastName" });
 
-    res.json({ payments });
+    res.json({ payments: { list: payments } });
   } catch (error) {
     console.log(error);
     res.status(400).json({ error: error.message });

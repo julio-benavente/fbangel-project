@@ -41,7 +41,6 @@ const authenticate = (auth, action) => {
 };
 
 const error = (auth, action) => {
-  auth = initialState();
   auth.loading = false;
 
   if (action.payload.error) {

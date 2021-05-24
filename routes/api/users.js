@@ -121,7 +121,7 @@ router.post("/registration/:userType", async (req, res) => {
     userInformation.referralCode = referralCode;
     userInformation.referralCodeLink = `${
       req.hostname === "localhost" ? "http://localhost:3000/#/" : req.hostname
-    }/${referralCode}`;
+    }/join-us/${referralCode}`;
 
     const newUser = await new Model({ ...userInformation }).save();
 
@@ -180,6 +180,7 @@ router.get("/get-user-information/:id", async (req, res) => {
 
     res.json({ user });
   } catch (error) {
+    console.log(error);
     res.status(400).json({ error });
   }
 });

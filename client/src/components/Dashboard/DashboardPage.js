@@ -8,6 +8,7 @@ import Payments from "./Payments/PaymentsPage";
 import Profile from "./Profile/ProfilePage";
 import Users from "./Users/UsersPage";
 import Referrals from "./Referrals/ReferralsPage";
+import Orders from "./Orders/OrdersPage";
 
 // Styles
 import { Dashboard, Main } from "../../styles/Dashboard/DashboardPageStyles";
@@ -25,6 +26,7 @@ const DashboardPage = () => {
           <Route path={`${path}/users`} component={Users} />
           <Route path={`${path}/profile`} component={Profile} />
           <Route path={`${path}/referrals`} component={Referrals} />
+          <Route path={`${path}/orders`} component={Orders} />
           <Route exact path={path} component={Payments} />
           <Route
             path={`${path}/*`}
