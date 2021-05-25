@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PaymentsTable } from "../../../styles/Dashboard/UsersPageStyles";
+import { PaymentsTable } from "../../../styles/Dashboard/OrdersPageStyles";
 
 const Table = (props) => {
   const [paymentsTableWidth, setPaymentsTableWidth] = useState(null);
@@ -10,7 +10,7 @@ const Table = (props) => {
   useEffect(() => {
     const paymentsWidth = () =>
       setPaymentsTableWidth(() => {
-        const parentWidth = document.querySelector(".Users").offsetWidth;
+        const parentWidth = document.querySelector(".Orders").offsetWidth;
         const padding = parentWidth * 0.07 * 2;
         const realWidth = parentWidth - padding;
 
@@ -78,10 +78,16 @@ const Table = (props) => {
           </div>
         </div>
         <div className="tbody">
-          {payments.list.length !== 0 &&
-            payments.list.map((payment, index) => {
+          {payments.length !== 0 &&
+            payments.map((payment, index) => {
               const { amount, concept, id, paymentDate, paypalEmail, status } =
                 payment;
+
+              const date = new Date(paymentDate).toLocaleDateString([], {
+                day: "numeric",
+                month: "2-digit",
+                year: "numeric",
+              });
 
               return (
                 <div
@@ -91,9 +97,13 @@ const Table = (props) => {
                 >
                   <div className="td concept">{concept}</div>
                   <div className="td paypalEmail">{paypalEmail}</div>
-                  <div className="td paymentDate">{paymentDate}</div>
-                  <div className="td status approved">{status}</div>
-                  <div className="td amount ">{`$ ${amount}`}</div>
+                  <div className="td paymentDate">
+                    {paymentDate ? date : "-"}
+                  </div>
+                  <div className="td status approved">{`${status[0].toUpperCase()}${status.slice(
+                    1
+                  )}`}</div>
+                  <div className="td amount ">{`$ ${amount.toFixed(2)}`}</div>
                 </div>
               );
             })}

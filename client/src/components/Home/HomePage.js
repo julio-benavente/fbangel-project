@@ -7,6 +7,7 @@ import {
   Home,
   // Banner Section
   BannerSection,
+  BannerSectionWrapper,
   LeftSide,
   Headline,
   Subheadline,
@@ -15,10 +16,17 @@ import {
   // Process Section
   ProcessSection,
   Card,
+  CardSvgImage,
   Number,
   CardTitle,
   CardInfo,
   Disclaimer,
+  // How much section
+  HowMuchSection,
+  HowMuchSectionTitle,
+  HowMuchSectionWarpper,
+  HowMuchInfo,
+  HowMuchImage,
   // Requirements Section
   RequirementsSection,
   RequirementsSectionWrapper,
@@ -53,10 +61,15 @@ import {
 } from "../../styles/HomePageStyles";
 
 // Assets
-import phone from "../../assets/svgs/cellphone-in-hand.svg";
+import bannerWoman from "../../assets/images/bannerWoman.png";
 import money from "../../assets/images/money.png";
 import task_list from "../../assets/images/tasks-list.png";
 import friends_chatting from "../../assets/svgs/friends-chatting.svg";
+import { ReactComponent as TimeSvg } from "../../assets/svgs/time.svg";
+import { ReactComponent as MoneySvg } from "../../assets/svgs/money.svg";
+import { ReactComponent as FormSvg } from "../../assets/svgs/form.svg";
+import { ReactComponent as ShareSvg } from "../../assets/svgs/share.svg";
+import { ReactComponent as StackOfMoneySvg } from "../../assets/svgs/stackOfMoney.svg";
 import poster from "../../assets/images/video-poster.jpg";
 import fbaAngelVideo from "../../assets/videos/fbangel.mp4";
 
@@ -85,24 +98,37 @@ const HomePage = () => {
   return (
     <Home className="Home" id="Home">
       <BannerSection>
-        <LeftSide>
-          <Headline>{t("home.banner.headline")}</Headline>
-          <Subheadline>{t("home.banner.sub_headline")}</Subheadline>
-          <StartButton to="unete-ahora">
-            {t("home.banner.start_button")}
-          </StartButton>
-        </LeftSide>
-        <Image src={phone}></Image>
+        <BannerSectionWrapper>
+          <LeftSide>
+            <Headline>{t("home.banner.headline")}</Headline>
+            <Subheadline>{t("home.banner.sub_headline")}</Subheadline>
+            <StartButton to="unete-ahora">
+              {t("home.banner.start_button")}
+            </StartButton>
+          </LeftSide>
+          <Image src={bannerWoman}></Image>
+        </BannerSectionWrapper>
       </BannerSection>
 
       <ProcessSection>
         {t("home.process.cards", {
           returnObjects: true,
         }).map(({ number, title, info, disclaimer }, index) => {
+          const svgs = {
+            "01": <FormSvg />,
+            "02": <TimeSvg />,
+            "03": <MoneySvg />,
+            "04": <ShareSvg />,
+          };
+
           return (
             <Card key={index}>
-              <Number>{number}</Number>
-              <CardTitle>{title}</CardTitle>
+              <CardSvgImage> {svgs[number]} </CardSvgImage>
+
+              <CardTitle>
+                <Number>{number}</Number>
+                {title}
+              </CardTitle>
               <CardInfo>{info}</CardInfo>
               {disclaimer && (
                 <Disclaimer>
@@ -115,20 +141,31 @@ const HomePage = () => {
         })}
       </ProcessSection>
 
+      <HowMuchSection>
+        <HowMuchSectionWarpper>
+          <div className="sideContent">
+            <HowMuchSectionTitle>
+              {t("home.requirements.title")}
+            </HowMuchSectionTitle>
+
+            <HowMuchInfo>
+              <p>
+                <span>{t("home.requirements.info.span")} </span>
+                {t("home.requirements.info.p")}
+              </p>
+            </HowMuchInfo>
+            <HowItWorksBtn to="/como-funciona">
+              {t("home.requirements.how_it_works_btn")}
+            </HowItWorksBtn>
+          </div>
+          <HowMuchImage>
+            <StackOfMoneySvg />
+          </HowMuchImage>
+        </HowMuchSectionWarpper>
+      </HowMuchSection>
+
       <RequirementsSection>
         <RequirementsSectionWrapper>
-          <MoneyImage src={money} />
-          <SectionTitle>{t("home.requirements.title")}</SectionTitle>
-          <TaskListImage src={task_list} />
-          <RequirementsInfo>
-            <p>
-              <span>{t("home.requirements.info.span")} </span>
-              {t("home.requirements.info.p")}
-            </p>
-          </RequirementsInfo>
-          <HowItWorksBtn to="/como-funciona">
-            {t("home.requirements.how_it_works_btn")}
-          </HowItWorksBtn>
           <RequirementsSubtitle>
             {t("home.requirements.sub_title")}
           </RequirementsSubtitle>
@@ -150,32 +187,33 @@ const HomePage = () => {
           <ReferralSectionTitle>
             {t("home.referral.title")}
           </ReferralSectionTitle>
-          <ReferralInfo>
-            <p>
-              {t("home.referral.info.p_1.0")}
-              <span> {t("home.referral.info.p_1.1")} </span>
-              {t("home.referral.info.p_1.2")}
-            </p>
-            <p>
-              {t("home.referral.info.p_2.0")}{" "}
-              <span> {t("home.referral.info.p_2.1")} </span>
-              {t("home.referral.info.p_2.2")}
-            </p>
-          </ReferralInfo>
-          <RegisterBtn to="programa-referidos">
-            {t("home.referral.register_btn")}
-          </RegisterBtn>
-          <ReferrealTiny>
-            <p>
-              <span>* </span>
-              {t("home.referral.tiny.p_1")}
-            </p>
-            <p>
-              <span>* </span>
-              {t("home.referral.tiny.p_2")}
-            </p>
-          </ReferrealTiny>
-          <FriendsImage src={friends_chatting} />
+          <div className="contentWrapper">
+            <ReferralInfo>
+              <p>
+                {t("home.referral.info.p_1.0")}
+                <span> {t("home.referral.info.p_1.1")} </span>
+                {t("home.referral.info.p_1.2")}
+              </p>
+              <p>
+                {t("home.referral.info.p_2.0")}{" "}
+                <span> {t("home.referral.info.p_2.1")} </span>
+                {t("home.referral.info.p_2.2")}
+              </p>
+            </ReferralInfo>
+            <RegisterBtn to="programa-referidos">
+              {t("home.referral.register_btn")}
+            </RegisterBtn>
+            <ReferrealTiny>
+              <p>
+                <span>* </span>
+                {t("home.referral.tiny.p_1")}
+              </p>
+              <p>
+                <span>* </span>
+                {t("home.referral.tiny.p_2")}
+              </p>
+            </ReferrealTiny>
+          </div>
         </ReferralSectionWrapper>
       </ReferralSection>
 

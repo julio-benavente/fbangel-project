@@ -14,8 +14,6 @@ function rentalReferralType() {
 }
 
 const obfuscate = (email) => {
-  console.log(email);
-
   const separatorIndex = email.indexOf("@");
   if (separatorIndex < 3) {
     // 'ab@gmail.com' -> '**@gmail.com'

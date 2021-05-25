@@ -15,7 +15,6 @@ router.get("/", auth, async (req, res) => {
 
     res.json({ payments: { list: payments } });
   } catch (error) {
-    console.log(error);
     res.status(400).json({ error: error.message });
   }
 });
@@ -53,6 +52,11 @@ router.post("/payment-creation/:id", auth, async (req, res) => {
       payee: id,
       paypalEmail: user.paypalEmail,
     }).save();
+
+    const { abrv } = await Product.findById(req.product);
+    if (abrv === "rental") {
+      user.payments.firstRentPayed === true;
+    }
 
     user.payments.push(newPayment._id);
     user.save();

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
+import axios from "axios";
 import {
   getUsers,
   requestUsers,
   getUserState,
 } from "../../../store/entities/users";
+import { getUser } from "../../../store/auth/auth";
 import {
   getProducts,
   requestProducts,
@@ -19,13 +21,34 @@ import {
   Title,
   CreateOrderWrapper,
   OrderWrapper,
+  OrderConcept,
+  OrderConfirmation,
+  Header,
+  Close,
 } from "../../../styles/Dashboard/CreateOrderPageStyles";
 
-const CreateOrderPage = () => {
+// Assets
+import { ReactComponent as CloseSvg } from "../../../assets/svgs/close.svg";
+
+const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
+  const closeCreateOrder = () => setCreateOrderIsOpen(false);
+
+  const { id } = useSelector(getUser);
+  const [order, setOrder] = useState({
+    product: "",
+    concept: "",
+    createdBy: id,
+    payees: "",
+  });
+
   const ordersOptions = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
+    { value: "firstFortnight", label: "First fortnight rental payment" },
+    { value: "secondFornight", label: "Second fortnight rental payment" },
+    {
+      value: "newUserRental",
+      label: "New rental users payment",
+    },
+    { value: "referral", label: "Referrals payment" },
   ];
 
   const loading = false;
@@ -99,14 +122,18 @@ const CreateOrderPage = () => {
   const products = useSelector(getProducts);
   const { loading: productsLoading } = useSelector(getProductsState);
 
-  const rentalPayment = (period) => {
-    const firstFortnightUsers = users.filter((user, index) => {
-      return user.fortnight === period;
+  const rentalPayment = (fortnightPeriod) => {
+    const fortnightUsers = users.filter((user, index) => {
+      const userType = user.userType === "rental";
+      const status = user.status === "active";
+      const period = user.fortnight === fortnightPeriod;
+
+      return userType && status && period;
     });
 
     const product = products.find((product) => product.abrv === "rental");
 
-    const concept = (userTier) => {
+    const concept = () => {
       const months = {
         1: "JAN",
         2: "FEB",
@@ -122,7 +149,9 @@ const CreateOrderPage = () => {
         12: "DEC",
       };
       const [month, year] = [new Date().getMonth(), new Date().getFullYear()];
-      const concept = `${product.name} : ${months[month + 1]}-${year}`;
+      const concept = `${product.name} : ${
+        months[month + 1]
+      }-${year} (${fortnightPeriod}) `;
       return concept;
     };
 
@@ -133,18 +162,23 @@ const CreateOrderPage = () => {
       return tier.price;
     };
 
-    const paymentsInfo = () =>
-      firstFortnightUsers.map((user) => ({
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        paymentMethod: user.paymentMethod,
-        concept: concept(),
-        amount: amount(user.payments.tier),
-      }));
+    const paymentsInfo = fortnightUsers.map((user) => ({
+      id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      paymentMethod: user.paymentMethod,
+      concept: concept(),
+      amount: amount(user.payments.tier),
+    }));
 
     setPayments(paymentsInfo);
-
+    setOrder({
+      ...order,
+      product: product._id,
+      concept: concept(),
+      payees: paymentsInfo,
+    });
     return paymentsInfo;
   };
 
@@ -177,8 +211,6 @@ const CreateOrderPage = () => {
     };
 
     const amount = (userTier) => {
-      console.log("userTier", userTier);
-
       const tier = product.prices.find(
         (prodcut) => prodcut.tierName === userTier
       );
@@ -192,6 +224,7 @@ const CreateOrderPage = () => {
       )[0];
 
       return {
+        id: user._id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
@@ -203,8 +236,77 @@ const CreateOrderPage = () => {
 
     setPayments(referralPaymentInformation);
 
+    setOrder({
+      ...order,
+      product: product._id,
+      concept: product.name,
+      payees: referralPaymentInformation,
+    });
+
     return referralPaymentInformation;
   };
+
+  const newUsersRentalPayment = () => {
+    const newRentalPayments = users.filter((user, index) => {
+      const userType = user.userType === "rental";
+      const status = user.status === "rental";
+      const firstRental = user.payments.firstRentPayed === false;
+
+      return userType && status && firstRental;
+    });
+
+    const product = products.find((product) => product.abrv === "rental");
+
+    const concept = () => {
+      const months = {
+        1: "JAN",
+        2: "FEB",
+        3: "MAR",
+        4: "APR",
+        5: "MAY",
+        6: "JUN",
+        7: "JULY",
+        8: "AUG",
+        9: "SET",
+        10: "OCT",
+        11: "NOV",
+        12: "DEC",
+      };
+      const [month, year] = [new Date().getMonth(), new Date().getFullYear()];
+      const concept = `${product.name} : ${months[month + 1]}-${year}`;
+      return concept;
+    };
+
+    const amount = (userTier) => {
+      const tier = product.prices.find(
+        (prodcut) => prodcut.tierName === userTier
+      );
+      return tier.price;
+    };
+
+    const paymentsInfo = () =>
+      newRentalPayments.map((user) => ({
+        id: user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        paymentMethod: user.paymentMethod,
+        concept: concept(),
+        amount: amount(user.payments.tier),
+      }));
+
+    setPayments(paymentsInfo);
+
+    setOrder({
+      ...order,
+      product: product._id,
+      concept: product.name,
+      payees: paymentsInfo,
+    });
+
+    return paymentsInfo;
+  };
+
   useEffect(() => {
     dispatch(requestUsers());
     dispatch(requestProducts());
@@ -215,35 +317,71 @@ const CreateOrderPage = () => {
     const action = v.value;
     setOrderAction(action);
   };
+
   const createOrder = () => {
     switch (orderAction) {
-      case "chocolate":
+      case "firstFortnight":
         return rentalPayment(1);
-      case "strawberry":
+      case "secondFornight":
         return rentalPayment(2);
-      case "vanilla":
+      case "referral":
         return referralPayment();
+      case "newUserRental":
+        return newUsersRentalPayment();
       default:
-        return "";
+        return setPayments([]);
+    }
+  };
+
+  const createOrderDisabled =
+    usersLoading ||
+    productsLoading ||
+    users.length === 0 ||
+    products.length === 0;
+
+  const [sendingOrder, setSendingOrder] = useState(false);
+  const sendOrder = async () => {
+    setSendingOrder(true);
+    try {
+      const response = await axios.post("/api/orders/create-order", order);
+      if (response) {
+        console.log(response);
+        setPayments([]);
+        setSendingOrder(false);
+      }
+    } catch ({ response }) {
+      console.log(response);
+      setSendingOrder(false);
     }
   };
 
   return (
     <CreateOrder className="CreateOrder">
-      <Title>Creating an order</Title>
+      <Header>
+        <Title>Creating an order</Title>
+        <Close onClick={closeCreateOrder}>
+          <CloseSvg />
+        </Close>
+      </Header>
       <CreateOrderWrapper>
         <Select
           className="ordersOptions"
           options={ordersOptions}
           onChange={(v) => onChangeAction(v)}
         />
-        <CreateOrderButton
-          onClick={createOrder}
-          disabled={usersLoading || productsLoading}
-        >
+        <CreateOrderButton onClick={createOrder} disabled={createOrderDisabled}>
           Create order
         </CreateOrderButton>
       </CreateOrderWrapper>
+      <OrderConcept>{order.concept}</OrderConcept>
+
+      {order.concept && (
+        <OrderConfirmation>
+          <button disabled={sendingOrder} onClick={sendOrder}>
+            Confirm order
+          </button>
+        </OrderConfirmation>
+      )}
       <OrderWrapper className="displayAdmin">
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
@@ -255,7 +393,7 @@ const CreateOrderPage = () => {
           </div>
         </div>
         <div className="tbody">
-          {payments.map((payment) => {
+          {payments.map((payment, index) => {
             const {
               firstName,
               lastName,
@@ -265,7 +403,7 @@ const CreateOrderPage = () => {
               amount,
             } = payment;
             return (
-              <div className="tr" style={{ ...tableWidth }}>
+              <div className="tr" key={index} style={{ ...tableWidth }}>
                 <div className="th name">{`${firstName} ${lastName}`}</div>
                 <div className="th email">{email}</div>
                 <div className="th paymentMethod">{`${paymentMethod[0].toUpperCase()}${paymentMethod.slice(

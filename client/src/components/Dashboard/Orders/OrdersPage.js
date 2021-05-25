@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../store/auth/auth";
+import {
+  getOrders,
+  getOrdersState,
+  requestOrders,
+} from "../../../store/entities/orders";
+import axios from "axios";
 
 // Components
 import CreateOrder from "./CreateOrderPage";
+import PaymentsTable from "./PaymentsTable";
 
 // Styles
 import {
@@ -17,8 +24,6 @@ import {
 const OrdersPage = () => {
   const dispatch = useDispatch();
 
-  const loading = false;
-  const payments = [];
   const user = useSelector(getUser);
 
   const [tableWidth, setTableWidth] = useState(null);
@@ -33,12 +38,12 @@ const OrdersPage = () => {
         const columns = [
           {
             column: "concept",
-            width: 35,
+            width: 30,
             min: 200,
           },
           {
-            column: "paypal",
-            width: 20,
+            column: "status",
+            width: 10,
             min: 100,
           },
           {
@@ -47,13 +52,13 @@ const OrdersPage = () => {
             min: 100,
           },
           {
-            column: "status",
+            column: "payments",
             width: 15,
             min: 100,
           },
           {
-            column: "amount",
-            width: 15,
+            column: "buttons",
+            width: 25,
             min: 100,
           },
         ];
@@ -82,40 +87,39 @@ const OrdersPage = () => {
     return () => window.removeEventListener("resize", setTableWidth);
   }, []);
 
-  // useEffect(() => {
-  //   const request = async () => {
-  //     if (user.authLevel === "user") {
-  //       const response = await dispatch(
-  //         requestUserPayments({
-  //           id: user.id,
-  //         })
-  //       );
-  //     }
+  const [createOrderIsOpen, setCreateOrderIsOpen] = useState(false);
+  const openCreateOrder = () => setCreateOrderIsOpen(true);
 
-  //     if (user.authLevel === "admin") {
-  //       const response = await dispatch(requestPayments());
-  //     }
-  //   };
+  const orders = useSelector(getOrders);
+  const { loading } = useSelector(getOrdersState);
 
-  //   request();
-  // }, []);
+  useEffect(() => {
+    dispatch(requestOrders());
+  }, []);
 
   return (
     <Orders className="Orders">
-      <CreateOrder />
+      {createOrderIsOpen && (
+        <CreateOrder
+          createOrderIsOpen={createOrderIsOpen}
+          setCreateOrderIsOpen={setCreateOrderIsOpen}
+        />
+      )}
       <Header>
         <Title>Orders</Title>
-        <CreateOrderButton>Create order</CreateOrderButton>
+        <CreateOrderButton onClick={openCreateOrder}>
+          Create order
+        </CreateOrderButton>
       </Header>
 
       <Table className="displayUser">
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
-            <div className="th">Concepto</div>
-            <div className="th">Cuenta de paypal</div>
-            <div className="th">Fecha de pago</div>
-            <div className="th">Estado</div>
-            <div className="th">Monto</div>
+            <div className="th concept">Concepto</div>
+            <div className="th status">Status</div>
+            <div className="th date">Creation date</div>
+            <div className="th payments">Payments</div>
+            <div className="th update">Update</div>
           </div>
         </div>
         <div className="tbody">
@@ -126,30 +130,8 @@ const OrdersPage = () => {
           )}
 
           {!loading &&
-            payments.map((payment, index) => {
-              const { concept, paypalEmail, creationDate, amount, status } =
-                payment;
-
-              const date = new Date(creationDate).toLocaleDateString([], {
-                day: "numeric",
-                month: "2-digit",
-                year: "numeric",
-              });
-
-              return (
-                <div className="tr" key={index} style={{ ...tableWidth }}>
-                  <div className="td">{concept}</div>
-                  <div className="td">{paypalEmail}</div>
-                  <div className="td">{date}</div>
-                  <div className={`td ${status}`}>{status}</div>
-                  <div className="td">
-                    ${" "}
-                    {(
-                      Math.round((amount + Number.EPSILON) * 100) / 100
-                    ).toFixed(2)}
-                  </div>
-                </div>
-              );
+            orders.map((order, index) => {
+              return <Row key={index} order={order} tableWidth={tableWidth} />;
             })}
         </div>
       </Table>
@@ -158,3 +140,101 @@ const OrdersPage = () => {
 };
 
 export default OrdersPage;
+
+const Row = ({ order, tableWidth }) => {
+  const {
+    concept,
+    paypalEmail,
+    creationDate,
+    amount,
+    status,
+    payments,
+    _id: orderId,
+  } = order;
+
+  const date = new Date(creationDate).toLocaleDateString([], {
+    day: "numeric",
+    month: "2-digit",
+    year: "numeric",
+  });
+
+  const [paymentsIsOn, setPaymentsIsOn] = useState(false);
+  const handlePayments = () => setPaymentsIsOn(!paymentsIsOn);
+
+  const [updateIsOn, setUpdateIsOn] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const cancelUpdate = () => setUpdateIsOn(false);
+  const updateOrder = () => setUpdateIsOn(true);
+  const changeStatus = async (status) => {
+    setLoading(true);
+
+    try {
+      if (status === "payOrder") {
+        var response = await axios.put(`/api/orders/change-status/${status}`, {
+          order: orderId,
+        });
+      }
+
+      if (status === "cancelOrder") {
+        var response = await axios.put(`/api/orders/change-status/${status}`, {
+          order: orderId,
+        });
+      }
+
+      setLoading(false);
+      cancelUpdate();
+
+      console.log(response);
+    } catch ({ response }) {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <>
+      <div className="tr" style={{ ...tableWidth }}>
+        <div className="td concept">{concept}</div>
+        <div
+          className={`td status ${status}`}
+        >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
+        <div className="td date">{date}</div>
+        <div className="td payments">
+          <button onClick={handlePayments}>Payments</button>
+        </div>
+        <div className="td update">
+          {!updateIsOn && (
+            <button className="updateBtn" onClick={updateOrder}>
+              Update order
+            </button>
+          )}
+          {updateIsOn && (
+            <>
+              <button
+                className="approveBtn"
+                disabled={loading}
+                onClick={() => changeStatus("payOrder")}
+              >
+                Approve
+              </button>
+              <button
+                className="rejectBtn"
+                disabled={loading}
+                onClick={() => changeStatus("cancelOrder")}
+              >
+                Reject
+              </button>
+              <button
+                className="cancelBtn"
+                disabled={loading}
+                onClick={cancelUpdate}
+              >
+                Cancel
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+      {paymentsIsOn && <PaymentsTable payments={payments} />}
+    </>
+  );
+};

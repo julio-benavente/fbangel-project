@@ -23,6 +23,7 @@ export const CreateOrderButton = styled.button`
   border-radius: 0.4rem;
   padding: 4px 10px;
   color: ${(props) => props.theme.color.white};
+  cursor: pointer;
 `;
 
 export const Table = styled.div`
@@ -57,17 +58,80 @@ export const Table = styled.div`
           background: ${(props) => transparentize(0.5, props.theme.color.red)};
         }
       }
-      &:nth-child(5) {
-        font-weight: 700;
-      }
     }
 
     .td,
     .th {
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5) {
+      &.status,
+      &.date,
+      &.payments,
+      &.update {
         justify-self: center;
+      }
+    }
+
+    .td.status {
+      border: none;
+      border-radius: 0.2rem;
+      padding: 0.2rem 0.4rem;
+
+      &.payed {
+        background: ${(props) => transparentize(0.7, props.theme.color.green)};
+      }
+
+      &.pending {
+        background: ${(props) =>
+          transparentize(0.7, props.theme.color.gray300)};
+      }
+
+      &.canceled {
+        background: ${(props) => transparentize(0.7, props.theme.color.red)};
+      }
+    }
+
+    .td.payments {
+      button {
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.4rem;
+        margin-left: 0.4rem;
+        outline: none;
+        cursor: pointer;
+        background: ${(props) => transparentize(0.7, props.theme.color.green)};
+      }
+    }
+
+    .td.update {
+      display: grid;
+      justify-content: center;
+      grid-auto-columns: auto;
+      grid-auto-flow: column;
+      button {
+        border: none;
+        border-radius: 0.2rem;
+        padding: 0.2rem 0.4rem;
+        margin-left: 0.4rem;
+        outline: none;
+        cursor: pointer;
+
+        &.updateBtn {
+          background: ${(props) =>
+            transparentize(0.5, props.theme.color.purple)};
+        }
+
+        &.approveBtn {
+          background: ${(props) =>
+            transparentize(0.5, props.theme.color.green)};
+        }
+
+        &.rejectBtn {
+          background: ${(props) => transparentize(0.5, props.theme.color.red)};
+        }
+
+        &.cancelBtn {
+          background: ${(props) =>
+            transparentize(0.5, props.theme.color.yellow)};
+        }
       }
     }
   }
@@ -107,5 +171,77 @@ export const PaypalEmailMessage = styled.div`
     font-weight: 700;
     color: ${(props) => props.theme.color.secondary};
     cursor: pointer;
+  }
+`;
+
+export const PaymentsTable = styled.div`
+  > .PaymentsTable {
+    min-width: 100%;
+    margin-bottom: 1rem;
+    .tr {
+      display: grid;
+      grid-auto-columns: auto;
+      grid-auto-flow: column;
+      background: ${(props) => props.theme.color.balck};
+      height: 30px;
+      margin: 0;
+      border-radius: 0;
+      padding: 0px 20px;
+      align-items: center;
+      .td {
+        border-radius: 0;
+        font-size: 0.8rem;
+        &:nth-child(4) {
+          padding: 3px 5px;
+          font-size: 0.75rem;
+          border-radius: 4px;
+          &.approved {
+            background: ${(props) =>
+              transparentize(0.5, props.theme.color.blue)};
+          }
+          &.pending {
+            background: ${(props) =>
+              transparentize(0.85, props.theme.color.black)};
+          }
+          &.rejected {
+            background: ${(props) =>
+              transparentize(0.5, props.theme.color.red)};
+          }
+        }
+        &:nth-child(5) {
+          font-weight: 700;
+        }
+      }
+
+      .td,
+      .th {
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          justify-self: center;
+        }
+      }
+    }
+
+    .tbody {
+      .tr:nth-child(2n) {
+        background: ${(props) => props.theme.color.gray200};
+      }
+    }
+
+    .thead {
+      border-radius: 0;
+      margin: 0;
+      .tr {
+        background: ${(props) => transparentize(0.9, props.theme.color.green)};
+        .th {
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+      }
+      .PaymentsTable {
+        max-width: 40%;
+      }
+    }
   }
 `;

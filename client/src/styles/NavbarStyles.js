@@ -6,7 +6,7 @@ export const NavbarSection = styled.div`
   position: relative;
   width: 100%;
   display: grid;
-  z-index: 10;
+  z-index: 100;
 `;
 
 export const NavbarWrapper = styled.div`

@@ -5,6 +5,8 @@ import { transparentize } from "polished";
 // Create order page
 
 export const CreateOrder = styled.div`
+  display: grid;
+  align-content: start;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -12,8 +14,42 @@ export const CreateOrder = styled.div`
   outline: 10px ${(props) => props.theme.color.gray200} solid;
   padding: 10px;
   border-radius: 6px;
+  overflow-y: auto;
 `;
 export const Title = styled(H2)``;
+
+export const OrderConcept = styled.p`
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+`;
+
+export const OrderConfirmation = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: ${(props) => props.theme.color.white};
+  padding: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  z-index: 10;
+  button {
+    outline: none;
+    background: ${(props) => props.theme.color.secondary};
+    border: none;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.5rem;
+    color: ${(props) => props.theme.color.white};
+    cursor: pointer;
+
+    &[disabled] {
+      cursor: not-allowed;
+      background: ${(props) => props.theme.color.gray300};
+    }
+  }
+`;
 
 export const CreateOrderButton = styled.button`
   outline: none;
@@ -40,6 +76,27 @@ export const CreateOrderWrapper = styled.div`
   .ordersOptions {
     margin-right: 2rem;
     min-width: 150px;
+  }
+`;
+
+export const Header = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+`;
+
+export const Close = styled.div`
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 100px;
+  background: ${(props) => props.theme.color.gray200};
+  cursor: pointer;
+  &:hover {
+    background: ${(props) => props.theme.color.gray300};
+  }
+
+  svg {
+    width: 100%;
   }
 `;
 
@@ -74,6 +131,9 @@ export const OrderWrapper = styled.div`
   }
 
   .tbody {
+    max-height: 100%;
+    overflow-x: auto;
+
     .tr:nth-child(2n) {
       background: ${(props) => props.theme.color.gray200};
     }

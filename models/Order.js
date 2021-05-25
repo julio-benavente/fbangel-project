@@ -15,7 +15,7 @@ const OrderSchema = new mongoose.Schema({
   },
   payments: {
     type: [mongoose.Schema.Types.ObjectId],
-    ref: "payments",
+    ref: "payment",
     required: true,
   },
   creationDate: {

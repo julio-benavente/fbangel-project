@@ -11,7 +11,9 @@ const auth = require("../../middlewares/auth");
 
 router.get("/", auth, async (req, res) => {
   try {
-    const orders = await Order.find({});
+    const orders = await Order.find({})
+      .populate("payments")
+      .sort({ creationDate: -1 });
     res.json({ orders });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -27,7 +29,7 @@ router.post("/create-order", auth, async (req, res) => {
 
   // create payment
   const payments = await Promise.all(
-    payees.map(async (id) => {
+    payees.map(async ({ id }) => {
       try {
         const user = await User.findById(id);
 

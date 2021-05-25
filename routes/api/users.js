@@ -49,7 +49,8 @@ router.get("/", auth, async (req, res) => {
         isAdult: 0,
         accountIsReal: 0,
       }
-    );
+    ).populate("payments.list");
+
     res.status(200).json({ users });
   } catch (error) {
     res.status(400).json(error);
@@ -180,7 +181,6 @@ router.get("/get-user-information/:id", async (req, res) => {
 
     res.json({ user });
   } catch (error) {
-    console.log(error);
     res.status(400).json({ error });
   }
 });
