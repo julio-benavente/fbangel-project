@@ -1,7 +1,7 @@
 import { transparentize, lighten } from "polished";
 import styled from "styled-components";
 
-import { H2 } from "../GlobalStyles";
+import { H2, breakpoint } from "../GlobalStyles";
 
 export const Users = styled.div``;
 
@@ -15,15 +15,30 @@ export const UsersTable = styled.div`
     align-items: center;
     grid-auto-columns: auto;
     grid-auto-flow: column;
+    align-items: center;
     background: ${(props) => props.theme.color.white};
-    height: 55px;
+    height: 45px;
     margin-bottom: 10px;
     padding: 0px 20px;
     align-items: center;
     border-radius: 5px;
     box-shadow: 3px 3px 7px ${(props) => props.theme.color.gray300};
+    word-break: break-all;
+    @media screen and (max-width: 700px) {
+      grid-auto-flow: row;
+      grid-auto-row: auto;
+      height: auto;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
     .td {
       font-size: 0.8rem;
+      @media screen and (max-width: 700px) {
+        margin-bottom: 5px;
+      }
     }
 
     .td.status {
@@ -33,7 +48,8 @@ export const UsersTable = styled.div`
       &::first-letter {
         text-transform: uppercase;
       }
-      &.validated {
+      &.validated,
+      &.active {
         background: ${(props) => transparentize(0.5, props.theme.color.blue)};
       }
       &.pending {
@@ -55,6 +71,10 @@ export const UsersTable = styled.div`
       &.userType,
       &.email {
         justify-self: center;
+
+        @media screen and (max-width: 700px) {
+          justify-self: start;
+        }
       }
     }
 
@@ -69,6 +89,9 @@ export const UsersTable = styled.div`
     .th {
       &.moreInformation {
         justify-self: end;
+        @media screen and (max-width: 700px) {
+          justify-self: start;
+        }
       }
     }
 
@@ -101,6 +124,10 @@ export const UsersTable = styled.div`
     .tr {
       background: ${(props) => transparentize(0.7, props.theme.color.purple)};
       height: 45px;
+
+      @media screen and (max-width: 700px) {
+        height: auto;
+      }
 
       .th {
         font-size: 0.9rem;

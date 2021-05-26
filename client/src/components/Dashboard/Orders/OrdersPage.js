@@ -31,6 +31,11 @@ const OrdersPage = () => {
   useEffect(() => {
     const width = () =>
       setTableWidth(() => {
+        if (window.innerWidth < 600) {
+          return {
+            gridTemplateColumns: `1fr`,
+          };
+        }
         const parentWidth = document.querySelector(".Orders").offsetWidth;
         const padding = parentWidth * 0.07 * 2;
         const realWidth = parentWidth - padding;
@@ -39,17 +44,17 @@ const OrdersPage = () => {
           {
             column: "concept",
             width: 30,
-            min: 200,
+            min: 150,
           },
           {
             column: "status",
             width: 10,
-            min: 100,
+            min: 80,
           },
           {
             column: "date",
             width: 15,
-            min: 100,
+            min: 80,
           },
           {
             column: "payments",

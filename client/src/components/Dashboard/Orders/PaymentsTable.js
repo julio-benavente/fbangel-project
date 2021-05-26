@@ -18,27 +18,27 @@ const Table = (props) => {
           {
             column: "concept",
             width: 35,
-            min: 200,
+            min: 80,
           },
           {
             column: "paypal",
             width: 20,
-            min: 100,
+            min: 70,
           },
           {
             column: "date",
             width: 15,
-            min: 100,
+            min: 70,
           },
           {
             column: "status",
             width: 15,
-            min: 100,
+            min: 60,
           },
           {
             column: "amount",
             width: 15,
-            min: 100,
+            min: 60,
           },
         ];
 

@@ -24,6 +24,12 @@ const UsersPage = () => {
   useEffect(() => {
     const usersWidth = () =>
       setUsersTableWidth(() => {
+        if (window.innerWidth < 700) {
+          return {
+            gridTemplateColumns: `1fr`,
+          };
+        }
+
         const parentWidth = document.querySelector(".Users").offsetWidth;
         const padding = 30;
         const realWidth = parentWidth - padding;
@@ -31,18 +37,18 @@ const UsersPage = () => {
         const columns = [
           {
             column: "name",
-            width: 15,
+            width: 10,
             min: 100,
           },
           {
             column: "status",
             width: 8,
-            min: 100,
+            min: 60,
           },
           {
             column: "userType",
             width: 8,
-            min: 100,
+            min: 50,
           },
           {
             column: "email",
@@ -52,22 +58,22 @@ const UsersPage = () => {
           {
             column: "country",
             width: 8,
-            min: 100,
+            min: 50,
           },
           {
             column: "phone",
             width: 15,
-            min: 100,
+            min: 80,
           },
           {
             column: "payments",
             width: 8,
-            min: 100,
+            min: 70,
           },
           {
             column: "moreInformation",
-            width: 15,
-            min: 100,
+            width: 10,
+            min: 80,
           },
         ];
 

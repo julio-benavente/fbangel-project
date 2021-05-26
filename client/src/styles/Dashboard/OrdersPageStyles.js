@@ -1,7 +1,7 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
 
-import { H2 } from "../GlobalStyles";
+import { H2, breakpoint } from "../GlobalStyles";
 
 export const Orders = styled.div`
   position: relative;
@@ -34,12 +34,24 @@ export const Table = styled.div`
     grid-auto-columns: auto;
     grid-auto-flow: column;
     background: ${(props) => props.theme.color.white};
-    height: 30px;
+    height: 40px;
     margin-bottom: 5px;
     padding: 0px 20px;
     align-items: center;
     border-radius: 5px;
     box-shadow: 2px 2px 4px ${(props) => props.theme.color.gray300};
+    word-break: break-all;
+
+    @media screen and ${breakpoint.sm} {
+      grid-auto-flow: row;
+      grid-auto-row: auto;
+      height: auto;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
     .td {
       font-size: 0.8rem;
       &:nth-child(4) {
@@ -67,6 +79,10 @@ export const Table = styled.div`
       &.payments,
       &.update {
         justify-self: center;
+
+        @media screen and ${breakpoint.sm} {
+          justify-self: start;
+        }
       }
     }
 
@@ -94,7 +110,6 @@ export const Table = styled.div`
         border: none;
         border-radius: 0.2rem;
         padding: 0.2rem 0.4rem;
-        margin-left: 0.4rem;
         outline: none;
         cursor: pointer;
         background: ${(props) => transparentize(0.7, props.theme.color.green)};
@@ -147,6 +162,10 @@ export const Table = styled.div`
       background: ${(props) => transparentize(0.7, props.theme.color.green)};
       height: 45px;
 
+      @media screen and (max-width: 700px) {
+        height: auto;
+      }
+
       .th {
         font-size: 0.9rem;
         font-weight: 600;
@@ -183,7 +202,7 @@ export const PaymentsTable = styled.div`
       grid-auto-columns: auto;
       grid-auto-flow: column;
       background: ${(props) => props.theme.color.balck};
-      height: 30px;
+      height: 40px;
       margin: 0;
       border-radius: 0;
       padding: 0px 20px;

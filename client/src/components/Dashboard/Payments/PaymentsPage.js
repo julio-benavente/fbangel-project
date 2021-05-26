@@ -29,6 +29,12 @@ const PaymentsPage = () => {
   useEffect(() => {
     const width = () =>
       setTableWidth(() => {
+        if (window.innerWidth < 600) {
+          return {
+            gridTemplateColumns: `1fr`,
+          };
+        }
+
         const parentWidth = document.querySelector(".Payments").offsetWidth;
         const padding = parentWidth * 0.07 * 2;
         const realWidth = parentWidth - padding;
@@ -37,7 +43,7 @@ const PaymentsPage = () => {
           {
             column: "concept",
             width: 35,
-            min: 200,
+            min: 80,
           },
           {
             column: "paypal",
@@ -47,17 +53,17 @@ const PaymentsPage = () => {
           {
             column: "date",
             width: 15,
-            min: 100,
+            min: 70,
           },
           {
             column: "status",
             width: 15,
-            min: 100,
+            min: 70,
           },
           {
             column: "amount",
             width: 15,
-            min: 100,
+            min: 50,
           },
         ];
 
@@ -156,11 +162,11 @@ const PaymentsPage = () => {
         <Table className="displayUser">
           <div className="thead">
             <div className="tr" style={{ ...tableWidth }}>
-              <div className="th">Concepto</div>
-              <div className="th">Cuenta de paypal</div>
-              <div className="th">Fecha de pago</div>
-              <div className="th">Estado</div>
-              <div className="th">Monto</div>
+              <div className="th concept">Concepto</div>
+              <div className="th paymentMethod">Cuenta de paypal</div>
+              <div className="th paymentDate">Fecha de pago</div>
+              <div className="th status">Estado</div>
+              <div className="th amount">Monto</div>
             </div>
           </div>
           <div className="tbody">
@@ -183,11 +189,11 @@ const PaymentsPage = () => {
 
                 return (
                   <div className="tr" key={index} style={{ ...tableWidth }}>
-                    <div className="td">{concept}</div>
-                    <div className="td">{paypalEmail}</div>
-                    <div className="td">{date}</div>
-                    <div className={`td ${status}`}>{status}</div>
-                    <div className="td">
+                    <div className="td concept">{concept}</div>
+                    <div className="td paymentMethod">{paypalEmail}</div>
+                    <div className="td paymentDate">{date}</div>
+                    <div className={`td status ${status}`}>{status}</div>
+                    <div className="td amount">
                       ${" "}
                       {(
                         Math.round((amount + Number.EPSILON) * 100) / 100
@@ -251,3 +257,34 @@ const PaymentsPage = () => {
 };
 
 export default PaymentsPage;
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+
+  return windowSize;
+}

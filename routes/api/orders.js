@@ -65,8 +65,10 @@ router.post("/create-order", auth, async (req, res) => {
         const newPayment = await new Payment(paymentInformation).save();
 
         // payments.push(newPayment._id); // array of payments
-        user.payments.list.push(newPayment._id);
-        user.save();
+        User.findByIdAndUpdate(id, {
+          $push: { "payments.list": newPayment._id },
+        }).exec();
+
         return newPayment._id;
       } catch (error) {
         errors.push({
