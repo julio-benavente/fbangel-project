@@ -28,8 +28,8 @@ const Form = () => {
   const formData = useRef();
   const defaultValues = {
     stepOne: {
-      name: "julio",
-      lastname: "julio",
+      firstName: "julio",
+      lastName: "julio",
       address: "Calle La loca vecindad 46",
       email: "julio@julio.com",
       country: "Peru",
@@ -49,7 +49,7 @@ const Form = () => {
       bankAccountCode: "13254132541325413254",
       // documentImage: {},
       referral: "5asd665",
-      termsAndConditions: true,
+      termsAndConditions: "yes",
       captcha: "true",
     },
   };
@@ -63,11 +63,71 @@ const Form = () => {
     trigger,
     getValues,
     watch,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isSubmitting },
   } = methods;
 
-  const onSubmit = (data) => {
-    console.log("onSubmit", data);
+  const onSubmit = async (data) => {
+    if (!isSubmitting) {
+      const response = await fetchCandidateInformation(data);
+      const { status } = response;
+
+      console.log(response);
+
+      if (status && status === 200) {
+        handleFormStep(1, formStep);
+      } else {
+        const incompleteCandidate = await fetchCandidateInformation(
+          data,
+          "incomplete"
+        );
+
+        console.log(incompleteCandidate);
+      }
+      return null;
+    }
+  };
+
+  const fetchCandidateInformation = async (data, type = "complete") => {
+    const url =
+      type === "complete"
+        ? "/api/users/registration/referral"
+        : "/api/users/registration/incompleteReferral";
+
+    const { stepOne, stepTwo } = data;
+
+    const documentImage = stepTwo && stepTwo.documentImage;
+
+    const encodeImage = (img) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(img);
+        reader.onloadend = (e) => resolve(e.target.result);
+
+        // Error
+        reader.onerror = (error) => reject(error);
+      });
+    };
+
+    const candidateInformation = {
+      ...stepOne,
+      ...stepTwo,
+      documentImage:
+        documentImage &&
+        documentImage[0] &&
+        (await encodeImage(documentImage[0])),
+    };
+
+    try {
+      const response = await axios.post(url, candidateInformation);
+
+      console.log("fetchCandidateInformation response", response);
+
+      return response;
+    } catch (error) {
+      console.log("fetchCandidateInformation error", error.response);
+
+      return { error: error.message, response: error.response };
+    }
   };
 
   // Step two state
@@ -130,7 +190,9 @@ const Form = () => {
             <Button onClick={() => handleFormStep(-1, formStep)}>
               Anterior
             </Button>
-            <SubmitButton type="submit">Enviar</SubmitButton>
+            <SubmitButton type="submit">
+              {isSubmitting ? "Enviando" : "Enviar"}
+            </SubmitButton>
           </Buttons>
         );
 

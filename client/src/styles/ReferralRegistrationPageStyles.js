@@ -14,7 +14,9 @@ export const ReferralRegistrationSectionWrapper = styled(Container)``;
 
 export const ReferralRegistrationTitle = styled(H2)``;
 
-export const ReferralRegistrationInfo = styled.div``;
+export const ReferralRegistrationInfo = styled.div`
+  margin-bottom: 1rem;
+`;
 
 export const Form = styled.div``;
 
@@ -184,6 +186,7 @@ export const StepTwo = styled.div`
   ${message}
   grid-template-columns: repeat(2, calc(((100% - 20px - 20px) / 2) + 10px));
   overflow-x: hidden;
+  /* justify-items: start; */
   > * {
     grid-column: 1/-1;
   }
@@ -224,7 +227,8 @@ export const StepTwo = styled.div`
   }
 
   .termsAndConditions {
-    margin input {
+    margin-bottom: 10px;
+    input {
       width: auto;
     }
     a {

@@ -34,15 +34,13 @@ const Step = ({
 
   useEffect(() => {
     datePicker.current.input.readOnly = true;
-    // readOnly = true;
-    // console.log(readOnly);
   }, []);
   return (
     <StepOne>
       <TextInput
-        className="name"
+        className="firstName"
         question="Tu nombre"
-        register={register("stepOne.name", {
+        register={register("stepOne.firstName", {
           required: {
             value: true,
             message: "Por favor, registre su nombre",
@@ -53,14 +51,16 @@ const Step = ({
           },
         })}
         error={
-          errors.stepOne && errors.stepOne.name && errors.stepOne.name.message
+          errors.stepOne &&
+          errors.stepOne.firstName &&
+          errors.stepOne.firstName.message
         }
       />
 
       <TextInput
-        className="lastname"
+        className="lastName"
         question="Tus apellidos"
-        register={register("stepOne.lastname", {
+        register={register("stepOne.lastName", {
           required: {
             value: true,
             message: "Por favor, registre su apellido",
@@ -72,8 +72,8 @@ const Step = ({
         })}
         error={
           errors.stepOne &&
-          errors.stepOne.lastname &&
-          errors.stepOne.lastname.message
+          errors.stepOne.lastName &&
+          errors.stepOne.lastName.message
         }
       />
       <TextInput
@@ -254,7 +254,8 @@ const Step = ({
                 message: "Este campo es obligatorio",
               },
               pattern: {
-                value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                value:
+                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
                 message: "Ingrese un numero de celular válido",
               },
             }}
@@ -289,7 +290,8 @@ const Step = ({
             message: "Por favor, ingrese su email",
           },
           pattern: {
-            value: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+            value:
+              /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
             message: "Ingrese un email valido",
           },
         })}

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Styles
 import {
@@ -93,9 +94,10 @@ export const ReferralProgramImage = styled.img`
   }
 `;
 
-export const RegistrationBtn = styled.a`
+export const RegistrationBtn = styled(Link)`
   ${RoundedBtn}
   margin-bottom: 4rem;
+  cursor: pointer;
 
   @media screen and ${breakpoint.sm} {
     grid-row: 4/5;
