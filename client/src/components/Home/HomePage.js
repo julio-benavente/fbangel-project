@@ -58,6 +58,7 @@ import {
   Membership,
   TestimoniesNav,
   TestimoniesNavLink,
+  Picture,
 } from "../../styles/HomePageStyles";
 
 // Assets
@@ -72,6 +73,9 @@ import { ReactComponent as ShareSvg } from "../../assets/svgs/share.svg";
 import { ReactComponent as StackOfMoneySvg } from "../../assets/svgs/stackOfMoney.svg";
 import poster from "../../assets/images/video-poster.jpg";
 import fbaAngelVideo from "../../assets/videos/fbangel.mp4";
+import profilePictureOne from "../../assets/images/profilePictureOne.jpg";
+import profilePictureTwo from "../../assets/images/profilePictureTwo.jpg";
+import profilePictureThree from "../../assets/images/profilePictureThree.jpg";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -227,17 +231,26 @@ const HomePage = () => {
             style={{ gridTemplateColumns: width < 600 && "repeat(3,300px)" }}
           >
             {t("home.testimonies.testimonies", { returnObjects: true }).map(
-              ({ testimony, author, membership }, i) => (
-                <TestimonyCard
-                  key={i}
-                  as={motion.div}
-                  animate={testimoniesNavAnimation}
-                >
-                  <Testimony>{testimony}</Testimony>
-                  <Author>{author}</Author>
-                  <Membership>{membership}</Membership>
-                </TestimonyCard>
-              )
+              ({ testimony, author, membership }, i) => {
+                const pictures = {
+                  0: profilePictureOne,
+                  1: profilePictureTwo,
+                  2: profilePictureThree,
+                };
+
+                return (
+                  <TestimonyCard
+                    key={i}
+                    as={motion.div}
+                    animate={testimoniesNavAnimation}
+                  >
+                    <Testimony>{testimony}</Testimony>
+                    <Author>{author}</Author>
+                    <Membership>{membership}</Membership>
+                    <Picture src={pictures[i]} />
+                  </TestimonyCard>
+                );
+              }
             )}
           </TestimoniesCardWrapper>
           <TestimoniesNav>

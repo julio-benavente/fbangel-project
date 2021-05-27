@@ -3,7 +3,7 @@ import { darken } from "polished";
 import { Link } from "react-router-dom";
 
 // Styles
-import { H2 } from "./GlobalStyles";
+import { H2, breakpoint } from "./GlobalStyles";
 
 export const Login = styled.div`
   position: relative;
@@ -15,6 +15,10 @@ export const Login = styled.div`
   display: grid;
   grid-template-columns: repeat(2, calc(50%));
   position: absolute;
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ImageSide = styled.div`
@@ -22,6 +26,10 @@ export const ImageSide = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.div`

@@ -456,12 +456,18 @@ export const TestimoniesCardWrapper = styled.div`
 `;
 export const TestimonyCard = styled.div`
   display: grid;
+  grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    "testimony testimony"
+    "author picture"
+    "membership picture";
   padding: 24px;
   box-shadow: 4px 4px 10px ${(props) => props.theme.color.gray300};
   overflow-x: hidden;
 `;
 export const Testimony = styled.div`
+  grid-area: testimony;
   position: relative;
   margin-bottom: 1rem;
   &::before {
@@ -476,11 +482,16 @@ export const Testimony = styled.div`
   }
 `;
 export const Author = styled.p`
+  grid-area: author;
+  align-self: end;
   font-weight: 600;
   font-size: 1.2rem;
   margin-top: 20px;
+  position: relative;
 `;
 export const Membership = styled.div`
+  grid-area: membership;
+  align-self: end;
   font-weight: 300;
   font-size: 0.875rem;
 `;
@@ -492,6 +503,15 @@ export const TestimoniesNav = styled.div`
   justify-items: center;
   gap: 5px;
 `;
+
+export const Picture = styled.img`
+  grid-area: picture;
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+  align-self: end;
+`;
+
 export const TestimoniesNavLink = styled.div`
   height: 10px;
   width: 30px;
