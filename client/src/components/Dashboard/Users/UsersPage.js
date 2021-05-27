@@ -6,6 +6,7 @@ import {
   getUsersState,
 } from "../../../store/entities/users";
 import { useDispatch, useSelector } from "react-redux";
+import Pagination from "rc-pagination";
 
 // Components
 import UserRow from "./UserRow";
@@ -16,6 +17,7 @@ import {
   Title,
   UsersTable,
 } from "../../../styles/Dashboard/UsersPageStyles";
+import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const UsersPage = () => {
   const [usersTableWidth, setUsersTableWidth] = useState(null);
@@ -42,38 +44,38 @@ const UsersPage = () => {
           },
           {
             column: "status",
-            width: 8,
+            width: 10,
             min: 60,
           },
           {
             column: "userType",
-            width: 8,
+            width: 10,
             min: 50,
           },
           {
             column: "email",
-            width: 18,
+            width: 20,
             min: 100,
           },
           {
             column: "country",
-            width: 8,
+            width: 10,
             min: 50,
           },
           {
             column: "phone",
-            width: 15,
+            width: 10,
             min: 80,
           },
           {
             column: "payments",
-            width: 8,
+            width: 15,
             min: 70,
           },
           {
             column: "moreInformation",
             width: 10,
-            min: 80,
+            min: 100,
           },
         ];
 
@@ -108,6 +110,32 @@ const UsersPage = () => {
     dispatch(requestUsers());
   }, []);
 
+  // PAGINATION
+  const [pageSize, setPagSize] = useState(15);
+  const [totalPages, setTotalPages] = useState(null);
+  const [current, setCurrent] = useState(1);
+
+  // Select the rows to display on the table
+  const [showRows, setShowRows] = useState([]);
+
+  useEffect(() => {
+    setTotalPages(users.length - 1);
+  }, [users, totalPages]);
+
+  const onTableChange = (page) => {
+    setCurrent(page);
+  };
+
+  useEffect(() => {
+    const selectRows = (current, pageSize) => {
+      const _1 = pageSize * current - pageSize;
+      const _2 = pageSize * current;
+
+      return users.slice(_1, _2);
+    };
+    setShowRows(selectRows(current, pageSize));
+  }, [users, current, pageSize]);
+
   return (
     <Users className="Users">
       <Title>Users</Title>
@@ -132,7 +160,7 @@ const UsersPage = () => {
           )}
           {!loading &&
             users.length !== 0 &&
-            users.map((user, index) => (
+            showRows.map((user, index) => (
               <UserRow
                 user={user}
                 key={index}
@@ -141,6 +169,17 @@ const UsersPage = () => {
             ))}
         </div>
       </UsersTable>
+      <PaginationWrapper>
+        <Pagination
+          onChange={onTableChange}
+          current={current}
+          total={totalPages}
+          defaultPageSize={pageSize}
+          showPrevNextJumpers={false}
+          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
+          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+        />
+      </PaginationWrapper>
     </Users>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useForm, FormProvider } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 
@@ -30,7 +30,7 @@ import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(4);
   const formData = useRef();
 
   const defaultValues = {
@@ -69,8 +69,16 @@ const Form = () => {
       gdprAgreement: "yes",
     },
   };
+
+  const { token } = useParams();
+
   const methods = useForm({
     mode: "all",
+    defaultValues: {
+      stepFour: {
+        referral: token,
+      },
+    },
   });
 
   const {
@@ -292,7 +300,7 @@ const Form = () => {
         <Forms onSubmit={handleSubmit(onSubmit)} ref={formData}>
           {showStep(formStep)}
           {renderButton()}
-          {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+          <pre>{JSON.stringify(watch(), null, 2)}</pre>
         </Forms>
       </FormProvider>
     </FormsWrapper>

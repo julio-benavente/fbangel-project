@@ -8,6 +8,7 @@ import {
   getPaymentsState,
 } from "../../../store/entities/payments";
 import { getUser } from "../../../store/auth/auth";
+import Pagination from "rc-pagination";
 
 // Styles
 import {
@@ -16,6 +17,7 @@ import {
   Table,
   PaypalEmailMessage,
 } from "../../../styles/Dashboard/PaymentsPageStyle";
+import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const PaymentsPage = () => {
   const dispatch = useDispatch();
@@ -125,6 +127,32 @@ const PaymentsPage = () => {
     }
   };
 
+  // PAGINATION
+  const [pageSize, setPagSize] = useState(15);
+  const [totalPages, setTotalPages] = useState(null);
+  const [current, setCurrent] = useState(1);
+
+  // Select the rows to display on the table
+  const [showRows, setShowRows] = useState([]);
+
+  useEffect(() => {
+    setTotalPages(payments.length - 1);
+  }, [payments, totalPages]);
+
+  const onTableChange = (page) => {
+    setCurrent(page);
+  };
+
+  useEffect(() => {
+    const selectRows = (current, pageSize) => {
+      const _1 = pageSize * current - pageSize;
+      const _2 = pageSize * current;
+
+      return payments.slice(_1, _2);
+    };
+    setShowRows(selectRows(current, pageSize));
+  }, [payments, current, pageSize]);
+
   return (
     <Payments className="Payments">
       {!user.paypalEmailVerified && (
@@ -177,7 +205,7 @@ const PaymentsPage = () => {
             )}
 
             {!loading &&
-              payments.map((payment, index) => {
+              showRows.map((payment, index) => {
                 const { concept, paypalEmail, creationDate, amount, status } =
                   payment;
 
@@ -224,7 +252,7 @@ const PaymentsPage = () => {
               </div>
             )}
             {!loading &&
-              payments.map((payment, index) => {
+              showRows.map((payment, index) => {
                 const { concept, paypalEmail, creationDate, amount, status } =
                   payment;
 
@@ -252,6 +280,18 @@ const PaymentsPage = () => {
           </div>
         </Table>
       )}
+
+      <PaginationWrapper>
+        <Pagination
+          onChange={onTableChange}
+          current={current}
+          total={totalPages}
+          defaultPageSize={pageSize}
+          showPrevNextJumpers={false}
+          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
+          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+        />
+      </PaginationWrapper>
     </Payments>
   );
 };

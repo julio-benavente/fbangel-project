@@ -387,7 +387,7 @@ const HowItWorksPage = () => {
           <RegistrationInfo>
             <p>
               {t("how_it_works.registration.info.p_1.0")}{" "}
-              <Link to="/unete-ahora">
+              <Link to="/join-now">
                 {t("how_it_works.registration.info.p_1.1")}
               </Link>{" "}
               {t("how_it_works.registration.info.p_1.2")}

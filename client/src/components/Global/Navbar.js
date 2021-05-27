@@ -29,7 +29,7 @@ const navLinks = [
   },
   {
     link: "Únete ahora",
-    to: "/unete-ahora",
+    to: "/join-now",
     active: "active",
   },
   {

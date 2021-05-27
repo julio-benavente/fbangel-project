@@ -104,7 +104,7 @@ export const Menu = styled.div`
   justify-content: center;
   align-content: center;
   position: absolute;
-  top: 0%;
+  top: 50%;
   right: 40px;
   border-radius: 1000px;
   background: ${(props) =>

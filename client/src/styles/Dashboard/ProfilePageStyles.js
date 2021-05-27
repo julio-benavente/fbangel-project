@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H2 } from "../GlobalStyles";
+import { H2, breakpoint } from "../GlobalStyles";
 import { lighten, transparentize } from "polished";
 
 export const Profile = styled.div`
@@ -7,12 +7,21 @@ export const Profile = styled.div`
   grid-template-columns: 7fr minmax(240px, 3fr);
   gap: 20px;
   min-height: 100%;
+
+  @media screen and ${breakpoint.sm} {
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
 `;
 
 export const ProfileSection = styled.div`
   background: ${(props) => props.theme.color.white};
   padding: 10px;
   border-radius: 10px;
+
+  @media screen and ${breakpoint.sm} {
+    grid-row: 2/3;
+  }
 `;
 
 export const ProfileTitle = styled(H2)`

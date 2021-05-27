@@ -59,6 +59,12 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
   useEffect(() => {
     const width = () =>
       setTableWidth(() => {
+        if (window.innerWidth < 600) {
+          return {
+            gridTemplateColumns: `1fr`,
+          };
+        }
+
         const parentWidth = document.querySelector(".CreateOrder").offsetWidth;
         const padding = parentWidth * 0.07 * 2;
         const realWidth = parentWidth - padding;
@@ -67,17 +73,17 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           {
             column: "name",
             width: 20,
-            min: 150,
+            min: 80,
           },
           {
             column: "email",
             width: 20,
-            min: 100,
+            min: 130,
           },
           {
             column: "paymentMethod",
             width: 20,
-            min: 100,
+            min: 80,
           },
           {
             column: "concept",
@@ -87,7 +93,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           {
             column: "amount",
             width: 10,
-            min: 100,
+            min: 70,
           },
         ];
 
@@ -249,9 +255,10 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
   const newUsersRentalPayment = () => {
     const newRentalPayments = users.filter((user, index) => {
       const userType = user.userType === "rental";
-      const status = user.status === "rental";
+      const status = user.status === "active";
       const firstRental = user.payments.firstRentPayed === false;
 
+      console.log(userType && status && firstRental);
       return userType && status && firstRental;
     });
 
@@ -284,18 +291,24 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       return tier.price;
     };
 
-    const paymentsInfo = () =>
-      newRentalPayments.map((user) => ({
-        id: user._id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        paymentMethod: user.paymentMethod,
-        concept: concept(),
-        amount: amount(user.payments.tier),
-      }));
+    const paymentsInfo = newRentalPayments.map((user) => ({
+      id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      paymentMethod: user.paymentMethod,
+      concept: concept(),
+      amount: amount(user.payments.tier),
+    }));
 
     setPayments(paymentsInfo);
+
+    console.log({
+      ...order,
+      product: product._id,
+      concept: product.name,
+      payees: paymentsInfo,
+    });
 
     setOrder({
       ...order,
@@ -375,13 +388,6 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       </CreateOrderWrapper>
       <OrderConcept>{order.concept}</OrderConcept>
 
-      {order.concept && (
-        <OrderConfirmation>
-          <button disabled={sendingOrder} onClick={sendOrder}>
-            Confirm order
-          </button>
-        </OrderConfirmation>
-      )}
       <OrderWrapper className="displayAdmin">
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
@@ -416,6 +422,13 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           })}
         </div>
       </OrderWrapper>
+      {order.concept && (
+        <OrderConfirmation>
+          <button disabled={sendingOrder} onClick={sendOrder}>
+            Confirm order
+          </button>
+        </OrderConfirmation>
+      )}
     </CreateOrder>
   );
 };

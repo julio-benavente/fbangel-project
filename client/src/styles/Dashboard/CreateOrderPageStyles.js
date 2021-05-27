@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { H2 } from "../GlobalStyles";
+import { H2, breakpoint } from "../GlobalStyles";
 import { transparentize } from "polished";
 
 // Create order page
@@ -25,7 +25,7 @@ export const OrderConcept = styled.p`
 `;
 
 export const OrderConfirmation = styled.div`
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
   background: ${(props) => props.theme.color.white};
@@ -33,7 +33,6 @@ export const OrderConfirmation = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  z-index: 10;
   button {
     outline: none;
     background: ${(props) => props.theme.color.secondary};
@@ -102,18 +101,29 @@ export const Close = styled.div`
 
 export const OrderWrapper = styled.div`
   min-width: 100%;
-
+  max-height: 600px;
+  overflow: auto;
   .tr {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-flow: column;
     background: ${(props) => props.theme.color.white};
-    height: 30px;
+    height: 40px;
     margin-bottom: 5px;
     padding: 0px 20px;
     align-items: center;
     border-radius: 5px;
     box-shadow: 2px 2px 4px ${(props) => props.theme.color.gray300};
+    word-break: break-all;
+    @media screen and ${breakpoint.sm} {
+      grid-auto-flow: row;
+      grid-auto-row: auto;
+      height: auto;
+      grid-template-columns: 1fr;
+      justify-items: start;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     .td,
     .th {
@@ -122,6 +132,14 @@ export const OrderWrapper = styled.div`
       &.email,
       &.paymentMethod {
         justify-self: center;
+      }
+
+      @media screen and ${breakpoint.sm} {
+        margin-bottom: 2px;
+        &.email,
+        &.paymentMethod {
+          justify-self: start;
+        }
       }
 
       &.amount {
@@ -143,6 +161,10 @@ export const OrderWrapper = styled.div`
     .tr {
       background: ${(props) => transparentize(0.7, props.theme.color.green)};
       height: 45px;
+
+      @media screen and ${breakpoint.sm} {
+        height: auto;
+      }
 
       .th {
         font-size: 0.9rem;

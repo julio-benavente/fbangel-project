@@ -7,10 +7,12 @@ import {
   requestOrders,
 } from "../../../store/entities/orders";
 import axios from "axios";
+import Pagination from "rc-pagination";
 
 // Components
 import CreateOrder from "./CreateOrderPage";
 import PaymentsTable from "./PaymentsTable";
+import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 // Styles
 import {
@@ -102,6 +104,32 @@ const OrdersPage = () => {
     dispatch(requestOrders());
   }, []);
 
+  // PAGINATION
+  const [pageSize, setPagSize] = useState(15);
+  const [totalPages, setTotalPages] = useState(null);
+  const [current, setCurrent] = useState(1);
+
+  // Select the rows to display on the table
+  const [showRows, setShowRows] = useState([]);
+
+  useEffect(() => {
+    setTotalPages(orders.length - 1);
+  }, [orders, totalPages]);
+
+  const onTableChange = (page) => {
+    setCurrent(page);
+  };
+
+  useEffect(() => {
+    const selectRows = (current, pageSize) => {
+      const _1 = pageSize * current - pageSize;
+      const _2 = pageSize * current;
+
+      return orders.slice(_1, _2);
+    };
+    setShowRows(selectRows(current, pageSize));
+  }, [orders, current, pageSize]);
+
   return (
     <Orders className="Orders">
       {createOrderIsOpen && (
@@ -135,10 +163,21 @@ const OrdersPage = () => {
           )}
 
           {!loading &&
-            orders.map((order, index) => {
+            showRows.map((order, index) => {
               return <Row key={index} order={order} tableWidth={tableWidth} />;
             })}
         </div>
+        <PaginationWrapper>
+          <Pagination
+            onChange={onTableChange}
+            current={current}
+            total={totalPages}
+            defaultPageSize={pageSize}
+            showPrevNextJumpers={false}
+            prevIcon={() => <i className="fas fa-angle-double-left"></i>}
+            nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+          />
+        </PaginationWrapper>
       </Table>
     </Orders>
   );

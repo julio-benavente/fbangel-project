@@ -69,6 +69,14 @@ router.post("/create-order", auth, async (req, res) => {
           $push: { "payments.list": newPayment._id },
         }).exec();
 
+        if (product.abrv === "rental") {
+          User.findByIdAndUpdate(id, {
+            $set: {
+              "payments.firstRentPayed": true,
+            },
+          }).exec();
+        }
+
         return newPayment._id;
       } catch (error) {
         errors.push({

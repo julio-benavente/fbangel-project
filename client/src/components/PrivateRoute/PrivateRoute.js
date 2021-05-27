@@ -20,7 +20,18 @@ const PrivateRoute = ({ children, ...rest }) => {
   if (user.id) {
     return <Route {...rest} render={() => children} />;
   } else {
-    return <p></p>;
+    return (
+      <div
+        style={{
+          height: "calc(100vh - 80px)",
+          display: "grid",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
+        <h1>Loading . . .</h1>
+      </div>
+    );
   }
 };
 
