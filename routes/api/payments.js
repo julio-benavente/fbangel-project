@@ -11,7 +11,8 @@ router.get("/", auth, async (req, res) => {
     const payments = await Payment.find({})
       .populate({ path: "createdBy", select: "email" })
       .populate({ path: "approvedBy", select: "email" })
-      .populate({ path: "payee", select: "email firstName lastName" });
+      .populate({ path: "payee", select: "email firstName lastName" })
+      .sort({ creationDate: -1 });
 
     res.json({ payments: { list: payments } });
   } catch (error) {

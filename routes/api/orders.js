@@ -29,7 +29,7 @@ router.post("/create-order", auth, async (req, res) => {
 
   // create payment
   const payments = await Promise.all(
-    payees.map(async ({ id }) => {
+    payees.map(async ({ id, referral }) => {
       try {
         const user = await User.findById(id);
 
@@ -60,6 +60,7 @@ router.post("/create-order", auth, async (req, res) => {
           paypalEmail: user.paypalEmail,
           createdBy,
           payee: id,
+          paymentMethod: user.paymentMethod,
         };
 
         const newPayment = await new Payment(paymentInformation).save();
@@ -74,6 +75,12 @@ router.post("/create-order", auth, async (req, res) => {
             $set: {
               "payments.firstRentPayed": true,
             },
+          }).exec();
+        }
+
+        if (product.abrv === "referral") {
+          User.findByIdAndUpdate(referral, {
+            $set: { referralHasBeenPaid: true },
           }).exec();
         }
 
@@ -121,13 +128,20 @@ router.put("/change-status/:action", auth, async (req, res) => {
     const errors = [];
 
     const order = await Order.findById(orderId);
+    const product = await Product.finById(order.product);
 
     const payments = await Promise.all(
       order.payments.map(async (paymentId) => {
         try {
-          await Payment.findByIdAndUpdate(paymentId, {
+          Payment.findByIdAndUpdate(paymentId, {
             $set: { status: status },
-          });
+          }).exec();
+
+          if (action === "payOrder") {
+            Payment.findByIdAndUpdate(paymentId, {
+              $set: { paymentDate: new Date() },
+            }).exec();
+          }
 
           return paymentId;
         } catch (error) {

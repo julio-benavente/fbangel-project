@@ -314,7 +314,7 @@ const StepThree = () => {
             https://www.facebook.com/security/2fac/setup/intro
           </a>{" "}
           {t("join_us.step_three.code2FA.message.p_2")}{" "}
-          <Link to="/como-funciona" target="_blank">
+          <Link to="/how-it-works" target="_blank">
             {t("join_us.step_three.code2FA.message.p_3")}
           </Link>{" "}
           {t("join_us.step_three.code2FA.message.p_4")}

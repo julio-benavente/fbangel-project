@@ -23,6 +23,10 @@ const PaymentSchema = new mongoose.Schema({
     ref: "user",
     required: true,
   },
+  paymentMethod: {
+    type: String,
+    // required: true,
+  },
   creationDate: {
     type: Date,
     default: Date.now,

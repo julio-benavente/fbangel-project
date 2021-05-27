@@ -30,7 +30,19 @@ const DashboardPage = () => {
           <Route exact path={path} component={Payments} />
           <Route
             path={`${path}/*`}
-            render={() => <h1>Page doesn't exist</h1>}
+            render={() => (
+              <div
+                style={{
+                  height: "calc(100%)",
+                  width: "calc(100%)",
+                  display: "grid",
+                  justifyContent: "center",
+                  alignContent: "center",
+                }}
+              >
+                <h1>Page not found</h1>
+              </div>
+            )}
           />
         </Switch>
       </Main>

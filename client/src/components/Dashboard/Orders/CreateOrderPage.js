@@ -204,7 +204,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
         firstDayLastMonth <= new Date(user.creationDate) &&
         new Date(user.creationDate) <= lastDayLastMonth;
 
-      const hasBeenPayed = user.referralHasBeenPayed === false;
+      const hasBeenPayed = user.referralHasBeenPaid === false;
 
       return status && lastMonth && hasBeenPayed;
     });
@@ -225,12 +225,14 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     };
 
     const referralPaymentInformation = thisMonthReferrals.map((referral) => {
+      console.log(referral._id);
       const user = users.filter(
         (user) => user.referralCode === referral.referral
       )[0];
 
       return {
         id: user._id,
+        referral: referral._id,
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,

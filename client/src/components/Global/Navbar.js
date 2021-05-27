@@ -24,17 +24,18 @@ const navLinks = [
   },
   {
     link: "Cómo funciona",
-    to: "/como-funciona",
+    to: "/how-it-works",
     active: "active",
   },
   {
     link: "Únete ahora",
     to: "/join-now",
-    active: "active",
+    active: "noActive",
+    className: "joinNow",
   },
   {
     link: "Programa de referidos",
-    to: "/programa-referidos",
+    to: "/referral-program",
     active: "active",
   },
   {
@@ -43,9 +44,14 @@ const navLinks = [
     active: "active",
   },
   {
-    link: "Contanct",
+    link: "Contacto",
     to: "/contact",
     active: "active",
+  },
+  {
+    link: "Login",
+    to: "/login",
+    className: "login",
   },
 ];
 
@@ -124,14 +130,19 @@ const Navbar = () => {
               exit="exit"
               variants={navbarVariants}
             >
-              {navLinks.map(({ link, to, active }, index) => (
+              {navLinks.map(({ link, to, active, className }, index) => (
                 <NavbarLink
                   key={index}
                   as={motion.div}
                   variants={navLinkVariants}
                   onClick={closeNavbar}
                 >
-                  <Link to={to} exact activeClassName={active}>
+                  <Link
+                    to={to}
+                    exact
+                    className={className}
+                    activeClassName={active}
+                  >
                     {link}
                   </Link>
                 </NavbarLink>

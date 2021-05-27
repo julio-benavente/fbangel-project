@@ -105,7 +105,7 @@ const UserSchema = new mongoose.Schema(
     referral: {
       type: String,
     },
-    referralHasBeenPayed: {
+    referralHasBeenPaid: {
       type: Boolean,
       default: false,
     },

@@ -238,11 +238,11 @@ const PaymentsPage = () => {
         <Table className="displayAdmin">
           <div className="thead">
             <div className="tr" style={{ ...tableWidth }}>
-              <div className="th">Concepto</div>
-              <div className="th">Cuenta de paypal</div>
-              <div className="th">Fecha de pago</div>
-              <div className="th">Estado</div>
-              <div className="th">Monto</div>
+              <div className="th concept">Concepto</div>
+              <div className="th paymentMethod">Metodo de pago</div>
+              <div className="th paymentDate">Fecha de pago</div>
+              <div className="th status">Estado</div>
+              <div className="th amount">Monto</div>
             </div>
           </div>
           <div className="tbody">
@@ -253,8 +253,10 @@ const PaymentsPage = () => {
             )}
             {!loading &&
               showRows.map((payment, index) => {
-                const { concept, paypalEmail, creationDate, amount, status } =
+                const { concept, paymentMethod, creationDate, amount, status } =
                   payment;
+
+                console.log(payment);
 
                 const date = new Date(creationDate).toLocaleDateString([], {
                   day: "numeric",
@@ -264,11 +266,15 @@ const PaymentsPage = () => {
 
                 return (
                   <div className="tr" key={index} style={{ ...tableWidth }}>
-                    <div className="td">{concept}</div>
-                    <div className="td">{paypalEmail}</div>
-                    <div className="td">{date}</div>
-                    <div className={`td ${status}`}>{status}</div>
-                    <div className="td">
+                    <div className="td concept">{concept}</div>
+                    <div className="td paymentMethod">{`${
+                      paymentMethod ? paymentMethod[0].toUpperCase() : ""
+                    }${paymentMethod ? paymentMethod.slice(1) : ""}`}</div>
+                    <div className="td paymentDate">{date}</div>
+                    <div
+                      className={`td status ${status}`}
+                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
+                    <div className="td amount">
                       ${" "}
                       {(
                         Math.round((amount + Number.EPSILON) * 100) / 100

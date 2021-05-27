@@ -71,6 +71,19 @@ export const Link = styled(NavLink)`
   text-decoration: none;
   color: ${(props) => props.theme.color.black};
 
+  &.login {
+    font-weight: 600;
+    color: ${(props) => props.theme.color.primary};
+  }
+
+  &.joinNow {
+    font-weight: 600;
+    color: ${(props) => props.theme.color.white};
+    padding: 2px 5px;
+    border-radius: 2px;
+    background: ${(props) => props.theme.color.primary};
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -79,6 +92,8 @@ export const Link = styled(NavLink)`
     bottom: -10px;
     background-color: ${(props) => props.theme.color.primary};
     transition: width 200ms ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &:hover,

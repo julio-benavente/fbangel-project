@@ -25,7 +25,7 @@ const NoValidPage = () => {
             </p>
             <p>
               Pero no se preocupe, todavía tiene la opción de ganar dinero con
-              nostros. <Link to="/programa-referidos">Haga click aquí</Link> y
+              nostros. <Link to="/referral-program">Haga click aquí</Link> y
               empiece a ganar dinero por cada amigo que nos presente y se una.
             </p>
           </Message>

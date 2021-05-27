@@ -34,10 +34,10 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
-          <Route path="/como-funciona" component={HowItWorks} />
+          <Route path="/how-it-works" component={HowItWorks} />
           <Route path="/join-now/:token" component={JoinUs} />
           <Route path="/join-now" component={JoinUs} />
-          <Route path="/programa-referidos" component={ReferralProgram} />
+          <Route path="/referral-program" component={ReferralProgram} />
           <Route path="/faq" component={Faq} />
           <Route path="/contact" component={Contact} />
           <Route path="/no-valid" component={NoValid} />
@@ -57,7 +57,21 @@ const App = () => {
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>
-          <Route path="*" render={() => <h1>Pagina no encontrada</h1>} />
+          <Route
+            path="*"
+            render={() => (
+              <div
+                style={{
+                  height: "calc(100vh - 80px)",
+                  display: "grid",
+                  justifyContent: "center",
+                  alignContent: "center",
+                }}
+              >
+                <h1>Page not found</h1>
+              </div>
+            )}
+          />
         </Switch>
         <Footer />
       </ThemeProvider>

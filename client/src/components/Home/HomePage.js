@@ -154,7 +154,7 @@ const HomePage = () => {
                 {t("home.requirements.info.p")}
               </p>
             </HowMuchInfo>
-            <HowItWorksBtn to="/como-funciona">
+            <HowItWorksBtn to="/how-it-works">
               {t("home.requirements.how_it_works_btn")}
             </HowItWorksBtn>
           </div>
@@ -200,7 +200,7 @@ const HomePage = () => {
                 {t("home.referral.info.p_2.2")}
               </p>
             </ReferralInfo>
-            <RegisterBtn to="programa-referidos">
+            <RegisterBtn to="/referral-program">
               {t("home.referral.register_btn")}
             </RegisterBtn>
             <ReferrealTiny>

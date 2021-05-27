@@ -434,7 +434,7 @@ const HowItWorksPage = () => {
             <p>{t("how_it_works.payment.info.p_2.0")}</p>
             <p>
               {t("how_it_works.payment.info.p_3.0")}{" "}
-              <Link to="programa-referidos">
+              <Link to="/referral-program">
                 {t("how_it_works.payment.info.p_3.1")}
               </Link>
             </p>
