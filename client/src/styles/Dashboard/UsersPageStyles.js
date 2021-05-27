@@ -69,19 +69,13 @@ export const UsersTable = styled.div`
       &.country,
       &.phone,
       &.userType,
+      &.payments,
       &.email {
         justify-self: center;
 
         @media screen and (max-width: 700px) {
           justify-self: start;
         }
-      }
-    }
-
-    .td,
-    .th {
-      &.payments {
-        justify-self: start;
       }
     }
 
@@ -156,7 +150,8 @@ export const PaymentsTable = styled.div`
           padding: 3px 5px;
           font-size: 0.75rem;
           border-radius: 4px;
-          &.approved {
+          &.approved,
+          &.payed {
             background: ${(props) =>
               transparentize(0.5, props.theme.color.blue)};
           }

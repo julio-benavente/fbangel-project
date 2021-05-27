@@ -118,6 +118,7 @@ router.put("/change-status/:action", auth, async (req, res) => {
     payOrder: "payed",
     cancelOrder: "canceled",
   };
+
   try {
     if (!status) {
       throw Error("Such action doesn't is not available");
@@ -128,7 +129,6 @@ router.put("/change-status/:action", auth, async (req, res) => {
     const errors = [];
 
     const order = await Order.findById(orderId);
-    const product = await Product.finById(order.product);
 
     const payments = await Promise.all(
       order.payments.map(async (paymentId) => {

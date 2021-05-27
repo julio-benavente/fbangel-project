@@ -127,7 +127,7 @@ const ReferralsPage = () => {
                 } = payment;
 
                 const date = new Date(creationDate).toLocaleDateString([], {
-                  day: "numeric",
+                  day: "2-digit",
                   month: "2-digit",
                   year: "numeric",
                 });
@@ -137,7 +137,9 @@ const ReferralsPage = () => {
                     <div className="td name">{`${firstName} ******`}</div>
                     <div className="td email">{email}</div>
                     <div className="td createDate">{date}</div>
-                    <div className={`td status ${status}`}>{status}</div>
+                    <div
+                      className={`td status ${status}`}
+                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
                     <div className="td statusObservation">
                       {statusObservation}
                     </div>

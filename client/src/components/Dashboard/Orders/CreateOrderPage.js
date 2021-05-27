@@ -225,7 +225,6 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     };
 
     const referralPaymentInformation = thisMonthReferrals.map((referral) => {
-      console.log(referral._id);
       const user = users.filter(
         (user) => user.referralCode === referral.referral
       )[0];

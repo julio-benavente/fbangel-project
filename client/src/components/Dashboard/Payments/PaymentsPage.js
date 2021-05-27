@@ -210,7 +210,7 @@ const PaymentsPage = () => {
                   payment;
 
                 const date = new Date(creationDate).toLocaleDateString([], {
-                  day: "numeric",
+                  day: "2-digit",
                   month: "2-digit",
                   year: "numeric",
                 });
@@ -220,7 +220,9 @@ const PaymentsPage = () => {
                     <div className="td concept">{concept}</div>
                     <div className="td paymentMethod">{paypalEmail}</div>
                     <div className="td paymentDate">{date}</div>
-                    <div className={`td status ${status}`}>{status}</div>
+                    <div
+                      className={`td status ${status}`}
+                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
                     <div className="td amount">
                       ${" "}
                       {(
@@ -259,7 +261,7 @@ const PaymentsPage = () => {
                 console.log(payment);
 
                 const date = new Date(creationDate).toLocaleDateString([], {
-                  day: "numeric",
+                  day: "2-digit",
                   month: "2-digit",
                   year: "numeric",
                 });

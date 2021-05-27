@@ -31,7 +31,9 @@ const UserRow = ({ ...props }) => {
     <UserRowWrapper>
       <div className="tr" style={{ ...usersTableWidth }}>
         <div className="td name">{`${firstName} ${lastName}`}</div>
-        <div className={`td status ${status}`}>{status}</div>
+        <div
+          className={`td status ${status}`}
+        >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
         <div className={`td userType`}>{userType}</div>
         <div className="td email">{email}</div>
         <div className="td country">{country}</div>

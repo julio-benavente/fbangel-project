@@ -84,7 +84,7 @@ const Table = (props) => {
                 payment;
 
               const date = new Date(paymentDate).toLocaleDateString([], {
-                day: "numeric",
+                day: "2-digit",
                 month: "2-digit",
                 year: "numeric",
               });

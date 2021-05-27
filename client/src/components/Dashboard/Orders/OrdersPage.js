@@ -197,7 +197,7 @@ const Row = ({ order, tableWidth }) => {
   } = order;
 
   const date = new Date(creationDate).toLocaleDateString([], {
-    day: "numeric",
+    day: "2-digit",
     month: "2-digit",
     year: "numeric",
   });
@@ -230,6 +230,7 @@ const Row = ({ order, tableWidth }) => {
 
       console.log(response);
     } catch ({ response }) {
+      console.log(response);
       setLoading(false);
     }
   };

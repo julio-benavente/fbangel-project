@@ -27,12 +27,7 @@ const navLinks = [
     to: "/how-it-works",
     active: "active",
   },
-  {
-    link: "Únete ahora",
-    to: "/join-now",
-    active: "noActive",
-    className: "joinNow",
-  },
+
   {
     link: "Programa de referidos",
     to: "/referral-program",
@@ -48,6 +43,13 @@ const navLinks = [
     to: "/contact",
     active: "active",
   },
+  {
+    link: "Únete ahora",
+    to: "/join-now",
+    active: "noActive",
+    className: "joinNow",
+  },
+
   {
     link: "Login",
     to: "/login",

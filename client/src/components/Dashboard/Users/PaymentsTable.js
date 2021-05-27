@@ -83,6 +83,12 @@ const Table = (props) => {
               const { amount, concept, id, paymentDate, paypalEmail, status } =
                 payment;
 
+              const date = new Date(paymentDate).toLocaleDateString([], {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+              });
+
               return (
                 <div
                   className="tr"
@@ -91,8 +97,10 @@ const Table = (props) => {
                 >
                   <div className="td concept">{concept}</div>
                   <div className="td paypalEmail">{paypalEmail}</div>
-                  <div className="td paymentDate">{paymentDate}</div>
-                  <div className="td status approved">{status}</div>
+                  <div className="td paymentDate">
+                    {paymentDate ? date : "-"}
+                  </div>
+                  <div className={`td status ${status}`}>{status}</div>
                   <div className="td amount ">{`$ ${amount}`}</div>
                 </div>
               );

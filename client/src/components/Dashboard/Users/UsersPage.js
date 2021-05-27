@@ -69,12 +69,12 @@ const UsersPage = () => {
           },
           {
             column: "payments",
-            width: 15,
+            width: 10,
             min: 70,
           },
           {
             column: "moreInformation",
-            width: 10,
+            width: 15,
             min: 100,
           },
         ];
