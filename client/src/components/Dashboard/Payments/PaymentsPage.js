@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import {
   requestUserPayments,
   requestPayments,
@@ -153,54 +154,57 @@ const PaymentsPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [payments, current, pageSize]);
 
+  const { t } = useTranslation();
+
   return (
     <Payments className="Payments">
       {!user.paypalEmailVerified && (
         <PaypalEmailMessage bg={paypalEmailIsSent}>
           {!paypalEmailIsSent && (
             <p className="message">
-              Tu email de paypal no ha sido verificado. Por favor,{" "}
+              {t("payments.paypal_email_verified.0")}{" "}
               <span
                 className="sendPaypalEmail"
                 onClick={() => sendPaypalEmail(user.id)}
                 to="/dashboard/profile"
               >
-                HAZ CLICK AQUI
+                {t("payments.paypal_email_verified.1")}
               </span>{" "}
-              para enviar un correo de confirmación.
+              {t("payments.paypal_email_verified.2")}
             </p>
           )}
           {paypalEmailIsSent && (
             <p className="emailSent">
-              An email has been sent to your PayPal email. Check it out and
-              verify your PayPal email. Si no te ha llegado{" "}
+              {t("payments.email_sent.0")}{" "}
               <span
                 className="sendPaypalEmail"
                 onClick={() => sendPaypalEmail(user.id)}
                 to="/dashboard/profile"
               >
-                HAZ CLICK AQUI.
+                {t("payments.email_sent.1")}
               </span>
             </p>
           )}
         </PaypalEmailMessage>
       )}
-      <Title>Payments</Title>
+      <Title>{t("payments.title")}</Title>
       {user.authLevel === "user" && (
         <Table className="displayUser">
           <div className="thead">
             <div className="tr" style={{ ...tableWidth }}>
-              <div className="th concept">Concepto</div>
-              <div className="th paymentMethod">Cuenta de paypal</div>
-              <div className="th paymentDate">Fecha de pago</div>
-              <div className="th status">Estado</div>
-              <div className="th amount">Monto</div>
+              <div className="th concept">{t("payments.title")}</div>
+              <div className="th paymentMethod">
+                {t("payments.payment_method")}
+              </div>
+              <div className="th paymentDate">{t("payments.payment_date")}</div>
+              <div className="th status">{t("payments.status")}</div>
+              <div className="th amount">{t("payments.amount")}</div>
             </div>
           </div>
           <div className="tbody">
             {loading && (
               <div className="tr loading" style={{ ...tableWidth }}>
-                Cargando...
+                {t("loading")}
               </div>
             )}
 
@@ -240,11 +244,13 @@ const PaymentsPage = () => {
         <Table className="displayAdmin">
           <div className="thead">
             <div className="tr" style={{ ...tableWidth }}>
-              <div className="th concept">Concepto</div>
-              <div className="th paymentMethod">Metodo de pago</div>
-              <div className="th paymentDate">Fecha de pago</div>
-              <div className="th status">Estado</div>
-              <div className="th amount">Monto</div>
+              <div className="th concept">{t("payments.title")}</div>
+              <div className="th paymentMethod">
+                {t("payments.payment_method")}
+              </div>
+              <div className="th paymentDate">{t("payments.payment_date")}</div>
+              <div className="th status">{t("payments.status")}</div>
+              <div className="th amount">{t("payments.amount")}</div>
             </div>
           </div>
           <div className="tbody">

@@ -7,7 +7,7 @@ import Navbar from "./components/Global/Navbar";
 import Footer from "./components/Global/Footer";
 import Home from "./components/Home/HomePage";
 import HowItWorks from "./components/HowItWorks/HowItWorksPage";
-import JoinUs from "./components/JoinUs/JoinUsPage";
+import JoinNow from "./components/JoinNow/JoinNowPage";
 import ReferralProgram from "./components/ReferralProgram/ReferralProgramPage";
 import Faq from "./components/Faq/FaqPage";
 import Contact from "./components/Contact/ContactPage";
@@ -20,12 +20,13 @@ import ResetPassword from "./components/PasswordPages/ResetPasswordPage";
 import Dashboard from "./components/Dashboard/DashboardPage";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ConfirmationPage from "./components/Confirmation/ConfirmationPage";
-
+import { useTranslation } from "react-i18next";
 // Styles
 import GlobalStyle from "./styles/GlobalStyles";
 import Theme from "./styles/Theme";
 
 const App = () => {
+  const { t } = useTranslation();
   return (
     <div className="App">
       <ThemeProvider theme={Theme}>
@@ -35,8 +36,8 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/how-it-works" component={HowItWorks} />
-          <Route path="/join-now/:token" component={JoinUs} />
-          <Route path="/join-now" component={JoinUs} />
+          <Route path="/join-now/:token" component={JoinNow} />
+          <Route path="/join-now" component={JoinNow} />
           <Route path="/referral-program" component={ReferralProgram} />
           <Route path="/faq" component={Faq} />
           <Route path="/contact" component={Contact} />
@@ -68,7 +69,7 @@ const App = () => {
                   alignContent: "center",
                 }}
               >
-                <h1>Page not found</h1>
+                <h1>{t("not_found")}</h1>
               </div>
             )}
           />

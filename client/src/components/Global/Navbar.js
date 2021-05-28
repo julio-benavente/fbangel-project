@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 // Styles
 import {
   NavbarSection,
@@ -15,47 +15,6 @@ import {
 // Assets
 import { ReactComponent as OpenNav } from "../../assets/svgs/menu.svg";
 import { ReactComponent as CloseNav } from "../../assets/svgs/close.svg";
-
-const navLinks = [
-  {
-    link: "Inicio",
-    to: "/",
-    active: "active",
-  },
-  {
-    link: "Cómo funciona",
-    to: "/how-it-works",
-    active: "active",
-  },
-
-  {
-    link: "Programa de referidos",
-    to: "/referral-program",
-    active: "active",
-  },
-  {
-    link: "FAQ",
-    to: "/faq",
-    active: "active",
-  },
-  {
-    link: "Contacto",
-    to: "/contact",
-    active: "active",
-  },
-  {
-    link: "Únete ahora",
-    to: "/join-now",
-    active: "noActive",
-    className: "joinNow",
-  },
-
-  {
-    link: "Login",
-    to: "/login",
-    className: "login",
-  },
-];
 
 const hamburgerMenuVariants = {
   initial: { opacity: 0 },
@@ -105,6 +64,7 @@ const navLinkVariants = {
 };
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [navIsOpen, setNavIsOpen] = useState(false);
   const openNavbar = () => setNavIsOpen(true);
   const closeNavbar = () => setNavIsOpen(false);
@@ -116,6 +76,46 @@ const Navbar = () => {
   useEffect(() => {
     setInnerWidth(window.innerWidth);
   }, [size]);
+
+  const navLinks = [
+    {
+      link: t("navbar.home"),
+      to: "/",
+      active: "active",
+    },
+    {
+      link: t("navbar.how_it_works"),
+      to: "/how-it-works",
+      active: "active",
+    },
+
+    {
+      link: t("navbar.referral_program"),
+      to: "/referral-program",
+      active: "active",
+    },
+    {
+      link: t("navbar.faq"),
+      to: "/faq",
+      active: "active",
+    },
+    {
+      link: t("navbar.contact"),
+      to: "/contact",
+      active: "active",
+    },
+    {
+      link: t("navbar.join_now"),
+      to: "/join-now",
+      active: "noActive",
+      className: "joinNow",
+    },
+    {
+      link: t("navbar.login"),
+      to: "/login",
+      className: "login",
+    },
+  ];
 
   return (
     <NavbarSection className="Navbar">

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { InputWraper, Question } from "../../styles/JoinUsPageStyles";
+import { InputWraper, Question } from "../../styles/JoinNowPageStyles";
 
 const FileInput = ({ className, register, question, error }) => {
   return (

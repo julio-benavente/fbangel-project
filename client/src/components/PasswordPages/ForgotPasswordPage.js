@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-
-import {
-  logIn,
-  getUser,
-  getErrors,
-  loginSucceeded,
-} from "../../store/auth/auth";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import {
@@ -30,6 +23,7 @@ import { ReactComponent as Arrow } from "../../assets/svgs/arrow.svg";
 import { ReactComponent as User } from "../../assets/svgs/user.svg";
 
 const LoginPage = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const {
     register,
@@ -55,7 +49,7 @@ const LoginPage = () => {
     <Login>
       <LoginLink to="/login">
         <Arrow />
-        <p>Login</p>
+        <p>{t("forgot_password.login_link")}</p>
       </LoginLink>
       <ImageSide>
         <Image>
@@ -64,7 +58,7 @@ const LoginPage = () => {
       </ImageSide>
       <LoginFormSide>
         <LoginForm onSubmit={handleSubmit(onSubmit)}>
-          <FormTitle>Forgot password</FormTitle>
+          <FormTitle>{t("forgot_password.title")}</FormTitle>
           <InputWrapper>
             <input
               type="text"
@@ -72,24 +66,25 @@ const LoginPage = () => {
               {...register("email", {
                 required: {
                   value: true,
-                  message: "Por favor, llenar este campo",
+                  message: t("forgot_password.email_error_required"),
                 },
                 validate: {
-                  min: (v) => (v.length < 6 ? "Mínimo 6 caracteres" : true),
+                  min: (v) =>
+                    v.length < 6 ? t("forgot_password.email_error_min") : true,
                 },
               })}
             />
             <User />
-            <label>Email</label>
+            <label>{t("forgot_password.email")}</label>
             <p className="error">{errors.email && errors.email.message}</p>
           </InputWrapper>
 
           <div className="errorMessages">
             {resetEmailSent && (
-              <p className="error">The email has already been sent</p>
+              <p className="error">{t("forgot_password.email_sent")}</p>
             )}
           </div>
-          <Submit>Send reset password email</Submit>
+          <Submit>{t("forgot_password.submit_button")}</Submit>
         </LoginForm>
       </LoginFormSide>
     </Login>

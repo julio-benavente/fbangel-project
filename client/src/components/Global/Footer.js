@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   FooterSection,
   FooterSectionWrapper,
@@ -10,24 +11,21 @@ import {
 } from "../../styles/FooterStyles";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <FooterSection className="Footer">
       <FooterSectionWrapper fluid>
         <FooterLinks>
-          <Contact to="/contacto">Contacto</Contact>
-          <UseConditions to="/terminos-condiciones">
-            Condiciones de uso
+          <Contact to="/contact">{t("footer.contact")}</Contact>
+          <UseConditions to="/terms-conditions">
+            {t("footer.terms_conditions")}
           </UseConditions>
         </FooterLinks>
         <Copyright>
-          &copy; Copyright {new Date().getFullYear()}. All rights reserved
-          fbangel
+          &copy; {t("footer.copyright.0")}
+          {new Date().getFullYear()}. {t("footer.copyright.0")}
         </Copyright>
-        <Detach>
-          Este sitio no forma parte de Facebook o Facebook Inc. Además, este
-          sitio NO está respaldado por Facebook de ninguna manera. Facebook es
-          un marca registrada de Facebook Inc.
-        </Detach>
+        <Detach>{t("footer.detach")} </Detach>
       </FooterSectionWrapper>
     </FooterSection>
   );

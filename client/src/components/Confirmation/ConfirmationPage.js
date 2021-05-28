@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 // Styles
 import {
   Confirmation,
@@ -10,6 +12,7 @@ import {
 } from "../../styles/ConfirmationPageStyles";
 
 const ConfirmatioPage = () => {
+  const { t } = useTranslation();
   const { token } = useParams();
   const { pathname } = useLocation();
   const isLocatedPaypalEmail = pathname.includes("confirm-paypal-email");
@@ -56,19 +59,16 @@ const ConfirmatioPage = () => {
       {isLocatedPaypalEmail && (
         <>
           {!(paypalEmailIsConfirmed || error) && (
-            <Message>Tu email de PayPal esta siendo verificado</Message>
+            <Message>{t("confirmation.paypal.message")}</Message>
           )}
 
           {paypalEmailIsConfirmed && (
             <ConfirmationMessage>
-              Tu email de Paypal ya está verificado
+              {t("confirmation.paypal.confirmation_message")}
             </ConfirmationMessage>
           )}
           {error && (
-            <ErrorMessage>
-              A ocurrido un problema, intenta refrescar la página o envía de
-              nuevo el email de confirmación
-            </ErrorMessage>
+            <ErrorMessage>{t("confirmation.paypal.error")} </ErrorMessage>
           )}
         </>
       )}
@@ -76,19 +76,16 @@ const ConfirmatioPage = () => {
       {isLocatedEmail && (
         <>
           {!(emailIsConfirmed || error) && (
-            <Message>Tu email esta siendo verificado</Message>
+            <Message>{t("confirmation.email.message")}</Message>
           )}
 
           {emailIsConfirmed && (
             <ConfirmationMessage>
-              Tu email ya esta verificado
+              {t("confirmation.email.confirmation_message")}
             </ConfirmationMessage>
           )}
           {error && (
-            <ErrorMessage>
-              A ocurrido un problema, intenta refrescar la página o envía de
-              nuevo el email de confirmación
-            </ErrorMessage>
+            <ErrorMessage>{t("confirmation.email.error")}</ErrorMessage>
           )}
         </>
       )}

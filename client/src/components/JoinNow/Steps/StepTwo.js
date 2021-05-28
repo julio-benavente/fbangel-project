@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import TextInput from "../TextInput";
 
 // Styles
-import { FormTwo } from "../../../styles/JoinUsPageStyles";
+import { FormTwo } from "../../../styles/JoinNowPageStyles";
 import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -45,15 +45,15 @@ const StepTwo = ({
     <FormTwo>
       <TextInput
         className="name"
-        question={t("join_us.step_two.name.question")}
+        question={t("join_now.step_two.name.question")}
         register={register("stepTwo.firstName", {
           required: {
             value: true,
-            message: t("join_us.step_two.name.error_1"),
+            message: t("join_now.step_two.name.error_1"),
           },
           pattern: {
             value: /^[ a-zA-Z\-\’]+$/,
-            message: t("join_us.step_two.name.error_2"),
+            message: t("join_now.step_two.name.error_2"),
           },
         })}
         error={
@@ -65,15 +65,15 @@ const StepTwo = ({
 
       <TextInput
         className="lastname"
-        question={t("join_us.step_two.lastname.question")}
+        question={t("join_now.step_two.lastname.question")}
         register={register("stepTwo.lastName", {
           required: {
             value: true,
-            message: t("join_us.step_two.lastname.error_1"),
+            message: t("join_now.step_two.lastname.error_1"),
           },
           pattern: {
             value: /^[ a-zA-Z\-\’]+$/,
-            message: t("join_us.step_two.lastname.error_2"),
+            message: t("join_now.step_two.lastname.error_2"),
           },
         })}
         error={
@@ -85,7 +85,7 @@ const StepTwo = ({
 
       <TextInput
         className="countryDropdown"
-        question={t("join_us.step_two.country.question")}
+        question={t("join_now.step_two.country.question")}
         error={
           errors.stepTwo &&
           errors.stepTwo.country &&
@@ -99,7 +99,7 @@ const StepTwo = ({
             rules={{
               required: {
                 value: true,
-                message: t("join_us.step_two.country.error_1"),
+                message: t("join_now.step_two.country.error_1"),
               },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
@@ -120,7 +120,7 @@ const StepTwo = ({
       />
 
       <TextInput
-        question={t("join_us.step_two.city.question")}
+        question={t("join_now.step_two.city.question")}
         className="regionDropdown"
         error={
           errors.stepTwo && errors.stepTwo.city && errors.stepTwo.city.message
@@ -132,7 +132,7 @@ const StepTwo = ({
             rules={{
               required: {
                 value: true,
-                message: t("join_us.step_two.city.error_1"),
+                message: t("join_now.step_two.city.error_1"),
               },
             }}
             defaultValue=""
@@ -156,7 +156,7 @@ const StepTwo = ({
 
       <TextInput
         className="birthday"
-        question={t("join_us.step_two.birthday.question")}
+        question={t("join_now.step_two.birthday.question")}
         error={
           errors.stepTwo &&
           errors.stepTwo.birthday &&
@@ -170,7 +170,7 @@ const StepTwo = ({
             rules={{
               required: {
                 value: true,
-                message: t("join_us.step_two.birthday.error_1"),
+                message: t("join_now.step_two.birthday.error_1"),
               },
               validate: {
                 isNotOldEnough: (v) => {
@@ -183,7 +183,7 @@ const StepTwo = ({
 
                   const age = getAge(v);
                   if (!(age >= 18)) {
-                    return t("join_us.step_two.birthday.error_2");
+                    return t("join_now.step_two.birthday.error_2");
                   }
                   return true;
                 },
@@ -214,7 +214,7 @@ const StepTwo = ({
 
       <TextInput
         className="phone"
-        question={t("join_us.step_two.phone.question")}
+        question={t("join_now.step_two.phone.question")}
         error={
           errors.stepTwo && errors.stepTwo.phone && errors.stepTwo.phone.message
         }
@@ -226,12 +226,12 @@ const StepTwo = ({
             rules={{
               required: {
                 value: true,
-                message: t("join_us.step_two.phone.error_1"),
+                message: t("join_now.step_two.phone.error_1"),
               },
               pattern: {
                 value:
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                message: t("join_us.step_two.phone.error_2"),
+                message: t("join_now.step_two.phone.error_2"),
               },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
@@ -255,19 +255,19 @@ const StepTwo = ({
 
       <TextInput
         className="email"
-        question={t("join_us.step_two.email.question")}
+        question={t("join_now.step_two.email.question")}
         error={
           errors.stepTwo && errors.stepTwo.email && errors.stepTwo.email.message
         }
         register={register("stepTwo.email", {
           required: {
             value: true,
-            message: t("join_us.step_two.email.error_1"),
+            message: t("join_now.step_two.email.error_1"),
           },
           pattern: {
             value:
               /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
-            message: t("join_us.step_two.email.error_2"),
+            message: t("join_now.step_two.email.error_2"),
           },
         })}
       />

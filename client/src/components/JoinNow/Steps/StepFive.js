@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useFormContext } from "react-hook-form";
 import axios from "axios";
 // Styles
-import { FormFive } from "../../../styles/JoinUsPageStyles";
+import { FormFive } from "../../../styles/JoinNowPageStyles";
 
 const StepFive = () => {
   const { t } = useTranslation();
@@ -17,7 +17,7 @@ const StepFive = () => {
   const [emailConfirmationMessage, setEmailConfirmationMessage] =
     useState(null);
   const sendEmailConfirmation = (email) => {
-    setEmailConfirmationMessage("The email has already been sent");
+    setEmailConfirmationMessage(t("join_now.step_five.email_confirmation"));
     axios.post("/auth/send-confirmation-email", {
       email,
     });
@@ -26,19 +26,16 @@ const StepFive = () => {
   return (
     <FormFive>
       <p>
-        <span className="congratulations">Felicitaciones por el registro.</span>{" "}
-        El proceso de registro no está completamente finalizado. Se le ha
-        enviado un correo de confirmación a su correo <b>{email}</b>.{" "}
-        {paymentMethod === "paypal" &&
-          `También se le ha enviado un correo de confirmacion a su correo de paypal `}
+        <span className="congratulations">{t("join_now.step_five.p_1.0")}</span>{" "}
+        {t("join_now.step_five.p_1.1")} <b>{email}</b>.{" "}
+        {paymentMethod === "paypal" && `${t("join_now.step_five.p_1.2")} `}
         {paymentMethod === "paypal" && <b>{email}</b>}
       </p>
       <p
         className="sendEmailConfirmation"
         onClick={() => sendEmailConfirmation(email)}
       >
-        Si no te ha llegado a tu bandeja el correo de confirmacion de registro
-        da click aquí
+        {t("join_now.step_five.p_2.0")}
       </p>
       <p className="emailConfirmationMessage">{emailConfirmationMessage}</p>
     </FormFive>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import {
@@ -14,19 +15,17 @@ import {
 import guy from "../../assets/svgs/guy-in-hole.svg";
 
 const NoValidPage = () => {
+  const { t } = useTranslation();
   return (
     <NoValid>
       <NoValidSection>
         <NoValidSectionWrapper>
           <Message>
+            <p>{t("no_valid.p_1.0")}</p>
             <p>
-              Lo sentimos. Su perfil de Facebook no es un candidato válido para
-              nuestro programa de alquiler.
-            </p>
-            <p>
-              Pero no se preocupe, todavía tiene la opción de ganar dinero con
-              nostros. <Link to="/referral-program">Haga click aquí</Link> y
-              empiece a ganar dinero por cada amigo que nos presente y se una.
+              {t("no_valid.p_2.0")}
+              <Link to="/referral-program"> {t("no_valid.p_2.1")}</Link>{" "}
+              {t("no_valid.p_2.2")}
             </p>
           </Message>
           <Image src={guy} />

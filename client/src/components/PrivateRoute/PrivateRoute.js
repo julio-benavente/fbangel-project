@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { getUser, requestAuth } from "../../store/auth/auth";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const PrivateRoute = ({ children, ...rest }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -29,7 +31,7 @@ const PrivateRoute = ({ children, ...rest }) => {
           alignContent: "center",
         }}
       >
-        <h1>Loading . . .</h1>
+        <h1>{t("loading")}</h1>
       </div>
     );
   }

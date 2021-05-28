@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 import "./i18n";
@@ -19,7 +19,7 @@ ReactDOM.render(
   <Suspense fallback={loadingMarkup}>
     <Provider store={store}>
       <React.StrictMode>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <App />
         </Router>
       </React.StrictMode>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PaymentsTable } from "../../../styles/Dashboard/UsersPageStyles";
+import { useTranslation } from "react-i18next";
 
 const Table = (props) => {
   const [paymentsTableWidth, setPaymentsTableWidth] = useState(null);
@@ -65,16 +66,19 @@ const Table = (props) => {
 
     return () => window.removeEventListener("resize", setPaymentsTableWidth);
   }, []);
+
+  const { t } = useTranslation();
+
   return (
     <PaymentsTable className="PaymentsTable">
       <div className="PaymentsTable">
         <div className="thead">
           <div className="tr" style={{ ...paymentsTableWidth }}>
-            <div className="th">Concepto</div>
-            <div className="th">Cuenta de paypal</div>
-            <div className="th">Fecha de pago</div>
-            <div className="th">Estado</div>
-            <div className="th">Monto</div>
+            <div className="th">{t("users.payments.concept")}</div>
+            <div className="th">{t("users.payments.payment_method")}</div>
+            <div className="th">{t("users.payments.payment_date")}</div>
+            <div className="th">{t("users.payments.status")}</div>
+            <div className="th">{t("users.payments.amount")}</div>
           </div>
         </div>
         <div className="tbody">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import {
   getUsers,
   requestUsers,
@@ -369,10 +370,12 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <CreateOrder className="CreateOrder">
       <Header>
-        <Title>Creating an order</Title>
+        <Title>{t("orders.create_order.title")}</Title>
         <Close onClick={closeCreateOrder}>
           <CloseSvg />
         </Close>
@@ -384,7 +387,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           onChange={(v) => onChangeAction(v)}
         />
         <CreateOrderButton onClick={createOrder} disabled={createOrderDisabled}>
-          Create order
+          {t("orders.create_order.create_order_button")}
         </CreateOrderButton>
       </CreateOrderWrapper>
       <OrderConcept>{order.concept}</OrderConcept>
@@ -392,11 +395,13 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       <OrderWrapper className="displayAdmin">
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
-            <div className="th name">Name</div>
-            <div className="th email">Email</div>
-            <div className="th paymentMethod">Payment method</div>
-            <div className="th concept">Concept</div>
-            <div className="th amount">Amount</div>
+            <div className="th name">{t("orders.create_order.name")}</div>
+            <div className="th email">{t("orders.create_order.email")}</div>
+            <div className="th paymentMethod">
+              {t("orders.create_order.payment_method")}
+            </div>
+            <div className="th concept">{t("orders.create_order.concept")}</div>
+            <div className="th amount">{t("orders.create_order.amount")}</div>
           </div>
         </div>
         <div className="tbody">
@@ -426,7 +431,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       {order.concept && (
         <OrderConfirmation>
           <button disabled={sendingOrder} onClick={sendOrder}>
-            Confirm order
+            {t("orders.create_order.confirm_order_button")}
           </button>
         </OrderConfirmation>
       )}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
-
+import { useTranslation } from "react-i18next";
 // Styles
 import {
   Login,
@@ -22,6 +22,7 @@ import { ReactComponent as Arrow } from "../../assets/svgs/arrow.svg";
 import { ReactComponent as Lock } from "../../assets/svgs/lock.svg";
 
 const LoginPage = () => {
+  const { t } = useTranslation();
   const {
     register,
     control,
@@ -60,7 +61,7 @@ const LoginPage = () => {
     <Login>
       <HomeLink to="/login">
         <Arrow />
-        <p>Login</p>
+        <p>{t("reset_password.login_link")}</p>
       </HomeLink>
       <ImageSide>
         <Image>
@@ -69,7 +70,7 @@ const LoginPage = () => {
       </ImageSide>
       <LoginFormSide>
         <LoginForm onSubmit={handleSubmit(onSubmit)}>
-          <FormTitle>Reset Password</FormTitle>
+          <FormTitle>{t("reset_password.title")}</FormTitle>
 
           {!resetPasswordConfirmation && (
             <>
@@ -83,15 +84,18 @@ const LoginPage = () => {
                   {...register("password", {
                     required: {
                       value: true,
-                      message: "Por favor, llenar este campo",
+                      message: t("reset_password.password_error_required"),
                     },
                     validate: {
-                      min: (v) => (v.length < 6 ? "Mínimo 6 caracteres" : true),
+                      min: (v) =>
+                        v.length < 6
+                          ? t("reset_password.password_error_min")
+                          : true,
                     },
                   })}
                 />
                 <Lock />
-                <label>Password</label>
+                <label>{t("reset_password.password")}</label>
                 <p className="error">
                   {errors.password && errors.password.message}
                 </p>
@@ -105,16 +109,20 @@ const LoginPage = () => {
                   {...register("passwordConfirmation", {
                     required: {
                       value: true,
-                      message: "Por favor, llenar este campo",
+                      message: t(
+                        "reset_password.password_confirmation_error_required"
+                      ),
                     },
                     validate: {
                       same: (v) =>
-                        v !== password ? "Password don't match " : true,
+                        v !== password
+                          ? t("reset_password.password_confirmation_error_same")
+                          : true,
                     },
                   })}
                 />
                 <Lock />
-                <label>Confirm Password</label>
+                <label>{t("reset_password.password_confirmation")}</label>
                 <p className="error">
                   {errors.passwordConfirmation &&
                     errors.passwordConfirmation.message}
@@ -125,7 +133,9 @@ const LoginPage = () => {
 
           <div className="errorMessages">
             {resetPasswordConfirmation && (
-              <p className="error">Your password has been changed!</p>
+              <p className="error">
+                {t("reset_password.reset_confirmation_message")}
+              </p>
             )}
             {resetPasswordError && (
               <p className="error">{resetPasswordError}</p>
@@ -133,7 +143,11 @@ const LoginPage = () => {
           </div>
 
           {!resetPasswordConfirmation && (
-            <Submit>{!isSubmitting ? "Reset password" : "Waiting"}</Submit>
+            <Submit>
+              {!isSubmitting
+                ? t("reset_password.submit_button")
+                : t("reset_password.submit_button_waiting")}
+            </Submit>
           )}
         </LoginForm>
       </LoginFormSide>

@@ -21,7 +21,7 @@ import {
   Buttons,
   Button,
   SubmitButton,
-} from "../../styles/JoinUsPageStyles";
+} from "../../styles/JoinNowPageStyles";
 import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -232,10 +232,10 @@ const Form = () => {
         return (
           <Buttons>
             <Button onClick={() => handleFormStep(-1, formStep)}>
-              {t("join_us.button.previous")}
+              {t("join_now.button.previous")}
             </Button>
             <SubmitButton type="submit">
-              {isSubmitting ? <LoadingSvg /> : t("join_us.button.send")}
+              {isSubmitting ? <LoadingSvg /> : t("join_now.button.send")}
             </SubmitButton>
           </Buttons>
         );
@@ -245,12 +245,12 @@ const Form = () => {
           <Buttons>
             <Buttons>
               <Button onClick={() => handleFormStep(-1, formStep)}>
-                {t("join_us.button.previous")}
+                {t("join_now.button.previous")}
               </Button>
             </Buttons>
 
             <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("join_us.button.next")}
+              {t("join_now.button.next")}
             </Button>
           </Buttons>
         );
@@ -259,7 +259,7 @@ const Form = () => {
         return (
           <Buttons one>
             <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("join_us.button.next")}
+              {t("join_now.button.next")}
             </Button>
           </Buttons>
         );
@@ -271,28 +271,28 @@ const Form = () => {
     <FormsWrapper>
       <FormLocation>
         <FormLocationTitle>
-          {t("join_us.form_location.title")}
+          {t("join_now.form_location.title")}
         </FormLocationTitle>
         <Location className={`${formStep === 1 && "active"}`}>
           <p className="number">1</p>
-          <p className="location">{t("join_us.form_location.p_1")}</p>
+          <p className="location">{t("join_now.form_location.p_1")}</p>
         </Location>
         <Location className={`${formStep === 2 && "active"}`}>
           <p className="number">2</p>
-          <p className="location">{t("join_us.form_location.p_2")}</p>
+          <p className="location">{t("join_now.form_location.p_2")}</p>
         </Location>
         <Location className={`${formStep === 3 && "active"}`}>
           <p className="number">3</p>
-          <p className="location">{t("join_us.form_location.p_3")}</p>
+          <p className="location">{t("join_now.form_location.p_3")}</p>
         </Location>
         <Location className={`${formStep === 4 && "active"}`}>
           <p className="number">4</p>
-          <p className="location">{t("join_us.form_location.p_4")}</p>
+          <p className="location">{t("join_now.form_location.p_4")}</p>
         </Location>
         {formStep === 5 && (
           <Location className={`${formStep === 5 && "active"}`}>
             <p className="number">5</p>
-            <p className="location">{t("join_us.form_location.p_5")}</p>
+            <p className="location">{t("join_now.form_location.p_5")}</p>
           </Location>
         )}
       </FormLocation>

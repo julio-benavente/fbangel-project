@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import axios from "axios";
 import {
   logIn,
@@ -30,6 +31,7 @@ import { ReactComponent as User } from "../../assets/svgs/user.svg";
 import { ReactComponent as Lock } from "../../assets/svgs/lock.svg";
 
 const LoginPage = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const {
     register,
@@ -38,14 +40,6 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: "all" });
-
-  // useEffect(() => {
-  //   const navbar = document.querySelector(".Navbar");
-  //   const footer = document.querySelector(".Footer");
-
-  //   navbar.classList.add("display-none");
-  //   footer.classList.add("display-none");
-  // }, []);
 
   const authErrors = useSelector(getErrors);
   const user = useSelector(getUser);
@@ -77,7 +71,7 @@ const LoginPage = () => {
     <Login>
       <HomeLink to="/">
         <Arrow />
-        <p>Inicio</p>
+        <p>{t("login.home_link")}</p>
       </HomeLink>
       <ImageSide>
         <Image>
@@ -86,7 +80,7 @@ const LoginPage = () => {
       </ImageSide>
       <LoginFormSide>
         <LoginForm onSubmit={handleSubmit(onSubmit)}>
-          <FormTitle>Login</FormTitle>
+          <FormTitle>{t("login.title")}</FormTitle>
           <InputWrapper>
             <input
               type="text"
@@ -94,15 +88,21 @@ const LoginPage = () => {
               {...register("email", {
                 required: {
                   value: true,
-                  message: "Por favor, llenar este campo",
+                  message: t("login.email_error_required"),
                 },
                 validate: {
-                  min: (v) => (v.length < 6 ? "Mínimo 6 caracteres" : true),
+                  min: (v) =>
+                    v.length < 6 ? t("login.email_error_min") : true,
                 },
+                // pattern: {
+                //   value:
+                //     /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
+                //   message: t("login.email_error_pattern"),
+                // },
               })}
             />
             <User />
-            <label>Email</label>
+            <label>{t("login.email")}</label>
             <p className="error">{errors.email && errors.email.message}</p>
           </InputWrapper>
 
@@ -113,15 +113,16 @@ const LoginPage = () => {
               {...register("password", {
                 required: {
                   value: true,
-                  message: "Por favor, llenar este campo",
+                  message: t("login.password_error_required"),
                 },
                 validate: {
-                  min: (v) => (v.length < 6 ? "Mínimo 6 caracteres" : true),
+                  min: (v) =>
+                    v.length < 6 ? t("login.password_error_min") : true,
                 },
               })}
             />
             <Lock />
-            <label>Password</label>
+            <label>{t("login.password")}</label>
             <p className="error">
               {errors.password && errors.password.message}
             </p>
@@ -136,18 +137,18 @@ const LoginPage = () => {
                 className="error sendEmailConfirmation"
                 onClick={() => sendEmailConfirmation(email)}
               >
-                Tu cuenta no está verificada. Haz click aquí para recibir un
-                nuevo correo de confirmación
+                {t("login.email_verified_error")}
               </p>
             )}
             {emailConfirmationSent && (
-              <p className="error">The email has already been sent</p>
+              <p className="error">
+                {t("login.email_confirmation_sent_error")}
+              </p>
             )}
           </div>
-          <Link to="/forgot-password">
-            ¿No recuerdas tu contraseña? Haz click aquí
-          </Link>
-          <Submit>Log in</Submit>
+          <Link to="/join-now">{t("login.no_account")}</Link>
+          <Link to="/forgot-password">{t("login.forgot_password")}</Link>
+          <Submit>{t("login.login_button")}</Submit>
         </LoginForm>
       </LoginFormSide>
     </Login>

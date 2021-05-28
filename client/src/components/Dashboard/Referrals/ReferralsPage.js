@@ -5,6 +5,7 @@ import {
 } from "../../../store/entities/referrals";
 import { getUser } from "../../../store/auth/auth";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import {
@@ -91,17 +92,19 @@ const ReferralsPage = () => {
     request();
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <Referrals className="Payments">
-      <Title>Referral</Title>
+      <Title>{t("referrals.title")}</Title>
       <Table>
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
-            <div className="th">Name</div>
-            <div className="th">Email</div>
-            <div className="th">Creation date</div>
-            <div className="th">Status</div>
-            <div className="th">Observation</div>
+            <div className="th">{t("referrals.name")}</div>
+            <div className="th">{t("referrals.email")}</div>
+            <div className="th">{t("referrals.creation_date")}</div>
+            <div className="th">{t("referrals.status")}</div>
+            <div className="th">{t("referrals.observation")}</div>
           </div>
         </div>
         <div className="tbody">

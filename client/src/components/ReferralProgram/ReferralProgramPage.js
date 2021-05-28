@@ -23,58 +23,57 @@ const ReferralProgramPage = () => {
     <ReferralProgram>
       <ReferralProgramSection>
         <ReferralProgramSectionTitle>
-          Conviértete en un Referente
+          {t("referral_program.title")}
         </ReferralProgramSectionTitle>
         <ReferralProgramSectionInfo>
           <a href="https://form.jotform.com/210684831753358" target="_blank">
-            {t("referral_program.title")}
+            {t("referral_program.info.0")}
           </a>{" "}
-          e incrementa tus ganacias seriamente y obtén{" "}
-          <span className="money">5 dólares</span> por referido
+          {t("referral_program.info.1")}
+          <span className="money"> {t("referral_program.info.2")} </span>
+          {t("referral_program.info.3")}
           <span className="asterisk">*</span>
         </ReferralProgramSectionInfo>
         <InformationList>
           <p>
-            Es muy fácil, solo tiene que compartir el enlace de nuestra página
-            con tus amigos o conocidos y asegurarte que en el formulario de
-            registro agreguen tu código de referente en la casilla
-            <b>“Si tienes referente añade aquí su código”.</b>
+            {t("referral_program.list.p_1.0")}
+            <b> {t("referral_program.list.p_1.1")}</b>
           </p>
           <p>
-            Para obtener tu código{" "}
-            <Link to="/referral-registration">sigue este enlace</Link> y
-            completa el <Link to="/referral-registration">formulario</Link>. En
-            el podrás solicitar un código personalizado, nuestro equipo te
-            confirmará en breve el registro de tu nuevo código en nuestro
-            sistema.
+            {t("referral_program.list.p_2.0")}
+            <Link to="/referral-registration">
+              {" "}
+              {t("referral_program.list.p_2.1")}
+            </Link>{" "}
+            {t("referral_program.list.p_2.2")}{" "}
+            <Link to="/referral-registration">
+              {t("referral_program.list.p_2.3")}
+            </Link>
+            {t("referral_program.list.p_2.4")}
           </p>
           <p>
-            Si tu perfil no ha sido apto para registrarse con nosotros, no te
-            preocupes, aún puedes ganar dinero presentándonos amigos o
-            conocidos, simplemente regístrate en{" "}
-            <Link to="/referral-registration">el siguiente formulario</Link> y
-            nuestro equipo confirmará su registro.
+            {t("referral_program.list.p_3.0")}
+            <Link to="/referral-registration">
+              {" "}
+              {t("referral_program.list.p_3.1")}
+            </Link>{" "}
+            {t("referral_program.list.p_3.2")}
           </p>
+          <p>{t("referral_program.list.p_4.0")} </p>
           <p>
-            El pago de referidos se realiza siempre a fin de mes, nuestro equipo
-            se comunicará contigo para confirmar el número de referidos
-            registrados por tu parte y realizar el pago correspondiente.
-          </p>
-          <p>
-            <span className="important">¡Importante!</span> Asegúrete de que tus
-            referidos siempre usen tu número código al completar el formulario,
-            para así saber que son referidos tuyos y podamos generar tu próximo
-            pago.
+            <span className="important">
+              {t("referral_program.list.p_5.0")}
+            </span>{" "}
+            {t("referral_program.list.p_5.1")}
           </p>
         </InformationList>
         <ReferralProgramImage src={friendsChatting} />
 
         <RegistrationBtn to="/referral-registration">
-          Regístrate aquí
+          {t("referral_program.register_btn")}
         </RegistrationBtn>
         <TinyLetter>
-          <span>*</span> Por cada persona que registre su perfil con nosotros y
-          sea válido
+          <span>*</span> {t("referral_program.tiny")}
         </TinyLetter>
       </ReferralProgramSection>
     </ReferralProgram>

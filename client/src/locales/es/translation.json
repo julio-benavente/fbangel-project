@@ -366,7 +366,7 @@
       }
     }
   },
-  "join_us": {
+  "join_now": {
     "title": "¿Es válido tu perfil de Facebook para nuestro programa de alquiler?",
     "info": "Para saber si es válido para nuestro programa de alquiler, completa este sencillo cuestionario.",
     "button": {
@@ -446,7 +446,7 @@
       "email": {
         "question": "Email",
         "error_1": "Por favor, ingrese su email",
-        "error_2": "Ingrese un email valido"
+        "error_2": "Ingrese un email válido"
       }
     },
     "step_three": {
@@ -788,8 +788,15 @@
       }
     },
     "step_five": {
-      "p_1": "Muchas gracias por registrarte. El proceso de registro está finalizado.",
-      "p_2": "Nos estaremos poniendo en contacto contigo pronto."
+      "p_1": {
+        "0": "Felicitaciones por el registro.",
+        "1": "El proceso de registro no está completamente finalizado. Se le ha enviado un correo de confirmación a su correo",
+        "2": "También se le ha enviado un correo de confirmacion a su correo de Paypal"
+      },
+      "p_2": {
+        "0": "Si no te ha llegado a tu bandeja el correo de confirmacion de registro da click aquí"
+      },
+      "email_confirmation": "El correo ya ha sido enviado."
     }
   },
   "terms_conditions": {
@@ -1001,9 +1008,278 @@
       "p_5": {
         "0": "¡Importante!",
         "1": "Asegúrete de que tus referidos siempre usen tu número código al completar el formulario, para así saber que son referidos tuyos y podamos generar tu próximo pago."
+      }
+    },
+    "register_btn": "Regístrate aquí",
+    "tiny": "Por cada persona que registre su perfil con nosotros y sea válido"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "questions": [
+      {
+        "question": "¿Por qué no creamos nuestros propios perfiles?",
+        "answer": [
+          "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB."
+        ]
       },
-      "register_btn": "Regístrate aquí",
-      "tiny": "Por cada persona que registre su perfil con nosotros y sea válido"
+      {
+        "question": "¿Cómo sé que no se realizarán publicaciones en mi perfil y que mi información no se compartirá?",
+        "answer": [
+          "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB.",
+          "Facebook es una entidad corporativa protegida, que protege la actividad y los derechos de sus usuarios. Por lo tanto, hay una clara separación entre tu cuenta personal, y la de empresa (publicidad).",
+          "Asi que puedes estar seguro de que tus amigos no recibirán spam ni veran tus anuncios o actividad publicitaria."
+        ]
+      },
+      {
+        "question": "¿Es esto una estafa? ¿Me timarán?",
+        "answer": [
+          "No, esto no es una estafa y no te timaremos. Somos publicistas online que utilizan cuentas de Facebook para configurar anuncios de pago. Facebook limita el número de cuentas publicitarias que recibe cada usuario. Como esta es nuestra principal actividad comercial, estamos buscando adquirir el mayor número de cuentas para poder publicar más anuncios. Conectamos la tarjeta de crédito de nuestra propia empresa a la cuenta y todos los pagos de la publicidad de Facebook pasarán por ella. No corres ningún riesgo."
+        ]
+      },
+      {
+        "question": "¿Estamos rompiendo las reglas?",
+        "answer": [
+          "No. Vender tu perfil va en contra de la política de Facebook. Nosotros no compramos perfiles, simplemente los alquilamos para acceder y utilizar las cuentas publicitarias que no se utilizan."
+        ]
+      }
+    ],
+    "account_secure": {
+      "title": "Su cuenta está segura, por favor sepa que:",
+      "list": [
+        "Usamos tu perfil solo para iniciar sesión en Facebook Business Manager, (https://business.facebook.com/) que es completamente independiente de su perfil. La mayoría de los usuarios ni siquiera saben que existe.",
+        "Puedes seguir usando tu cuenta mientras probamos y publicamos anuncios.",
+        "Nadie sabrá que los anuncios se están publicando y tus amigos nunca verán nada (a menos que tu se lo cuentes y les muestres tus nuevas ganancias )",
+        "Nada se publicará jamás en tu muro.",
+        "Nunca miramos tu perfil personal, mensajes o cualquiera otra actividad, solo usamos la cuenta comercial que creamos.",
+        "Nunca venderemos, transferiremos ni publicaremos tu información personal."
+      ]
+    }
+  },
+  "contact": {
+    "form": {
+      "title": "Déjanos un mensaje",
+      "name": "Tu nombre",
+      "name_error_requiered": "Por favor, coloque su nombre",
+      "email": "Tu email",
+      "email_error_required": "Por favor, coloque su email",
+      "email_error_pattern": "Por favor, registre un email valido",
+      "message": "Tu mensaje",
+      "message_error_required": "Por favor, escriba un mensaje",
+      "send_button": "Enviar"
+    },
+    "side": {
+      "title": "Contáctanos",
+      "info": [
+        "¿Cómo podemos ayudarte? ¿Necesitas ayuda con tus pagos?",
+        "Para cualquier consulta relacionada con pagos o su cuenta, por favor contacte con el gestor local de su zona.",
+        "También puedes consultar dudas en nuestro grupo de Telegram,"
+      ],
+      "join_button": "Únete al grupo"
+    }
+  },
+  "login": {
+    "home_link": "Inicio",
+    "title": "Iniciar sesión",
+    "email": "Email",
+    "email_error_required": "Por favor, llenar este campo",
+    "email_error_min": "Mínimo 6 caracteres",
+    "email_error_pattern": "Ingrese un email válido",
+    "password": "Contraseña",
+    "password_error_required": "Por favor, llenar este campo",
+    "password_error_min": "Mínimo 6 caracteres",
+    "email_verified_error": "Tu cuenta no está verificada. Haz click aquí para recibir un nuevo correo de confirmación",
+    "email_confirmation_sent_error": "The email has already been sent",
+    "no_account": "¿No tienes un usuario? Regístrate aquí",
+    "forgot_password": "¿No recuerdas tu contraseña? Haz click aquí",
+    "login_button": "Inciar sesión"
+  },
+  "reset_password": {
+    "login_link": "Iniciar sesión",
+    "title": "Cambiar contraseña",
+    "password": "Contraseña",
+    "password_error_required": "Por favor, llenar este campo",
+    "password_error_min": "Mínimo 6 caracteres",
+    "password_confirmation": "Confirmar contraseña",
+    "password_confirmation_error_required": "Por favor, llenar este campo",
+    "password_confirmation_error_same": "Las contraseñas no coinciden",
+    "reset_confirmation_message": "Su contraseña ha sido modificada",
+    "submit_button": "Cambiar contraseña",
+    "submit_button_waiting": "Esperando"
+  },
+  "confirmation": {
+    "paypal": {
+      "message": "Tu email de PayPal esta siendo verificado",
+      "confirmation_message": "Tu email de Paypal ya está verificado",
+      "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
+    },
+    "email": {
+      "message": "Tu email esta siendo verificado",
+      "confirmation_message": "Tu email ya esta verificado",
+      "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
+    }
+  },
+  "forgot_password": {
+    "login_link": "Iniciar sesión",
+    "title": "Olvidó contraseña",
+    "email": "Email",
+    "email_error_required": "Por favor, llenar este campo",
+    "email_error_min": "Mínimo 6 caracteres",
+    "email_sent": "El correo ha sido enviado",
+    "submit_button": "Enviar email",
+    "submit_button_waiting": "Esperando"
+  },
+  "no_valid": {
+    "p_1": {
+      "0": "Lo sentimos. Su perfil de Facebook no es un candidato válido para nuestro programa de alquiler."
+    },
+    "p_2": {
+      "0": "Pero no se preocupe, todavía tiene la opción de ganar dinero con nostros.",
+      "1": "Haga click aquí",
+      "2": "y empiece a ganar dinero por cada amigo que nos presente y se una."
+    }
+  },
+  "not_found": "Página no encontrada",
+  "loading": "Cargando . . .",
+  "navbar": {
+    "home": "Inicio",
+    "how_it_works": "Cómo funciona",
+    "referral_program": "Programa de referidos",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "join_now": "Únete ahora",
+    "login": "Iniciar sesión"
+  },
+  "footer": {
+    "contact": "Contacto",
+    "terms_conditions": "Términos y condiciones de uso",
+    "copyright": {
+      "0": "Derechos de autos",
+      "1": "Todos los derechos reservados"
+    },
+    "detach": "Este sitio no forma parte de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. Facebook es un marca registrada de Facebook Inc."
+  },
+  "dashboard_navbar": {
+    "payments": "Pagos",
+    "referrals": "Referidos",
+    "profile": "Perfil",
+    "users": "Usuarios",
+    "orders": "Órdenes"
+  },
+  "dashboard_profile": {
+    "hi": "Hola",
+    "logout": "Cerrar sesión"
+  },
+  "payments": {
+    "paypal_email_verified": {
+      "0": "Tu email de Paypal no ha sido verificado. Por favor,",
+      "1": "HAZ CLICK AQUI",
+      "2": "para enviar un correo de confirmación."
+    },
+    "email_sent": {
+      "0": "Un email ha sido enviado a tu email de Paypal. Revísalo y verifica tu cuenta de Paypal. Si no te ha llegado el mensaje",
+      "1": "HAZ CLICK AQUI."
+    },
+    "title": "Pagos",
+    "concept": "Concepto",
+    "user": "Usuario",
+    "payment_method": "Método de pago",
+    "payment_date": "Fecha de pago",
+    "status": "Estado",
+    "amount": "Monto"
+  },
+  "referrals": {
+    "title": "Referidos",
+    "name": "Nombre",
+    "email": "Email",
+    "creation_date": "Fecha de creación",
+    "status": "Estado",
+    "observation": "Observación",
+    "update": "Actualizar",
+    "accept": "Aceptar",
+    "cancel": "Cancelar"
+  },
+  "profile": {
+    "profile": {
+      "title": "Profile",
+      "first_name": "Nombre",
+      "last_name": "Apellidos",
+      "email": "Email",
+      "birthday": "Fecha de nacimiento",
+      "phone": "Teléfono",
+      "referral_code": "Código de referido",
+      "referral_link": "Link de referido",
+      "status": "Estado",
+      "payment_method": "Método de pago",
+      "paypal_email": "Email de paypal",
+      "holder_name": "Nombre del titular",
+      "bank_agency": "Agencia bancaria",
+      "bank_account": "Cuenta bancaria"
+    },
+    "configuration": {
+      "title": "Configuración",
+      "forgot_password_link": "Restablecer contraseña",
+      "paypal_email_verified": "Confirmar email de Paypal",
+      "paypal_email_sent": {
+        "0": "Un email ha sido enviado a ",
+        "1": "Revisa tu email y confirma tu email de Paypal"
+      },
+      "change_paypal_email": "Cambiar de email de Paypal"
+    }
+  },
+  "users": {
+    "name": "Nombre",
+    "status": "Estado",
+    "user_type": "Tipo de usuario",
+    "email": "Email",
+    "country": "País",
+    "phone": "Teléfono",
+    "user_row": {
+      "payments": "Pagos",
+      "more_information": "Más información",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "birthday": "Fecha de nacimiento",
+      "creation_date": "Fecha de creación",
+      "ip": "IP",
+      "payment_method": "Método de pago",
+      "paypal_email": "Email de paypal",
+      "holder_name": "Nombre del titular",
+      "bank_account_code": "Código de cuenta bancaria",
+      "bank_agency": "Agencia bancaria",
+      "referral": "Referido",
+      "old_referral_code": "Código de referido antiguo",
+      "referral_code": "Código de referido",
+      "zip_code": "Código postal"
+    },
+    "payments": {
+      "concept": "Concepto",
+      "payment_method": "Método de pago",
+      "payment_date": "Fecha de pago",
+      "status": "Estado",
+      "amount": "Monto"
+    }
+  },
+  "orders": {
+    "title": "Órdenes",
+    "create_order_button": "Crear orden",
+    "concept": "Concepto",
+    "status": "Estado",
+    "creation_date": "Fecha de creación",
+    "payments": "Pagos",
+    "update": "Actualizar",
+    "update_button": "Actualizar orden",
+    "approve_button": "Aprobar",
+    "reject_button": "Rechazar",
+    "cancel_button": "Cancelar",
+    "create_order": {
+      "title": "Crear orden",
+      "create_order_button": "Crear orden",
+      "name": "Nombre",
+      "email": "Email",
+      "payment_method": "Método de pago",
+      "concept": "Concepto",
+      "amount": "Monto",
+      "confirm_order_button": "Confirmar orden"
     }
   }
 }

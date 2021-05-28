@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import OptionInput from "../OptionInput";
 
 // Styles
-import { FormOne } from "../../../styles/JoinUsPageStyles";
+import { FormOne } from "../../../styles/JoinNowPageStyles";
 
 const StepOne = () => {
   const { t } = useTranslation();
@@ -24,10 +24,10 @@ const StepOne = () => {
         type="radio"
         width="short"
         options={[
-          [t("join_us.step_one.isAdult.option_1"), "yes"],
-          [t("join_us.step_one.isAdult.option_2"), "no"],
+          [t("join_now.step_one.isAdult.option_1"), "yes"],
+          [t("join_now.step_one.isAdult.option_2"), "no"],
         ]}
-        question={t("join_us.step_one.isAdult.question")}
+        question={t("join_now.step_one.isAdult.question")}
         error={
           errors.stepOne &&
           errors.stepOne.isAdult &&
@@ -36,7 +36,7 @@ const StepOne = () => {
         register={register("stepOne.isAdult", {
           required: {
             value: true,
-            message: t("join_us.step_one.isAdult.error_1"),
+            message: t("join_now.step_one.isAdult.error_1"),
           },
         })}
       />
@@ -46,19 +46,19 @@ const StepOne = () => {
         className="accountIsReal"
         type="radio"
         options={[
-          [t("join_us.step_one.accountIsReal.option_1"), "yes"],
-          [t("join_us.step_one.accountIsReal.option_2"), "no"],
+          [t("join_now.step_one.accountIsReal.option_1"), "yes"],
+          [t("join_now.step_one.accountIsReal.option_2"), "no"],
         ]}
         error={
           errors.stepOne &&
           errors.stepOne.accountIsReal &&
           errors.stepOne.accountIsReal.message
         }
-        question={t("join_us.step_one.accountIsReal.question")}
+        question={t("join_now.step_one.accountIsReal.question")}
         register={register("stepOne.accountIsReal", {
           required: {
             value: true,
-            message: t("join_us.step_one.accountIsReal.error_1"),
+            message: t("join_now.step_one.accountIsReal.error_1"),
           },
         })}
       />
@@ -67,10 +67,10 @@ const StepOne = () => {
         className="isFirstTime"
         type="radio"
         options={[
-          [t("join_us.step_one.isFirstTime.option_1"), "yes"],
-          [t("join_us.step_one.isFirstTime.option_2"), "no"],
+          [t("join_now.step_one.isFirstTime.option_1"), "yes"],
+          [t("join_now.step_one.isFirstTime.option_2"), "no"],
         ]}
-        question={t("join_us.step_one.isFirstTime.question")}
+        question={t("join_now.step_one.isFirstTime.question")}
         error={
           errors.stepOne &&
           errors.stepOne.isFirstTime &&
@@ -79,7 +79,7 @@ const StepOne = () => {
         register={register("stepOne.isFirstTime", {
           required: {
             value: true,
-            message: t("join_us.step_one.isFirstTime.error_1"),
+            message: t("join_now.step_one.isFirstTime.error_1"),
           },
         })}
       />
@@ -88,10 +88,10 @@ const StepOne = () => {
         className="isOneYear"
         type="radio"
         options={[
-          [t("join_us.step_one.isOneYear.option_1"), "yes"],
-          [t("join_us.step_one.isOneYear.option_2"), "no"],
+          [t("join_now.step_one.isOneYear.option_1"), "yes"],
+          [t("join_now.step_one.isOneYear.option_2"), "no"],
         ]}
-        question={t("join_us.step_one.isOneYear.question")}
+        question={t("join_now.step_one.isOneYear.question")}
         error={
           errors.stepOne &&
           errors.stepOne.isOneYear &&
@@ -100,7 +100,7 @@ const StepOne = () => {
         register={register("stepOne.isOneYear", {
           required: {
             value: true,
-            message: t("join_us.step_one.isOneYear.error_1"),
+            message: t("join_now.step_one.isOneYear.error_1"),
           },
         })}
       />
@@ -109,10 +109,10 @@ const StepOne = () => {
         className="haveFriends"
         type="radio"
         options={[
-          [t("join_us.step_one.haveFriends.option_1"), "yes"],
-          [t("join_us.step_one.haveFriends.option_2"), "no"],
+          [t("join_now.step_one.haveFriends.option_1"), "yes"],
+          [t("join_now.step_one.haveFriends.option_2"), "no"],
         ]}
-        question={t("join_us.step_one.haveFriends.question")}
+        question={t("join_now.step_one.haveFriends.question")}
         error={
           errors.stepOne &&
           errors.stepOne.haveFriends &&
@@ -121,7 +121,7 @@ const StepOne = () => {
         register={register("stepOne.haveFriends", {
           required: {
             value: true,
-            message: t("join_us.step_one.haveFriends.error_1"),
+            message: t("join_now.step_one.haveFriends.error_1"),
           },
         })}
       />

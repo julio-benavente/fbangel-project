@@ -7,6 +7,7 @@ import {
 } from "../../../store/entities/users";
 import { useDispatch, useSelector } from "react-redux";
 import Pagination from "rc-pagination";
+import { useTranslation } from "react-i18next";
 
 // Components
 import UserRow from "./UserRow";
@@ -136,18 +137,20 @@ const UsersPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [users, current, pageSize]);
 
+  const { t } = useTranslation();
+
   return (
     <Users className="Users">
-      <Title>Users</Title>
+      <Title>{t("users.name")}</Title>
       <UsersTable>
         <div className="thead">
           <div className="tr" style={{ ...usersTableWidth }}>
-            <div className="th name">Nombre</div>
-            <div className="th status">Estado</div>
-            <div className="th userType">Tipo de usuario</div>
-            <div className="th email">Email</div>
-            <div className="th country">Pais</div>
-            <div className="th phone">Telefono</div>
+            <div className="th name">{t("users.name")}</div>
+            <div className="th status">{t("users.status")}</div>
+            <div className="th userType">{t("users.user_type")}</div>
+            <div className="th email">{t("users.email")}</div>
+            <div className="th country">{t("users.country")}</div>
+            <div className="th phone">{t("users.phone")}</div>
             <div className="th payments"></div>
             <div className="th moreInformation"></div>
           </div>
@@ -155,7 +158,7 @@ const UsersPage = () => {
         <div className="tbody">
           {loading && (
             <div className="tr loading" style={{ ...usersTableWidth }}>
-              Cargando...
+              {t("loading")}
             </div>
           )}
           {!loading &&

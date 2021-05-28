@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 // Styles
 import {
   Faq,
@@ -23,40 +24,6 @@ import {
 // Assets
 import guyImage from "../../assets/svgs/guy-in-squar-box.svg";
 import { ReactComponent as ArrowSvg } from "../../assets/svgs/arrow.svg";
-
-const questions = [
-  {
-    number: "1",
-    question: "¿Por qué no creamos nuestros propios perfiles?",
-    answer: [
-      "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB.",
-    ],
-  },
-  {
-    number: "2",
-    question:
-      "¿Cómo sé que no se realizarán publicaciones en mi perfil y que mi información no se compartirá?",
-    answer: [
-      "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB.",
-      "Facebook es una entidad corporativa protegida, que protege la actividad y los derechos de sus usuarios. Por lo tanto, hay una clara separación entre tu cuenta personal, y la de empresa (publicidad).",
-      "Asi que puedes estar seguro de que tus amigos no recibirán spam ni veran tus anuncios o actividad publicitaria.",
-    ],
-  },
-  {
-    number: "3",
-    question: "¿Es esto una estafa? ¿Me timarán?",
-    answer: [
-      "No, esto no es una estafa y no te timaremos. Somos publicistas online que utilizan cuentas de Facebook para configurar anuncios de pago. Facebook limita el número de cuentas publicitarias que recibe cada usuario. Como esta es nuestra principal actividad comercial, estamos buscando adquirir el mayor número de cuentas para poder publicar más anuncios. Conectamos la tarjeta de crédito de nuestra propia empresa a la cuenta y todos los pagos de la publicidad de Facebook pasarán por ella. No corres ningún riesgo.",
-    ],
-  },
-  {
-    number: "4",
-    question: "¿Estamos rompiendo las reglas?",
-    answer: [
-      "No. Vender tu perfil va en contra de la política de Facebook. Nosotros no compramos perfiles, simplemente los alquilamos para acceder y utilizar las cuentas publicitarias que no se utilizan.",
-    ],
-  },
-];
 
 const questionVariants = {
   close: {
@@ -130,48 +97,49 @@ const questionCardVariants = {
 };
 
 const FaqPage = () => {
+  const { t } = useTranslation();
   const [questionIsOpen, setQuestionIsOpen] = useState(null);
   const handleQuestionIsOpen = (number) => {
     if (questionIsOpen === number) return setQuestionIsOpen(null);
 
     setQuestionIsOpen(number);
   };
+
+  const questions = t("faq.questions", { returnObjects: true });
+
   return (
     <Faq>
       <QuestionsSection>
         <QuestionsSectionWrapper as={motion.div}>
-          <QuestionsSectionTitle>Preguntas frecuentes</QuestionsSectionTitle>
+          <QuestionsSectionTitle>{t("faq.title")}</QuestionsSectionTitle>
           <QuestionsWrapper
             as={motion.div}
             initial="start"
             animate="end"
             variants={questionCardWrapperVariants}
-            // animate={{}}
           >
-            {questions.map(({ number, question, answer }, i) => {
+            {questions.map(({ question, answer }, i) => {
               return (
                 <QuestionCard
                   as={motion.div}
                   key={i}
-                  onClick={() => handleQuestionIsOpen(number)}
+                  onClick={() => handleQuestionIsOpen(i)}
                   variants={questionCardVariants}
                 >
-                  <Question color={questionIsOpen == number}>
-                    {question}
-                  </Question>
+                  <Question color={questionIsOpen == i}>{question}</Question>
                   <Arrow
                     as={motion.div}
-                    color={questionIsOpen == number}
-                    initial={questionIsOpen == number ? "open" : "close"}
-                    animate={questionIsOpen == number ? "open" : "close"}
+                    color={questionIsOpen == i}
+                    initial={questionIsOpen == i ? "open" : "close"}
+                    animate={questionIsOpen == i ? "open" : "close"}
                     variants={arrowVariants}
                   >
                     <ArrowSvg />
                   </Arrow>
                   <Answer
                     as={motion.div}
-                    initial={questionIsOpen == number ? "open" : "close"}
-                    animate={questionIsOpen == number ? "open" : "close"}
+                    initial={questionIsOpen == i ? "open" : "close"}
+                    animate={questionIsOpen == i ? "open" : "close"}
                     variants={questionVariants}
                   >
                     {answer.map((p, i) => (
@@ -187,33 +155,14 @@ const FaqPage = () => {
       <AccountSecureSection>
         <AccountSecureSectionWrapper>
           <AccountSecureSectionTitle>
-            Su cuenta está segura, por favor sepa que:
+            {t("faq.account_secure.title")}
           </AccountSecureSectionTitle>
           <AccountSecureSectionList>
-            <p>
-              Usamos tu perfil solo para iniciar sesión en Facebook Business
-              Manager, (https://business.facebook.com/) que es completamente
-              independiente de su perfil. La mayoría de los usuarios ni siquiera
-              saben que existe.
-            </p>
-            <p>
-              Puedes seguir usando tu cuenta mientras probamos y publicamos
-              anuncios.
-            </p>
-            <p>
-              Nadie sabrá que los anuncios se están publicando y tus amigos
-              nunca verán nada (a menos que tu se lo cuentes y les muestres tus
-              nuevas ganancias )
-            </p>
-            <p>Nada se publicará jamás en tu muro.</p>
-            <p>
-              Nunca miramos tu perfil personal, mensajes o cualquiera otra
-              actividad, solo usamos la cuenta comercial que creamos.
-            </p>
-            <p>
-              Nunca venderemos, transferiremos ni publicaremos tu información
-              personal.
-            </p>
+            {t("faq.account_secure.list", { returnObjects: true }).map(
+              (item, i) => (
+                <p key={i}>{item}</p>
+              )
+            )}
           </AccountSecureSectionList>
           <QuestionsSectionImage src={guyImage} />
         </AccountSecureSectionWrapper>

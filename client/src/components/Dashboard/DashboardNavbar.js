@@ -3,6 +3,7 @@ import { useRouteMatch, useLocation, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../store/auth/auth";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Styles
 import {
@@ -93,6 +94,8 @@ const MainComponent = () => {
     setInnerWidth(window.innerWidth);
   }, [size]);
 
+  const { t } = useTranslation();
+
   return (
     <DashboardNavbar>
       {widthMark && (
@@ -126,7 +129,7 @@ const MainComponent = () => {
                 onClick={closeNavbar}
               >
                 <PaymentsSvg />
-                <p>Payments</p>
+                <p>{t("dashboard_navbar.payments")}</p>
               </NavLink>
             </NavbarItem>
 
@@ -138,7 +141,7 @@ const MainComponent = () => {
                   onClick={closeNavbar}
                 >
                   <PeopleSvg />
-                  <p>Referrals</p>
+                  <p>{t("dashboard_navbar.referrals")}</p>
                 </NavLink>
               </NavbarItem>
             )}
@@ -149,7 +152,7 @@ const MainComponent = () => {
                 onClick={closeNavbar}
               >
                 <ConfigurationSvg />
-                <p>Profile</p>
+                <p>{t("dashboard_navbar.profile")}</p>
               </NavLink>
             </NavbarItem>
 
@@ -161,7 +164,7 @@ const MainComponent = () => {
                   onClick={closeNavbar}
                 >
                   <UsersSvg />
-                  <p>Users</p>
+                  <p>{t("dashboard_navbar.users")}</p>
                 </NavLink>
               </NavbarItem>
             )}
@@ -174,7 +177,7 @@ const MainComponent = () => {
                   onClick={closeNavbar}
                 >
                   <OrderSvg />
-                  <p>Orders</p>
+                  <p>{t("dashboard_navbar.orders")}</p>
                 </NavLink>
               </NavbarItem>
             )}

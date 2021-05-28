@@ -4,13 +4,13 @@ import { transparentize } from "polished";
 // Styles
 import { page, H2, Container, Parragraph, breakpoint } from "./GlobalStyles";
 
-export const JoinUs = styled.div`
+export const JoinNow = styled.div`
   ${page}
 `;
-export const JoinUsSection = styled.div``;
-export const JoinUsSectionWrapper = styled(Container)``;
-export const JoinUsSectionTitle = styled(H2)``;
-export const JoinUsSectionInfo = styled(Parragraph)``;
+export const JoinNowSection = styled.div``;
+export const JoinNowSectionWrapper = styled(Container)``;
+export const JoinNowSectionTitle = styled(H2)``;
+export const JoinNowSectionInfo = styled(Parragraph)``;
 
 export const FormsWrapper = styled.div`
   width: 100%;
@@ -400,4 +400,4 @@ export const FormFive = styled.div`
   }
 `;
 
-export const JoinUsImage = styled.div``;
+export const JoinNowImage = styled.div``;

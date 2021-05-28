@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 // Components
 import DashboardNavbar from "./DashboardNavbar";
 import DashboardProfile from "./DashboardProfile";
@@ -15,7 +15,7 @@ import { Dashboard, Main } from "../../styles/Dashboard/DashboardPageStyles";
 
 const DashboardPage = () => {
   const { path } = useRouteMatch();
-
+  const { t } = useTranslation();
   return (
     <Dashboard>
       <DashboardNavbar />
@@ -40,7 +40,7 @@ const DashboardPage = () => {
                   alignContent: "center",
                 }}
               >
-                <h1>Page not found</h1>
+                <h1>{t("not_found")}</h1>
               </div>
             )}
           />

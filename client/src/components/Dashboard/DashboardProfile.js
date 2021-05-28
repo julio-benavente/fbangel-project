@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import {
   getUser,
   logOut,
@@ -32,16 +33,17 @@ const MainComponent = () => {
     }
   };
 
+  const { t } = useTranslation();
   return (
     <DashboardProlfile>
       <Name>
-        Hola, <p>{`${firstName} ${lastName}`}</p>
+        {t("dashboard_profile.hi")}, <p>{`${firstName} ${lastName}`}</p>
       </Name>
       <ProfileImage>
         <UserSvg />
       </ProfileImage>
       <Logout onClick={logout}>
-        Log out
+        {t("dashboard_profile.logout")}
         <LogoutSvg />
       </Logout>
     </DashboardProlfile>

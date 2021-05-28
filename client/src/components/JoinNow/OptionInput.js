@@ -6,7 +6,7 @@ import {
   Question,
   Options,
   Option,
-} from "../../styles/JoinUsPageStyles";
+} from "../../styles/JoinNowPageStyles";
 
 const OptionInput = ({
   className,

@@ -8,6 +8,7 @@ import {
 } from "../../../store/entities/orders";
 import axios from "axios";
 import Pagination from "rc-pagination";
+import { useTranslation } from "react-i18next";
 
 // Components
 import CreateOrder from "./CreateOrderPage";
@@ -130,6 +131,8 @@ const OrdersPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [orders, current, pageSize]);
 
+  const { t } = useTranslation();
+
   return (
     <Orders className="Orders">
       {createOrderIsOpen && (
@@ -139,26 +142,26 @@ const OrdersPage = () => {
         />
       )}
       <Header>
-        <Title>Orders</Title>
+        <Title>{t("orders.title")}</Title>
         <CreateOrderButton onClick={openCreateOrder}>
-          Create order
+          {t("orders.create_order_button")}
         </CreateOrderButton>
       </Header>
 
       <Table className="displayUser">
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
-            <div className="th concept">Concepto</div>
-            <div className="th status">Status</div>
-            <div className="th date">Creation date</div>
-            <div className="th payments">Payments</div>
-            <div className="th update">Update</div>
+            <div className="th concept">{t("orders.concept")}</div>
+            <div className="th status">{t("orders.status")}</div>
+            <div className="th date">{t("orders.creation_date")}</div>
+            <div className="th payments">{t("orders.payments")}</div>
+            <div className="th update">{t("orders.update")}</div>
           </div>
         </div>
         <div className="tbody">
           {loading && (
             <div className="tr loading" style={{ ...tableWidth }}>
-              Cargando...
+              {t("loading")}
             </div>
           )}
 
@@ -235,6 +238,8 @@ const Row = ({ order, tableWidth }) => {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="tr" style={{ ...tableWidth }}>
@@ -244,12 +249,12 @@ const Row = ({ order, tableWidth }) => {
         >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
         <div className="td date">{date}</div>
         <div className="td payments">
-          <button onClick={handlePayments}>Payments</button>
+          <button onClick={handlePayments}>{t("orders.payments")}</button>
         </div>
         <div className="td update">
           {!updateIsOn && (
             <button className="updateBtn" onClick={updateOrder}>
-              Update order
+              {t("orders.update_button")}
             </button>
           )}
           {updateIsOn && (
@@ -259,21 +264,21 @@ const Row = ({ order, tableWidth }) => {
                 disabled={loading}
                 onClick={() => changeStatus("payOrder")}
               >
-                Approve
+                {t("orders.approve_button")}
               </button>
               <button
                 className="rejectBtn"
                 disabled={loading}
                 onClick={() => changeStatus("cancelOrder")}
               >
-                Reject
+                {t("orders.reject_button")}
               </button>
               <button
                 className="cancelBtn"
                 disabled={loading}
                 onClick={cancelUpdate}
               >
-                Cancel
+                {t("orders.cancel_button")}
               </button>
             </>
           )}
