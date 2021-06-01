@@ -22,7 +22,7 @@ import { ReactComponent as PeopleSvg } from "../../assets/svgs/people.svg";
 import { ReactComponent as OrderSvg } from "../../assets/svgs/order.svg";
 import { ReactComponent as OpenNav } from "../../assets/svgs/menu.svg";
 import { ReactComponent as CloseNav } from "../../assets/svgs/close.svg";
-import { NavbarLink } from "../../styles/NavbarStyles";
+import { ReactComponent as ArrowCircleSvg } from "../../assets/svgs/arrowCircle.svg";
 
 const navbarVariants = {
   initial: {
@@ -178,6 +178,19 @@ const MainComponent = () => {
                 >
                   <OrderSvg />
                   <p>{t("dashboard_navbar.orders")}</p>
+                </NavLink>
+              </NavbarItem>
+            )}
+
+            {authLevel === "admin" && (
+              <NavbarItem as={motion.div} variants={navLinkVariants}>
+                <NavLink
+                  activeClassName="active"
+                  to={() => `${path}/actions`}
+                  onClick={closeNavbar}
+                >
+                  <ArrowCircleSvg />
+                  <p>Acciones</p>
                 </NavLink>
               </NavbarItem>
             )}

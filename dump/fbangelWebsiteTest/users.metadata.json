@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_"},{"v":2,"unique":true,"key":{"email":1},"name":"email_1","background":true},{"v":2,"unique":true,"key":{"referralCode":1},"name":"referralCode_1","background":true},{"v":2,"key":{"referralCodeLink":1},"name":"referralCodeLink_1","background":true}],"uuid":"51a5e7120ddd47d0bc4e821a916d5450"}

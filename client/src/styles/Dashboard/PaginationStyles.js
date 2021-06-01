@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const PaginationWrapper = styled.div`
   display: grid;
   justify-content: center;
+  margin-top: 1rem;
   .rc-pagination {
     font-size: 12px;
     font-family: "Arial";

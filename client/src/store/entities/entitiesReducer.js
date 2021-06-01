@@ -4,6 +4,7 @@ import users from "./users";
 import referrals from "./referrals";
 import products from "./products";
 import orders from "./orders";
+import actions from "./actions";
 
 export default combineReducers({
   payments,
@@ -11,4 +12,5 @@ export default combineReducers({
   referrals,
   products,
   orders,
+  actions,
 });

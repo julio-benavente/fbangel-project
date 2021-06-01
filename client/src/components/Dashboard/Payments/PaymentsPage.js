@@ -122,10 +122,7 @@ const PaymentsPage = () => {
           id,
         }
       );
-      console.log("response", response);
-    } catch (error) {
-      console.log("error", error.message);
-    }
+    } catch (error) {}
   };
 
   // PAGINATION
@@ -256,15 +253,13 @@ const PaymentsPage = () => {
           <div className="tbody">
             {loading && (
               <div className="tr loading" style={{ ...tableWidth }}>
-                Cargando...
+                {t("loading")}
               </div>
             )}
             {!loading &&
               showRows.map((payment, index) => {
                 const { concept, paymentMethod, creationDate, amount, status } =
                   payment;
-
-                console.log(payment);
 
                 const date = new Date(creationDate).toLocaleDateString([], {
                   day: "2-digit",

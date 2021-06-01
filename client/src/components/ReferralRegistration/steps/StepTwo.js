@@ -48,11 +48,17 @@ const Main = () => {
     <StepTwo>
       <OptionInput
         className="paymentMethod"
-        question={t("join_now.step_four.paymentMethod.question")}
+        question={t("referral_registration.step_two.paymentMethod.question")}
         type="radio"
         options={[
-          [t("join_now.step_four.paymentMethod.option_1"), "paypal"],
-          [t("join_now.step_four.paymentMethod.option_2"), "bank-peru"],
+          [
+            t("referral_registration.step_two.paymentMethod.option_1"),
+            "paypal",
+          ],
+          [
+            t("referral_registration.step_two.paymentMethod.option_2"),
+            "bank-peru",
+          ],
         ]}
         error={
           errors.stepTwo &&
@@ -62,7 +68,7 @@ const Main = () => {
         register={register("stepTwo.paymentMethod", {
           required: {
             value: true,
-            message: t("join_now.step_four.paymentMethod.error_1"),
+            message: t("referral_registration.step_two.paymentMethod.error_1"),
           },
         })}
       />
@@ -70,7 +76,7 @@ const Main = () => {
         <>
           <TextInput
             className="paypalEmail"
-            question={t("join_now.step_four.paypalEmail.question")}
+            question={t("referral_registration.step_two.paypalEmail.question")}
             error={
               errors.stepTwo &&
               errors.stepTwo.paypalEmail &&
@@ -79,17 +85,21 @@ const Main = () => {
             register={register("stepTwo.paypalEmail", {
               required: {
                 value: true,
-                message: t("join_now.step_four.paypalEmail.error_1"),
+                message: t(
+                  "referral_registration.step_two.paypalEmail.error_1"
+                ),
               },
               pattern: {
                 value:
                   /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
-                message: t("join_now.step_four.paypalEmail.error_2"),
+                message: t(
+                  "referral_registration.step_two.paypalEmail.error_2"
+                ),
               },
               validate: {
                 min: (v) =>
                   v.length < 6
-                    ? t("join_now.step_four.paypalEmail.error_3")
+                    ? t("referral_registration.step_two.paypalEmail.error_3")
                     : true,
               },
             })}
@@ -97,7 +107,9 @@ const Main = () => {
 
           <TextInput
             className="paypalEmailConfirmation"
-            question={t("join_now.step_four.paypalEmailConfirmation.question")}
+            question={t(
+              "referral_registration.step_two.paypalEmailConfirmation.question"
+            )}
             error={
               errors.stepTwo &&
               errors.stepTwo.paypalEmailConfirmation &&
@@ -107,19 +119,21 @@ const Main = () => {
               required: {
                 value: true,
                 message: t(
-                  "join_now.step_four.paypalEmailConfirmation.error_1"
+                  "referral_registration.step_two.paypalEmailConfirmation.error_1"
                 ),
               },
               validate: {
                 isTheSame: (v) =>
                   !(v === getValues("stepTwo.paypalEmail"))
-                    ? t("join_now.step_four.paypalEmailConfirmation.error_2")
+                    ? t(
+                        "referral_registration.step_two.paypalEmailConfirmation.error_2"
+                      )
                     : true,
               },
             })}
           />
           <div className="message">
-            <p>{t("join_now.step_four.paypalMessage.p_1")}</p>
+            <p>{t("referral_registration.step_two.paypalMessage.p_1")}</p>
           </div>
         </>
       )}
@@ -127,7 +141,7 @@ const Main = () => {
         <>
           <TextInput
             className="holderName"
-            question={t("join_now.step_four.holderName.question")}
+            question={t("referral_registration.step_two.holderName.question")}
             error={
               errors.stepTwo &&
               errors.stepTwo.holderName &&
@@ -136,13 +150,13 @@ const Main = () => {
             register={register("stepTwo.holderName", {
               required: {
                 value: true,
-                message: t("join_now.step_four.holderName.error_1"),
+                message: t("referral_registration.step_two.holderName.error_1"),
               },
             })}
           />
           <TextInput
             className="bankAngency"
-            question={t("join_now.step_four.bankAngency.question")}
+            question={t("referral_registration.step_two.bankAngency.question")}
             error={
               errors.stepTwo &&
               errors.stepTwo.bankAngency &&
@@ -151,13 +165,17 @@ const Main = () => {
             register={register("stepTwo.bankAngency", {
               required: {
                 value: true,
-                message: t("join_now.step_four.bankAngency.error_1"),
+                message: t(
+                  "referral_registration.step_two.bankAngency.error_1"
+                ),
               },
             })}
           />
           <TextInput
             className="bankAccountCode"
-            question={t("join_now.step_four.bankAccountCode.question")}
+            question={t(
+              "referral_registration.step_two.bankAccountCode.question"
+            )}
             error={
               errors.stepTwo &&
               errors.stepTwo.bankAccountCode &&
@@ -166,29 +184,35 @@ const Main = () => {
             register={register("stepTwo.bankAccountCode", {
               required: {
                 value: true,
-                message: t("join_now.step_four.bankAccountCode.error_1"),
+                message: t(
+                  "referral_registration.step_two.bankAccountCode.error_1"
+                ),
               },
               pattern: {
                 value: /^[0-9]*$/,
-                message: t("join_now.step_four.bankAccountCode.error_2"),
+                message: t(
+                  "referral_registration.step_two.bankAccountCode.error_2"
+                ),
               },
               validate: {
                 numberOfDigits: (v) =>
                   v.length !== 20
-                    ? t("join_now.step_four.bankAccountCode.error_3")
+                    ? t(
+                        "referral_registration.step_two.bankAccountCode.error_3"
+                      )
                     : true,
               },
             })}
           />
           <div className="message">
-            <p>{t("join_now.step_four.bankMessage.p_1")}</p>
+            <p>{t("referral_registration.step_two.bankMessage.p_1")}</p>
           </div>
         </>
       )}
 
       <FileInput
         className="documentImage"
-        question={t("join_now.step_four.documentImage.question")}
+        question={t("referral_registration.step_two.documentImage.question")}
         error={
           errors.stepTwo &&
           errors.stepTwo.documentImage &&
@@ -197,27 +221,27 @@ const Main = () => {
         register={register("stepTwo.documentImage", {
           required: {
             value: true,
-            message: t("join_now.step_four.documentImage.error_1"),
+            message: t("referral_registration.step_two.documentImage.error_1"),
           },
           validate: {
             size: (v) =>
               v[0].size > 2000000
-                ? t("join_now.step_four.documentImage.error_2")
+                ? t("referral_registration.step_two.documentImage.error_2")
                 : true,
             type: (v) =>
               !["image/jpeg", "image/jpg", "image/png"].includes(v[0].type)
-                ? t("join_now.step_four.documentImage.error_3")
+                ? t("referral_registration.step_two.documentImage.error_3")
                 : true,
           },
         })}
       />
       <div className="message">
-        <p>{t("join_now.step_four.documentImage.message")}</p>
+        <p>{t("referral_registration.step_two.documentImage.message")}</p>
       </div>
 
       <TextInput
         className="oldReferralCode"
-        question="Codigo de referente actual"
+        question={t("referral_registration.step_two.old_referral_code")}
         noRequired={true}
         error={
           errors.stepTwo &&
@@ -228,17 +252,13 @@ const Main = () => {
           validate: {
             max: (v) =>
               v && v.length > 10
-                ? t("join_now.step_four.referral.error_1")
+                ? t("referral_registration.step_two.referral.error_1")
                 : true,
           },
         })}
       />
       <div className="message">
-        <p>
-          Si ya eres un referente nuestro, por favor introduce el codigo que
-          utilizás actualmente para que todos tus referidos sigan asignados a
-          ti. Gracias.
-        </p>
+        <p>{t("referral_registration.step_two.old_referral_code_message")} </p>
       </div>
 
       <OptionInput
@@ -248,8 +268,14 @@ const Main = () => {
         options={[
           [
             <span>
-              Acepto los{" "}
-              <Link to="/terms-conditions">términos y condiciones</Link>
+              {t(
+                "referral_registration.step_two.termsAndConditions.option_1.0"
+              )}{" "}
+              <Link to="/terms-conditions">
+                {t(
+                  "referral_registration.step_two.termsAndConditions.option_1.1"
+                )}
+              </Link>
             </span>,
             "yes",
           ],
@@ -262,7 +288,9 @@ const Main = () => {
         register={register("stepTwo.termsAndConditions", {
           required: {
             value: true,
-            message: t("join_now.step_four.termsAndConditions.error_1"),
+            message: t(
+              "referral_registration.step_two.termsAndConditions.error_1"
+            ),
           },
         })}
       />
@@ -274,7 +302,7 @@ const Main = () => {
           rules={{
             required: {
               value: true,
-              message: "Este campo es obligatorio",
+              message: t("referral_registration.step_two.captcha_error"),
             },
           }}
           render={({ name, field: { onChange } }) => {

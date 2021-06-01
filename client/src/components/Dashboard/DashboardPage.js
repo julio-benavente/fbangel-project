@@ -9,6 +9,7 @@ import Profile from "./Profile/ProfilePage";
 import Users from "./Users/UsersPage";
 import Referrals from "./Referrals/ReferralsPage";
 import Orders from "./Orders/OrdersPage";
+import Actions from "./Actions/ActionsPage";
 
 // Styles
 import { Dashboard, Main } from "../../styles/Dashboard/DashboardPageStyles";
@@ -27,6 +28,7 @@ const DashboardPage = () => {
           <Route path={`${path}/profile`} component={Profile} />
           <Route path={`${path}/referrals`} component={Referrals} />
           <Route path={`${path}/orders`} component={Orders} />
+          <Route path={`${path}/actions`} component={Actions} />
           <Route exact path={path} component={Payments} />
           <Route
             path={`${path}/*`}

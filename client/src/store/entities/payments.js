@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
+import moment from "moment";
 
 const initialState = () => ({
   loading: false,
   tier: "tierOne",
   firstRentPayed: false,
   list: [],
+  lastFetch: null,
 });
 
 const slice = createSlice({
@@ -25,6 +27,7 @@ const slice = createSlice({
       payments.list = list || payments.list;
       payments.tier = tier || payments.tier;
       payments.firstRentPayed = firstRentPayed || payments.firstRentPayed;
+      payments.lastFetch = Date.now();
       payments.loading = false;
 
       return payments;
@@ -45,9 +48,19 @@ export const {
 // Actions
 const url = "/api/payments";
 
+const stopRequest = (getState) => {
+  const { lastFetch } = getState().entities.payments;
+  const diffInMinutes = moment().diff(moment(lastFetch), "minutes");
+  return diffInMinutes < 10;
+};
+
 export const requestUserPayments =
   ({ id }) =>
   (dispatch, getState) => {
+    if (stopRequest(getState)) {
+      return;
+    }
+
     return dispatch(
       apiCallBegan({
         url: `${url}/${id}`,
@@ -59,6 +72,10 @@ export const requestUserPayments =
   };
 
 export const requestPayments = () => (dispatch, getState) => {
+  if (stopRequest(getState)) {
+    return;
+  }
+
   return dispatch(
     apiCallBegan({
       url,

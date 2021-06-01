@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
-
+import moment from "moment";
 const initialState = () => ({
   loading: false,
   user: null,
   list: [],
+  lastFetch: null,
 });
 
 const slice = createSlice({
@@ -21,6 +22,7 @@ const slice = createSlice({
       const { users: usersResponse } = action.payload;
       users.list = usersResponse;
       users.loading = false;
+      users.lastFetch = Date.now();
 
       return users;
     },
@@ -64,7 +66,17 @@ export const {
 // Actions
 const url = "/api/users";
 
+const stopRequest = (getState) => {
+  const { lastFetch } = getState().entities.users;
+  const diffInMinutes = moment().diff(moment(lastFetch), "minutes");
+  return diffInMinutes < 10;
+};
+
 export const requestUsers = () => (dispatch, getState) => {
+  if (stopRequest(getState)) {
+    return;
+  }
+
   return dispatch(
     apiCallBegan({
       url,

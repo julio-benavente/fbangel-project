@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
+import moment from "moment";
 
 const initialState = () => ({
   loading: false,
   list: [],
+  lastFetch: null,
 });
 
 const slice = createSlice({
@@ -20,6 +22,7 @@ const slice = createSlice({
       const { referrals: referralsResponse } = action.payload;
       referrals.list = referralsResponse;
       referrals.loading = false;
+      referrals.lastFetch = Date.now();
 
       return referrals;
     },
@@ -41,7 +44,17 @@ export const {
 // Actions
 const url = "/api/users/get-referrals";
 
+const stopRequest = (getState) => {
+  const { lastFetch } = getState().entities.referrals;
+  const diffInMinutes = moment().diff(moment(lastFetch), "minutes");
+  return diffInMinutes < 10;
+};
+
 export const requestReferrals = (data) => (dispatch, getState) => {
+  if (stopRequest(getState)) {
+    return;
+  }
+
   return dispatch(
     apiCallBegan({
       url,

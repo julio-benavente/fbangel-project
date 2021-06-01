@@ -247,3 +247,23 @@ export const Captcha = styled.div`
     max-width: 100%;
   }
 `;
+
+export const StepThree = styled.div`
+  ${baseStepStyle}
+  display: block;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  p span.congratulations {
+    color: ${(props) => props.theme.color.secondary};
+    font-weight: 700;
+  }
+
+  p.sendEmailConfirmation {
+    color: ${(props) => props.theme.color.link};
+    font-weight: 500;
+    cursor: pointer;
+  }
+`;

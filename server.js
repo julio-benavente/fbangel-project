@@ -21,12 +21,14 @@ const payments = require("./routes/api/payments");
 const products = require("./routes/api/products");
 const orders = require("./routes/api/orders");
 const email = require("./routes/email");
+const actions = require("./routes/api/actions");
 
 app.use("/api/users", users);
 app.use("/api/adminUsers", adminUsers);
 app.use("/api/payments", payments);
 app.use("/api/products", products);
 app.use("/api/orders", orders);
+app.use("/api/actions", actions);
 app.use("/auth", auth);
 app.use("/email", email);
 

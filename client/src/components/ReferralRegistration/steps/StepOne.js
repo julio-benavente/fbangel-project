@@ -20,7 +20,6 @@ const Step = ({
   date,
   setDate,
 }) => {
-  const { t } = useTranslation();
   const methods = useFormContext();
   const {
     register,
@@ -35,19 +34,24 @@ const Step = ({
   useEffect(() => {
     datePicker.current.input.readOnly = true;
   }, []);
+
+  const { t } = useTranslation();
+
   return (
     <StepOne>
       <TextInput
         className="firstName"
-        question="Tu nombre"
+        question={t("referral_registration.step_one.first_name")}
         register={register("stepOne.firstName", {
           required: {
             value: true,
-            message: "Por favor, registre su nombre",
+            message: t("referral_registration.step_one.required_field"),
           },
           pattern: {
             value: /^[ a-zA-Z\-\’]+$/,
-            message: "El nombre contiene caracteres no permitidos",
+            message: t(
+              "referral_registration.step_one.first_name_error_pattern"
+            ),
           },
         })}
         error={
@@ -59,15 +63,17 @@ const Step = ({
 
       <TextInput
         className="lastName"
-        question="Tus apellidos"
+        question={t("referral_registration.step_one.last_name")}
         register={register("stepOne.lastName", {
           required: {
             value: true,
-            message: "Por favor, registre su apellido",
+            message: t("referral_registration.step_one.required_field"),
           },
           pattern: {
             value: /^[ a-zA-Z\-\’]+$/,
-            message: "El apellido contiene caracteres no permitidos",
+            message: t(
+              "referral_registration.step_one.last_name_error_pattern"
+            ),
           },
         })}
         error={
@@ -78,11 +84,11 @@ const Step = ({
       />
       <TextInput
         className="address"
-        question="Su direción"
+        question={t("referral_registration.step_one.address")}
         register={register("stepOne.address", {
           required: {
             value: true,
-            message: "Por favor, registre su direccion",
+            message: t("referral_registration.step_one.required_field"),
           },
         })}
         error={
@@ -94,7 +100,7 @@ const Step = ({
 
       <TextInput
         className="countryDropdown"
-        question="Tu país de residencia"
+        question={t("referral_registration.step_one.country")}
         error={
           errors.stepOne &&
           errors.stepOne.country &&
@@ -108,7 +114,7 @@ const Step = ({
             rules={{
               required: {
                 value: true,
-                message: "Este campo es obligatorio",
+                message: t("referral_registration.step_one.required_field"),
               },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
@@ -129,7 +135,7 @@ const Step = ({
       />
 
       <TextInput
-        question="Tu ciudad de residencia"
+        question={t("referral_registration.step_one.city")}
         className="regionDropdown"
         error={
           errors.stepOne && errors.stepOne.city && errors.stepOne.city.message
@@ -141,7 +147,7 @@ const Step = ({
             rules={{
               required: {
                 value: true,
-                message: "Este campo es obligatorio",
+                message: t("referral_registration.step_one.required_field"),
               },
             }}
             defaultValue=""
@@ -165,11 +171,11 @@ const Step = ({
 
       <TextInput
         className="zipCode"
-        question="Código postal"
+        question={t("referral_registration.step_one.zip_code")}
         register={register("stepOne.zipCode", {
           required: {
             value: true,
-            message: "Por favor, registre su código postal",
+            message: t("referral_registration.step_one.required_field"),
           },
         })}
         error={
@@ -181,7 +187,7 @@ const Step = ({
 
       <TextInput
         className="birthday"
-        question="Fecha de nacimiento"
+        question={t("referral_registration.step_one.birthday")}
         error={
           errors.stepOne &&
           errors.stepOne.birthday &&
@@ -195,7 +201,7 @@ const Step = ({
             rules={{
               required: {
                 value: true,
-                message: "Por favor, ingrese la fecha de su nacimiento",
+                message: t("referral_registration.step_one.required_field"),
               },
               validate: {
                 isNotOldEnough: (v) => {
@@ -208,7 +214,9 @@ const Step = ({
 
                   const age = getAge(v);
                   if (!(age >= 18)) {
-                    return "Debes ser mayor de 18 años";
+                    return t(
+                      "referral_registration.step_one.birthday_error_old_enough"
+                    );
                   }
                   return true;
                 },
@@ -239,7 +247,7 @@ const Step = ({
 
       <TextInput
         className="phone"
-        question="Tu celular"
+        question={t("referral_registration.step_one.phone")}
         error={
           errors.stepOne && errors.stepOne.phone && errors.stepOne.phone.message
         }
@@ -251,12 +259,14 @@ const Step = ({
             rules={{
               required: {
                 value: true,
-                message: "Este campo es obligatorio",
+                message: t("referral_registration.step_one.required_field"),
               },
               pattern: {
                 value:
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                message: "Ingrese un numero de celular válido",
+                message: t(
+                  "referral_registration.step_one.phone_error_pattern"
+                ),
               },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
@@ -280,26 +290,26 @@ const Step = ({
 
       <TextInput
         className="email"
-        question="Registre su email"
+        question={t("referral_registration.step_one.email")}
         error={
           errors.stepOne && errors.stepOne.email && errors.stepOne.email.message
         }
         register={register("stepOne.email", {
           required: {
             value: true,
-            message: "Por favor, ingrese su email",
+            message: t("referral_registration.step_one.required_field"),
           },
           pattern: {
             value:
               /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/,
-            message: "Ingrese un email valido",
+            message: t("referral_registration.step_one.email_error_pattern"),
           },
         })}
       />
 
       <TextInput
         className="password"
-        question="Registre una contraseña"
+        question={t("referral_registration.step_one.password")}
         type="password"
         error={
           errors.stepOne &&
@@ -309,17 +319,20 @@ const Step = ({
         register={register("stepOne.password", {
           required: {
             value: true,
-            message: "Por favor, registre este campo",
+            message: t("referral_registration.step_one.required_field"),
           },
           validate: {
-            min: (v) => (v.length < 8 ? "Mínimo 8 caracteres" : true),
+            min: (v) =>
+              v.length < 8
+                ? t("referral_registration.step_one.password_error_min")
+                : true,
           },
         })}
       />
 
       <TextInput
         className="passwordConfirmation"
-        question="Confirme su contraseña"
+        question={t("referral_registration.step_one.password_confirmation")}
         type="password"
         error={
           errors.stepOne &&
@@ -329,12 +342,14 @@ const Step = ({
         register={register("stepOne.passwordConfirmation", {
           required: {
             value: true,
-            message: "Por favor, registre este campo",
+            message: t("referral_registration.step_one.required_field"),
           },
           validate: {
             isTheSame: (v) =>
               !(v === getValues("stepOne.password"))
-                ? "Las contraseñas no coinciden"
+                ? t(
+                    "referral_registration.step_one.password_confirmation_error_same"
+                  )
                 : true,
           },
         })}

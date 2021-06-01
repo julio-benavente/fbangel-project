@@ -133,9 +133,13 @@ router.post("/login", checkAuthLevel, async (req, res) => {
 
     const token = createToken(user._id, "1d");
 
-    res.cookie("fbangelJWT", token, { httpOnly: true });
+    res.cookie("fbangelJWT", token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 2,
+    });
     res.json({ user });
   } catch (e) {
+    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }

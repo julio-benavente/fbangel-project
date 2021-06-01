@@ -1,13 +1,12 @@
 import React, { useState, useRef } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 // Components
 import StepOne from "./steps/StepOne";
 import StepTwo from "./steps/StepTwo";
-// import StepThree from "./Steps/StepThree";
-// import StepFour from "./Steps/StepFour";
-// import StepFive from "./Steps/StepFive";
+import StepThree from "./steps/StepThree";
 
 // Styles
 import {
@@ -24,7 +23,9 @@ import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Form = () => {
-  const [formStep, setFormStep] = useState(2);
+  const { t } = useTranslation();
+
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
@@ -71,8 +72,6 @@ const Form = () => {
       const response = await fetchCandidateInformation(data);
       const { status } = response;
 
-      console.log(response);
-
       if (status && status === 200) {
         handleFormStep(1, formStep);
       } else {
@@ -80,8 +79,6 @@ const Form = () => {
           data,
           "incomplete"
         );
-
-        console.log(incompleteCandidate);
       }
       return null;
     }
@@ -153,8 +150,10 @@ const Form = () => {
         );
       case 2:
         return <StepTwo />;
+      case 3:
+        return <StepThree />;
       default:
-        return "No more steps";
+        return t("referral_registration.no_more_steps");
     }
   };
 
@@ -188,10 +187,12 @@ const Form = () => {
         return (
           <Buttons>
             <Button onClick={() => handleFormStep(-1, formStep)}>
-              Anterior
+              {t("referral_registration.buttons.previous")}
             </Button>
             <SubmitButton type="submit">
-              {isSubmitting ? "Enviando" : "Enviar"}
+              {isSubmitting
+                ? t("referral_registration.buttons.sending")
+                : t("referral_registration.buttons.send")}
             </SubmitButton>
           </Buttons>
         );
@@ -201,12 +202,12 @@ const Form = () => {
           <Buttons>
             <Buttons>
               <Button onClick={() => handleFormStep(-1, formStep)}>
-                Anterior
+                {t("referral_registration.buttons.previous")}
               </Button>
             </Buttons>
 
             <Button onClick={() => handleFormStep(1, formStep)}>
-              Siguiente
+              {t("referral_registration.buttons.next")}
             </Button>
           </Buttons>
         );
@@ -215,7 +216,7 @@ const Form = () => {
         return (
           <Buttons one>
             <Button onClick={() => handleFormStep(1, formStep)}>
-              Siguiente
+              {t("referral_registration.buttons.next")}
             </Button>
           </Buttons>
         );
@@ -223,23 +224,32 @@ const Form = () => {
         return null;
     }
   };
+
   return (
     <FormsWrapper>
       <FormLocation>
-        <FormLocationTitle>Formulario de registro</FormLocationTitle>
+        <FormLocationTitle>
+          {t("referral_registration.locations.title")}
+        </FormLocationTitle>
         <Location className={`${formStep === 1 && "active"}`}>
           <p className="number">1</p>
-          <p className="location">Datos personales</p>
+          <p className="location">
+            {t("referral_registration.locations.personal_information")}
+          </p>
         </Location>
         <Location className={`${formStep === 2 && "active"}`}>
           <p className="number">2</p>
-          <p className="location">Confirmación y Método de pago</p>
+          <p className="location">
+            {t("referral_registration.locations.confirmation_payment_method")}
+          </p>
         </Location>
 
         {formStep === 3 && (
           <Location className={`${formStep === 5 && "active"}`}>
             <p className="number">3</p>
-            <p className="location">Felicitaciones</p>
+            <p className="location">
+              {t("referral_registration.locations.congratulations")}
+            </p>
           </Location>
         )}
       </FormLocation>

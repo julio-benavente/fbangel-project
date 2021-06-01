@@ -1120,7 +1120,7 @@
   },
   "forgot_password": {
     "login_link": "Iniciar sesión",
-    "title": "Olvidó contraseña",
+    "title": "Restablecer contraseña",
     "email": "Email",
     "email_error_required": "Por favor, llenar este campo",
     "email_error_min": "Mínimo 6 caracteres",
@@ -1280,6 +1280,111 @@
       "concept": "Concepto",
       "amount": "Monto",
       "confirm_order_button": "Confirmar orden"
+    }
+  },
+  "referral_registration": {
+    "title": "¡Conviértete en un Referidor!",
+    "info": "¡Completa este sencillo cuestionario y empieza a ganar dinero invitando a tus amigos!",
+    "no_more_steps": "No hay mas pasos",
+    "buttons": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "send": "Enviar",
+      "sending": "Enviando"
+    },
+    "locations": {
+      "title": "Formulario de registro",
+      "personal_information": "Datos personales",
+      "confirmation_payment_method": "Confirmación y método de pago",
+      "congratulations": "Felicitaciones"
+    },
+    "step_one": {
+      "required_field": "Por favor, registre este campo",
+      "first_name": "Su nombre",
+      "first_name_error_pattern": "El nombre contiene caracteres no permitidos",
+      "last_name": "Sus apellidos",
+      "last_name_error_pattern": "El apellido contiene caracteres no permitidos",
+      "address": "Su dirección",
+      "country": "Su país de residencia",
+      "city": "Tu ciudad de residencia",
+      "zip_code": "Código postal",
+      "birthday": "Fecha de nacimiento",
+      "birthday_error_old_enough": "Debes ser mayor de 18 años",
+      "phone": "Su telefono",
+      "phone_error_pattern": "Ingrese un numero de celular válido",
+      "email": "Su email",
+      "email_error_pattern": "Ingrese un email valido",
+      "password": "Ingrese una contraseña",
+      "password_error_min": "Mínimo 8 caracteres",
+      "password_confirmation": "Confirme su contraseña",
+      "password_confirmation_error_same": "Las contraseñas no coinciden"
+    },
+    "step_two": {
+      "paymentMethod": {
+        "question": "Método de pago",
+        "option_1": "PayPal",
+        "option_2": "Cuenta bancaria - Solo para Perú",
+        "error_1": "Por favor, seleccione un método de pago"
+      },
+      "paypalEmail": {
+        "question": "Email de Paypal",
+        "error_1": "Por favor, indique su email de paypal",
+        "error_2": "Ingrese un email valido",
+        "error_3": "Los email de paypal cuenta con por lo menos 6 caracteres"
+      },
+      "paypalEmailConfirmation": {
+        "question": "Confirma tu email de Paypal",
+        "error_1": "Por favor, confirme su email de paypal",
+        "error_2": "Lo correos no coinciden"
+      },
+      "paypalMessage": {
+        "p_1": "Verifique que su correo Paypal es correcto al 100%. No nos hacemos responsables por datos incorrectos."
+      },
+      "holderName": {
+        "question": "Nombre del titular",
+        "error_1": "Por favor, ingrese el nombre del titular"
+      },
+      "bankAngency": {
+        "question": "Agencia bancaria",
+        "error_1": "Por favor, ingrese la agencia bancaria"
+      },
+      "bankAccountCode": {
+        "question": "Código de Cuento Interbancaria",
+        "error_1": "Por favor, ingrese el código de cuenta interbancaria",
+        "error_2": "El código solo debe contener números",
+        "error_3": "El código debe contar con 20 dígitos"
+      },
+      "bankMessage": {
+        "p_1": "Solo válido para CCI peruano. Verifique que su CCI es 100% correcto. No nos hacemos responsables de datos incorrectos."
+      },
+      "documentImage": {
+        "question": "Prueba de identidad",
+        "error_1": "Por favor, ingrese una foto confirmando su identidad",
+        "error_2": "El archivo puede pesar máximo 2mb",
+        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
+        "message": "Envía una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento. (No modificar digitalmente) (Puedes usar, DNI, pasaporte o licencia de conducir)."
+      },
+      "old_referral_code": "Codigo de referente actual",
+      "old_referral_code_message": "Si ya eres un referente nuestro, por favor introduce el codigo que utilizás actualmente para que todos tus referidos sigan asignados a ti. Gracias.",
+      "termsAndConditions": {
+        "option_1": {
+          "0": "Acepto los",
+          "1": "Términos y Condiciones"
+        },
+        "error_1": "Por favor, acepte los Términos y Condiciones"
+      },
+      "captcha_error": "Este campo es obligatorio"
+    },
+    "step_three": {
+      "p_1": {
+        "0": "Felicitaciones por el registro.",
+        "1": "El proceso de registro no está completamente finalizado. Se le ha enviado un correo de confirmación a su correo",
+        "2": "También se le ha enviado un correo de confirmacion a su correo de Paypal"
+      },
+      "p_2": {
+        "0": "Si no te ha llegado a tu bandeja el correo de confirmacion de registro da click aquí"
+      },
+      "email_confirmation": "El correo ya ha sido enviado."
     }
   }
 }
