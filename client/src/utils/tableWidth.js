@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-export const useTableWidth = (columns, element) => {
+export const useTableWidth = (columns, element, breakpoint = 600) => {
   const [tableWidth, setTableWidth] = useState(null);
   const width = () =>
     setTableWidth(() => {
-      if (window.innerWidth < 600) {
+      if (window.innerWidth < breakpoint) {
         return {
           gridTemplateColumns: `1fr`,
         };

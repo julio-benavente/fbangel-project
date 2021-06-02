@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useRouteMatch, useLocation, NavLink } from "react-router-dom";
+import { useRouteMatch, useLocation, NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../store/auth/auth";
 import { motion, AnimatePresence } from "framer-motion";
@@ -113,7 +113,9 @@ const MainComponent = () => {
             exit="exit"
             variants={navbarVariants}
           >
-            <Logo>fbangel</Logo>
+            <Logo>
+              <Link to="/">fbangel</Link>
+            </Logo>
 
             <NavbarItem as={motion.div} variants={navLinkVariants}>
               <NavLink

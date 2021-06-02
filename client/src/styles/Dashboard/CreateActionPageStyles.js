@@ -24,7 +24,6 @@ export const CreateActionButton = styled.button`
   padding: 4px 10px;
   color: ${(props) => props.theme.color.white};
   cursor: pointer;
-
   &[disabled] {
     cursor: not-allowed;
     background: ${(props) => props.theme.color.gray300};
@@ -44,7 +43,8 @@ export const CreateActionWrapper = styled.div`
   }
 
   .select {
-    width: 140px;
+    width: clamp(140px, 10rem, 250px);
+    margin-right: 2rem;
   }
 `;
 

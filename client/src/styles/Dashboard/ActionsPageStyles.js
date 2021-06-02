@@ -52,6 +52,11 @@ export const Table = styled.div`
       padding-bottom: 10px;
     }
 
+    .td {
+      font-size: 0.8rem;
+      word-break: break-word;
+    }
+
     .td,
     .th {
       &.creationDate,

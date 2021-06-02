@@ -12,12 +12,15 @@ export const DashboardNavbar = styled.div`
   }
 `;
 
-export const Logo = styled.p`
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: ${(props) => props.theme.color.white};
-  margin-bottom: 6rem;
-
+export const Logo = styled.div`
+  a {
+    display: block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: ${(props) => props.theme.color.white};
+    margin-bottom: 6rem;
+    text-decoration: none;
+  }
   @media screen and ${breakpoint.md} {
     justify-self: center;
   }

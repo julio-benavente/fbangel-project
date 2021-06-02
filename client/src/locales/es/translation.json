@@ -1196,6 +1196,7 @@
     },
     "title": "Pagos",
     "concept": "Concepto",
+    "name": "Name",
     "user": "Usuario",
     "payment_method": "Método de pago",
     "payment_date": "Fecha de pago",

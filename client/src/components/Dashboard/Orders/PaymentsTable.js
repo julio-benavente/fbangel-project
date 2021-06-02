@@ -106,7 +106,6 @@ const Table = (props) => {
                 status,
                 payee: { firstName, lastName },
               } = payment;
-              console.log(payment);
               const date = new Date(paymentDate).toLocaleDateString([], {
                 day: "2-digit",
                 month: "2-digit",

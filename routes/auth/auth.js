@@ -139,7 +139,6 @@ router.post("/login", checkAuthLevel, async (req, res) => {
     });
     res.json({ user });
   } catch (e) {
-    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }
@@ -211,7 +210,7 @@ router.get("/confirmation/:token", async (req, res) => {
 // @route PUT /auth/forgot-password/
 // @desc Users login
 // @access Public
-router.post("/forgotten-password", async (req, res) => {
+router.post("/forgotten-password", checkAuthLevel, async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
   const { email } = req.body;
 
@@ -229,6 +228,8 @@ router.post("/forgotten-password", async (req, res) => {
         "The link to reset your password has already ben sent. Check your email.",
     });
   } catch (e) {
+    console.log(e.message);
+
     const error = handleError(e);
     res.status(400).json({ error });
   }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Flags from "country-flag-icons/react/3x2";
+import i18next from "i18next";
 // Styles
 import {
   NavbarSection,
@@ -10,11 +12,16 @@ import {
   Link,
   NavbarWrapper,
   Menu,
+  LanguageDropdown,
+  GlobalIcon,
+  Language,
+  Languages,
 } from "../../styles/NavbarStyles";
 
 // Assets
 import { ReactComponent as OpenNav } from "../../assets/svgs/menu.svg";
 import { ReactComponent as CloseNav } from "../../assets/svgs/close.svg";
+import { ReactComponent as GlobalSvg } from "../../assets/svgs/global.svg";
 
 const hamburgerMenuVariants = {
   initial: { opacity: 0 },
@@ -117,6 +124,14 @@ const Navbar = () => {
     },
   ];
 
+  const languages = [
+    { code: "es", name: "Español", flag: <Flags.MX /> },
+    { code: "en", name: "English", flag: <Flags.GB /> },
+    { code: "fr", name: "Français", flag: <Flags.FR /> },
+  ];
+
+  const [languageDropdownIsOn, setLanguageDropdownIsOn] = useState(false);
+
   return (
     <NavbarSection className="Navbar">
       <NavbarWrapper>
@@ -152,6 +167,32 @@ const Navbar = () => {
             </NavLinks>
           )}
         </AnimatePresence>
+
+        <LanguageDropdown
+          onClick={() => setLanguageDropdownIsOn(!languageDropdownIsOn)}
+        >
+          <GlobalIcon>
+            <GlobalSvg />
+          </GlobalIcon>
+          {languageDropdownIsOn && (
+            <Languages>
+              {languages.map(({ code, name, flag }, index) => {
+                return (
+                  <Language
+                    onClick={() => {
+                      i18next.changeLanguage(code);
+                      setLanguageDropdownIsOn(false);
+                    }}
+                  >
+                    <div className="flag">{flag}</div>
+                    <p className="language">{name}</p>
+                  </Language>
+                );
+              })}
+            </Languages>
+          )}
+        </LanguageDropdown>
+
         {widthMark && (
           <Menu open={navIsOpen}>
             {!navIsOpen && <OpenNav className="openNav" onClick={openNavbar} />}

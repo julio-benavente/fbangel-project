@@ -14,7 +14,9 @@ export const NavbarSection = styled.div`
 export const NavbarWrapper = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: auto 1fr;
+  position: relative;
+  transform: translateX(-50%);
+  grid-template-columns: auto 1fr auto;
   justify-content: center;
   justify-items: center;
   max-width: 1200px;
@@ -112,6 +114,43 @@ export const Link = styled(NavLink)`
       bottom: -5px;
       background: ${(props) => props.theme.color.white};
     }
+  }
+`;
+
+export const LanguageDropdown = styled.div`
+  position: relative;
+`;
+
+export const GlobalIcon = styled.div`
+  cursor: pointer;
+  svg {
+    width: 30px;
+    height: 30px;
+    path {
+      fill: white;
+    }
+  }
+`;
+
+export const Languages = styled.div`
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: ${(props) => props.theme.color.white};
+  border: 2px ${(props) => props.theme.color.gray300} solid;
+  border-radius: 0.2rem;
+`;
+export const Language = styled.div`
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  display: flex;
+  .flag {
+    width: 30px;
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background-color: ${(props) => props.theme.color.gray200};
   }
 `;
 

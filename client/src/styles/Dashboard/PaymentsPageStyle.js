@@ -53,7 +53,7 @@ export const Table = styled.div`
           background: ${(props) => transparentize(0.5, props.theme.color.red)};
         }
       }
-      &:nth-child(5) {
+      &.amount {
         font-weight: 700;
       }
     }

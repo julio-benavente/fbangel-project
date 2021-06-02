@@ -11,6 +11,8 @@ import {
 import { getUser } from "../../../store/auth/auth";
 import Pagination from "rc-pagination";
 
+import { useTableWidth } from "../../../utils/tableWidth";
+
 // Styles
 import {
   Payments,
@@ -27,72 +29,24 @@ const PaymentsPage = () => {
   const payments = useSelector(getUserPayments);
   const user = useSelector(getUser);
 
-  const [tableWidth, setTableWidth] = useState(null);
-  // This provides a table width behavior. All of the columns are going to have the same width
-  useEffect(() => {
-    const width = () =>
-      setTableWidth(() => {
-        if (window.innerWidth < 600) {
-          return {
-            gridTemplateColumns: `1fr`,
-          };
-        }
+  const userColumns = [
+    { column: "concept", width: 35, min: 80 },
+    { column: "paypal", width: 20, min: 100 },
+    { column: "date", width: 15, min: 70 },
+    { column: "status", width: 15, min: 70 },
+    { column: "amount", width: 15, min: 50 },
+  ];
 
-        const parentWidth = document.querySelector(".Payments").offsetWidth;
-        const padding = parentWidth * 0.07 * 2;
-        const realWidth = parentWidth - padding;
-
-        const columns = [
-          {
-            column: "concept",
-            width: 35,
-            min: 80,
-          },
-          {
-            column: "paypal",
-            width: 20,
-            min: 100,
-          },
-          {
-            column: "date",
-            width: 15,
-            min: 70,
-          },
-          {
-            column: "status",
-            width: 15,
-            min: 70,
-          },
-          {
-            column: "amount",
-            width: 15,
-            min: 50,
-          },
-        ];
-
-        const grid = () => {
-          var template = "";
-          columns.map((column) => {
-            const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
-            template += `${value} `;
-            return null;
-          });
-
-          return template;
-        };
-
-        return {
-          gridTemplateColumns: grid(),
-        };
-      });
-
-    width();
-    window.addEventListener("resize", width);
-
-    return () => window.removeEventListener("resize", setTableWidth);
-  }, []);
+  const adminColumns = [
+    { column: "name", width: 15, min: 80 },
+    { column: "concept", width: 35, min: 80 },
+    { column: "paypal", width: 20, min: 100 },
+    { column: "date", width: 10, min: 70 },
+    { column: "status", width: 10, min: 70 },
+    { column: "amount", width: 10, min: 50 },
+  ];
+  const userTableWith = useTableWidth(userColumns, "Payments");
+  const adminTableWith = useTableWidth(adminColumns, "Payments");
 
   useEffect(() => {
     const request = async () => {
@@ -188,8 +142,8 @@ const PaymentsPage = () => {
       {user.authLevel === "user" && (
         <Table className="displayUser">
           <div className="thead">
-            <div className="tr" style={{ ...tableWidth }}>
-              <div className="th concept">{t("payments.title")}</div>
+            <div className="tr" style={{ ...userTableWith }}>
+              <div className="th concept">{t("payments.concept")}</div>
               <div className="th paymentMethod">
                 {t("payments.payment_method")}
               </div>
@@ -200,7 +154,7 @@ const PaymentsPage = () => {
           </div>
           <div className="tbody">
             {loading && (
-              <div className="tr loading" style={{ ...tableWidth }}>
+              <div className="tr loading" style={{ ...userTableWith }}>
                 {t("loading")}
               </div>
             )}
@@ -217,7 +171,7 @@ const PaymentsPage = () => {
                 });
 
                 return (
-                  <div className="tr" key={index} style={{ ...tableWidth }}>
+                  <div className="tr" key={index} style={{ ...userTableWith }}>
                     <div className="td concept">{concept}</div>
                     <div className="td paymentMethod">{paypalEmail}</div>
                     <div className="td paymentDate">{date}</div>
@@ -240,8 +194,9 @@ const PaymentsPage = () => {
       {user.authLevel === "admin" && (
         <Table className="displayAdmin">
           <div className="thead">
-            <div className="tr" style={{ ...tableWidth }}>
-              <div className="th concept">{t("payments.title")}</div>
+            <div className="tr" style={{ ...adminTableWith }}>
+              <div className="th name">{t("payments.name")}</div>
+              <div className="th concept">{t("payments.concept")}</div>
               <div className="th paymentMethod">
                 {t("payments.payment_method")}
               </div>
@@ -252,14 +207,20 @@ const PaymentsPage = () => {
           </div>
           <div className="tbody">
             {loading && (
-              <div className="tr loading" style={{ ...tableWidth }}>
+              <div className="tr loading" style={{ ...adminTableWith }}>
                 {t("loading")}
               </div>
             )}
             {!loading &&
               showRows.map((payment, index) => {
-                const { concept, paymentMethod, creationDate, amount, status } =
-                  payment;
+                const {
+                  concept,
+                  paymentMethod,
+                  creationDate,
+                  amount,
+                  status,
+                  payee: { firstName, lastName },
+                } = payment;
 
                 const date = new Date(creationDate).toLocaleDateString([], {
                   day: "2-digit",
@@ -268,7 +229,8 @@ const PaymentsPage = () => {
                 });
 
                 return (
-                  <div className="tr" key={index} style={{ ...tableWidth }}>
+                  <div className="tr" key={index} style={{ ...adminTableWith }}>
+                    <div className="td name">{`${firstName} ${lastName}`}</div>
                     <div className="td concept">{concept}</div>
                     <div className="td paymentMethod">{`${
                       paymentMethod ? paymentMethod[0].toUpperCase() : ""
@@ -306,34 +268,3 @@ const PaymentsPage = () => {
 };
 
 export default PaymentsPage;
-
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
-
-  return windowSize;
-}
