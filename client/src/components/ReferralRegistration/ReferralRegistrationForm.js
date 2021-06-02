@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-
+import { emailDuplicatedSet } from "../../store/global/global";
+import { useDispatch } from "react-redux";
 // Components
 import StepOne from "./steps/StepOne";
 import StepTwo from "./steps/StepTwo";
@@ -32,7 +33,7 @@ const Form = () => {
       firstName: "julio",
       lastName: "julio",
       address: "Calle La loca vecindad 46",
-      email: "julio@julio.com",
+      email: "filarih561@flmcat.com",
       country: "Peru",
       city: "Lima",
       zipCode: "16351",
@@ -67,11 +68,15 @@ const Form = () => {
     formState: { errors, isValid, isSubmitting },
   } = methods;
 
+  const dispatch = useDispatch();
   const onSubmit = async (data) => {
     if (!isSubmitting) {
       const response = await fetchCandidateInformation(data);
       const { status } = response;
 
+      if (response.response.data.error.email.includes("been registered")) {
+        dispatch(emailDuplicatedSet(true));
+      }
       if (status && status === 200) {
         handleFormStep(1, formStep);
       } else {
@@ -257,7 +262,7 @@ const Form = () => {
         <Forms onSubmit={handleSubmit(onSubmit)} ref={formData}>
           {showStep(formStep)}
           {renderButton()}
-          <pre>{JSON.stringify(watch(), null, 2)}</pre>
+          {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
         </Forms>
       </FormProvider>
     </FormsWrapper>

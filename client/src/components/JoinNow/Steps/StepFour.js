@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useFormContext, useWatch } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-
+import { getGlobal } from "../../../store/global/global";
+import { useSelector } from "react-redux";
 // Components
 import OptionInput from "../OptionInput";
 import TextInput from "../TextInput";
@@ -40,6 +41,8 @@ const StepFour = () => {
       ]);
     }
   }, [paymentMethod]);
+
+  const { emailDuplicated } = useSelector(getGlobal);
 
   return (
     <FormFour>
@@ -103,7 +106,9 @@ const StepFour = () => {
             register={register("stepFour.paypalEmailConfirmation", {
               required: {
                 value: true,
-                message: t("join_now.step_four.paypalEmailConfirmation.error_1"),
+                message: t(
+                  "join_now.step_four.paypalEmailConfirmation.error_1"
+                ),
               },
               validate: {
                 isTheSame: (v) =>
@@ -258,7 +263,9 @@ const StepFour = () => {
         ))}
         <p>
           <b>
-            {t("join_now.step_four.termsAndConditionsMessage.definitions.title")}
+            {t(
+              "join_now.step_four.termsAndConditionsMessage.definitions.title"
+            )}
           </b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.definitions.p", {
@@ -268,7 +275,9 @@ const StepFour = () => {
         ))}
         <p>
           <b>
-            {t("join_now.step_four.termsAndConditionsMessage.recognition.title")}
+            {t(
+              "join_now.step_four.termsAndConditionsMessage.recognition.title"
+            )}
           </b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.recognition.p", {
@@ -363,9 +372,12 @@ const StepFour = () => {
             )}
           </b>
         </p>
-        {t("join_now.step_four.termsAndConditionsMessage.rental_termination.p", {
-          returnObjects: true,
-        }).map((p, index) => (
+        {t(
+          "join_now.step_four.termsAndConditionsMessage.rental_termination.p",
+          {
+            returnObjects: true,
+          }
+        ).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
@@ -375,9 +387,12 @@ const StepFour = () => {
             )}
           </b>
         </p>
-        {t("join_now.step_four.termsAndConditionsMessage.material_violation.p", {
-          returnObjects: true,
-        }).map((p, index) => (
+        {t(
+          "join_now.step_four.termsAndConditionsMessage.material_violation.p",
+          {
+            returnObjects: true,
+          }
+        ).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
@@ -409,9 +424,12 @@ const StepFour = () => {
             )}
           </b>
         </p>
-        {t("join_now.step_four.termsAndConditionsMessage.dispute_resolution.p", {
-          returnObjects: true,
-        }).map((p, index) => (
+        {t(
+          "join_now.step_four.termsAndConditionsMessage.dispute_resolution.p",
+          {
+            returnObjects: true,
+          }
+        ).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
@@ -426,15 +444,16 @@ const StepFour = () => {
           {
             returnObjects: true,
           }
-        ).map(({ tag, message }) => {
+        ).map(({ tag, message }, index) => {
           {
-            if (tag === "p") return <p>{message}</p>;
-            if (tag === "i")
+            if (tag === "p") return <p key={index}>{message}</p>;
+            if (tag === "i") {
               return (
-                <p>
+                <p key={index}>
                   <i>{message}</i>
                 </p>
               );
+            }
           }
         })}
         <p>
@@ -490,6 +509,11 @@ const StepFour = () => {
           },
         })}
       />
+      {emailDuplicated && (
+        <div className="message error">
+          {t("join_now.step_four.emailDuplicateMessage")}
+        </div>
+      )}
     </FormFour>
   );
 };

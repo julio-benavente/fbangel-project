@@ -608,6 +608,7 @@
         "option_1": "Doy mi consentimiento para que este sitio web almacene mi información enviada para que puedan responder a mi consulta.",
         "error_1": "Por favor, acepte el Acuerdo GDPR"
       },
+      "emailDuplicateMessage": "El email ya ha sido utilizado",
       "termsAndConditionsMessage": {
         "intro": {
           "title": "TÉRMINOS Y CONDICIONES PARA LOS ALQUILERES PUBLICITARIOS DE FACEBOOK",
@@ -1103,6 +1104,7 @@
     "password_confirmation_error_required": "Por favor, llenar este campo",
     "password_confirmation_error_same": "Las contraseñas no coinciden",
     "reset_confirmation_message": "Su contraseña ha sido modificada",
+    "reset_password_confirmation": "La URL para restablecer su contraseña es incorrecta o ha expirado",
     "submit_button": "Cambiar contraseña",
     "submit_button_waiting": "Esperando"
   },
@@ -1373,7 +1375,8 @@
         },
         "error_1": "Por favor, acepte los Términos y Condiciones"
       },
-      "captcha_error": "Este campo es obligatorio"
+      "captcha_error": "Este campo es obligatorio",
+      "email_duplicate_message": "El email ya ha sido utilizado"
     },
     "step_three": {
       "p_1": {

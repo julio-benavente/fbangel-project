@@ -29,11 +29,11 @@ import {
 // Assets
 import { ReactComponent as CloseSvg } from "../../../assets/svgs/close.svg";
 
-const CreateActionPage = () => {
+const CreateActionPage = ({ setCreateActionPageIsOpen }) => {
   const { t } = useTranslation();
 
   const closeCreateOrder = () => {
-    console.log("closeCreateOrder");
+    setCreateActionPageIsOpen(false);
   };
 
   const dispatch = useDispatch();

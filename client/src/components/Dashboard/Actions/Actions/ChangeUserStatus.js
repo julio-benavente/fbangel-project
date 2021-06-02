@@ -228,11 +228,7 @@ const UserSelectedTable = (props) => {
 
       // clean selections
       setAction("");
-
-      console.log("success", response);
-    } catch ({ response }) {
-      console.log("error", response);
-    }
+    } catch ({ response }) {}
   };
 
   return (

@@ -5,6 +5,7 @@ import { createSelector } from "reselect";
 const initialState = () => ({
   loading: false,
   list: [],
+  lastFetch: null,
 });
 
 const slice = createSlice({
@@ -20,6 +21,7 @@ const slice = createSlice({
       const { user: userResponse } = action.payload;
       user.list = userResponse;
       user.loading = false;
+      user.lastFetch = Date.now();
 
       return user;
     },
@@ -38,7 +40,16 @@ export const { userRequestFailed, userRequestSucceeded, userRequested } =
 // Actions
 const url = "/api/users/";
 
+const stopRequest = (getState) => {
+  const { lastFetch } = getState().entities.users;
+  const diffInMinutes = moment().diff(moment(lastFetch), "minutes");
+  return diffInMinutes < 10;
+};
 export const requestUser = () => (dispatch, getState) => {
+  if (stopRequest(getState)) {
+    return;
+  }
+
   return dispatch(
     apiCallBegan({
       url,

@@ -236,6 +236,13 @@ export const StepTwo = styled.div`
       color: ${(props) => props.theme.color.link};
     }
   }
+
+  .message.error {
+    justify-self: center;
+    font-size: 1rem;
+    color: ${(props) => props.theme.color.secondary};
+    max-width: 100%;
+  }
 `;
 
 export const Captcha = styled.div`

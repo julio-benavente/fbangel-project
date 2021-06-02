@@ -26,7 +26,9 @@ import {
 const ProfilePage = () => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
-  const { id, paypalEmailVerified } = useSelector(getAuthUser);
+
+  const { id, email, paypalEmailVerified, authLevel } =
+    useSelector(getAuthUser);
 
   useEffect(() => {
     dispatch(requestUser({ id }));
@@ -54,7 +56,7 @@ const ProfilePage = () => {
     <Profile>
       <ProfileSection>
         <ProfileTitle>{t("profile.profile.title")}</ProfileTitle>
-        {user && (
+        {user && authLevel === "user" && (
           <Information>
             <InformationItem>
               <InfoLabel>{t("profile.profile.first_name")}</InfoLabel>
@@ -122,6 +124,23 @@ const ProfilePage = () => {
             )}
           </Information>
         )}
+
+        {user && authLevel === "admin" && (
+          <Information>
+            <InformationItem>
+              <InfoLabel>{t("profile.profile.first_name")}</InfoLabel>
+              <InfoValue>{user.firstName}</InfoValue>
+            </InformationItem>
+            <InformationItem>
+              <InfoLabel>{t("profile.profile.last_name")}</InfoLabel>
+              <InfoValue>{user.lastName}</InfoValue>
+            </InformationItem>
+            <InformationItem>
+              <InfoLabel>{t("profile.profile.email")}</InfoLabel>
+              <InfoValue>{user.email}</InfoValue>
+            </InformationItem>
+          </Information>
+        )}
       </ProfileSection>
       <ConfigurationSection>
         <ConfigurationTitle>
@@ -152,9 +171,11 @@ const ProfilePage = () => {
             </>
           )}
           <ConfigurationItem>
-            <Link to="/forgot-password" target="_blank">
-              {t("profile.configuration.change_paypal_email")}
-            </Link>
+            {false && (
+              <Link to="/forgot-password" target="_blank">
+                {t("profile.configuration.change_paypal_email")}
+              </Link>
+            )}
           </ConfigurationItem>
         </Configuration>
       </ConfigurationSection>

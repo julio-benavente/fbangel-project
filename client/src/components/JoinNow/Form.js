@@ -3,6 +3,8 @@ import { useForm, FormProvider } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { emailDuplicatedSet } from "../../store/global/global";
+import { useDispatch } from "react-redux";
 
 // Components
 import StepOne from "./Steps/StepOne";
@@ -30,7 +32,7 @@ import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(4);
   const formData = useRef();
 
   const defaultValues = {
@@ -44,7 +46,7 @@ const Form = () => {
     stepTwo: {
       firstName: "emanuel",
       lastName: "emanuel",
-      email: "emmanuela6@monsterhom.com",
+      email: "filarih561@flmcat.com",
       country: "Peru",
       city: "Lima",
       password: "emanuel132",
@@ -56,14 +58,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "emmanuela6@monsterhom.com",
+      fbUsername: "filarih561@flmcat.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "emmanuela6@monsterhom.com",
-      paypalEmailConfirmation: "emmanuela6@monsterhom.com",
+      paypalEmail: "filarih561@flmcat.com",
+      paypalEmailConfirmation: "filarih561@flmcat.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -75,9 +77,10 @@ const Form = () => {
   const methods = useForm({
     mode: "all",
     defaultValues: {
-      stepFour: {
-        referral: token,
-      },
+      ...defaultValues,
+      // stepFour: {
+      //   referral: token,
+      // },
     },
   });
 
@@ -90,10 +93,15 @@ const Form = () => {
   } = methods;
 
   const history = useHistory();
-
+  const dispatch = useDispatch();
   const onSubmit = async (data) => {
     if (!isSubmitting) {
       const response = await fetchCandidateInformation(data);
+
+      if (response.response.data.error.email.includes("been registered")) {
+        dispatch(emailDuplicatedSet(true));
+      }
+
       const { status } = response;
 
       if (status && status === 200) {

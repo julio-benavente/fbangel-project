@@ -6,12 +6,12 @@ const IncompleteUser = require("../../models/IncompleteUser");
 
 // Middlewares and utils
 const auth = require("../../middlewares/auth");
+const checkAuthLevel = require("../../middlewares/checkAuthLevel");
 const { uploadImageAndGetUrl } = require("../../utils/cloudinary");
 const getNextSequence = require("../../utils/getNextSequence");
 const {
   paypalEmailVerification,
 } = require("../../utils/emailsTemplates/paypalEmailVerification");
-
 const {
   emailVerification,
 } = require("../../utils/emailsTemplates/emailVerification");
@@ -164,7 +164,7 @@ router.post("/get-referrals", async (req, res) => {
 
 router.get("/get-user-information/:id", async (req, res) => {
   const { id } = req.params;
-
+  var user;
   try {
     user = await User.findById(id, {
       password: 0,
@@ -174,6 +174,12 @@ router.get("/get-user-information/:id", async (req, res) => {
       isAdult: 0,
       accountIsReal: 0,
     });
+
+    if (!user) {
+      user = await AdminUser.findById(id, {
+        password: 0,
+      });
+    }
 
     if (!user) {
       throw Error("The user doesn't exist");

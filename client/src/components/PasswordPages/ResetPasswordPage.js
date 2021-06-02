@@ -39,7 +39,7 @@ const LoginPage = () => {
   const { token } = useParams();
   const [resetPasswordConfirmation, setResetPasswordConfirmation] =
     useState(false);
-  const [resetPasswordError, setResetPasswordError] = useState(null);
+  const [resetPasswordError, setResetPasswordError] = useState(false);
 
   const onSubmit = async (data) => {
     try {
@@ -53,7 +53,7 @@ const LoginPage = () => {
 
       console.log(response);
     } catch ({ response }) {
-      setResetPasswordError(response.data.error);
+      setResetPasswordError(true);
     }
   };
 
@@ -137,8 +137,11 @@ const LoginPage = () => {
                 {t("reset_password.reset_confirmation_message")}
               </p>
             )}
+
             {resetPasswordError && (
-              <p className="error">{resetPasswordError}</p>
+              <p className="error">
+                {t("reset_password.reset_password_confirmation")}
+              </p>
             )}
           </div>
 

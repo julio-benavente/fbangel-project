@@ -64,7 +64,7 @@ const ActionsPage = () => {
   const [current, setCurrent] = useState(1);
 
   const openCreateOrder = () => {
-    console.log("open create order");
+    setCreateActionPageIsOpen(true);
   };
 
   useEffect(() => {
@@ -100,7 +100,11 @@ const ActionsPage = () => {
           Crear accion
         </CreateOrderButton>
       </Header>
-      {createAcionPageIsOpen && <CreateActionPage />}
+      {createAcionPageIsOpen && (
+        <CreateActionPage
+          setCreateActionPageIsOpen={setCreateActionPageIsOpen}
+        />
+      )}
       <Table>
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>

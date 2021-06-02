@@ -145,7 +145,6 @@ const UserSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      get: obfuscate,
       unique: rentalType,
       lowercase: true,
       required: rentalReferralType,

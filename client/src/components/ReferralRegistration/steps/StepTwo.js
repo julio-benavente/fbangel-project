@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useFormContext, Controller, useWatch } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { getGlobal } from "../../../store/global/global";
+import { useSelector } from "react-redux";
 import {
   StepTwo,
   Captcha,
@@ -43,6 +45,8 @@ const Main = () => {
       ]);
     }
   }, [paymentMethod]);
+
+  const { emailDuplicated } = useSelector(getGlobal);
 
   return (
     <StepTwo>
@@ -323,6 +327,11 @@ const Main = () => {
             errors.stepTwo.captcha.message}
         </p>
       </Captcha>
+      {emailDuplicated && (
+        <div className="message error">
+          {t("referral_registration.step_two.email_duplicate_message")}
+        </div>
+      )}
     </StepTwo>
   );
 };

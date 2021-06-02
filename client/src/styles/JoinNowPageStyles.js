@@ -369,6 +369,12 @@ export const FormFour = styled.div`
     }
   }
 
+  .message.error {
+    justify-self: center;
+    font-size: 1rem;
+    color: ${(props) => props.theme.color.secondary};
+    max-width: 100%;
+  }
   @media screen and ${breakpoint.sm} {
     .paypalEmail {
       grid-column: 1/-1;
