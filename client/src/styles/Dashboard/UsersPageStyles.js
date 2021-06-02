@@ -49,13 +49,15 @@ export const UsersTable = styled.div`
         text-transform: uppercase;
       }
       &.validated,
-      &.active {
+      &.active,
+      &.approved {
         background: ${(props) => transparentize(0.5, props.theme.color.blue)};
       }
       &.pending {
         background: ${(props) => transparentize(0.85, props.theme.color.black)};
       }
-      &.rejected {
+      &.rejected,
+      &.canceled {
         background: ${(props) => transparentize(0.5, props.theme.color.red)};
       }
     }

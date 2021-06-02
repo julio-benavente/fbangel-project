@@ -32,7 +32,7 @@ import { ReactComponent as CloseSvg } from "../../../assets/svgs/close.svg";
 const CreateActionPage = ({ setCreateActionPageIsOpen }) => {
   const { t } = useTranslation();
 
-  const closeCreateOrder = () => {
+  const closeCreateAction = () => {
     setCreateActionPageIsOpen(false);
   };
 
@@ -52,8 +52,8 @@ const CreateActionPage = ({ setCreateActionPageIsOpen }) => {
   return (
     <CreateAction>
       <Header>
-        <Title>{t("orders.create_order.title")}</Title>
-        <Close onClick={closeCreateOrder}>
+        <Title>{t("actions.create_action.title")}</Title>
+        <Close onClick={closeCreateAction}>
           <CloseSvg />
         </Close>
       </Header>

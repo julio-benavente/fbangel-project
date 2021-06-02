@@ -27,7 +27,9 @@ export const HowItWorksSection = styled(Container)`
   }
 `;
 
-export const HowItWorksSectionTitle = styled(H2)``;
+export const HowItWorksSectionTitle = styled(H2)`
+  color: ${(props) => props.theme.color.secondary};
+`;
 
 export const HowItWorksSectionInfo = styled(Parragraph)``;
 
@@ -60,7 +62,7 @@ export const HowItWorksImage = styled.img`
 `;
 
 export const RequirementsSection = styled.div`
-  background-color: ${(props) => props.theme.color.gray100};
+  background-color: ${(props) => props.theme.color.darkBlue};
 `;
 
 export const RequirementsSectionWrapper = styled(Container)`
@@ -75,11 +77,15 @@ export const RequirementsSectionWrapper = styled(Container)`
 `;
 
 export const RequirementsSectionTitle = styled(H2)`
+  color: ${(props) => props.theme.color.white};
+
   justify-self: end;
 `;
 
 export const RequirementsList = styled.ul`
   position: relative;
+  color: ${(props) => props.theme.color.white};
+
   li {
     position: relative;
 
@@ -145,7 +151,9 @@ export const ConfigurationSectionWrapper = styled(Container)`
   }
 `;
 
-export const ConfigurationSectionTitle = styled(H2)``;
+export const ConfigurationSectionTitle = styled(H2)`
+  color: ${(props) => props.theme.color.secondary};
+`;
 
 export const ConfigurationInfo = styled(Parragraph)``;
 
@@ -173,6 +181,7 @@ export const ConfigurationList = styled.ol`
 
 export const StepOne = styled.div`
   max-width: 500px;
+
   ol,
   ul {
     padding-left: 20px;
@@ -187,6 +196,7 @@ export const StepOne = styled.div`
 export const StepOneTitle = styled.p`
   font-weight: 700;
   margin-bottom: 20px;
+  color: ${(props) => props.theme.color.darkBlue};
 `;
 
 export const Options = styled.div`
@@ -228,7 +238,7 @@ export const OptionOneTitle = styled.div`
   padding: 5px 0;
   font-weight: 500;
   text-align: center;
-  background-color: ${(props) => props.theme.color.primary};
+  background-color: ${(props) => props.theme.color.darkBlue};
   color: ${(props) => props.theme.color.white};
   margin-bottom: 20px;
 `;
@@ -248,7 +258,7 @@ export const StepTwoTitle = styled(StepOneTitle)``;
 
 // Registration section
 export const RegistrationSection = styled.div`
-  background-color: ${(props) => props.theme.color.gray100};
+  background-color: ${(props) => props.theme.color.darkBlue};
 `;
 
 export const RegistrationSectionWrapper = styled(Container)`
@@ -259,7 +269,9 @@ export const RegistrationSectionWrapper = styled(Container)`
   }
 `;
 
-export const RegistrationSectionTitle = styled(H2)``;
+export const RegistrationSectionTitle = styled(H2)`
+  color: ${(props) => props.theme.color.white};
+`;
 
 export const RegistrationImage = styled(HowItWorksImage)`
   @media screen and ${breakpoint.md} {
@@ -278,9 +290,12 @@ export const RegistrationImage = styled(HowItWorksImage)`
 `;
 
 export const RegistrationInfo = styled(Parragraph)`
+  color: ${(props) => props.theme.color.white};
+
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.color.link};
+    font-weight: 600;
+    color: ${(props) => props.theme.color.primary};
   }
 `;
 
@@ -321,6 +336,7 @@ export const PaymentImage = styled(HowItWorksImage)`
 
 export const PaymentSectionTitle = styled(H2)`
   justify-self: end;
+  color: ${(props) => props.theme.color.secondary};
 `;
 
 export const PaymentInfo = styled(Parragraph)`
@@ -332,7 +348,7 @@ export const PaymentInfo = styled(Parragraph)`
 
 // Support section
 export const SupportSection = styled.div`
-  background-color: ${(props) => props.theme.color.gray100};
+  background-color: ${(props) => props.theme.color.darkBlue};
 `;
 
 export const SupportSectionWrapper = styled(Container)`
@@ -362,18 +378,22 @@ export const SupportImage = styled(RequirementsImage)`
   }
 `;
 
-export const SupportSectionTitle = styled(H2)``;
+export const SupportSectionTitle = styled(H2)`
+  color: ${(props) => props.theme.color.white};
+`;
 
 export const SupportInfo = styled(Parragraph)`
+  color: ${(props) => props.theme.color.white};
+
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.color.link};
+    color: ${(props) => props.theme.color.white};
   }
 
   .important {
     font-weight: 700;
     font-size: 1.2rem;
-    color: ${(props) => props.theme.color.secondary};
+    color: ${(props) => props.theme.color.white};
     margin-top: 30px;
   }
 `;

@@ -3,7 +3,9 @@ const Action = require("../../models/Action");
 const User = require("../../models/User");
 const Payment = require("../../models/Payment");
 
-router.get("/", async (req, res) => {
+const auth = require("../../middlewares/auth");
+
+router.get("/", auth, async (req, res) => {
   try {
     const actions = await Action.find({}).populate({
       path: "details.item",
@@ -19,7 +21,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   const { action, details, createdBy } = req.body;
   try {
     const newAction = await new Action({
@@ -37,7 +39,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.post("/change-user-status", async (req, res) => {
+router.post("/change-user-status", auth, async (req, res) => {
   const { action, details, target, createdBy } = req.body;
 
   const errorList = [];

@@ -121,8 +121,8 @@ router.post("/registration/:userType", async (req, res) => {
     const referralCode = `FBA-${number}`;
     userInformation.referralCode = referralCode;
     userInformation.referralCodeLink = `${
-      req.hostname === "localhost" ? "http://localhost:3000/#/" : req.hostname
-    }/join-us/${referralCode}`;
+      req.hostname === "localhost" ? "http://localhost:3000/" : req.hostname
+    }/join-now/${referralCode}`;
 
     const newUser = await new Model({ ...userInformation }).save();
 

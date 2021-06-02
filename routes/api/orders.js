@@ -12,7 +12,15 @@ const auth = require("../../middlewares/auth");
 router.get("/", auth, async (req, res) => {
   try {
     const orders = await Order.find({})
-      .populate("payments")
+      .populate({
+        path: "payments",
+        populate: {
+          path: "payee",
+          model: "user",
+          select: "firstName lastName -_id",
+        },
+      })
+
       .sort({ creationDate: -1 });
     res.json({ orders });
   } catch (error) {
@@ -29,7 +37,7 @@ router.post("/create-order", auth, async (req, res) => {
 
   // create payment
   const payments = await Promise.all(
-    payees.map(async ({ id, referral }) => {
+    payees.map(async ({ id, referral, concept: paymentConcept }) => {
       try {
         const user = await User.findById(id);
 
@@ -55,7 +63,7 @@ router.post("/create-order", auth, async (req, res) => {
 
         const paymentInformation = {
           product: productId,
-          concept,
+          concept: paymentConcept,
           amount: price,
           paypalEmail: user.paypalEmail,
           createdBy,

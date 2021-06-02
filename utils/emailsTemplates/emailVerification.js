@@ -3,7 +3,11 @@ const { createToken } = require("../createToken");
 
 const emailVerification = async (userId, to, hostname) => {
   const token = createToken(userId, "1d", process.env.EMAIL_VERIFICATION_KEY);
-  const url = `http://localhost:5000/auth/confirmation/${token}`;
+
+  const url = `${
+    hostname === "localhost" ? "http://localhost:5000" : hostname
+  }/auth/confirmation/${token}`;
+
   try {
     const emailResponse = await transporter.sendMail({
       to,

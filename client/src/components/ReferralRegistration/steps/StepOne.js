@@ -326,6 +326,10 @@ const Step = ({
               v.length < 8
                 ? t("referral_registration.step_one.password_error_min")
                 : true,
+            max: (v) =>
+              v.length >= 15
+                ? t("referral_registration.step_one.password_error_max")
+                : true,
           },
         })}
       />

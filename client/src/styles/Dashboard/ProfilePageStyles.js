@@ -57,13 +57,13 @@ export const InfoValue = styled.div`
     padding: 3px 5px;
     font-size: 0.75rem;
     border-radius: 5px;
-    &.Approved {
+    &.approved {
       background: ${(props) => transparentize(0.5, props.theme.color.blue)};
     }
-    &.Pending {
+    &.pending {
       background: ${(props) => transparentize(0.85, props.theme.color.black)};
     }
-    &.Rejected {
+    &.rejected {
       background: ${(props) => transparentize(0.5, props.theme.color.red)};
     }
   }

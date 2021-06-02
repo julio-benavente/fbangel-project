@@ -6,6 +6,7 @@ import {
 import { getUser } from "../../../store/auth/auth";
 import { useSelector, useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
+import Pagination from "rc-pagination";
 
 // Styles
 import {
@@ -13,6 +14,7 @@ import {
   Title,
   Table,
 } from "../../../styles/Dashboard/ReferralsPageStyles";
+import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const ReferralsPage = () => {
   const [tableWidth, setTableWidth] = useState(null);
@@ -92,6 +94,32 @@ const ReferralsPage = () => {
     request();
   }, []);
 
+  // PAGINATION
+  const [pageSize, setPagSize] = useState(15);
+  const [totalPages, setTotalPages] = useState(null);
+  const [current, setCurrent] = useState(1);
+
+  // Select the rows to display on the table
+  const [showRows, setShowRows] = useState([]);
+
+  useEffect(() => {
+    setTotalPages(referrals.length - 1);
+  }, [referrals, totalPages]);
+
+  const onTableChange = (page) => {
+    setCurrent(page);
+  };
+
+  useEffect(() => {
+    const selectRows = (current, pageSize) => {
+      const _1 = pageSize * current - pageSize;
+      const _2 = pageSize * current;
+
+      return referrals.slice(_1, _2);
+    };
+    setShowRows(selectRows(current, pageSize));
+  }, [referrals, current, pageSize]);
+
   const { t } = useTranslation();
 
   return (
@@ -115,7 +143,7 @@ const ReferralsPage = () => {
           )}
 
           {!loading &&
-            referrals
+            showRows
               .slice()
               .sort(
                 (a, b) => new Date(b.creationDate) - new Date(a.creationDate)
@@ -151,6 +179,17 @@ const ReferralsPage = () => {
               })}
         </div>
       </Table>
+      <PaginationWrapper>
+        <Pagination
+          onChange={onTableChange}
+          current={current}
+          total={totalPages}
+          defaultPageSize={pageSize}
+          showPrevNextJumpers={false}
+          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
+          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+        />
+      </PaginationWrapper>
     </Referrals>
   );
 };

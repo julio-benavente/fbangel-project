@@ -441,12 +441,24 @@
       "phone": {
         "question": "Tu celular",
         "error_1": "Este campo es obligatorio",
-        "error_2": "Ingrese un numero de celular válido"
+        "error_2": "Ingrese un numero de celular válido",
+        "max_error": "Máximo 15 numeros"
       },
       "email": {
         "question": "Email",
         "error_1": "Por favor, ingrese su email",
         "error_2": "Ingrese un email válido"
+      },
+      "password": {
+        "question": "Contraseña",
+        "required_error": "Por favor, registre este campo",
+        "min_error": "Mínimo 8 caracteres",
+        "max_error": "Máximo 15 caracteres"
+      },
+      "password_confirmation": {
+        "question": "Confirme su contraseña",
+        "required_error": "Por favor, registre este campo",
+        "same_error": "Las contraseñas no coinciden"
       }
     },
     "step_three": {
@@ -479,7 +491,7 @@
         "error_1": "Por favor, ingrese su usuario de Facebook",
         "error_2": "El usuario debe contener al menos 6 caracteres"
       },
-      "password": {
+      "fbPassword": {
         "question": "Contraseña de Facebook",
         "error_1": "Por favor, ingrese su constraseña de Facebook",
         "error_2": "Su contraseña debe contener al menos 6 caracteres"
@@ -1087,7 +1099,8 @@
     "email_error_pattern": "Ingrese un email válido",
     "password": "Contraseña",
     "password_error_required": "Por favor, llenar este campo",
-    "password_error_min": "Mínimo 6 caracteres",
+    "password_error_min": "Mínimo 8 caracteres",
+    "password_error_max": "Máximo 15 caracteres",
     "email_verified_error": "Tu cuenta no está verificada. Haz click aquí para recibir un nuevo correo de confirmación",
     "email_confirmation_sent_error": "The email has already been sent",
     "no_account": "¿No tienes un usuario? Regístrate aquí",
@@ -1155,7 +1168,7 @@
     "contact": "Contacto",
     "terms_conditions": "Términos y condiciones de uso",
     "copyright": {
-      "0": "Derechos de autos",
+      "0": "Derechos de autor",
       "1": "Todos los derechos reservados"
     },
     "detach": "Este sitio no forma parte de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. Facebook es un marca registrada de Facebook Inc."
@@ -1282,8 +1295,42 @@
       "concept": "Concepto",
       "amount": "Monto",
       "confirm_order_button": "Confirmar orden"
+    },
+    "payment_table": {
+      "name": "Nombre",
+      "concept": "Concepto",
+      "payment_method": "Método de pago",
+      "payment_date": "Fecha de pago",
+      "status": "Estado",
+      "amount": "Monto"
     }
   },
+  "actions": {
+    "title": "Acciones",
+    "create_action_button": "Crear acción",
+    "action": "Acción",
+    "creation_date": "Fecha de creación",
+    "status": "Estado",
+    "target": "Objetivo",
+    "details": "Detalles",
+    "create_action": {
+      "title": "Crear orden",
+      "create_action_button": "Crear acción"
+    },
+    "change_user_status": {
+      "none": "Ninguno",
+      "fist_name": "Nombre",
+      "last_name": "Apellido",
+      "referral_code": "Codigo de referido",
+      "filter": "Filtro",
+      "name": "Nombre",
+      "users_selected": "Usuarios selecionados",
+      "send": "Enviar",
+      "status": "Estado",
+      "observation": "Observación"
+    }
+  },
+
   "referral_registration": {
     "title": "¡Conviértete en un Referidor!",
     "info": "¡Completa este sencillo cuestionario y empieza a ganar dinero invitando a tus amigos!",

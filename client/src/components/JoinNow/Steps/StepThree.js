@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useFormContext } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Lightbox } from "react-modal-image";
 import { useTranslation } from "react-i18next";
+import NumberFormat from "react-number-format";
 
 // Components
 import FileInput from "../FileInput";
@@ -17,6 +18,7 @@ import facebookEmailConfirmationImageTwo from "../../../assets/images/facebookEm
 
 // Styles
 import { FormThree } from "../../../styles/JoinNowPageStyles";
+import { InputWraper, Question } from "../../../styles/JoinNowPageStyles";
 
 const StepThree = () => {
   const { t } = useTranslation();
@@ -36,8 +38,11 @@ const StepThree = () => {
   const methods = useFormContext();
   const {
     register,
+    control,
     formState: { errors },
   } = methods;
+
+  const [code2FA, setCode2FA] = useState(null);
 
   return (
     <FormThree>
@@ -133,7 +138,7 @@ const StepThree = () => {
       <TextInput
         type="password"
         className="password"
-        question={t("join_now.step_three.password.question")}
+        question={t("join_now.step_three.fbPassword.question")}
         error={
           errors.stepThree &&
           errors.stepThree.fbPassword &&
@@ -142,11 +147,11 @@ const StepThree = () => {
         register={register("stepThree.fbPassword", {
           required: {
             value: true,
-            message: t("join_now.step_three.password.error_1"),
+            message: t("join_now.step_three.fbPassword.error_1"),
           },
           validate: {
             min: (v) =>
-              v.length < 6 ? t("join_now.step_three.password.error_2") : true,
+              v.length < 6 ? t("join_now.step_three.fbPassword.error_2") : true,
           },
         })}
       />
@@ -285,15 +290,9 @@ const StepThree = () => {
         )}
       </div>
 
-      <TextInput
-        className="code2FA"
-        question={t("join_now.step_three.code2FA.question")}
-        error={
-          errors.stepThree &&
-          errors.stepThree.code2FA &&
-          errors.stepThree.code2FA.message
-        }
-        register={register("stepThree.code2FA", {
+      <Controller
+        name="stepThree.code2FA"
+        rules={{
           required: {
             value: true,
             message: t("join_now.step_three.code2FA.error_1"),
@@ -302,8 +301,30 @@ const StepThree = () => {
             numCharacters: (v) =>
               v.length !== 32 ? t("join_now.step_three.code2FA.error_2") : true,
           },
-        })}
+        }}
+        render={({ field: { onChange } }) => {
+          return (
+            <InputWraper className="code2FA">
+              <Question>{t("join_now.step_three.code2FA.question")}</Question>
+
+              <NumberFormat
+                format="####-####-####-####-####-####-####-####-####"
+                mask="_"
+                onValueChange={({ value }) => {
+                  onChange(value);
+                }}
+              />
+
+              <p className="error">
+                {errors.stepThree &&
+                  errors.stepThree.code2FA &&
+                  errors.stepThree.code2FA.message}
+              </p>
+            </InputWraper>
+          );
+        }}
       />
+
       <div className="message">
         <p>
           {t("join_now.step_three.code2FA.message.p_1")}{" "}

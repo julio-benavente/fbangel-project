@@ -22,8 +22,8 @@ const Footer = () => {
           </UseConditions>
         </FooterLinks>
         <Copyright>
-          &copy; {t("footer.copyright.0")}
-          {new Date().getFullYear()}. {t("footer.copyright.0")}
+          &copy; {t("footer.copyright.0")} {new Date().getFullYear()}.{" "}
+          {t("footer.copyright.1")}.
         </Copyright>
         <Detach>{t("footer.detach")} </Detach>
       </FooterSectionWrapper>

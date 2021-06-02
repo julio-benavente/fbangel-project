@@ -84,8 +84,15 @@ const Table = (props) => {
         <div className="tbody">
           {payments.list.length !== 0 &&
             payments.list.map((payment, index) => {
-              const { amount, concept, id, paymentDate, paypalEmail, status } =
-                payment;
+              const {
+                amount,
+                concept,
+                id,
+                paymentDate,
+                paypalEmail,
+                paymentMethod,
+                status,
+              } = payment;
 
               const date = new Date(paymentDate).toLocaleDateString([], {
                 day: "2-digit",
@@ -100,12 +107,14 @@ const Table = (props) => {
                   style={{ ...paymentsTableWidth }}
                 >
                   <div className="td concept">{concept}</div>
-                  <div className="td paypalEmail">{paypalEmail}</div>
+                  <div className="td paymentMethod">{`${
+                    paymentMethod ? paymentMethod[0].toUpperCase() : ""
+                  }${paymentMethod ? paymentMethod.slice(1) : ""}`}</div>
                   <div className="td paymentDate">
                     {paymentDate ? date : "-"}
                   </div>
                   <div className={`td status ${status}`}>{status}</div>
-                  <div className="td amount ">{`$ ${amount}`}</div>
+                  <div className="td amount ">{`$ ${amount.toFixed(2)}`}</div>
                 </div>
               );
             })}

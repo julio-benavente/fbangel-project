@@ -206,14 +206,15 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
         new Date(user.creationDate) <= lastDayLastMonth;
 
       const hasBeenPayed = user.referralHasBeenPaid === false;
-
       return status && lastMonth && hasBeenPayed;
     });
 
     const product = products.find((product) => product.abrv === "referral");
 
     const concept = (firstName, lastName) => {
-      const concept = `${product.name} : ${firstName} ${lastName}`;
+      const concept = `${
+        product.name
+      } : ${firstName} ${lastName[0].toUpperCase()}****`;
       return concept;
     };
 

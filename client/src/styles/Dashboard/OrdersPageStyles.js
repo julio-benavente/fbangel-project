@@ -210,13 +210,13 @@ export const PaymentsTable = styled.div`
       .td {
         border-radius: 0;
         font-size: 0.8rem;
-        &:nth-child(4) {
+        &.status {
           padding: 3px 5px;
           font-size: 0.75rem;
           border-radius: 4px;
           &.approved {
             background: ${(props) =>
-              transparentize(0.5, props.theme.color.blue)};
+              transparentize(0.6, props.theme.color.green)};
           }
           &.pending {
             background: ${(props) =>
@@ -227,16 +227,16 @@ export const PaymentsTable = styled.div`
               transparentize(0.5, props.theme.color.red)};
           }
         }
-        &:nth-child(5) {
+        &.amount {
           font-weight: 700;
         }
       }
 
       .td,
       .th {
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5) {
+        &.paymentDate,
+        &.status,
+        &.amount {
           justify-self: center;
         }
       }

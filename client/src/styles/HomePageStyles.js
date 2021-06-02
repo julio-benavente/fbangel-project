@@ -19,7 +19,7 @@ import {
 import background from "../assets/images/bannerBackground.jpg";
 
 export const Home = styled.div`
-  ${page}
+  padding-top: 70px;
 `;
 
 // Banner section

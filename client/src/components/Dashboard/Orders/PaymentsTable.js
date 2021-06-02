@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PaymentsTable } from "../../../styles/Dashboard/OrdersPageStyles";
+import { useTranslation } from "react-i18next";
 
 const Table = (props) => {
   const [paymentsTableWidth, setPaymentsTableWidth] = useState(null);
@@ -16,8 +17,13 @@ const Table = (props) => {
 
         const columns = [
           {
+            column: "name",
+            width: 20,
+            min: 80,
+          },
+          {
             column: "concept",
-            width: 35,
+            width: 20,
             min: 80,
           },
           {
@@ -27,7 +33,7 @@ const Table = (props) => {
           },
           {
             column: "date",
-            width: 15,
+            width: 10,
             min: 70,
           },
           {
@@ -65,24 +71,42 @@ const Table = (props) => {
 
     return () => window.removeEventListener("resize", setPaymentsTableWidth);
   }, []);
+
+  const { t } = useTranslation();
+
   return (
     <PaymentsTable className="PaymentsTable">
       <div className="PaymentsTable">
         <div className="thead">
           <div className="tr" style={{ ...paymentsTableWidth }}>
-            <div className="th">Concepto</div>
-            <div className="th">Cuenta de paypal</div>
-            <div className="th">Fecha de pago</div>
-            <div className="th">Estado</div>
-            <div className="th">Monto</div>
+            <div className="th name">{t("orders.payment_table.name")}</div>
+            <div className="th concept">
+              {t("orders.payment_table.concept")}
+            </div>
+            <div className="th paymentMethod">
+              {t("orders.payment_table.payment_method")}
+            </div>
+            <div className="th paymentDate">
+              {t("orders.payment_table.payment_date")}
+            </div>
+            <div className="th status">{t("orders.payment_table.status")}</div>
+            <div className="th amount">{t("orders.payment_table.amount")}</div>
           </div>
         </div>
         <div className="tbody">
           {payments.length !== 0 &&
             payments.map((payment, index) => {
-              const { amount, concept, id, paymentDate, paypalEmail, status } =
-                payment;
-
+              const {
+                amount,
+                concept,
+                id,
+                paymentDate,
+                paymentMethod,
+                paypalEmail,
+                status,
+                payee: { firstName, lastName },
+              } = payment;
+              console.log(payment);
               const date = new Date(paymentDate).toLocaleDateString([], {
                 day: "2-digit",
                 month: "2-digit",
@@ -95,8 +119,11 @@ const Table = (props) => {
                   key={index}
                   style={{ ...paymentsTableWidth }}
                 >
+                  <div className="td name">{`${firstName} ${lastName}`}</div>
                   <div className="td concept">{concept}</div>
-                  <div className="td paypalEmail">{paypalEmail}</div>
+                  <div className="td paymentMethod">{`${paymentMethod[0].toUpperCase()}${paymentMethod.slice(
+                    1
+                  )}`}</div>
                   <div className="td paymentDate">
                     {paymentDate ? date : "-"}
                   </div>

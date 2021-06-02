@@ -7,18 +7,19 @@ export const NavbarSection = styled.div`
   width: 100%;
   display: grid;
   z-index: 100;
+  position: absolute;
+  background-color: ${(props) => props.theme.color.primary};
 `;
 
 export const NavbarWrapper = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: auto 1fr;
   justify-content: center;
   justify-items: center;
   max-width: 1200px;
   padding: 20px 40px;
-  position: absolute;
   width: 100%;
-  transform: translateX(-50%);
   left: 50%;
   top: 0;
 `;
@@ -27,13 +28,13 @@ export const Logo = styled(NavLink)`
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: 700;
-  color: ${(props) => props.theme.color.primary};
+  color: ${(props) => props.theme.color.white};
   span {
     display: inline-grid;
     justify-items: center;
-    background-color: ${(props) => props.theme.color.primary};
+    background-color: ${(props) => props.theme.color.white};
     padding: 3px 7px;
-    color: ${(props) => props.theme.color.white};
+    color: ${(props) => props.theme.color.primary};
   }
 `;
 
@@ -69,19 +70,19 @@ export const Link = styled(NavLink)`
   position: relative;
   margin: 0 clamp(5px, 0.8vw, 15px);
   text-decoration: none;
-  color: ${(props) => props.theme.color.black};
+  color: ${(props) => props.theme.color.white};
 
   &.login {
     font-weight: 600;
-    color: ${(props) => props.theme.color.primary};
+    color: ${(props) => props.theme.color.white};
   }
 
   &.joinNow {
     font-weight: 600;
-    color: ${(props) => props.theme.color.white};
+    color: ${(props) => props.theme.color.primary};
     padding: 2px 5px;
     border-radius: 2px;
-    background: ${(props) => props.theme.color.primary};
+    background: ${(props) => props.theme.color.white};
   }
 
   &::before {
@@ -90,7 +91,7 @@ export const Link = styled(NavLink)`
     width: 0%;
     height: 2px;
     bottom: -10px;
-    background-color: ${(props) => props.theme.color.primary};
+    background-color: ${(props) => props.theme.color.white};
     transition: width 200ms ease-in-out;
     left: 50%;
     transform: translateX(-50%);
@@ -124,15 +125,15 @@ export const Menu = styled.div`
   border-radius: 1000px;
   background: ${(props) =>
     props.open
-      ? transparentize(0.5, props.theme.color.white)
-      : transparentize(0.85, props.theme.color.primary)};
+      ? transparentize(0.5, props.theme.color.primary)
+      : transparentize(0.85, props.theme.color.white)};
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
   cursor: pointer;
   .openNav {
     width: 30px;
-    fill: ${(props) => props.theme.color.primary};
+    fill: ${(props) => props.theme.color.white};
     height: 30px;
   }
 

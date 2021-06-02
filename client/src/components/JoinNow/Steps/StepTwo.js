@@ -233,6 +233,12 @@ const StepTwo = ({
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
                 message: t("join_now.step_two.phone.error_2"),
               },
+              validate: {
+                max: (v) =>
+                  v.length >= 15
+                    ? t("join_now.step_two.phone.max_error")
+                    : true,
+              },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
               return (
@@ -274,7 +280,7 @@ const StepTwo = ({
 
       <TextInput
         className="password"
-        question="Registre una contraseña"
+        question={t("join_now.step_two.password.question")}
         type="password"
         error={
           errors.stepTwo &&
@@ -284,17 +290,20 @@ const StepTwo = ({
         register={register("stepTwo.password", {
           required: {
             value: true,
-            message: "Por favor, registre este campo",
+            message: t("join_now.step_two.password.required_error"),
           },
           validate: {
-            min: (v) => (v.length < 8 ? "Mínimo 8 caracteres" : true),
+            min: (v) =>
+              v.length < 8 ? t("join_now.step_two.password.min_error") : true,
+            max: (v) =>
+              v.length >= 15 ? t("join_now.step_two.password.max_error") : true,
           },
         })}
       />
 
       <TextInput
         className="passwordConfirmation"
-        question="Confirme su contraseña"
+        question={t("join_now.step_two.password_confirmation.question")}
         type="password"
         error={
           errors.stepTwo &&
@@ -304,12 +313,14 @@ const StepTwo = ({
         register={register("stepTwo.passwordConfirmation", {
           required: {
             value: true,
-            message: "Por favor, registre este campo",
+            message: t(
+              "join_now.step_two.password_confirmation.required_error"
+            ),
           },
           validate: {
             isTheSame: (v) =>
               !(v === getValues("stepTwo.password"))
-                ? "Las contraseñas no coinciden"
+                ? t("join_now.step_two.password_confirmation.same_error")
                 : true,
           },
         })}

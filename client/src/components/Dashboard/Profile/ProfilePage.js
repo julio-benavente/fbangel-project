@@ -96,7 +96,7 @@ const ProfilePage = () => {
             <InformationItem>
               <InfoLabel>{t("profile.profile.status")}</InfoLabel>
               <InfoValue className={`status ${user.status}`}>
-                {user.status}
+                {`${user.status[0].toUpperCase()}${user.status.slice(1)}`}
               </InfoValue>
             </InformationItem>
             {user.paymentMethod === "paypal" && (
