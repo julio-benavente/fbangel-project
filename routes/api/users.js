@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
+const require = require("multer");
 // Models
 const User = require("../../models/User");
 const IncompleteUser = require("../../models/IncompleteUser");
@@ -207,17 +208,19 @@ router.get("/testing", async (req, res) => {
 //@route /api/referrals/testing
 //@desc
 //@access Public
-router.post("/testing", async (req, res) => {
-  try {
-    const response = referralEmailConfirmation(
-      "julio",
-      "woricev854@dghetian.com"
-    );
-    res.json({ message: response });
-  } catch (error) {
-    res.status(400).json({ error });
-  }
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads/");
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + file.originalname);
+  },
 });
+
+var upload = multer({ storage: storage });
+
+router.post("/testing", async (req, res) => {});
 
 router.put("/send-paypal-email-confirmation", async (req, res) => {
   const { id } = req.body;

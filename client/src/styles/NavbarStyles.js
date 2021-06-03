@@ -119,6 +119,11 @@ export const Link = styled(NavLink)`
 
 export const LanguageDropdown = styled.div`
   position: relative;
+  align-self: center;
+  @media screen and (max-width: 1000px) {
+    margin-right: 50px;
+    justify-self: end;
+  }
 `;
 
 export const GlobalIcon = styled.div`
