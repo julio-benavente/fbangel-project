@@ -139,6 +139,7 @@ router.post("/login", checkAuthLevel, async (req, res) => {
     });
     res.json({ user });
   } catch (e) {
+    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }

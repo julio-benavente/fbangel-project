@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt-nodejs");
+const bcrypt = require("bcryptjs");
 
 function rentalType() {
   return this.userType === "rental";
@@ -288,13 +288,15 @@ UserSchema.statics.login = async function (email, password) {
   );
 
   if (user) {
-    const auth = await bcrypt.compare(password, user.password);
-    if (auth) {
-      const { password, ...send } = user._doc;
-      return send;
-    }
-
-    throw Error("Invalid password");
+    const auth = await bcrypt.compare(password, user.password, (err, auth) => {
+      if (err) {
+        throw Error("Invalid password");
+      }
+      if (auth) {
+        const { password, ...send } = user._doc;
+        return send;
+      }
+    });
   }
   throw Error("Invalid email");
 };
