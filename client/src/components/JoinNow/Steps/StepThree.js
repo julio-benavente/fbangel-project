@@ -226,7 +226,7 @@ const StepThree = () => {
           {t("join_now.step_three.fbEmailImage.message.p_5.4")}
         </p>
         <p>
-          {t("join_now.step_three.fbEmailImage.message.p_1.0")}{" "}
+          {t("join_now.step_three.fbEmailImage.message.p_6.0")}{" "}
           <a href="https://www.facebook.com/settings" target="_blank">
             https://www.facebook.com/settings
           </a>

@@ -257,7 +257,7 @@
             "1": "Login Security"
           },
           "li_4": {
-            "0": "Find \"Use two-step authentication\" -",
+            "0": "Find \"Use two-step authentication\"-",
             "1": "Edit"
           },
           "li_5": {
@@ -505,937 +505,936 @@
         "image_two": "Email confirmation from Facebook. Example 2.",
         "message": {
           "p_1": {
-            "0": "Envía una foto para confirmar el email asociado."
+            "0": "Send a photo to confirm the associated email."
           },
           "p_2": {
-            "0": "Ejemplo 1 desde ordenador"
+            "0": "Example 1 from computer"
           },
           "p_3": {
-            "0": "Ejemplo 2 desde móvil"
+            "0": "Example 2 from mobile"
           },
           "p_4": {
-            "0": "Móvil:",
-            "1": "Configuración",
-            "2": "Configuración de la cuenta",
-            "3": "Información personal",
-            "4": "Información de contacto"
+            "0": "Mobile:",
+            "1": "Settings",
+            "2": "Account Settings",
+            "3": "Personal Information",
+            "4": "Contact Information"
           },
           "p_5": {
-            "0": "Ordenador:",
-            "1": "Configuración y privacidad",
-            "2": "Configuración",
+            "0": "Computer:",
+            "1": "Settings and privacy",
+            "2": "Settings",
             "3": "General",
-            "4": "Contacto"
+            "4": "Contact"
           },
           "p_6": {
-            "0": "O ve a :"
+            "0": "Or go to :"
           }
         }
       },
       "bmIdImage": {
-        "question": "Identificador del administrador comercial (BM id)",
-        "error_1": "Por favor, ingrese una foto confirmando el número de tu Administrado Comercial",
-        "error_2": "El archivo puede pesar máximo 2mb",
-        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
-        "image_one": "Administrador comercial. Ejemplo 1.",
-        "image_two": "Administrador comercial. Ejemplo 2.",
+        "question": "Business Manager ID (BM id)",
+        "error_1": "This field is required",
+        "error_2": "The file can be up to 2mb",
+        "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "image_one": "Business Manager. Example 1.",
+        "image_two": "Business Manager. Example 2.",
         "message": {
           "p_1": {
-            "0": "Envía una foto del número de tu Administrador Comercial."
+            "0": "Send a photo of your Business Manager's number."
           },
           "p_2": {
-            "0": "Ejemplo 1 desde ordenador"
+            "0": "Example 1 from computer"
           },
           "p_3": {
-            "0": "Ejemplo 2 desde móvil"
+            "0": "Example 2 from mobile"
           }
         }
       },
       "code2FA": {
-        "question": "Código 2FA (Token)",
-        "error_1": "Por favor, ingrese su código",
-        "error_2": "El códifo 2FA cuenta con 32 dígitos",
+        "question": "2FA code (Token)",
+        "error_1": "This field is required",
+        "error_2": "The 2FA code has 32 digits",
         "message": {
-          "p_1": "Si no sabes tu código usa esta dirección",
-          "p_2": "y haz clic en el botón azul que dice \"Usar app de autenticación\" copia el código de 32 caracteres y pegalo aquí. O ve al Paso 2 de nuestra sección",
-          "p_3": "Como funciona",
-          "p_4": "y consulta los videos."
+          "p_1": "If you don't know your code, use this address",
+          "p_2": "and click on the blue button that says \"Use authentication app\"copy the 32-character code and paste it here. Or go to Step 2 of our",
+          "p_3": "How does it work",
+          "p_4": "section and check out the videos."
         }
       }
     },
     "step_four": {
       "paymentMethod": {
-        "question": "Método de pago",
+        "question": "Payment method",
         "option_1": "Paypal",
-        "option_2": "Cuenta bancaria - Solo para Perú",
-        "error_1": "Por favor, seleccione un método de pago"
+        "option_2": "Bank account - Only for Peru",
+        "error_1": "This field is required"
       },
       "paypalEmail": {
-        "question": "Email de paypal",
-        "error_1": "Por favor, indique su email de paypal",
-        "error_2": "Ingrese un email valido",
-        "error_3": "Los email de paypal cuenta con por lo menos 6 caracteres"
+        "question": "PayPal email",
+        "error_1": "This field is required",
+        "error_2": "Enter a valid email",
+        "error_3": "Minimum 8 characters"
       },
       "paypalEmailConfirmation": {
-        "question": "Confirma tu email de Paypal",
-        "error_1": "Por favor, confirme su email de paypal",
-        "error_2": "Lo correos no coinciden"
+        "question": "Confirm your Paypal email",
+        "error_1": "This field is required",
+        "error_2": "he emails do not match"
       },
       "paypalMessage": {
-        "p_1": "Verifique que su correo Paypal es correcto al 100%. No nos hacemos responsables por datos incorrectos."
+        "p_1": "Verify that your Paypal email is 100% correct. We are not responsible for incorrect information."
       },
       "holderName": {
-        "question": "Nombre del titular",
-        "error_1": "Por favor, ingrese el nombre del titular"
+        "question": "Name of the holder",
+        "error_1": "This field is required"
       },
       "bankAngency": {
-        "question": "Agencia bancaria",
-        "error_1": "Por favor, ingrese la agencia bancaria"
+        "question": "Banking agency",
+        "error_1": "This field is required"
       },
       "bankAccountCode": {
-        "question": "Código de Cuento Interbancaria",
-        "error_1": "Por favor, ingrese el código de cuenta interbancaria",
-        "error_2": "El código solo debe contener números",
-        "error_3": "El código debe contar con 20 dígitos"
+        "question": "Interbank Account Code",
+        "error_1": "Please enter the interbank account code",
+        "error_2": "The code should only contain numbers",
+        "error_3": "The code must have 20 digits"
       },
       "bankMessage": {
-        "p_1": "Solo válido para CCI peruano. Verifique que su CCI es 100% correcto. No nos hacemos responsables de datos incorrectos."
+        "p_1": "Only valid for Peruvian CCI. Verify that your CCI is 100% correct. We are not responsible for incorrect information."
       },
       "documentImage": {
-        "question": "Prueba de identidad",
-        "error_1": "Por favor, ingrese una foto confirmando su identidad",
-        "error_2": "El archivo puede pesar máximo 2mb",
-        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
-        "message": "Envía una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento. (No modificar digitalmente) (Puedes usar, DNI, pasaporte o licencia de conducir)."
+        "question": "Proof of identity",
+        "error_1": "Please enter a photo confirming your identity",
+        "error_2": "The file can be up to 2mb",
+        "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "message": "Send a photo of your document in high resolution and legible, you can cover any detail you want, except the photo, the full name and the date of birth. (Do not modify digitally) (You can use, ID, passport or driver's license)."
       },
       "referral": {
-        "question": "Si tienes un referente añade aquí su código",
-        "error_1": "Máximo 10 caracteres permitidos"
+        "question": "If you have a referrer add his code here",
+        "error_1": "Maximum 10 characters allowed"
       },
       "termsAndConditions": {
-        "option_1": "Acepto los Términos y Condiciones",
-        "error_1": "Por favor, acepte los Términos y Condiciones"
+        "option_1": "I accept the terms and conditions",
+        "error_1": "Please accept the Terms and Conditions"
       },
       "gdprAgreement": {
-        "option_1": "Doy mi consentimiento para que este sitio web almacene mi información enviada para que puedan responder a mi consulta.",
-        "error_1": "Por favor, acepte el Acuerdo GDPR"
+        "option_1": "I give my consent for this website to store my submitted information so that they can respond to my query.",
+        "error_1": "Please accept the GDPR Agreement"
       },
-      "emailDuplicateMessage": "El email ya ha sido utilizado",
+      "emailDuplicateMessage": "The email has already been used",
       "termsAndConditionsMessage": {
         "intro": {
-          "title": "TÉRMINOS Y CONDICIONES PARA LOS ALQUILERES PUBLICITARIOS DE FACEBOOK",
+          "title": "TERMS AND CONDITIONS FOR FACEBOOK ADVERTISING RENTALS",
           "p": [
-            "Los siguientes Términos y Condiciones se aplican al alquiler de su perfil de Facebook y con su consentimiento usted acepta estar vinculado de este modo."
+            "The following Terms and Conditions apply to renting your Facebook profile, and with your consent you agree to be bound thereby."
           ]
         },
         "definitions": {
-          "title": "Definiciones",
+          "title": "Definitions",
           "p": [
-            "A los efectos de estos Términos y Condiciones:",
-            "“Alquiler” del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
-            "“FbAngel”, esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
-            "“Propietario” es la persona que proporcionó el perfil de Facebook que se está alquilando.",
-            "“Pago Mensual” es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
-            "“Comisión por referido” es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
-            "“Perfil de Facebook” es el acceso al Business Manager que se alquila.",
-            "“Business Manager” es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
-            "“Administrador de Business Manager” la persona que administra activamente el Business Manager en nombre de FbAngel y que se agregará para supervisar las cuentas publicitarias.",
-            "“Cuenta de anuncios” es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
-            "“Configuración de Business Manager” el proceso de configuración del Business Manager de Facebook que se alquilará.",
-            "“Página de Facebook” la página de Facebook creada con la cuenta del Propietario.",
-            "“Publicidad” los anuncios creados por FbAngel en la cuenta del Propietario.",
-            "“Comisión por configuración” es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
-            "“Servicio de redes sociales de terceros” significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
-            "“Sitio web” se refiere a Mi sitio, accesible desde FbAngel.com",
-            "“”Usted o el Propietario”” significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
-            "“Compañía” (denominada “la Compañía”, “Nosotros” o “Nuestro”  este Acuerdo) se refiere a FB Angel."
+            "For the purposes of these Terms and Conditions:",
+            "\"Rental\" of the rental of your Facebook profile to which these Terms and Conditions apply.",
+            "\"FbAngel\" , this website, their respective agents, subcontractors, directors and employees.",
+            "\"Owner\" is the person who provided the Facebook profile that is being rented.",
+            "\"Monthly Payment\" is the amount paid to the account owner at the end of each month that their account is in use.",
+            "\"Referral commission\" is the amount paid to someone for recommending another Facebook profile owner to lead to a successful Business Manager setup.",
+            "\"Facebook Profile\" is the access to the Business Manager that is rented.",
+            "\"Business Manager\" is a Facebook tool that helps to organize and manage your advertising accounts completely independent of your Facebook profile.",
+            "\"Business Manager Administrator\" the person who actively manages the Business Manager on behalf of FbAngel and who will be added to monitor the advertising accounts.",
+            "\"Ad account\" is the Facebook advertising account that is configured within Business Manager.",
+            "\"Business Manager Configuration\" the configuration process for the Facebook Business Manager to be rented.",
+            "\"Facebook Page\" the Facebook page created with the Owner's account.",
+            "\"Advertising\" the ads created by FbAngel in the Owner's account.",
+            "\"Commission for configuration\" is the amount paid to the owner of the account for a correct configuration of the Business Manager.",
+            "\"Third-party social media service\" means any service or content (including data, information, products, or services) provided by a third party that may be displayed, included, or made available by the Service.",
+            "\"Website\" refers to My site, accessible from FbAngel.com",
+            "\"You or the Owner \"means the person who provided the Facebook advertising account that is being rented and, in any event, the person accessing or using the Service, or the company or other legal entity on whose behalf such person accesses or uses the Service, as appropriate. ",
+            "\"Company\" (referred to as \"the Company\" ,\"We\" or \"Our\" in this Agreement) refers to FB Angel."
           ]
         },
         "recognition": {
-          "title": "Reconocimiento",
+          "title": "Acknowledgment",
           "p": [
-            "Estos son los Términos y Condiciones que rigen el uso de este Servicio y el acuerdo que opera entre Usted y la Compañía. Estos Términos y Condiciones establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.",
-            "Su acceso y uso del Servicio está condicionado a su aceptación y cumplimiento de estos Términos y Condiciones Estos Términos y Condiciones se aplican a todos los visitantes, usuarios y otras personas que acceden o utilizan el Servicio.",
-            "Al acceder o utilizar el Servicio, usted acepta regirse por estos términos y condiciones. Si no está de acuerdo con alguna parte de estos Términos y condiciones, no podrá acceder al Servicio.",
-            "Usted declara que es mayor de 18 años. La Compañía no permite que menores de 18 años utilicen el Servicio.",
-            "Su acceso y uso del Servicio también está condicionado a su aceptación y cumplimiento de la Política de Privacidad de la Compañía Nuestra Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información personal cuando usa la Aplicación o el Sitio web y le informa sobre Sus derechos de privacidad y cómo la ley lo protege. Lea nuestra Política de privacidad detenidamente antes de utilizar nuestro servicio."
+            "These are the Terms and Conditions that govern the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions establish the rights and obligations of all users with respect to the use of the Service.",
+            "Your access and use of the Service is conditional on your acceptance and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and other persons who access or use the Service.",
+            "By accessing or using the Service, you agree to be bound by these terms and conditions. If you do not agree to any part of these Terms and Conditions, you will not be able to access the Service.",
+            "You declare that you are over 18 years old. The Company does not allow minors under 18 years of age to use the Service.",
+            "Your access to and use of the Service is also conditioned on your acceptance and compliance with the Company's Privacy Policy. Our Privacy Policy describes Our policies and procedures regarding the collection, use, and disclosure of Your personal information when using the Application or the Site. web site and informs You about Your privacy rights and how the law protects You. Please read our Privacy Policy carefully before using our service. "
           ]
         },
         "service_condition": {
-          "title": "Condiciones de servicio",
+          "title": "Terms of Service",
           "p": [
-            "El Titular autoriza a la Empresa, a ejercitar exclusivamente, el derecho de acceso y gestión de la cuenta comercial única y exclusivamente para la creación de campañas publicitarias relacionadas con la Red Social de Facebook, por tiempo indefinido, salvo que las partes, de mutuo acuerdo, acuerden a una duración diferente.",
-            "En virtud de este contrato, la Compañía tiene derecho a ejercitar por cuenta propia, en nombre del Titular, las acciones necesarias para perseguir la finalidad establecida en el contrato, es decir, para la creación, preparación, ejecución y control de campañas publicitarias o de comunicación. acciones en Internet y sitios sociales asignadas por el Titular."
+            "The Owner authorizes the Company, to exercise exclusively, the right of access and management of the commercial account solely and exclusively for the creation of advertising campaigns related to the Facebook Social Network, for an indefinite time, unless the parties, mutually agree, agree to a different duration. ",
+            "By virtue of this contract, the Company has the right to exercise on its own behalf, on behalf of the Owner, the actions necessary to pursue the purpose established in the contract, that is, for the creation, preparation, execution and control of advertising campaigns or of communication. Actions on the Internet and social sites assigned by the Owner. "
           ]
         },
         "privacy": {
-          "title": "Privacidad",
+          "title": "Privacy",
           "p": [
-            "Respetamos su privacidad y nunca compartiremos su contraseña ni ninguna otra información personal. Durante el proceso de configuración de Business Manager, utilizamos una aplicación segura para permitirnos configurar sus cuentas publicitarias, a la vez que mantenemos su información personal segura."
+            "We respect your privacy and will never share your password or any other personal information. During the Business Manager setup process, we use a secure application to allow us to set up your advertising accounts, while keeping your personal information safe."
           ]
         },
         "property_promise": {
-          "title": "Promesa de propiedad",
+          "title": "Property Pledge",
           "p": [
-            "El Propietario garantiza y garantiza que es el propietario legal de la Cuenta Publicitaria y que es la única persona con acceso. Además, el Propietario garantiza que no hay ninguna irregularidad en la creación o adquisición de la cuenta. Además, el Propietario garantiza que no necesita ni depende de la capacidad de anunciarse en Facebook. "
+            "The Owner guarantees and guarantees that he is the legal owner of the Advertising Account and that he is the only person with access. In addition, the Owner guarantees that there is no irregularity in the creation or acquisition of the account. In addition, the Owner guarantees that he does not need or depend on the ability to advertise on Facebook.. "
           ]
         },
         "compensation": {
-          "title": "Indemnización",
+          "title": "Compensation",
           "p": [
-            "El Propietario se compromete a indemnizar a FbAngel si de alguna manera ha violado la cláusula promesa de propiedad."
+            "The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."
           ]
         },
         "payment": {
-          "title": "Pago",
+          "title": "Payment",
           "p": [
-            "FbAngel pagará al propietario la comisión de configuración una vez que se haya realizado y aprobado la primera revisión, y se haya configurado correctamente un Business Manager."
+            "FbAngel will pay the owner the setup fee once the first review has been done and approved, and a Business Manager has been properly setup."
           ]
         },
         "payment_calendar": {
-          "title": "Calendario de pago",
+          "title": "Payment schedule",
           "p": [
-            "FbAngel pagará al Propietario de la siguiente manera:",
-            "Primer pago directamente después de haber terminado la configuración con éxito y después de la siguiente forma:",
-            "Los perfiles activados en la primera quincena del mes (primeras 2 semanas) se pagarán en la semana del 15 del mes siguiente",
-            "Los perfiles activados dentro de la segunda quincena del mes (2 últimas semanas) se pagarán en la semana de la última semana del mes siguiente.        ",
-            "Si el último día del mes cae en un fin de semana o día festivo, el pago se enviará el siguiente día hábil.",
-            "FbAngel no pagará por un perfil de Facebook donde no haya sido posible configurar correctament el Business Manager. FbAngel pagará el pago mensual de un perfil de Facebook que esté activo durante la mitad del mes o más para el mes en particular.",
-            "Los pagos por cada referido que resulte en una configuración exitosa se pagan al final del mes.",
-            "FbAngel no pagará por un perfil de Facebook donde no haya sido posible configurar correctament el Business Manager."
+            "FbAngel will pay the Owner as follows:",
+            "First payment directly after successful setup and after as follows:",
+            "The profiles activated in the first fortnight of the month (first 2 weeks) will be paid in the week of the 15th of the following month",
+            "Profiles activated within the second half of the month (last 2 weeks) will be paid in the week of the last week of the following month.",
+            "If the last day of the month falls on a weekend or holiday, the payment will be sent the next business day.",
+            "FbAngel will not pay for a Facebook profile where it has not been possible to configure the Business Manager correctly. FbAngel will pay the monthly payment for a Facebook profile that is active for half the month or more for the particular month.",
+            "Payments for each referral that results in a successful setup are paid at the end of the month.",
+            "FbAngel will not pay for a Facebook profile where it has not been possible to correctly configure the Business Manager."
           ]
         },
         "payment_method": {
-          "title": "Forma de pago",
+          "title": "Payment Method",
           "p": [
-            "FbAngel enviará pagos por Paypal y transferencia bancaria.",
-            "Para ser pagado por banco es necesario enviar una copia de un documento para cumplir con los requisitos de nuestro banco."
+            "FbAngel will send payments by Paypal and bank transfer.",
+            "To be paid by bank it is necessary to send a copy of a document to comply with the requirements of our bank."
           ]
         },
         "rental_termination": {
-          "title": "Terminación del alquiler de la cuenta",
+          "title": "Account rental termination",
           "p": [
-            "El período de alquiler finalizará el día en que el Business Manager ya no esté en uso.",
-            "FbAngel, a su entera discreción, puede decidir que ya no requiere la cuenta y puede interrumpir el período de alquiler.",
-            "El Alquiler también se cancelará si el Business Manager es desactivado por el Propietario o Facebook.",
-            "Si la cuenta se utilizó durante 15 días o más ese mes, FbAngel realizará el pago del pago mensual.",
-            "El período de alquiler también terminará si se produce un incumplimiento material de estos Términos."
+            "The rental period will end on the day the Business Manager is no longer in use.",
+            "FbAngel, at its sole discretion, may decide that it no longer requires the account and may interrupt the rental period.",
+            "The Rental will also be canceled if the Business Manager is deactivated by the Owner or Facebook.",
+            "If the account was used for 15 days or more that month, FbAngel will make the payment of the monthly payment.",
+            "The rental period will also end if there is a material breach of these Terms."
           ]
         },
         "material_violation": {
-          "title": "Violación material",
+          "title": "Material violation",
           "p": [
-            "En caso de incumplimiento material, FbAngel no será responsable de pagar ningún pago futuro.",
-            "Inicie sesión en Cuenta desde cualquier dispositivo que no se haya utilizado antes del comienzo del período de alquiler. Pausar, detener, cambiar o interferir de alguna manera con los anuncios de FbAngel.",
-            "Eliminar o quitar FbAngel Business Manager o Administrador de la página de Facebook.",
-            "Eliminar o quitar el administrador de cuentas de FbAngel del rol Administrador de cuentas publicitarias. Uso del método de pago FbAngel para cualquier propósito que no sea pagar por los Anuncios creados por FbAngel. Permitir que cualquier otra persona o empresa acceda o utilice la Cuenta publicitaria.",
-            "Iniciar sesión en Facebook con un ordenador de sobremesa o portátil desde una nueva ubicación que no había iniciado sesión en el período anterior al período de alquiler.",
-            "Iniciar sesión en el Business Manager por cualquier motivo."
+            "In case of material breach, FbAngel will not be responsible for paying any future payments.",
+            "Log into Account from any device that was not used before the start of the rental period. Pause, stop, change or interfere in any way with FbAngel advertisements.",
+            "Delete or remove FbAngel Business Manager or Administrator from Facebook page.",
+            "Delete or remove the FbAngel account manager from the Ad Account Manager role. Use of the FbAngel payment method for any purpose other than to pay for Ads created by FbAngel. Allow any other person or business to access or use the Ad Account . ",
+            "Login to Facebook with a desktop or laptop from a new location that you had not logged in to in the period before the rental period.",
+            "Login to Business Manager for any reason."
           ]
         },
         "limited_liability": {
-          "title": "Limitación de responsabilidad",
+          "title": "Limitation of liability",
           "p": [
-            "El Titular reconoce que la Compañía no se hace responsable de las incidencias que pueda sufrir la cuenta por motivos ajenos a su control y acción. El Titular declara conocer los riesgos, peligros, así como cualquier otra eventualidad y / o incidente que conlleve la exposición y uso de un perfil personal y / o profesional en una Red Social que opera a través de Internet; asimismo, renuncia a cualquier demanda,          administrativa, procesal penal, así como a cualquier indemnización.",
-            "Sin perjuicio de los daños en los que pueda incurrir, la      responsabilidad total de la Compañía y cualquiera de sus proveedores bajo cualquier disposición de estos Términos y Su recurso exclusivo para todo lo anterior se limitará al monto realmente pagado por Usted a través del Servicio.",
-            "En la máxima medida permitida por la ley aplicable, en ningún caso la Compañía o sus proveedores serán responsables de ningún daño especial, incidental, indirecto o consecuente (incluidos, entre otros, daños por lucro cesante, pérdida de datos o otra información, por interrupción del negocio, por lesiones personales, pérdida de privacidad que surja de o de alguna manera relacionada con el uso o la imposibilidad de usar el Servicio, software de terceros y / o hardware de terceros utilizado con el Servicio, o de lo contrario en relación con cualquier disposición de estos Términos), incluso si la Compañía o cualquier proveedor han sido informados de la posibilidad de tales daños e incluso si el recurso no cumple con su propósito esencial.",
-            "Algunos estados no permiten la exclusión de garantías implícitas o la limitación de responsabilidad por daños incidentales o consecuentes, lo que significa que algunas de las limitaciones anteriores pueden no aplicarse. En estos estados, la responsabilidad de cada parte estará limitada en la mayor medida permitida por la ley."
+            "The Holder acknowledges that the Company is not responsible for incidents that the account may suffer for reasons beyond its control and action. The Holder declares to know the risks, dangers, as well as any other eventuality and / or incident that the exposure entails and use of a personal and / or professional profile in a Social Network that operates through the Internet; likewise, it waives any administrative, criminal procedural claim, as well as any compensation.",
+            "Without prejudice to any damages that may incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and your exclusive remedy for all of the above will be limited to the amount actually paid by you through the Service. ",
+            "To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages (including, but not limited to, loss of profits, loss of data or other information, due to business interruption, personal injury, loss of privacy arising out of or in any way related to the use or inability to use the Service, third party software and / or third party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any provider has been informed of the possibility of such damages and even if the remedy does not fulfill its essential purpose. ",
+            "Some states do not allow the exclusion of implied warranties or the limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the fullest extent permitted. by the law."
           ]
         },
         "disclaimer": {
-          "title": "Limitación de responsabilidad",
+          "title": "Limitation of liability",
           "p": [
-            "El Servicio se le proporciona “TAL CUAL” y “SEGÚN DISPONIBILIDAD” con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
-            "Sin perjuicio de lo anterior, ni la Compañía ni ninguno de los proveedores de la compañía hace ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto al funcionamiento o disponibilidad del Servicio, o la información, contenido y materiales o productos. incluido en el mismo; (ii) que el Servicio será ininterrumpido o libre de errores; (iii) en cuanto a la precisión, confiabilidad o vigencia de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados desde o en nombre de la Compañía están libres de virus, scripts, troyanos, gusanos, malware, bombas de tiempo u otros componentes dañinos.",
-            "Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones sobre los derechos legales aplicables de un consumidor, por lo que algunas o todas las exclusiones y limitaciones anteriores pueden no aplicarse a usted. Pero en tal caso, las exclusiones y limitaciones establecidas en esta sección se aplicarán en la mayor medida exigible según la ley aplicable."
+            "The Service is provided to you \"JUST AS IT IS\" and \"AS IT IS AVAILABLE\" with all faults and defects without warranty of any kind. To the maximum extent permitted by applicable law, the Company, on its own behalf and on behalf of its Affiliates and its respective licensors and service providers, expressly disclaims all warranties, whether express, implied, legal or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise from the course of deal, course of performance, use, or business practice. Without limitation to the foregoing, the Company makes no warranty or commitment, and makes no representation of any kind that Service will meet Your requirements, achieve intended results, be compatible or work with any other software, application, system or service, operate without interruption, comply with the es standards of performance or reliability or be free of errors or that any errors or defects can or will be corrected. ",
+            "Notwithstanding the foregoing, neither the Company nor any of the company's suppliers makes any representation or warranty of any kind, express or implied: (i) regarding the operation or availability of the Service, or the information, content and materials or products included therein; (ii) that the Service will be uninterrupted or error-free; (iii) regarding the accuracy, reliability or validity of any information or content provided through the Service; or (iv) that the Service, its servers, content or emails sent from or on behalf of the Company are free of viruses, scripts, Trojans, worms, malware, time bombs or other harmful components. ",
+            "Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on the applicable legal rights of a consumer, so some or all of the above exclusions and limitations may not apply to you. But in such case, the stated exclusions and limitations in this section will be applied to the fullest extent required by applicable law. "
           ]
         },
         "dispute_resolution": {
-          "title": "Resolución de disputas",
+          "title": "Dispute resolution",
           "p": [
-            "Si tiene algún problema o disputa sobre el Servicio, acepta primero intentar resolver la disputa de manera informal comunicándose con la Compañía.",
-            "Para usuarios de la Unión Europea (UE).",
-            "Si es un consumidor de la Unión Europea, se beneficiará de las disposiciones obligatorias de la ley del país en el que reside."
+            "If you have a problem or dispute about the Service, you agree to first try to resolve the dispute informally by contacting the Company.",
+            "For users in the European Union (EU).",
+            "If you are a consumer in the European Union, you will benefit from the mandatory provisions of the law of the country in which you reside."
           ]
         },
         "severability_saiver": {
-          "title": "Divisibilidad y renuncia",
+          "title": "Severability and waiver",
           "p": [
             {
               "tag": "i",
-              "message": "Divisibilidad"
+              "message": "Divisibility"
             },
             {
               "tag": "p",
-              "message": "Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se cambiará e interpretará para lograr los objetivos de dicha disposición en la mayor medida posible según la ley aplicable y las disposiciones restantes continuarán en pleno vigor y efecto."
+              "message": "If any provision of these Terms is found to be unenforceable or invalid, that provision will be changed and interpreted to achieve the objectives of that provision to the fullest extent possible under applicable law and the remaining provisions will continue in full force and effect."
             },
             {
               "tag": "i",
-              "message": "Renuncia"
+              "message": "Waiver"
             },
             {
               "tag": "p",
-              "message": "Salvo lo dispuesto en el presente, el hecho de no ejercer un derecho o exigir el cumplimiento de una obligación en virtud de estos Términos no afectará la capacidad de una parte para ejercer dicho derecho o requerir dicho cumplimiento en cualquier momento posterior, ni la renuncia a un incumplimiento constituirá una renuncia a cualquier incumplimiento posterior."
+              "message": "Except as provided herein, failure to exercise a right or require compliance with an obligation under these Terms will not affect the ability of a party to exercise said right or require such compliance at any later time, nor will the waiver of a breach will constitute a waiver of any subsequent breach."
             }
           ]
         },
         "interpretation": {
-          "title": "Interpretación de traducción",
+          "title": "Translation interpretation",
           "p": [
-            "Estos Términos y Condiciones pueden haberse traducido si los hemos puesto a su disposición en nuestro Servicio. Usted acepta que el texto original en inglés prevalecerá en caso de disputa Usted acepta que el texto original en inglés prevalecerá en caso de disputa."
+            "These Terms and Conditions may have been translated if we have made them available to you on our Service. You agree that the original English text shall prevail in the event of a dispute You agree that the original English text shall prevail in the event of a dispute."
           ]
         },
         "change_terms": {
-          "title": "Cambios a estos términos y condiciones",
+          "title": "Changes to these terms and conditions",
           "p": [
-            "Nos reservamos el derecho, a nuestro exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es importante, haremos todos los esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que entren en vigor los nuevos términos. Lo que constituye un cambio material se determinará a nuestro exclusivo criterio.",
-            "Al continuar accediendo o utilizando Nuestro Servicio después de que esas revisiones entren en vigencia, usted acepta estar sujeto a los términos revisados. Si no está de acuerdo con los nuevos términos, en su totalidad o en parte, deje de usar el sitio web y el Servicio."
+            "We reserve the right, in our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will use reasonable efforts to provide at least 30 days notice before the new terms take effect. What constitutes a material change will be determined in our sole discretion. ",
+            "By continuing to access or use Our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, in whole or in part, stop using the website and the service."
           ]
         },
         "contact": {
-          "title": "Contáctenos",
+          "title": "Contact Us",
           "p": [
-            "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
+            "If you have any questions about these Terms and Conditions, you can contact us"
           ]
         }
       }
     },
     "step_five": {
       "p_1": {
-        "0": "Felicitaciones por el registro.",
-        "1": "El proceso de registro no está completamente finalizado. Se le ha enviado un correo de confirmación a su correo",
-        "2": "También se le ha enviado un correo de confirmacion a su correo de Paypal"
+        "0": "Congratulations on registering.",
+        "1": "The registration process is not completely completed. A confirmation email has been sent to your email",
+        "2": "A confirmation email has also been sent to your Paypal email"
       },
       "p_2": {
-        "0": "Si no te ha llegado a tu bandeja el correo de confirmacion de registro da click aquí"
+        "0": "If you have not received the registration confirmation email, click here"
       },
-      "email_confirmation": "El correo ya ha sido enviado."
+      "email_confirmation": "The email has already been sent."
     }
   },
   "terms_conditions": {
     "intro": {
-      "title": "TÉRMINOS Y CONDICIONES PARA LOS ALQUILERES PUBLICITARIOS DE FACEBOOK",
+      "title": "TERMS AND CONDITIONS FOR FACEBOOK ADVERTISING RENTALS",
       "p": [
-        "Los siguientes Términos y Condiciones se aplican al alquiler de su perfil de Facebook y con su consentimiento usted acepta estar vinculado de este modo."
+        "The following Terms and Conditions apply to renting your Facebook profile, and with your consent you agree to be bound thereby."
       ]
     },
     "definitions": {
-      "title": "Definiciones",
+      "title": "Definitions",
       "p": [
-        "A los efectos de estos Términos y Condiciones:",
-        "“Alquiler” del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
-        "“FbAngel”, esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
-        "“Propietario” es la persona que proporcionó el perfil de Facebook que se está alquilando.",
-        "“Pago Mensual” es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
-        "“Comisión por referido” es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
-        "“Perfil de Facebook” es el acceso al Business Manager que se alquila.",
-        "“Business Manager” es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
-        "“Administrador de Business Manager” la persona que administra activamente el Business Manager en nombre de FbAngel y que se agregará para supervisar las cuentas publicitarias.",
-        "“Cuenta de anuncios” es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
-        "“Configuración de Business Manager” el proceso de configuración del Business Manager de Facebook que se alquilará.",
-        "“Página de Facebook” la página de Facebook creada con la cuenta del Propietario.",
-        "“Publicidad” los anuncios creados por FbAngel en la cuenta del Propietario.",
-        "“Comisión por configuración” es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
-        "“Servicio de redes sociales de terceros” significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
-        "“Sitio web” se refiere a Mi sitio, accesible desde FbAngel.com",
-        "“”Usted o el Propietario”” significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
-        "“Compañía” (denominada “la Compañía”, “Nosotros” o “Nuestro”  este Acuerdo) se refiere a FB Angel."
+        "For the purposes of these Terms and Conditions:",
+        "\"Rental\" of the rental of your Facebook profile to which these Terms and Conditions apply.",
+        "\"FbAngel\" , this website, their respective agents, subcontractors, directors and employees.",
+        "\"Owner\" is the person who provided the Facebook profile that is being rented.",
+        "\"Monthly Payment\" is the amount paid to the account owner at the end of each month that their account is in use.",
+        "\"Referral commission\" is the amount paid to someone for recommending another Facebook profile owner to lead to a successful Business Manager setup.",
+        "\"Facebook Profile\" is the access to the Business Manager that is rented.",
+        "\"Business Manager\" is a Facebook tool that helps to organize and manage your advertising accounts completely independent of your Facebook profile.",
+        "\"Business Manager Administrator\" the person who actively manages the Business Manager on behalf of FbAngel and who will be added to monitor the advertising accounts.",
+        "\"Ad account\" is the Facebook advertising account that is configured within Business Manager.",
+        "\"Business Manager Configuration\" the configuration process for the Facebook Business Manager to be rented.",
+        "\"Facebook Page\" the Facebook page created with the Owner's account.",
+        "\"Advertising\" the ads created by FbAngel in the Owner's account.",
+        "\"Commission for configuration\" is the amount paid to the owner of the account for a correct configuration of the Business Manager.",
+        "\"Third-party social media service\" means any service or content (including data, information, products, or services) provided by a third party that may be displayed, included, or made available by the Service.",
+        "\"Website\" refers to My site, accessible from FbAngel.com",
+        "\"You or the Owner \"means the person who provided the Facebook advertising account that is being rented and, in any event, the person accessing or using the Service, or the company or other legal entity on whose behalf such person accesses or uses the Service, as appropriate. ",
+        "\"Company\" (referred to as \"the Company\" ,\"We\" or \"Our\" in this Agreement) refers to FB Angel."
       ]
     },
     "recognition": {
-      "title": "Reconocimiento",
+      "title": "Acknowledgment",
       "p": [
-        "Estos son los Términos y Condiciones que rigen el uso de este Servicio y el acuerdo que opera entre Usted y la Compañía. Estos Términos y Condiciones establecen los derechos y obligaciones de todos los usuarios con respecto al uso del Servicio.",
-        "Su acceso y uso del Servicio está condicionado a su aceptación y cumplimiento de estos Términos y Condiciones Estos Términos y Condiciones se aplican a todos los visitantes, usuarios y otras personas que acceden o utilizan el Servicio.",
-        "Al acceder o utilizar el Servicio, usted acepta regirse por estos términos y condiciones. Si no está de acuerdo con alguna parte de estos Términos y condiciones, no podrá acceder al Servicio.",
-        "Usted declara que es mayor de 18 años. La Compañía no permite que menores de 18 años utilicen el Servicio.",
-        "Su acceso y uso del Servicio también está condicionado a su aceptación y cumplimiento de la Política de Privacidad de la Compañía Nuestra Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información personal cuando usa la Aplicación o el Sitio web y le informa sobre Sus derechos de privacidad y cómo la ley lo protege. Lea nuestra Política de privacidad detenidamente antes de utilizar nuestro servicio."
+        "These are the Terms and Conditions that govern the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions establish the rights and obligations of all users with respect to the use of the Service.",
+        "Your access and use of the Service is conditional on your acceptance and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and other persons who access or use the Service.",
+        "By accessing or using the Service, you agree to be bound by these terms and conditions. If you do not agree to any part of these Terms and Conditions, you will not be able to access the Service.",
+        "You declare that you are over 18 years old. The Company does not allow minors under 18 years of age to use the Service.",
+        "Your access to and use of the Service is also conditioned on your acceptance and compliance with the Company's Privacy Policy. Our Privacy Policy describes Our policies and procedures regarding the collection, use, and disclosure of Your personal information when using the Application or the Site. web site and informs You about Your privacy rights and how the law protects You. Please read our Privacy Policy carefully before using our service. "
       ]
     },
     "service_condition": {
-      "title": "Condiciones de servicio",
+      "title": "Terms of Service",
       "p": [
-        "El Titular autoriza a la Empresa, a ejercitar exclusivamente, el derecho de acceso y gestión de la cuenta comercial única y exclusivamente para la creación de campañas publicitarias relacionadas con la Red Social de Facebook, por tiempo indefinido, salvo que las partes, de mutuo acuerdo, acuerden a una duración diferente.",
-        "En virtud de este contrato, la Compañía tiene derecho a ejercitar por cuenta propia, en nombre del Titular, las acciones necesarias para perseguir la finalidad establecida en el contrato, es decir, para la creación, preparación, ejecución y control de campañas publicitarias o de comunicación. acciones en Internet y sitios sociales asignadas por el Titular."
+        "The Owner authorizes the Company, to exercise exclusively, the right of access and management of the commercial account solely and exclusively for the creation of advertising campaigns related to the Facebook Social Network, for an indefinite time, unless the parties, mutually agree, agree to a different duration. ",
+        "By virtue of this contract, the Company has the right to exercise on its own behalf, on behalf of the Owner, the actions necessary to pursue the purpose established in the contract, that is, for the creation, preparation, execution and control of advertising campaigns or of communication. Actions on the Internet and social sites assigned by the Owner. "
       ]
     },
     "privacy": {
-      "title": "Privacidad",
+      "title": "Privacy",
       "p": [
-        "Respetamos su privacidad y nunca compartiremos su contraseña ni ninguna otra información personal. Durante el proceso de configuración de Business Manager, utilizamos una aplicación segura para permitirnos configurar sus cuentas publicitarias, a la vez que mantenemos su información personal segura."
+        "We respect your privacy and will never share your password or any other personal information. During the Business Manager setup process, we use a secure application to allow us to set up your advertising accounts, while keeping your personal information safe."
       ]
     },
     "property_promise": {
-      "title": "Promesa de propiedad",
+      "title": "Property Pledge",
       "p": [
-        "El Propietario garantiza y garantiza que es el propietario legal de la Cuenta Publicitaria y que es la única persona con acceso. Además, el Propietario garantiza que no hay ninguna irregularidad en la creación o adquisición de la cuenta. Además, el Propietario garantiza que no necesita ni depende de la capacidad de anunciarse en Facebook. "
+        "The Owner guarantees and guarantees that he is the legal owner of the Advertising Account and that he is the only person with access. In addition, the Owner guarantees that there is no irregularity in the creation or acquisition of the account. In addition, the Owner guarantees that he does not need or depend on the ability to advertise on Facebook.. "
       ]
     },
     "compensation": {
-      "title": "Indemnización",
+      "title": "Compensation",
       "p": [
-        "El Propietario se compromete a indemnizar a FbAngel si de alguna manera ha violado la cláusula promesa de propiedad."
+        "The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."
       ]
     },
     "payment": {
-      "title": "Pago",
+      "title": "Payment",
       "p": [
-        "FbAngel pagará al propietario la comisión de configuración una vez que se haya realizado y aprobado la primera revisión, y se haya configurado correctamente un Business Manager."
+        "FbAngel will pay the owner the setup fee once the first review has been done and approved, and a Business Manager has been properly setup."
       ]
     },
     "payment_calendar": {
-      "title": "Calendario de pago",
+      "title": "Payment schedule",
       "p": [
-        "FbAngel pagará al Propietario de la siguiente manera:",
-        "Primer pago directamente después de haber terminado la configuración con éxito y después de la siguiente forma:",
-        "Los perfiles activados en la primera quincena del mes (primeras 2 semanas) se pagarán en la semana del 15 del mes siguiente",
-        "Los perfiles activados dentro de la segunda quincena del mes (2 últimas semanas) se pagarán en la semana de la última semana del mes siguiente.        ",
-        "Si el último día del mes cae en un fin de semana o día festivo, el pago se enviará el siguiente día hábil.",
-        "FbAngel no pagará por un perfil de Facebook donde no haya sido posible configurar correctament el Business Manager. FbAngel pagará el pago mensual de un perfil de Facebook que esté activo durante la mitad del mes o más para el mes en particular.",
-        "Los pagos por cada referido que resulte en una configuración exitosa se pagan al final del mes.",
-        "FbAngel no pagará por un perfil de Facebook donde no haya sido posible configurar correctament el Business Manager."
+        "FbAngel will pay the Owner as follows:",
+        "First payment directly after successful setup and after as follows:",
+        "The profiles activated in the first fortnight of the month (first 2 weeks) will be paid in the week of the 15th of the following month",
+        "Profiles activated within the second half of the month (last 2 weeks) will be paid in the week of the last week of the following month.",
+        "If the last day of the month falls on a weekend or holiday, the payment will be sent the next business day.",
+        "FbAngel will not pay for a Facebook profile where it has not been possible to configure the Business Manager correctly. FbAngel will pay the monthly payment for a Facebook profile that is active for half the month or more for the particular month.",
+        "Payments for each referral that results in a successful setup are paid at the end of the month.",
+        "FbAngel will not pay for a Facebook profile where it has not been possible to correctly configure the Business Manager."
       ]
     },
     "payment_method": {
-      "title": "Forma de pago",
+      "title": "Payment Method",
       "p": [
-        "FbAngel enviará pagos por Paypal y transferencia bancaria.",
-        "Para ser pagado por banco es necesario enviar una copia de un documento para cumplir con los requisitos de nuestro banco."
+        "FbAngel will send payments by Paypal and bank transfer.",
+        "To be paid by bank it is necessary to send a copy of a document to comply with the requirements of our bank."
       ]
     },
     "rental_termination": {
-      "title": "Terminación del alquiler de la cuenta",
+      "title": "Account rental termination",
       "p": [
-        "El período de alquiler finalizará el día en que el Business Manager ya no esté en uso.",
-        "FbAngel, a su entera discreción, puede decidir que ya no requiere la cuenta y puede interrumpir el período de alquiler.",
-        "El Alquiler también se cancelará si el Business Manager es desactivado por el Propietario o Facebook.",
-        "Si la cuenta se utilizó durante 15 días o más ese mes, FbAngel realizará el pago del pago mensual.",
-        "El período de alquiler también terminará si se produce un incumplimiento material de estos Términos."
+        "The rental period will end on the day the Business Manager is no longer in use.",
+        "FbAngel, at its sole discretion, may decide that it no longer requires the account and may interrupt the rental period.",
+        "The Rental will also be canceled if the Business Manager is deactivated by the Owner or Facebook.",
+        "If the account was used for 15 days or more that month, FbAngel will make the payment of the monthly payment.",
+        "The rental period will also end if there is a material breach of these Terms."
       ]
     },
     "material_violation": {
-      "title": "Violación material",
+      "title": "Material violation",
       "p": [
-        "En caso de incumplimiento material, FbAngel no será responsable de pagar ningún pago futuro.",
-        "Inicie sesión en Cuenta desde cualquier dispositivo que no se haya utilizado antes del comienzo del período de alquiler. Pausar, detener, cambiar o interferir de alguna manera con los anuncios de FbAngel.",
-        "Eliminar o quitar FbAngel Business Manager o Administrador de la página de Facebook.",
-        "Eliminar o quitar el administrador de cuentas de FbAngel del rol Administrador de cuentas publicitarias. Uso del método de pago FbAngel para cualquier propósito que no sea pagar por los Anuncios creados por FbAngel. Permitir que cualquier otra persona o empresa acceda o utilice la Cuenta publicitaria.",
-        "Iniciar sesión en Facebook con un ordenador de sobremesa o portátil desde una nueva ubicación que no había iniciado sesión en el período anterior al período de alquiler.",
-        "Iniciar sesión en el Business Manager por cualquier motivo."
+        "In case of material breach, FbAngel will not be responsible for paying any future payments.",
+        "Log into Account from any device that was not used before the start of the rental period. Pause, stop, change or interfere in any way with FbAngel advertisements.",
+        "Delete or remove FbAngel Business Manager or Administrator from Facebook page.",
+        "Delete or remove the FbAngel account manager from the Ad Account Manager role. Use of the FbAngel payment method for any purpose other than to pay for Ads created by FbAngel. Allow any other person or business to access or use the Ad Account . ",
+        "Login to Facebook with a desktop or laptop from a new location that you had not logged in to in the period before the rental period.",
+        "Login to Business Manager for any reason."
       ]
     },
     "limited_liability": {
-      "title": "Limitación de responsabilidad",
+      "title": "Limitation of liability",
       "p": [
-        "El Titular reconoce que la Compañía no se hace responsable de las incidencias que pueda sufrir la cuenta por motivos ajenos a su control y acción. El Titular declara conocer los riesgos, peligros, así como cualquier otra eventualidad y / o incidente que conlleve la exposición y uso de un perfil personal y / o profesional en una Red Social que opera a través de Internet; asimismo, renuncia a cualquier demanda,          administrativa, procesal penal, así como a cualquier indemnización.",
-        "Sin perjuicio de los daños en los que pueda incurrir, la      responsabilidad total de la Compañía y cualquiera de sus proveedores bajo cualquier disposición de estos Términos y Su recurso exclusivo para todo lo anterior se limitará al monto realmente pagado por Usted a través del Servicio.",
-        "En la máxima medida permitida por la ley aplicable, en ningún caso la Compañía o sus proveedores serán responsables de ningún daño especial, incidental, indirecto o consecuente (incluidos, entre otros, daños por lucro cesante, pérdida de datos o otra información, por interrupción del negocio, por lesiones personales, pérdida de privacidad que surja de o de alguna manera relacionada con el uso o la imposibilidad de usar el Servicio, software de terceros y / o hardware de terceros utilizado con el Servicio, o de lo contrario en relación con cualquier disposición de estos Términos), incluso si la Compañía o cualquier proveedor han sido informados de la posibilidad de tales daños e incluso si el recurso no cumple con su propósito esencial.",
-        "Algunos estados no permiten la exclusión de garantías implícitas o la limitación de responsabilidad por daños incidentales o consecuentes, lo que significa que algunas de las limitaciones anteriores pueden no aplicarse. En estos estados, la responsabilidad de cada parte estará limitada en la mayor medida permitida por la ley."
+        "The Holder acknowledges that the Company is not responsible for incidents that the account may suffer for reasons beyond its control and action. The Holder declares to know the risks, dangers, as well as any other eventuality and / or incident that the exposure entails and use of a personal and / or professional profile in a Social Network that operates through the Internet; likewise, it waives any administrative, criminal procedural claim, as well as any compensation.",
+        "Without prejudice to any damages that may incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and your exclusive remedy for all of the above will be limited to the amount actually paid by you through the Service. ",
+        "To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages (including, but not limited to, loss of profits, loss of data or other information, due to business interruption, personal injury, loss of privacy arising out of or in any way related to the use or inability to use the Service, third party software and / or third party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any provider has been informed of the possibility of such damages and even if the remedy does not fulfill its essential purpose. ",
+        "Some states do not allow the exclusion of implied warranties or the limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the fullest extent permitted. by the law."
       ]
     },
     "disclaimer": {
-      "title": "Limitación de responsabilidad",
+      "title": "Limitation of liability",
       "p": [
-        "El Servicio se le proporciona “TAL CUAL” y “SEGÚN DISPONIBILIDAD” con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
-        "Sin perjuicio de lo anterior, ni la Compañía ni ninguno de los proveedores de la compañía hace ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto al funcionamiento o disponibilidad del Servicio, o la información, contenido y materiales o productos. incluido en el mismo; (ii) que el Servicio será ininterrumpido o libre de errores; (iii) en cuanto a la precisión, confiabilidad o vigencia de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados desde o en nombre de la Compañía están libres de virus, scripts, troyanos, gusanos, malware, bombas de tiempo u otros componentes dañinos.",
-        "Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones sobre los derechos legales aplicables de un consumidor, por lo que algunas o todas las exclusiones y limitaciones anteriores pueden no aplicarse a usted. Pero en tal caso, las exclusiones y limitaciones establecidas en esta sección se aplicarán en la mayor medida exigible según la ley aplicable."
+        "The Service is provided to you \"JUST AS IT IS\" and \"AS IT IS AVAILABLE\" with all faults and defects without warranty of any kind. To the maximum extent permitted by applicable law, the Company, on its own behalf and on behalf of its Affiliates and its respective licensors and service providers, expressly disclaims all warranties, whether express, implied, legal or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise from the course of deal, course of performance, use, or business practice. Without limitation to the foregoing, the Company makes no warranty or commitment, and makes no representation of any kind that Service will meet Your requirements, achieve intended results, be compatible or work with any other software, application, system or service, operate without interruption, comply with the es standards of performance or reliability or be free of errors or that any errors or defects can or will be corrected. ",
+        "Notwithstanding the foregoing, neither the Company nor any of the company's suppliers makes any representation or warranty of any kind, express or implied: (i) regarding the operation or availability of the Service, or the information, content and materials or products included therein; (ii) that the Service will be uninterrupted or error-free; (iii) regarding the accuracy, reliability or validity of any information or content provided through the Service; or (iv) that the Service, its servers, content or emails sent from or on behalf of the Company are free of viruses, scripts, Trojans, worms, malware, time bombs or other harmful components. ",
+        "Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on the applicable legal rights of a consumer, so some or all of the above exclusions and limitations may not apply to you. But in such case, the stated exclusions and limitations in this section will be applied to the fullest extent required by applicable law. "
       ]
     },
     "dispute_resolution": {
-      "title": "Resolución de disputas",
+      "title": "Dispute resolution",
       "p": [
-        "Si tiene algún problema o disputa sobre el Servicio, acepta primero intentar resolver la disputa de manera informal comunicándose con la Compañía.",
-        "Para usuarios de la Unión Europea (UE).",
-        "Si es un consumidor de la Unión Europea, se beneficiará de las disposiciones obligatorias de la ley del país en el que reside."
+        "If you have a problem or dispute about the Service, you agree to first try to resolve the dispute informally by contacting the Company.",
+        "For users in the European Union (EU).",
+        "If you are a consumer in the European Union, you will benefit from the mandatory provisions of the law of the country in which you reside."
       ]
     },
     "severability_saiver": {
-      "title": "Divisibilidad y renuncia",
+      "title": "Severability and waiver",
       "p": [
         {
           "tag": "i",
-          "message": "Divisibilidad"
+          "message": "Divisibility"
         },
         {
           "tag": "p",
-          "message": "Si alguna disposición de estos Términos se considera inaplicable o inválida, dicha disposición se cambiará e interpretará para lograr los objetivos de dicha disposición en la mayor medida posible según la ley aplicable y las disposiciones restantes continuarán en pleno vigor y efecto."
+          "message": "If any provision of these Terms is found to be unenforceable or invalid, that provision will be changed and interpreted to achieve the objectives of that provision to the fullest extent possible under applicable law and the remaining provisions will continue in full force and effect."
         },
         {
           "tag": "i",
-          "message": "Renuncia"
+          "message": "Waiver"
         },
         {
           "tag": "p",
-          "message": "Salvo lo dispuesto en el presente, el hecho de no ejercer un derecho o exigir el cumplimiento de una obligación en virtud de estos Términos no afectará la capacidad de una parte para ejercer dicho derecho o requerir dicho cumplimiento en cualquier momento posterior, ni la renuncia a un incumplimiento constituirá una renuncia a cualquier incumplimiento posterior."
+          "message": "Except as provided herein, failure to exercise a right or require compliance with an obligation under these Terms will not affect the ability of a party to exercise said right or require such compliance at any later time, nor will the waiver of a breach will constitute a waiver of any subsequent breach."
         }
       ]
     },
     "interpretation": {
-      "title": "Interpretación de traducción",
+      "title": "Translation interpretation",
       "p": [
-        "Estos Términos y Condiciones pueden haberse traducido si los hemos puesto a su disposición en nuestro Servicio. Usted acepta que el texto original en inglés prevalecerá en caso de disputa Usted acepta que el texto original en inglés prevalecerá en caso de disputa."
+        "These Terms and Conditions may have been translated if we have made them available to you on our Service. You agree that the original English text shall prevail in the event of a dispute You agree that the original English text shall prevail in the event of a dispute."
       ]
     },
     "change_terms": {
-      "title": "Cambios a estos términos y condiciones",
+      "title": "Changes to these terms and conditions",
       "p": [
-        "Nos reservamos el derecho, a nuestro exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es importante, haremos todos los esfuerzos razonables para proporcionar un aviso de al menos 30 días antes de que entren en vigor los nuevos términos. Lo que constituye un cambio material se determinará a nuestro exclusivo criterio.",
-        "Al continuar accediendo o utilizando Nuestro Servicio después de que esas revisiones entren en vigencia, usted acepta estar sujeto a los términos revisados. Si no está de acuerdo con los nuevos términos, en su totalidad o en parte, deje de usar el sitio web y el Servicio."
+        "We reserve the right, in our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will use reasonable efforts to provide at least 30 days notice before the new terms take effect. What constitutes a material change will be determined in our sole discretion. ",
+        "By continuing to access or use Our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, in whole or in part, stop using the website and the service."
       ]
     },
     "contact": {
-      "title": "Contáctenos",
+      "title": "Contact Us",
       "p": [
-        "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
+        "If you have any questions about these Terms and Conditions, you can contact us"
       ]
     }
   },
   "referral_program": {
     "title": "Conviértete en un Referente",
     "info": {
-      "0": "Regístrate aquí",
-      "1": "incrementa tus ganacias seriamente y obtén",
-      "2": "5 dólares",
-      "3": "por referido"
+      "0": "Register here",
+      "1": "seriously increase your earnings and get",
+      "2": "5 dollars",
+      "3": "per referral"
     },
     "list": {
       "p_1": {
-        "0": "Es muy fácil, solo tiene que compartir el enlace de nuestra página con tus amigos o conocidos y asegurarte que en el formulario de registro agreguen tu código de referente en la casilla",
-        "1": "“Si tienes referente añade aquí su código”."
+        "0": "It's very easy, you just have to share the link of our page with your friends or acquaintances and make sure that in the registration form they add your reference code in the box",
+        "1": "\"If you have a reference, add your code here.\""
       },
       "p_2": {
-        "0": "Para obtener tu código",
-        "1": "sigue este enlace",
-        "2": "y completa el",
-        "3": "formulario",
-        "4": ". En el podrás solicitar un código personalizado, nuestro equipo te confirmará en breve el registro de tu nuevo código en nuestro sistema."
+        "0": "To get your code",
+        "1": "follow this link",
+        "2": "and complete the",
+        "3": "form",
+        "4": ". In which you can request a personalized code, our team will confirm shortly the registration of your new code in our system."
       },
       "p_3": {
-        "0": "Si tu perfil no ha sido apto para registrarse con nosotros, no te preocupes, aún puedes ganar dinero presentándonos amigos o conocidos, simplemente regístrate en",
-        "1": "el siguiente formulario",
-        "2": "y nuestro equipo confirmará su registro."
+        "0": "If your profile has not been eligible to register with us, don't worry, you can still earn money by introducing us to friends or acquaintances, simply register at",
+        "1": "the following form",
+        "2": "and our team will confirm your registration."
       },
       "p_4": {
-        "0": "El pago de referidos se realiza siempre a fin de mes, nuestro equipo se comunicará contigo para confirmar el número de referidos registrados por tu parte y realizar el pago correspondiente."
+        "0": "The payment of referrals is always made at the end of the month, our team will contact you to confirm the number of referrals registered by you and make the corresponding payment."
       },
       "p_5": {
-        "0": "¡Importante!",
-        "1": "Asegúrete de que tus referidos siempre usen tu número código al completar el formulario, para así saber que son referidos tuyos y podamos generar tu próximo pago."
+        "0": "Important!",
+        "1": "Make sure your referrals always use your code number when completing the form, in order to know that they are your referrals and we can generate your next payment."
       }
     },
-    "register_btn": "Regístrate aquí",
-    "tiny": "Por cada persona que registre su perfil con nosotros y sea válido"
+    "register_btn": "Register here",
+    "tiny": "For each person who registers her profile with us and is valid"
   },
   "faq": {
-    "title": "Preguntas frecuentes",
+    "title": "Frequently asked questions",
     "questions": [
       {
-        "question": "¿Por qué no creamos nuestros propios perfiles?",
+        "question": "Why don't we create our own profiles?",
         "answer": [
-          "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB."
+          "We are only using your FB ad account, which has a separate login from your normal FB profile."
         ]
       },
       {
-        "question": "¿Cómo sé que no se realizarán publicaciones en mi perfil y que mi información no se compartirá?",
+        "question": "How do I know that my profile will not be published and that my information will not be shared?",
         "answer": [
-          "Solo estamos usando tu cuenta publicitaria de FB, que tiene un inicio de sesión independiente de tu perfil normal de FB.",
-          "Facebook es una entidad corporativa protegida, que protege la actividad y los derechos de sus usuarios. Por lo tanto, hay una clara separación entre tu cuenta personal, y la de empresa (publicidad).",
-          "Asi que puedes estar seguro de que tus amigos no recibirán spam ni veran tus anuncios o actividad publicitaria."
+          "We are only using your FB ad account, which has a separate login from your normal FB profile.",
+          "Facebook is a protected corporate entity, which protects the activity and rights of its users. Therefore, there is a clear separation between your personal account, and that of the company (advertising).",
+          "So you can be sure that your friends will not receive spam or see your ads or advertising activity."
         ]
       },
       {
-        "question": "¿Es esto una estafa? ¿Me timarán?",
+        "question": "Is this a scam? Will I be scammed?",
         "answer": [
-          "No, esto no es una estafa y no te timaremos. Somos publicistas online que utilizan cuentas de Facebook para configurar anuncios de pago. Facebook limita el número de cuentas publicitarias que recibe cada usuario. Como esta es nuestra principal actividad comercial, estamos buscando adquirir el mayor número de cuentas para poder publicar más anuncios. Conectamos la tarjeta de crédito de nuestra propia empresa a la cuenta y todos los pagos de la publicidad de Facebook pasarán por ella. No corres ningún riesgo."
+          "No, this is not a scam and we will not scam you. We are online advertisers who use Facebook accounts to set up paid ads. Facebook limits the number of ad accounts each user receives. As this is our main business activity, we are looking to acquire the largest number of accounts to be able to run more ads. We connect our own company's credit card to the account and all payments for Facebook advertising will go through it. You are not at risk. "
         ]
       },
       {
-        "question": "¿Estamos rompiendo las reglas?",
+        "question": "Are we breaking the rules?",
         "answer": [
-          "No. Vender tu perfil va en contra de la política de Facebook. Nosotros no compramos perfiles, simplemente los alquilamos para acceder y utilizar las cuentas publicitarias que no se utilizan."
+          "No. Selling your profile is against Facebook policy. We do not buy profiles, we simply rent them to access and use ad accounts that are not used."
         ]
       }
     ],
     "account_secure": {
-      "title": "Su cuenta está segura, por favor sepa que:",
+      "title": "Your account is safe, please know that:",
       "list": [
-        "Usamos tu perfil solo para iniciar sesión en Facebook Business Manager, (https://business.facebook.com/) que es completamente independiente de su perfil. La mayoría de los usuarios ni siquiera saben que existe.",
-        "Puedes seguir usando tu cuenta mientras probamos y publicamos anuncios.",
-        "Nadie sabrá que los anuncios se están publicando y tus amigos nunca verán nada (a menos que tu se lo cuentes y les muestres tus nuevas ganancias )",
-        "Nada se publicará jamás en tu muro.",
-        "Nunca miramos tu perfil personal, mensajes o cualquiera otra actividad, solo usamos la cuenta comercial que creamos.",
-        "Nunca venderemos, transferiremos ni publicaremos tu información personal."
+        "We use your profile only to log into Facebook Business Manager, (https://business.facebook.com/) which is completely separate from your profile. Most users don't even know it exists.",
+        "You can continue to use your account while we test and serve ads.",
+        "No one will know that the ads are running and your friends will never see anything (unless you tell them and show them your new earnings)",
+        "Nothing will ever be posted on your wall.",
+        "We never look at your personal profile, messages or any other activity, we only use the business account we created.",
+        "We will never sell, transfer or publish your personal information."
       ]
     }
   },
   "contact": {
     "form": {
-      "title": "Déjanos un mensaje",
-      "name": "Tu nombre",
-      "name_error_requiered": "Por favor, coloque su nombre",
-      "email": "Tu email",
-      "email_error_required": "Por favor, coloque su email",
-      "email_error_pattern": "Por favor, registre un email valido",
-      "message": "Tu mensaje",
-      "message_error_required": "Por favor, escriba un mensaje",
-      "send_button": "Enviar"
+      "title": "Leave us a message",
+      "name": "Your name",
+      "name_error_requiered": "Please enter your name",
+      "email": "Your email",
+      "email_error_required": "Please enter your email",
+      "email_error_pattern": "Please register a valid email",
+      "message": "Your message",
+      "message_error_required": "Please write a message",
+      "send_button": "Send"
     },
     "side": {
-      "title": "Contáctanos",
+      "title": "Contact us",
       "info": [
-        "¿Cómo podemos ayudarte? ¿Necesitas ayuda con tus pagos?",
-        "Para cualquier consulta relacionada con pagos o su cuenta, por favor contacte con el gestor local de su zona.",
-        "También puedes consultar dudas en nuestro grupo de Telegram,"
+        "How can we help you? Do you need help with your payments?",
+        "For any questions related to payments or your account, please contact the local manager in your area.",
+        "You can also ask questions in our Telegram group,"
       ],
-      "join_button": "Únete al grupo"
+      "join_button": "Join the group"
     }
   },
   "login": {
-    "home_link": "Inicio",
-    "title": "Iniciar sesión",
+    "home_link": "Home",
+    "title": "Login",
     "email": "Email",
-    "email_error_required": "Por favor, llenar este campo",
-    "email_error_min": "Mínimo 6 caracteres",
-    "email_error_pattern": "Ingrese un email válido",
-    "password": "Contraseña",
-    "password_error_required": "Por favor, llenar este campo",
-    "password_error_min": "Mínimo 8 caracteres",
-    "password_error_max": "Máximo 15 caracteres",
-    "email_verified_error": "Tu cuenta no está verificada. Haz click aquí para recibir un nuevo correo de confirmación",
+    "email_error_required": "Please fill this field",
+    "email_error_min": "Minimum 6 characters",
+    "email_error_pattern": "Please enter a valid email",
+    "password": "Password",
+    "password_error_required": "Please fill this field",
+    "password_error_min": "Minimum 8 characters",
+    "password_error_max": "Maximum 15 characters",
+    "email_verified_error": "Your account is not verified. Click here to receive a new confirmation email",
     "email_confirmation_sent_error": "The email has already been sent",
-    "no_account": "¿No tienes un usuario? Regístrate aquí",
-    "forgot_password": "¿No recuerdas tu contraseña? Haz click aquí",
-    "login_button": "Inciar sesión"
+    "no_account": "Don't have a user? Register here",
+    "forgot_password": "Don't you remember your password? Click here",
+    "login_button": "Start session"
   },
   "reset_password": {
-    "login_link": "Iniciar sesión",
-    "title": "Cambiar contraseña",
-    "password": "Contraseña",
-    "password_error_required": "Por favor, llenar este campo",
-    "password_error_min": "Mínimo 6 caracteres",
-    "password_confirmation": "Confirmar contraseña",
-    "password_confirmation_error_required": "Por favor, llenar este campo",
-    "password_confirmation_error_same": "Las contraseñas no coinciden",
-    "reset_confirmation_message": "Su contraseña ha sido modificada",
-    "reset_password_confirmation": "La URL para restablecer su contraseña es incorrecta o ha expirado",
-    "submit_button": "Cambiar contraseña",
-    "submit_button_waiting": "Esperando"
+    "login_link": "Login",
+    "title": "Change password",
+    "password": "Password",
+    "password_error_required": "Please fill this field",
+    "password_error_min": "Minimum 6 characters",
+    "password_confirmation": "Confirm password",
+    "password_confirmation_error_required": "Please fill this field",
+    "password_confirmation_error_same": "Passwords do not match",
+    "reset_confirmation_message": "Your password has been changed",
+    "reset_password_confirmation": "The URL to reset your password is incorrect or has expired",
+    "submit_button": "Change password",
+    "submit_button_waiting": "Waiting"
   },
   "confirmation": {
     "paypal": {
-      "message": "Tu email de PayPal esta siendo verificado",
-      "confirmation_message": "Tu email de Paypal ya está verificado",
-      "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
+      "message": "Your PayPal email is being verified",
+      "confirmation_message": "Your Paypal email is already verified",
+      "error": "A problem has occurred, try to refresh the page or send the confirmation email again"
     },
     "email": {
-      "message": "Tu email esta siendo verificado",
-      "confirmation_message": "Tu email ya esta verificado",
-      "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
+      "message": "Your email is being verified",
+      "confirmation_message": "Your email is already verified",
+      "error": "A problem has occurred, try to refresh the page or send the confirmation email again"
     }
   },
   "forgot_password": {
-    "login_link": "Iniciar sesión",
-    "title": "Restablecer contraseña",
+    "login_link": "Login",
+    "title": "Reset password",
     "email": "Email",
-    "email_error_required": "Por favor, llenar este campo",
-    "email_error_min": "Mínimo 6 caracteres",
-    "email_sent": "El correo ha sido enviado",
-    "submit_button": "Enviar email",
-    "submit_button_waiting": "Esperando"
+    "email_error_required": "Please fill this field",
+    "email_error_min": "Minimum 6 characters",
+    "email_sent": "The email has been sent",
+    "submit_button": "Send email",
+    "submit_button_waiting": "Waiting"
   },
   "no_valid": {
     "p_1": {
-      "0": "Lo sentimos. Su perfil de Facebook no es un candidato válido para nuestro programa de alquiler."
+      "0": "Sorry. Your Facebook profile is not a valid candidate for our rental program."
     },
     "p_2": {
-      "0": "Pero no se preocupe, todavía tiene la opción de ganar dinero con nostros.",
-      "1": "Haga click aquí",
-      "2": "y empiece a ganar dinero por cada amigo que nos presente y se una."
+      "0": "But don't worry, you still have the option to earn money with us.",
+      "1": "Click here",
+      "2": "and start earning money for every friend who introduces us and joins us."
     }
   },
-  "not_found": "Página no encontrada",
-  "loading": "Cargando . . .",
+  "not_found": "Page not found",
+  "loading": "Loading . . .",
   "navbar": {
-    "home": "Inicio",
-    "how_it_works": "Cómo funciona",
-    "referral_program": "Programa de referidos",
+    "home": "Home",
+    "how_it_works": "How it works",
+    "referral_program": "Referral program",
     "faq": "FAQ",
-    "contact": "Contacto",
-    "join_now": "Únete ahora",
-    "login": "Iniciar sesión"
+    "contact": "Contact",
+    "join_now": "Join now",
+    "login": "Login"
   },
   "footer": {
-    "contact": "Contacto",
-    "terms_conditions": "Términos y condiciones de uso",
+    "contact": "Contact",
+    "terms_conditions": "Terms and conditions of use",
     "copyright": {
-      "0": "Derechos de autor",
-      "1": "Todos los derechos reservados"
+      "0": "Copyright",
+      "1": "All rights reserved"
     },
-    "detach": "Este sitio no forma parte de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. Facebook es un marca registrada de Facebook Inc."
+    "detach": "This site is not part of Facebook or Facebook Inc. Furthermore, this site is NOT endorsed by Facebook in any way. Facebook is a registered trademark of Facebook Inc."
   },
   "dashboard_navbar": {
-    "payments": "Pagos",
-    "referrals": "Referidos",
-    "profile": "Perfil",
-    "users": "Usuarios",
-    "orders": "Órdenes"
+    "payments": "Payments",
+    "referrals": "Referrals",
+    "profile": "Profile",
+    "users": "Users",
+    "orders": "Orders"
   },
   "dashboard_profile": {
-    "hi": "Hola",
-    "logout": "Cerrar sesión"
+    "hi": "hello",
+    "logout": "Close session"
   },
   "payments": {
     "paypal_email_verified": {
-      "0": "Tu email de Paypal no ha sido verificado. Por favor,",
-      "1": "HAZ CLICK AQUI",
-      "2": "para enviar un correo de confirmación."
+      "0": "Your PayPal email has not been verified. Please,",
+      "1": "CLICK HERE",
+      "2": "to send a confirmation email."
     },
     "email_sent": {
-      "0": "Un email ha sido enviado a tu email de Paypal. Revísalo y verifica tu cuenta de Paypal. Si no te ha llegado el mensaje",
-      "1": "HAZ CLICK AQUI."
+      "0": "An email has been sent to your Paypal email. Check it and verify your Paypal account. If the message has not reached you",
+      "1": "CLICK HERE."
     },
-    "title": "Pagos",
-    "concept": "Concepto",
+    "title": "Payments",
+    "concept": "Concept",
     "name": "Name",
-    "user": "Usuario",
-    "payment_method": "Método de pago",
-    "payment_date": "Fecha de pago",
-    "status": "Estado",
-    "amount": "Monto"
+    "user": "User",
+    "payment_method": "Payment method",
+    "payment_date": "Payment date",
+    "status": "Status",
+    "amount": "Amount"
   },
   "referrals": {
-    "title": "Referidos",
-    "name": "Nombre",
+    "title": "Referrals",
+    "name": "Name",
     "email": "Email",
-    "creation_date": "Fecha de creación",
-    "status": "Estado",
-    "observation": "Observación",
-    "update": "Actualizar",
-    "accept": "Aceptar",
-    "cancel": "Cancelar"
+    "creation_date": "Creation date",
+    "status": "Status",
+    "observation": "Observation",
+    "update": "Update",
+    "accept": "Accept",
+    "cancel": "Cancel"
   },
   "profile": {
     "profile": {
       "title": "Profile",
-      "first_name": "Nombre",
-      "last_name": "Apellidos",
+      "first_name": "Name",
+      "last_name": "Surname",
       "email": "Email",
-      "birthday": "Fecha de nacimiento",
-      "phone": "Teléfono",
-      "referral_code": "Código de referido",
-      "referral_link": "Link de referido",
-      "status": "Estado",
-      "payment_method": "Método de pago",
-      "paypal_email": "Email de paypal",
-      "holder_name": "Nombre del titular",
-      "bank_agency": "Agencia bancaria",
-      "bank_account": "Cuenta bancaria"
+      "birthday": "Date of birth",
+      "phone": "Telephone",
+      "referral_code": "Referral code",
+      "referral_link": "Referral link",
+      "status": "Status",
+      "payment_method": "Payment method",
+      "paypal_email": "Paypal email",
+      "holder_name": "Holder name",
+      "bank_agency": "Bank agency",
+      "bank_account": "Bank account"
     },
     "configuration": {
-      "title": "Configuración",
-      "forgot_password_link": "Restablecer contraseña",
-      "paypal_email_verified": "Confirmar email de Paypal",
+      "title": "Settings",
+      "forgot_password_link": "Reset password",
+      "paypal_email_verified": "Confirm email from Paypal",
       "paypal_email_sent": {
-        "0": "Un email ha sido enviado a ",
-        "1": "Revisa tu email y confirma tu email de Paypal"
+        "0": "An email has been sent to",
+        "1": "Check your email and confirm your Paypal email"
       },
-      "change_paypal_email": "Cambiar de email de Paypal"
+      "change_paypal_email": "Change PayPal email"
     }
   },
   "users": {
-    "name": "Nombre",
-    "status": "Estado",
-    "user_type": "Tipo de usuario",
+    "name": "Name",
+    "status": "Status",
+    "user_type": "User type",
     "email": "Email",
-    "country": "País",
-    "phone": "Teléfono",
+    "country": "Country",
+    "phone": "Telephone",
     "user_row": {
-      "payments": "Pagos",
-      "more_information": "Más información",
-      "address": "Dirección",
-      "city": "Ciudad",
-      "birthday": "Fecha de nacimiento",
-      "creation_date": "Fecha de creación",
+      "payments": "Payments",
+      "more_information": "More information",
+      "address": "Address",
+      "city": "City",
+      "birthday": "Date of birth",
+      "creation_date": "Creation date",
       "ip": "IP",
-      "payment_method": "Método de pago",
-      "paypal_email": "Email de paypal",
-      "holder_name": "Nombre del titular",
-      "bank_account_code": "Código de cuenta bancaria",
-      "bank_agency": "Agencia bancaria",
-      "referral": "Referido",
-      "old_referral_code": "Código de referido antiguo",
-      "referral_code": "Código de referido",
-      "zip_code": "Código postal"
+      "payment_method": "Payment method",
+      "paypal_email": "Paypal email",
+      "holder_name": "Holder name",
+      "bank_account_code": "Bank account code",
+      "bank_agency": "Bank agency",
+      "referral": "Referral",
+      "old_referral_code": "Old referral code",
+      "referral_code": "Referral code",
+      "zip_code": "Zip code"
     },
     "payments": {
-      "concept": "Concepto",
-      "payment_method": "Método de pago",
-      "payment_date": "Fecha de pago",
-      "status": "Estado",
-      "amount": "Monto"
+      "concept": "Concept",
+      "payment_method": "Payment method",
+      "payment_date": "Payment date",
+      "status": "Status",
+      "amount": "Amount"
     }
   },
   "orders": {
-    "title": "Órdenes",
-    "create_order_button": "Crear orden",
-    "concept": "Concepto",
-    "status": "Estado",
-    "creation_date": "Fecha de creación",
-    "payments": "Pagos",
-    "update": "Actualizar",
-    "update_button": "Actualizar orden",
-    "approve_button": "Aprobar",
-    "reject_button": "Rechazar",
-    "cancel_button": "Cancelar",
+    "title": "Orders",
+    "create_order_button": "Create order",
+    "concept": "Concept",
+    "status": "Status",
+    "creation_date": "Creation date",
+    "payments": "Payments",
+    "update": "Update",
+    "update_button": "Update order",
+    "approve_button": "Approve",
+    "reject_button": "Reject",
+    "cancel_button": "Cancel",
     "create_order": {
-      "title": "Crear orden",
-      "create_order_button": "Crear orden",
-      "name": "Nombre",
+      "title": "Create order",
+      "create_order_button": "Create order",
+      "name": "Name",
       "email": "Email",
-      "payment_method": "Método de pago",
-      "concept": "Concepto",
-      "amount": "Monto",
-      "confirm_order_button": "Confirmar orden"
+      "payment_method": "Payment method",
+      "concept": "Concept",
+      "amount": "Amount",
+      "confirm_order_button": "Confirm order"
     },
     "payment_table": {
-      "name": "Nombre",
-      "concept": "Concepto",
-      "payment_method": "Método de pago",
-      "payment_date": "Fecha de pago",
-      "status": "Estado",
-      "amount": "Monto"
+      "name": "Name",
+      "concept": "Concept",
+      "payment_method": "Payment method",
+      "payment_date": "Payment date",
+      "status": "Status",
+      "amount": "Amount"
     }
   },
   "actions": {
-    "title": "Acciones",
-    "create_action_button": "Crear acción",
-    "action": "Acción",
-    "creation_date": "Fecha de creación",
-    "status": "Estado",
-    "target": "Objetivo",
-    "details": "Detalles",
+    "title": "Actions",
+    "create_action_button": "Create action",
+    "action": "Action",
+    "creation_date": "Creation date",
+    "status": "Status",
+    "target": "Target",
+    "details": "Details",
     "create_action": {
-      "title": "Crear orden",
-      "create_action_button": "Crear acción"
+      "title": "Create order",
+      "create_action_button": "Create action"
     },
     "change_user_status": {
-      "none": "Ninguno",
-      "fist_name": "Nombre",
-      "last_name": "Apellido",
-      "referral_code": "Codigo de referido",
-      "filter": "Filtro",
-      "name": "Nombre",
-      "users_selected": "Usuarios selecionados",
-      "send": "Enviar",
-      "status": "Estado",
-      "observation": "Observación"
+      "none": "None",
+      "fist_name": "Name",
+      "last_name": "Surname",
+      "referral_code": "Referral code",
+      "filter": "Filter",
+      "name": "Name",
+      "users_selected": "Selected users",
+      "send": "Send",
+      "status": "Status",
+      "observation": "Observation"
     }
   },
-
   "referral_registration": {
-    "title": "¡Conviértete en un Referidor!",
-    "info": "¡Completa este sencillo cuestionario y empieza a ganar dinero invitando a tus amigos!",
-    "no_more_steps": "No hay mas pasos",
+    "title": "Become a Referrer!",
+    "info": "Complete this simple questionnaire and start earning money by inviting your friends!",
+    "no_more_steps": "There are no more steps",
     "buttons": {
-      "previous": "Anterior",
-      "next": "Siguiente",
-      "send": "Enviar",
-      "sending": "Enviando"
+      "previous": "Previous",
+      "next": "Next",
+      "send": "Send",
+      "sending": "Sending"
     },
     "locations": {
-      "title": "Formulario de registro",
-      "personal_information": "Datos personales",
-      "confirmation_payment_method": "Confirmación y método de pago",
-      "congratulations": "Felicitaciones"
+      "title": "Registration form",
+      "personal_information": "Personal data",
+      "confirmation_payment_method": "Confirmation and payment method",
+      "congratulations": "Congratulations"
     },
     "step_one": {
       "required_field": "This field is required",
-      "first_name": "Su nombre",
-      "first_name_error_pattern": "El nombre contiene caracteres no permitidos",
-      "last_name": "Sus apellidos",
-      "last_name_error_pattern": "El apellido contiene caracteres no permitidos",
-      "address": "Su dirección",
-      "country": "Su país de residencia",
-      "city": "Tu ciudad de residencia",
-      "zip_code": "Código postal",
-      "birthday": "Fecha de nacimiento",
-      "birthday_error_old_enough": "Debes ser mayor de 18 años",
-      "phone": "Su telefono",
-      "phone_error_pattern": "Ingrese un numero de celular válido",
-      "email": "Su email",
-      "email_error_pattern": "Ingrese un email valido",
-      "password": "Ingrese una contraseña",
-      "password_error_min": "Mínimo 8 caracteres",
-      "password_confirmation": "Confirme su contraseña",
-      "password_confirmation_error_same": "Las contraseñas no coinciden"
+      "first_name": "Your name",
+      "first_name_error_pattern": "The name contains illegal characters",
+      "last_name": "Your surnames",
+      "last_name_error_pattern": "The last name contains illegal characters",
+      "address": "Your address",
+      "country": "Your country of residence",
+      "city": "Your city of residence",
+      "zip_code": "Zip code",
+      "birthday": "Date of birth",
+      "birthday_error_old_enough": "You must be over 18 years old",
+      "phone": "Your phone",
+      "phone_error_pattern": "Please enter a valid cell phone number",
+      "email": "Your email",
+      "email_error_pattern": "Please enter a valid email",
+      "password": "Enter a password",
+      "password_error_min": "Minimum 8 characters",
+      "password_confirmation": "Confirm your password",
+      "password_confirmation_error_same": "Passwords do not match"
     },
     "step_two": {
       "paymentMethod": {
-        "question": "Método de pago",
+        "question": "Payment method",
         "option_1": "PayPal",
-        "option_2": "Cuenta bancaria - Solo para Perú",
-        "error_1": "Por favor, seleccione un método de pago"
+        "option_2": "Bank account - Only for Peru",
+        "error_1": "Please select a payment method"
       },
       "paypalEmail": {
-        "question": "Email de Paypal",
-        "error_1": "Por favor, indique su email de paypal",
-        "error_2": "Ingrese un email valido",
-        "error_3": "Los email de paypal cuenta con por lo menos 6 caracteres"
+        "question": "Paypal email",
+        "error_1": "Please enter your paypal email",
+        "error_2": "Enter a valid email",
+        "error_3": "Paypal emails have at least 6 characters"
       },
       "paypalEmailConfirmation": {
-        "question": "Confirma tu email de Paypal",
-        "error_1": "Por favor, confirme su email de paypal",
-        "error_2": "Lo correos no coinciden"
+        "question": "Confirm your Paypal email",
+        "error_1": "Please confirm your paypal email",
+        "error_2": "The emails do not match"
       },
       "paypalMessage": {
-        "p_1": "Verifique que su correo Paypal es correcto al 100%. No nos hacemos responsables por datos incorrectos."
+        "p_1": "Verify that your Paypal email is 100% correct. We are not responsible for incorrect information."
       },
       "holderName": {
-        "question": "Nombre del titular",
-        "error_1": "Por favor, ingrese el nombre del titular"
+        "question": "Name of the holder",
+        "error_1": "Please enter the name of the holder"
       },
       "bankAngency": {
-        "question": "Agencia bancaria",
-        "error_1": "Por favor, ingrese la agencia bancaria"
+        "question": "Banking agency",
+        "error_1": "Please enter the bank agency"
       },
       "bankAccountCode": {
-        "question": "Código de Cuento Interbancaria",
-        "error_1": "Por favor, ingrese el código de cuenta interbancaria",
-        "error_2": "El código solo debe contener números",
-        "error_3": "El código debe contar con 20 dígitos"
+        "question": "Interbank Account Code",
+        "error_1": "Please enter the interbank account code",
+        "error_2": "The code should only contain numbers",
+        "error_3": "The code must have 20 digits"
       },
       "bankMessage": {
-        "p_1": "Solo válido para CCI peruano. Verifique que su CCI es 100% correcto. No nos hacemos responsables de datos incorrectos."
+        "p_1": "Only valid for Peruvian CCI. Verify that your CCI is 100% correct. We are not responsible for incorrect data."
       },
       "documentImage": {
-        "question": "Prueba de identidad",
-        "error_1": "Por favor, ingrese una foto confirmando su identidad",
-        "error_2": "El archivo puede pesar máximo 2mb",
-        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
-        "message": "Envía una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento. (No modificar digitalmente) (Puedes usar, DNI, pasaporte o licencia de conducir)."
+        "question": "Proof of identity",
+        "error_1": "Please enter a photo confirming your identity",
+        "error_2": "The file can be maximum 2mb",
+        "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "message": "Send a photo of your document in high resolution and legible, you can cover any detail you want, except the photo, full name and date of birth. (Do not modify digitally) (You can use, ID, passport or driver's license)."
       },
-      "old_referral_code": "Codigo de referente actual",
-      "old_referral_code_message": "Si ya eres un referente nuestro, por favor introduce el codigo que utilizás actualmente para que todos tus referidos sigan asignados a ti. Gracias.",
+      "old_referral_code": "Current reference code",
+      "old_referral_code_message": "If you are already a referrer of ours, please enter the code you currently use so that all your referrals are still assigned to you. Thank you.",
       "termsAndConditions": {
         "option_1": {
-          "0": "Acepto los",
-          "1": "Términos y Condiciones"
+          "0": "I accept the",
+          "1": "Terms and Conditions"
         },
-        "error_1": "Por favor, acepte los Términos y Condiciones"
+        "error_1": "Please accept the Terms and Conditions"
       },
-      "captcha_error": "Este campo es obligatorio",
-      "email_duplicate_message": "El email ya ha sido utilizado"
+      "captcha_error": "This field is required",
+      "email_duplicate_message": "The email has already been used"
     },
     "step_three": {
       "p_1": {
-        "0": "Felicitaciones por el registro.",
-        "1": "El proceso de registro no está completamente finalizado. Se le ha enviado un correo de confirmación a su correo",
-        "2": "También se le ha enviado un correo de confirmacion a su correo de Paypal"
+        "0": "Congratulations on registering.",
+        "1": "The registration process is not completely completed. A confirmation email has been sent to your email",
+        "2": "A confirmation email has also been sent to your Paypal email"
       },
       "p_2": {
-        "0": "Si no te ha llegado a tu bandeja el correo de confirmacion de registro da click aquí"
+        "0": "If you have not received the registration confirmation email, click here"
       },
-      "email_confirmation": "El correo ya ha sido enviado."
+      "email_confirmation": "The email has already been sent."
     }
   }
 }

@@ -1,534 +1,538 @@
 {
   "home": {
     "banner": {
-      "headline": "¡Gana dinero con tu perfil de Facebook ¡Es un juego de niños!",
-      "sub_headline": "Sigue disfrutando de tu cuenta de Facebook como siempre y cada mes obtendrás tu dinero. Nosotros lo generamos por ti.",
-      "start_button": "Empieza a ganar dinero"
+      "headline": "Gagnez de l'argent avec votre profil Facebook ! C'est un jeu d'enfant !",
+      "sub_headline": "Continuez à profiter de votre compte Facebook comme toujours et chaque mois, vous recevrez votre argent. Nous le générons pour vous.",
+      "start_button": "Commencez à gagner de l'argent"
     },
     "process": {
       "cards": [
         {
           "number": "01",
-          "title": "Completa el formulario",
-          "info": "Te ofrecemos unirte a nuestro programa en unos pocos clics y empezar a ganar online, sin ningún esfuerzo adicional!"
+          "title": "Remplissez le formulaire",
+          "info": "Nous vous proposons de rejoindre notre programme en quelques clics et de commencer à gagner en ligne, sans effort supplémentaire !"
         },
         {
           "number": "02",
-          "title": "Espera nuestra confirmación",
-          "info": "¡La confirmación demora de 3 a 5 días hábiles!* (¡Por lo general, en 48 horas!)",
-          "disclaimer": "Después del primer inicio de sesión"
+          "title": "Attendez notre confirmation",
+          "info": "La confirmation prend 3 à 5 jours ouvrables ! * (généralement dans les 48 heures !)",
+          "disclaimer": "Après la première connexion"
         },
         {
           "number": "03",
-          "title": "Recibe pagos mensuales",
-          "info": "Mientras tu haces tu vida normal, nosotros hacemos que tu cuenta de Facebook genere ganancias para ti. !"
+          "title": "Recevoir des mensualités",
+          "info": "Pendant que vous menez votre vie normale, nous faisons en sorte que votre compte Facebook génère des bénéfices pour vous.!"
         },
         {
           "number": "04",
-          "title": "Comparte con tus amigos",
-          "info": "Comparte con tus amigos y aumenta tus ganancias. Recibirás un pago por cada nueva inscripción referida por ti. ¡Sin límites!"
+          "title": "Partagez avec vos amis",
+          "info": "Partagez avec vos amis et augmentez vos revenus. Vous recevrez un paiement pour chaque nouvelle inscription parrainée par vous. Aucune limite!"
         }
       ]
     },
     "requirements": {
-      "title": "¿Cuánto ganarás?",
-      "info": {
-        "span": "!Gana 30 dólares cada mes!",
-        "p": "Confirma que cumples los y prepara tu perfil, haz clic en botón y aprende cómo."
+      "title": "Combien gagnerez-vous ?",
+      "Info": {
+        "span": "Gagnez 30 $ chaque mois!",
+        "p": "Confirmez que vous les rencontrez et préparez votre profil, cliquez sur le bouton et découvrez comment."
       },
-      "how_it_works_btn": "¿Cómo funciona?",
-      "sub_title": "Requisitos para que el perfil sea válido",
+      "how_it_works_btn": "Comment ça marche ?",
+      "sub_title": "Exigences pour que le profil soit valide",
       "list": [
-        "Real, activo, con foto y nombre real",
-        "Con al menos 100 amigos",
-        "Al menos un año de antigüedad",
-        "Contenido apropiado",
-        "Ser mayor de edad",
-        "No debe haber sido previamente utilizado o alquilado a otras empresas para el uso de publicidad",
-        "Tener un email asociado a tu perfil",
-        "Administrador Comercial (BM) creado​",
-        "ID verificado​",
-        "2FA App Activado​"
+        "Réel, actif, avec photo et vrai nom",
+        "Avec au moins 100 amis",
+        "Au moins un an",
+        "Contenu approprié",
+        "Avoir l'âge",
+        "Il ne doit pas avoir été précédemment utilisé ou loué à d'autres sociétés à des fins publicitaires",
+        "Avoir un email associé à votre profil",
+        "Administrateur Commercial (BM) créé",
+        "Identifiant vérifié",
+        "Application 2FA activée"
       ]
     },
     "referral": {
-      "title": "Programa de referidos",
+      "title": "Programme de parrainage",
       "info": {
         "p_1": {
-          "0": "¡Tenemos un programa de referidos para ti! Si nos traes familiares o amgios puedes ganar más de",
-          "1": "1000 dólares",
-          "2": "al mes."
+          "0": "Nous avons un programme de parrainage pour vous ! Si vous nous amenez de la famille ou des amis, vous pouvez gagner plus que",
+          "1": "1000 dollars",
+          "2": "par mois."
         },
         "p_2": {
-          "0": "Activa tu código de referente y gana",
-          "1": "5 dólares",
-          "2": "por cada referido válido. ¡Sin límite!"
+          "0": "Activez votre code de parrainage et gagnez",
+          "1": "5 dollars",
+          "2": "pour chaque parrainage valide. Aucune limite!"
         }
       },
-      "register_btn": "Regístrate aquí",
+      "register_btn": "Inscrivez-vous ici",
       "tiny": {
-        "p_1": "Los planes se pagarán después de que nuestro equipo haya confirmado el perfil como válido.",
-        "p_2": "En todos los planes, nuestro equipo debe poder contactar a los propietarios para resolver cualquier eventual problema que pueda ocurrir."
+        "p_1": "Les forfaits seront payés une fois que notre équipe aura confirmé la validité du profil.",
+        "p_2": "Dans tous les plans, notre équipe doit pouvoir contacter les propriétaires pour résoudre tout problème éventuel qui pourrait survenir."
       }
     },
+
     "testimonies": {
-      "title": "¿Qué es lo que dice la gente?",
-      "info": "¡Gente que se unió a nosotros y ya está ganando dinero!",
+      "title": "Que disent les gens ?",
+      "info": "Les gens qui nous ont rejoint et gagnent déjà de l'argent!",
       "testimonies": [
         {
           "number": "1",
-          "testimony": "He colaborado con fbangel durante más de un año, no he tenido ningún problema. El dinero siempre llega a tiempo y siempre recibo respuestas a todas mis preguntas. Es genial que no tenga que hacer nada y, además, no afecta a mi perfil en absoluto. Digamos que simplemente gano dinero alquilando mi cuenta de Facebook. Se lo recomiendo a todo el mundo!",
+          "testimony": "Je collabore avec fbangel depuis plus d'un an, je n'ai eu aucun problème. L'argent est toujours à l'heure et je reçois toujours des réponses à toutes mes questions. C'est génial que je n'aie rien à faire et, en plus, cela n'affecte pas du tout mon profil. Disons que je gagne juste de l'argent en louant mon compte Facebook. Je le recommande à tout le monde ! ",
           "author": "Ana Martín",
-          "membership": "Miembro desde mayo 2019"
+          "membership": "Membre depuis mai 2019"
         },
         {
           "number": "2",
-          "testimony": "Decidí intentar ganar dinero con FbAngel, ya que me interesaba saber cómo funciona. Puedo decir que es una gran manera de tener ingresos adicionales. ¡Simplemente he tenido que rellenar el formulario Y NADA MAS! Los chicos se encargan del resto yo simplemente me limito a recoger mi dinero en mi cuenta PayPal",
+          "testimony": "J'ai décidé d'essayer de gagner de l'argent avec FbAngel, car j'étais intéressé de savoir comment cela fonctionne. Je peux dire que c'est un excellent moyen d'avoir un revenu supplémentaire. J'ai juste eu à remplir le formulaire ET RIEN D'AUTRE ! Les gars s'occupent du reste je récupère juste mon argent sur mon compte PayPal ",
           "author": "Tony Smith",
-          "membership": "Miembro desde octubre 2019"
+          "membership": "Membre depuis octobre 2019"
         },
         {
           "number": "3",
-          "testimony": "Cuando en mi país tuvimos que ir al encierro debido a covid-19, me quedé sin trabajo, y sin ingresos, una amiga me explicó que tenía un ingreso extra alquilando su facebook para anunciar publicidad, yo era un poco escéptica pero decidí probar, y la verdad es que hasta ahora no he tenido ningún problema , los pagos son siemprepuntuales, y siempre me han pagado por todos los amigos que he traído. ¡Lo recomiendo!",
+          "testimony": "Quand dans mon pays nous avons dû aller au confinement à cause du covid-19, je me suis retrouvée sans travail, et sans revenu, une amie m'a expliqué qu'elle avait un revenu d'appoint en louant son Facebook pour faire de la publicité, J'étais un peu sceptique mais j'ai décidé d'essayer, et la vérité est que jusqu'à présent je n'ai eu aucun problème, les paiements sont toujours ponctuels, et j'ai toujours été payé pour tous les amis que j'ai amenés. Je le recommande ! ",
           "author": "Alena Due",
-          "membership": "Miembro desde marzo 2020"
+          "membership": "Membre depuis mars 2020"
         }
       ]
     }
   },
   "how_it_works": {
     "how_it_works": {
-      "title": "¿Cómo funciona?",
-      "info": {
-        "p_1": "El proceso es realmente simplemente. Si tienes una cuenta de Facebook, probablemente estés familiarizado con anuncios y banners en Facebook. Están en todas partes, todo el tiempo, y mucha gente está haciendo dinero con ello.",
-        "p_2": "Lo que no sabes es que usted también puedes, y muy fácil, alquilando tu cuenta de Facebook, sin hacer nada.",
-        "p_3": "Dado que Facebook es una entidad de corporación protegida, que protege la actividad y los derechos de sus usuarios, esto no te afectará a ti ni a tu actividad en línea en absoluto.",
-        "p_4": "Ninguno de tus amigos recibirá spam o verá tus anuncios, y aún así te pagaremos, solo por utilizar la parte publicitaria de tu perfil."
+      "title": "Comment ça marche ?",
+      "Info": {
+        "p_1": "Le processus est vraiment simple. Si vous avez un compte Facebook, vous connaissez probablement les publicités et les bannières sur Facebook. Elles sont partout, tout le temps, et beaucoup de gens en tirent de l'argent.",
+        "p_2": "Ce que vous ne savez pas, c'est que vous pouvez aussi, et très facilement, louer votre compte Facebook, sans rien faire.",
+        "p_3": "Puisque Facebook est une personne morale protégée, qui protège l'activité et les droits de ses utilisateurs, cela n'affectera pas du tout vous ou votre activité en ligne.",
+        "p_4": "Aucun de vos amis ne recevra de spam ni ne verra vos publicités, et nous continuerons à vous payer, juste pour l'utilisation de la partie publicitaire de votre profil."
       },
-      "faq_link": "Consulta nuestra sección F.A.Q para obtener más información"
+      "faq_link": "Consultez notre section F.A.Q. pour plus d'informations"
     },
     "requirements": {
-      "title": "Requisitos del perfil",
+      "title": "Exigences du profil",
       "list": [
-        "Debe ser real, activo, con foto y nombre real que coincida con el nombre de tu documento",
-        "Con al menos 100 amigos",
-        "Al menos un año de antigüedad",
-        "Con contenido apropiado, no se adminten fotos que muestren cualquier tipo de violencia contra humanos o animales, fotos de contenido sexual, apología del terrorismo o de alto significado político, así como cualquier otro tipo que pueda ser considerado socialmente ofensivo",
-        "Debe ser mayor de edad",
-        "No debe haber sido previamente utilizado o alquilado a otras empresas para el uso de publicidad",
-        "Debes tener un email asociado a tu perfil"
+        "Il doit être réel, actif, avec une photo et un vrai nom qui correspond au nom de votre document",
+        "Avec au moins 100 amis",
+        "Au moins un an",
+        "Avec un contenu approprié, n'administrez pas de photos qui montrent tout type de violence contre des humains ou des animaux, des photos à contenu sexuel, des excuses pour le terrorisme ou de haute importance politique, ainsi que tout autre type pouvant être considéré comme socialement offensant",
+        "Vous devez être majeur",
+        "Il ne doit pas avoir été précédemment utilisé ou loué à d'autres sociétés à des fins publicitaires",
+        "Vous devez avoir un email associé à votre profil"
       ]
     },
     "configuration": {
-      "title": "Configuración",
-      "info": {
-        "0": "Si y solo si tu cuenta de Facebook cumple con",
-        "1": "TODOS",
-        "2": "los requistos anteriormente expuestos debes completar 2 sencillos pasos antes de poder completar el formulario de registro."
+      "title": "Paramètres",
+      "Info": {
+        "0": "Si et seulement si votre compte Facebook est conforme",
+        "1": "TOUS",
+        "2": "les exigences énoncées ci-dessus, vous devez effectuer 2 étapes simples avant de pouvoir remplir le formulaire d'inscription."
       },
       "list": [
-        "Crear un Administrador Comercial (BM)",
-        "Activar autenticación en dos pasos via App"
+        "Créer un Administrateur Commercial (BM)",
+        "Activer l'authentification en deux étapes via l'application"
       ],
       "step_one": {
-        "title": "Paso 1: Crear un Administrador Comercial (BM)",
+        "title": "Etape 1 : Créer un Administrateur Commercial (BM)",
         "list": {
           "li_1": {
-            "0": "Ve a"
+            "0": "Aller à"
           },
           "li_2": {
-            "0": "Haz clic en",
-            "1": "Crear cuenta"
+            "0": "Cliquez",
+            "1": "Créer un compte"
           },
           "li_3": {
-            "0": "Ingresa un nombre para tu negocio, tu nombre y una dirección de correo electrónico haz clic en",
-            "1": "Enviar",
-            "2": "Listo"
+            "0": "Entrez un nom pour votre entreprise, votre nom et une adresse e-mail cliquez",
+            "1": "Envoyer",
+            "2": "Terminé"
           },
           "li_4": {
-            "0": "Después de hacer clic en",
-            "1": "Listo",
-            "2": "Facebook te puede mostrar las siguientes opciones."
+            "0": "Après avoir cliqué",
+            "1": "Terminé",
+            "2": "Facebook peut vous montrer les options suivantes."
           }
         }
       },
+
       "option_one": {
-        "title": "Opción 1 (no requiere verificar ID)",
-        "p_1": "Según la versión de tu facebook verás una de las siguientes imágenes.",
-        "p_2": "Para obtener el Identificador del administrador comercial (BM Id) que debes enviar en el formulario de registro sigue los siguientes pasos.",
+        "title": "Option 1 (ne nécessite pas de vérification d'identité)",
+        "p_1": "Selon la version de votre facebook, vous verrez l'une des images suivantes.",
+        "p_2": "Pour obtenir l'Identifiant de l'administrateur commercial (BM Id) que vous devez envoyer dans le formulaire d'inscription, suivez les étapes suivantes.",
         "list_1": {
           "li_1": {
-            "0": "Clic en",
-            "1": "Configuración del negocio"
+            "0": "Cliquez sur",
+            "1": "Configuration de l'entreprise"
           },
           "li_2": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Jusqu'à",
+            "1": "Informations sur l'entreprise"
           },
           "li_3": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Prenez une photo ou une capture d'écran de votre",
+            "1": "Identifiant de l'administrateur commercial"
           }
         },
-        "p_3": "Primero cierra la ventana emergente, haz clic en la X superior izquierda.",
+        "p_3": "Fermez d'abord la fenêtre contextuelle, cliquez sur le X en haut à gauche.",
         "p_4": {
-          "0": "Para obtener el",
-          "1": "Identificador del administrador comercial",
-          "2": "(BM Id) que debes enviar en el formulario de registro sigue los siguientes pasos."
+          "0": "Pour obtenir le",
+          "1": "Identifiant de l'administrateur commercial",
+          "2": "(BM Id) que vous devez envoyer dans le formulaire d'inscription, suivez ces étapes."
         },
         "list_2": {
           "li_1": {
-            "0": "Haz clic en",
-            "1": "Más herramientas"
+            "0": "Cliquez",
+            "1": "Plus d'outils"
           },
           "li_2": {
-            "0": "Clic en",
-            "1": "Configuración del negocio"
+            "0": "Cliquez sur",
+            "1": "Configuration de l'entreprise"
           },
           "li_3": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Descendre à",
+            "1": "Informations sur l'entreprise"
           },
           "li_4": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Prenez une photo ou une capture d'écran de votre",
+            "1": "Identifiant de l'administrateur commercial"
           }
         }
       },
+
       "option_two": {
-        "title": "Opción 2 (requiere verificar ID)",
-        "p_1": "Primero cierra la ventana emergente, haz clic en la X superior izquierda.",
-        "p_2": "Debes seguir los siguientes pasos para verificar tu identidad.",
+        "title": "Option 2 (nécessite une vérification d'identité)",
+        "p_1": "Fermez d'abord la fenêtre contextuelle, cliquez sur le X en haut à gauche.",
+        "p_2": "Vous devez suivre les étapes suivantes pour vérifier votre identité.",
         "list_1": {
           "li_1": {
-            "0": "Haz clic en",
-            "1": "Ver detalles"
+            "0": "Cliquez",
+            "1": "Voir les détails"
           },
           "li_2": {
-            "0": "Clic en",
-            "1": "Solicitar Revisión"
+            "0": "Cliquez sur",
+            "1": "Demande de révision"
           },
           "li_3": {
-            "0": "Clic en",
-            "1": "Continuar"
+            "0": "Cliquez sur",
+            "1": "Continuer"
           },
           "li_4": {
-            "0": "Subir tu documento de identificación"
+            "0": "Télécharger votre pièce d'identité"
           },
           "li_5": {
-            "0": "Clic en",
-            "1": "Continuar"
+            "0": "Cliquez sur",
+            "1": "Continuer"
           }
         },
-        "p_3": "En 24 o 48 horas Facebook suele confirmar tu identidad y te avisa a tu email si algo es incorrecto.",
-        "p_4": "Puedes comprobar si tu identidad ha sido verificada usando el siguiente enlace",
+        "p_3": "En 24 ou 48 heures, Facebook confirme généralement votre identité et vous alerte par e-mail si quelque chose ne va pas.",
+        "p_4": "Vous pouvez vérifier si votre identité a été vérifiée en utilisant le lien suivant",
         "p_5": {
-          "0": "Solo una vez que Facebook te ha confirmado que tu identidad está verificada, sigue estos pasos para obtener el",
-          "1": "Identificador del administrador comercial",
-          "2": "(BM Id) que debes enviar en el formulario de registro"
+          "0": "Une fois que Facebook a confirmé que votre identité est vérifiée, suivez ces étapes pour obtenir le",
+          "1": "Identifiant de l'administrateur commercial",
+          "2": "(BM Id) que vous devez envoyer dans le formulaire d'inscription"
         },
         "list_2": {
           "li_1": {
-            "0": "Ve a"
+            "0": "Aller à"
           },
           "li_2": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Descendre à",
+            "1": "Informations sur l'entreprise"
           },
           "li_3": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Prenez une photo ou une capture d'écran de votre",
+            "1": "Identifiant de l'administrateur commercial"
           }
         }
       },
+
       "step_two": {
-        "title": "Paso 2: Activar la autenticación en dos pasos (2FA) via App",
+        "title": "Étape 2 : Activez l'authentification en deux étapes (2FA) via l'application",
         "list": {
           "li_1": {
-            "0": "Ve a",
-            "1": "Configuración y privacidad"
+            "0": "Aller à",
+            "1": "Paramètres et confidentialité"
           },
           "li_2": {
-            "0": "Selecciona",
-            "1": "Configuración"
+            "0": "Sélectionner",
+            "1": "Configuration"
           },
           "li_3": {
-            "0": "Selecciona",
-            "1": "Seguridad en inicio de sesion"
+            "0": "Sélectionner",
+            "1": "Sécurité à la connexion"
           },
           "li_4": {
-            "0": "Busca \"Usar autenticación en dos pasos\" –",
-            "1": "Editar"
+            "0": "Rechercher \" Utiliser l'authentification en deux étapes \"-",
+            "1": "Modifier"
           },
           "li_5": {
-            "0": "Selecciona",
-            "1": "Usar app de autenticación"
+            "0": "Sélectionner",
+            "1": "Utiliser l'application d'authentification"
           },
           "li_6": {
-            "0": "Copiar código - Token – Continuar y nos pide código de confirmación"
+            "0": "Copier le code - Token - Continuer et nous demander le code de confirmation"
           },
           "extra": {
-            "p_1": "Código de confirmación",
-            "p_2": "Sin cerrar la página abrir otra http://2fa.live,pega tu Token y haz clic en “Submit”. Copia los ultimos 6 números del resultado.",
-            "p_3": "También, si prefieres, puedes usar una App como Google Authenticator, Duo Mobile o LastPass."
+            "p_1": "Code de validation",
+            "p_2": "Sans fermer la page, ouvrez un autre http://2fa.live, collez votre Token et cliquez sur \"Soumettre\". Copiez les 6 derniers chiffres du résultat.",
+            "p_3": "Aussi, si vous préférez, vous pouvez utiliser une application comme Google Authenticator, Duo Mobile ou LastPass."
           },
           "li_7": {
-            "0": "Regresa a fb y completa el código de confirmación –",
-            "1": "Listo"
+            "0": "Revenez à fb et remplissez le code de confirmation -",
+            "1": "Terminé"
           }
         }
       }
     },
     "registration": {
-      "title": "Registro",
+      "title": "Inscription",
       "info": {
         "p_1": {
-          "0": "Utiliza",
-          "1": "este formulario",
-          "2": "para registrarse."
+          "0": "Utiliser",
+          "1": "ce formulaire",
+          "2": "pour vous inscrire."
         },
         "p_2": {
-          "0": "Antes de tener acceso a llenar tus datos, tendrás que respondera a unas sencillas preguntas sobre tu perfil de Facebook para preevaluar si tu perfil cumple con los requisitos, cosas como“¿Qué edad tiene tu cuenta?”, “¿Cuántos amigos tienes en tu perfil de Facebook?”, etc."
+          "0": "Avant d'avoir accès pour remplir vos données, vous devrez répondre à quelques questions simples sur votre profil Facebook pour pré-évaluer si votre profil répond aux exigences, des choses comme \"Quel âge a votre compte ?\" \"Combien d'amis avez-vous sur votre profil Facebook ?\", Etc."
         },
         "p_3": {
-          "0": "No te preocupes, se hace en",
-          "1": "menos de 1 minuto"
+          "0": "Ne vous inquiétez pas, c'est fait",
+          "1": "moins d'1 minute"
         },
         "p_4": {
-          "0": "Si tu perfil califica, tendrás que rellenar tus datos y adjuntar una foto de un documento para verificar que tu perfil es real y que eres mayor de edad."
+          "0": "Si votre profil est éligible, vous devrez remplir vos coordonnées et joindre une photo d'un document pour vérifier que votre profil est réel et que vous avez l'âge légal."
         },
         "p_5": {
-          "0": "Necesitaremos una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento."
+          "0": "Nous aurons besoin d'une photo de votre document en haute résolution et lisible, vous pouvez couvrir tous les détails que vous voulez, sauf la photo, le nom complet et la date de naissance."
         },
         "p_6": {
-          "0": "Si decides cubrir algún dato no lo haga editando la foto o Facebook no la admitirá, usa los dedos por ejemplo, o trozo de papel."
+          "0": "Si vous décidez de couvrir des données, ne le faites pas en éditant la photo ou Facebook ne l'admettra pas, utilisez vos doigts par exemple, ou un morceau de papier."
         },
         "p_7": {
-          "0": "Puedes usar, DNI, pasaporte o licencia de conducir, si no tienes ninguno de ellos por favor",
-          "1": "haz clic aquí para obtener una guía con opciones alternativas"
+          "0": "Vous pouvez utiliser, DNI, passeport ou permis de conduire, si vous n'en avez pas s'il vous plaît",
+          "1": "cliquez ici pour un guide avec des options alternatives"
         },
         "p_8": {
-          "0": "Durante el proceso de registro deberás adjuntar también una foto tu",
-          "1": "Identificador del administrador comercial",
-          "2": "que creaste en el paso 1 e introducir el",
-          "3": "código de autenticación de 32 caracteres",
-          "4": "(Token) que has obtenido en el paso 2"
+          "0": "Pendant le processus d'inscription, vous devez également joindre une photo de vous",
+          "1": "Identifiant de l'administrateur commercial",
+          "2": "que vous avez créé à l'étape 1 et entrez le",
+          "3": "Code d'authentification à 32 caractères",
+          "4": "(Jeton) que vous avez obtenu à l'étape 2"
         }
       }
     },
     "payment": {
-      "title": "Recibe el pago",
+      "title": "Recevoir le paiement",
       "info": {
         "p_1": {
-          "0": "Una vez que nuestro equipo verifique que podemos acceder a tu perfil mediante 2FA y que efectivamente el Admistrador comercial (BM) está creado y sin restringir, nuestro equipo terminará de configurar el BM y se procesará tu primer pago a través de Paypal."
+          "0": "Une fois que notre équipe aura vérifié que nous pouvons accéder à votre profil via 2FA et qu'effectivement l'administrateur commercial (BM) est créé et sans restriction, notre équipe terminera la configuration du BM et votre premier paiement sera traité via Paypal. "
         },
         "p_2": {
-          "0": "Normalemente de 4 a 5 días hábiles después de haber recibido su formulario, siempre que los datos sean correctos y podamos acceder a su perfil y el Business Manager no esté restringido."
+          "0": "Normalement 4 à 5 jours ouvrables après réception de votre formulaire, tant que les données sont correctes et que nous pouvons accéder à votre profil et que le Business Manager n'est pas restreint."
         },
         "p_3": {
-          "0": "Ah, y si nos envias a tus amigos obtienes más dinero por cada referido, echa un vistazo a nuestro",
-          "1": "Programa de Referidos"
+          "0": "Oh, et si vous nous envoyez à vos amis, vous obtenez plus d'argent pour chaque parrainage, jetez un œil à notre",
+          "1": "Programme de parrainage"
         },
         "p_4": {
-          "0": "Recibirás el primer pago una vez que la cuenta se haya revisado y se haya configurado correctamente un Business Manager."
+          "0": "Vous recevrez le premier paiement une fois que le compte aura été examiné et qu'un Business Manager aura été correctement configuré."
         },
         "p_5": {
-          "0": "Después del primer pago los siguientes pagos mesuales se realizan de la siguiente manera:"
+          "0": "Après le premier paiement, les paiements mensuels suivants sont effectués comme suit :"
         },
         "p_6": {
-          "0": "Los perfiles activados en la primera quincena del mes (primeras 2 semanas) se pagarán la semana del 15 del mes siguiente."
+          "0": "Les profils activés dans la première quinzaine du mois (2 premières semaines) seront payés la semaine du 15 du mois suivant."
         },
         "p_7": {
-          "0": "Los perfiles activados en la segunda quincena del mes (2 últimas semanas) se pagarán a fin de mes."
+          "0": "Les profils activés dans la seconde quinzaine du mois (les 2 dernières semaines) seront payés à la fin du mois."
         },
         "p_8": {
-          "0": "El pago de referidos se realiza siempre a fin de mes, nuestro equipo se comunicará contigo para confirmar el número de referidos registrados por tu parte y realizar el pago correspondiente."
+          "0": "Le paiement des filleuls s'effectue toujours à la fin du mois, notre équipe vous contactera pour confirmer le nombre de filleuls enregistrés par vos soins et effectuer le règlement correspondant."
         }
       }
     },
     "support": {
-      "title": "Soporte",
+      "title": "Soutien",
       "info": {
         "p_1": {
-          "0": "Puedes ponerte en contacto con nosotros en cualquier momento para resolver cualquier pregunta, y también podría ser que eventualmente necesitemos ponernos en contacto contigo para resolver cualquier cosa."
+          "0": "Vous pouvez nous contacter à tout moment pour résoudre toute question, et il se peut également que nous ayons éventuellement besoin de vous contacter pour résoudre quoi que ce soit."
         },
         "p_2": {
-          "0": "Importante"
+          "0": "Important"
         },
         "p_3": {
-          "0": "Tarde o temprano Facebook te pedirá que cambie la contraseña o tal vez tu decidas cambiarla, si esto sucede,",
-          "1": "comunicate con nosotros inmediatamente",
-          "2": ", de lo contrario podrás crearnos problemas ya que no podremos usar la cuenta y no podremos pagarte."
+          "0": "Tôt ou tard, Facebook vous demandera de changer le mot de passe ou peut-être que vous déciderez de le changer, si cela se produit",
+          "1": "contactez-nous immédiatement",
+          "2": ", sinon vous risquez de nous créer des problèmes car nous ne pourrons pas utiliser le compte et nous ne pourrons pas vous payer."
         },
         "p_4": {
-          "0": "Contáctanos"
+          "0": "Contactez-nous"
         }
       }
     }
   },
   "join_now": {
-    "title": "¿Es válido tu perfil de Facebook para nuestro programa de alquiler?",
-    "info": "Para saber si es válido para nuestro programa de alquiler, completa este sencillo cuestionario.",
+    "title": "Votre profil Facebook est-il valide pour notre programme de location?",
+    "info": "Pour savoir s'il est valable pour notre programme de location, remplissez ce simple questionnaire.",
     "button": {
-      "previous": "Anterior",
-      "next": "Siguiente",
-      "send": "Enviar"
+      "previous": "Précédent",
+      "next": "Suivant",
+      "send": "Envoyer"
     },
     "form_location": {
-      "title": "Formulario de registro",
-      "p_1": "Cuestionario de calificación",
-      "p_2": "Datos personales",
-      "p_3": "Datos de cuenta de Facebook",
-      "p_4": "Confirmación y Método de pago",
-      "p_5": "Felicitaciones"
+      "title": "Formulaire d'inscription",
+      "p_1": "Questionnaire de qualification",
+      "p_2": "Données personnelles",
+      "p_3": "Données du compte Facebook",
+      "p_4": "Confirmation et mode de paiement",
+      "p_5": "Félicitations"
     },
     "step_one": {
       "isAdult": {
-        "question": "¿Eres mayor de edad?",
-        "option_1": "Sí",
-        "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "question": "Avez-vous l'âge légal ?",
+        "option_1": "Oui",
+        "option_2": "Non",
+        "error_1": "Ce champ est obligatoire."
       },
       "accountIsReal": {
-        "question": "¿Estás creando la solicitud con tu perfil real de Facebook?",
-        "option_1": "Sí",
-        "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "question": "Créez-vous la demande avec votre vrai profil Facebook ?",
+        "option_1": "Oui",
+        "option_2": "Non",
+        "error_1": "Ce champ est obligatoire."
       },
       "isFirstTime": {
-        "question": "¿Tú o alguien más ha utilizado tu cuenta antes para crear publicidad?",
-        "option_1": "Sí",
-        "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "question": "Est-ce que vous ou quelqu'un d'autre avez déjà utilisé votre compte pour créer de la publicité ?",
+        "option_1": "Oui",
+        "option_2": "Non",
+        "error_1": "Ce champ est obligatoire."
       },
       "isOneYear": {
-        "question": "¿Tu cuenta tiene más de un año?",
-        "option_1": "Sí",
-        "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "question": "Votre compte a plus d'un an?",
+        "option_1": "Oui",
+        "option_2": "Non",
+        "error_1": "Ce champ est obligatoire."
       },
       "haveFriends": {
-        "question": "¿Tienes más de 100 amigos en Facebook?",
-        "option_1": "Sí",
-        "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "question": "Avez-vous plus de 100 amis sur Facebook?",
+        "option_1": "Oui",
+        "option_2": "Non",
+        "error_1": "Ce champ est obligatoire."
       }
     },
     "step_two": {
       "name": {
-        "question": "Tu nombre",
-        "error_1": "Por favor, registre su nombre",
-        "error_2": "El nombre contiene caracteres no permitidos"
+        "question": "Votre nom",
+        "error_1": "Veuillez entrer votre nom",
+        "error_2": "Le nom contient des caractères illégaux"
       },
       "lastname": {
-        "question": "Tus apellidos",
-        "error_1": "Por favor, registre su apellido",
-        "error_2": "El apellido contiene caracteres no permitidos"
+        "question": "Vos noms de famille",
+        "error_1": "Veuillez entrer votre nom de famille",
+        "error_2": "Le nom de famille contient des caractères illégaux"
       },
       "country": {
-        "question": "Tu país de residencia",
-        "error_1": "Este campo es obligatorio"
+        "question": "Votre pays de résidence",
+        "error_1": "Ce champ est obligatoire"
       },
       "city": {
-        "question": "Tu ciudad de residencia",
-        "error_1": "Este campo es obligatorio"
+        "question": "Votre ville de résidence",
+        "error_1": "Ce champ est obligatoire"
       },
       "birthday": {
-        "question": "Fecha de nacimiento",
-        "error_1": "Por favor, ingrese la fecha de su nacimiento",
-        "error_2": "Debes ser mayor de 18 años"
+        "question": "Date de naissance",
+        "error_1": "Veuillez saisir la date de votre naissance",
+        "error_2": "Vous devez avoir plus de 18 ans"
       },
       "phone": {
-        "question": "Tu celular",
-        "error_1": "Este campo es obligatorio",
-        "error_2": "Ingrese un numero de celular válido",
-        "max_error": "Máximo 15 numeros"
+        "question": "Votre téléphone portable",
+        "error_1": "Ce champ est obligatoire",
+        "error_2": "Veuillez entrer un numéro de téléphone portable valide",
+        "max_error": "Maximum 15 nombres"
       },
       "email": {
-        "question": "Email",
-        "error_1": "Por favor, ingrese su email",
-        "error_2": "Ingrese un email válido"
+        "question": "E-mail",
+        "error_1": "Veuillez entrer votre email",
+        "error_2": "Veuillez entrer un email valide"
       },
       "password": {
-        "question": "Contraseña",
-        "required_error": "Por favor, registre este campo",
-        "min_error": "Mínimo 8 caracteres",
-        "max_error": "Máximo 15 caracteres"
+        "question": "Mot de passe",
+        "required_error": "Veuillez enregistrer ce champ",
+        "min_error": "Minimum 8 caractères",
+        "max_error": "Maximum 15 caractères"
       },
       "password_confirmation": {
-        "question": "Confirme su contraseña",
-        "required_error": "Por favor, registre este campo",
-        "same_error": "Las contraseñas no coinciden"
+        "question": "Confirmez votre mot de passe",
+        "required_error": "Veuillez enregistrer ce champ",
+        "same_error": "Les mots de passe ne correspondent pas"
       }
     },
     "step_three": {
       "frequency": {
-        "question": "¿Con qué frecuencia usas Facebook?",
-        "option_1": "Todos los días",
-        "option_2": "2 - 3 veces a la semana",
-        "option_3": "1 - 2 veces a la semana",
-        "option_4": "1 - 2 veces al mes",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "question": "À quelle fréquence utilisez-vous Facebook ?",
+        "option_1": "Tous les jours",
+        "option_2": "2 - 3 fois par semaine",
+        "option_3": "1 - 2 fois par semaine",
+        "option_4": "1 - 2 fois par mois",
+        "error_1": "Veuillez sélectionner l'une des options"
       },
       "devices": {
-        "question": "¿Con qué frecuencia usas Facebook? (Puedes seleccionar más de uno)",
-        "option_1": "PC sobremesa",
-        "option_2": "Tablet",
-        "option_3": "Móvil",
-        "option_4": "Otros",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "question": "À quelle fréquence utilisez-vous Facebook ? (Vous pouvez en sélectionner plusieurs)",
+        "option_1": "PC de bureau",
+        "option_2": "Tablette",
+        "option_3": "Mobile",
+        "option_4": "Autres",
+        "error_1": "Veuillez sélectionner l'une des options"
       },
       "os": {
-        "question": "¿Qué sistema operativo utilizas con Facebook? (Puedes seleccionar más de uno)",
+        "question": "Quel système d'exploitation utilisez-vous avec Facebook ? (Vous pouvez en sélectionner plusieurs)",
         "option_1": "Windows",
         "option_2": "Android",
         "option_3": "Apple",
         "option_4": "Otros",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "error_1": "Veuillez sélectionner l'une des options"
       },
       "username": {
-        "question": "Usuario de Facebook",
-        "error_1": "Por favor, ingrese su usuario de Facebook",
-        "error_2": "El usuario debe contener al menos 6 caracteres"
+        "question": "Utilisateur Facebook",
+        "error_1": "Veuillez entrer votre nom d'utilisateur Facebook",
+        "error_2": "L'utilisateur doit contenir au moins 6 caractères"
       },
       "fbPassword": {
-        "question": "Contraseña de Facebook",
-        "error_1": "Por favor, ingrese su constraseña de Facebook",
-        "error_2": "Su contraseña debe contener al menos 6 caracteres"
+        "question": "Mot de passe Facebook",
+        "error_1": "Veuillez entrer votre mot de passe Facebook",
+        "error_2": "Votre mot de passe doit contenir au moins 6 caractères"
       },
       "fbEmailImage": {
-        "question": "Confirmación del email asociado a tu perfil",
-        "error_1": "Por favor, ingrese una foto confirmando el email asociado",
-        "error_2": "El archivo puede pesar máximo 2mb",
-        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
-        "image_one": "Confirmación de email de Facebook. Ejemplo 1.",
-        "image_two": "Confirmación de email de Facebook. Ejemplo 2.",
+        "question": "Confirmation de l'email associé à votre profil",
+        "error_1": "Veuillez saisir une photo confirmant l'email associé",
+        "error_2": "Le fichier peut faire au maximum 2 Mo",
+        "error_3": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
+        "image_one": "Confirmation par e-mail Facebook. Exemple 1",
+        "image_two": "Confirmation par e-mail Facebook. Exemple 2.",
         "message": {
           "p_1": {
-            "0": "Envía una foto para confirmar el email asociado."
+            "0": "Envoyer une photo pour confirmer l'e-mail associé."
           },
           "p_2": {
-            "0": "Ejemplo 1 desde ordenador"
+            "0": "Exemple 1 de l'ordinateur"
           },
           "p_3": {
-            "0": "Ejemplo 2 desde móvil"
+            "0": "Exemple 2 depuis un mobile"
           },
           "p_4": {
-            "0": "Móvil:",
-            "1": "Configuración",
-            "2": "Configuración de la cuenta",
-            "3": "Información personal",
-            "4": "Información de contacto"
+            "0": "Mobile :",
+            "1": "Configuration",
+            "2": "Paramètres du compte",
+            "3": "Informations personnelles",
+            "4": "Coordonnées"
           },
           "p_5": {
-            "0": "Ordenador:",
-            "1": "Configuración y privacidad",
-            "2": "Configuración",
-            "3": "General",
-            "4": "Contacto"
+            "0": "Ordinateur :",
+            "1": "Paramètres et confidentialité",
+            "2": "Paramètres",
+            "3": "Général",
+            "4": "Contacter"
           },
           "p_6": {
-            "0": "O ve a :"
+            "0": "Ou allez à:"
           }
         }
       },

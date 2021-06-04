@@ -4,6 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 import translation_en from "./locales/en/translation.json";
 import translation_es from "./locales/es/translation.json";
+import translation_fr from "./locales/fr/translation.json";
 
 const resources = {
   en: {
@@ -11,6 +12,9 @@ const resources = {
   },
   es: {
     translation: translation_es,
+  },
+  fr: {
+    translation: translation_fr,
   },
 };
 
@@ -21,7 +25,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    supportedLngs: ["en", "es"],
+    supportedLngs: ["en", "es", "fr"],
     fallbackLng: "en",
     debug: false,
     react: {
