@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
-const require = require("multer");
+const multer = require("multer");
 // Models
 const User = require("../../models/User");
 const IncompleteUser = require("../../models/IncompleteUser");

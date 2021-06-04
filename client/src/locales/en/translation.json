@@ -9,500 +9,500 @@
       "cards": [
         {
           "number": "01",
-          "title": "Completa el formulario",
-          "info": "Te ofrecemos unirte a nuestro programa en unos pocos clics y empezar a ganar online, sin ningún esfuerzo adicional!"
+          "title": "Complete the form",
+          "info": "We offer you to join our program in a few clicks and start earning online, without any additional effort!"
         },
         {
           "number": "02",
-          "title": "Espera nuestra confirmación",
-          "info": "¡La confirmación demora de 3 a 5 días hábiles!* (¡Por lo general, en 48 horas!)",
-          "disclaimer": "Después del primer inicio de sesión"
+          "title": "Wait for our confirmation",
+          "info": "Confirmation takes 3-5 business days! * (Usually within 48 hours!)",
+          "disclaimer": "After the first login"
         },
         {
           "number": "03",
-          "title": "Recibe pagos mensuales",
-          "info": "Mientras tu haces tu vida normal, nosotros hacemos que tu cuenta de Facebook genere ganancias para ti. !"
+          "title": "Receive monthly payments",
+          "info": "While you go about your normal life, we make your Facebook account generate profit for you!"
         },
         {
           "number": "04",
-          "title": "Comparte con tus amigos",
-          "info": "Comparte con tus amigos y aumenta tus ganancias. Recibirás un pago por cada nueva inscripción referida por ti. ¡Sin límites!"
+          "title": "Share with your friends",
+          "info": "Share with your friends and increase your earnings. You will receive a payment for each new registration referred by you. Unlimited!"
         }
       ]
     },
     "requirements": {
-      "title": "¿Cuánto ganarás?",
+      "title": "How much will you earn?",
       "info": {
-        "span": "!Gana 30 dólares cada mes!",
-        "p": "Confirma que cumples los y prepara tu perfil, haz clic en botón y aprende cómo."
+        "span": "Earn $ 30 every month!",
+        "p": "Confirm that you meet them and prepare your profile, click the button and learn how."
       },
-      "how_it_works_btn": "¿Cómo funciona?",
-      "sub_title": "Requisitos para que el perfil sea válido",
+      "how_it_works_btn": "How does it work?",
+      "sub_title": "Requirements for the profile to be valid",
       "list": [
-        "Real, activo, con foto y nombre real",
-        "Con al menos 100 amigos",
-        "Al menos un año de edad",
-        "Contenido apropiado",
-        "Ser mayor de edad",
-        "No debe haber sido previamente utilizado o alquilado a otras empresas para el uso de publicidad",
-        "Tener un email asociado a tu perfil",
-        "Administrador Comercial (BM) creado​",
-        "ID verificado​",
-        "2FA App Activado​"
+        "Real, active, with photo and real name",
+        "With at least 100 friends",
+        "At least one year old",
+        "Appropriate content",
+        "Be of legal age",
+        "I must not have been previously used or leased to other companies for advertising use.",
+        "Have an email associated with your profile",
+        "Business Manager (BM) created",
+        "Verified ID",
+        "2FA app activated"
       ]
     },
     "referral": {
-      "title": "Programa de referidos",
+      "title": "Referral program",
       "info": {
         "p_1": {
-          "0": "¡Tenemos un programa de referidos para ti! Si nos traes familiares o amgios puedes ganar más de",
-          "1": "1000 dólares",
-          "2": "al mes."
+          "0": "We have a referral program for you! If you bring us family or friends you can earn more than",
+          "1": "1000 dollars",
+          "2": "a month."
         },
         "p_2": {
-          "0": "Activa tu código de referente y gana",
-          "1": "5 dólares",
-          "2": "por cada referido válido. ¡Sin límite!"
+          "0": "Activate your referral code and win",
+          "1": "5 dollars",
+          "2": "for each valid referral. Unlimited!"
         }
       },
-      "register_btn": "Regístrate aquí",
+      "register_btn": "Sign up here",
       "tiny": {
-        "p_1": "Los planes se pagarán después de que nuestro equipo haya confirmado el perfil como válido.",
-        "p_2": "En todos los planes, nuestro equipo debe poder contactar a los propietarios para resolver cualquier eventual problema que pueda ocurrir."
+        "p_1": "Plans will be paid after our team has confirmed the profile as valid.",
+        "p_2": "In all plans, our team must be able to contact the owners to resolve any eventual problem that may occur."
       }
     },
     "testimonies": {
-      "title": "¿Qué es lo que dice la gente?",
-      "info": "¡Gente que se unió a nosotros y ya está ganando dinero!",
+      "title": "What do people say?",
+      "info": "People who joined us and are already making money!",
       "testimonies": [
         {
           "number": "1",
-          "testimony": "He colaborado con fbangel durante más de un año, no he tenido ningún problema. El dinero siempre llega a tiempo y siempre recibo respuestas a todas mis preguntas. Es genial que no tenga que hacer nada y, además, no afecta a mi perfil en absoluto. Digamos que simplemente gano dinero alquilando mi cuenta de Facebook. Se lo recomiendo a todo el mundo!",
-          "author": "Ana Martín",
-          "membership": "Miembro desde mayo 2019"
+          "testimony": "I have collaborated with fbangel for more than a year, I have not had any problems. The money is always on time and I always receive answers to all my questions. It's great that I don't have to do anything, and besides, it doesn't affect my profile at all. Let's say I just make money by renting my Facebook account. I recommend it to everybody!",
+          "author": "Ana Martin",
+          "membership": "Member since May 2019"
         },
         {
           "number": "2",
-          "testimony": "Decidí intentar ganar dinero con FbAngel, ya que me interesaba saber cómo funciona. Puedo decir que es una gran manera de tener ingresos adicionales. ¡Simplemente he tenido que rellenar el formulario Y NADA MAS! Los chicos se encargan del resto yo simplemente me limito a recoger mi dinero en mi cuenta PayPal",
+          "testimony": "I decided to try to make money with FbAngel, since I was interested to know how it works. I can say that it is a great way to have additional income. I simply had to fill out the form AND NOTHING ELSE! The guys take care of the rest, I just collect my money in my PayPal account.",
           "author": "Tony Smith",
-          "membership": "Miembro desde octubre 2019"
+          "membership": "Member since October 2019"
         },
         {
           "number": "3",
-          "testimony": "Cuando en mi país tuvimos que ir al encierro debido a covid-19, me quedé sin trabajo, y sin ingresos, una amiga me explicó que tenía un ingreso extra alquilando su facebook para anunciar publicidad, yo era un poco escéptica pero decidí probar, y la verdad es que hasta ahora no he tenido ningún problema , los pagos son siemprepuntuales, y siempre me han pagado por todos los amigos que he traído. ¡Lo recomiendo!",
+          "testimony": "When in my country we had to go to the confinement due to covid-19, I was left without work, and without income, a friend explained to me that she had an extra income by renting her Facebook to advertise advertising, I was a bit skeptical but I decided to try, and the truth is that so far I have not had any problems, the payments are always punctual, and they have always paid me for all the friends that I have brought. I recommend it!",
           "author": "Alena Due",
-          "membership": "Miembro desde marzo 2020"
+          "membership": "Member since March 2020"
         }
       ]
     }
   },
   "how_it_works": {
     "how_it_works": {
-      "title": "¿Cómo funciona?",
+      "title": "How does it work?",
       "info": {
-        "p_1": "El proceso es realmente simplemente. Si tienes una cuenta de Facebook, probablemente estés familiarizado con anuncios y banners en Facebook. Están en todas partes, todo el tiempo, y mucha gente está haciendo dinero con ello.",
-        "p_2": "Lo que no sabes es que usted también puedes, y muy fácil, alquilando tu cuenta de Facebook, sin hacer nada.",
-        "p_3": "Dado que Facebook es una entidad de corporación protegida, que protege la actividad y los derechos de sus usuarios, esto no te afectará a ti ni a tu actividad en línea en absoluto.",
-        "p_4": "Ninguno de tus amigos recibirá spam o verá tus anuncios, y aún así te pagaremos, solo por utilizar la parte publicitaria de tu perfil."
+        "p_1": "The process is really simply. If you have a Facebook account, you are probably familiar with ads and banners on Facebook. They are everywhere, all the time, and a lot of people are making money from it.",
+        "p_2": "What you don't know is that you can also, and very easily, rent your Facebook account, without doing anything.",
+        "p_3": "Since Facebook is a protected corporate entity, protecting the activity and rights of its users, this will not affect you or your online activity at all.",
+        "p_4": "None of your friends will receive spam or see your ads, and we will still pay you, just for using the advertising part of your profile."
       },
-      "faq_link": "Consulta nuestra sección F.A.Q para obtener más información"
+      "faq_link": "Check our F.A.Q section for more information"
     },
     "requirements": {
-      "title": "Requisitos del perfil",
+      "title": "Profile requirements",
       "list": [
-        "Debe ser real, activo, con foto y nombre real que coincida con el nombre de tu documento",
-        "Con al menos 100 amigos",
-        "Al menos un año de antigüedad",
-        "Con contenido apropiado, no se adminten fotos que muestren cualquier tipo de violencia contra humanos o animales, fotos de contenido sexual, apología del terrorismo o de alto significado político, así como cualquier otro tipo que pueda ser considerado socialmente ofensivo",
-        "Debe ser mayor de edad",
-        "No debe haber sido previamente utilizado o alquilado a otras empresas para el uso de publicidad",
-        "Debes tener un email asociado a tu perfil"
+        "It must be real, active, with a photo and real name that matches the name of your document",
+        "With at least 100 friends",
+        "At least one year old",
+        "With appropriate content, do not administer photos that show any type of violence against humans or animals, photos of sexual content, apology for terrorism or of high political significance, as well as any other type that may be considered socially offensive",
+        "You must be of legal age",
+        "It must not have been previously used or rented to other companies for the use of advertising",
+        "You must have an email associated with your profile"
       ]
     },
     "configuration": {
-      "title": "Configuración",
+      "title": "Setting",
       "info": {
-        "0": "Si y solo si tu cuenta de Facebook cumple con",
-        "1": "TODOS",
-        "2": "los requistos anteriormente expuestos debes completar 2 sencillos pasos antes de poder completar el formulario de registro."
+        "0": "If and only if your Facebook account meets",
+        "1": "ALL",
+        "2": "the above requirements, you must complete 2 simple steps before you can complete the registration form."
       },
       "list": [
-        "Crear un Administrador Comercial (BM)",
-        "Activar autenticación en dos pasos via App"
+        "Create a Business Manager (BM)",
+        "Activate two-step authentication via App"
       ],
       "step_one": {
-        "title": "Paso 1: Crear un Administrador Comercial (BM)",
+        "title": "Step 1: Create a Business Manager (BM)",
         "list": {
           "li_1": {
-            "0": "Ve a"
+            "0": "Go to"
           },
           "li_2": {
-            "0": "Haz clic en",
-            "1": "Crear cuenta"
+            "0": "Click",
+            "1": "Create Account"
           },
           "li_3": {
-            "0": "Ingresa un nombre para tu negocio, tu nombre y una dirección de correo electrónico haz clic en",
-            "1": "Enviar",
-            "2": "Listo"
+            "0": "Enter a name for your business, your name and an email address click",
+            "1": "Submit",
+            "2": "Done"
           },
           "li_4": {
-            "0": "Después de hacer clic en",
-            "1": "Listo",
-            "2": "Facebook te puede mostrar las siguientes opciones."
+            "0": "After clicking",
+            "1": "Done",
+            "2": "Facebook can show you the following options."
           }
         }
       },
       "option_one": {
-        "title": "Opción 1 (no requiere verificar ID)",
-        "p_1": "Según la versión de tu facebook verás una de las siguientes imágenes.",
-        "p_2": "Para obtener el Identificador del administrador comercial (BM Id) que debes enviar en el formulario de registro sigue los siguientes pasos.",
+        "title": "Option 1 (does not require verification of ID)",
+        "p_1": "Depending on the version of your facebook you will see one of the following images.",
+        "p_2": "To obtain the Commercial Administrator Identifier (BM Id) that you must send in the registration form, follow the steps below.",
         "list_1": {
           "li_1": {
-            "0": "Clic en",
-            "1": "Configuración del negocio"
+            "0": "Click on",
+            "1": "Business Settings"
           },
           "li_2": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Scroll down to",
+            "1": "usiness information"
           },
           "li_3": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Take a photo or screenshot of your",
+            "1": "Business Manager ID"
           }
         },
-        "p_3": "Primero cierra la ventana emergente, haz clic en la X superior izquierda.",
+        "p_3": "First close the pop-up window, click on the upper left X.",
         "p_4": {
-          "0": "Para obtener el",
-          "1": "Identificador del administrador comercial",
-          "2": "(BM Id) que debes enviar en el formulario de registro sigue los siguientes pasos."
+          "0": "To obtain the",
+          "1": "Business Manager ID",
+          "2": "(BM Id) you must send in the registration form, follow these steps."
         },
         "list_2": {
           "li_1": {
-            "0": "Haz clic en",
-            "1": "Más herramientas"
+            "0": "Click",
+            "1": "More tools"
           },
           "li_2": {
-            "0": "Clic en",
-            "1": "Configuración del negocio"
+            "0": "Click on",
+            "1": "Business Settings"
           },
           "li_3": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Scroll down to",
+            "1": "Business information"
           },
           "li_4": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Take a photo or screenshot of your",
+            "1": "Business Manager ID"
           }
         }
       },
       "option_two": {
-        "title": "Opción 2 (requiere verificar ID)",
-        "p_1": "Primero cierra la ventana emergente, haz clic en la X superior izquierda.",
-        "p_2": "Debes seguir los siguientes pasos para verificar tu identidad.",
+        "title": "Option 2 (requires verification of ID)",
+        "p_1": "First close the pop-up window, click on the upper left X.",
+        "p_2": "You must follow the following steps to verify your identity..",
         "list_1": {
           "li_1": {
-            "0": "Haz clic en",
-            "1": "Ver detalles"
+            "0": "Click",
+            "1": "View details"
           },
           "li_2": {
-            "0": "Clic en",
-            "1": "Solicitar Revisión"
+            "0": "Click",
+            "1": "Request Review"
           },
           "li_3": {
-            "0": "Clic en",
-            "1": "Continuar"
+            "0": "Click",
+            "1": "Continue"
           },
           "li_4": {
-            "0": "Subir tu documento de identificación"
+            "0": "Upload your identification document"
           },
           "li_5": {
-            "0": "Clic en",
-            "1": "Continuar"
+            "0": "Click",
+            "1": "Continue"
           }
         },
-        "p_3": "En 24 o 48 horas Facebook suele confirmar tu identidad y te avisa a tu email si algo es incorrecto.",
-        "p_4": "Puedes comprobar si tu identidad ha sido verificada usando el siguiente enlace",
+        "p_3": "In 24 or 48 hours Facebook usually confirms your identity and alerts you to your email if something is wrong.",
+        "p_4": "You can check if your identity has been verified using the following link",
         "p_5": {
-          "0": "Solo una vez que Facebook te ha confirmado que tu identidad está verificada, sigue estos pasos para obtener el",
-          "1": "Identificador del administrador comercial",
-          "2": "(BM Id) que debes enviar en el formulario de registro"
+          "0": "Only once Facebook has confirmed that your identity is verified, follow these steps to obtain the",
+          "1": "Business Manager ID",
+          "2": "(BM Id) that you must send in the registration form"
         },
         "list_2": {
           "li_1": {
-            "0": "Ve a"
+            "0": "Go to"
           },
           "li_2": {
-            "0": "Desciende hasta",
-            "1": "Información del negocio"
+            "0": "Scroll down to",
+            "1": "Business information"
           },
           "li_3": {
-            "0": "Haz una foto o captura de pantalla de tu",
-            "1": "Identificador del administrador comercial"
+            "0": "Take a photo or screenshot of your",
+            "1": "Business Manager ID"
           }
         }
       },
       "step_two": {
-        "title": "Paso 2: Activar la autenticación en dos pasos (2FA) via App",
+        "title": "Step 2: Activate Two-Step Authentication (2FA) via App",
         "list": {
           "li_1": {
-            "0": "Ve a",
-            "1": "Configuración y privacida"
+            "0": "Go to",
+            "1": "Settings and privacy"
           },
           "li_2": {
-            "0": "Selecciona",
-            "1": "Configuración"
+            "0": "Select",
+            "1": "Settings"
           },
           "li_3": {
-            "0": "Selecciona",
-            "1": "Seguridad en inicio de sesion"
+            "0": "Select",
+            "1": "Login Security"
           },
           "li_4": {
-            "0": "Busca \"Usar autenticación en dos pasos\" –",
-            "1": "Editar"
+            "0": "Find \"Use two-step authentication\" -",
+            "1": "Edit"
           },
           "li_5": {
-            "0": "Selecciona",
-            "1": "Usar app de autenticación"
+            "0": "Select",
+            "1": "Use Authentication App"
           },
           "li_6": {
-            "0": "Copiar código - Token – Continuar y nos pide código de confirmación"
+            "0": "Copy code - Token - Continue and ask us for confirmation code"
           },
           "extra": {
             "p_1": "Código de confirmación",
-            "p_2": "Sin cerrar la página abrir otra http://2fa.live,pega tu Token y haz clic en “Submit”. Copia los ultimos 6 números del resultado.",
-            "p_3": "También, si prefieres, puedes usar una App como Google Authenticator, Duo Mobile o LastPass."
+            "p_2": "Without closing the page, open another http: //2fa.live, paste your Token and click “Submit”. Copy the last 6 numbers of the result.",
+            "p_3": "Also, if you prefer, you can use an App like Google Authenticator, Duo Mobile or LastPass.."
           },
           "li_7": {
-            "0": "Regresa a fb y completa el código de confirmación –",
-            "1": "Listo"
+            "0": "Go back to fb and fill in the confirmation code -",
+            "1": "Done"
           }
         }
       }
     },
     "registration": {
-      "title": "Registro",
+      "title": "Registration",
       "info": {
         "p_1": {
-          "0": "Utiliza",
-          "1": "este formulario",
-          "2": "para registrarse."
+          "0": "Use",
+          "1": "this form",
+          "2": "to register."
         },
         "p_2": {
-          "0": "Antes de tener acceso a llenar tus datos, tendrás que respondera a unas sencillas preguntas sobre tu perfil de Facebook para preevaluar si tu perfil cumple con los requisitos, cosas como“¿Qué edad tiene tu cuenta?”, “¿Cuántos amigos tienes en tu perfil de Facebook?”, etc."
+          "0": "Before having access to fill in your data, you will have to answer some simple questions about your Facebook profile to pre-evaluate if your profile meets the requirements, things like \"How old is your account?\", \"How many friends do you have in your Facebook profile?\", etc."
         },
         "p_3": {
-          "0": "No te preocupes, se hace en",
-          "1": "menos de 1 minuto"
+          "0": "Don't worry, it takes ",
+          "1": "less than 1 minute"
         },
         "p_4": {
-          "0": "Si tu perfil califica, tendrás que rellenar tus datos y adjuntar una foto de un documento para verificar que tu perfil es real y que eres mayor de edad."
+          "0": "If your profile qualifies, you will have to fill in your details and attach a photo of a document to verify that your profile is real and that you are of legal age."
         },
         "p_5": {
-          "0": "Necesitaremos una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento."
+          "0": "We will need a photo of your document in high resolution and legible, you can cover any detail you want, except the photo, the full name and the date of birth."
         },
         "p_6": {
-          "0": "Si decides cubrir algún dato no lo haga editando la foto o Facebook no la admitirá, usa los dedos por ejemplo, o trozo de papel."
+          "0": "If you decide to cover any data, do not do it by editing the photo or Facebook will not admit it, use your fingers for example, or a piece of paper."
         },
         "p_7": {
-          "0": "Puedes usar, DNI, pasaporte o licencia de conducir, si no tienes ninguno de ellos por favor",
-          "1": "haz clic aquí para obtener una guía con opciones alternativas"
+          "0": "You can use, DNI, passport or driver's license, if you do not have any of them please",
+          "1": "click here for a guide with alternative options."
         },
         "p_8": {
-          "0": "Durante el proceso de registro deberás adjuntar también una foto tu",
-          "1": "Identificador del administrador comercial",
-          "2": "que creaste en el paso 1 e introducir el",
-          "3": "código de autenticación de 32 caracteres",
-          "4": "(Token) que has obtenido en el paso 2"
+          "0": "During the registration process, you must also attach a photo of your",
+          "1": "Business Manager ID",
+          "2": "that you created in step 1 and enter the",
+          "3": "32-character authentication code",
+          "4": "(Token) that you obtained in step 2."
         }
       }
     },
     "payment": {
-      "title": "Recibe el pago",
+      "title": "Get paid",
       "info": {
         "p_1": {
-          "0": "Una vez que nuestro equipo verifique que podemos acceder a tu perfil mediante 2FA y que efectivamente el Admistrador comercial (BM) está creado y sin restringir, nuestro equipo terminará de configurar el BM y se procesará tu primer pago a través de Paypal."
+          "0": "Once our team verifies that we can access your profile through 2FA and that indeed the Commercial Administrator (BM) is created and unrestricted, our team will finish configuring the BM and your first payment will be processed through Paypal."
         },
         "p_2": {
-          "0": "Normalemente de 4 a 5 días hábiles después de haber recibido su formulario, siempre que los datos sean correctos y podamos acceder a su perfil y el Business Manager no esté restringido."
+          "0": "Normally 4 to 5 business days after receiving your form, provided that the data is correct and we can access your profile and the Business Manager is not restricted."
         },
         "p_3": {
-          "0": "Ah, y si nos envias a tus amigos obtienes más dinero por cada referido, echa un vistazo a nuestro",
-          "1": "Programa de Referidos"
+          "0": "Oh, and if you send us to your friends you get more money for each referral, take a look at our",
+          "1": "Referral Program."
         },
         "p_4": {
-          "0": "Recibirás el primer pago una vez que la cuenta se haya revisado y se haya configurado correctamente un Business Manager."
+          "0": "You will receive the first payment once the account has been reviewed and a Business Manager has been correctly configured."
         },
         "p_5": {
-          "0": "Después del primer pago los siguientes pagos mesuales se realizan de la siguiente manera:"
+          "0": "After the first payment the following monthly payments are made as follows:"
         },
         "p_6": {
-          "0": "Los perfiles activados en la primera quincena del mes (primeras 2 semanas) se pagarán la semana del 15 del mes siguiente."
+          "0": "The profiles activated in the first fortnight of the month (first 2 weeks) will be paid the week of the 15th of the following month."
         },
         "p_7": {
-          "0": "Los perfiles activados en la segunda quincena del mes (2 últimas semanas) se pagarán a fin de mes."
+          "0": "Profiles activated in the second half of the month (last 2 weeks) will be paid at the end of the month."
         },
         "p_8": {
-          "0": "El pago de referidos se realiza siempre a fin de mes, nuestro equipo se comunicará contigo para confirmar el número de referidos registrados por tu parte y realizar el pago correspondiente."
+          "0": "The payment of referrals is always made at the end of the month, our team will contact you to confirm the number of referrals registered by you and make the corresponding payment."
         }
       }
     },
     "support": {
-      "title": "Soporte",
+      "title": "Support",
       "info": {
         "p_1": {
-          "0": "Puedes ponerte en contacto con nosotros en cualquier momento para resolver cualquier pregunta, y también podría ser que eventualmente necesitemos ponernos en contacto contigo para resolver cualquier cosa."
+          "0": "You can contact us at any time to resolve any questions, and it could also be that we eventually need to contact you to resolve anything."
         },
         "p_2": {
-          "0": "Importante"
+          "0": "Important"
         },
         "p_3": {
-          "0": "Tarde o temprano Facebook te pedirá que cambie la contraseña o tal vez tu decidas cambiarla, si esto sucede,",
-          "1": "comunicate con nosotros inmediatamente",
-          "2": ", de lo contrario podrás crearnos problemas ya que no podremos usar la cuenta y no podremos pagarte."
+          "0": "Sooner or later Facebook will ask you to change the password or perhaps you decide to change it, if this happens,",
+          "1": "contact us immediately",
+          "2": ", otherwise you may create problems for us since we will not be able to use the account and we will not be able to pay you."
         },
         "p_4": {
-          "0": "Contáctanos"
+          "0": "Contact us"
         }
       }
     }
   },
   "join_now": {
-    "title": "¿Es válido tu perfil de Facebook para nuestro programa de alquiler?",
-    "info": "Para saber si es válido para nuestro programa de alquiler, completa este sencillo cuestionario.",
+    "title": "Is your Facebook profile valid for our rental program?",
+    "info": "To find out if it is valid for our rental program, complete this simple questionnaire.",
     "button": {
-      "previous": "Anterior",
-      "next": "Siguiente",
-      "send": "Enviar"
+      "previous": "Previous",
+      "next": "Next",
+      "send": "Send"
     },
     "form_location": {
-      "title": "Formulario de registro",
-      "p_1": "Cuestionario de calificación",
-      "p_2": "Datos personales",
-      "p_3": "Datos de cuenta de Facebook",
-      "p_4": "Confirmación y Método de pago",
-      "p_5": "Felicitaciones"
+      "title": "Registration Form",
+      "p_1": "Qualification questionnaire",
+      "p_2": "Personal information",
+      "p_3": "Facebook account data",
+      "p_4": "Confirmation and Payment method",
+      "p_5": "Congratulations"
     },
     "step_one": {
       "isAdult": {
-        "question": "¿Eres mayor de edad?",
-        "option_1": "Sí",
+        "question": "Are you of legal age?",
+        "option_1": "Yes",
         "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "error_1": "This field is required"
       },
       "accountIsReal": {
-        "question": "¿Estás creando la solicitud con tu perfil real de Facebook?",
-        "option_1": "Sí",
+        "question": "Are you creating the request with your real Facebook profile?",
+        "option_1": "Yes",
         "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "error_1": "This field is required"
       },
       "isFirstTime": {
-        "question": "¿Tú o alguien más ha utilizado tu cuenta antes para crear publicidad?",
-        "option_1": "Sí",
+        "question": "Have you or someone else used your account to create advertising",
+        "option_1": "Yes",
         "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "error_1": "This field is required"
       },
       "isOneYear": {
-        "question": "¿Tu cuenta tiene más de un año?",
-        "option_1": "Sí",
+        "question": "Is your account more than one year old?",
+        "option_1": "Yes",
         "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "error_1": "This field is required"
       },
       "haveFriends": {
-        "question": "¿Tienes más de 100 amigos en Facebook?",
-        "option_1": "Sí",
+        "question": "Do you have more than 100 friends on Facebook?",
+        "option_1": "Yes",
         "option_2": "No",
-        "error_1": "Este campo es obligatorio."
+        "error_1": "This field is required"
       }
     },
     "step_two": {
       "name": {
-        "question": "Tu nombre",
-        "error_1": "Por favor, registre su nombre",
-        "error_2": "El nombre contiene caracteres no permitidos"
+        "question": "Your name",
+        "error_1": "This field is required",
+        "error_2": "The name contains illegal characters"
       },
       "lastname": {
-        "question": "Tus apellidos",
-        "error_1": "Por favor, registre su apellido",
-        "error_2": "El apellido contiene caracteres no permitidos"
+        "question": "Your last name",
+        "error_1": "This field is required",
+        "error_2": "The last name contains illegal characters"
       },
       "country": {
         "question": "Tu país de residencia",
-        "error_1": "Este campo es obligatorio"
+        "error_1": "This field is required"
       },
       "city": {
-        "question": "Tu ciudad de residencia",
-        "error_1": "Este campo es obligatorio"
+        "question": "Your city of residence",
+        "error_1": "This field is required"
       },
       "birthday": {
-        "question": "Fecha de nacimiento",
-        "error_1": "Por favor, ingrese la fecha de su nacimiento",
-        "error_2": "Debes ser mayor de 18 años"
+        "question": "Date of birth",
+        "error_1": "This field is required",
+        "error_2": "You must be over 18 years"
       },
       "phone": {
-        "question": "Tu celular",
-        "error_1": "Este campo es obligatorio",
-        "error_2": "Ingrese un numero de celular válido",
-        "max_error": "Máximo 15 numeros"
+        "question": "Your cellphone",
+        "error_1": "This field is required",
+        "error_2": "Enter a valid cell phone number",
+        "max_error": "Maximum 15 numbers"
       },
       "email": {
         "question": "Email",
-        "error_1": "Por favor, ingrese su email",
-        "error_2": "Ingrese un email válido"
+        "error_1": "This field is required",
+        "error_2": "Enter a valid email"
       },
       "password": {
-        "question": "Contraseña",
-        "required_error": "Por favor, registre este campo",
-        "min_error": "Mínimo 8 caracteres",
-        "max_error": "Máximo 15 caracteres"
+        "question": "Password",
+        "required_error": "This field is required",
+        "min_error": "Minimum 8 characters",
+        "max_error": "Maximum 15 characters"
       },
       "password_confirmation": {
-        "question": "Confirme su contraseña",
-        "required_error": "Por favor, registre este campo",
-        "same_error": "Las contraseñas no coinciden"
+        "question": "Confirm your password",
+        "required_error": "This field is required",
+        "same_error": "Passwords do not match"
       }
     },
     "step_three": {
       "frequency": {
-        "question": "¿Con qué frecuencia usas Facebook?",
-        "option_1": "Todos los días",
-        "option_2": "2 - 3 veces a la semana",
-        "option_3": "1 - 2 veces a la semana",
-        "option_4": "1 - 2 veces al mes",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "question": "How often do you use Facebook?",
+        "option_1": "Every day",
+        "option_2": "2 - 3 times a week",
+        "option_3": "1 - 2 times a week",
+        "option_4": "1 - 2 times a month",
+        "error_1": "Please select one of the options"
       },
       "devices": {
-        "question": "¿Con qué frecuencia usas Facebook? (Puedes seleccionar más de uno)",
-        "option_1": "PC sobremesa",
+        "question": "How often do you use Facebook? (You can select more than one)",
+        "option_1": "Desktop PC",
         "option_2": "Tablet",
-        "option_3": "Móvil",
-        "option_4": "Otros",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "option_3": "Mobile",
+        "option_4": "Others",
+        "error_1": "Please select one of the options"
       },
       "os": {
-        "question": "¿Qué sistema operativo utilizas con Facebook? (Puedes seleccionar más de uno)",
+        "question": "What operating system do you use with Facebook? (You can select more than one)",
         "option_1": "Windows",
         "option_2": "Android",
         "option_3": "Apple",
-        "option_4": "Otros",
-        "error_1": "Por favor, seleccione una de las opciones"
+        "option_4": "Others",
+        "error_1": "Please select one of the options"
       },
       "username": {
-        "question": "Usuario de Facebook",
-        "error_1": "Por favor, ingrese su usuario de Facebook",
-        "error_2": "El usuario debe contener al menos 6 caracteres"
+        "question": "Facebook user",
+        "error_1": "This field is required",
+        "error_2": "User must contain at least 6 characters"
       },
       "fbPassword": {
-        "question": "Contraseña de Facebook",
-        "error_1": "Por favor, ingrese su constraseña de Facebook",
-        "error_2": "Su contraseña debe contener al menos 6 caracteres"
+        "question": "Facebook password",
+        "error_1": "This field is required",
+        "error_2": "Your password must contain at least 8 characters"
       },
       "fbEmailImage": {
-        "question": "Confirmación del email asociado a tu perfil",
-        "error_1": "Por favor, ingrese una foto confirmando el email asociado",
-        "error_2": "El archivo puede pesar máximo 2mb",
-        "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
-        "image_one": "Confirmación de email de Facebook. Ejemplo 1.",
-        "image_two": "Confirmación de email de Facebook. Ejemplo 2.",
+        "question": "Confirmation of the email associated with your profile",
+        "error_1": "This field is required",
+        "error_2": "The file can be up to 2mb",
+        "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "image_one": "Email confirmation from Facebook. Example 1.",
+        "image_two": "Email confirmation from Facebook. Example 2.",
         "message": {
           "p_1": {
             "0": "Envía una foto para confirmar el email asociado."
@@ -1349,7 +1349,7 @@
       "congratulations": "Felicitaciones"
     },
     "step_one": {
-      "required_field": "Por favor, registre este campo",
+      "required_field": "This field is required",
       "first_name": "Su nombre",
       "first_name_error_pattern": "El nombre contiene caracteres no permitidos",
       "last_name": "Sus apellidos",

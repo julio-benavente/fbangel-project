@@ -41,7 +41,7 @@
       "list": [
         "Real, activo, con foto y nombre real",
         "Con al menos 100 amigos",
-        "Al menos un año de edad",
+        "Al menos un año de antigüedad",
         "Contenido apropiado",
         "Ser mayor de edad",
         "No debe haber sido previamente utilizado o alquilado a otras empresas para el uso de publicidad",
@@ -246,7 +246,7 @@
         "list": {
           "li_1": {
             "0": "Ve a",
-            "1": "Configuración y privacida"
+            "1": "Configuración y privacidad"
           },
           "li_2": {
             "0": "Selecciona",
