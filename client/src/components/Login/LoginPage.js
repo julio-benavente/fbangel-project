@@ -56,6 +56,8 @@ const LoginPage = () => {
       })
     );
 
+    console.log(response);
+
     response.type === loginSucceeded.type && push("/dashboard");
   };
 
