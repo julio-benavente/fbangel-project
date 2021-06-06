@@ -32,6 +32,8 @@ app.use("/api/actions", actions);
 app.use("/auth", auth);
 app.use("/email", email);
 
+console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
