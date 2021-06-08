@@ -494,7 +494,7 @@
       "fbPassword": {
         "question": "Contraseña de Facebook",
         "error_1": "Por favor, ingrese su constraseña de Facebook",
-        "error_2": "Su contraseña debe contener al menos 6 caracteres"
+        "error_2": "Su contraseña debe contener al menos 8 caracteres"
       },
       "fbEmailImage": {
         "question": "Confirmación del email asociado a tu perfil",
@@ -813,6 +813,7 @@
     }
   },
   "terms_conditions": {
+    "title": "TÉRMINOS Y CONDICIONES",
     "intro": {
       "title": "TÉRMINOS Y CONDICIONES PARA LOS ALQUILERES PUBLICITARIOS DE FACEBOOK",
       "p": [
@@ -1112,7 +1113,7 @@
     "title": "Cambiar contraseña",
     "password": "Contraseña",
     "password_error_required": "Por favor, llenar este campo",
-    "password_error_min": "Mínimo 6 caracteres",
+    "password_error_min": "Mínimo 8 caracteres",
     "password_confirmation": "Confirmar contraseña",
     "password_confirmation_error_required": "Por favor, llenar este campo",
     "password_confirmation_error_same": "Las contraseñas no coinciden",

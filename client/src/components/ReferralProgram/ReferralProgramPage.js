@@ -29,8 +29,8 @@ const ReferralProgramPage = () => {
           <a href="https://form.jotform.com/210684831753358" target="_blank">
             {t("referral_program.info.0")}
           </a>{" "}
-          {t("referral_program.info.1")}
-          <span className="money"> {t("referral_program.info.2")} </span>
+          {t("referral_program.info.1")}{" "}
+          <span className="money"> {t("referral_program.info.2")}</span>
           {t("referral_program.info.3")}
           <span className="asterisk">*</span>
         </ReferralProgramSectionInfo>

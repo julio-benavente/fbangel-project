@@ -16,7 +16,7 @@ const TermsAndConditionsPage = () => {
       <TermsAndConditionsSection>
         <TermsAndConditionsSectionWrapper>
           <TermsAndConditionsTitle>
-            TÉRMINOS Y CONDICIONES
+            {t("terms_conditions.title")}
           </TermsAndConditionsTitle>
 
           <TermsAndConditionsInfo>

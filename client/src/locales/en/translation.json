@@ -813,6 +813,7 @@
     }
   },
   "terms_conditions": {
+    "title": "TERMS AND CONDITIONS",
     "intro": {
       "title": "TERMS AND CONDITIONS FOR FACEBOOK ADVERTISING RENTALS",
       "p": [
@@ -991,7 +992,7 @@
     }
   },
   "referral_program": {
-    "title": "Conviértete en un Referente",
+    "title": "Become a referrer",
     "info": {
       "0": "Register here",
       "1": "seriously increase your earnings and get",
