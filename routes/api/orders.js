@@ -162,13 +162,19 @@ router.put("/change-status/:action", auth, async (req, res) => {
       })
     );
 
-    order.status = status;
-    order.approvedBy = req.adminId;
-    errors.map((error) => order.errorList.push(error));
-    order.save();
+    await Order.findByIdAndUpdate(orderId, {
+      $set: {
+        status,
+        approvedBy: req.adminId,
+      },
+      $push: {
+        errorList: { $each: errors },
+      },
+    }).exec();
 
     res.json({ order: { payments, errors } });
   } catch (error) {
+    console.log(error);
     res.status(400).json({ error: error.message });
   }
 });
