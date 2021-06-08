@@ -106,7 +106,7 @@ const HomePage = () => {
           <LeftSide>
             <Headline>{t("home.banner.headline")}</Headline>
             <Subheadline>{t("home.banner.sub_headline")}</Subheadline>
-            <StartButton to="unete-ahora">
+            <StartButton to="/join-now">
               {t("home.banner.start_button")}
             </StartButton>
           </LeftSide>
