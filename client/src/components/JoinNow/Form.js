@@ -32,7 +32,7 @@ import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(4);
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
 
   const defaultValues = {
@@ -80,7 +80,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      ...defaultValues,
+      // ...defaultValues,
     },
   });
 
@@ -95,31 +95,31 @@ const Form = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const onSubmit = async (data) => {
-    console.log(data);
-  };
-
   // const onSubmit = async (data) => {
-  //   if (!isSubmitting) {
-  //     const response = await fetchCandidateInformation(data);
-
-  //     if (response.response.data.error.email.includes("been registered")) {
-  //       dispatch(emailDuplicatedSet(true));
-  //     }
-
-  //     const { status } = response;
-
-  //     if (status && status === 200) {
-  //       handleFormStep(1, formStep);
-  //     } else {
-  //       const incompleteCandidate = await fetchCandidateInformation(
-  //         data,
-  //         "incomplete"
-  //       );
-  //     }
-  //     return null;
-  //   }
+  //   console.log(data);
   // };
+
+  const onSubmit = async (data) => {
+    if (!isSubmitting) {
+      const response = await fetchCandidateInformation(data);
+
+      if (response.response.data.error.email.includes("been registered")) {
+        dispatch(emailDuplicatedSet(true));
+      }
+
+      const { status } = response;
+
+      if (status && status === 200) {
+        handleFormStep(1, formStep);
+      } else {
+        const incompleteCandidate = await fetchCandidateInformation(
+          data,
+          "incomplete"
+        );
+      }
+      return null;
+    }
+  };
 
   const fetchCandidateInformation = async (data, type = "complete") => {
     const url =
