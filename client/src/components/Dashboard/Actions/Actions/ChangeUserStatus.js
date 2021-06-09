@@ -77,10 +77,13 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
   const [filterAttribute, setFilterAttribute] = useState(null);
   const [filterData, setFilterData] = useState("");
   const filterOption = [
-    { label: "Ninguno", value: null },
-    { label: "Codigo de referido", value: "referralCode" },
-    { label: "Nombre", value: "firstName" },
-    { label: "Apellido", value: "lastName" },
+    { label: t("actions.change_user_status.none"), value: null },
+    {
+      label: t("actions.change_user_status.referral_code"),
+      value: "referralCode",
+    },
+    { label: t("actions.change_user_status.first_name"), value: "firstName" },
+    { label: t("actions.change_user_status.last_name"), value: "lastName" },
   ];
 
   return (
@@ -97,7 +100,7 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
         {!usersSelectedIsOpen && (
           <>
             <Filter className="filter">
-              <p>Filtro : </p>
+              <p>{t("actions.change_user_status.filter")} : </p>
               <input
                 className="filterData"
                 type="text"
@@ -113,9 +116,15 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
             <div className="thead">
               <div className="tr" style={{ ...tableWidth }}>
                 <div className="th select"></div>
-                <div className="th name">Nombre</div>
-                <div className="th email">Email</div>
-                <div className="th referralCode">Codigo de referido</div>
+                <div className="th name">
+                  {t("actions.change_user_status.first_name")}
+                </div>
+                <div className="th email">
+                  {t("actions.change_user_status.last_name")}
+                </div>
+                <div className="th referralCode">
+                  {t("actions.change_user_status.referral_code")}
+                </div>
               </div>
             </div>
             <div className="tbody">
@@ -231,6 +240,8 @@ const UserSelectedTable = (props) => {
     } catch ({ response }) {}
   };
 
+  const { t } = useTranslation();
+
   return (
     <UsersSelected>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -242,21 +253,38 @@ const UserSelectedTable = (props) => {
             {!usersSelectedIsOpen ? "Ver selecionados" : "Ocultar selecionados"}
           </button>
           {usersSelectedIsOpen && (
-            <p>Usuarios selecionados : {usersSelected.length}</p>
+            <p>
+              {t("actions.change_user_status.users_selected")} :{" "}
+              {usersSelected.length}
+            </p>
           )}
 
-          {usersSelectedIsOpen && <button type="submit">Enviar</button>}
+          {usersSelectedIsOpen && (
+            <button type="submit">
+              {t("actions.change_user_status.send")}
+            </button>
+          )}
         </UsersSelectedSummary>
         {usersSelectedIsOpen && (
           <>
             <div className="thead">
               <div className="tr" style={{ ...tableWidth }}>
                 <div className="th select"></div>
-                <div className="th name">Nombre</div>
-                <div className="th email">Email</div>
-                <div className="th referralCode">Codigo de referido</div>
-                <div className="th status">Estado</div>
-                <div className="th statusObservation">Observacion</div>
+                <div className="th name">
+                  {t("actions.change_user_status.name")}
+                </div>
+                <div className="th email">
+                  {t("actions.change_user_status.email")}
+                </div>
+                <div className="th referralCode">
+                  {t("actions.change_user_status.referral_code")}
+                </div>
+                <div className="th status">
+                  {t("actions.change_user_status.status")}
+                </div>
+                <div className="th statusObservation">
+                  {t("actions.change_user_status.observation")}
+                </div>
               </div>
             </div>
             <div className="tbody">

@@ -21,7 +21,9 @@ const UserRow = ({ action, tableWidth }) => {
           1
         )}`}</div>
         <div className="td details">
-          <button onClick={handleDetails}>Detalles</button>
+          <button onClick={handleDetails}>
+            {t("actions.user_row.details")}
+          </button>
         </div>
       </div>
       {detailsIsOn && <Details details={details} />}
@@ -56,9 +58,9 @@ const Details = ({ details }) => {
     <DetailsUserTable className="DetailsUserTable">
       <div className="thead">
         <div className="tr" style={tableWdith}>
-          <div className="th name">Nombre</div>
-          <div className="th email">Email</div>
-          <div className="th action">Action</div>
+          <div className="th name">{t("actions.user_row.name")}</div>
+          <div className="th email">{t("actions.user_row.email")}</div>
+          <div className="th action">{t("actions.user_row.action")}</div>
         </div>
       </div>
       <div className="tbody">

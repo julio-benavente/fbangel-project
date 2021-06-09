@@ -64,7 +64,7 @@ const CreateActionPage = ({ setCreateActionPageIsOpen }) => {
           onChange={({ value }) => setActionOptionSelected(value)}
         />
         <CreateActionButton onClick={() => setAction(actionOptionSelected)}>
-          Crear accion
+          {t("actions.create_action.create_action_button")}
         </CreateActionButton>
       </CreateActionWrapper>
       {action === "changeUserState" && (

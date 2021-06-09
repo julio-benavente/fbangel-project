@@ -103,7 +103,14 @@ const Form = () => {
     if (!isSubmitting) {
       const response = await fetchCandidateInformation(data);
 
-      if (response.response.data.error.email.includes("been registered")) {
+      if (
+        response &&
+        response.response &&
+        response.response.data &&
+        response.response.data.error &&
+        response.response.data.error.email &&
+        response.response.data.error.email.includes("been registered")
+      ) {
         dispatch(emailDuplicatedSet(true));
       }
 

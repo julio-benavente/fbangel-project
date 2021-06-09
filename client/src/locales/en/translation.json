@@ -1182,7 +1182,7 @@
     "orders": "Orders"
   },
   "dashboard_profile": {
-    "hi": "hello",
+    "hi": "Hello",
     "logout": "Close session"
   },
   "payments": {
@@ -1315,13 +1315,19 @@
     "status": "Status",
     "target": "Target",
     "details": "Details",
+    "user_row": {
+      "details": "Details",
+      "name": "Name",
+      "action": "Action",
+      "email": "Email"
+    },
     "create_action": {
       "title": "Create order",
       "create_action_button": "Create action"
     },
     "change_user_status": {
       "none": "None",
-      "fist_name": "Name",
+      "first_name": "Name",
       "last_name": "Surname",
       "referral_code": "Referral code",
       "filter": "Filter",

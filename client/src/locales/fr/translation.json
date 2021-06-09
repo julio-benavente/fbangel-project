@@ -1296,7 +1296,7 @@
     "create_order": {
       "title": "Créer une commande",
       "create_order_button": "Créer une commande",
-      "name": " nom",
+      "name": "Nom",
       "email": "E-mail",
       "payment_method": "Mode de paiement",
       "concept": "Concept",
@@ -1320,13 +1320,19 @@
     "status": "Statut",
     "target": "Cible",
     "details": "Détails",
+    "user_row": {
+      "details": "Détails",
+      "name": "Nom",
+      "action": "Action",
+      "email": "E-mail"
+    },
     "create_action": {
       "title": "Créer une commande",
       "create_action_button": "Créer une action"
     },
     "change_user_status": {
       "none": "Aucun",
-      "fist_name": "Nom",
+      "first_name": "Nom",
       "last_name": "Noms de famille",
       "referral_code": "Code de parrainage",
       "filter": "Filtre",

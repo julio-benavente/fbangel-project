@@ -10,8 +10,7 @@ const StepFive = () => {
   const { getValues } = useFormContext();
 
   const {
-    stepTwo: { email },
-    stepFour: { paymentMethod },
+    stepTwo: { email, paymentMethod },
   } = getValues();
 
   // const paymentMethod = "paypal";

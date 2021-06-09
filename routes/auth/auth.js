@@ -242,6 +242,9 @@ router.put("/reset-password/:token", async (req, res) => {
   const tokenKey = process.env.FORGOT_PASSWORD_KEY;
   const { token } = req.params;
 
+  const salt = await bcrypt.genSalt();
+  const passwordHashed = await bcrypt.hash(password, salt);
+
   try {
     await jwt.verify(token, tokenKey, async (error, decodedToken) => {
       if (error) {
@@ -249,26 +252,31 @@ router.put("/reset-password/:token", async (req, res) => {
       }
 
       var user = null;
-      user = await User.findById(decodedToken.data);
+      user = await User.findOneAndUpdate(
+        { _id: decodedToken.data, resetPasswordToken: token },
+        {
+          password: passwordHashed,
+          resetPasswordToken: "",
+        }
+      ).exec();
 
       if (!user) {
-        user = await AdminUser.findById(decodedToken.data);
+        user = await User.findOneAndUpdate(
+          { _id: decodedToken.data, resetPasswordToken: token },
+          {
+            password: passwordHashed,
+            resetPasswordToken: "",
+          }
+        ).exec();
       }
 
-      if (user) {
-        if (user.resetPasswordToken !== token) {
-          throw Error("The reset password url is incorrect or has expired");
-        }
-
-        // Set verification True
-        user.password = password;
-        user.resetPasswordToken = "";
-        user.save();
-
-        res.json({ message: "The password has already been changed" });
-      } else {
-        throw Error("User doesn't exist");
+      if (!user) {
+        throw Error(
+          "The user doesn't exist or the reset password url is incorrect or has expired"
+        );
       }
+
+      res.json({ message: "The password has already been changed" });
     });
   } catch (error) {
     res.status(400).json({ error: error.message });

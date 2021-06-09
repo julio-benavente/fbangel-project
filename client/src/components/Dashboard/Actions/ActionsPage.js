@@ -26,7 +26,7 @@ import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 const ActionsPage = () => {
   const dispatch = useDispatch();
   const actions = useSelector(getActions);
-  // const {loading }= useSelector(getActionsState)
+  const { loading } = useSelector(getActionsState);
 
   useEffect(() => {
     dispatch(requestActions());
@@ -77,8 +77,6 @@ const ActionsPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [actions, current, pageSize]);
 
-  const loading = false;
-
   // Select the rows to display on the table
   const [showRows, setShowRows] = useState([]);
 
@@ -95,9 +93,9 @@ const ActionsPage = () => {
   return (
     <Actions className="Actions">
       <Header>
-        <Title>Acciones</Title>
+        <Title>{t("actions.title")}</Title>
         <CreateOrderButton onClick={openCreateOrder}>
-          Crear accion
+          {t("actions.create_action_button")}
         </CreateOrderButton>
       </Header>
       {createAcionPageIsOpen && (
@@ -108,10 +106,10 @@ const ActionsPage = () => {
       <Table>
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
-            <div className="th action">Accion</div>
-            <div className="th creationDate">Fecha de creation</div>
-            <div className="th target">Objetivo</div>
-            <div className="th details">Detalles</div>
+            <div className="th action">{t("actions.action")}</div>
+            <div className="th creationDate">{t("actions.creationDate")}</div>
+            <div className="th target">{t("actions.target")}</div>
+            <div className="th details">{t("actions.details")}</div>
           </div>
         </div>
         <div className="tbody">

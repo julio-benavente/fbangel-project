@@ -1315,13 +1315,19 @@
     "status": "Estado",
     "target": "Objetivo",
     "details": "Detalles",
+    "user_row": {
+      "details": "Detalles",
+      "name": "Nombre",
+      "action": "Acción",
+      "email": "Email"
+    },
     "create_action": {
       "title": "Crear orden",
       "create_action_button": "Crear acción"
     },
     "change_user_status": {
       "none": "Ninguno",
-      "fist_name": "Nombre",
+      "first_name": "Nombre",
       "last_name": "Apellido",
       "referral_code": "Codigo de referido",
       "filter": "Filtro",

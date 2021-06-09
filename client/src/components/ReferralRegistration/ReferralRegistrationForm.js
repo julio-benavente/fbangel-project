@@ -73,9 +73,17 @@ const Form = () => {
       const response = await fetchCandidateInformation(data);
       const { status } = response;
 
-      if (response.response.data.error.email.includes("been registered")) {
+      if (
+        response &&
+        response.response &&
+        response.response.data &&
+        response.response.data.error &&
+        response.response.data.error.email &&
+        response.response.data.error.email.includes("been registered")
+      ) {
         dispatch(emailDuplicatedSet(true));
       }
+
       if (status && status === 200) {
         handleFormStep(1, formStep);
       } else {
