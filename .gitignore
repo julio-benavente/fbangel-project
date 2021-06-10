@@ -3,3 +3,4 @@ node_modules/
 requests.http
 console.js
 client/node_modules/
+uploads/*

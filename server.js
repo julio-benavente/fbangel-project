@@ -32,7 +32,7 @@ app.use("/api/actions", actions);
 app.use("/auth", auth);
 app.use("/email", email);
 
-console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+app.use("/uploads", express.static("uploads"));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {

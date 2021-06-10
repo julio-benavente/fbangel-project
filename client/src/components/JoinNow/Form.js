@@ -32,7 +32,7 @@ import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(4);
   const formData = useRef();
 
   const defaultValues = {
@@ -46,7 +46,7 @@ const Form = () => {
     stepTwo: {
       firstName: "emanuel",
       lastName: "emanuel",
-      email: "filarih561@flmcat.com",
+      email: "xacig82928@relumyx.com",
       country: "Peru",
       city: "Lima",
       password: "emanuel132",
@@ -58,14 +58,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "filarih561@flmcat.com",
+      fbUsername: "xacig82928@relumyx.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "filarih561@flmcat.com",
-      paypalEmailConfirmation: "filarih561@flmcat.com",
+      paypalEmail: "xacig82928@relumyx.com",
+      paypalEmailConfirmation: "xacig82928@relumyx.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -80,7 +80,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      // ...defaultValues,
+      ...defaultValues,
     },
   });
 
@@ -94,10 +94,6 @@ const Form = () => {
 
   const history = useHistory();
   const dispatch = useDispatch();
-
-  // const onSubmit = async (data) => {
-  //   console.log(data);
-  // };
 
   const onSubmit = async (data) => {
     if (!isSubmitting) {
@@ -113,6 +109,7 @@ const Form = () => {
       ) {
         dispatch(emailDuplicatedSet(true));
       }
+      console.log("response", response);
 
       const { status } = response;
 
@@ -136,34 +133,22 @@ const Form = () => {
 
     const { stepOne, stepTwo, stepThree, stepFour } = data;
 
-    const fbEmailImage = stepThree && stepThree.fbEmailImage;
-    const bmIdImage = stepThree && stepThree.bmIdImage;
-    const documentImage = stepFour && stepFour.documentImage;
-
-    const encodeImage = (img) => {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(img);
-        reader.onloadend = (e) => resolve(e.target.result);
-
-        // Error
-        reader.onerror = (error) => reject(error);
-      });
-    };
-
-    const candidateInformation = {
+    const preInfo = {
       ...stepOne,
       ...stepTwo,
       ...stepThree,
       ...stepFour,
-      fbEmailImage:
-        fbEmailImage && fbEmailImage[0] && (await encodeImage(fbEmailImage[0])),
-      bmIdImage: bmIdImage && bmIdImage[0] && (await encodeImage(bmIdImage[0])),
-      documentImage:
-        documentImage &&
-        documentImage[0] &&
-        (await encodeImage(documentImage[0])),
     };
+
+    const candidateInformation = new FormData();
+
+    Object.keys(preInfo).map((key) => {
+      candidateInformation.append(`${key}`, preInfo[key]);
+    });
+
+    candidateInformation.append("documentImage", stepFour.documentImage[0]);
+    candidateInformation.append("fbEmailImage", stepThree.fbEmailImage[0]);
+    candidateInformation.append("bmIdImage", stepThree.bmIdImage[0]);
 
     try {
       const response = await axios.post(url, candidateInformation);

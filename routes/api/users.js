@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const jwt = require("jsonwebtoken");
-const multer = require("multer");
 // Models
 const User = require("../../models/User");
 const IncompleteUser = require("../../models/IncompleteUser");
@@ -16,7 +15,10 @@ const {
 const {
   emailVerification,
 } = require("../../utils/emailsTemplates/emailVerification");
+const { upload } = require("../../middlewares/upload");
+const { imageLink, sendDataToBoard } = require("../../utils/helperFunctions");
 
+// Erros
 const handleError = (error) => {
   const errorMessage = {};
 
@@ -61,7 +63,7 @@ router.get("/", auth, async (req, res) => {
 //@route /api/referrals/registration
 //@desc Here users get registered
 //@access Public
-router.post("/registration/:userType", async (req, res) => {
+router.post("/registration/:userType", upload, async (req, res) => {
   const { userType } = req.params;
 
   const userTypeValidation = {
@@ -95,24 +97,24 @@ router.post("/registration/:userType", async (req, res) => {
 
   try {
     // Upload all images
-    if (req.body.documentImage) {
-      userInformation.documentImage = await uploadImageAndGetUrl(
-        req.body.documentImage,
-        "documentImages"
+    if (req.files && req.files.documentImage) {
+      userInformation["documentImage"] = imageLink(
+        req.hostname,
+        req.files && req.files.documentImage[0]
       );
     }
 
-    if (req.body.fbEmailImage) {
-      userInformation.fbEmailImage = await uploadImageAndGetUrl(
-        req.body.fbEmailImage,
-        "fbEmailImages"
+    if (req.files && req.files.fbEmailImage) {
+      userInformation["fbEmailImage"] = imageLink(
+        req.hostname,
+        req.files && req.files.fbEmailImage[0]
       );
     }
 
-    if (req.body.bmIdImage) {
-      userInformation.bmIdImage = await uploadImageAndGetUrl(
-        req.body.bmIdImage,
-        "bmIdImages"
+    if (req.files && req.files.bmIdImage) {
+      userInformation["bmIdImage"] = imageLink(
+        req.hostname,
+        req.files && req.files.bmIdImage[0]
       );
     }
 
@@ -122,7 +124,7 @@ router.post("/registration/:userType", async (req, res) => {
     const referralCode = `FBA-${number}`;
     userInformation.referralCode = referralCode;
     userInformation.referralCodeLink = `${
-      req.hostname === "localhost" ? "http://localhost:3000/" : req.hostname
+      req.hostname === "localhost" ? "http://localhost:3000" : req.hostname
     }/join-now/${referralCode}`;
 
     const newUser = await new Model({ ...userInformation }).save();
@@ -131,8 +133,11 @@ router.post("/registration/:userType", async (req, res) => {
     // Model.findOneAndUpdate({ referral: referral }, { $push });
 
     // Just send email confirmation when is rental or referral user
-    Model.modelName === "user" &&
+
+    if (Model.modelName === "user") {
       emailVerification(newUser._id, req.body.email);
+      sendDataToBoard(newUser);
+    }
 
     if (Model.modelName !== "user") {
       throw Error("Incomplete registration");
@@ -140,6 +145,7 @@ router.post("/registration/:userType", async (req, res) => {
 
     res.json({ message: "Succesful user registration" });
   } catch (e) {
+    console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }
@@ -209,18 +215,9 @@ router.get("/testing", async (req, res) => {
 //@desc
 //@access Public
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/");
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + file.originalname);
-  },
+router.post("/testing", async (req, res) => {
+  // console.log("files", req.files);
 });
-
-var upload = multer({ storage: storage });
-
-router.post("/testing", async (req, res) => {});
 
 router.put("/send-paypal-email-confirmation", async (req, res) => {
   const { id } = req.body;

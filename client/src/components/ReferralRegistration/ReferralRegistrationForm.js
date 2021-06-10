@@ -57,6 +57,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
+    defaultValues,
   });
 
   const {
@@ -104,37 +105,23 @@ const Form = () => {
 
     const { stepOne, stepTwo } = data;
 
-    const documentImage = stepTwo && stepTwo.documentImage;
-
-    const encodeImage = (img) => {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(img);
-        reader.onloadend = (e) => resolve(e.target.result);
-
-        // Error
-        reader.onerror = (error) => reject(error);
-      });
-    };
-
-    const candidateInformation = {
+    const preInfo = {
       ...stepOne,
       ...stepTwo,
-      documentImage:
-        documentImage &&
-        documentImage[0] &&
-        (await encodeImage(documentImage[0])),
     };
+
+    const candidateInformation = new FormData();
+
+    Object.keys(preInfo).map((key) => {
+      candidateInformation.append(`${key}`, preInfo[key]);
+    });
+
+    candidateInformation.append("documentImage", stepTwo.documentImage[0]);
 
     try {
       const response = await axios.post(url, candidateInformation);
-
-      console.log("fetchCandidateInformation response", response);
-
       return response;
     } catch (error) {
-      console.log("fetchCandidateInformation error", error.response);
-
       return { error: error.message, response: error.response };
     }
   };
