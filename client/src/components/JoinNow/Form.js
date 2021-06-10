@@ -32,7 +32,7 @@ import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(4);
   const formData = useRef();
 
   const defaultValues = {
@@ -46,7 +46,7 @@ const Form = () => {
     stepTwo: {
       firstName: "emanuel",
       lastName: "emanuel",
-      email: "xacig82928@relumyx.com",
+      email: "cosotel740@jmpant.com",
       country: "Peru",
       city: "Lima",
       password: "emanuel132",
@@ -58,14 +58,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "xacig82928@relumyx.com",
+      fbUsername: "cosotel740@jmpant.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "xacig82928@relumyx.com",
-      paypalEmailConfirmation: "xacig82928@relumyx.com",
+      paypalEmail: "cosotel740@jmpant.com",
+      paypalEmailConfirmation: "cosotel740@jmpant.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -80,7 +80,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      // ...defaultValues,
+      ...defaultValues,
     },
   });
 

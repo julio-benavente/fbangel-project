@@ -26,14 +26,14 @@ import "react-datepicker/dist/react-datepicker.css";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(2);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
       firstName: "julio",
       lastName: "julio",
       address: "Calle La loca vecindad 46",
-      email: "filarih561@flmcat.com",
+      email: "cosotel740@jmpant.com",
       country: "Peru",
       city: "Lima",
       zipCode: "16351",
@@ -57,7 +57,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    // defaultValues,
+    defaultValues,
   });
 
   const {

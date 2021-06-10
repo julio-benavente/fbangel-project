@@ -94,7 +94,6 @@ router.post("/registration/:userType", upload, async (req, res) => {
     ...req.body,
     ip,
   };
-
   try {
     // Upload all images
     if (req.files && req.files.documentImage) {
@@ -134,9 +133,33 @@ router.post("/registration/:userType", upload, async (req, res) => {
 
     // Just send email confirmation when is rental or referral user
 
+    console.log("file", req.files.documentImage);
+
     if (Model.modelName === "user") {
       emailVerification(newUser._id, req.body.email);
-      sendDataToBoard(newUser);
+
+      // Sending data to board
+      const dataToSendBoard = newUser.toObject();
+      req.files.documentImage &&
+        (dataToSendBoard["documentImage"] = {
+          link: newUser.documentImage,
+          type: req.files.documentImage[0].mimetype.replace("image/", ""),
+          name: req.files.documentImage[0].originalname,
+        });
+      req.files.fbEmailImage &&
+        (dataToSendBoard["fbEmailImage"] = {
+          link: newUser.fbEmailImage,
+          type: req.files.fbEmailImage[0].mimetype.replace("image/", ""),
+          name: req.files.fbEmailImage[0].originalname,
+        });
+      req.files.bmIdImage &&
+        (dataToSendBoard["bmIdImage"] = {
+          link: newUser.bmIdImage,
+          type: req.files.bmIdImage[0].mimetype.replace("image/", ""),
+          name: req.files.bmIdImage[0].originalname,
+        });
+
+      const dataToBoardRes = await sendDataToBoard(dataToSendBoard);
     }
 
     if (Model.modelName !== "user") {
