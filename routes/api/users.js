@@ -64,9 +64,6 @@ router.get("/", auth, async (req, res) => {
 //@desc Here users get registered
 //@access Public
 router.post("/registration/:userType", upload, async (req, res) => {
-  console.log("registration hitted");
-  console.log("registration body", req.body);
-
   const { userType } = req.params;
 
   const userTypeValidation = {

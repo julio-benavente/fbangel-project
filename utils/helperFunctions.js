@@ -92,6 +92,13 @@ const sendDataToBoard = async (data) => {
       updatedData.append("ip", data.ip || "");
       updatedData.append("fortnight", data.fortnight || "");
 
+      console.log("image data document image");
+      console.log("image data document image", {
+        link: data.documentImage.link,
+        name: data.documentImage.name,
+        type: data.documentImage.type,
+      });
+
       data.documentImage &&
         updatedData.append("file", {
           link: data.documentImage.link,
@@ -116,11 +123,13 @@ const sendDataToBoard = async (data) => {
       axios
         .post(sendDataUrl, updatedData, sendDataConfig)
         .then((res) => {
+          console.log(res.data);
           return res;
         })
         .catch((error) => console.log("send data error", error));
     };
 
+    console.log("before sending data");
     sendData(data);
   } catch (error) {
     console.log(error);
