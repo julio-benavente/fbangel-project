@@ -99,6 +99,8 @@ const Form = () => {
     if (!isSubmitting) {
       const response = await fetchCandidateInformation(data);
 
+      console.log("response", response);
+
       if (
         response &&
         response.response &&

@@ -66,6 +66,8 @@ router.get("/", auth, async (req, res) => {
 router.post("/registration/:userType", upload, async (req, res) => {
   const { userType } = req.params;
 
+  console.log("registration body", req.body);
+
   const userTypeValidation = {
     rental: "rental",
     incompleteRental: "incompleteRental",
