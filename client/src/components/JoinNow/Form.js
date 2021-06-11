@@ -77,10 +77,10 @@ const Form = () => {
   const methods = useForm({
     mode: "all",
     defaultValues: {
+      ...defaultValues,
       stepFour: {
         referral: token,
       },
-      ...defaultValues,
     },
   });
 
