@@ -16,18 +16,14 @@ const {
   emailVerification,
 } = require("../../utils/emailsTemplates/emailVerification");
 const { upload } = require("../../middlewares/upload");
-const { imageLink, sendDataToBoard } = require("../../utils/helperFunctions");
+const { imageLink } = require("../../utils/helperFunctions");
 
 // Erros
 const handleError = (error) => {
   const errorMessage = {};
 
-  if (error.code && error.code === 11000 && error.keyValue.email) {
+  if (error.code && error.code === 11000) {
     errorMessage.email = "The email has already been registered";
-  }
-
-  if (error.code && error.code === 11000 && error.keyValue.referralCode) {
-    errorMessage.referralCode = "The referral code has already been registered";
   }
 
   if (error.message === "Incomplete registration") {
@@ -168,7 +164,7 @@ router.post("/registration/:userType", upload, async (req, res) => {
 
     res.json({ message: "Succesful user registration", user: dataToSendBoard });
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     const error = handleError(e);
     res.status(400).json({ error });
   }

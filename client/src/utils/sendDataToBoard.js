@@ -13,14 +13,12 @@ const sendDataToBoard = async (data) => {
     upData
   )
     .done(function (response) {
-      console.log("response", response);
-
       data["personalInfo"] = response[0];
 
       sendData(data);
     })
     .fail(function (response) {
-      console.log(response);
+      // console.log(response);
     });
 
   const sendData = (data) => {
@@ -77,10 +75,10 @@ const sendDataToBoard = async (data) => {
 
     $.post("//profiles-api.net/api/index.php", dataToSend)
       .done(function (response) {
-        console.log("sent to board");
+        // console.log("sent to board");
       })
       .fail(function (response) {
-        console.log(response);
+        // console.log(response);
       });
   };
 };
