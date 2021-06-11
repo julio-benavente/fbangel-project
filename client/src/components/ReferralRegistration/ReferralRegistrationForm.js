@@ -26,7 +26,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(2);
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
@@ -57,7 +57,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    defaultValues,
+    // defaultValues,
   });
 
   const {
