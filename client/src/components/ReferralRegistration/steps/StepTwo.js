@@ -314,7 +314,7 @@ const Main = () => {
               <ReCAPTCHA
                 name={name}
                 ref={recaptchaRef}
-                sitekey="6LdFDckaAAAAAFJtUWgUqkON2CdA4bnMClpoIM_n"
+                sitekey="6LcjSSgbAAAAAPX2T9hoFSCd-YG_xz7w5wkMpvYW"
                 onChange={(e) => onChange(true)}
                 onExpired={(e) => onChange(false)}
               />

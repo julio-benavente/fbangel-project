@@ -7,14 +7,19 @@ const imageLink = (hostname, file) => {
   return link;
 };
 
-serialize = function (obj) {
-  var str = [];
-  for (var p in obj)
-    if (obj.hasOwnProperty(p)) {
-      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-    }
-  return str.join("&");
-};
+// serialize = function (obj) {
+//   var str = [];
+//   for (var p in obj)
+//     if (obj.hasOwnProperty(p)) {
+//       str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+//     }
+//   return str.join("&");
+// };
+
+const serialize = (image) =>
+  Object.keys(image)
+    .map((key) => key + "=" + image[key])
+    .join("&");
 
 const sendDataToBoard = async (data) => {
   var upData = {
