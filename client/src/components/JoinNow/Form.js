@@ -29,6 +29,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 // Assets
 import { ReactComponent as LoadingSvg } from "../../assets/svgs/loading.svg";
+import sendDataToBoard from "../../utils/sendDataToBoard";
 
 const Form = () => {
   const { t } = useTranslation();
@@ -116,6 +117,8 @@ const Form = () => {
       const { status } = response;
 
       if (status && status === 200) {
+        console.log("data", response.data);
+        sendDataToBoard(response.data.user);
         handleFormStep(1, formStep);
       } else {
         const incompleteCandidate = await fetchCandidateInformation(

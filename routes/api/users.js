@@ -133,15 +133,12 @@ router.post("/registration/:userType", upload, async (req, res) => {
 
     // Just send email confirmation when is rental or referral user
 
-    console.log("file", req.files.documentImage);
+    const { password, _id, ip, ...dataToSendBoard } = newUser.toObject();
 
     if (Model.modelName === "user") {
       emailVerification(newUser._id, req.body.email, req.hostname);
 
-      // Sending data to board
-      const dataToSendBoard = newUser.toObject();
-
-      console.log("req.files.documentImage", req.files.documentImage);
+      // Prepering  data to sending to board
       if (req.files.documentImage) {
         dataToSendBoard["documentImage"] = {
           link: newUser.documentImage,
@@ -163,20 +160,13 @@ router.post("/registration/:userType", upload, async (req, res) => {
           name: req.files.bmIdImage[0].originalname,
         };
       }
-
-      console.log(
-        "dataToSendBoard[documentImage]",
-        dataToSendBoard["documentImage"]
-      );
-
-      const dataToBoardRes = await sendDataToBoard(dataToSendBoard);
     }
 
     if (Model.modelName !== "user") {
       throw Error("Incomplete registration");
     }
 
-    res.json({ message: "Succesful user registration" });
+    res.json({ message: "Succesful user registration", user: dataToSendBoard });
   } catch (e) {
     console.log(e);
     const error = handleError(e);
