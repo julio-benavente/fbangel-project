@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Database connection
-const db = process.env.ATLAS_MONGO_DB;
+const db = process.env.LOCAL_MONGO_DB;
 
 mongoose
   .connect(db, {
