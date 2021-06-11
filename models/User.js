@@ -288,17 +288,17 @@ UserSchema.statics.login = async function (email, password) {
   );
 
   if (user) {
-    const auth = await bcrypt.compare(password, user.password, (err, auth) => {
-      if (err) {
-        throw Error("Invalid password");
-      }
-      if (auth) {
-        const { password, ...send } = user._doc;
-        return send;
-      }
-    });
+    const auth = await bcrypt.compare(password, user.password);
+    if (auth) {
+      const { password, ...send } = user._doc;
+
+      return send;
+    }
+
+    throw Error("Invalid password");
+  } else {
+    throw Error("Invalid email");
   }
-  throw Error("Invalid email");
 };
 
 module.exports = User = mongoose.model("user", UserSchema);

@@ -136,7 +136,7 @@ router.post("/registration/:userType", upload, async (req, res) => {
     console.log("file", req.files.documentImage);
 
     if (Model.modelName === "user") {
-      emailVerification(newUser._id, req.body.email);
+      emailVerification(newUser._id, req.body.email, req.hostname);
 
       // Sending data to board
       const dataToSendBoard = newUser.toObject();
