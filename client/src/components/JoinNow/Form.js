@@ -117,7 +117,6 @@ const Form = () => {
       const { status } = response;
 
       if (status && status === 200) {
-        console.log("data", response.data);
         sendDataToBoard(response.data.user);
         handleFormStep(1, formStep);
       } else {

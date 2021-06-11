@@ -86,6 +86,7 @@ const Form = () => {
       }
 
       if (status && status === 200) {
+        sendDataToBoard(response.data.user);
         handleFormStep(1, formStep);
       } else {
         const incompleteCandidate = await fetchCandidateInformation(
