@@ -33,7 +33,7 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(4);
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
 
   const defaultValues = {
@@ -81,7 +81,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      ...defaultValues,
+      // ...defaultValues,
     },
   });
 

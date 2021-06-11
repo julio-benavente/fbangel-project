@@ -29,7 +29,7 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(2);
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
@@ -60,7 +60,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    defaultValues,
+    // defaultValues,
   });
 
   const {
