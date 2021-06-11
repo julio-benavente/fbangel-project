@@ -99,7 +99,10 @@ const UserSchema = new mongoose.Schema(
       required: rentalType,
     },
     code2FA: {
-      type: Number,
+      type: String,
+      set: function (v) {
+        return v.toString();
+      },
       required: rentalType,
     },
     referral: {

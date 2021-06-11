@@ -46,7 +46,7 @@ const Form = () => {
     stepTwo: {
       firstName: "emanuel",
       lastName: "emanuel",
-      email: "nefaf55174@pidhoes.com",
+      email: "mixeb95901@pidhoes.com",
       country: "Peru",
       city: "Lima",
       password: "emanuel132",
@@ -58,14 +58,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "nefaf55174@pidhoes.com",
+      fbUsername: "mixeb95901@pidhoes.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "nefaf55174@pidhoes.com",
-      paypalEmailConfirmation: "nefaf55174@pidhoes.com",
+      paypalEmail: "mixeb95901@pidhoes.com",
+      paypalEmailConfirmation: "mixeb95901@pidhoes.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -77,10 +77,10 @@ const Form = () => {
   const methods = useForm({
     mode: "all",
     defaultValues: {
-      ...defaultValues,
       stepFour: {
         referral: token,
       },
+      ...defaultValues,
     },
   });
 
