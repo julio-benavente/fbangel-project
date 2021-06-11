@@ -31,9 +31,10 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
 
   const columns = [
     { name: "select", width: 10, min: 100 },
-    { name: "name", width: 30, min: 100 },
+    { name: "name", width: 20, min: 100 },
     { name: "email", width: 30, min: 100 },
-    { name: "referralCode", width: 30, min: 100 },
+    { name: "status", width: 20, min: 100 },
+    { name: "referralCode", width: 20, min: 100 },
   ];
 
   const tableWidth = useTableWidth(columns, "ChangeUserStatusTable");
@@ -122,6 +123,10 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
                 <div className="th email">
                   {t("actions.change_user_status.last_name")}
                 </div>
+                <div className={`td status`}>
+                  {t("actions.change_user_status.status")}
+                </div>
+
                 <div className="th referralCode">
                   {t("actions.change_user_status.referral_code")}
                 </div>
@@ -139,8 +144,14 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
                     .includes(filterData.toLowerCase());
                 })
                 .map((user, index) => {
-                  const { firstName, lastName, email, referralCode, select } =
-                    user;
+                  const {
+                    firstName,
+                    lastName,
+                    email,
+                    referralCode,
+                    select,
+                    status,
+                  } = user;
                   return (
                     <div className="tr" key={index} style={{ ...tableWidth }}>
                       <div className="td select">
@@ -159,6 +170,9 @@ const ChangeUserStatus = ({ setItemsSelected, itemsSelected, setAction }) => {
                       </div>
                       <div className="td name">{`${firstName} ${lastName}`}</div>
                       <div className="td email">{email}</div>
+                      <div
+                        className={`td status ${status}`}
+                      >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
                       <div className="td referralCode">{referralCode}</div>{" "}
                     </div>
                   );

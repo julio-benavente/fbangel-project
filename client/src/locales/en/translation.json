@@ -1329,6 +1329,7 @@
       "none": "None",
       "first_name": "Name",
       "last_name": "Surname",
+      "status": "Status",
       "referral_code": "Referral code",
       "filter": "Filter",
       "name": "Name",

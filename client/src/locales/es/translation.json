@@ -1329,6 +1329,7 @@
       "none": "Ninguno",
       "first_name": "Nombre",
       "last_name": "Apellido",
+      "status": "Estado",
       "referral_code": "Codigo de referido",
       "filter": "Filtro",
       "name": "Nombre",

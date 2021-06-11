@@ -1334,6 +1334,7 @@
       "none": "Aucun",
       "first_name": "Nom",
       "last_name": "Noms de famille",
+      "status": "Statut",
       "referral_code": "Code de parrainage",
       "filter": "Filtre",
       "name": "Nom",

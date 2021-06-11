@@ -184,7 +184,34 @@ export const Filter = styled.div`
   }
 `;
 
-export const ChangeUserStatusTable = styled(Table)``;
+export const ChangeUserStatusTable = styled(Table)`
+  .tr {
+    .td,
+    .th {
+      &.status {
+        justify-self: center;
+      }
+    }
+
+    .td {
+      &.status {
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 0.75rem;
+        &.active {
+          background: ${(props) => transparentize(0.5, props.theme.color.blue)};
+        }
+        &.pending {
+          background: ${(props) =>
+            transparentize(0.85, props.theme.color.black)};
+        }
+        &.rejected {
+          background: ${(props) => transparentize(0.5, props.theme.color.red)};
+        }
+      }
+    }
+  }
+`;
 
 export const UsersSelected = styled(Table)`
   max-height: none;

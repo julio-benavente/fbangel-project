@@ -107,7 +107,7 @@ const ActionsPage = () => {
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
             <div className="th action">{t("actions.action")}</div>
-            <div className="th creationDate">{t("actions.creationDate")}</div>
+            <div className="th creationDate">{t("actions.creation_date")}</div>
             <div className="th target">{t("actions.target")}</div>
             <div className="th details">{t("actions.details")}</div>
           </div>
