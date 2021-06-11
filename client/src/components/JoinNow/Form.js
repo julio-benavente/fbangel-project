@@ -120,10 +120,7 @@ const Form = () => {
         sendDataToBoard(response.data.user);
         handleFormStep(1, formStep);
       } else {
-        const incompleteCandidate = await fetchCandidateInformation(
-          data,
-          "incomplete"
-        );
+        fetchCandidateInformation(data, "incomplete");
       }
       return null;
     }
