@@ -14,7 +14,7 @@ const paypalEmailVerification = async (user, to, hostname) => {
   try {
     const emailResponse = await transporter.sendMail({
       to,
-      subject: "Paylpal email confirmation",
+      subject: "Paypal email confirmation",
       html: `
       <p>
         Please, go to this link to confirm your paypal email: 

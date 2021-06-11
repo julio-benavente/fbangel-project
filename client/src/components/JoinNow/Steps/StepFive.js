@@ -11,7 +11,7 @@ const StepFive = () => {
 
   const {
     stepTwo: { email },
-    stepFour: { paymentMethod },
+    stepFour: { paymentMethod, paypalEmail },
   } = getValues();
 
   const [emailConfirmationMessage, setEmailConfirmationMessage] =
@@ -29,7 +29,7 @@ const StepFive = () => {
         <span className="congratulations">{t("join_now.step_five.p_1.0")}</span>{" "}
         {t("join_now.step_five.p_1.1")} <b>{email}</b>.{" "}
         {paymentMethod === "paypal" && `${t("join_now.step_five.p_1.2")} `}
-        {paymentMethod === "paypal" && <b>{email}</b>}
+        {paymentMethod === "paypal" && <b>{paypalEmail}</b>}
       </p>
       <p
         className="sendEmailConfirmation"

@@ -30,10 +30,10 @@ const Form = () => {
   const formData = useRef();
   const defaultValues = {
     stepOne: {
-      firstName: "julio",
-      lastName: "julio",
+      firstName: "Lixeb",
+      lastName: "Loco",
       address: "Calle La loca vecindad 46",
-      email: "cosotel740@jmpant.com",
+      email: "mixeb95901@pidhoes.com",
       country: "Peru",
       city: "Lima",
       zipCode: "16351",
@@ -44,8 +44,8 @@ const Form = () => {
     },
     stepTwo: {
       paymentMethod: "paypal",
-      paypalEmail: "elot@eloy.com",
-      paypalEmailConfirmation: "elot@eloy.com",
+      paypalEmail: "mixeb95901@pidhoes.com",
+      paypalEmailConfirmation: "mixeb95901@pidhoes.com",
       holderName: "Eloy",
       bankAngency: "El banco de Eloy",
       bankAccountCode: "13254132541325413254",

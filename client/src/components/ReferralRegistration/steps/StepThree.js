@@ -10,7 +10,8 @@ const StepFive = () => {
   const { getValues } = useFormContext();
 
   const {
-    stepTwo: { email, paymentMethod },
+    stepOne: { email },
+    stepTwo: { paymentMethod, paypalEmail },
   } = getValues();
 
   // const paymentMethod = "paypal";
@@ -36,7 +37,7 @@ const StepFive = () => {
         {t("referral_registration.step_three.p_1.1")} <b>{email}</b>.{" "}
         {paymentMethod === "paypal" &&
           `${t("referral_registration.step_three.p_1.2")} `}
-        {paymentMethod === "paypal" && <b>{email}</b>}
+        {paymentMethod === "paypal" && <b>{paypalEmail}</b>}
       </p>
       <p
         className="sendEmailConfirmation"
