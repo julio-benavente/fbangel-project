@@ -196,7 +196,7 @@ const UserSelectedTable = (props) => {
 
   const statusOptions = [
     { label: "Pending", value: "pending" },
-    { label: "Approved", value: "approved" },
+    { label: "Active", value: "active" },
     { label: "Rejected", value: "rejected" },
   ];
 

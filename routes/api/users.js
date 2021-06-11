@@ -125,14 +125,16 @@ router.post("/registration/:userType", upload, async (req, res) => {
     const newUser = await new Model({ ...userInformation }).save();
 
     // Add user is to user who referred him
-    // Model.findOneAndUpdate({ referral: referral }, { $push });
-
     // Just send email confirmation when is rental or referral user
 
     const { password, _id, ip, ...dataToSendBoard } = newUser.toObject();
 
+    if (newUser.paymentMethod === "paypal") {
+      paypalEmailVerification(newUser, newUser.paypalEmail, req.hostname);
+    }
+
     if (Model.modelName === "user") {
-      emailVerification(newUser._id, req.body.email, req.hostname);
+      emailVerification(newUser, req.hostname);
 
       // Prepering  data to sending to board
       if (req.files.documentImage) {

@@ -91,7 +91,7 @@ export const Table = styled.div`
       border-radius: 0.2rem;
       padding: 0.2rem 0.4rem;
 
-      &.payed {
+      &.paid {
         background: ${(props) => transparentize(0.7, props.theme.color.green)};
       }
 
@@ -214,7 +214,7 @@ export const PaymentsTable = styled.div`
           padding: 3px 5px;
           font-size: 0.75rem;
           border-radius: 4px;
-          &.approved {
+          &.paid {
             background: ${(props) =>
               transparentize(0.6, props.theme.color.green)};
           }
@@ -222,7 +222,7 @@ export const PaymentsTable = styled.div`
             background: ${(props) =>
               transparentize(0.85, props.theme.color.black)};
           }
-          &.rejected {
+          &.canceled {
             background: ${(props) =>
               transparentize(0.5, props.theme.color.red)};
           }

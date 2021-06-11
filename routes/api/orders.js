@@ -123,7 +123,7 @@ router.put("/change-status/:action", auth, async (req, res) => {
   const { action } = req.params;
 
   const { [action]: status } = {
-    payOrder: "payed",
+    payOrder: "paid",
     cancelOrder: "canceled",
   };
 

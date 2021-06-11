@@ -126,9 +126,9 @@ const Table = (props) => {
                   <div className="td paymentDate">
                     {paymentDate ? date : "-"}
                   </div>
-                  <div className="td status approved">{`${status[0].toUpperCase()}${status.slice(
-                    1
-                  )}`}</div>
+                  <div
+                    className={`td status ${status}`}
+                  >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
                   <div className="td amount ">{`$ ${amount.toFixed(2)}`}</div>
                 </div>
               );

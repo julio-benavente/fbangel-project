@@ -45,7 +45,7 @@ const PaymentSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    enum: ["pending", "error", "payed", "canceled"],
+    enum: ["pending", "error", "paid", "canceled"],
     default: "pending",
   },
   paypalEmail: {
