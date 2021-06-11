@@ -23,6 +23,9 @@ import {
 import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 
+// Utils
+import sendDataToBoard from "../../utils/sendDataToBoard";
+
 const Form = () => {
   const { t } = useTranslation();
 
