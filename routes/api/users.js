@@ -140,24 +140,34 @@ router.post("/registration/:userType", upload, async (req, res) => {
 
       // Sending data to board
       const dataToSendBoard = newUser.toObject();
-      req.files.documentImage &&
-        (dataToSendBoard["documentImage"] = {
+
+      console.log("req.files.documentImage", req.files.documentImage);
+      if (req.files.documentImage) {
+        dataToSendBoard["documentImage"] = {
           link: newUser.documentImage,
           type: req.files.documentImage[0].mimetype.replace("image/", ""),
           name: req.files.documentImage[0].originalname,
-        });
-      req.files.fbEmailImage &&
-        (dataToSendBoard["fbEmailImage"] = {
+        };
+      }
+      if (req.files.fbEmailImage) {
+        dataToSendBoard["fbEmailImage"] = {
           link: newUser.fbEmailImage,
           type: req.files.fbEmailImage[0].mimetype.replace("image/", ""),
           name: req.files.fbEmailImage[0].originalname,
-        });
-      req.files.bmIdImage &&
-        (dataToSendBoard["bmIdImage"] = {
+        };
+      }
+      if (req.files.bmIdImage) {
+        dataToSendBoard["bmIdImage"] = {
           link: newUser.bmIdImage,
           type: req.files.bmIdImage[0].mimetype.replace("image/", ""),
           name: req.files.bmIdImage[0].originalname,
-        });
+        };
+      }
+
+      console.log(
+        "dataToSendBoard[documentImage]",
+        dataToSendBoard["documentImage"]
+      );
 
       const dataToBoardRes = await sendDataToBoard(dataToSendBoard);
     }

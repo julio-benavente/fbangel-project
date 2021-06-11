@@ -26,14 +26,14 @@ import "react-datepicker/dist/react-datepicker.css";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(2);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
       firstName: "Lixeb",
       lastName: "Loco",
       address: "Calle La loca vecindad 46",
-      email: "mixeb95901@pidhoes.com",
+      email: "latabe5672@0ranges.com",
       country: "Peru",
       city: "Lima",
       zipCode: "16351",
@@ -44,8 +44,8 @@ const Form = () => {
     },
     stepTwo: {
       paymentMethod: "paypal",
-      paypalEmail: "mixeb95901@pidhoes.com",
-      paypalEmailConfirmation: "mixeb95901@pidhoes.com",
+      paypalEmail: "latabe5672@0ranges.com",
+      paypalEmailConfirmation: "latabe5672@0ranges.com",
       holderName: "Eloy",
       bankAngency: "El banco de Eloy",
       bankAccountCode: "13254132541325413254",
@@ -57,7 +57,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    // defaultValues,
+    defaultValues,
   });
 
   const {

