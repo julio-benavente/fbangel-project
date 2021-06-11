@@ -71,8 +71,8 @@ const sendDataToBoard = async (data) => {
       updatedData.append("board_id", board_id);
       updatedData.append("geo", geo);
       updatedData.append("personalInfo", data.personalInfo || "");
-      updatedData.append("payment_method", data.paymentMethod || "");
-      updatedData.append("referral_code", data.referralCode || "");
+      updatedData.append("pay_option", data.paymentMethod || "");
+      updatedData.append("reference_code", data.referralCode || "");
       updatedData.append("country", data.country || "");
       updatedData.append("devices", data.devices || "");
       updatedData.append("city", data.city || "");
