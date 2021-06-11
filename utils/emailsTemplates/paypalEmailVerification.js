@@ -8,7 +8,7 @@ const paypalEmailVerification = async (user, to, hostname) => {
     process.env.PAYPAL_EMAIL_CONFIRMATION
   );
   const url = `${
-    hostname === "localhost" ? "http://localhost:3000" : hostname
+    hostname === "localhost" ? "http://localhost:3000" : "http//:" + hostname
   }/confirm-paypal-email/${token}`;
 
   try {

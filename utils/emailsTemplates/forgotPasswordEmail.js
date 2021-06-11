@@ -4,7 +4,7 @@ const { createToken } = require("../createToken");
 const forgotPasswordEmail = async (id, to, model, hostname) => {
   const token = createToken(id, "1d", process.env.FORGOT_PASSWORD_KEY);
   const url = `${
-    hostname === "localhost" ? "http://localhost:3000" : hostname
+    hostname === "localhost" ? "http://localhost:3000" : "http//:" + hostname
   }/reset-password/${token}`;
   try {
     const emailResponse = await transporter.sendMail({
