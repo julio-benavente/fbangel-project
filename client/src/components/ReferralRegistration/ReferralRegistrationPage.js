@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Components
 import Form from "./ReferralRegistrationForm";
@@ -13,16 +14,17 @@ import {
 } from "../../styles/ReferralRegistrationPageStyles";
 
 const ReferralRegistrationPageStyles = () => {
+  const { t } = useTranslation();
+
   return (
     <ReferralRegistration>
       <ReferralRegistrationSection>
         <ReferralRegistrationSectionWrapper>
           <ReferralRegistrationTitle>
-            ¡Conviértete en un Referidor!
+            {t("referral_registration.title")}
           </ReferralRegistrationTitle>
           <ReferralRegistrationInfo>
-            ¡Completa este sencillo cuestionario y empieza a ganar dinero
-            invitando a tus amigos!
+            {t("referral_registration.info")}
           </ReferralRegistrationInfo>
           <Form />
         </ReferralRegistrationSectionWrapper>

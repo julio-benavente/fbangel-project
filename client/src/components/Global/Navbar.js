@@ -125,13 +125,12 @@ const Navbar = () => {
   ];
 
   const languages = [
-    { code: "es", name: "Español", flag: <Flags.MX /> },
+    { code: "es", name: "Español", flag: <Flags.ES /> },
     { code: "en", name: "English", flag: <Flags.GB /> },
     { code: "fr", name: "Français", flag: <Flags.FR /> },
   ];
 
   const [languageDropdownIsOn, setLanguageDropdownIsOn] = useState(false);
-
   return (
     <NavbarSection className="Navbar">
       <NavbarWrapper>

@@ -34,7 +34,7 @@
       "title": "¿Cuánto ganarás?",
       "info": {
         "span": "!Gana 30 dólares cada mes!",
-        "p": "Confirma que cumples los y prepara tu perfil, haz clic en botón y aprende cómo."
+        "p": "Confirma que cumples los requisitos y prepara tu perfil. Haz clic en el botón y aprende cómo."
       },
       "how_it_works_btn": "¿Cómo funciona?",
       "sub_title": "Requisitos para que el perfil sea válido",
@@ -1335,7 +1335,6 @@
       "name": "Nombre",
       "users_selected": "Usuarios selecionados",
       "send": "Enviar",
-      "status": "Estado",
       "observation": "Observación"
     }
   },

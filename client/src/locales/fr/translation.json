@@ -34,7 +34,7 @@
       "title": "Combien gagnerez-vous ?",
       "Info": {
         "span": "Gagnez 30 $ chaque mois!",
-        "p": "Confirmez que vous les rencontrez et préparez votre profil, cliquez sur le bouton et découvrez comment."
+        "p": "Confirmez que vous répondez aux exigences et préparez votre profil. Cliquez sur le bouton et découvrez comment"
       },
       "how_it_works_btn": "Comment ça marche ?",
       "sub_title": "Exigences pour que le profil soit valide",
@@ -1340,7 +1340,6 @@
       "name": "Nom",
       "users_selected": "Utilisateurs sélectionnés",
       "send": "Envoyer",
-      "status": "Statut",
       "observation": "observation"
     }
   },

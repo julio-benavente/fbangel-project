@@ -34,7 +34,7 @@
       "title": "How much will you earn?",
       "info": {
         "span": "Earn $ 30 every month!",
-        "p": "Confirm that you meet them and prepare your profile, click the button and learn how."
+        "p": "Confirm that you meet the requirements and prepare your profile. Click the button and learn how."
       },
       "how_it_works_btn": "How does it work?",
       "sub_title": "Requirements for the profile to be valid",
@@ -1335,7 +1335,6 @@
       "name": "Name",
       "users_selected": "Selected users",
       "send": "Send",
-      "status": "Status",
       "observation": "Observation"
     }
   },
