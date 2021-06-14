@@ -3,11 +3,10 @@ import { NavLink } from "react-router-dom";
 import { transparentize } from "polished";
 
 export const NavbarSection = styled.div`
-  position: relative;
+  position: fixed;
   width: 100%;
   display: grid;
   z-index: 100;
-  position: absolute;
   background-color: ${(props) => props.theme.color.primary};
 `;
 

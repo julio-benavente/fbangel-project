@@ -76,6 +76,7 @@ import fbaAngelVideo from "../../assets/videos/fbangel.mp4";
 import profilePictureOne from "../../assets/images/profilePictureOne.jpg";
 import profilePictureTwo from "../../assets/images/profilePictureTwo.jpg";
 import profilePictureThree from "../../assets/images/profilePictureThree.jpg";
+import stackOfDollars from "../../assets/images/stackOfDollars.png";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -163,7 +164,8 @@ const HomePage = () => {
             </HowItWorksBtn>
           </div>
           <HowMuchImage>
-            <StackOfMoneySvg />
+            <img src={stackOfDollars} alt="Stack of dollars" />
+            {/* <StackOfMoneySvg /> */}
           </HowMuchImage>
         </HowMuchSectionWarpper>
       </HowMuchSection>
@@ -228,7 +230,7 @@ const HomePage = () => {
           </TestimoniesSectionTitle>
           <TestimoniesInfo>{t("home.testimonies.info")}</TestimoniesInfo>
           <TestimoniesCardWrapper
-            style={{ gridTemplateColumns: width < 600 && "repeat(3,300px)" }}
+          // style={{ gridTemplateColumns: width < 600 && "repeat(3,300px)" }}
           >
             {t("home.testimonies.testimonies", { returnObjects: true }).map(
               ({ testimony, author, membership }, i) => {
@@ -253,7 +255,7 @@ const HomePage = () => {
               }
             )}
           </TestimoniesCardWrapper>
-          <TestimoniesNav>
+          {/* <TestimoniesNav>
             {t("home.testimonies.testimonies", { returnObjects: true }).map(
               (e, i) => (
                 <TestimoniesNavLink
@@ -263,7 +265,7 @@ const HomePage = () => {
                 />
               )
             )}
-          </TestimoniesNav>
+          </TestimoniesNav> */}
         </TestimoniesSectionWrapper>
       </TestimoniesSection>
     </Home>

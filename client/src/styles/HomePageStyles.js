@@ -72,7 +72,7 @@ export const StartButton = styled(Link)`
   ${RoundedBtn}
   font-weight: 500;
   transform: scale(1.2);
-  background-color: ${(props) => props.theme.color.red};
+  background-color: ${(props) => props.theme.color.secondary};
   color: ${(props) => props.theme.color.white};
   justify-self: end;
   z-index: 10;
@@ -184,9 +184,11 @@ export const Disclaimer = styled(Tiny)``;
 // how much section
 
 export const HowMuchSection = styled.div`
+  background: cover center;
   background-image: url(${background});
-  background-position: center;
-  background-size: cover;
+
+  /* background-size: cover; */
+  /* background-position: center; */
 `;
 
 export const HowMuchSectionTitle = styled(H2)`
@@ -196,7 +198,7 @@ export const HowMuchSectionTitle = styled(H2)`
 export const HowMuchSectionWarpper = styled(Container)`
   padding: clamp(50px, 7vh, 100px) 32px;
   position: relative;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr auto;
   display: grid;
   .sideContent {
     display: grid;
@@ -219,10 +221,15 @@ export const HowMuchInfo = styled.div`
 
 export const HowMuchImage = styled.div`
   grid-column: 2/3;
-  width: clamp(140px, 25vw, 300px);
+  width: clamp(240px, 25vw, 350px);
 
   svg {
     fill: ${(props) => props.theme.color.white};
+  }
+
+  img {
+    margin: 20px 0;
+    width: 100%;
   }
 
   @media screen and ${breakpoint.sm} {
@@ -234,10 +241,9 @@ export const HowMuchImage = styled.div`
 
 export const HowItWorksBtn = styled(Link)`
   ${RoundedBtn}
-  background-color: ${(props) => props.theme.color.red};
+  background-color: ${(props) => props.theme.color.secondary};
   font-weight: 700;
   justify-self: center;
-  margin-bottom: 50px;
   font-size: 1.1rem;
 `;
 
@@ -383,20 +389,7 @@ export const ReferralInfo = styled(Parragraph)`
 `;
 export const RegisterBtn = styled(Link)`
   ${RoundedBtn}
-  border-radius: 0.3rem;
-  font-weight: 700;
-  font-size: 1.6rem;
-  background: rgb(115, 192, 212);
-  background: linear-gradient(
-    180deg,
-    rgba(115, 192, 212, 1) 0%,
-    rgba(27, 60, 135, 1) 100%
-  );
-
-  border: 2px #fff solid;
-
-  /* 1b3c87 */
-  /* 73c0d4 */
+  font-size: 1.1rem;
   justify-self: center;
 `;
 
@@ -446,14 +439,18 @@ export const TestimoniesSectionTitle = styled(H2)``;
 export const TestimoniesInfo = styled(Parragraph)``;
 
 export const TestimoniesCardWrapper = styled.div`
-  width: calc(100vw - 64px);
-  max-width: 960px;
   display: grid;
-  grid-auto-columns: 400px;
-  grid-auto-flow: column;
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   margin-bottom: 50px;
+  justify-items: center;
+  justify-content: center;
+
+  @media screen and ${breakpoint.md} {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 `;
+
 export const TestimonyCard = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;

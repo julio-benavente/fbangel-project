@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 import "./i18n";
+import ScrollToTop from "./utils/scrollToTop";
 
 const loadingMarkup = (
   <div className="py-4 text-center">
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Provider store={store}>
       <React.StrictMode>
         <Router basename={process.env.PUBLIC_URL}>
+          <ScrollToTop />
           <App />
         </Router>
       </React.StrictMode>
