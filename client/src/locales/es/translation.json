@@ -33,7 +33,7 @@
     "requirements": {
       "title": "¿Cuánto ganarás?",
       "info": {
-        "span": "!Gana 30 dólares cada mes!",
+        "span": "!Gana $ 30 cada mes!",
         "p": "Confirma que cumples los requisitos y prepara tu perfil. Haz clic en el botón y aprende cómo."
       },
       "how_it_works_btn": "¿Cómo funciona?",
@@ -56,12 +56,12 @@
       "info": {
         "p_1": {
           "0": "¡Tenemos un programa de referidos para ti! Si nos traes familiares o amgios puedes ganar más de",
-          "1": "1000 dólares",
+          "1": "$ 1000",
           "2": "al mes."
         },
         "p_2": {
           "0": "Activa tu código de referente y gana",
-          "1": "5 dólares",
+          "1": "$ 5",
           "2": "por cada referido válido. ¡Sin límite!"
         }
       },
@@ -996,7 +996,7 @@
     "info": {
       "0": "Regístrate aquí",
       "1": "incrementa tus ganacias seriamente y obtén",
-      "2": "5 dólares",
+      "2": "$ 5",
       "3": "por referido"
     },
     "list": {
