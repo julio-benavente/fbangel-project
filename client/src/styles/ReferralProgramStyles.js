@@ -45,7 +45,11 @@ export const ReferralProgramSectionInfo = styled(Parragraph)`
     font-weight: 700;
   }
   .money {
-    color: ${(props) => props.theme.color.green};
+    display: inline-block;
+    background-color: ${(props) => props.theme.color.green};
+    color: ${(props) => props.theme.color.white};
+    font-size: 1.1rem;
+    padding: 2px 5px;
     font-weight: 700;
   }
 

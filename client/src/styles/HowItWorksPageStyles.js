@@ -62,7 +62,7 @@ export const HowItWorksImage = styled.img`
 `;
 
 export const RequirementsSection = styled.div`
-  background-color: ${(props) => props.theme.color.darkBlue};
+  background-color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const RequirementsSectionWrapper = styled(Container)`
@@ -142,7 +142,7 @@ export const ConfigurationSection = styled.div``;
 export const ConfigurationSectionWrapper = styled(Container)`
   grid-template-columns: 1fr 1fr;
   position: relative;
-
+  gap: 0 50px;
   > * {
     grid-column: 1/2;
   }
@@ -180,11 +180,16 @@ export const ConfigurationList = styled.ol`
 `;
 
 export const StepOne = styled.div`
-  max-width: 500px;
+  /* max-width: 500px; */
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0 50px;
 
   ol,
   ul {
     padding-left: 20px;
+    grid-column: 1/-1;
   }
 
   a {
@@ -193,10 +198,22 @@ export const StepOne = styled.div`
   }
 `;
 
+export const Video = styled.video`
+  width: 100%;
+  z-index: 5;
+  margin-top: 1rem;
+  @media screen and ${breakpoint.md} {
+  }
+
+  @media screen and ${breakpoint.sm} {
+  }
+`;
+
 export const StepOneTitle = styled.p`
   font-weight: 700;
   margin-bottom: 20px;
-  color: ${(props) => props.theme.color.darkBlue};
+  grid-column: 1/-1;
+  color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const Options = styled.div`
@@ -238,7 +255,7 @@ export const OptionOneTitle = styled.div`
   padding: 5px 0;
   font-weight: 500;
   text-align: center;
-  background-color: ${(props) => props.theme.color.darkBlue};
+  background-color: ${(props) => props.theme.color.background_alt};
   color: ${(props) => props.theme.color.white};
   margin-bottom: 20px;
 `;
@@ -258,7 +275,7 @@ export const StepTwoTitle = styled(StepOneTitle)``;
 
 // Registration section
 export const RegistrationSection = styled.div`
-  background-color: ${(props) => props.theme.color.darkBlue};
+  background-color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const RegistrationSectionWrapper = styled(Container)`
@@ -348,7 +365,7 @@ export const PaymentInfo = styled(Parragraph)`
 
 // Support section
 export const SupportSection = styled.div`
-  background-color: ${(props) => props.theme.color.darkBlue};
+  background-color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const SupportSectionWrapper = styled(Container)`

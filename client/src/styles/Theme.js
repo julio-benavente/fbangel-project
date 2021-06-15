@@ -15,6 +15,7 @@ const theme = {
     gray200: "#F0F0F0 ",
     gray300: "#BFBFBF",
     link: "#2980b9",
+    background_alt: "#5d73d4",
   },
 };
 

@@ -30,8 +30,9 @@ const ReferralProgramPage = () => {
             {t("referral_program.info.0")}
           </Link>{" "}
           {t("referral_program.info.1")}{" "}
-          <span className="money">{t("referral_program.info.2")}</span>{" "}
-          {t("referral_program.info.3")}
+          <span className="money">
+            {t("referral_program.info.2")} {t("referral_program.info.3")}
+          </span>{" "}
           <span className="asterisk">*</span>
         </ReferralProgramSectionInfo>
         <InformationList>

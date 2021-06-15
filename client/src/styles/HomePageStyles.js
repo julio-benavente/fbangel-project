@@ -25,7 +25,7 @@ export const Home = styled.div`
 // Banner section
 export const BannerSection = styled.div`
   position: relative;
-  background-image: url(${background});
+  background-color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const BannerSectionWrapper = styled(Container)`
@@ -185,7 +185,7 @@ export const Disclaimer = styled(Tiny)``;
 
 export const HowMuchSection = styled.div`
   background: cover center;
-  background-image: url(${background});
+  background-color: ${(props) => props.theme.color.background_alt};
 
   /* background-size: cover; */
   /* background-position: center; */
@@ -215,7 +215,12 @@ export const HowMuchInfo = styled.div`
   margin-bottom: 1rem;
   color: ${(props) => props.theme.color.white};
   span {
-    color: ${(props) => props.theme.color.primary};
+    display: inline-block;
+    color: ${(props) => props.theme.color.black};
+    background-color: ${(props) => props.theme.color.yellow};
+    padding: 2px 5px;
+    margin-right: 5px;
+    font-size: 1.2rem;
   }
 `;
 
@@ -349,7 +354,7 @@ export const ReferralSectionWrapper = styled.div`
     justify-items: center;
     position: relative;
     width: 95%;
-    background-image: url(${background});
+    background-color: ${(props) => props.theme.color.background_alt};
     background-size: cover;
     background-position: center;
     > * {
