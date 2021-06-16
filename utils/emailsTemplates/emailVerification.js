@@ -1,5 +1,9 @@
-const { transporter } = require("../emailTransporter");
-const { createToken } = require("../createToken");
+const {
+  transporter
+} = require("../emailTransporter");
+const {
+  createToken
+} = require("../createToken");
 
 const emailVerification = async (user, hostname) => {
   const token = createToken(user._id, "1d", process.env.EMAIL_VERIFICATION_KEY);
@@ -30,4 +34,6 @@ const emailVerification = async (user, hostname) => {
   }
 };
 
-module.exports = { emailVerification };
+module.exports = {
+  emailVerification
+};

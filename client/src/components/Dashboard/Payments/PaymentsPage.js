@@ -14,12 +14,7 @@ import Pagination from "rc-pagination";
 import { useTableWidth } from "../../../utils/tableWidth";
 
 // Styles
-import {
-  Payments,
-  Title,
-  Table,
-  PaypalEmailMessage,
-} from "../../../styles/Dashboard/PaymentsPageStyle";
+import { Payments, Title, Table, PaypalEmailMessage } from "../../../styles/Dashboard/PaymentsPageStyle";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const PaymentsPage = () => {
@@ -30,20 +25,64 @@ const PaymentsPage = () => {
   const user = useSelector(getUser);
 
   const userColumns = [
-    { column: "concept", width: 35, min: 80 },
-    { column: "paypal", width: 20, min: 100 },
-    { column: "date", width: 15, min: 70 },
-    { column: "status", width: 15, min: 70 },
-    { column: "amount", width: 15, min: 50 },
+    {
+      column: "concept",
+      width: 35,
+      min: 80,
+    },
+    {
+      column: "paypal",
+      width: 20,
+      min: 100,
+    },
+    {
+      column: "date",
+      width: 15,
+      min: 70,
+    },
+    {
+      column: "status",
+      width: 15,
+      min: 70,
+    },
+    {
+      column: "amount",
+      width: 15,
+      min: 50,
+    },
   ];
 
   const adminColumns = [
-    { column: "name", width: 15, min: 80 },
-    { column: "concept", width: 35, min: 80 },
-    { column: "paypal", width: 20, min: 100 },
-    { column: "date", width: 10, min: 70 },
-    { column: "status", width: 10, min: 70 },
-    { column: "amount", width: 10, min: 50 },
+    {
+      column: "name",
+      width: 15,
+      min: 80,
+    },
+    {
+      column: "concept",
+      width: 35,
+      min: 80,
+    },
+    {
+      column: "paypal",
+      width: 20,
+      min: 100,
+    },
+    {
+      column: "date",
+      width: 10,
+      min: 70,
+    },
+    {
+      column: "status",
+      width: 10,
+      min: 70,
+    },
+    {
+      column: "amount",
+      width: 10,
+      min: 50,
+    },
   ];
   const userTableWith = useTableWidth(userColumns, "Payments");
   const adminTableWith = useTableWidth(adminColumns, "Payments");
@@ -67,15 +106,12 @@ const PaymentsPage = () => {
   }, []);
 
   const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
-  const sendPaypalEmail = async (id) => {
+  const sendPaypalEmail = async id => {
     try {
       setPaypalEmailIsSent(true);
-      const response = await axios.put(
-        "/api/users/send-paypal-email-confirmation",
-        {
-          id,
-        }
-      );
+      const response = await axios.put("/api/users/send-paypal-email-confirmation", {
+        id,
+      });
     } catch (error) {}
   };
 
@@ -91,7 +127,7 @@ const PaymentsPage = () => {
     setTotalPages(payments.length - 1);
   }, [payments, totalPages]);
 
-  const onTableChange = (page) => {
+  const onTableChange = page => {
     setCurrent(page);
   };
 
@@ -109,60 +145,58 @@ const PaymentsPage = () => {
 
   return (
     <Payments className="Payments">
-      {!user.paypalEmailVerified && (
+      {user.paymentMethod && !user.paypalEmailVerified && (
         <PaypalEmailMessage bg={paypalEmailIsSent}>
           {!paypalEmailIsSent && (
             <p className="message">
-              {t("payments.paypal_email_verified.0")}{" "}
-              <span
-                className="sendPaypalEmail"
-                onClick={() => sendPaypalEmail(user.id)}
-                to="/dashboard/profile"
-              >
+              {t("payments.paypal_email_verified.0")}
+              <span className="sendPaypalEmail" onClick={() => sendPaypalEmail(user.id)} to="/dashboard/profile">
                 {t("payments.paypal_email_verified.1")}
-              </span>{" "}
+              </span>
               {t("payments.paypal_email_verified.2")}
             </p>
           )}
           {paypalEmailIsSent && (
             <p className="emailSent">
-              {t("payments.email_sent.0")}{" "}
-              <span
-                className="sendPaypalEmail"
-                onClick={() => sendPaypalEmail(user.id)}
-                to="/dashboard/profile"
-              >
+              {t("payments.email_sent.0")}
+              <span className="sendPaypalEmail" onClick={() => sendPaypalEmail(user.id)} to="/dashboard/profile">
                 {t("payments.email_sent.1")}
               </span>
             </p>
           )}
         </PaypalEmailMessage>
       )}
-      <Title>{t("payments.title")}</Title>
+      <Title> {t("payments.title")} </Title>
       {user.authLevel === "user" && (
         <Table className="displayUser">
           <div className="thead">
-            <div className="tr" style={{ ...userTableWith }}>
-              <div className="th concept">{t("payments.concept")}</div>
-              <div className="th paymentMethod">
-                {t("payments.payment_method")}
-              </div>
-              <div className="th paymentDate">{t("payments.payment_date")}</div>
-              <div className="th status">{t("payments.status")}</div>
-              <div className="th amount">{t("payments.amount")}</div>
+            <div
+              className="tr"
+              style={{
+                ...userTableWith,
+              }}
+            >
+              <div className="th concept"> {t("payments.concept")} </div>
+              <div className="th paymentMethod"> {t("payments.payment_method")} </div>
+              <div className="th paymentDate"> {t("payments.payment_date")} </div>
+              <div className="th status"> {t("payments.status")} </div>
+              <div className="th amount"> {t("payments.amount")} </div>
             </div>
           </div>
           <div className="tbody">
             {loading && (
-              <div className="tr loading" style={{ ...userTableWith }}>
+              <div
+                className="tr loading"
+                style={{
+                  ...userTableWith,
+                }}
+              >
                 {t("loading")}
               </div>
             )}
-
             {!loading &&
               showRows.map((payment, index) => {
-                const { concept, paypalEmail, creationDate, amount, status } =
-                  payment;
+                const { concept, paypalEmail, creationDate, amount, status } = payment;
 
                 const date = new Date(creationDate).toLocaleDateString([], {
                   day: "2-digit",
@@ -171,43 +205,49 @@ const PaymentsPage = () => {
                 });
 
                 return (
-                  <div className="tr" key={index} style={{ ...userTableWith }}>
-                    <div className="td concept">{concept}</div>
-                    <div className="td paymentMethod">{paypalEmail}</div>
-                    <div className="td paymentDate">{date}</div>
-                    <div
-                      className={`td status ${status}`}
-                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
-                    <div className="td amount">
-                      ${" "}
-                      {(
-                        Math.round((amount + Number.EPSILON) * 100) / 100
-                      ).toFixed(2)}
-                    </div>
+                  <div
+                    className="tr"
+                    key={index}
+                    style={{
+                      ...userTableWith,
+                    }}
+                  >
+                    <div className="td concept"> {concept} </div>
+                    <div className="td paymentMethod"> {paypalEmail} </div>
+                    <div className="td paymentDate"> {date} </div>
+                    <div className={`td status ${status}`}> {`${status[0].toUpperCase()}${status.slice(1)}`} </div>
+                    <div className="td amount">$ {(Math.round((amount + Number.EPSILON) * 100) / 100).toFixed(2)} </div>
                   </div>
                 );
               })}
           </div>
         </Table>
       )}
-
       {user.authLevel === "admin" && (
         <Table className="displayAdmin">
           <div className="thead">
-            <div className="tr" style={{ ...adminTableWith }}>
-              <div className="th name">{t("payments.name")}</div>
-              <div className="th concept">{t("payments.concept")}</div>
-              <div className="th paymentMethod">
-                {t("payments.payment_method")}
-              </div>
-              <div className="th paymentDate">{t("payments.payment_date")}</div>
-              <div className="th status">{t("payments.status")}</div>
-              <div className="th amount">{t("payments.amount")}</div>
+            <div
+              className="tr"
+              style={{
+                ...adminTableWith,
+              }}
+            >
+              <div className="th name"> {t("payments.name")} </div>
+              <div className="th concept"> {t("payments.concept")} </div>
+              <div className="th paymentMethod"> {t("payments.payment_method")} </div>
+              <div className="th paymentDate"> {t("payments.payment_date")} </div>
+              <div className="th status"> {t("payments.status")} </div>
+              <div className="th amount"> {t("payments.amount")} </div>
             </div>
           </div>
           <div className="tbody">
             {loading && (
-              <div className="tr loading" style={{ ...adminTableWith }}>
+              <div
+                className="tr loading"
+                style={{
+                  ...adminTableWith,
+                }}
+              >
                 {t("loading")}
               </div>
             )}
@@ -229,29 +269,29 @@ const PaymentsPage = () => {
                 });
 
                 return (
-                  <div className="tr" key={index} style={{ ...adminTableWith }}>
-                    <div className="td name">{`${firstName} ${lastName}`}</div>
-                    <div className="td concept">{concept}</div>
-                    <div className="td paymentMethod">{`${
-                      paymentMethod ? paymentMethod[0].toUpperCase() : ""
-                    }${paymentMethod ? paymentMethod.slice(1) : ""}`}</div>
-                    <div className="td paymentDate">{date}</div>
-                    <div
-                      className={`td status ${status}`}
-                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
-                    <div className="td amount">
-                      ${" "}
-                      {(
-                        Math.round((amount + Number.EPSILON) * 100) / 100
-                      ).toFixed(2)}
+                  <div
+                    className="tr"
+                    key={index}
+                    style={{
+                      ...adminTableWith,
+                    }}
+                  >
+                    <div className="td name"> {`${firstName} ${lastName}`} </div>
+                    <div className="td concept"> {concept} </div>
+                    <div className="td paymentMethod">
+                      {`${paymentMethod ? paymentMethod[0].toUpperCase() : ""}${
+                        paymentMethod ? paymentMethod.slice(1) : ""
+                      }`}
                     </div>
+                    <div className="td paymentDate"> {date} </div>
+                    <div className={`td status ${status}`}> {`${status[0].toUpperCase()}${status.slice(1)}`} </div>
+                    <div className="td amount">$ {(Math.round((amount + Number.EPSILON) * 100) / 100).toFixed(2)} </div>
                   </div>
                 );
               })}
           </div>
         </Table>
       )}
-
       <PaginationWrapper>
         <Pagination
           onChange={onTableChange}
@@ -259,8 +299,8 @@ const PaymentsPage = () => {
           total={totalPages}
           defaultPageSize={pageSize}
           showPrevNextJumpers={false}
-          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
-          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+          prevIcon={() => <i className="fas fa-angle-double-left"> </i>}
+          nextIcon={() => <i className="fas fa-angle-double-right"> </i>}
         />
       </PaginationWrapper>
     </Payments>

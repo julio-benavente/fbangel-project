@@ -99,6 +99,9 @@ const OrdersPage = () => {
   const openCreateOrder = () => setCreateOrderIsOpen(true);
 
   const orders = useSelector(getOrders);
+
+  console.log(orders);
+
   const { loading } = useSelector(getOrdersState);
 
   useEffect(() => {

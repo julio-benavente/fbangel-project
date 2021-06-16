@@ -61,15 +61,23 @@ router.post("/create-order", auth, async (req, res) => {
           var price = prices[0].price;
         }
 
+        // ### This should be able to catch if the user wants to be paid by paypal or usign a bank account
         const paymentInformation = {
           product: productId,
           concept: paymentConcept,
           amount: price,
-          paypalEmail: user.paypalEmail,
           createdBy,
           payee: id,
           paymentMethod: user.paymentMethod,
         };
+
+        if (user.paymentMethod === "paypal") {
+          paymentInformation.paypalEmail = user.paypalEmail;
+        }
+
+        if (user.paymentMethod === "bank-peru") {
+          paymentInformation.bankAngency = user.bankAngency;
+        }
 
         const newPayment = await new Payment(paymentInformation).save();
 

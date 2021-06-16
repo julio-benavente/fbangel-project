@@ -184,6 +184,7 @@ const UserSchema = new mongoose.Schema(
     paymentMethod: {
       type: String,
       required: rentalReferralType,
+      enum: ["paypal", "bank-peru"],
     },
     paypalEmail: {
       type: String,
