@@ -27,30 +27,33 @@ const ProfilePage = () => {
   const dispatch = useDispatch();
   const user = useSelector(getUser);
 
-  const { id, email, paypalEmailVerified, authLevel } =
-    useSelector(getAuthUser);
+  const { id, email, paypalEmailVerified, authLevel } = useSelector(getAuthUser);
 
   useEffect(() => {
     dispatch(requestUser({ id }));
   }, []);
 
   const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
-  const sendPaypalEmail = async (id) => {
+  const sendPaypalEmail = async id => {
     try {
       setPaypalEmailIsSent(true);
-      const response = await axios.put(
-        "/api/users/send-paypal-email-confirmation",
-        {
-          id,
-        }
-      );
+      const response = await axios.put("/api/users/send-paypal-email-confirmation", {
+        id,
+      });
       console.log("response", response);
     } catch (error) {
       console.log("error", error.message);
     }
   };
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("profile.profile.title");
+  }, [language]);
 
   return (
     <Profile>
@@ -143,9 +146,7 @@ const ProfilePage = () => {
         )}
       </ProfileSection>
       <ConfigurationSection>
-        <ConfigurationTitle>
-          {t("profile.configuration.title")}
-        </ConfigurationTitle>
+        <ConfigurationTitle>{t("profile.configuration.title")}</ConfigurationTitle>
         <Configuration>
           <ConfigurationItem>
             <Link to="/forgot-password" target="_blank">
@@ -155,17 +156,13 @@ const ProfilePage = () => {
 
           {user && user.paymentMethod === "paypal" && !paypalEmailVerified && (
             <>
-              <ConfigurationItem
-                className="paypalEmailVerified"
-                onClick={() => sendPaypalEmail(user._id)}
-              >
+              <ConfigurationItem className="paypalEmailVerified" onClick={() => sendPaypalEmail(user._id)}>
                 <p>{t("profile.configuration.paypal_email_verified")}</p>
               </ConfigurationItem>
               {paypalEmailIsSent && (
                 <p className="message">
                   {t("profile.configuration.paypal_email_sent.0")}
-                  <span> {user.paypalEmail}</span>.{" "}
-                  {t("profile.configuration.paypal_email_sent.1")}
+                  <span> {user.paypalEmail}</span>. {t("profile.configuration.paypal_email_sent.1")}
                 </p>
               )}
             </>

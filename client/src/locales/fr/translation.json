@@ -799,9 +799,7 @@
         },
         "contact": {
           "title": "Contactez-nous",
-          "p": [
-            "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
-          ]
+          "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
         }
       }
     },
@@ -991,9 +989,7 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "p": [
-        "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
-      ]
+      "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
     }
   },
   "referral_program": {
@@ -1129,11 +1125,13 @@
   },
   "confirmation": {
     "paypal": {
+      "page_title": "Confirmation par e-mail PayPal",
       "message": "Votre email PayPal est en cours de vérification",
       "confirmation_message": "Votre email Paypal est déjà vérifié",
       "error": "Un problème est survenu, essayez d'actualiser la page ou renvoyez l'e-mail de confirmation"
     },
     "email": {
+      "page_title": "Email de confirmation",
       "message": "Votre email est en cours de vérification",
       "confirmation_message": "Votre email est déjà vérifié",
       "error": "Un problème est survenu, essayez d'actualiser la page ou renvoyez l'e-mail de confirmation"
@@ -1150,6 +1148,7 @@
     "submit_button_waiting": "En attente"
   },
   "no_valid": {
+    "page_title": "Non valable",
     "p_1": {
       "0": "Désolé. Votre profil Facebook n'est pas un candidat valide pour notre programme de location."
     },
@@ -1249,6 +1248,7 @@
     }
   },
   "users": {
+    "title": "Utilisateurs",
     "name": "Nom",
     "status": "Statut",
     "user_type": "Type d'utilisateur",

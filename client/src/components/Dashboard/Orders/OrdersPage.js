@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../store/auth/auth";
-import {
-  getOrders,
-  getOrdersState,
-  requestOrders,
-} from "../../../store/entities/orders";
+import { getOrders, getOrdersState, requestOrders } from "../../../store/entities/orders";
 import axios from "axios";
 import Pagination from "rc-pagination";
 import { useTranslation } from "react-i18next";
@@ -16,13 +12,7 @@ import PaymentsTable from "./PaymentsTable";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 // Styles
-import {
-  Title,
-  Table,
-  Orders,
-  Header,
-  CreateOrderButton,
-} from "../../../styles/Dashboard/OrdersPageStyles";
+import { Title, Table, Orders, Header, CreateOrderButton } from "../../../styles/Dashboard/OrdersPageStyles";
 
 const OrdersPage = () => {
   const dispatch = useDispatch();
@@ -73,10 +63,9 @@ const OrdersPage = () => {
 
         const grid = () => {
           var template = "";
-          columns.map((column) => {
+          columns.map(column => {
             const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
+            const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
             return null;
           });
@@ -100,8 +89,6 @@ const OrdersPage = () => {
 
   const orders = useSelector(getOrders);
 
-  console.log(orders);
-
   const { loading } = useSelector(getOrdersState);
 
   useEffect(() => {
@@ -120,7 +107,7 @@ const OrdersPage = () => {
     setTotalPages(orders.length - 1);
   }, [orders, totalPages]);
 
-  const onTableChange = (page) => {
+  const onTableChange = page => {
     setCurrent(page);
   };
 
@@ -134,21 +121,23 @@ const OrdersPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [orders, current, pageSize]);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("orders.title");
+  }, [language]);
 
   return (
     <Orders className="Orders">
       {createOrderIsOpen && (
-        <CreateOrder
-          createOrderIsOpen={createOrderIsOpen}
-          setCreateOrderIsOpen={setCreateOrderIsOpen}
-        />
+        <CreateOrder createOrderIsOpen={createOrderIsOpen} setCreateOrderIsOpen={setCreateOrderIsOpen} />
       )}
       <Header>
         <Title>{t("orders.title")}</Title>
-        <CreateOrderButton onClick={openCreateOrder}>
-          {t("orders.create_order_button")}
-        </CreateOrderButton>
+        <CreateOrderButton onClick={openCreateOrder}>{t("orders.create_order_button")}</CreateOrderButton>
       </Header>
 
       <Table className="displayUser">
@@ -192,15 +181,7 @@ const OrdersPage = () => {
 export default OrdersPage;
 
 const Row = ({ order, tableWidth }) => {
-  const {
-    concept,
-    paypalEmail,
-    creationDate,
-    amount,
-    status,
-    payments,
-    _id: orderId,
-  } = order;
+  const { concept, paypalEmail, creationDate, amount, status, payments, _id: orderId } = order;
 
   const date = new Date(creationDate).toLocaleDateString([], {
     day: "2-digit",
@@ -215,7 +196,7 @@ const Row = ({ order, tableWidth }) => {
   const [loading, setLoading] = useState(false);
   const cancelUpdate = () => setUpdateIsOn(false);
   const updateOrder = () => setUpdateIsOn(true);
-  const changeStatus = async (status) => {
+  const changeStatus = async status => {
     setLoading(true);
 
     try {
@@ -233,10 +214,7 @@ const Row = ({ order, tableWidth }) => {
 
       setLoading(false);
       cancelUpdate();
-
-      console.log(response);
     } catch ({ response }) {
-      console.log(response);
       setLoading(false);
     }
   };
@@ -247,9 +225,7 @@ const Row = ({ order, tableWidth }) => {
     <>
       <div className="tr" style={{ ...tableWidth }}>
         <div className="td concept">{concept}</div>
-        <div
-          className={`td status ${status}`}
-        >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
+        <div className={`td status ${status}`}>{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
         <div className="td date">{date}</div>
         <div className="td payments">
           <button onClick={handlePayments}>{t("orders.payments")}</button>
@@ -262,25 +238,13 @@ const Row = ({ order, tableWidth }) => {
           )}
           {updateIsOn && (
             <>
-              <button
-                className="approveBtn"
-                disabled={loading}
-                onClick={() => changeStatus("payOrder")}
-              >
+              <button className="approveBtn" disabled={loading} onClick={() => changeStatus("payOrder")}>
                 {t("orders.approve_button")}
               </button>
-              <button
-                className="rejectBtn"
-                disabled={loading}
-                onClick={() => changeStatus("cancelOrder")}
-              >
+              <button className="rejectBtn" disabled={loading} onClick={() => changeStatus("cancelOrder")}>
                 {t("orders.reject_button")}
               </button>
-              <button
-                className="cancelBtn"
-                disabled={loading}
-                onClick={cancelUpdate}
-              >
+              <button className="cancelBtn" disabled={loading} onClick={cancelUpdate}>
                 {t("orders.cancel_button")}
               </button>
             </>

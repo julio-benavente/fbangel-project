@@ -126,10 +126,7 @@
         "1": "ALL",
         "2": "the above requirements, you must complete 2 simple steps before you can complete the registration form."
       },
-      "list": [
-        "Create a Business Manager (BM)",
-        "Activate two-step authentication via App"
-      ],
+      "list": ["Create a Business Manager (BM)", "Activate two-step authentication via App"],
       "step_one": {
         "title": "Step 1: Create a Business Manager (BM)",
         "list": {
@@ -682,9 +679,7 @@
         },
         "compensation": {
           "title": "Compensation",
-          "p": [
-            "The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."
-          ]
+          "p": ["The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."]
         },
         "payment": {
           "title": "Payment",
@@ -794,9 +789,7 @@
         },
         "contact": {
           "title": "Contact Us",
-          "p": [
-            "If you have any questions about these Terms and Conditions, you can contact us"
-          ]
+          "p": ["If you have any questions about these Terms and Conditions, you can contact us"]
         }
       }
     },
@@ -874,9 +867,7 @@
     },
     "compensation": {
       "title": "Compensation",
-      "p": [
-        "The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."
-      ]
+      "p": ["The Owner agrees to indemnify FbAngel if he has in any way violated the promise of ownership clause."]
     },
     "payment": {
       "title": "Payment",
@@ -986,9 +977,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "p": [
-        "If you have any questions about these Terms and Conditions, you can contact us"
-      ]
+      "p": ["If you have any questions about these Terms and Conditions, you can contact us"]
     }
   },
   "referral_program": {
@@ -1032,9 +1021,7 @@
     "questions": [
       {
         "question": "Why don't we create our own profiles?",
-        "answer": [
-          "We are only using your FB ad account, which has a separate login from your normal FB profile."
-        ]
+        "answer": ["We are only using your FB ad account, which has a separate login from your normal FB profile."]
       },
       {
         "question": "How do I know that my profile will not be published and that my information will not be shared?",
@@ -1124,11 +1111,13 @@
   },
   "confirmation": {
     "paypal": {
+      "page_title": "PayPal email confirmation",
       "message": "Your PayPal email is being verified",
       "confirmation_message": "Your Paypal email is already verified",
       "error": "A problem has occurred, try to refresh the page or send the confirmation email again"
     },
     "email": {
+      "page_title": "Email confirmation",
       "message": "Your email is being verified",
       "confirmation_message": "Your email is already verified",
       "error": "A problem has occurred, try to refresh the page or send the confirmation email again"
@@ -1145,6 +1134,7 @@
     "submit_button_waiting": "Waiting"
   },
   "no_valid": {
+    "page_title": "No valid",
     "p_1": {
       "0": "Sorry. Your Facebook profile is not a valid candidate for our rental program."
     },
@@ -1244,6 +1234,7 @@
     }
   },
   "users": {
+    "title": "Users",
     "name": "Name",
     "status": "Status",
     "user_type": "User type",

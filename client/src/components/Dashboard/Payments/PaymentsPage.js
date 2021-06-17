@@ -25,64 +25,20 @@ const PaymentsPage = () => {
   const user = useSelector(getUser);
 
   const userColumns = [
-    {
-      column: "concept",
-      width: 35,
-      min: 80,
-    },
-    {
-      column: "paypal",
-      width: 20,
-      min: 100,
-    },
-    {
-      column: "date",
-      width: 15,
-      min: 70,
-    },
-    {
-      column: "status",
-      width: 15,
-      min: 70,
-    },
-    {
-      column: "amount",
-      width: 15,
-      min: 50,
-    },
+    { column: "concept", width: 35, min: 80 },
+    { column: "paypal", width: 20, min: 100 },
+    { column: "date", width: 15, min: 70 },
+    { column: "status", width: 15, min: 70 },
+    { column: "amount", width: 15, min: 50 },
   ];
 
   const adminColumns = [
-    {
-      column: "name",
-      width: 15,
-      min: 80,
-    },
-    {
-      column: "concept",
-      width: 35,
-      min: 80,
-    },
-    {
-      column: "paypal",
-      width: 20,
-      min: 100,
-    },
-    {
-      column: "date",
-      width: 10,
-      min: 70,
-    },
-    {
-      column: "status",
-      width: 10,
-      min: 70,
-    },
-    {
-      column: "amount",
-      width: 10,
-      min: 50,
-    },
+    { column: "name", width: 15, min: 80 },
+    { column: "concept", width: 35, min: 80 },
+    { column: "paypal", width: 20, min: 100 },
+    { column: "date", width: 10, min: 70 },
+    { column: "status", width: 10, min: 70 },
+    { column: "amount", width: 10, min: 50 },
   ];
   const userTableWith = useTableWidth(userColumns, "Payments");
   const adminTableWith = useTableWidth(adminColumns, "Payments");
@@ -141,7 +97,14 @@ const PaymentsPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [payments, current, pageSize]);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("payments.title");
+  }, [language]);
 
   return (
     <Payments className="Payments">

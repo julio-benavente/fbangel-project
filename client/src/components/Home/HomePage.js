@@ -80,13 +80,15 @@ import stackOfDollars from "../../assets/images/stackOfDollars.png";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
   const [currentTestimony, setCurrentTestimony] = useState(0);
   const testimoniesNavAnimation = useAnimation();
   const { width } = useWindowSize();
 
   const distance = width < 600 ? 300 : 400;
-  const handleTestimoniesNav = (to) => {
-    const translate = (to) => (distance + 50) * -to;
+  const handleTestimoniesNav = to => {
+    const translate = to => (distance + 50) * -to;
     testimoniesNavAnimation.start({
       x: translate(to),
       transition: {
@@ -95,6 +97,12 @@ const HomePage = () => {
     });
     setCurrentTestimony(to);
   };
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("navbar.home");
+  }, [language]);
 
   useEffect(() => {
     handleTestimoniesNav(currentTestimony);
@@ -107,9 +115,7 @@ const HomePage = () => {
           <LeftSide>
             <Headline>{t("home.banner.headline")}</Headline>
             <Subheadline>{t("home.banner.sub_headline")}</Subheadline>
-            <StartButton to="/join-now">
-              {t("home.banner.start_button")}
-            </StartButton>
+            <StartButton to="/join-now">{t("home.banner.start_button")}</StartButton>
           </LeftSide>
           <Image src={bannerWoman}></Image>
         </BannerSectionWrapper>
@@ -149,9 +155,7 @@ const HomePage = () => {
       <HowMuchSection>
         <HowMuchSectionWarpper>
           <div className="sideContent">
-            <HowMuchSectionTitle>
-              {t("home.requirements.title")}
-            </HowMuchSectionTitle>
+            <HowMuchSectionTitle>{t("home.requirements.title")}</HowMuchSectionTitle>
 
             <HowMuchInfo>
               <p>
@@ -159,9 +163,7 @@ const HomePage = () => {
                 {t("home.requirements.info.p")}
               </p>
             </HowMuchInfo>
-            <HowItWorksBtn to="/how-it-works">
-              {t("home.requirements.how_it_works_btn")}
-            </HowItWorksBtn>
+            <HowItWorksBtn to="/how-it-works">{t("home.requirements.how_it_works_btn")}</HowItWorksBtn>
           </div>
           <HowMuchImage>
             <img src={stackOfDollars} alt="Stack of dollars" />
@@ -172,15 +174,11 @@ const HomePage = () => {
 
       <RequirementsSection>
         <RequirementsSectionWrapper>
-          <RequirementsSubtitle>
-            {t("home.requirements.sub_title")}
-          </RequirementsSubtitle>
+          <RequirementsSubtitle>{t("home.requirements.sub_title")}</RequirementsSubtitle>
           <RequirementsList>
-            {t("home.requirements.list", { returnObjects: true }).map(
-              (e, index) => (
-                <li key={index}>{e}</li>
-              )
-            )}
+            {t("home.requirements.list", { returnObjects: true }).map((e, index) => (
+              <li key={index}>{e}</li>
+            ))}
           </RequirementsList>
           <Video controls poster={poster}>
             <source src={fbaAngelVideo} type="video/mp4"></source>
@@ -190,9 +188,7 @@ const HomePage = () => {
 
       <ReferralSection>
         <ReferralSectionWrapper>
-          <ReferralSectionTitle>
-            {t("home.referral.title")}
-          </ReferralSectionTitle>
+          <ReferralSectionTitle>{t("home.referral.title")}</ReferralSectionTitle>
           <div className="contentWrapper">
             <ReferralInfo>
               <p>
@@ -201,14 +197,11 @@ const HomePage = () => {
                 {t("home.referral.info.p_1.2")}
               </p>
               <p>
-                {t("home.referral.info.p_2.0")}{" "}
-                <span> {t("home.referral.info.p_2.1")} </span>
+                {t("home.referral.info.p_2.0")} <span> {t("home.referral.info.p_2.1")} </span>
                 {t("home.referral.info.p_2.2")}
               </p>
             </ReferralInfo>
-            <RegisterBtn to="/referral-program">
-              {t("home.referral.register_btn")}
-            </RegisterBtn>
+            <RegisterBtn to="/referral-program">{t("home.referral.register_btn")}</RegisterBtn>
             <ReferrealTiny>
               <p>
                 <span>* </span>
@@ -225,35 +218,27 @@ const HomePage = () => {
 
       <TestimoniesSection>
         <TestimoniesSectionWrapper>
-          <TestimoniesSectionTitle>
-            {t("home.testimonies.title")}
-          </TestimoniesSectionTitle>
+          <TestimoniesSectionTitle>{t("home.testimonies.title")}</TestimoniesSectionTitle>
           <TestimoniesInfo>{t("home.testimonies.info")}</TestimoniesInfo>
           <TestimoniesCardWrapper
           // style={{ gridTemplateColumns: width < 600 && "repeat(3,300px)" }}
           >
-            {t("home.testimonies.testimonies", { returnObjects: true }).map(
-              ({ testimony, author, membership }, i) => {
-                const pictures = {
-                  0: profilePictureOne,
-                  1: profilePictureTwo,
-                  2: profilePictureThree,
-                };
+            {t("home.testimonies.testimonies", { returnObjects: true }).map(({ testimony, author, membership }, i) => {
+              const pictures = {
+                0: profilePictureOne,
+                1: profilePictureTwo,
+                2: profilePictureThree,
+              };
 
-                return (
-                  <TestimonyCard
-                    key={i}
-                    as={motion.div}
-                    animate={testimoniesNavAnimation}
-                  >
-                    <Testimony>{testimony}</Testimony>
-                    <Author>{author}</Author>
-                    <Membership>{membership}</Membership>
-                    <Picture src={pictures[i]} />
-                  </TestimonyCard>
-                );
-              }
-            )}
+              return (
+                <TestimonyCard key={i} as={motion.div} animate={testimoniesNavAnimation}>
+                  <Testimony>{testimony}</Testimony>
+                  <Author>{author}</Author>
+                  <Membership>{membership}</Membership>
+                  <Picture src={pictures[i]} />
+                </TestimonyCard>
+              );
+            })}
           </TestimoniesCardWrapper>
           {/* <TestimoniesNav>
             {t("home.testimonies.testimonies", { returnObjects: true }).map(

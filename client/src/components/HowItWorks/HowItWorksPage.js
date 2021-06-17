@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ModalImage from "react-modal-image";
 import { useTranslation } from "react-i18next";
@@ -75,14 +75,19 @@ import mobile2faVideo from "../../assets/videos/2fa-Mobile-App-s2.mp4";
 import fb2fabmVideo from "../../assets/videos/Activate-2FA-fbangel-s.mp4";
 
 const HowItWorksPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("how_it_works.how_it_works.title");
+  }, [language]);
+
   return (
     <HowItWorks>
       {/* HowItWorks section starts */}
       <HowItWorksSection>
-        <HowItWorksSectionTitle>
-          {t("how_it_works.how_it_works.title")}
-        </HowItWorksSectionTitle>
+        <HowItWorksSectionTitle>{t("how_it_works.how_it_works.title")}</HowItWorksSectionTitle>
         <HowItWorksImage src={girl_getting_off} />
         <HowItWorksSectionInfo>
           <p>{t("how_it_works.how_it_works.info.p_1")}</p>
@@ -97,17 +102,13 @@ const HowItWorksPage = () => {
       {/* Requirements section starts */}
       <RequirementsSection>
         <RequirementsSectionWrapper>
-          <RequirementsSectionTitle>
-            {t("how_it_works.requirements.title")}
-          </RequirementsSectionTitle>
+          <RequirementsSectionTitle>{t("how_it_works.requirements.title")}</RequirementsSectionTitle>
           <RequirementsImage src={todo_list} />
 
           <RequirementsList>
-            {t("how_it_works.requirements.list", { returnObjects: true }).map(
-              (e, i) => (
-                <li key={i}>{e}</li>
-              )
-            )}
+            {t("how_it_works.requirements.list", { returnObjects: true }).map((e, i) => (
+              <li key={i}>{e}</li>
+            ))}
           </RequirementsList>
         </RequirementsSectionWrapper>
       </RequirementsSection>
@@ -117,32 +118,23 @@ const HowItWorksPage = () => {
       <ConfigurationSection>
         <ConfigurationSectionWrapper>
           <ConfigurationImage src={browser_girl} />
-          <ConfigurationSectionTitle>
-            {t("how_it_works.configuration.title")}
-          </ConfigurationSectionTitle>
+          <ConfigurationSectionTitle>{t("how_it_works.configuration.title")}</ConfigurationSectionTitle>
           <ConfigurationInfo>
             {t("how_it_works.configuration.info.0")}
             <b> {t("how_it_works.configuration.info.1")} </b>
             {t("how_it_works.configuration.info.2")}
           </ConfigurationInfo>
           <ConfigurationList>
-            {t("how_it_works.configuration.list", { returnObjects: true }).map(
-              (e, i) => (
-                <li key={i}>{e}</li>
-              )
-            )}
+            {t("how_it_works.configuration.list", { returnObjects: true }).map((e, i) => (
+              <li key={i}>{e}</li>
+            ))}
           </ConfigurationList>
           <StepOne>
-            <StepOneTitle>
-              {t("how_it_works.configuration.step_one.title")}
-            </StepOneTitle>
+            <StepOneTitle>{t("how_it_works.configuration.step_one.title")}</StepOneTitle>
             <ol>
               <li>
                 {t("how_it_works.configuration.step_one.list.li_1.0")}
-                <a
-                  href="https://business.facebook.com/overview#/"
-                  target="_blank"
-                >
+                <a href="https://business.facebook.com/overview#/" target="_blank">
                   {" "}
                   business.facebook.com/overview
                 </a>
@@ -171,47 +163,29 @@ const HowItWorksPage = () => {
           </StepOne>
           <Options>
             <OptionOne>
-              <OptionOneTitle>
-                {t("how_it_works.configuration.option_one.title")}
-              </OptionOneTitle>
+              <OptionOneTitle>{t("how_it_works.configuration.option_one.title")}</OptionOneTitle>
               <p>{t("how_it_works.configuration.option_one.p_1")}</p>
               <a>
-                <ModalImage
-                  small={op1img1}
-                  large={op1img1}
-                  hideDownload={true}
-                  alt="Option one image one"
-                />
+                <ModalImage small={op1img1} large={op1img1} hideDownload={true} alt="Option one image one" />
               </a>
               {/* <img src={op1img1} alt="Option one image one" /> */}
               <p>{t("how_it_works.configuration.option_one.p_2")}</p>
               <ol>
                 <li>
                   {t("how_it_works.configuration.option_one.list_1.li_1.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_1.li_1.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_1.li_1.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_one.list_1.li_2.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_1.li_2.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_1.li_2.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_one.list_1.li_3.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_1.li_3.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_1.li_3.1")}</b>
                 </li>
               </ol>
               <a>
-                <ModalImage
-                  small={op1img2}
-                  large={op1img2}
-                  hideDownload={true}
-                  alt="Option one image two"
-                />
+                <ModalImage small={op1img2} large={op1img2} hideDownload={true} alt="Option one image two" />
               </a>
               <p>{t("how_it_works.configuration.option_one.p_3")}</p>
               <p>
@@ -222,96 +196,60 @@ const HowItWorksPage = () => {
               <ol>
                 <li>
                   {t("how_it_works.configuration.option_one.list_2.li_1.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_2.li_1.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_2.li_1.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_one.list_2.li_2.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_2.li_2.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_2.li_2.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_one.list_2.li_3.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_2.li_3.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_2.li_3.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_one.list_2.li_4.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_one.list_2.li_4.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_one.list_2.li_4.1")}</b>
                 </li>
               </ol>
             </OptionOne>
 
             <OptionTwo>
-              <OptionTwoTitle>
-                {t("how_it_works.configuration.option_two.title")}
-              </OptionTwoTitle>
+              <OptionTwoTitle>{t("how_it_works.configuration.option_two.title")}</OptionTwoTitle>
               <a>
-                <ModalImage
-                  small={op2img1}
-                  large={op2img1}
-                  hideDownload={true}
-                  alt="Option two image one"
-                />
+                <ModalImage small={op2img1} large={op2img1} hideDownload={true} alt="Option two image one" />
               </a>
               <p>{t("how_it_works.configuration.option_two.p_1")}</p>
               <p>{t("how_it_works.configuration.option_two.p_2")}</p>
               <ol>
                 <li>
                   {t("how_it_works.configuration.option_two.list_1.li_1.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_two.list_1.li_1.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_two.list_1.li_1.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_two.list_1.li_2.0")}
-                  <b>
-                    {" "}
-                    {t("how_it_works.configuration.option_two.list_1.li_2.1")}
-                  </b>
+                  <b> {t("how_it_works.configuration.option_two.list_1.li_2.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_two.list_1.li_3.0")}
-                  <b>
-                    {" "}
-                    {t("how_it_works.configuration.option_two.list_1.li_3.1")}
-                  </b>
+                  <b> {t("how_it_works.configuration.option_two.list_1.li_3.1")}</b>
                 </li>
-                <li>
-                  {t("how_it_works.configuration.option_two.list_1.li_4.0")}
-                </li>
+                <li>{t("how_it_works.configuration.option_two.list_1.li_4.0")}</li>
                 <li>
                   {t("how_it_works.configuration.option_two.list_1.li_5.0")}{" "}
-                  <b>
-                    {" "}
-                    {t("how_it_works.configuration.option_two.list_1.li_5.1")}
-                  </b>
+                  <b> {t("how_it_works.configuration.option_two.list_1.li_5.1")}</b>
                 </li>
               </ol>
               <p>{t("how_it_works.configuration.option_two.p_3")}</p>
               <p>
                 {t("how_it_works.configuration.option_two.p_4")}
-                <a
-                  href="https://business.facebook.com/accountquality/"
-                  target="_blank"
-                >
+                <a href="https://business.facebook.com/accountquality/" target="_blank">
                   {" "}
                   business.facebook.com/accountquality{" "}
                 </a>
               </p>
 
               <a>
-                <ModalImage
-                  small={op2img2}
-                  large={op2img2}
-                  hideDownload={true}
-                  alt="Option one image two"
-                />
+                <ModalImage small={op2img2} large={op2img2} hideDownload={true} alt="Option one image two" />
               </a>
               <p>
                 {t("how_it_works.configuration.option_two.p_5.0")}{" "}
@@ -321,33 +259,24 @@ const HowItWorksPage = () => {
               <ol>
                 <li>
                   {t("how_it_works.configuration.option_two.list_2.li_1.0")}{" "}
-                  <a
-                    href="https://business.facebook.com/settings/"
-                    target="_blank"
-                  >
+                  <a href="https://business.facebook.com/settings/" target="_blank">
                     business.facebook.com/settings
                   </a>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_two.list_2.li_2.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_two.list_2.li_2.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_two.list_2.li_2.1")}</b>
                 </li>
                 <li>
                   {t("how_it_works.configuration.option_two.list_2.li_3.0")}{" "}
-                  <b>
-                    {t("how_it_works.configuration.option_two.list_2.li_3.1")}
-                  </b>
+                  <b>{t("how_it_works.configuration.option_two.list_2.li_3.1")}</b>
                 </li>
               </ol>
             </OptionTwo>
           </Options>
 
           <StepTwo>
-            <StepTwoTitle>
-              {t("how_it_works.configuration.step_two.title")}
-            </StepTwoTitle>
+            <StepTwoTitle>{t("how_it_works.configuration.step_two.title")}</StepTwoTitle>
             <ol>
               <li>
                 {t("how_it_works.configuration.step_two.list.li_1.0")}{" "}
@@ -374,10 +303,7 @@ const HowItWorksPage = () => {
                 <p>{t("how_it_works.configuration.step_two.list.extra.p_1")}</p>
                 <p>{t("how_it_works.configuration.step_two.list.extra.p_2")}</p>
                 <p>
-                  <a
-                    href="https://www.facebook.com/help/358336074294704?helpref=faq_content"
-                    target="_blank"
-                  >
+                  <a href="https://www.facebook.com/help/358336074294704?helpref=faq_content" target="_blank">
                     {t("how_it_works.configuration.step_two.list.extra.p_3")}
                   </a>
                 </p>
@@ -404,40 +330,30 @@ const HowItWorksPage = () => {
       <RegistrationSection>
         <RegistrationSectionWrapper>
           <RegistrationImage src={watching_laptop} />
-          <RegistrationSectionTitle>
-            {t("how_it_works.registration.title")}
-          </RegistrationSectionTitle>
+          <RegistrationSectionTitle>{t("how_it_works.registration.title")}</RegistrationSectionTitle>
           <RegistrationInfo>
             <p>
               {t("how_it_works.registration.info.p_1.0")}{" "}
-              <Link to="/join-now">
-                {t("how_it_works.registration.info.p_1.1")}
-              </Link>{" "}
+              <Link to="/join-now">{t("how_it_works.registration.info.p_1.1")}</Link>{" "}
               {t("how_it_works.registration.info.p_1.2")}
             </p>
             <p>{t("how_it_works.registration.info.p_2.0")}</p>
             <p>
-              {t("how_it_works.registration.info.p_3.0")}{" "}
-              <b>{t("how_it_works.registration.info.p_3.1")}</b>.
+              {t("how_it_works.registration.info.p_3.0")} <b>{t("how_it_works.registration.info.p_3.1")}</b>.
             </p>
             <p>{t("how_it_works.registration.info.p_4.0")}</p>
             <p>{t("how_it_works.registration.info.p_5.0")}</p>
             <p>{t("how_it_works.registration.info.p_6.0")}</p>
             <p>
               {t("how_it_works.registration.info.p_7.0")}{" "}
-              <a
-                href="https://www.facebook.com/help/159096464162185"
-                target="_blank"
-              >
+              <a href="https://www.facebook.com/help/159096464162185" target="_blank">
                 {t("how_it_works.registration.info.p_7.1")}
               </a>
               .
             </p>
             <p>
-              {t("how_it_works.registration.info.p_8.0")}{" "}
-              <b>{t("how_it_works.registration.info.p_8.1")}</b>{" "}
-              {t("how_it_works.registration.info.p_8.2")}{" "}
-              <b>{t("how_it_works.registration.info.p_8.3")} </b>
+              {t("how_it_works.registration.info.p_8.0")} <b>{t("how_it_works.registration.info.p_8.1")}</b>{" "}
+              {t("how_it_works.registration.info.p_8.2")} <b>{t("how_it_works.registration.info.p_8.3")} </b>
               {t("how_it_works.registration.info.p_8.4")}
             </p>
           </RegistrationInfo>
@@ -449,17 +365,13 @@ const HowItWorksPage = () => {
       <PaymentSection>
         <PaymentSectionWrapper>
           <PaymentImage src={drinking_coffe} />
-          <PaymentSectionTitle>
-            {t("how_it_works.payment.title")}
-          </PaymentSectionTitle>
+          <PaymentSectionTitle>{t("how_it_works.payment.title")}</PaymentSectionTitle>
           <PaymentInfo>
             <p>{t("how_it_works.payment.info.p_1.0")}</p>
             <p>{t("how_it_works.payment.info.p_2.0")}</p>
             <p>
               {t("how_it_works.payment.info.p_3.0")}{" "}
-              <Link to="/referral-program">
-                {t("how_it_works.payment.info.p_3.1")}
-              </Link>
+              <Link to="/referral-program">{t("how_it_works.payment.info.p_3.1")}</Link>
             </p>
             <p>
               <b>{t("how_it_works.payment.info.p_4.0")}</b>
@@ -477,15 +389,12 @@ const HowItWorksPage = () => {
       <SupportSection>
         <SupportSectionWrapper>
           <SupportImage src={sending_email} />
-          <SupportSectionTitle>
-            {t("how_it_works.support.title")}
-          </SupportSectionTitle>
+          <SupportSectionTitle>{t("how_it_works.support.title")}</SupportSectionTitle>
           <SupportInfo>
             <p>{t("how_it_works.support.info.p_1.0")}</p>
             <p className="important">{t("how_it_works.support.info.p_2.0")}</p>
             <p>
-              {t("how_it_works.support.info.p_3.0")}{" "}
-              <b>{t("how_it_works.support.info.p_3.1")}</b>
+              {t("how_it_works.support.info.p_3.0")} <b>{t("how_it_works.support.info.p_3.1")}</b>
               {t("how_it_works.support.info.p_3.2")}
             </p>
             <p>

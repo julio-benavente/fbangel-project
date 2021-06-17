@@ -22,7 +22,15 @@ import { ReactComponent as Arrow } from "../../assets/svgs/arrow.svg";
 import { ReactComponent as Lock } from "../../assets/svgs/lock.svg";
 
 const LoginPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("reset_password.title");
+  }, [language]);
+
   const {
     register,
     control,
@@ -37,11 +45,10 @@ const LoginPage = () => {
   });
 
   const { token } = useParams();
-  const [resetPasswordConfirmation, setResetPasswordConfirmation] =
-    useState(false);
+  const [resetPasswordConfirmation, setResetPasswordConfirmation] = useState(false);
   const [resetPasswordError, setResetPasswordError] = useState(false);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async data => {
     try {
       const response = await axios.put(`/auth/reset-password/${token}`, {
         password,
@@ -78,78 +85,51 @@ const LoginPage = () => {
               <InputWrapper>
                 <input
                   type="password"
-                  className={`${password && "typed"} ${
-                    errors.password && "error"
-                  }`}
+                  className={`${password && "typed"} ${errors.password && "error"}`}
                   {...register("password", {
                     required: {
                       value: true,
                       message: t("reset_password.password_error_required"),
                     },
                     validate: {
-                      min: (v) =>
-                        v.length < 6
-                          ? t("reset_password.password_error_min")
-                          : true,
+                      min: v => (v.length < 6 ? t("reset_password.password_error_min") : true),
                     },
                   })}
                 />
                 <Lock />
                 <label>{t("reset_password.password")}</label>
-                <p className="error">
-                  {errors.password && errors.password.message}
-                </p>
+                <p className="error">{errors.password && errors.password.message}</p>
               </InputWrapper>
               <InputWrapper>
                 <input
                   type="password"
-                  className={`${passwordConfirmation && "typed"} ${
-                    errors.passwordConfirmation && "error"
-                  }`}
+                  className={`${passwordConfirmation && "typed"} ${errors.passwordConfirmation && "error"}`}
                   {...register("passwordConfirmation", {
                     required: {
                       value: true,
-                      message: t(
-                        "reset_password.password_confirmation_error_required"
-                      ),
+                      message: t("reset_password.password_confirmation_error_required"),
                     },
                     validate: {
-                      same: (v) =>
-                        v !== password
-                          ? t("reset_password.password_confirmation_error_same")
-                          : true,
+                      same: v => (v !== password ? t("reset_password.password_confirmation_error_same") : true),
                     },
                   })}
                 />
                 <Lock />
                 <label>{t("reset_password.password_confirmation")}</label>
-                <p className="error">
-                  {errors.passwordConfirmation &&
-                    errors.passwordConfirmation.message}
-                </p>
+                <p className="error">{errors.passwordConfirmation && errors.passwordConfirmation.message}</p>
               </InputWrapper>
             </>
           )}
 
           <div className="errorMessages">
-            {resetPasswordConfirmation && (
-              <p className="error">
-                {t("reset_password.reset_confirmation_message")}
-              </p>
-            )}
+            {resetPasswordConfirmation && <p className="error">{t("reset_password.reset_confirmation_message")}</p>}
 
-            {resetPasswordError && (
-              <p className="error">
-                {t("reset_password.reset_password_confirmation")}
-              </p>
-            )}
+            {resetPasswordError && <p className="error">{t("reset_password.reset_password_confirmation")}</p>}
           </div>
 
           {!resetPasswordConfirmation && (
             <Submit>
-              {!isSubmitting
-                ? t("reset_password.submit_button")
-                : t("reset_password.submit_button_waiting")}
+              {!isSubmitting ? t("reset_password.submit_button") : t("reset_password.submit_button_waiting")}
             </Submit>
           )}
         </LoginForm>

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
-import {
-  requestUsers,
-  getUsers,
-  getUsersState,
-} from "../../../store/entities/users";
+import { requestUsers, getUsers, getUsersState } from "../../../store/entities/users";
 import { useDispatch, useSelector } from "react-redux";
 import Pagination from "rc-pagination";
 import { useTranslation } from "react-i18next";
@@ -13,11 +9,7 @@ import { useTranslation } from "react-i18next";
 import UserRow from "./UserRow";
 
 // Styles
-import {
-  Users,
-  Title,
-  UsersTable,
-} from "../../../styles/Dashboard/UsersPageStyles";
+import { Users, Title, UsersTable } from "../../../styles/Dashboard/UsersPageStyles";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const UsersPage = () => {
@@ -82,10 +74,9 @@ const UsersPage = () => {
 
         const grid = () => {
           var template = "";
-          columns.map((column) => {
+          columns.map(column => {
             const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
+            const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
             return null;
           });
@@ -123,7 +114,7 @@ const UsersPage = () => {
     setTotalPages(users.length - 1);
   }, [users, totalPages]);
 
-  const onTableChange = (page) => {
+  const onTableChange = page => {
     setCurrent(page);
   };
 
@@ -137,11 +128,18 @@ const UsersPage = () => {
     setShowRows(selectRows(current, pageSize));
   }, [users, current, pageSize]);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("users.title");
+  }, [language]);
 
   return (
     <Users className="Users">
-      <Title>{t("users.name")}</Title>
+      <Title>{t("users.title")}</Title>
       <UsersTable>
         <div className="thead">
           <div className="tr" style={{ ...usersTableWidth }}>
@@ -163,13 +161,7 @@ const UsersPage = () => {
           )}
           {!loading &&
             users.length !== 0 &&
-            showRows.map((user, index) => (
-              <UserRow
-                user={user}
-                key={index}
-                usersTableWidth={usersTableWidth}
-              />
-            ))}
+            showRows.map((user, index) => <UserRow user={user} key={index} usersTableWidth={usersTableWidth} />)}
         </div>
       </UsersTable>
       <PaginationWrapper>

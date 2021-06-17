@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 // Styles
@@ -97,9 +97,17 @@ const questionCardVariants = {
 };
 
 const FaqPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("faq.title");
+  }, [language]);
+
   const [questionIsOpen, setQuestionIsOpen] = useState(null);
-  const handleQuestionIsOpen = (number) => {
+  const handleQuestionIsOpen = number => {
     if (questionIsOpen === number) return setQuestionIsOpen(null);
 
     setQuestionIsOpen(number);
@@ -112,12 +120,7 @@ const FaqPage = () => {
       <QuestionsSection>
         <QuestionsSectionWrapper as={motion.div}>
           <QuestionsSectionTitle>{t("faq.title")}</QuestionsSectionTitle>
-          <QuestionsWrapper
-            as={motion.div}
-            initial="start"
-            animate="end"
-            variants={questionCardWrapperVariants}
-          >
+          <QuestionsWrapper as={motion.div} initial="start" animate="end" variants={questionCardWrapperVariants}>
             {questions.map(({ question, answer }, i) => {
               return (
                 <QuestionCard
@@ -154,15 +157,11 @@ const FaqPage = () => {
       </QuestionsSection>
       <AccountSecureSection>
         <AccountSecureSectionWrapper>
-          <AccountSecureSectionTitle>
-            {t("faq.account_secure.title")}
-          </AccountSecureSectionTitle>
+          <AccountSecureSectionTitle>{t("faq.account_secure.title")}</AccountSecureSectionTitle>
           <AccountSecureSectionList>
-            {t("faq.account_secure.list", { returnObjects: true }).map(
-              (item, i) => (
-                <p key={i}>{item}</p>
-              )
-            )}
+            {t("faq.account_secure.list", { returnObjects: true }).map((item, i) => (
+              <p key={i}>{item}</p>
+            ))}
           </AccountSecureSectionList>
           <QuestionsSectionImage src={guyImage} />
         </AccountSecureSectionWrapper>

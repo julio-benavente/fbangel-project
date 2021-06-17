@@ -126,10 +126,7 @@
         "1": "TODOS",
         "2": "los requistos anteriormente expuestos debes completar 2 sencillos pasos antes de poder completar el formulario de registro."
       },
-      "list": [
-        "Crear un Administrador Comercial (BM)",
-        "Activar autenticación en dos pasos via App"
-      ],
+      "list": ["Crear un Administrador Comercial (BM)", "Activar autenticación en dos pasos via App"],
       "step_one": {
         "title": "Paso 1: Crear un Administrador Comercial (BM)",
         "list": {
@@ -794,9 +791,7 @@
         },
         "contact": {
           "title": "Contáctenos",
-          "p": [
-            "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
-          ]
+          "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
         }
       }
     },
@@ -986,9 +981,7 @@
     },
     "contact": {
       "title": "Contáctenos",
-      "p": [
-        "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
-      ]
+      "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
     }
   },
   "referral_program": {
@@ -1124,11 +1117,13 @@
   },
   "confirmation": {
     "paypal": {
+      "page_title": "Confirmación de email de PayPal",
       "message": "Tu email de PayPal esta siendo verificado",
       "confirmation_message": "Tu email de Paypal ya está verificado",
       "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
     },
     "email": {
+      "page_title": "Confirmacion de email",
       "message": "Tu email esta siendo verificado",
       "confirmation_message": "Tu email ya esta verificado",
       "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
@@ -1145,6 +1140,7 @@
     "submit_button_waiting": "Esperando"
   },
   "no_valid": {
+    "page_title": "No válido",
     "p_1": {
       "0": "Lo sentimos. Su perfil de Facebook no es un candidato válido para nuestro programa de alquiler."
     },
@@ -1244,6 +1240,7 @@
     }
   },
   "users": {
+    "title": "Usuarios",
     "name": "Nombre",
     "status": "Estado",
     "user_type": "Tipo de usuario",

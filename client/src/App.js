@@ -43,17 +43,11 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/no-valid" component={NoValid} />
           <Route path="/terms-conditions" component={TermsAndConditions} />
-          <Route
-            path="/referral-registration"
-            component={ReferralRegistration}
-          />
+          <Route path="/referral-registration" component={ReferralRegistration} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <Route path="/reset-password/:token" component={ResetPassword} />
-          <Route
-            path="/confirm-paypal-email/:token"
-            component={ConfirmationPage}
-          />
+          <Route path="/confirm-paypal-email/:token" component={ConfirmationPage} />
           <Route path="/confirm-email/:token" component={ConfirmationPage} />
           <PrivateRoute path="/dashboard">
             <Dashboard />

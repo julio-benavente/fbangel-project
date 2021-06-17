@@ -23,7 +23,15 @@ import { ReactComponent as Arrow } from "../../assets/svgs/arrow.svg";
 import { ReactComponent as User } from "../../assets/svgs/user.svg";
 
 const LoginPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("forgot_password.title");
+  }, [language]);
+
   const dispatch = useDispatch();
   const {
     register,
@@ -36,7 +44,7 @@ const LoginPage = () => {
   const email = useWatch({ control, name: "email" });
 
   const [resetEmailSent, setResetEmailSent] = useState(false);
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     if (!isSubmitting) {
       setResetEmailSent(true);
       axios.post("/auth/forgotten-password", {
@@ -69,8 +77,7 @@ const LoginPage = () => {
                   message: t("forgot_password.email_error_required"),
                 },
                 validate: {
-                  min: (v) =>
-                    v.length < 6 ? t("forgot_password.email_error_min") : true,
+                  min: v => (v.length < 6 ? t("forgot_password.email_error_min") : true),
                 },
               })}
             />
@@ -80,9 +87,7 @@ const LoginPage = () => {
           </InputWrapper>
 
           <div className="errorMessages">
-            {resetEmailSent && (
-              <p className="error">{t("forgot_password.email_sent")}</p>
-            )}
+            {resetEmailSent && <p className="error">{t("forgot_password.email_sent")}</p>}
           </div>
           <Submit>{t("forgot_password.submit_button")}</Submit>
         </LoginForm>

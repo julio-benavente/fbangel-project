@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
@@ -25,7 +25,15 @@ import {
 import { ReactComponent as Telegram } from "../../assets/svgs/telegram.svg";
 
 const ContactPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("contact.side.title");
+  }, [language]);
+
   const {
     register,
     handleSubmit,
@@ -34,7 +42,7 @@ const ContactPage = () => {
     mode: "all",
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     console.log(data);
   };
 
@@ -90,25 +98,18 @@ const ContactPage = () => {
                     },
                   })}
                 />
-                <p className="error">
-                  {errors.message && errors.message.message}
-                </p>
+                <p className="error">{errors.message && errors.message.message}</p>
               </InputWrapper>
               <SendButton type="submit" value={t("contact.form.send_button")} />
             </Form>
             <ContactSide>
               <ContactSideTitle>{t("contact.side.title")}</ContactSideTitle>
               <ContactSideInformation>
-                {t("contact.side.info", { returnObjects: true }).map(
-                  (item, i) => (
-                    <p key={i}>{item}</p>
-                  )
-                )}
+                {t("contact.side.info", { returnObjects: true }).map((item, i) => (
+                  <p key={i}>{item}</p>
+                ))}
               </ContactSideInformation>
-              <TelegramButton
-                href="https://t.me/joinchat/T0g1FDrJeRxuiAt8"
-                target="_blank"
-              >
+              <TelegramButton href="https://t.me/joinchat/T0g1FDrJeRxuiAt8" target="_blank">
                 {t("contact.side.join_button")} <Telegram />
               </TelegramButton>
             </ContactSide>
