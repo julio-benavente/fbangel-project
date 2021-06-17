@@ -155,4 +155,8 @@ export const SendButton = styled.input`
   cursor: pointer;
   margin-top: 2rem;
   outline: none;
+
+  &[disabled="true"] {
+    background: ${(props) => props.theme.color.gray300};
+  }
 `;
