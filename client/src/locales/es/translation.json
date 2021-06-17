@@ -79,13 +79,13 @@
           "number": "1",
           "testimony": "He colaborado con fbangel durante más de un año, no he tenido ningún problema. El dinero siempre llega a tiempo y siempre recibo respuestas a todas mis preguntas. Es genial que no tenga que hacer nada y, además, no afecta a mi perfil en absoluto. Digamos que simplemente gano dinero alquilando mi cuenta de Facebook. Se lo recomiendo a todo el mundo!",
           "author": "Ana Martín",
-          "membership": "Miembro desde mayo 2019"
+          "membership": "Miembro desde mayo 2021"
         },
         {
           "number": "2",
           "testimony": "Decidí intentar ganar dinero con FbAngel, ya que me interesaba saber cómo funciona. Puedo decir que es una gran manera de tener ingresos adicionales. ¡Simplemente he tenido que rellenar el formulario Y NADA MAS! Los chicos se encargan del resto yo simplemente me limito a recoger mi dinero en mi cuenta PayPal",
           "author": "Tony Smith",
-          "membership": "Miembro desde octubre 2019"
+          "membership": "Miembro desde octubre 2021"
         },
         {
           "number": "3",
@@ -1066,13 +1066,14 @@
     "form": {
       "title": "Déjanos un mensaje",
       "name": "Tu nombre",
-      "name_error_requiered": "Por favor, coloque su nombre",
+      "name_error_required": "Por favor, coloque su nombre",
       "email": "Tu email",
       "email_error_required": "Por favor, coloque su email",
       "email_error_pattern": "Por favor, registre un email valido",
       "message": "Tu mensaje",
       "message_error_required": "Por favor, escriba un mensaje",
-      "send_button": "Enviar"
+      "send_button": "Enviar",
+      "email_sent": "El correo ha sido enviado"
     },
     "side": {
       "title": "Contáctanos",
@@ -1441,5 +1442,10 @@
       },
       "email_confirmation": "El correo ya ha sido enviado."
     }
+  },
+  "cookie_consentment": {
+    "message": "Este sitio web utiliza cookies para mejorar la experiencia del usuario.",
+    "accept": "Entiendo",
+    "decline": "Declino"
   }
 }

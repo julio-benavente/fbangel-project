@@ -79,13 +79,13 @@
           "number": "1",
           "testimony": "I have collaborated with fbangel for more than a year, I have not had any problems. The money is always on time and I always receive answers to all my questions. It's great that I don't have to do anything, and besides, it doesn't affect my profile at all. Let's say I just make money by renting my Facebook account. I recommend it to everybody!",
           "author": "Ana Martin",
-          "membership": "Member since May 2019"
+          "membership": "Member since May 2021"
         },
         {
           "number": "2",
           "testimony": "I decided to try to make money with FbAngel, since I was interested to know how it works. I can say that it is a great way to have additional income. I simply had to fill out the form AND NOTHING ELSE! The guys take care of the rest, I just collect my money in my PayPal account.",
           "author": "Tony Smith",
-          "membership": "Member since October 2019"
+          "membership": "Member since October 2021"
         },
         {
           "number": "3",
@@ -423,7 +423,7 @@
         "error_2": "The last name contains illegal characters"
       },
       "country": {
-        "question": "Tu país de residencia",
+        "question": "Your country of residence",
         "error_1": "This field is required"
       },
       "city": {
@@ -1060,13 +1060,14 @@
     "form": {
       "title": "Leave us a message",
       "name": "Your name",
-      "name_error_requiered": "Please enter your name",
+      "name_error_required": "Please enter your name",
       "email": "Your email",
       "email_error_required": "Please enter your email",
       "email_error_pattern": "Please register a valid email",
       "message": "Your message",
       "message_error_required": "Please write a message",
-      "send_button": "Send"
+      "send_button": "Send",
+      "email_sent": "The email has been sent"
     },
     "side": {
       "title": "Contact us",
@@ -1434,5 +1435,10 @@
       },
       "email_confirmation": "The email has already been sent."
     }
+  },
+  "cookie_consentment": {
+    "message": "This website uses cookies to enhance the user experience.",
+    "accept": "I understand",
+    "decline": "I decline"
   }
 }

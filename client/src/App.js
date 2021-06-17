@@ -25,6 +25,8 @@ import { useTranslation } from "react-i18next";
 import GlobalStyle from "./styles/GlobalStyles";
 import Theme from "./styles/Theme";
 
+import CookieConsent from "react-cookie-consent";
+
 const App = () => {
   const { t } = useTranslation();
   return (
@@ -32,6 +34,10 @@ const App = () => {
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <Navbar />
+        <CookieConsent cookieName="fbAngelCookieConsent" buttonText={t("cookie_consentment.accept")}>
+          {t("cookie_consentment.message")}
+        </CookieConsent>
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />

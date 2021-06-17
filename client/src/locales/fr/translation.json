@@ -80,13 +80,13 @@
           "number": "1",
           "testimony": "Je collabore avec fbangel depuis plus d'un an, je n'ai eu aucun problème. L'argent est toujours à l'heure et je reçois toujours des réponses à toutes mes questions. C'est génial que je n'aie rien à faire et, en plus, cela n'affecte pas du tout mon profil. Disons que je gagne juste de l'argent en louant mon compte Facebook. Je le recommande à tout le monde ! ",
           "author": "Ana Martín",
-          "membership": "Membre depuis mai 2019"
+          "membership": "Membre depuis mai 2021"
         },
         {
           "number": "2",
           "testimony": "J'ai décidé d'essayer de gagner de l'argent avec FbAngel, car j'étais intéressé de savoir comment cela fonctionne. Je peux dire que c'est un excellent moyen d'avoir un revenu supplémentaire. J'ai juste eu à remplir le formulaire ET RIEN D'AUTRE ! Les gars s'occupent du reste je récupère juste mon argent sur mon compte PayPal ",
           "author": "Tony Smith",
-          "membership": "Membre depuis octobre 2019"
+          "membership": "Membre depuis octobre 2021"
         },
         {
           "number": "3",
@@ -1074,13 +1074,14 @@
     "form": {
       "title": "Laissez-nous un message",
       "name": "Votre nom",
-      "name_error_requiered": "Veuillez entrer votre nom",
+      "name_error_required": "Veuillez entrer votre nom",
       "email": "Votre email",
       "email_error_required": "Veuillez entrer votre email",
       "email_error_pattern": "Veuillez enregistrer un email valide",
       "message": "Votre message",
       "message_error_required": "Veuillez écrire un message",
-      "send_button": "Envoyer"
+      "send_button": "Envoyer",
+      "email_sent": "L'email a été envoyé"
     },
     "side": {
       "title": "Contactez-nous",
@@ -1449,5 +1450,10 @@
       },
       "email_confirmation": "L'e-mail a déjà été envoyé."
     }
+  },
+  "cookie_consentment": {
+    "message": "Ce site utilise des cookies pour améliorer l'expérience utilisateur.",
+    "accept": "Je comprends",
+    "decline": "Je décline"
   }
 }
