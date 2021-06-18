@@ -20,19 +20,23 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
+// payments for user
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
-    const { payments } = await User.findById(id, {
-      payments: 1,
-      _id: -1,
-    }).populate({
-      path: "payments.list",
-      select: "status _id amount concept paypalEmail creationDate",
-    });
+    const {
+      payments: { tier, firstRentPaid },
+    } = await User.findOne({ _id: id });
+    const list = await Payment.find({ payee: id });
 
-    res.json({ payments: payments });
+    res.json({
+      payments: {
+        tier,
+        firstRentPaid,
+        list,
+      },
+    });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -56,7 +60,7 @@ router.post("/payment-creation/:id", auth, async (req, res) => {
 
     const { abrv } = await Product.findById(req.product);
     if (abrv === "rental") {
-      user.payments.firstRentPayed === true;
+      user.payments.firstRentPaid === true;
     }
 
     user.payments.push(newPayment._id);

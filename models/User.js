@@ -17,17 +17,10 @@ const obfuscate = (email) => {
   const separatorIndex = email.indexOf("@");
   if (separatorIndex < 3) {
     // 'ab@gmail.com' -> '**@gmail.com'
-    return (
-      email.slice(0, separatorIndex).replace(/./g, "*") +
-      email.slice(separatorIndex)
-    );
+    return email.slice(0, separatorIndex).replace(/./g, "*") + email.slice(separatorIndex);
   }
   // 'test42@gmail.com' -> 'te****@gmail.com'
-  return (
-    email.slice(0, 2) +
-    email.slice(2, separatorIndex).replace(/./g, "*") +
-    email.slice(separatorIndex)
-  );
+  return email.slice(0, 2) + email.slice(2, separatorIndex).replace(/./g, "*") + email.slice(separatorIndex);
 };
 
 const UserSchema = new mongoose.Schema(
@@ -259,7 +252,7 @@ const UserSchema = new mongoose.Schema(
         type: String,
         default: "tierOne",
       },
-      firstRentPayed: {
+      firstRentPaid: {
         type: Boolean,
         default: false,
       },
@@ -286,10 +279,7 @@ UserSchema.pre("save", async function (next) {
 });
 
 UserSchema.statics.login = async function (email, password) {
-  const user = await this.findOne(
-    { email },
-    "firstName lastName password email authLevel emailVerified"
-  );
+  const user = await this.findOne({ email }, "firstName lastName password email authLevel emailVerified");
 
   if (user) {
     const auth = await bcrypt.compare(password, user.password);

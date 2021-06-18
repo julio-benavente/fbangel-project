@@ -9,12 +9,8 @@ const auth = require("../../middlewares/auth");
 const checkAuthLevel = require("../../middlewares/checkAuthLevel");
 const { uploadImageAndGetUrl } = require("../../utils/cloudinary");
 const getNextSequence = require("../../utils/getNextSequence");
-const {
-  paypalEmailVerification,
-} = require("../../utils/emailsTemplates/paypalEmailVerification");
-const {
-  emailVerification,
-} = require("../../utils/emailsTemplates/emailVerification");
+const { paypalEmailVerification } = require("../../utils/emailsTemplates/paypalEmailVerification");
+const { emailVerification } = require("../../utils/emailsTemplates/emailVerification");
 const { upload } = require("../../middlewares/upload");
 const { imageLink } = require("../../utils/helperFunctions");
 
@@ -93,24 +89,15 @@ router.post("/registration/:userType", upload, async (req, res) => {
   try {
     // Upload all images
     if (req.files && req.files.documentImage) {
-      userInformation["documentImage"] = imageLink(
-        req.hostname,
-        req.files && req.files.documentImage[0]
-      );
+      userInformation["documentImage"] = imageLink(req.hostname, req.files && req.files.documentImage[0]);
     }
 
     if (req.files && req.files.fbEmailImage) {
-      userInformation["fbEmailImage"] = imageLink(
-        req.hostname,
-        req.files && req.files.fbEmailImage[0]
-      );
+      userInformation["fbEmailImage"] = imageLink(req.hostname, req.files && req.files.fbEmailImage[0]);
     }
 
     if (req.files && req.files.bmIdImage) {
-      userInformation["bmIdImage"] = imageLink(
-        req.hostname,
-        req.files && req.files.bmIdImage[0]
-      );
+      userInformation["bmIdImage"] = imageLink(req.hostname, req.files && req.files.bmIdImage[0]);
     }
 
     // Create a auto incrementing referral code
@@ -175,16 +162,16 @@ router.post("/registration/:userType", upload, async (req, res) => {
 router.post("/get-referrals", async (req, res) => {
   const { id } = req.body;
   try {
-    const user = await User.findOne({ _id: id }).populate({
-      path: "referrals",
-      select: "firstName lastName status email creationDate statusObservation",
-    });
+    const user = await User.findOne({ _id: id });
 
     if (!user) {
       throw Error("User doens't exist");
     }
 
-    res.json({ referrals: user.referrals });
+    const { referralCode } = user;
+    const referrals = await User.find({ userType: "rental", referral: referralCode });
+
+    res.json({ referrals });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -244,10 +231,7 @@ router.put("/send-paypal-email-confirmation", async (req, res) => {
   const { id } = req.body;
 
   try {
-    const user = await User.findOne(
-      { _id: id },
-      { paypalEmailVerification: 1, paypalEmail: 1 }
-    );
+    const user = await User.findOne({ _id: id }, { paypalEmailVerification: 1, paypalEmail: 1 });
 
     if (!user) {
       throw Error("User doesn't exist");
@@ -263,8 +247,7 @@ router.put("/send-paypal-email-confirmation", async (req, res) => {
     paypalEmailVerification(user, user.paypalEmail, req.hostname);
 
     res.json({
-      message:
-        "The link to confirm your paypal email has already been sent. Check your email.",
+      message: "The link to confirm your paypal email has already been sent. Check your email.",
     });
   } catch (e) {
     const error = handleError(e);

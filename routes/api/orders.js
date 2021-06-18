@@ -20,7 +20,6 @@ router.get("/", auth, async (req, res) => {
           select: "firstName lastName -_id",
         },
       })
-
       .sort({ creationDate: -1 });
     res.json({ orders });
   } catch (error) {
@@ -35,13 +34,23 @@ router.post("/create-order", auth, async (req, res) => {
   // get product
   const product = await Product.findById(productId);
 
+  console.log("payees", payees);
+
   // create payment
   const payments = await Promise.all(
-    payees.map(async ({ id, referral, concept: paymentConcept }) => {
+    payees.map(async ({ id, referenceId, referenceReferral, concept: paymentConcept }) => {
       try {
-        const user = await User.findById(id);
+        const user = await User.findOne({ referralCode: referenceReferral });
 
         if (!user) {
+          // If the user entered and wrong referral code as his referral
+          // with this the reference will be 'paid' and will not longer appear again to be paid
+          if (product.abrv === "referral") {
+            User.findByIdAndUpdate(referenceId, {
+              $set: { referralHasBeenPaid: true },
+            }).exec();
+          }
+
           throw Error("User doesn't exit or is not logged in");
         }
 
@@ -51,6 +60,7 @@ router.post("/create-order", auth, async (req, res) => {
         );
 
         var price = prices[0].price;
+
         // default price
         if (!price) {
           var { prices } = await Product.findOne(
@@ -61,7 +71,6 @@ router.post("/create-order", auth, async (req, res) => {
           var price = prices[0].price;
         }
 
-        // ### This should be able to catch if the user wants to be paid by paypal or usign a bank account
         const paymentInformation = {
           product: productId,
           concept: paymentConcept,
@@ -81,21 +90,16 @@ router.post("/create-order", auth, async (req, res) => {
 
         const newPayment = await new Payment(paymentInformation).save();
 
-        // payments.push(newPayment._id); // array of payments
-        User.findByIdAndUpdate(id, {
-          $push: { "payments.list": newPayment._id },
-        }).exec();
-
         if (product.abrv === "rental") {
           User.findByIdAndUpdate(id, {
             $set: {
-              "payments.firstRentPayed": true,
+              "payments.firstRentPaid": true,
             },
           }).exec();
         }
 
         if (product.abrv === "referral") {
-          User.findByIdAndUpdate(referral, {
+          User.findByIdAndUpdate(referenceId, {
             $set: { referralHasBeenPaid: true },
           }).exec();
         }
