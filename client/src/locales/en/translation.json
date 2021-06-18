@@ -1314,13 +1314,14 @@
       "email": "Email"
     },
     "create_action": {
-      "title": "Create order",
+      "title": "Create action",
       "create_action_button": "Create action"
     },
     "change_user_status": {
       "none": "None",
       "first_name": "Name",
       "last_name": "Surname",
+      "email": "Email",
       "status": "Status",
       "referral_code": "Referral code",
       "filter": "Filter",

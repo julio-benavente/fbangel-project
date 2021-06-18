@@ -1328,13 +1328,14 @@
       "email": "E-mail"
     },
     "create_action": {
-      "title": "Créer une commande",
+      "title": "Créer une action",
       "create_action_button": "Créer une action"
     },
     "change_user_status": {
       "none": "Aucun",
       "first_name": "Nom",
       "last_name": "Noms de famille",
+      "email": "E-mail",
       "status": "Statut",
       "referral_code": "Code de parrainage",
       "filter": "Filtre",

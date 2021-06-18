@@ -1320,13 +1320,14 @@
       "email": "Email"
     },
     "create_action": {
-      "title": "Crear orden",
+      "title": "Crear acción",
       "create_action_button": "Crear acción"
     },
     "change_user_status": {
       "none": "Ninguno",
       "first_name": "Nombre",
       "last_name": "Apellido",
+      "email": "Email",
       "status": "Estado",
       "referral_code": "Codigo de referido",
       "filter": "Filtro",
