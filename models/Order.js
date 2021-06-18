@@ -10,7 +10,7 @@ const OrderSchema = new mongoose.Schema({
     type: String,
     required: true,
     default: function () {
-      return this.product;
+      return this.product.name;
     },
   },
   payments: {
@@ -24,7 +24,7 @@ const OrderSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["pending", "approved", "payed", "canceled"],
+    enum: ["pending", "approved", "paid", "canceled"],
     default: "pending",
   },
   createdBy: {
