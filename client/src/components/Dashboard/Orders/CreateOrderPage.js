@@ -208,14 +208,15 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       const user = users.filter((user) => user.referralCode === referral.referral)[0];
 
       return {
-        id: user ? user._id : "not-found",
-        referral: referral._id,
+        id: user ? user._id : 0,
+        referenceReferral: referral.referral,
+        referenceId: referral._id,
         firstName: user ? user.firstName : "not-found",
         lastName: user ? user.lastName : "not-found",
         email: user ? user.email : "not-found",
         paymentMethod: user ? user.paymentMethod : "not-found",
         concept: concept(referral.firstName, referral.lastName),
-        amount: user ? amount(user.payments && user.payments.tier) : "not-found",
+        amount: user ? amount(user.payments && user.payments.tier) : 0,
       };
     });
 
@@ -235,7 +236,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     const newRentalPayments = users.filter((user, index) => {
       const userType = user.userType === "rental";
       const status = user.status === "active";
-      const firstRental = user.payments.firstRentPayed === false;
+      const firstRental = user.payments.firstRentPaid === false;
 
       console.log(userType && status && firstRental);
       return userType && status && firstRental;
@@ -371,6 +372,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
         </div>
         <div className="tbody">
           {payments.map((payment, index) => {
+            console.log(payment);
             const { firstName, lastName, email, paymentMethod, concept, amount } = payment;
             return (
               <div className="tr" key={index} style={{ ...tableWidth }}>

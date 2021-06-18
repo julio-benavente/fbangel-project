@@ -6,7 +6,7 @@ import moment from "moment";
 const initialState = () => ({
   loading: false,
   tier: "tierOne",
-  firstRentPayed: false,
+  firstRentPaid: false,
   list: [],
   lastFetch: null,
 });
@@ -22,11 +22,11 @@ const slice = createSlice({
     },
     paymentsRequestSucceeded: (payments, action) => {
       const {
-        payments: { list, firstRentPayed, tier },
+        payments: { list, firstRentPaid, tier },
       } = action.payload;
       payments.list = list || payments.list;
       payments.tier = tier || payments.tier;
-      payments.firstRentPayed = firstRentPayed || payments.firstRentPayed;
+      payments.firstRentPaid = firstRentPaid || payments.firstRentPaid;
       payments.lastFetch = Date.now();
       payments.loading = false;
 
@@ -39,11 +39,7 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-export const {
-  paymentsRequestFailed,
-  paymentsRequestSucceeded,
-  paymentsRequested,
-} = slice.actions;
+export const { paymentsRequestFailed, paymentsRequestSucceeded, paymentsRequested } = slice.actions;
 
 // Actions
 const url = "/api/payments";
