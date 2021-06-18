@@ -79,13 +79,13 @@
           "number": "1",
           "testimony": "He colaborado con fbangel durante más de un año, no he tenido ningún problema. El dinero siempre llega a tiempo y siempre recibo respuestas a todas mis preguntas. Es genial que no tenga que hacer nada y, además, no afecta a mi perfil en absoluto. Digamos que simplemente gano dinero alquilando mi cuenta de Facebook. Se lo recomiendo a todo el mundo!",
           "author": "Ana Martín",
-          "membership": "Miembro desde mayo 2019"
+          "membership": "Miembro desde mayo 2021"
         },
         {
           "number": "2",
           "testimony": "Decidí intentar ganar dinero con FbAngel, ya que me interesaba saber cómo funciona. Puedo decir que es una gran manera de tener ingresos adicionales. ¡Simplemente he tenido que rellenar el formulario Y NADA MAS! Los chicos se encargan del resto yo simplemente me limito a recoger mi dinero en mi cuenta PayPal",
           "author": "Tony Smith",
-          "membership": "Miembro desde octubre 2019"
+          "membership": "Miembro desde octubre 2021"
         },
         {
           "number": "3",
@@ -126,10 +126,7 @@
         "1": "TODOS",
         "2": "los requistos anteriormente expuestos debes completar 2 sencillos pasos antes de poder completar el formulario de registro."
       },
-      "list": [
-        "Crear un Administrador Comercial (BM)",
-        "Activar autenticación en dos pasos via App"
-      ],
+      "list": ["Crear un Administrador Comercial (BM)", "Activar autenticación en dos pasos via App"],
       "step_one": {
         "title": "Paso 1: Crear un Administrador Comercial (BM)",
         "list": {
@@ -794,9 +791,7 @@
         },
         "contact": {
           "title": "Contáctenos",
-          "p": [
-            "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
-          ]
+          "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
         }
       }
     },
@@ -986,9 +981,7 @@
     },
     "contact": {
       "title": "Contáctenos",
-      "p": [
-        "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
-      ]
+      "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
     }
   },
   "referral_program": {
@@ -1073,13 +1066,14 @@
     "form": {
       "title": "Déjanos un mensaje",
       "name": "Tu nombre",
-      "name_error_requiered": "Por favor, coloque su nombre",
+      "name_error_required": "Por favor, coloque su nombre",
       "email": "Tu email",
       "email_error_required": "Por favor, coloque su email",
       "email_error_pattern": "Por favor, registre un email valido",
       "message": "Tu mensaje",
       "message_error_required": "Por favor, escriba un mensaje",
-      "send_button": "Enviar"
+      "send_button": "Enviar",
+      "email_sent": "El correo ha sido enviado"
     },
     "side": {
       "title": "Contáctanos",
@@ -1124,11 +1118,13 @@
   },
   "confirmation": {
     "paypal": {
+      "page_title": "Confirmación de email de PayPal",
       "message": "Tu email de PayPal esta siendo verificado",
       "confirmation_message": "Tu email de Paypal ya está verificado",
       "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
     },
     "email": {
+      "page_title": "Confirmacion de email",
       "message": "Tu email esta siendo verificado",
       "confirmation_message": "Tu email ya esta verificado",
       "error": "A ocurrido un problema, intenta refrescar la página o envía de nuevo el email de confirmación"
@@ -1145,6 +1141,7 @@
     "submit_button_waiting": "Esperando"
   },
   "no_valid": {
+    "page_title": "No válido",
     "p_1": {
       "0": "Lo sentimos. Su perfil de Facebook no es un candidato válido para nuestro programa de alquiler."
     },
@@ -1244,6 +1241,7 @@
     }
   },
   "users": {
+    "title": "Usuarios",
     "name": "Nombre",
     "status": "Estado",
     "user_type": "Tipo de usuario",
@@ -1322,13 +1320,14 @@
       "email": "Email"
     },
     "create_action": {
-      "title": "Crear orden",
+      "title": "Crear acción",
       "create_action_button": "Crear acción"
     },
     "change_user_status": {
       "none": "Ninguno",
       "first_name": "Nombre",
       "last_name": "Apellido",
+      "email": "Email",
       "status": "Estado",
       "referral_code": "Codigo de referido",
       "filter": "Filtro",
@@ -1444,5 +1443,10 @@
       },
       "email_confirmation": "El correo ya ha sido enviado."
     }
+  },
+  "cookie_consentment": {
+    "message": "Este sitio web utiliza cookies para mejorar la experiencia del usuario.",
+    "accept": "Entiendo",
+    "decline": "Declino"
   }
 }

@@ -50,13 +50,15 @@ const PaymentSchema = new mongoose.Schema({
   },
   paypalEmail: {
     type: String,
-    required: true,
   },
   paypalCode: {
     type: String,
   },
   paymentDate: {
     type: Date,
+  },
+  bankAngency: {
+    type: String,
   },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,

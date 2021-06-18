@@ -80,13 +80,13 @@
           "number": "1",
           "testimony": "Je collabore avec fbangel depuis plus d'un an, je n'ai eu aucun problème. L'argent est toujours à l'heure et je reçois toujours des réponses à toutes mes questions. C'est génial que je n'aie rien à faire et, en plus, cela n'affecte pas du tout mon profil. Disons que je gagne juste de l'argent en louant mon compte Facebook. Je le recommande à tout le monde ! ",
           "author": "Ana Martín",
-          "membership": "Membre depuis mai 2019"
+          "membership": "Membre depuis mai 2021"
         },
         {
           "number": "2",
           "testimony": "J'ai décidé d'essayer de gagner de l'argent avec FbAngel, car j'étais intéressé de savoir comment cela fonctionne. Je peux dire que c'est un excellent moyen d'avoir un revenu supplémentaire. J'ai juste eu à remplir le formulaire ET RIEN D'AUTRE ! Les gars s'occupent du reste je récupère juste mon argent sur mon compte PayPal ",
           "author": "Tony Smith",
-          "membership": "Membre depuis octobre 2019"
+          "membership": "Membre depuis octobre 2021"
         },
         {
           "number": "3",
@@ -799,9 +799,7 @@
         },
         "contact": {
           "title": "Contactez-nous",
-          "p": [
-            "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
-          ]
+          "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
         }
       }
     },
@@ -991,9 +989,7 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "p": [
-        "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
-      ]
+      "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
     }
   },
   "referral_program": {
@@ -1078,13 +1074,14 @@
     "form": {
       "title": "Laissez-nous un message",
       "name": "Votre nom",
-      "name_error_requiered": "Veuillez entrer votre nom",
+      "name_error_required": "Veuillez entrer votre nom",
       "email": "Votre email",
       "email_error_required": "Veuillez entrer votre email",
       "email_error_pattern": "Veuillez enregistrer un email valide",
       "message": "Votre message",
       "message_error_required": "Veuillez écrire un message",
-      "send_button": "Envoyer"
+      "send_button": "Envoyer",
+      "email_sent": "L'email a été envoyé"
     },
     "side": {
       "title": "Contactez-nous",
@@ -1129,11 +1126,13 @@
   },
   "confirmation": {
     "paypal": {
+      "page_title": "Confirmation par e-mail PayPal",
       "message": "Votre email PayPal est en cours de vérification",
       "confirmation_message": "Votre email Paypal est déjà vérifié",
       "error": "Un problème est survenu, essayez d'actualiser la page ou renvoyez l'e-mail de confirmation"
     },
     "email": {
+      "page_title": "Email de confirmation",
       "message": "Votre email est en cours de vérification",
       "confirmation_message": "Votre email est déjà vérifié",
       "error": "Un problème est survenu, essayez d'actualiser la page ou renvoyez l'e-mail de confirmation"
@@ -1150,6 +1149,7 @@
     "submit_button_waiting": "En attente"
   },
   "no_valid": {
+    "page_title": "Non valable",
     "p_1": {
       "0": "Désolé. Votre profil Facebook n'est pas un candidat valide pour notre programme de location."
     },
@@ -1249,6 +1249,7 @@
     }
   },
   "users": {
+    "title": "Utilisateurs",
     "name": "Nom",
     "status": "Statut",
     "user_type": "Type d'utilisateur",
@@ -1327,13 +1328,14 @@
       "email": "E-mail"
     },
     "create_action": {
-      "title": "Créer une commande",
+      "title": "Créer une action",
       "create_action_button": "Créer une action"
     },
     "change_user_status": {
       "none": "Aucun",
       "first_name": "Nom",
       "last_name": "Noms de famille",
+      "email": "E-mail",
       "status": "Statut",
       "referral_code": "Code de parrainage",
       "filter": "Filtre",
@@ -1449,5 +1451,10 @@
       },
       "email_confirmation": "L'e-mail a déjà été envoyé."
     }
+  },
+  "cookie_consentment": {
+    "message": "Ce site utilise des cookies pour améliorer l'expérience utilisateur.",
+    "accept": "Je comprends",
+    "decline": "Je décline"
   }
 }

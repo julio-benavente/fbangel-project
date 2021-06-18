@@ -2,17 +2,9 @@ import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-import {
-  getUsers,
-  requestUsers,
-  getUserState,
-} from "../../../store/entities/users";
+import { getUsers, requestUsers, getUserState } from "../../../store/entities/users";
 import { getUser } from "../../../store/auth/auth";
-import {
-  getProducts,
-  requestProducts,
-  getProductsState,
-} from "../../../store/entities/products";
+import { getProducts, requestProducts, getProductsState } from "../../../store/entities/products";
 import { useSelector, useDispatch } from "react-redux";
 
 // Styles
@@ -102,8 +94,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           var template = "";
           columns.map((column) => {
             const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
+            const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
             return null;
           });
@@ -156,16 +147,12 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
         12: "DEC",
       };
       const [month, year] = [new Date().getMonth(), new Date().getFullYear()];
-      const concept = `${product.name} : ${
-        months[month + 1]
-      }-${year} (${fortnightPeriod}) `;
+      const concept = `${product.name} : ${months[month + 1]}-${year} (${fortnightPeriod}) `;
       return concept;
     };
 
     const amount = (userTier) => {
-      const tier = product.prices.find(
-        (prodcut) => prodcut.tierName === userTier
-      );
+      const tier = product.prices.find((prodcut) => prodcut.tierName === userTier);
       return tier.price;
     };
 
@@ -194,16 +181,11 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
       const status = user.status === "active";
 
       const date = new Date();
-      const firstDayLastMonth = new Date(
-        date.getFullYear(),
-        date.getMonth() - 1,
-        1
-      );
+      const firstDayLastMonth = new Date(date.getFullYear(), date.getMonth() - 1, 1);
       const lastDayLastMonth = new Date(date.getFullYear(), date.getMonth(), 0);
 
       const lastMonth =
-        firstDayLastMonth <= new Date(user.creationDate) &&
-        new Date(user.creationDate) <= lastDayLastMonth;
+        firstDayLastMonth <= new Date(user.creationDate) && new Date(user.creationDate) <= lastDayLastMonth;
 
       const hasBeenPayed = user.referralHasBeenPaid === false;
       return status && lastMonth && hasBeenPayed;
@@ -212,34 +194,28 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     const product = products.find((product) => product.abrv === "referral");
 
     const concept = (firstName, lastName) => {
-      const concept = `${
-        product.name
-      } : ${firstName} ${lastName[0].toUpperCase()}****`;
+      const concept = `${product.name} : ${firstName} ${lastName[0].toUpperCase()}****`;
       return concept;
     };
 
     const amount = (userTier) => {
-      const tier = product.prices.find(
-        (prodcut) => prodcut.tierName === userTier
-      );
+      const tier = product.prices.find((prodcut) => prodcut.tierName === userTier);
 
       return tier.price;
     };
 
     const referralPaymentInformation = thisMonthReferrals.map((referral) => {
-      const user = users.filter(
-        (user) => user.referralCode === referral.referral
-      )[0];
+      const user = users.filter((user) => user.referralCode === referral.referral)[0];
 
       return {
-        id: user._id,
+        id: user ? user._id : "not-found",
         referral: referral._id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        paymentMethod: user.paymentMethod,
+        firstName: user ? user.firstName : "not-found",
+        lastName: user ? user.lastName : "not-found",
+        email: user ? user.email : "not-found",
+        paymentMethod: user ? user.paymentMethod : "not-found",
         concept: concept(referral.firstName, referral.lastName),
-        amount: amount(user.payments && user.payments.tier),
+        amount: user ? amount(user.payments && user.payments.tier) : "not-found",
       };
     });
 
@@ -288,9 +264,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     };
 
     const amount = (userTier) => {
-      const tier = product.prices.find(
-        (prodcut) => prodcut.tierName === userTier
-      );
+      const tier = product.prices.find((prodcut) => prodcut.tierName === userTier);
       return tier.price;
     };
 
@@ -349,11 +323,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     }
   };
 
-  const createOrderDisabled =
-    usersLoading ||
-    productsLoading ||
-    users.length === 0 ||
-    products.length === 0;
+  const createOrderDisabled = usersLoading || productsLoading || users.length === 0 || products.length === 0;
 
   const [sendingOrder, setSendingOrder] = useState(false);
   const sendOrder = async () => {
@@ -382,11 +352,7 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
         </Close>
       </Header>
       <CreateOrderWrapper>
-        <Select
-          className="ordersOptions"
-          options={ordersOptions}
-          onChange={(v) => onChangeAction(v)}
-        />
+        <Select className="ordersOptions" options={ordersOptions} onChange={(v) => onChangeAction(v)} />
         <CreateOrderButton onClick={createOrder} disabled={createOrderDisabled}>
           {t("orders.create_order.create_order_button")}
         </CreateOrderButton>
@@ -398,30 +364,19 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
           <div className="tr" style={{ ...tableWidth }}>
             <div className="th name">{t("orders.create_order.name")}</div>
             <div className="th email">{t("orders.create_order.email")}</div>
-            <div className="th paymentMethod">
-              {t("orders.create_order.payment_method")}
-            </div>
+            <div className="th paymentMethod">{t("orders.create_order.payment_method")}</div>
             <div className="th concept">{t("orders.create_order.concept")}</div>
             <div className="th amount">{t("orders.create_order.amount")}</div>
           </div>
         </div>
         <div className="tbody">
           {payments.map((payment, index) => {
-            const {
-              firstName,
-              lastName,
-              email,
-              paymentMethod,
-              concept,
-              amount,
-            } = payment;
+            const { firstName, lastName, email, paymentMethod, concept, amount } = payment;
             return (
               <div className="tr" key={index} style={{ ...tableWidth }}>
                 <div className="th name">{`${firstName} ${lastName}`}</div>
                 <div className="th email">{email}</div>
-                <div className="th paymentMethod">{`${paymentMethod[0].toUpperCase()}${paymentMethod.slice(
-                  1
-                )}`}</div>
+                <div className="th paymentMethod">{`${paymentMethod[0].toUpperCase()}${paymentMethod.slice(1)}`}</div>
                 <div className="th concept">{concept}</div>
                 <div className="th amount">{`$ ${amount.toFixed(2)}`}</div>
               </div>

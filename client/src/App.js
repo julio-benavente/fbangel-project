@@ -25,6 +25,8 @@ import { useTranslation } from "react-i18next";
 import GlobalStyle from "./styles/GlobalStyles";
 import Theme from "./styles/Theme";
 
+import CookieConsent from "react-cookie-consent";
+
 const App = () => {
   const { t } = useTranslation();
   return (
@@ -32,6 +34,10 @@ const App = () => {
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <Navbar />
+        <CookieConsent cookieName="fbAngelCookieConsent" buttonText={t("cookie_consentment.accept")}>
+          {t("cookie_consentment.message")}
+        </CookieConsent>
+
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
@@ -43,17 +49,11 @@ const App = () => {
           <Route path="/contact" component={Contact} />
           <Route path="/no-valid" component={NoValid} />
           <Route path="/terms-conditions" component={TermsAndConditions} />
-          <Route
-            path="/referral-registration"
-            component={ReferralRegistration}
-          />
+          <Route path="/referral-registration" component={ReferralRegistration} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <Route path="/reset-password/:token" component={ResetPassword} />
-          <Route
-            path="/confirm-paypal-email/:token"
-            component={ConfirmationPage}
-          />
+          <Route path="/confirm-paypal-email/:token" component={ConfirmationPage} />
           <Route path="/confirm-email/:token" component={ConfirmationPage} />
           <PrivateRoute path="/dashboard">
             <Dashboard />

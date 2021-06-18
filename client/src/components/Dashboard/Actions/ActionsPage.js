@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTableWidth } from "../../../utils/tableWidth";
 import { useTranslation } from "react-i18next";
 import Pagination from "rc-pagination";
-import {
-  getActions,
-  getActionsState,
-  requestActions,
-} from "../../../store/entities/actions";
+import { getActions, getActionsState, requestActions } from "../../../store/entities/actions";
 import { useDispatch, useSelector } from "react-redux";
 import CreateActionPage from "./CreateActionPage";
 
@@ -14,13 +10,7 @@ import CreateActionPage from "./CreateActionPage";
 import UserRow from "./UserRow";
 
 // Styles
-import {
-  Actions,
-  Header,
-  CreateOrderButton,
-  Table,
-  Title,
-} from "../../../styles/Dashboard/ActionsPageStyles";
+import { Actions, Header, CreateOrderButton, Table, Title } from "../../../styles/Dashboard/ActionsPageStyles";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 const ActionsPage = () => {
@@ -28,35 +18,29 @@ const ActionsPage = () => {
   const actions = useSelector(getActions);
   const { loading } = useSelector(getActionsState);
 
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // REQUEST ACTIONS
   useEffect(() => {
     dispatch(requestActions());
   }, []);
 
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("actions.title");
+  }, [language]);
+
   // This provides a table width behavior. All of the columns are going to have the same width
   const columns = [
-    {
-      column: "action",
-      width: 55,
-      min: 100,
-    },
-    {
-      column: "creationDate",
-      width: 15,
-      min: 80,
-    },
-    {
-      column: "target",
-      width: 15,
-      min: 80,
-    },
-    {
-      column: "details",
-      width: 15,
-      min: 100,
-    },
+    { column: "action", width: 55, min: 100 },
+    { column: "creationDate", width: 15, min: 80 },
+    { column: "target", width: 15, min: 80 },
+    { column: "details", width: 15, min: 100 },
   ];
+
   const tableWidth = useTableWidth(columns, "Actions");
-  const { t } = useTranslation();
 
   // PAGINATION
   const [pageSize, setPagSize] = useState(15);
@@ -84,7 +68,7 @@ const ActionsPage = () => {
     setTotalPages(actions.length - 1);
   }, [actions, totalPages]);
 
-  const onTableChange = (page) => {
+  const onTableChange = page => {
     setCurrent(page);
   };
 
@@ -94,15 +78,9 @@ const ActionsPage = () => {
     <Actions className="Actions">
       <Header>
         <Title>{t("actions.title")}</Title>
-        <CreateOrderButton onClick={openCreateOrder}>
-          {t("actions.create_action_button")}
-        </CreateOrderButton>
+        <CreateOrderButton onClick={openCreateOrder}>{t("actions.create_action_button")}</CreateOrderButton>
       </Header>
-      {createAcionPageIsOpen && (
-        <CreateActionPage
-          setCreateActionPageIsOpen={setCreateActionPageIsOpen}
-        />
-      )}
+      {createAcionPageIsOpen && <CreateActionPage setCreateActionPageIsOpen={setCreateActionPageIsOpen} />}
       <Table>
         <div className="thead">
           <div className="tr" style={{ ...tableWidth }}>
@@ -121,13 +99,7 @@ const ActionsPage = () => {
 
               switch (target) {
                 case "user":
-                  return (
-                    <UserRow
-                      key={index}
-                      action={element}
-                      tableWidth={tableWidth}
-                    />
-                  );
+                  return <UserRow key={index} action={element} tableWidth={tableWidth} />;
                 default:
                   return <p key={index}></p>;
               }

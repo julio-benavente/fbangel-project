@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -10,14 +10,20 @@ import {
 } from "../../styles/TermsAndConditionsPageStyles";
 
 const TermsAndConditionsPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("terms_conditions.title");
+  }, [language]);
+
   return (
     <TermsAndConditions>
       <TermsAndConditionsSection>
         <TermsAndConditionsSectionWrapper>
-          <TermsAndConditionsTitle>
-            {t("terms_conditions.title")}
-          </TermsAndConditionsTitle>
+          <TermsAndConditionsTitle>{t("terms_conditions.title")}</TermsAndConditionsTitle>
 
           <TermsAndConditionsInfo>
             <h2>
@@ -25,7 +31,7 @@ const TermsAndConditionsPage = () => {
             </h2>
             {t("terms_conditions.intro.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -34,7 +40,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.definitions.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -43,7 +49,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.recognition.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -52,7 +58,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.service_condition.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -61,7 +67,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.privacy.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -70,7 +76,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.property_promise.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -79,7 +85,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.compensation.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -88,7 +94,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.payment.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -97,7 +103,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.payment_calendar.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -106,7 +112,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.payment_method.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -115,7 +121,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.rental_termination.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -124,7 +130,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.material_violation.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -133,7 +139,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.limited_liability.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -142,7 +148,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.disclaimer.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -151,7 +157,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.dispute_resolution.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -177,7 +183,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.interpretation.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -186,7 +192,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.change_terms.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
 
@@ -195,7 +201,7 @@ const TermsAndConditionsPage = () => {
             </p>
             {t("terms_conditions.contact.p", {
               returnObjects: true,
-            }).map((p) => (
+            }).map(p => (
               <p>{p}</p>
             ))}
           </TermsAndConditionsInfo>

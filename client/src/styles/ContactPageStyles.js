@@ -19,6 +19,14 @@ export const FormSideWrapper = styled.div`
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 
+  .email_sent {
+    padding: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.color.black};
+    text-align: left;
+  }
+
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
   }
@@ -147,4 +155,8 @@ export const SendButton = styled.input`
   cursor: pointer;
   margin-top: 2rem;
   outline: none;
+
+  &[disabled="true"] {
+    background: ${(props) => props.theme.color.gray300};
+  }
 `;

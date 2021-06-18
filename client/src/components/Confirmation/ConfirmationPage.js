@@ -4,15 +4,12 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 // Styles
-import {
-  Confirmation,
-  Message,
-  ConfirmationMessage,
-  ErrorMessage,
-} from "../../styles/ConfirmationPageStyles";
+import { Confirmation, Message, ConfirmationMessage, ErrorMessage } from "../../styles/ConfirmationPageStyles";
 
 const ConfirmatioPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
   const { token } = useParams();
   const { pathname } = useLocation();
   const isLocatedPaypalEmail = pathname.includes("confirm-paypal-email");
@@ -26,9 +23,7 @@ const ConfirmatioPage = () => {
     const request = async () => {
       if (isLocatedPaypalEmail) {
         try {
-          var response = await axios.get(
-            `/api/users/confirm-paypal-email/${token}`
-          );
+          var response = await axios.get(`/api/users/confirm-paypal-email/${token}`);
           if (response) {
             setPaypalEmailIsConfirmed(true);
           }
@@ -54,39 +49,38 @@ const ConfirmatioPage = () => {
     request();
   }, []);
 
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    if (isLocatedEmail) {
+      title.innerText = t("confirmation.email.page_title");
+    }
+    if (isLocatedPaypalEmail) {
+      title.innerText = t("confirmation.paypal.page_title");
+    }
+  }, [language, isLocatedPaypalEmail, isLocatedEmail]);
+
   return (
     <Confirmation>
       {isLocatedPaypalEmail && (
         <>
-          {!(paypalEmailIsConfirmed || error) && (
-            <Message>{t("confirmation.paypal.message")}</Message>
-          )}
+          {!(paypalEmailIsConfirmed || error) && <Message>{t("confirmation.paypal.message")}</Message>}
 
           {paypalEmailIsConfirmed && (
-            <ConfirmationMessage>
-              {t("confirmation.paypal.confirmation_message")}
-            </ConfirmationMessage>
+            <ConfirmationMessage>{t("confirmation.paypal.confirmation_message")}</ConfirmationMessage>
           )}
-          {error && (
-            <ErrorMessage>{t("confirmation.paypal.error")} </ErrorMessage>
-          )}
+          {error && <ErrorMessage>{t("confirmation.paypal.error")} </ErrorMessage>}
         </>
       )}
 
       {isLocatedEmail && (
         <>
-          {!(emailIsConfirmed || error) && (
-            <Message>{t("confirmation.email.message")}</Message>
-          )}
+          {!(emailIsConfirmed || error) && <Message>{t("confirmation.email.message")}</Message>}
 
           {emailIsConfirmed && (
-            <ConfirmationMessage>
-              {t("confirmation.email.confirmation_message")}
-            </ConfirmationMessage>
+            <ConfirmationMessage>{t("confirmation.email.confirmation_message")}</ConfirmationMessage>
           )}
-          {error && (
-            <ErrorMessage>{t("confirmation.email.error")}</ErrorMessage>
-          )}
+          {error && <ErrorMessage>{t("confirmation.email.error")}</ErrorMessage>}
         </>
       )}
     </Confirmation>

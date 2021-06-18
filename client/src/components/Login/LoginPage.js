@@ -4,12 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-import {
-  logIn,
-  getUser,
-  getErrors,
-  loginSucceeded,
-} from "../../store/auth/auth";
+import { logIn, getUser, getErrors, loginSucceeded } from "../../store/auth/auth";
 
 // Styles
 import {
@@ -31,7 +26,15 @@ import { ReactComponent as User } from "../../assets/svgs/user.svg";
 import { ReactComponent as Lock } from "../../assets/svgs/lock.svg";
 
 const LoginPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { language } = i18n;
+
+  // TITLE
+  useEffect(() => {
+    const title = document.querySelector("title");
+    title.innerText = t("login.title");
+  }, [language]);
+
   const dispatch = useDispatch();
   const {
     register,
@@ -48,7 +51,7 @@ const LoginPage = () => {
   const password = useWatch({ control, name: "password" });
 
   const { push } = useHistory();
-  const onSubmit = async (data) => {
+  const onSubmit = async data => {
     const response = await dispatch(
       logIn({
         email,
@@ -62,7 +65,7 @@ const LoginPage = () => {
   };
 
   const [emailConfirmationSent, setEmailConfirmationSent] = useState(false);
-  const sendEmailConfirmation = (email) => {
+  const sendEmailConfirmation = email => {
     setEmailConfirmationSent(true);
     axios.post("/auth/send-confirmation-email", {
       email,
@@ -94,8 +97,7 @@ const LoginPage = () => {
                 },
 
                 validate: {
-                  min: (v) =>
-                    v.length < 6 ? t("login.email_error_min") : true,
+                  min: v => (v.length < 6 ? t("login.email_error_min") : true),
                 },
                 pattern: {
                   value:
@@ -119,35 +121,23 @@ const LoginPage = () => {
                   message: t("login.password_error_required"),
                 },
                 validate: {
-                  min: (v) =>
-                    v.length < 6 ? t("login.password_error_min") : true,
+                  min: v => (v.length < 6 ? t("login.password_error_min") : true),
                 },
               })}
             />
             <Lock />
             <label>{t("login.password")}</label>
-            <p className="error">
-              {errors.password && errors.password.message}
-            </p>
+            <p className="error">{errors.password && errors.password.message}</p>
           </InputWrapper>
           <div className="errorMessages">
             {authErrors.email && <p className="error">{authErrors.email}</p>}
-            {authErrors.password && (
-              <p className="error">{authErrors.password}</p>
-            )}
+            {authErrors.password && <p className="error">{authErrors.password}</p>}
             {authErrors.emailVerified && (
-              <p
-                className="error sendEmailConfirmation"
-                onClick={() => sendEmailConfirmation(email)}
-              >
+              <p className="error sendEmailConfirmation" onClick={() => sendEmailConfirmation(email)}>
                 {t("login.email_verified_error")}
               </p>
             )}
-            {emailConfirmationSent && (
-              <p className="error">
-                {t("login.email_confirmation_sent_error")}
-              </p>
-            )}
+            {emailConfirmationSent && <p className="error">{t("login.email_confirmation_sent_error")}</p>}
           </div>
           <Link to="/join-now">{t("login.no_account")}</Link>
           <Link to="/forgot-password">{t("login.forgot_password")}</Link>
