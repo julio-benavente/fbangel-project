@@ -2,8 +2,12 @@ const AdminUser = require("../models/AdminUser");
 
 const checkAuthLevel = async (req, res, next) => {
   const { email } = req.body;
+
   try {
     const user = await AdminUser.findOne({ email: email });
+
+    console.log("user", user);
+
     if (user) {
       req.userAuthLevel = "admin";
     } else {

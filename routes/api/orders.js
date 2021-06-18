@@ -20,7 +20,6 @@ router.get("/", auth, async (req, res) => {
           select: "firstName lastName -_id",
         },
       })
-
       .sort({ creationDate: -1 });
     res.json({ orders });
   } catch (error) {
@@ -61,7 +60,6 @@ router.post("/create-order", auth, async (req, res) => {
           var price = prices[0].price;
         }
 
-        // ### This should be able to catch if the user wants to be paid by paypal or usign a bank account
         const paymentInformation = {
           product: productId,
           concept: paymentConcept,

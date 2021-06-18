@@ -24,15 +24,9 @@ router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
-    const { payments } = await User.findById(id, {
-      payments: 1,
-      _id: -1,
-    }).populate({
-      path: "payments.list",
-      select: "status _id amount concept paypalEmail creationDate",
-    });
+    const payments = await Payment.find({ payee: id });
 
-    res.json({ payments: payments });
+    res.json({ payments });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

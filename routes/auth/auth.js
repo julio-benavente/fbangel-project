@@ -6,16 +6,10 @@ const User = require("../../models/User");
 const AdminUser = require("../../models/AdminUser");
 
 // Middlewares and utils
-const {
-  createToken
-} = require("../../utils/createToken");
+const { createToken } = require("../../utils/createToken");
 const checkAuthLevel = require("../../middlewares/checkAuthLevel");
-const {
-  emailVerification,
-} = require("../../utils/emailsTemplates/emailVerification");
-const {
-  forgotPasswordEmail,
-} = require("../../utils/emailsTemplates/forgotPasswordEmail");
+const { emailVerification } = require("../../utils/emailsTemplates/emailVerification");
+const { forgotPasswordEmail } = require("../../utils/emailsTemplates/forgotPasswordEmail");
 
 const handleError = (err) => {
   const errorMessage = {};
@@ -89,7 +83,7 @@ router.get("/", (req, res) => {
         }
 
         res.json({
-          user
+          user,
         });
       });
     } else {
@@ -97,7 +91,7 @@ router.get("/", (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -110,17 +104,17 @@ router.get("/logout", (req, res) => {
     const token = req.cookies.fb4cashJWT;
     if (token) {
       res.cookie("fb4cashJWT", "token", {
-        maxAge: 1
+        maxAge: 1,
       });
       res.json({
-        message: "User logged out"
+        message: "User logged out",
       });
     } else {
       throw Error("There is no user logged in");
     }
   } catch (error) {
     res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -130,23 +124,17 @@ router.get("/logout", (req, res) => {
 // @access Public
 router.post("/login", checkAuthLevel, async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
-  const {
-    email,
-    password
-  } = req.body;
+  const { email, password } = req.body;
 
   try {
-    const {
-      emailVerified,
-      ...user
-    } = await model.login(email, password);
+    const { emailVerified, ...user } = await model.login(email, password);
 
     if (!emailVerified) {
       const error = new Error("User has not been verfied");
       error.emailVerified = "The email has not been verified";
 
       res.status(400).json({
-        error
+        error,
       });
       return;
     }
@@ -159,15 +147,14 @@ router.post("/login", checkAuthLevel, async (req, res) => {
     });
 
     res.json({
-      user
+      user,
     });
-
   } catch (e) {
     console.log(e);
     const error = handleError(e);
     res.status(400).json({
       error: error,
-      message: e.message
+      message: e.message,
     });
   }
 });
@@ -177,17 +164,15 @@ router.post("/login", checkAuthLevel, async (req, res) => {
 // @access Public
 router.post("/send-confirmation-email", checkAuthLevel, async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
-  const {
-    email
-  } = req.body;
+  const { email } = req.body;
 
   try {
     const user = await model.findOne({
-      email
+      email,
     });
     if (user.emailVerified) {
       return res.json({
-        message: "The email has already been verified"
+        message: "The email has already been verified",
       });
     }
 
@@ -203,7 +188,7 @@ router.post("/send-confirmation-email", checkAuthLevel, async (req, res) => {
   } catch (e) {
     const error = handleError(e);
     res.status(400).json({
-      error
+      error,
     });
   }
 });
@@ -215,9 +200,7 @@ router.get("/confirmation/:token", async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
 
   const tokenKey = process.env.EMAIL_VERIFICATION_KEY;
-  const {
-    token
-  } = req.params;
+  const { token } = req.params;
 
   try {
     await jwt.verify(token, tokenKey, async (error, decodedToken) => {
@@ -229,7 +212,7 @@ router.get("/confirmation/:token", async (req, res) => {
         // Validate is users is already been verified
         if (user.emailVerified) {
           res.json({
-            message: "Account it's been already verified"
+            message: "Account it's been already verified",
           });
           return;
         }
@@ -237,11 +220,11 @@ router.get("/confirmation/:token", async (req, res) => {
         // Set verification True
         await user.update({
           $set: {
-            emailVerified: true
-          }
+            emailVerified: true,
+          },
         });
         res.json({
-          message: "Account verified"
+          message: "Account verified",
         });
       } else {
         throw Error("User doesn't exist");
@@ -249,7 +232,7 @@ router.get("/confirmation/:token", async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -259,13 +242,11 @@ router.get("/confirmation/:token", async (req, res) => {
 // @access Public
 router.post("/forgotten-password", checkAuthLevel, async (req, res) => {
   const model = req.userAuthLevel === "admin" ? AdminUser : User;
-  const {
-    email
-  } = req.body;
+  const { email } = req.body;
 
   try {
     const user = await model.findOne({
-      email
+      email,
     });
 
     if (!user) {
@@ -282,20 +263,16 @@ router.post("/forgotten-password", checkAuthLevel, async (req, res) => {
 
     const error = handleError(e);
     res.status(400).json({
-      error
+      error,
     });
   }
 });
 
 router.put("/reset-password/:token", async (req, res) => {
-  const {
-    password
-  } = req.body;
+  const { password } = req.body;
 
   const tokenKey = process.env.FORGOT_PASSWORD_KEY;
-  const {
-    token
-  } = req.params;
+  const { token } = req.params;
 
   const salt = await bcrypt.genSalt();
   const passwordHashed = await bcrypt.hash(password, salt);
@@ -307,37 +284,41 @@ router.put("/reset-password/:token", async (req, res) => {
       }
 
       var user = null;
-      user = await User.findOneAndUpdate({
-        _id: decodedToken.data,
-        resetPasswordToken: token
-      }, {
-        password: passwordHashed,
-        resetPasswordToken: "",
-      }).exec();
-
-      if (!user) {
-        user = await User.findOneAndUpdate({
+      user = await User.findOneAndUpdate(
+        {
           _id: decodedToken.data,
-          resetPasswordToken: token
-        }, {
+          resetPasswordToken: token,
+        },
+        {
           password: passwordHashed,
           resetPasswordToken: "",
-        }).exec();
+        }
+      ).exec();
+
+      if (!user) {
+        user = await User.findOneAndUpdate(
+          {
+            _id: decodedToken.data,
+            resetPasswordToken: token,
+          },
+          {
+            password: passwordHashed,
+            resetPasswordToken: "",
+          }
+        ).exec();
       }
 
       if (!user) {
-        throw Error(
-          "The user doesn't exist or the reset password url is incorrect or has expired"
-        );
+        throw Error("The user doesn't exist or the reset password url is incorrect or has expired");
       }
 
       res.json({
-        message: "The password has already been changed"
+        message: "The password has already been changed",
       });
     });
   } catch (error) {
     res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 });
