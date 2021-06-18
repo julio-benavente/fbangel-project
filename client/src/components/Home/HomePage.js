@@ -72,7 +72,7 @@ import { ReactComponent as FormSvg } from "../../assets/svgs/form.svg";
 import { ReactComponent as ShareSvg } from "../../assets/svgs/share.svg";
 import { ReactComponent as StackOfMoneySvg } from "../../assets/svgs/stackOfMoney.svg";
 import poster from "../../assets/images/video-poster.jpg";
-import fbaAngelVideo from "../../assets/videos/fbangel.mp4";
+import fb4cashVideo from "../../assets/videos/fb4cash.mp4";
 import profilePictureOne from "../../assets/images/profilePictureOne.jpg";
 import profilePictureTwo from "../../assets/images/profilePictureTwo.jpg";
 import profilePictureThree from "../../assets/images/profilePictureThree.jpg";
@@ -181,7 +181,7 @@ const HomePage = () => {
             ))}
           </RequirementsList>
           <Video controls poster={poster}>
-            <source src={fbaAngelVideo} type="video/mp4"></source>
+            <source src={fb4cashVideo} type="video/mp4"></source>
           </Video>
         </RequirementsSectionWrapper>
       </RequirementsSection>

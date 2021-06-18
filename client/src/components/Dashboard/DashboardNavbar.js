@@ -114,7 +114,7 @@ const MainComponent = () => {
             variants={navbarVariants}
           >
             <Logo>
-              <Link to="/">fbangel</Link>
+              <Link to="/">fb4cash</Link>
             </Logo>
 
             <NavbarItem as={motion.div} variants={navLinkVariants}>

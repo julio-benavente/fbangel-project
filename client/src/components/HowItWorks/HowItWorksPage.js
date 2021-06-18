@@ -68,11 +68,11 @@ import op2img2 from "../../assets/images/option-two-img-two.jpg";
 import bmImagePoster from "../../assets/images/Create-BM-d-poster.jpg";
 import bmIdImagePoster from "../../assets/images/Create-BM-and-verify-ID-s-poster.jpg";
 import mobile2faImagePoster from "../../assets/images/2fa-Mobile-App-s2-poster.jpg";
-import fb2fabmImagePoster from "../../assets/images/Activate-2FA-fbangel-s-poster.png";
+import fb2fabmImagePoster from "../../assets/images/Activate-2FA-fb4cash-s-poster.png";
 import bmVideo from "../../assets/videos/Create-BM-d.mp4";
 import bmIdVideo from "../../assets/videos/Create-BM-and-verify-ID-s.mp4";
 import mobile2faVideo from "../../assets/videos/2fa-Mobile-App-s2.mp4";
-import fb2fabmVideo from "../../assets/videos/Activate-2FA-fbangel-s.mp4";
+import fb2fabmVideo from "../../assets/videos/Activate-2FA-fb4cash-s.mp4";
 
 const HowItWorksPage = () => {
   const { t, i18n } = useTranslation();

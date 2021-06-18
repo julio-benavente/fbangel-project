@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 const authMiddleware = (req, res, next) => {
   const tokenApi = process.env.JWT_KEY;
-  const token = req.cookies.fbangelJWT;
+  const token = req.cookies.fb4cashJWT;
 
   try {
     if (token) {

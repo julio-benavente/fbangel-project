@@ -55,7 +55,7 @@ const handleError = (err) => {
 // @access Public
 router.get("/", (req, res) => {
   const tokenApi = process.env.JWT_KEY;
-  const token = req.cookies.fbangelJWT;
+  const token = req.cookies.fb4cashJWT;
 
   try {
     if (token) {
@@ -107,9 +107,9 @@ router.get("/", (req, res) => {
 //@access Pulbic
 router.get("/logout", (req, res) => {
   try {
-    const token = req.cookies.fbangelJWT;
+    const token = req.cookies.fb4cashJWT;
     if (token) {
-      res.cookie("fbangelJWT", "token", {
+      res.cookie("fb4cashJWT", "token", {
         maxAge: 1
       });
       res.json({
@@ -153,7 +153,7 @@ router.post("/login", checkAuthLevel, async (req, res) => {
 
     const token = createToken(user._id, "1d");
 
-    res.cookie("fbangelJWT", token, {
+    res.cookie("fb4cashJWT", token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 2,
     });

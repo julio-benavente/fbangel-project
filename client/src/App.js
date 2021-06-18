@@ -34,7 +34,7 @@ const App = () => {
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <Navbar />
-        <CookieConsent cookieName="fbAngelCookieConsent" buttonText={t("cookie_consentment.accept")}>
+        <CookieConsent cookieName="fb4cashCookieConsent" buttonText={t("cookie_consentment.accept")}>
           {t("cookie_consentment.message")}
         </CookieConsent>
 

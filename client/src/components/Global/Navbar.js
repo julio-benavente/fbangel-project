@@ -135,7 +135,7 @@ const Navbar = () => {
     <NavbarSection className="Navbar">
       <NavbarWrapper>
         <Logo to="/">
-          <span>fb</span> fbangel
+          <span>fb</span> fb4cash
         </Logo>
         <AnimatePresence>
           {(!widthMark || navIsOpen) && (
