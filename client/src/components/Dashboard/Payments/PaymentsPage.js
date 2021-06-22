@@ -66,7 +66,7 @@ const PaymentsPage = () => {
 
   useEffect(() => {
     dispatch(requestUserInformation({ id: user.id }));
-  });
+  }, []);
 
   const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
   const sendPaypalEmail = async (id) => {
@@ -85,6 +85,10 @@ const PaymentsPage = () => {
 
   // Select the rows to display on the table
   const [showRows, setShowRows] = useState([]);
+
+  useEffect(() => {
+    setTotalPages(payments.length - 1);
+  }, [payments, totalPages]);
 
   const onTableChange = (page) => {
     setCurrent(page);
