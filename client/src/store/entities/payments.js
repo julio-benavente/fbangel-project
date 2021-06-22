@@ -97,7 +97,7 @@ export const requestPayments = () => (dispatch, getState) => {
 // Selectors
 export const getUserPayments = createSelector(
   (state) => state.entities.payments.list,
-  (list) => list
+  (list) => list.slice().sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
 );
 
 export const getPaymentsState = createSelector(

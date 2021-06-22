@@ -16,6 +16,7 @@ import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 const ActionsPage = () => {
   const dispatch = useDispatch();
   const actions = useSelector(getActions);
+
   const { loading } = useSelector(getActionsState);
 
   const { t, i18n } = useTranslation();
@@ -68,7 +69,7 @@ const ActionsPage = () => {
     setTotalPages(actions.length - 1);
   }, [actions, totalPages]);
 
-  const onTableChange = page => {
+  const onTableChange = (page) => {
     setCurrent(page);
   };
 

@@ -35,11 +35,7 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-export const {
-  actionsRequestFailed,
-  actionsRequestSucceeded,
-  actionsRequested,
-} = slice.actions;
+export const { actionsRequestFailed, actionsRequestSucceeded, actionsRequested } = slice.actions;
 
 // Actions
 const url = "/api/actions";
@@ -68,7 +64,7 @@ export const requestActions = () => (dispatch, getState) => {
 // Selectors
 export const getActions = createSelector(
   (state) => state.entities.actions.list,
-  (list) => list
+  (list) => list.slice().sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
 );
 
 export const getActionsState = createSelector(

@@ -108,7 +108,7 @@ export const changeOrderStatus =
 // Selectors
 export const getOrders = createSelector(
   (state) => state.entities.orders.list,
-  (list) => list
+  (list) => list.slice().sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
 );
 
 export const getOrdersState = createSelector(

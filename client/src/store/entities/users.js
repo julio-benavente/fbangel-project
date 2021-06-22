@@ -90,7 +90,7 @@ export const requestUsers = () => (dispatch, getState) => {
 // Selectors
 export const getUsers = createSelector(
   (state) => state.entities.users.list,
-  (list) => list
+  (list) => list.slice().sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
 );
 
 export const getUsersState = createSelector(
