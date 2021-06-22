@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
 import moment from "moment";
@@ -35,11 +35,23 @@ const slice = createSlice({
     paymentsRequestFailed: (payments, action) => {
       payments.loading = false;
     },
+    paymentsStatusChanged: (payments, actions) => {
+      const { payments: paymentsResponse, status } = actions.payload;
+
+      paymentsResponse.map((paymentResponse) => {
+        const index = current(payments).list.findIndex((payment) => {
+          return payment._id === paymentResponse;
+        });
+
+        payments.list[index].status = status;
+      });
+    },
   },
 });
 
 export default slice.reducer;
-export const { paymentsRequestFailed, paymentsRequestSucceeded, paymentsRequested } = slice.actions;
+export const { paymentsRequestFailed, paymentsRequestSucceeded, paymentsRequested, paymentsStatusChanged } =
+  slice.actions;
 
 // Actions
 const url = "/api/payments";

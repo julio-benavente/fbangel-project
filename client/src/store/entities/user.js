@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
+import moment from "moment";
 
 const initialState = () => ({
   loading: false,
-  list: [],
+  user: null,
   lastFetch: null,
 });
 
@@ -19,7 +20,8 @@ const slice = createSlice({
     },
     userRequestSucceeded: (user, action) => {
       const { user: userResponse } = action.payload;
-      user.list = userResponse;
+      console.log("userResponse", userResponse);
+      user.user = userResponse;
       user.loading = false;
       user.lastFetch = Date.now();
 
@@ -34,11 +36,10 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-export const { userRequestFailed, userRequestSucceeded, userRequested } =
-  slice.actions;
+export const { userRequestFailed, userRequestSucceeded, userRequested } = slice.actions;
 
 // Actions
-const url = "/api/users/";
+const url = "/api/users";
 
 const stopRequest = (getState) => {
   const { lastFetch } = getState().entities.users;
@@ -62,8 +63,8 @@ export const requestUser = () => (dispatch, getState) => {
 
 // Selectors
 export const getUser = createSelector(
-  (state) => state.entities.user.list,
-  (list) => list
+  (state) => state.entities.user.user,
+  (user) => user
 );
 
 export const getUserState = createSelector(

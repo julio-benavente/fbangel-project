@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
 
 // Styles
 import {

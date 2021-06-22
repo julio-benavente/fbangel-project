@@ -114,7 +114,7 @@ router.post("/registration/:userType", upload, async (req, res) => {
     // Add user is to user who referred him
     // Just send email confirmation when is rental or referral user
 
-    const { password, _id, ip, ...dataToSendBoard } = newUser.toObject();
+    const { password, _id, ...dataToSendBoard } = newUser.toObject();
 
     if (newUser.paymentMethod === "paypal") {
       paypalEmailVerification(newUser, newUser.paypalEmail, req.hostname);
@@ -150,6 +150,8 @@ router.post("/registration/:userType", upload, async (req, res) => {
     if (Model.modelName !== "user") {
       throw Error("Incomplete registration");
     }
+
+    console.log("dataToSendBoard.holderName", dataToSendBoard.holderName);
 
     res.json({ message: "Succesful user registration", user: dataToSendBoard });
   } catch (e) {

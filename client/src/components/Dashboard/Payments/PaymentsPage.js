@@ -8,6 +8,7 @@ import {
   getUserPayments,
   getPaymentsState,
 } from "../../../store/entities/payments";
+import { getUser as getUserInformation, requestUser as requestUserInformation } from "../../../store/entities/users";
 import { getUser } from "../../../store/auth/auth";
 import Pagination from "rc-pagination";
 
@@ -22,6 +23,7 @@ const PaymentsPage = () => {
 
   const { loading } = useSelector(getPaymentsState);
   const payments = useSelector(getUserPayments);
+  const userInformation = useSelector(getUserInformation);
   const user = useSelector(getUser);
 
   const userColumns = [
@@ -40,6 +42,7 @@ const PaymentsPage = () => {
     { column: "status", width: 10, min: 70 },
     { column: "amount", width: 10, min: 50 },
   ];
+
   const userTableWith = useTableWidth(userColumns, "Payments");
   const adminTableWith = useTableWidth(adminColumns, "Payments");
 
@@ -61,8 +64,12 @@ const PaymentsPage = () => {
     request();
   }, []);
 
+  useEffect(() => {
+    dispatch(requestUserInformation({ id: user.id }));
+  });
+
   const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
-  const sendPaypalEmail = async id => {
+  const sendPaypalEmail = async (id) => {
     try {
       setPaypalEmailIsSent(true);
       const response = await axios.put("/api/users/send-paypal-email-confirmation", {
@@ -79,11 +86,7 @@ const PaymentsPage = () => {
   // Select the rows to display on the table
   const [showRows, setShowRows] = useState([]);
 
-  useEffect(() => {
-    setTotalPages(payments.length - 1);
-  }, [payments, totalPages]);
-
-  const onTableChange = page => {
+  const onTableChange = (page) => {
     setCurrent(page);
   };
 
@@ -108,7 +111,7 @@ const PaymentsPage = () => {
 
   return (
     <Payments className="Payments">
-      {user.paymentMethod && !user.paypalEmailVerified && (
+      {userInformation && userInformation.paymentMethod && !userInformation.paypalEmailVerified && (
         <PaypalEmailMessage bg={paypalEmailIsSent}>
           {!paypalEmailIsSent && (
             <p className="message">

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../store/auth/auth";
 import { getOrders, getOrdersState, requestOrders } from "../../../store/entities/orders";
-import axios from "axios";
+import { requestPayments } from "../../../store/entities/payments";
 import Pagination from "rc-pagination";
 import { useTranslation } from "react-i18next";
+import { changeOrderStatus } from "../../../store/entities/orders";
 
 // Components
 import CreateOrder from "./CreateOrderPage";
@@ -63,7 +64,7 @@ const OrdersPage = () => {
 
         const grid = () => {
           var template = "";
-          columns.map(column => {
+          columns.map((column) => {
             const { width, min } = column;
             const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
@@ -93,6 +94,7 @@ const OrdersPage = () => {
 
   useEffect(() => {
     dispatch(requestOrders());
+    dispatch(requestPayments());
   }, []);
 
   // PAGINATION
@@ -107,7 +109,7 @@ const OrdersPage = () => {
     setTotalPages(orders.length - 1);
   }, [orders, totalPages]);
 
-  const onTableChange = page => {
+  const onTableChange = (page) => {
     setCurrent(page);
   };
 
@@ -183,6 +185,8 @@ export default OrdersPage;
 const Row = ({ order, tableWidth }) => {
   const { concept, paypalEmail, creationDate, amount, status, payments, _id: orderId } = order;
 
+  const dispatch = useDispatch();
+
   const date = new Date(creationDate).toLocaleDateString([], {
     day: "2-digit",
     month: "2-digit",
@@ -196,20 +200,23 @@ const Row = ({ order, tableWidth }) => {
   const [loading, setLoading] = useState(false);
   const cancelUpdate = () => setUpdateIsOn(false);
   const updateOrder = () => setUpdateIsOn(true);
-  const changeStatus = async status => {
+  const changeStatus = async (status) => {
     setLoading(true);
 
     try {
       if (status === "payOrder") {
-        var response = await axios.put(`/api/orders/change-status/${status}`, {
-          order: orderId,
-        });
+        dispatch(changeOrderStatus({ status, order: orderId }));
+        // var response = await axios.put(`/api/orders/change-status/${status}`, {
+        //   order: orderId,
+        // });
       }
 
       if (status === "cancelOrder") {
-        var response = await axios.put(`/api/orders/change-status/${status}`, {
-          order: orderId,
-        });
+        dispatch(changeOrderStatus({ status, order }));
+
+        // var response = await axios.put(`/api/orders/change-status/${status}`, {
+        //   order: orderId,
+        // });
       }
 
       setLoading(false);

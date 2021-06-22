@@ -1,6 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
+import { paymentsStatusChanged } from "./payments";
 import moment from "moment";
 
 const initialState = () => ({
@@ -31,12 +32,27 @@ const slice = createSlice({
 
       return orders;
     },
+    orderStatusChanged: (orders, action) => {
+      const { order: orderResponse, status } = action.payload;
+      const { payments: paymentsResponse } = orderResponse;
+
+      const index = current(orders).list.findIndex((order) => {
+        return order._id === orderResponse._id;
+      });
+      orders.list[index].status = status;
+
+      orders.list[index].payments.map((payment) => {
+        const paymentIndex = paymentsResponse.findIndex((paymentResponse) => paymentResponse === payment._id);
+        orders.list[index].payments[paymentIndex].status = status;
+      });
+
+      return orders;
+    },
   },
 });
 
 export default slice.reducer;
-export const { ordersRequestFailed, ordersRequestSucceeded, ordersRequested } =
-  slice.actions;
+export const { ordersRequestFailed, ordersRequestSucceeded, ordersRequested, orderStatusChanged } = slice.actions;
 
 // Actions
 const url = "/api/orders";
@@ -61,6 +77,33 @@ export const requestOrders = () => (dispatch, getState) => {
     })
   );
 };
+
+export const changeOrderStatus =
+  ({ status, order }) =>
+  async (dispatch, getState) => {
+    try {
+      const response = await dispatch(
+        apiCallBegan({
+          url: `${url}/change-status/${status}`,
+          method: "PUT",
+          onSuccess: orderStatusChanged,
+          data: { order },
+        })
+      );
+
+      if (response.type === orderStatusChanged.type) {
+        const {
+          order: { payments },
+          status,
+        } = response.payload;
+        await dispatch(paymentsStatusChanged({ payments, status }));
+      }
+      return response;
+    } catch (error) {
+      console.log("error change order status", error);
+      return error;
+    }
+  };
 
 // Selectors
 export const getOrders = createSelector(

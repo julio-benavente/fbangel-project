@@ -21,12 +21,20 @@ export const api =
       });
 
       // General success action
-      dispatch(apiCallSucceded());
+      if (!onSuccess) {
+        return dispatch(apiCallSucceded(response.data));
+      } else {
+        dispatch(apiCallSucceded());
+      }
       // Specific success aciont
       if (onSuccess) return dispatch(onSuccess(response.data));
     } catch ({ response }) {
       // General failure action
-      dispatch(apiCallFailed());
+      if (!onFailure) {
+        return dispatch(apiCallFailed(response.data));
+      } else {
+        dispatch(apiCallFailed());
+      }
       // Specific failure action
       if (onFailure) return dispatch(onFailure(response.data));
     }

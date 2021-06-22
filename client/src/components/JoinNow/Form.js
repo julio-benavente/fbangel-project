@@ -5,6 +5,7 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 import { emailDuplicatedSet } from "../../store/global/global";
 import { useDispatch } from "react-redux";
+import jwt from "jsonwebtoken";
 
 // Components
 import StepOne from "./Steps/StepOne";
@@ -47,7 +48,7 @@ const Form = () => {
     stepTwo: {
       firstName: "emanuel",
       lastName: "emanuel",
-      email: "latabe5672@0ranges.com",
+      email: "radas72704@awinceo.com",
       country: "Peru",
       city: "Lima",
       password: "emanuel132",
@@ -59,14 +60,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "latabe5672@0ranges.com",
+      fbUsername: "radas72704@awinceo.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "latabe5672@0ranges.com",
-      paypalEmailConfirmation: "latabe5672@0ranges.com",
+      paypalEmail: "radas72704@awinceo.com",
+      paypalEmailConfirmation: "radas72704@awinceo.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -81,7 +82,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      // ...defaultValues,
+      ...defaultValues,
     },
   });
 
@@ -100,8 +101,6 @@ const Form = () => {
     if (!isSubmitting) {
       const response = await fetchCandidateInformation(data);
 
-      console.log("response", response);
-
       if (
         response &&
         response.response &&
@@ -112,7 +111,6 @@ const Form = () => {
       ) {
         dispatch(emailDuplicatedSet(true));
       }
-      console.log("response", response);
 
       const { status } = response;
 
@@ -127,10 +125,7 @@ const Form = () => {
   };
 
   const fetchCandidateInformation = async (data, type = "complete") => {
-    const url =
-      type === "complete"
-        ? "/api/users/registration/rental"
-        : "/api/users/registration/incompleteRental";
+    const url = type === "complete" ? "/api/users/registration/rental" : "/api/users/registration/incompleteRental";
 
     const { stepOne, stepTwo, stepThree, stepFour } = data;
 
@@ -217,9 +212,7 @@ const Form = () => {
 
     // Validate if isValid the step
     if (direction === 1) {
-      const fieldsToValidate = Object.keys(getValues(step)).map(
-        (value) => `${step}.${value}`
-      );
+      const fieldsToValidate = Object.keys(getValues(step)).map((value) => `${step}.${value}`);
 
       await trigger(fieldsToValidate);
 
@@ -239,12 +232,8 @@ const Form = () => {
       case formStep == submitPage:
         return (
           <Buttons>
-            <Button onClick={() => handleFormStep(-1, formStep)}>
-              {t("join_now.button.previous")}
-            </Button>
-            <SubmitButton type="submit">
-              {isSubmitting ? <LoadingSvg /> : t("join_now.button.send")}
-            </SubmitButton>
+            <Button onClick={() => handleFormStep(-1, formStep)}>{t("join_now.button.previous")}</Button>
+            <SubmitButton type="submit">{isSubmitting ? <LoadingSvg /> : t("join_now.button.send")}</SubmitButton>
           </Buttons>
         );
 
@@ -252,23 +241,17 @@ const Form = () => {
         return (
           <Buttons>
             <Buttons>
-              <Button onClick={() => handleFormStep(-1, formStep)}>
-                {t("join_now.button.previous")}
-              </Button>
+              <Button onClick={() => handleFormStep(-1, formStep)}>{t("join_now.button.previous")}</Button>
             </Buttons>
 
-            <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("join_now.button.next")}
-            </Button>
+            <Button onClick={() => handleFormStep(1, formStep)}>{t("join_now.button.next")}</Button>
           </Buttons>
         );
 
       case formStep === 1:
         return (
           <Buttons one>
-            <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("join_now.button.next")}
-            </Button>
+            <Button onClick={() => handleFormStep(1, formStep)}>{t("join_now.button.next")}</Button>
           </Buttons>
         );
       default:
@@ -278,9 +261,7 @@ const Form = () => {
   return (
     <FormsWrapper>
       <FormLocation>
-        <FormLocationTitle>
-          {t("join_now.form_location.title")}
-        </FormLocationTitle>
+        <FormLocationTitle>{t("join_now.form_location.title")}</FormLocationTitle>
         <Location className={`${formStep === 1 && "active"}`}>
           <p className="number">1</p>
           <p className="location">{t("join_now.form_location.p_1")}</p>

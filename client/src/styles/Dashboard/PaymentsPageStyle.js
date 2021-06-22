@@ -40,13 +40,11 @@ export const Table = styled.div`
         font-size: 0.75rem;
         border-radius: 5px;
 
-        &.approved,
-        &.payed {
+        &.paid {
           background: ${(props) => transparentize(0.5, props.theme.color.blue)};
         }
         &.pending {
-          background: ${(props) =>
-            transparentize(0.85, props.theme.color.black)};
+          background: ${(props) => transparentize(0.85, props.theme.color.black)};
         }
         &.rejected,
         &.canceled {
@@ -98,9 +96,7 @@ export const Table = styled.div`
 export const PaypalEmailMessage = styled.div`
   padding: 10px;
   border: ${(props) =>
-    props.bg === false
-      ? `2px ${props.theme.color.secondary} solid`
-      : `2px ${props.theme.color.green} solid`};
+    props.bg === false ? `2px ${props.theme.color.secondary} solid` : `2px ${props.theme.color.green} solid`};
 
   background: ${(props) =>
     props.bg === false

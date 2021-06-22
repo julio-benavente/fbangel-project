@@ -113,7 +113,7 @@ router.post("/create-order", auth, async (req, res) => {
         });
       }
     })
-  );
+  ).filter((payment) => payment);
 
   const orderInformation = {
     product,
@@ -148,7 +148,7 @@ router.put("/change-status/:action", auth, async (req, res) => {
 
     const errors = [];
 
-    const order = await Order.findById(orderId);
+    var order = await Order.findById(orderId);
 
     const payments = await Promise.all(
       order.payments.map(async (paymentId) => {
@@ -174,7 +174,7 @@ router.put("/change-status/:action", auth, async (req, res) => {
       })
     );
 
-    await Order.findByIdAndUpdate(orderId, {
+    var order = await Order.findByIdAndUpdate(orderId, {
       $set: {
         status,
         approvedBy: req.adminId,
@@ -184,7 +184,7 @@ router.put("/change-status/:action", auth, async (req, res) => {
       },
     }).exec();
 
-    res.json({ order: { payments, errors } });
+    res.json({ order, status });
   } catch (error) {
     console.log(error);
     res.status(400).json({ error: error.message });

@@ -34,16 +34,13 @@ const ProfilePage = () => {
   }, []);
 
   const [paypalEmailIsSent, setPaypalEmailIsSent] = useState(false);
-  const sendPaypalEmail = async id => {
+  const sendPaypalEmail = async (id) => {
     try {
       setPaypalEmailIsSent(true);
       const response = await axios.put("/api/users/send-paypal-email-confirmation", {
         id,
       });
-      console.log("response", response);
-    } catch (error) {
-      console.log("error", error.message);
-    }
+    } catch (error) {}
   };
 
   const { t, i18n } = useTranslation();
