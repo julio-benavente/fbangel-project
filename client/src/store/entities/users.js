@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
 import moment from "moment";
@@ -33,22 +33,31 @@ const slice = createSlice({
     },
 
     // user (one user)
-    userRequested: (user, action) => {
-      user.loading = true;
+    userRequested: (users, action) => {
+      users.loading = true;
 
-      return user;
+      return users;
     },
-    userRequestSucceeded: (user, action) => {
+    userRequestSucceeded: (users, action) => {
       const { user: userResponse } = action.payload;
-      user.user = userResponse;
-      user.loading = false;
+      users.user = userResponse;
+      users.loading = false;
 
-      return user;
+      return users;
     },
-    userRequestFailed: (user, action) => {
-      user.loading = false;
+    userRequestFailed: (users, action) => {
+      users.loading = false;
 
-      return user;
+      return users;
+    },
+
+    usersStatusChanged: (users, action) => {
+      const details = action.payload;
+
+      details.map((detail) => {
+        const index = current(users).list.findIndex((user) => user._id === detail.item);
+        users.list[index].status = detail.modification.status;
+      });
     },
   },
 });
@@ -61,6 +70,7 @@ export const {
   userRequestFailed,
   userRequestSucceeded,
   userRequested,
+  usersStatusChanged,
 } = slice.actions;
 
 // Actions

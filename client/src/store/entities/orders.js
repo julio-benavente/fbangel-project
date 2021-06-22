@@ -1,7 +1,7 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
-import { paymentsStatusChanged } from "./payments";
+import { paymentsStatusChanged, paymentsCreated } from "./payments";
 import moment from "moment";
 
 const initialState = () => ({
@@ -32,6 +32,10 @@ const slice = createSlice({
 
       return orders;
     },
+    orderCreated: (orders, action) => {
+      const { order: orderResponse } = action.payload;
+      orders.list.push(orderResponse);
+    },
     orderStatusChanged: (orders, action) => {
       const { order: orderResponse, status } = action.payload;
       const { payments: paymentsResponse } = orderResponse;
@@ -52,7 +56,8 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-export const { ordersRequestFailed, ordersRequestSucceeded, ordersRequested, orderStatusChanged } = slice.actions;
+export const { ordersRequestFailed, ordersRequestSucceeded, ordersRequested, orderStatusChanged, orderCreated } =
+  slice.actions;
 
 // Actions
 const url = "/api/orders";
@@ -78,6 +83,28 @@ export const requestOrders = () => (dispatch, getState) => {
   );
 };
 
+export const createOrder = (data) => async (dispatch, getState) => {
+  console.log("data", data);
+  try {
+    const response = await dispatch(
+      apiCallBegan({
+        url: `${url}/create-order`,
+        method: "POST",
+        data,
+        onSuccess: orderCreated,
+      })
+    );
+
+    if (response.type === orderCreated.type) {
+      await dispatch(paymentsCreated(response.payload.order.payments));
+    }
+
+    return response;
+  } catch (error) {
+    return error;
+  }
+};
+
 export const changeOrderStatus =
   ({ status, order }) =>
   async (dispatch, getState) => {
@@ -100,7 +127,6 @@ export const changeOrderStatus =
       }
       return response;
     } catch (error) {
-      console.log("error change order status", error);
       return error;
     }
   };

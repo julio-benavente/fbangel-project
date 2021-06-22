@@ -77,7 +77,6 @@ router.post("/change-user-status", auth, async (req, res) => {
     newAction.errorList = errorList;
     newAction.save();
     res.json({
-      message: "Actions post",
       action: newAction,
     });
   } catch (error) {

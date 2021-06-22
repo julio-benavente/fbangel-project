@@ -34,13 +34,11 @@ router.post("/create-order", auth, async (req, res) => {
   // get product
   const product = await Product.findById(productId);
 
-  console.log("payees", payees);
-
   // create payment
   const payments = await Promise.all(
     payees.map(async ({ id, referenceId, referenceReferral, concept: paymentConcept }) => {
       try {
-        const user = await User.findOne({ referralCode: referenceReferral });
+        const user = await User.findOne({ _id: id });
 
         if (!user) {
           // If the user entered and wrong referral code as his referral
@@ -113,19 +111,32 @@ router.post("/create-order", auth, async (req, res) => {
         });
       }
     })
-  ).filter((payment) => payment);
+  );
 
   const orderInformation = {
     product,
     concept,
-    payments,
+    payments: payments.filter((payments) => payments),
     createdBy,
     errorsList: errors,
   };
 
   try {
     const newOrder = await new Order(orderInformation).save();
-    res.json({ order: newOrder });
+    const orderPopulated = await newOrder
+      .populate({
+        path: "payments",
+        populate: {
+          path: "payee",
+          model: "user",
+          select: "-password",
+        },
+      })
+      .execPopulate();
+
+    res.json({
+      order: orderPopulated,
+    });
   } catch (error) {
     res.json({ error: error.message });
   }

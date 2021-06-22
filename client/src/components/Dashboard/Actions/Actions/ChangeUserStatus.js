@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Select from "react-select";
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import { getUsers } from "../../../../store/entities/users";
 import { getUser } from "../../../../store/auth/auth";
+import { changeUserStatus } from "../../../../store/entities/actions";
 
 // Styles
 import {
@@ -160,6 +161,8 @@ const UserSelectedTable = (props) => {
     setAction,
   } = props;
 
+  const dispatch = useDispatch();
+
   const columns = [
     { name: "select", width: 10, min: 100 },
     { name: "name", width: 15, min: 100 },
@@ -205,8 +208,8 @@ const UserSelectedTable = (props) => {
     };
 
     try {
-      const response = await axios.post("/api/actions/change-user-status", action);
-
+      const response = await dispatch(changeUserStatus(action));
+      console.log("page response", response);
       // clean selections
       setAction("");
     } catch ({ response }) {}

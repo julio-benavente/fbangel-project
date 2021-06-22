@@ -35,6 +35,11 @@ const slice = createSlice({
     paymentsRequestFailed: (payments, action) => {
       payments.loading = false;
     },
+    paymentsCreated: (payments, action) => {
+      const paymentsResponse = action.payload;
+      paymentsResponse.map((paymentResponse) => payments.list.push(paymentResponse));
+    },
+
     paymentsStatusChanged: (payments, actions) => {
       const { payments: paymentsResponse, status } = actions.payload;
 
@@ -50,8 +55,13 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
-export const { paymentsRequestFailed, paymentsRequestSucceeded, paymentsRequested, paymentsStatusChanged } =
-  slice.actions;
+export const {
+  paymentsRequestFailed,
+  paymentsRequestSucceeded,
+  paymentsRequested,
+  paymentsStatusChanged,
+  paymentsCreated,
+} = slice.actions;
 
 // Actions
 const url = "/api/payments";

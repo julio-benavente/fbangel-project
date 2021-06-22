@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
+import { usersStatusChanged } from "../entities/users";
 import moment from "moment";
 
 const initialState = () => ({
@@ -31,11 +32,17 @@ const slice = createSlice({
 
       return actions;
     },
+    newActionCreated: (actions, action) => {
+      const { action: newAction } = action.payload;
+      actions.list.push(newAction);
+
+      return actions;
+    },
   },
 });
 
 export default slice.reducer;
-export const { actionsRequestFailed, actionsRequestSucceeded, actionsRequested } = slice.actions;
+export const { actionsRequestFailed, actionsRequestSucceeded, actionsRequested, newActionCreated } = slice.actions;
 
 // Actions
 const url = "/api/actions";
@@ -59,6 +66,31 @@ export const requestActions = () => (dispatch, getState) => {
       onFailure: actionsRequestFailed,
     })
   );
+};
+
+export const changeUserStatus = (data) => async (dispatch, getState) => {
+  console.log("actionResponse");
+  try {
+    const actionResponse = await dispatch(
+      apiCallBegan({
+        url: `${url}/change-user-status/`,
+        method: "POST",
+        data,
+        onSuccess: newActionCreated,
+      })
+    );
+
+    if (actionResponse.type === newActionCreated.type) {
+      console.log("actionResponse", actionResponse.payload.action.details);
+
+      await dispatch(usersStatusChanged(actionResponse.payload.action.details));
+    }
+
+    console.log("actionResponse", actionResponse);
+    return actionResponse;
+  } catch (error) {
+    return error;
+  }
 };
 
 // Selectors
