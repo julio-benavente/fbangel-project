@@ -149,18 +149,14 @@ export const PaymentsTable = styled.div`
           padding: 3px 5px;
           font-size: 0.75rem;
           border-radius: 4px;
-          &.approved,
-          &.payed {
-            background: ${(props) =>
-              transparentize(0.5, props.theme.color.blue)};
+          &.approved {
+            background: ${(props) => transparentize(0.5, props.theme.color.blue)};
           }
           &.pending {
-            background: ${(props) =>
-              transparentize(0.85, props.theme.color.black)};
+            background: ${(props) => transparentize(0.85, props.theme.color.black)};
           }
           &.rejected {
-            background: ${(props) =>
-              transparentize(0.5, props.theme.color.red)};
+            background: ${(props) => transparentize(0.5, props.theme.color.red)};
           }
         }
         &:nth-child(5) {

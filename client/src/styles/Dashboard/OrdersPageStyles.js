@@ -63,8 +63,7 @@ export const Table = styled.div`
           background: ${(props) => transparentize(0.5, props.theme.color.blue)};
         }
         &.Pending {
-          background: ${(props) =>
-            transparentize(0.85, props.theme.color.black)};
+          background: ${(props) => transparentize(0.85, props.theme.color.black)};
         }
         &.Rejected {
           background: ${(props) => transparentize(0.5, props.theme.color.red)};
@@ -96,8 +95,7 @@ export const Table = styled.div`
       }
 
       &.pending {
-        background: ${(props) =>
-          transparentize(0.7, props.theme.color.gray300)};
+        background: ${(props) => transparentize(0.7, props.theme.color.gray300)};
       }
 
       &.canceled {
@@ -130,13 +128,11 @@ export const Table = styled.div`
         cursor: pointer;
 
         &.updateBtn {
-          background: ${(props) =>
-            transparentize(0.5, props.theme.color.purple)};
+          background: ${(props) => transparentize(0.5, props.theme.color.purple)};
         }
 
         &.approveBtn {
-          background: ${(props) =>
-            transparentize(0.5, props.theme.color.green)};
+          background: ${(props) => transparentize(0.5, props.theme.color.green)};
         }
 
         &.rejectBtn {
@@ -144,8 +140,7 @@ export const Table = styled.div`
         }
 
         &.cancelBtn {
-          background: ${(props) =>
-            transparentize(0.5, props.theme.color.yellow)};
+          background: ${(props) => transparentize(0.5, props.theme.color.yellow)};
         }
       }
     }
@@ -177,9 +172,7 @@ export const Table = styled.div`
 export const PaypalEmailMessage = styled.div`
   padding: 10px;
   border: ${(props) =>
-    props.bg === false
-      ? `2px ${props.theme.color.secondary} solid`
-      : `2px ${props.theme.color.green} solid`};
+    props.bg === false ? `2px ${props.theme.color.secondary} solid` : `2px ${props.theme.color.green} solid`};
 
   background: ${(props) =>
     props.bg === false
@@ -215,16 +208,13 @@ export const PaymentsTable = styled.div`
           font-size: 0.75rem;
           border-radius: 4px;
           &.paid {
-            background: ${(props) =>
-              transparentize(0.6, props.theme.color.green)};
+            background: ${(props) => transparentize(0.6, props.theme.color.green)};
           }
           &.pending {
-            background: ${(props) =>
-              transparentize(0.85, props.theme.color.black)};
+            background: ${(props) => transparentize(0.85, props.theme.color.black)};
           }
           &.canceled {
-            background: ${(props) =>
-              transparentize(0.5, props.theme.color.red)};
+            background: ${(props) => transparentize(0.5, props.theme.color.red)};
           }
         }
         &.amount {
