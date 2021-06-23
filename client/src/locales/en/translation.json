@@ -1330,6 +1330,8 @@
       "filter": "Filter",
       "name": "Name",
       "users_selected": "Selected users",
+      "show_selected": "Show selected",
+      "hide_selected": "Hide selected",
       "send": "Send",
       "observation": "Observation"
     }

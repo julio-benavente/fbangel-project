@@ -13,6 +13,8 @@ import UserRow from "./UserRow";
 import { Actions, Header, CreateOrderButton, Table, Title } from "../../../styles/Dashboard/ActionsPageStyles";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
+import { ReactComponent as ArrowSvg } from "../../../assets/svgs/bold_arrow.svg";
+
 const ActionsPage = () => {
   const dispatch = useDispatch();
   const actions = useSelector(getActions);
@@ -113,8 +115,8 @@ const ActionsPage = () => {
             total={totalPages}
             defaultPageSize={pageSize}
             showPrevNextJumpers={false}
-            prevIcon={() => <i className="fas fa-angle-double-left"></i>}
-            nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+            prevIcon={() => <ArrowSvg className="left_arrow" />}
+            nextIcon={() => <ArrowSvg className="right_arrow" />}
           />
         </PaginationWrapper>
       </Table>

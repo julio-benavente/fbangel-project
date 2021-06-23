@@ -5,6 +5,16 @@ export const PaginationWrapper = styled.div`
   display: grid;
   justify-content: center;
   margin-top: 1rem;
+
+  .left_arrow,
+  .right_arrow {
+    transform: scale(0.7);
+  }
+
+  .right_arrow {
+    transform: scale(0.7) rotate(180deg);
+  }
+
   .rc-pagination {
     font-size: 12px;
     font-family: "Arial";

@@ -1335,6 +1335,8 @@
       "referral_code": "Codigo de referido",
       "filter": "Filtro",
       "name": "Nombre",
+      "show_selected": "Mostrar seleccionados",
+      "hide_selected": "Ocultar seleccionados",
       "users_selected": "Usuarios selecionados",
       "send": "Enviar",
       "observation": "Observación"

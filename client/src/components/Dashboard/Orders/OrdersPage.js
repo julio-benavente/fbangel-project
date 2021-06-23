@@ -14,6 +14,7 @@ import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
 // Styles
 import { Title, Table, Orders, Header, CreateOrderButton } from "../../../styles/Dashboard/OrdersPageStyles";
+import { ReactComponent as ArrowSvg } from "../../../assets/svgs/bold_arrow.svg";
 
 const OrdersPage = () => {
   const dispatch = useDispatch();
@@ -171,8 +172,9 @@ const OrdersPage = () => {
             total={totalPages}
             defaultPageSize={pageSize}
             showPrevNextJumpers={false}
-            prevIcon={() => <i className="fas fa-angle-double-left"></i>}
-            nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+            prevIcon={() => <ArrowSvg className="left_arrow" />}
+            nextIcon={() => <ArrowSvg className="right_arrow" />}
+            ArrowSvg
           />
         </PaginationWrapper>
       </Table>

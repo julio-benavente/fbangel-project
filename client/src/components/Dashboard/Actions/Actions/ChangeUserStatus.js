@@ -222,7 +222,9 @@ const UserSelectedTable = (props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <UsersSelectedSummary>
           <button type="button" onClick={() => setUsersSelectedIsOpen(!usersSelectedIsOpen)}>
-            {!usersSelectedIsOpen ? "Ver selecionados" : "Ocultar selecionados"}
+            {!usersSelectedIsOpen
+              ? t("actions.change_user_status.show_selected")
+              : t("actions.change_user_status.hide_selected")}
           </button>
           {usersSelectedIsOpen && (
             <p>

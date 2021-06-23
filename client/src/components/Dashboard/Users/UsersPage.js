@@ -12,6 +12,8 @@ import UserRow from "./UserRow";
 import { Users, Title, UsersTable } from "../../../styles/Dashboard/UsersPageStyles";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
+import { ReactComponent as ArrowSvg } from "../../../assets/svgs/bold_arrow.svg";
+
 const UsersPage = () => {
   const [usersTableWidth, setUsersTableWidth] = useState(null);
 
@@ -74,7 +76,7 @@ const UsersPage = () => {
 
         const grid = () => {
           var template = "";
-          columns.map(column => {
+          columns.map((column) => {
             const { width, min } = column;
             const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
@@ -114,7 +116,7 @@ const UsersPage = () => {
     setTotalPages(users.length - 1);
   }, [users, totalPages]);
 
-  const onTableChange = page => {
+  const onTableChange = (page) => {
     setCurrent(page);
   };
 
@@ -171,8 +173,8 @@ const UsersPage = () => {
           total={totalPages}
           defaultPageSize={pageSize}
           showPrevNextJumpers={false}
-          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
-          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+          prevIcon={() => <ArrowSvg className="left_arrow" />}
+          nextIcon={() => <ArrowSvg className="right_arrow" />}
         />
       </PaginationWrapper>
     </Users>

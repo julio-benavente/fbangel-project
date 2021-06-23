@@ -1344,6 +1344,8 @@
       "filter": "Filtre",
       "name": "Nom",
       "users_selected": "Utilisateurs sélectionnés",
+      "show_selected": "Afficher la sélection",
+      "hide_selected": "Masquer la sélection",
       "send": "Envoyer",
       "observation": "observation"
     }

@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {
-  getReferralsState,
-  requestReferrals,
-} from "../../../store/entities/referrals";
+import { getReferralsState, requestReferrals } from "../../../store/entities/referrals";
 import { getUser } from "../../../store/auth/auth";
 import { useSelector, useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 import Pagination from "rc-pagination";
 
 // Styles
-import {
-  Referrals,
-  Title,
-  Table,
-} from "../../../styles/Dashboard/ReferralsPageStyles";
+import { Referrals, Title, Table } from "../../../styles/Dashboard/ReferralsPageStyles";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
+
+import { ReactComponent as ArrowSvg } from "../../../assets/svgs/bold_arrow.svg";
 
 const ReferralsPage = () => {
   const [tableWidth, setTableWidth] = useState(null);
@@ -64,8 +59,7 @@ const ReferralsPage = () => {
           var template = "";
           columns.map((column) => {
             const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
+            const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
             return null;
           });
@@ -145,17 +139,9 @@ const ReferralsPage = () => {
           {!loading &&
             showRows
               .slice()
-              .sort(
-                (a, b) => new Date(b.creationDate) - new Date(a.creationDate)
-              )
+              .sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
               .map((payment, index) => {
-                const {
-                  firstName,
-                  email,
-                  creationDate,
-                  status,
-                  statusObservation,
-                } = payment;
+                const { firstName, email, creationDate, status, statusObservation } = payment;
 
                 const date = new Date(creationDate).toLocaleDateString([], {
                   day: "2-digit",
@@ -168,12 +154,8 @@ const ReferralsPage = () => {
                     <div className="td name">{`${firstName} ******`}</div>
                     <div className="td email">{email}</div>
                     <div className="td createDate">{date}</div>
-                    <div
-                      className={`td status ${status}`}
-                    >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
-                    <div className="td statusObservation">
-                      {statusObservation}
-                    </div>
+                    <div className={`td status ${status}`}>{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
+                    <div className="td statusObservation">{statusObservation}</div>
                   </div>
                 );
               })}
@@ -186,8 +168,8 @@ const ReferralsPage = () => {
           total={totalPages}
           defaultPageSize={pageSize}
           showPrevNextJumpers={false}
-          prevIcon={() => <i className="fas fa-angle-double-left"></i>}
-          nextIcon={() => <i className="fas fa-angle-double-right"></i>}
+          prevIcon={() => <ArrowSvg className="left_arrow" />}
+          nextIcon={() => <ArrowSvg className="right_arrow" />}
         />
       </PaginationWrapper>
     </Referrals>
