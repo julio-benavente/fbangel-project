@@ -239,7 +239,7 @@ const Main = () => {
               <ReCAPTCHA
                 name={name}
                 ref={recaptchaRef}
-                sitekey="6LcjSSgbAAAAAPX2T9hoFSCd-YG_xz7w5wkMpvYW"
+                sitekey="6LdXgFAbAAAAAIC6iOdWHFENPf4IqWSIqUu8bBJl"
                 onChange={(e) => onChange(true)}
                 onExpired={(e) => onChange(false)}
               />
