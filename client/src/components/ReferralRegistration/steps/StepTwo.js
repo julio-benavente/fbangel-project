@@ -175,7 +175,7 @@ const Main = () => {
               split.pop();
               const joined = split.join(".");
               if (joined.length > 20) {
-                return t("join_now.step_three.documentImage.error_4");
+                return t("join_now.step_two.documentImage.error_4");
               } else {
                 return true;
               }
