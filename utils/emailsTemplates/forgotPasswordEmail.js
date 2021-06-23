@@ -3,11 +3,10 @@ const { createToken } = require("../createToken");
 
 const forgotPasswordEmail = async (id, to, model, hostname) => {
   const token = createToken(id, "1d", process.env.FORGOT_PASSWORD_KEY);
-  const url = `${
-    hostname === "localhost" ? "http://localhost:3000" : "//" + hostname
-  }/reset-password/${token}`;
+  const url = `${hostname === "localhost" ? "http://localhost:3000" : "//" + hostname}/reset-password/${token}`;
   try {
     const emailResponse = await transporter.sendMail({
+      from: `fb4angel  <${process.env.EMAIL_USER}>`,
       to,
       subject: "Reset password",
       html: `
@@ -17,10 +16,7 @@ const forgotPasswordEmail = async (id, to, model, hostname) => {
       </p>`,
     });
 
-    const user = await model.findOneAndUpdate(
-      { _id: id },
-      { $set: { resetPasswordToken: token } }
-    );
+    const user = await model.findOneAndUpdate({ _id: id }, { $set: { resetPasswordToken: token } });
 
     return emailResponse;
   } catch (error) {

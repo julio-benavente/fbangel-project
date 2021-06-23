@@ -4,7 +4,6 @@ const { transporter } = require("../utils/emailTransporter");
 
 router.post("/", async (req, res) => {
   const { name, email, message } = req.body;
-  console.log(name, email, message);
 
   const text = `
   <p><b>From:</b> ${name}</p>
@@ -13,6 +12,7 @@ router.post("/", async (req, res) => {
   `;
   try {
     const response = await transporter.sendMail({
+      from: `fb4angel  <${process.env.EMAIL_USER}>`,
       to: "julio@fbangel.com",
       subject: `A message from ${name}`,
       html: text,

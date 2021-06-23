@@ -1,19 +1,14 @@
-const {
-  transporter
-} = require("../emailTransporter");
-const {
-  createToken
-} = require("../createToken");
+const { transporter } = require("../emailTransporter");
+const { createToken } = require("../createToken");
 
 const emailVerification = async (user, hostname) => {
   const token = createToken(user._id, "1d", process.env.EMAIL_VERIFICATION_KEY);
 
-  const url = `${
-    hostname === "localhost" ? "http://localhost:3000" : "//" + hostname
-  }/confirm-email/${token}`;
+  const url = `${hostname === "localhost" ? "http://localhost:3000" : "//" + hostname}/confirm-email/${token}`;
 
   try {
     const emailResponse = await transporter.sendMail({
+      from: `fb4angel  <${process.env.EMAIL_USER}>`,
       to: user.email,
       subject: "Email confirmation",
       html: `
@@ -35,5 +30,5 @@ const emailVerification = async (user, hostname) => {
 };
 
 module.exports = {
-  emailVerification
+  emailVerification,
 };
