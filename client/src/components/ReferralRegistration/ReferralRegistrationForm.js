@@ -29,7 +29,7 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(2);
+  const [formStep, setFormStep] = useState(1);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
@@ -60,7 +60,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    defaultValues,
+    // defaultValues,
   });
 
   const {
@@ -101,10 +101,7 @@ const Form = () => {
   };
 
   const fetchCandidateInformation = async (data, type = "complete") => {
-    const url =
-      type === "complete"
-        ? "/api/users/registration/referral"
-        : "/api/users/registration/incompleteReferral";
+    const url = type === "complete" ? "/api/users/registration/referral" : "/api/users/registration/incompleteReferral";
 
     const { stepOne, stepTwo } = data;
 
@@ -167,9 +164,7 @@ const Form = () => {
 
     // Validate if isValid the step
     if (direction === 1) {
-      const fieldsToValidate = Object.keys(getValues(step)).map(
-        (value) => `${step}.${value}`
-      );
+      const fieldsToValidate = Object.keys(getValues(step)).map((value) => `${step}.${value}`);
 
       await trigger(fieldsToValidate);
 
@@ -189,13 +184,9 @@ const Form = () => {
       case formStep == submitPage:
         return (
           <Buttons>
-            <Button onClick={() => handleFormStep(-1, formStep)}>
-              {t("referral_registration.buttons.previous")}
-            </Button>
+            <Button onClick={() => handleFormStep(-1, formStep)}>{t("referral_registration.buttons.previous")}</Button>
             <SubmitButton type="submit">
-              {isSubmitting
-                ? t("referral_registration.buttons.sending")
-                : t("referral_registration.buttons.send")}
+              {isSubmitting ? t("referral_registration.buttons.sending") : t("referral_registration.buttons.send")}
             </SubmitButton>
           </Buttons>
         );
@@ -209,18 +200,14 @@ const Form = () => {
               </Button>
             </Buttons>
 
-            <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("referral_registration.buttons.next")}
-            </Button>
+            <Button onClick={() => handleFormStep(1, formStep)}>{t("referral_registration.buttons.next")}</Button>
           </Buttons>
         );
 
       case formStep === 1:
         return (
           <Buttons one>
-            <Button onClick={() => handleFormStep(1, formStep)}>
-              {t("referral_registration.buttons.next")}
-            </Button>
+            <Button onClick={() => handleFormStep(1, formStep)}>{t("referral_registration.buttons.next")}</Button>
           </Buttons>
         );
       default:
@@ -231,28 +218,20 @@ const Form = () => {
   return (
     <FormsWrapper>
       <FormLocation>
-        <FormLocationTitle>
-          {t("referral_registration.locations.title")}
-        </FormLocationTitle>
+        <FormLocationTitle>{t("referral_registration.locations.title")}</FormLocationTitle>
         <Location className={`${formStep === 1 && "active"}`}>
           <p className="number">1</p>
-          <p className="location">
-            {t("referral_registration.locations.personal_information")}
-          </p>
+          <p className="location">{t("referral_registration.locations.personal_information")}</p>
         </Location>
         <Location className={`${formStep === 2 && "active"}`}>
           <p className="number">2</p>
-          <p className="location">
-            {t("referral_registration.locations.confirmation_payment_method")}
-          </p>
+          <p className="location">{t("referral_registration.locations.confirmation_payment_method")}</p>
         </Location>
 
         {formStep === 3 && (
           <Location className={`${formStep === 5 && "active"}`}>
             <p className="number">3</p>
-            <p className="location">
-              {t("referral_registration.locations.congratulations")}
-            </p>
+            <p className="location">{t("referral_registration.locations.congratulations")}</p>
           </Location>
         )}
       </FormLocation>
