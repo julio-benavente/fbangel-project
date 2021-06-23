@@ -18,6 +18,8 @@ import { useTableWidth } from "../../../utils/tableWidth";
 import { Payments, Title, Table, PaypalEmailMessage } from "../../../styles/Dashboard/PaymentsPageStyle";
 import { PaginationWrapper } from "../../../styles/Dashboard/PaginationStyles";
 
+import { ReactComponent as ArrowSvg } from "../../../assets/svgs/bold_arrow.svg";
+
 const PaymentsPage = () => {
   const dispatch = useDispatch();
 
@@ -269,8 +271,8 @@ const PaymentsPage = () => {
           total={totalPages}
           defaultPageSize={pageSize}
           showPrevNextJumpers={false}
-          prevIcon={() => <i className="fas fa-angle-double-left"> </i>}
-          nextIcon={() => <i className="fas fa-angle-double-right"> </i>}
+          prevIcon={() => <ArrowSvg className="left_arrow" />}
+          nextIcon={() => <ArrowSvg className="right_arrow" />}
         />
       </PaginationWrapper>
     </Payments>
