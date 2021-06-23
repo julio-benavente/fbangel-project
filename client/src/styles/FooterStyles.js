@@ -3,7 +3,7 @@ import { transparentize } from "polished";
 import { Link } from "react-router-dom";
 
 // Styles
-import { Container, Tiny } from "./GlobalStyles";
+import { Container, Tiny, breakpoint } from "./GlobalStyles";
 
 export const FooterSection = styled.div`
   background-color: ${(props) => props.theme.color.primary};
@@ -17,15 +17,23 @@ export const FooterSectionWrapper = styled(Container)`
   padding-top: 2rem;
   padding-bottom: 2rem;
   max-width: 1200px;
+
+  @media screen and ${breakpoint.md} {
+    > * {
+      text-align: center;
+    }
+  }
 `;
 
 export const FooterLinks = styled.div`
   margin-bottom: 1rem;
   display: grid;
   justify-content: start;
-  grid-auto-columns: auto;
+  grid-auto-columns: minmax(80px, auto);
   grid-auto-flow: column;
   gap: 30px;
+  grid-column: 1/-1;
+  justify-self: center;
 `;
 
 export const Contact = styled(Link)`

@@ -22,18 +22,10 @@ import { InputWraper, Question } from "../../../styles/JoinNowPageStyles";
 
 const StepThree = () => {
   const { t } = useTranslation();
-  const [bussinessManagerImageExOne, setBussinessManagerImageExOne] =
-    useState(false);
-  const [bussinessManagerImageExTwo, setBussinessManagerImageExTwo] =
-    useState(false);
-  const [
-    facebookEmailConfirmationImageExOne,
-    setFacebookEmailConfirmationImageExOne,
-  ] = useState(false);
-  const [
-    facebookEmailConfirmationImageExTwo,
-    setFacebookEmailConfirmationImageExTwo,
-  ] = useState(false);
+  const [bussinessManagerImageExOne, setBussinessManagerImageExOne] = useState(false);
+  const [bussinessManagerImageExTwo, setBussinessManagerImageExTwo] = useState(false);
+  const [facebookEmailConfirmationImageExOne, setFacebookEmailConfirmationImageExOne] = useState(false);
+  const [facebookEmailConfirmationImageExTwo, setFacebookEmailConfirmationImageExTwo] = useState(false);
 
   const methods = useFormContext();
   const {
@@ -50,11 +42,7 @@ const StepThree = () => {
         width="wide"
         className="frecuency"
         type="radio"
-        error={
-          errors.stepThree &&
-          errors.stepThree.frecuency &&
-          errors.stepThree.frecuency.message
-        }
+        error={errors.stepThree && errors.stepThree.frecuency && errors.stepThree.frecuency.message}
         options={[
           [t("join_now.step_three.frequency.option_1"), "everyday"],
           [t("join_now.step_three.frequency.option_2"), "1-2_a_week"],
@@ -80,11 +68,7 @@ const StepThree = () => {
           [t("join_now.step_three.devices.option_3"), "movil"],
           [t("join_now.step_three.devices.option_4"), "other"],
         ]}
-        error={
-          errors.stepThree &&
-          errors.stepThree.devices &&
-          errors.stepThree.devices.message
-        }
+        error={errors.stepThree && errors.stepThree.devices && errors.stepThree.devices.message}
         question={t("join_now.step_three.devices.question")}
         register={register("stepThree.devices", {
           required: {
@@ -105,9 +89,7 @@ const StepThree = () => {
           [t("join_now.step_three.os.option_4"), "other"],
         ]}
         question={t("join_now.step_three.os.question")}
-        error={
-          errors.stepThree && errors.stepThree.os && errors.stepThree.os.message
-        }
+        error={errors.stepThree && errors.stepThree.os && errors.stepThree.os.message}
         register={register("stepThree.os", {
           required: {
             value: true,
@@ -118,11 +100,7 @@ const StepThree = () => {
 
       <TextInput
         className="username"
-        error={
-          errors.stepThree &&
-          errors.stepThree.fbUsername &&
-          errors.stepThree.fbUsername.message
-        }
+        error={errors.stepThree && errors.stepThree.fbUsername && errors.stepThree.fbUsername.message}
         question={t("join_now.step_three.username.question")}
         register={register("stepThree.fbUsername", {
           required: {
@@ -130,8 +108,7 @@ const StepThree = () => {
             message: t("join_now.step_three.username.error_1"),
           },
           validate: {
-            min: (v) =>
-              v.length < 6 ? t("join_now.step_three.username.error_2") : true,
+            min: (v) => (v.length < 6 ? t("join_now.step_three.username.error_2") : true),
           },
         })}
       />
@@ -139,44 +116,43 @@ const StepThree = () => {
         type="password"
         className="password"
         question={t("join_now.step_three.fbPassword.question")}
-        error={
-          errors.stepThree &&
-          errors.stepThree.fbPassword &&
-          errors.stepThree.fbPassword.message
-        }
+        error={errors.stepThree && errors.stepThree.fbPassword && errors.stepThree.fbPassword.message}
         register={register("stepThree.fbPassword", {
           required: {
             value: true,
             message: t("join_now.step_three.fbPassword.error_1"),
           },
           validate: {
-            min: (v) =>
-              v.length < 6 ? t("join_now.step_three.fbPassword.error_2") : true,
+            min: (v) => (v.length < 6 ? t("join_now.step_three.fbPassword.error_2") : true),
           },
         })}
       />
       <FileInput
         className="fbEmailImage"
         question={t("join_now.step_three.fbEmailImage.question")}
-        error={
-          errors.stepThree &&
-          errors.stepThree.fbEmailImage &&
-          errors.stepThree.fbEmailImage.message
-        }
+        error={errors.stepThree && errors.stepThree.fbEmailImage && errors.stepThree.fbEmailImage.message}
         register={register("stepThree.fbEmailImage", {
           required: {
             value: true,
             message: t("join_now.step_three.fbEmailImage.error_1"),
           },
           validate: {
-            size: (v) =>
-              v[0].size > 2000000
-                ? t("join_now.step_three.fbEmailImage.error_2")
-                : true,
+            size: (v) => (v[0].size > 2000000 ? t("join_now.step_three.fbEmailImage.error_2") : true),
             type: (v) =>
               !["image/jpeg", "image/jpg", "image/png"].includes(v[0].type)
                 ? t("join_now.step_three.fbEmailImage.error_3")
                 : true,
+            name: (v) => {
+              const name = v[0].name;
+              const split = name.split(".");
+              split.pop();
+              const joined = split.join(".");
+              if (joined.length > 20) {
+                return t("join_now.step_three.fbEmailImage.error_4");
+              } else {
+                return true;
+              }
+            },
           },
         })}
       />
@@ -236,34 +212,36 @@ const StepThree = () => {
       <FileInput
         className="bmIdImage"
         question={t("join_now.step_three.bmIdImage.question")}
-        error={
-          errors.stepThree &&
-          errors.stepThree.bmIdImage &&
-          errors.stepThree.bmIdImage.message
-        }
+        error={errors.stepThree && errors.stepThree.bmIdImage && errors.stepThree.bmIdImage.message}
         register={register("stepThree.bmIdImage", {
           required: {
             value: true,
             message: t("join_now.step_three.bmIdImage.error_1"),
           },
           validate: {
-            size: (v) =>
-              v[0].size > 2000000
-                ? t("join_now.step_three.bmIdImage.error_2")
-                : true,
+            size: (v) => (v[0].size > 2000000 ? t("join_now.step_three.bmIdImage.error_2") : true),
             type: (v) =>
               !["image/jpeg", "image/jpg", "image/png"].includes(v[0].type)
                 ? t("join_now.step_three.bmIdImage.error_3")
                 : true,
+            name: (v) => {
+              const name = v[0].name;
+              const split = name.split(".");
+              split.pop();
+              const joined = split.join(".");
+              if (joined.length > 20) {
+                return t("join_now.step_three.bmIdImage.error_4");
+              } else {
+                return true;
+              }
+            },
           },
         })}
       />
       <div className="message">
         <p>{t("join_now.step_three.bmIdImage.message.p_1.0")}</p>
         <p>
-          <a onClick={() => setBussinessManagerImageExOne(true)}>
-            {t("join_now.step_three.bmIdImage.message.p_2.0")}
-          </a>
+          <a onClick={() => setBussinessManagerImageExOne(true)}>{t("join_now.step_three.bmIdImage.message.p_2.0")}</a>
         </p>
         {bussinessManagerImageExOne && (
           <Lightbox
@@ -275,9 +253,7 @@ const StepThree = () => {
           />
         )}
         <p>
-          <a onClick={() => setBussinessManagerImageExTwo(true)}>
-            {t("join_now.step_three.bmIdImage.message.p_3.0")}
-          </a>
+          <a onClick={() => setBussinessManagerImageExTwo(true)}>{t("join_now.step_three.bmIdImage.message.p_3.0")}</a>
         </p>
         {bussinessManagerImageExTwo && (
           <Lightbox
@@ -298,8 +274,7 @@ const StepThree = () => {
             message: t("join_now.step_three.code2FA.error_1"),
           },
           validate: {
-            numCharacters: (v) =>
-              v.length !== 32 ? t("join_now.step_three.code2FA.error_2") : true,
+            numCharacters: (v) => (v.length !== 32 ? t("join_now.step_three.code2FA.error_2") : true),
           },
         }}
         render={({ field: { onChange } }) => {
@@ -316,9 +291,7 @@ const StepThree = () => {
               />
 
               <p className="error">
-                {errors.stepThree &&
-                  errors.stepThree.code2FA &&
-                  errors.stepThree.code2FA.message}
+                {errors.stepThree && errors.stepThree.code2FA && errors.stepThree.code2FA.message}
               </p>
             </InputWraper>
           );
@@ -328,10 +301,7 @@ const StepThree = () => {
       <div className="message">
         <p>
           {t("join_now.step_three.code2FA.message.p_1")}{" "}
-          <a
-            href="https://www.facebook.com/security/2fac/setup/intro"
-            target="_blank"
-          >
+          <a href="https://www.facebook.com/security/2fac/setup/intro" target="_blank">
             https://www.facebook.com/security/2fac/setup/intro
           </a>{" "}
           {t("join_now.step_three.code2FA.message.p_2")}{" "}

@@ -85,7 +85,7 @@
           "number": "2",
           "testimony": "Decidí intentar ganar dinero con FB4cash, ya que me interesaba saber cómo funciona. Puedo decir que es una gran manera de tener ingresos adicionales. ¡Simplemente he tenido que rellenar el formulario Y NADA MAS! Los chicos se encargan del resto yo simplemente me limito a recoger mi dinero en mi cuenta PayPal",
           "author": "Tony Smith",
-          "membership": "Miembro desde octubre 2021"
+          "membership": "Miembro desde enero 2021"
         },
         {
           "number": "3",
@@ -498,6 +498,7 @@
         "error_1": "Por favor, ingrese una foto confirmando el email asociado",
         "error_2": "El archivo puede pesar máximo 2mb",
         "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
+        "error_4": "El nombre del archivo no puede tener mas de 20 caracteres",
         "image_one": "Confirmación de email de Facebook. Ejemplo 1.",
         "image_two": "Confirmación de email de Facebook. Ejemplo 2.",
         "message": {
@@ -534,6 +535,7 @@
         "error_1": "Por favor, ingrese una foto confirmando el número de tu Administrado Comercial",
         "error_2": "El archivo puede pesar máximo 2mb",
         "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
+        "error_4": "El nombre del archivo no puede tener mas de 20 caracteres",
         "image_one": "Administrador comercial. Ejemplo 1.",
         "image_two": "Administrador comercial. Ejemplo 2.",
         "message": {
@@ -603,6 +605,7 @@
         "error_1": "Por favor, ingrese una foto confirmando su identidad",
         "error_2": "El archivo puede pesar máximo 2mb",
         "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
+        "error_4": "El nombre del archivo no puede tener mas de 20 caracteres",
         "message": "Envía una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento. (No modificar digitalmente) (Puedes usar, DNI, pasaporte o licencia de conducir)."
       },
       "referral": {
@@ -1418,6 +1421,7 @@
         "error_1": "Por favor, ingrese una foto confirmando su identidad",
         "error_2": "El archivo puede pesar máximo 2mb",
         "error_3": "El archivo solo puede tener formato PNG, JPG o JPEG",
+        "error_4": "El nombre del archivo no puede tener mas de 20 caracteres",
         "message": "Envía una foto de tu documento en alta resolución y legible, puedes cubrir cualquier detalle que desees, excepto la foto, el nombre completo y la fecha de nacimiento. (No modificar digitalmente) (Puedes usar, DNI, pasaporte o licencia de conducir)."
       },
       "old_referral_code": "Codigo de referente actual",

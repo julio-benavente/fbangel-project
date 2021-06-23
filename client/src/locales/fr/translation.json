@@ -86,7 +86,7 @@
           "number": "2",
           "testimony": "J'ai décidé d'essayer de gagner de l'argent avec FB4cash, car j'étais intéressé de savoir comment cela fonctionne. Je peux dire que c'est un excellent moyen d'avoir un revenu supplémentaire. J'ai juste eu à remplir le formulaire ET RIEN D'AUTRE ! Les gars s'occupent du reste je récupère juste mon argent sur mon compte PayPal ",
           "author": "Tony Smith",
-          "membership": "Membre depuis octobre 2021"
+          "membership": "Membre depuis janvier 2021"
         },
         {
           "number": "3",
@@ -505,6 +505,7 @@
         "error_1": "Veuillez saisir une photo confirmant l'email associé",
         "error_2": "Le fichier peut faire au maximum 2 Mo",
         "error_3": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
+        "error_4": "Le nom du fichier ne peut pas dépasser 20 caractères",
         "image_one": "Confirmation par e-mail Facebook. Exemple 1",
         "image_two": "Confirmation par e-mail Facebook. Exemple 2.",
         "message": {
@@ -541,6 +542,7 @@
         "error_1": "Veuillez saisir une photo confirmant le numéro de votre Administrateur Commercial",
         "error_2": "Le fichier peut faire au maximum 2 Mo",
         "error_3": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
+        "error_4": "Le nom du fichier ne peut pas dépasser 20 caractères",
         "image_one": "Administrateur Commercial. Exemple 1",
         "image_two": "Administrateur Commercial. Exemple 2.",
         "message": {
@@ -610,6 +612,7 @@
         "error_1": "Veuillez saisir une photo confirmant votre identité",
         "error_2": "Le fichier peut faire au maximum 2 Mo",
         "error_3": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
+        "error_4": "Le nom du fichier ne peut pas dépasser 20 caractères",
         "message": "Envoyez une photo de votre document en haute résolution et lisible, vous pouvez couvrir tous les détails que vous voulez, sauf la photo, le nom complet et la date de naissance. (Ne pas modifier numériquement) (Vous pouvez utiliser, pièce d'identité, passeport ou chauffeur licence)."
       },
       "referral": {
@@ -1426,6 +1429,7 @@
         "error_1": "Veuillez saisir une photo confirmant votre identité",
         "error_2": "Le fichier peut faire au maximum 2 Mo",
         "error_3": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
+        "error_4": "Le fichier ne peut être qu'au format PNG, JPG ou JPEG",
         "message": "Envoyez une photo de votre document en haute résolution et lisible, vous pouvez couvrir tous les détails que vous voulez, sauf la photo, le nom complet et la date de naissance. (Ne pas modifier numériquement) (Vous pouvez utiliser, pièce d'identité, passeport ou permis de conduire). "
       },
       "old_referral_code": "Code référent actuel",

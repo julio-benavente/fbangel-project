@@ -14,7 +14,7 @@ export const Home = styled.div`
 // Banner section
 export const BannerSection = styled.div`
   position: relative;
-  background-color: ${props => props.theme.color.background_alt};
+  background-color: ${(props) => props.theme.color.background_alt};
 `;
 
 export const BannerSectionWrapper = styled(Container)`
@@ -40,7 +40,7 @@ export const LeftSide = styled(Container)`
 export const Headline = styled(H1)`
   line-height: 1;
   margin-bottom: 10px;
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
 
   @media screen and ${breakpoint.sm} {
     text-align: center;
@@ -50,7 +50,7 @@ export const Headline = styled(H1)`
 export const Subheadline = styled(H4)`
   font-weight: 500;
   margin-bottom: 40px;
-  color: ${props => transparentize(0.2, props.theme.color.white)};
+  color: ${(props) => transparentize(0.2, props.theme.color.white)};
 
   @media screen and ${breakpoint.sm} {
     text-align: center;
@@ -61,8 +61,8 @@ export const StartButton = styled(Link)`
   ${RoundedBtn}
   font-weight: 500;
   transform: scale(1.2);
-  background-color: ${props => props.theme.color.secondary};
-  color: ${props => props.theme.color.white};
+  background-color: ${(props) => props.theme.color.secondary};
+  color: ${(props) => props.theme.color.white};
   justify-self: end;
   z-index: 10;
   @media screen and ${breakpoint.md} {
@@ -104,7 +104,7 @@ export const ProcessSection = styled(Container)`
   &::before {
     content: "";
     position: absolute;
-    background: ${props => props.theme.color.white};
+    background: ${(props) => props.theme.color.white};
     border-radius: 0.4rem;
     width: calc(100% + 40px);
     height: calc(100% + 100px);
@@ -152,7 +152,7 @@ export const CardSvgImage = styled.div`
 
 export const Number = styled.div`
   position: absolute;
-  color: ${props => transparentize(0.9, props.theme.color.secondary)};
+  color: ${(props) => transparentize(0.9, props.theme.color.secondary)};
   font-weight: 800;
   font-size: 6rem;
   line-height: 1;
@@ -174,14 +174,14 @@ export const Disclaimer = styled(Tiny)``;
 
 export const HowMuchSection = styled.div`
   background: cover center;
-  background-color: ${props => props.theme.color.background_alt};
+  background-color: ${(props) => props.theme.color.background_alt};
 
   /* background-size: cover; */
   /* background-position: center; */
 `;
 
 export const HowMuchSectionTitle = styled(H2)`
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
 `;
 
 export const HowMuchSectionWarpper = styled(Container)`
@@ -202,11 +202,11 @@ export const HowMuchSectionWarpper = styled(Container)`
 export const HowMuchInfo = styled.div`
   font-weight: 700;
   margin-bottom: 1rem;
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
   span {
     display: inline-block;
-    color: ${props => props.theme.color.black};
-    background-color: ${props => props.theme.color.yellow};
+    color: ${(props) => props.theme.color.black};
+    background-color: ${(props) => props.theme.color.yellow};
     padding: 2px 5px;
     margin-right: 5px;
     font-size: 1.2rem;
@@ -218,7 +218,7 @@ export const HowMuchImage = styled.div`
   width: clamp(240px, 25vw, 350px);
 
   svg {
-    fill: ${props => props.theme.color.white};
+    fill: ${(props) => props.theme.color.white};
   }
 
   img {
@@ -235,7 +235,7 @@ export const HowMuchImage = styled.div`
 
 export const HowItWorksBtn = styled(Link)`
   ${RoundedBtn}
-  background-color: ${props => props.theme.color.secondary};
+  background-color: ${(props) => props.theme.color.secondary};
   font-weight: 700;
   justify-self: center;
   font-size: 1.1rem;
@@ -286,7 +286,7 @@ export const RequirementsInfo = styled(Parragraph)`
   grid-column: 1/-1;
   p {
     span {
-      color: ${props => props.theme.color.green};
+      color: ${(props) => props.theme.color.green};
     }
   }
 `;
@@ -343,7 +343,7 @@ export const ReferralSectionWrapper = styled.div`
     justify-items: center;
     position: relative;
     width: 95%;
-    background-color: ${props => props.theme.color.background_alt};
+    background-color: ${(props) => props.theme.color.background_alt};
     background-size: cover;
     background-position: center;
     > * {
@@ -369,7 +369,7 @@ export const ReferralSectionTitle = styled(H2)`
   }
 `;
 export const ReferralInfo = styled(Parragraph)`
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
   max-width: 960px;
   font-weight: 600;
   p {
@@ -377,7 +377,7 @@ export const ReferralInfo = styled(Parragraph)`
     span {
       font-size: 2rem;
       display: block;
-      color: ${props => props.theme.color.lightGreen};
+      color: ${(props) => props.theme.color.lightGreen};
     }
   }
 `;
@@ -389,11 +389,10 @@ export const RegisterBtn = styled(Link)`
 
 export const ReferrealTiny = styled(Tiny)`
   margin-top: 3rem;
-  color: ${props => props.theme.color.white};
+  color: ${(props) => props.theme.color.white};
 
   @media screen and ${breakpoint.sm} {
-    color: ${props => props.theme.color.white};
-    margin-top: 150px;
+    color: ${(props) => props.theme.color.white};
   }
 `;
 export const FriendsImage = styled.img`
@@ -421,7 +420,7 @@ export const FriendsImage = styled.img`
 
 // Testimonies section
 export const TestimoniesSection = styled.div`
-  background-color: ${props => props.theme.color.gray100};
+  background-color: ${(props) => props.theme.color.gray100};
   overflow-x: hidden;
   position: relative;
 `;
@@ -454,7 +453,7 @@ export const TestimonyCard = styled.div`
     "author picture"
     "membership picture";
   padding: 24px;
-  box-shadow: 4px 4px 10px ${props => props.theme.color.gray300};
+  box-shadow: 4px 4px 10px ${(props) => props.theme.color.gray300};
   overflow-x: hidden;
 `;
 export const Testimony = styled.div`
@@ -468,7 +467,7 @@ export const Testimony = styled.div`
     width: calc(100% + 100px);
     left: -40px;
     height: 0.5px;
-    background-color: ${props => transparentize(0.6, props.theme.color.gray300)};
+    background-color: ${(props) => transparentize(0.6, props.theme.color.gray300)};
   }
 `;
 export const Author = styled.p`
@@ -505,7 +504,7 @@ export const Picture = styled.img`
 export const TestimoniesNavLink = styled.div`
   height: 10px;
   width: 30px;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.active ? props.theme.color.secondary : transparentize(0.6, props.theme.color.secondary)};
   cursor: pointer;
 `;

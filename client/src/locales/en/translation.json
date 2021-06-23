@@ -85,7 +85,7 @@
           "number": "2",
           "testimony": "I decided to try to make money with FB4cash, since I was interested to know how it works. I can say that it is a great way to have additional income. I simply had to fill out the form AND NOTHING ELSE! The guys take care of the rest, I just collect my money in my PayPal account.",
           "author": "Tony Smith",
-          "membership": "Member since October 2021"
+          "membership": "Member since January 2021"
         },
         {
           "number": "3",
@@ -498,6 +498,7 @@
         "error_1": "This field is required",
         "error_2": "The file can be up to 2mb",
         "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "error_4": "The file name cannot be longer than 20 characters",
         "image_one": "Email confirmation from Facebook. Example 1.",
         "image_two": "Email confirmation from Facebook. Example 2.",
         "message": {
@@ -534,6 +535,7 @@
         "error_1": "This field is required",
         "error_2": "The file can be up to 2mb",
         "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "error_4": "The file name cannot be longer than 20 characters",
         "image_one": "Business Manager. Example 1.",
         "image_two": "Business Manager. Example 2.",
         "message": {
@@ -603,6 +605,7 @@
         "error_1": "Please enter a photo confirming your identity",
         "error_2": "The file can be up to 2mb",
         "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "error_4": "The file name cannot be longer than 20 characters",
         "message": "Send a photo of your document in high resolution and legible, you can cover any detail you want, except the photo, the full name and the date of birth. (Do not modify digitally) (You can use, ID, passport or driver's license)."
       },
       "referral": {
@@ -1411,6 +1414,7 @@
         "error_1": "Please enter a photo confirming your identity",
         "error_2": "The file can be maximum 2mb",
         "error_3": "The file can only be in PNG, JPG or JPEG format",
+        "error_4": "The file name cannot be longer than 20 characters",
         "message": "Send a photo of your document in high resolution and legible, you can cover any detail you want, except the photo, full name and date of birth. (Do not modify digitally) (You can use, ID, passport or driver's license)."
       },
       "old_referral_code": "Current reference code",

@@ -34,11 +34,7 @@ const StepFour = () => {
     }
 
     if (paymentMethod === "paypal") {
-      unregister([
-        "stepFour.holderName",
-        "stepFour.bankAngency",
-        "stepFour.bankAccountCode",
-      ]);
+      unregister(["stepFour.holderName", "stepFour.bankAngency", "stepFour.bankAccountCode"]);
     }
   }, [paymentMethod]);
 
@@ -54,11 +50,7 @@ const StepFour = () => {
           [t("join_now.step_four.paymentMethod.option_1"), "paypal"],
           [t("join_now.step_four.paymentMethod.option_2"), "bank-peru"],
         ]}
-        error={
-          errors.stepFour &&
-          errors.stepFour.paymentMethod &&
-          errors.stepFour.paymentMethod.message
-        }
+        error={errors.stepFour && errors.stepFour.paymentMethod && errors.stepFour.paymentMethod.message}
         register={register("stepFour.paymentMethod", {
           required: {
             value: true,
@@ -71,11 +63,7 @@ const StepFour = () => {
           <TextInput
             className="paypalEmail"
             question={t("join_now.step_four.paypalEmail.question")}
-            error={
-              errors.stepFour &&
-              errors.stepFour.paypalEmail &&
-              errors.stepFour.paypalEmail.message
-            }
+            error={errors.stepFour && errors.stepFour.paypalEmail && errors.stepFour.paypalEmail.message}
             register={register("stepFour.paypalEmail", {
               required: {
                 value: true,
@@ -87,10 +75,7 @@ const StepFour = () => {
                 message: t("join_now.step_four.paypalEmail.error_2"),
               },
               validate: {
-                min: (v) =>
-                  v.length < 6
-                    ? t("join_now.step_four.paypalEmail.error_3")
-                    : true,
+                min: (v) => (v.length < 6 ? t("join_now.step_four.paypalEmail.error_3") : true),
               },
             })}
           />
@@ -106,9 +91,7 @@ const StepFour = () => {
             register={register("stepFour.paypalEmailConfirmation", {
               required: {
                 value: true,
-                message: t(
-                  "join_now.step_four.paypalEmailConfirmation.error_1"
-                ),
+                message: t("join_now.step_four.paypalEmailConfirmation.error_1"),
               },
               validate: {
                 isTheSame: (v) =>
@@ -128,11 +111,7 @@ const StepFour = () => {
           <TextInput
             className="holderName"
             question={t("join_now.step_four.holderName.question")}
-            error={
-              errors.stepFour &&
-              errors.stepFour.holderName &&
-              errors.stepFour.holderName.message
-            }
+            error={errors.stepFour && errors.stepFour.holderName && errors.stepFour.holderName.message}
             register={register("stepFour.holderName", {
               required: {
                 value: true,
@@ -143,11 +122,7 @@ const StepFour = () => {
           <TextInput
             className="bankAngency"
             question={t("join_now.step_four.bankAngency.question")}
-            error={
-              errors.stepFour &&
-              errors.stepFour.bankAngency &&
-              errors.stepFour.bankAngency.message
-            }
+            error={errors.stepFour && errors.stepFour.bankAngency && errors.stepFour.bankAngency.message}
             register={register("stepFour.bankAngency", {
               required: {
                 value: true,
@@ -158,11 +133,7 @@ const StepFour = () => {
           <TextInput
             className="bankAccountCode"
             question={t("join_now.step_four.bankAccountCode.question")}
-            error={
-              errors.stepFour &&
-              errors.stepFour.bankAccountCode &&
-              errors.stepFour.bankAccountCode.message
-            }
+            error={errors.stepFour && errors.stepFour.bankAccountCode && errors.stepFour.bankAccountCode.message}
             register={register("stepFour.bankAccountCode", {
               required: {
                 value: true,
@@ -173,10 +144,7 @@ const StepFour = () => {
                 message: t("join_now.step_four.bankAccountCode.error_2"),
               },
               validate: {
-                numberOfDigits: (v) =>
-                  v.length !== 20
-                    ? t("join_now.step_four.bankAccountCode.error_3")
-                    : true,
+                numberOfDigits: (v) => (v.length !== 20 ? t("join_now.step_four.bankAccountCode.error_3") : true),
               },
             })}
           />
@@ -189,25 +157,30 @@ const StepFour = () => {
       <FileInput
         className="documentImage"
         question={t("join_now.step_four.documentImage.question")}
-        error={
-          errors.stepFour &&
-          errors.stepFour.documentImage &&
-          errors.stepFour.documentImage.message
-        }
+        error={errors.stepFour && errors.stepFour.documentImage && errors.stepFour.documentImage.message}
         register={register("stepFour.documentImage", {
           required: {
             value: true,
             message: t("join_now.step_four.documentImage.error_1"),
           },
           validate: {
-            size: (v) =>
-              v[0].size > 2000000
-                ? t("join_now.step_four.documentImage.error_2")
-                : true,
+            size: (v) => (v[0].size > 2000000 ? t("join_now.step_four.documentImage.error_2") : true),
             type: (v) =>
               !["image/jpeg", "image/jpg", "image/png"].includes(v[0].type)
                 ? t("join_now.step_four.documentImage.error_3")
                 : true,
+
+            name: (v) => {
+              const name = v[0].name;
+              const split = name.split(".");
+              split.pop();
+              const joined = split.join(".");
+              if (joined.length > 20) {
+                return t("join_now.step_four.documentImage.error_4");
+              } else {
+                return true;
+              }
+            },
           },
         })}
       />
@@ -219,17 +192,10 @@ const StepFour = () => {
         className="referral"
         question={t("join_now.step_four.referral.question")}
         noRequired={true}
-        error={
-          errors.stepFour &&
-          errors.stepFour.referral &&
-          errors.stepFour.referral.message
-        }
+        error={errors.stepFour && errors.stepFour.referral && errors.stepFour.referral.message}
         register={register("stepFour.referral", {
           validate: {
-            max: (v) =>
-              v && v.length > 10
-                ? t("join_now.step_four.referral.error_1")
-                : true,
+            max: (v) => (v && v.length > 10 ? t("join_now.step_four.referral.error_1") : true),
           },
         })}
       />
@@ -239,11 +205,7 @@ const StepFour = () => {
         className="termsAndConditions"
         type="checkbox"
         options={[[t("join_now.step_four.termsAndConditions.option_1"), "yes"]]}
-        error={
-          errors.stepFour &&
-          errors.stepFour.termsAndConditions &&
-          errors.stepFour.termsAndConditions.message
-        }
+        error={errors.stepFour && errors.stepFour.termsAndConditions && errors.stepFour.termsAndConditions.message}
         register={register("stepFour.termsAndConditions", {
           required: {
             value: true,
@@ -262,11 +224,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.definitions.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.definitions.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.definitions.p", {
           returnObjects: true,
@@ -274,11 +232,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.recognition.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.recognition.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.recognition.p", {
           returnObjects: true,
@@ -286,11 +240,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.service_condition.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.service_condition.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.service_condition.p", {
           returnObjects: true,
@@ -298,9 +248,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t("join_now.step_four.termsAndConditionsMessage.privacy.title")}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.privacy.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.privacy.p", {
           returnObjects: true,
@@ -308,11 +256,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.property_promise.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.property_promise.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.property_promise.p", {
           returnObjects: true,
@@ -320,11 +264,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.compensation.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.compensation.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.compensation.p", {
           returnObjects: true,
@@ -332,9 +272,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t("join_now.step_four.termsAndConditionsMessage.payment.title")}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.payment.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.payment.p", {
           returnObjects: true,
@@ -342,11 +280,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.payment_calendar.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.payment_calendar.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.payment_calendar.p", {
           returnObjects: true,
@@ -354,11 +288,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.payment_method.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.payment_method.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.payment_method.p", {
           returnObjects: true,
@@ -366,41 +296,23 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.rental_termination.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.rental_termination.title")}</b>
         </p>
-        {t(
-          "join_now.step_four.termsAndConditionsMessage.rental_termination.p",
-          {
-            returnObjects: true,
-          }
-        ).map((p, index) => (
+        {t("join_now.step_four.termsAndConditionsMessage.rental_termination.p", {
+          returnObjects: true,
+        }).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.material_violation.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.material_violation.title")}</b>
         </p>
-        {t(
-          "join_now.step_four.termsAndConditionsMessage.material_violation.p",
-          {
-            returnObjects: true,
-          }
-        ).map((p, index) => (
+        {t("join_now.step_four.termsAndConditionsMessage.material_violation.p", {
+          returnObjects: true,
+        }).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.limited_liability.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.limited_liability.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.limited_liability.p", {
           returnObjects: true,
@@ -408,9 +320,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t("join_now.step_four.termsAndConditionsMessage.disclaimer.title")}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.disclaimer.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.disclaimer.p", {
           returnObjects: true,
@@ -418,33 +328,19 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.dispute_resolution.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.dispute_resolution.title")}</b>
         </p>
-        {t(
-          "join_now.step_four.termsAndConditionsMessage.dispute_resolution.p",
-          {
-            returnObjects: true,
-          }
-        ).map((p, index) => (
+        {t("join_now.step_four.termsAndConditionsMessage.dispute_resolution.p", {
+          returnObjects: true,
+        }).map((p, index) => (
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.severability_saiver.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.severability_saiver.title")}</b>
         </p>
-        {t(
-          "join_now.step_four.termsAndConditionsMessage.severability_saiver.p",
-          {
-            returnObjects: true,
-          }
-        ).map(({ tag, message }, index) => {
+        {t("join_now.step_four.termsAndConditionsMessage.severability_saiver.p", {
+          returnObjects: true,
+        }).map(({ tag, message }, index) => {
           {
             if (tag === "p") return <p key={index}>{message}</p>;
             if (tag === "i") {
@@ -457,11 +353,7 @@ const StepFour = () => {
           }
         })}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.interpretation.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.interpretation.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.interpretation.p", {
           returnObjects: true,
@@ -469,11 +361,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t(
-              "join_now.step_four.termsAndConditionsMessage.change_terms.title"
-            )}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.change_terms.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.change_terms.p", {
           returnObjects: true,
@@ -481,9 +369,7 @@ const StepFour = () => {
           <p key={index}>{p}</p>
         ))}
         <p>
-          <b>
-            {t("join_now.step_four.termsAndConditionsMessage.contact.title")}
-          </b>
+          <b>{t("join_now.step_four.termsAndConditionsMessage.contact.title")}</b>
         </p>
         {t("join_now.step_four.termsAndConditionsMessage.contact.p", {
           returnObjects: true,
@@ -497,11 +383,7 @@ const StepFour = () => {
         className="gdprAgreement"
         type="checkbox"
         options={[[t("join_now.step_four.gdprAgreement.option_1"), "yes"]]}
-        error={
-          errors.stepFour &&
-          errors.stepFour.gdprAgreement &&
-          errors.stepFour.gdprAgreement.message
-        }
+        error={errors.stepFour && errors.stepFour.gdprAgreement && errors.stepFour.gdprAgreement.message}
         register={register("stepFour.gdprAgreement", {
           required: {
             value: true,
@@ -509,11 +391,7 @@ const StepFour = () => {
           },
         })}
       />
-      {emailDuplicated && (
-        <div className="message error">
-          {t("join_now.step_four.emailDuplicateMessage")}
-        </div>
-      )}
+      {emailDuplicated && <div className="message error">{t("join_now.step_four.emailDuplicateMessage")}</div>}
     </FormFour>
   );
 };
