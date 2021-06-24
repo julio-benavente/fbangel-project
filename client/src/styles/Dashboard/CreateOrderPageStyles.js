@@ -15,6 +15,8 @@ export const CreateOrder = styled.div`
   padding: 10px;
   border-radius: 6px;
   overflow-y: auto;
+  position: relative;
+  z-index: 10;
 `;
 export const Title = styled(H2)``;
 
@@ -103,6 +105,7 @@ export const OrderWrapper = styled.div`
   min-width: 100%;
   max-height: 600px;
   overflow: auto;
+
   .tr {
     display: grid;
     grid-auto-columns: auto;

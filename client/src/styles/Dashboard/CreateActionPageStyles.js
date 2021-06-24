@@ -12,6 +12,7 @@ export const CreateAction = styled.div`
   padding: 10px;
   border-radius: 6px;
   overflow-y: auto;
+  z-index: 10;
 `;
 
 export const Title = styled(H2)``;
@@ -202,8 +203,7 @@ export const ChangeUserStatusTable = styled(Table)`
           background: ${(props) => transparentize(0.5, props.theme.color.blue)};
         }
         &.pending {
-          background: ${(props) =>
-            transparentize(0.85, props.theme.color.black)};
+          background: ${(props) => transparentize(0.85, props.theme.color.black)};
         }
         &.rejected {
           background: ${(props) => transparentize(0.5, props.theme.color.red)};
