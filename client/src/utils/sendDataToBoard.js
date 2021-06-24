@@ -23,8 +23,6 @@ const sendDataToBoard = async (data) => {
     const providers_source = "Massimo2";
     const geo = "en";
 
-    console.log("data.ip", data.ip);
-
     const dataToSend = {
       action: "send_data",
       first_name: data.firstName || "",

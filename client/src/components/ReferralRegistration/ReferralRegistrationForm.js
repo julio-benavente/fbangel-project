@@ -77,8 +77,6 @@ const Form = () => {
       const response = await fetchCandidateInformation(data);
       const { status } = response;
 
-      console.log("referral registration response", response);
-
       if (
         response &&
         response.response &&
@@ -122,7 +120,6 @@ const Form = () => {
       const response = await axios.post(url, candidateInformation);
       return response;
     } catch (error) {
-      console.log();
       return { error: error.message, response: error.response };
     }
   };

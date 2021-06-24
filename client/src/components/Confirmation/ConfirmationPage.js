@@ -42,8 +42,6 @@ const ConfirmatioPage = () => {
           setError(true);
         }
       }
-
-      console.log(response);
     };
 
     request();

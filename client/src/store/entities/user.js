@@ -20,7 +20,6 @@ const slice = createSlice({
     },
     userRequestSucceeded: (user, action) => {
       const { user: userResponse } = action.payload;
-      console.log("userResponse", userResponse);
       user.user = userResponse;
       user.loading = false;
       user.lastFetch = Date.now();

@@ -69,7 +69,6 @@ export const requestActions = () => (dispatch, getState) => {
 };
 
 export const changeUserStatus = (data) => async (dispatch, getState) => {
-  console.log("actionResponse");
   try {
     const actionResponse = await dispatch(
       apiCallBegan({
@@ -81,12 +80,9 @@ export const changeUserStatus = (data) => async (dispatch, getState) => {
     );
 
     if (actionResponse.type === newActionCreated.type) {
-      console.log("actionResponse", actionResponse.payload.action.details);
-
       await dispatch(usersStatusChanged(actionResponse.payload.action.details));
     }
 
-    console.log("actionResponse", actionResponse);
     return actionResponse;
   } catch (error) {
     return error;

@@ -101,13 +101,11 @@ const CreateOrderPage = ({ createOrderIsOpen, setCreateOrderIsOpen }) => {
     await setSendingOrder(true);
     try {
       const response = await dispatch(createOrderRequest(order));
-      console.log(response);
       if (response) {
         setPayments([]);
         setSendingOrder(false);
       }
     } catch (error) {
-      console.log(error);
       setSendingOrder(false);
     }
   };

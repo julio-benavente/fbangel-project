@@ -209,7 +209,6 @@ const UserSelectedTable = (props) => {
 
     try {
       const response = await dispatch(changeUserStatus(action));
-      console.log("page response", response);
       // clean selections
       setAction("");
     } catch ({ response }) {}

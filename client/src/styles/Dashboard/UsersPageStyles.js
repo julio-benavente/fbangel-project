@@ -149,13 +149,13 @@ export const PaymentsTable = styled.div`
           padding: 3px 5px;
           font-size: 0.75rem;
           border-radius: 4px;
-          &.approved {
+          &.paid {
             background: ${(props) => transparentize(0.5, props.theme.color.blue)};
           }
           &.pending {
             background: ${(props) => transparentize(0.85, props.theme.color.black)};
           }
-          &.rejected {
+          &.canceled {
             background: ${(props) => transparentize(0.5, props.theme.color.red)};
           }
         }

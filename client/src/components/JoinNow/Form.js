@@ -146,8 +146,6 @@ const Form = () => {
     candidateInformation.append("fbEmailImage", stepThree.fbEmailImage[0]);
     candidateInformation.append("bmIdImage", stepThree.bmIdImage[0]);
 
-    console.log("candidateInformation", candidateInformation);
-
     try {
       const response = await axios.post(url, candidateInformation);
       return response;

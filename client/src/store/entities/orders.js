@@ -84,7 +84,6 @@ export const requestOrders = () => (dispatch, getState) => {
 };
 
 export const createOrder = (data) => async (dispatch, getState) => {
-  console.log("data", data);
   try {
     const response = await dispatch(
       apiCallBegan({

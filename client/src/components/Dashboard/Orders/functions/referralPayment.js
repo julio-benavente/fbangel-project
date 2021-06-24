@@ -1,16 +1,18 @@
 const referralPayment = (users, products, order, setPayments, setOrder) => {
   const thisMonthReferrals = users.filter((user, index) => {
-    const status = user.status === "active";
+    const hasReferral = Boolean(user.referral);
+    const isActive = user.status === "active";
+    const isRentalUserType = user.userType === "rental";
 
     const date = new Date();
     const firstDayLastMonth = new Date(date.getFullYear(), date.getMonth() - 1, 1);
     const lastDayLastMonth = new Date(date.getFullYear(), date.getMonth(), 0);
 
-    const lastMonth =
+    const itsFromLastMonth =
       firstDayLastMonth <= new Date(user.creationDate) && new Date(user.creationDate) <= lastDayLastMonth;
-    const hasBeenPaid = user.referralHasBeenPaid === false;
+    const referralHasNotBeenPaid = user.referralHasBeenPaid === false;
 
-    return status && lastMonth && hasBeenPaid;
+    return hasReferral && isActive && isRentalUserType && itsFromLastMonth && referralHasNotBeenPaid;
   });
 
   const product = products.find((product) => product.abrv === "referral");

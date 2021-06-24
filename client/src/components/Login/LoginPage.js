@@ -51,7 +51,7 @@ const LoginPage = () => {
   const password = useWatch({ control, name: "password" });
 
   const { push } = useHistory();
-  const onSubmit = async data => {
+  const onSubmit = async (data) => {
     const response = await dispatch(
       logIn({
         email,
@@ -59,13 +59,11 @@ const LoginPage = () => {
       })
     );
 
-    console.log(response);
-
     response.type === loginSucceeded.type && push("/dashboard");
   };
 
   const [emailConfirmationSent, setEmailConfirmationSent] = useState(false);
-  const sendEmailConfirmation = email => {
+  const sendEmailConfirmation = (email) => {
     setEmailConfirmationSent(true);
     axios.post("/auth/send-confirmation-email", {
       email,
@@ -97,7 +95,7 @@ const LoginPage = () => {
                 },
 
                 validate: {
-                  min: v => (v.length < 6 ? t("login.email_error_min") : true),
+                  min: (v) => (v.length < 6 ? t("login.email_error_min") : true),
                 },
                 pattern: {
                   value:
@@ -121,7 +119,7 @@ const LoginPage = () => {
                   message: t("login.password_error_required"),
                 },
                 validate: {
-                  min: v => (v.length < 6 ? t("login.password_error_min") : true),
+                  min: (v) => (v.length < 6 ? t("login.password_error_min") : true),
                 },
               })}
             />

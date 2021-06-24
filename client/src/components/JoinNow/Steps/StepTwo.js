@@ -13,16 +13,7 @@ import { FormTwo } from "../../../styles/JoinNowPageStyles";
 import "react-phone-input-2/lib/style.css";
 import "react-datepicker/dist/react-datepicker.css";
 
-const StepTwo = ({
-  country,
-  setCountry,
-  region,
-  setRegion,
-  phone,
-  setPhone,
-  date,
-  setDate,
-}) => {
+const StepTwo = ({ country, setCountry, region, setRegion, phone, setPhone, date, setDate }) => {
   const { t } = useTranslation();
   const methods = useFormContext();
   const {
@@ -37,8 +28,6 @@ const StepTwo = ({
 
   useEffect(() => {
     datePicker.current.input.readOnly = true;
-    // readOnly = true;
-    // console.log(readOnly);
   }, []);
 
   return (
@@ -56,11 +45,7 @@ const StepTwo = ({
             message: t("join_now.step_two.name.error_2"),
           },
         })}
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.firstName &&
-          errors.stepTwo.firstName.message
-        }
+        error={errors.stepTwo && errors.stepTwo.firstName && errors.stepTwo.firstName.message}
       />
 
       <TextInput
@@ -76,21 +61,13 @@ const StepTwo = ({
             message: t("join_now.step_two.lastname.error_2"),
           },
         })}
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.lastName &&
-          errors.stepTwo.lastName.message
-        }
+        error={errors.stepTwo && errors.stepTwo.lastName && errors.stepTwo.lastName.message}
       />
 
       <TextInput
         className="countryDropdown"
         question={t("join_now.step_two.country.question")}
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.country &&
-          errors.stepTwo.country.message
-        }
+        error={errors.stepTwo && errors.stepTwo.country && errors.stepTwo.country.message}
         component={
           <Controller
             name="stepTwo.country"
@@ -122,9 +99,7 @@ const StepTwo = ({
       <TextInput
         question={t("join_now.step_two.city.question")}
         className="regionDropdown"
-        error={
-          errors.stepTwo && errors.stepTwo.city && errors.stepTwo.city.message
-        }
+        error={errors.stepTwo && errors.stepTwo.city && errors.stepTwo.city.message}
         component={
           <Controller
             control={control}
@@ -157,11 +132,7 @@ const StepTwo = ({
       <TextInput
         className="birthday"
         question={t("join_now.step_two.birthday.question")}
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.birthday &&
-          errors.stepTwo.birthday.message
-        }
+        error={errors.stepTwo && errors.stepTwo.birthday && errors.stepTwo.birthday.message}
         component={
           <Controller
             control={control}
@@ -215,9 +186,7 @@ const StepTwo = ({
       <TextInput
         className="phone"
         question={t("join_now.step_two.phone.question")}
-        error={
-          errors.stepTwo && errors.stepTwo.phone && errors.stepTwo.phone.message
-        }
+        error={errors.stepTwo && errors.stepTwo.phone && errors.stepTwo.phone.message}
         component={
           <Controller
             name="stepTwo.phone"
@@ -229,15 +198,11 @@ const StepTwo = ({
                 message: t("join_now.step_two.phone.error_1"),
               },
               pattern: {
-                value:
-                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
                 message: t("join_now.step_two.phone.error_2"),
               },
               validate: {
-                max: (v) =>
-                  v.length >= 15
-                    ? t("join_now.step_two.phone.max_error")
-                    : true,
+                max: (v) => (v.length >= 15 ? t("join_now.step_two.phone.max_error") : true),
               },
             }}
             render={({ name, field: { onChange, onBlur } }) => {
@@ -262,9 +227,7 @@ const StepTwo = ({
       <TextInput
         className="email"
         question={t("join_now.step_two.email.question")}
-        error={
-          errors.stepTwo && errors.stepTwo.email && errors.stepTwo.email.message
-        }
+        error={errors.stepTwo && errors.stepTwo.email && errors.stepTwo.email.message}
         register={register("stepTwo.email", {
           required: {
             value: true,
@@ -282,21 +245,15 @@ const StepTwo = ({
         className="password"
         question={t("join_now.step_two.password.question")}
         type="password"
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.password &&
-          errors.stepTwo.password.message
-        }
+        error={errors.stepTwo && errors.stepTwo.password && errors.stepTwo.password.message}
         register={register("stepTwo.password", {
           required: {
             value: true,
             message: t("join_now.step_two.password.required_error"),
           },
           validate: {
-            min: (v) =>
-              v.length < 8 ? t("join_now.step_two.password.min_error") : true,
-            max: (v) =>
-              v.length >= 15 ? t("join_now.step_two.password.max_error") : true,
+            min: (v) => (v.length < 8 ? t("join_now.step_two.password.min_error") : true),
+            max: (v) => (v.length >= 15 ? t("join_now.step_two.password.max_error") : true),
           },
         })}
       />
@@ -305,23 +262,15 @@ const StepTwo = ({
         className="passwordConfirmation"
         question={t("join_now.step_two.password_confirmation.question")}
         type="password"
-        error={
-          errors.stepTwo &&
-          errors.stepTwo.passwordConfirmation &&
-          errors.stepTwo.passwordConfirmation.message
-        }
+        error={errors.stepTwo && errors.stepTwo.passwordConfirmation && errors.stepTwo.passwordConfirmation.message}
         register={register("stepTwo.passwordConfirmation", {
           required: {
             value: true,
-            message: t(
-              "join_now.step_two.password_confirmation.required_error"
-            ),
+            message: t("join_now.step_two.password_confirmation.required_error"),
           },
           validate: {
             isTheSame: (v) =>
-              !(v === getValues("stepTwo.password"))
-                ? t("join_now.step_two.password_confirmation.same_error")
-                : true,
+              !(v === getValues("stepTwo.password")) ? t("join_now.step_two.password_confirmation.same_error") : true,
           },
         })}
       />

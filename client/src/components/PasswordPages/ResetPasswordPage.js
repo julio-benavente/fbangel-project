@@ -48,7 +48,7 @@ const LoginPage = () => {
   const [resetPasswordConfirmation, setResetPasswordConfirmation] = useState(false);
   const [resetPasswordError, setResetPasswordError] = useState(false);
 
-  const onSubmit = async data => {
+  const onSubmit = async (data) => {
     try {
       const response = await axios.put(`/auth/reset-password/${token}`, {
         password,
@@ -57,8 +57,6 @@ const LoginPage = () => {
       if (response) {
         setResetPasswordConfirmation(true);
       }
-
-      console.log(response);
     } catch ({ response }) {
       setResetPasswordError(true);
     }
@@ -92,7 +90,7 @@ const LoginPage = () => {
                       message: t("reset_password.password_error_required"),
                     },
                     validate: {
-                      min: v => (v.length < 6 ? t("reset_password.password_error_min") : true),
+                      min: (v) => (v.length < 6 ? t("reset_password.password_error_min") : true),
                     },
                   })}
                 />
@@ -110,7 +108,7 @@ const LoginPage = () => {
                       message: t("reset_password.password_confirmation_error_required"),
                     },
                     validate: {
-                      same: v => (v !== password ? t("reset_password.password_confirmation_error_same") : true),
+                      same: (v) => (v !== password ? t("reset_password.password_confirmation_error_same") : true),
                     },
                   })}
                 />

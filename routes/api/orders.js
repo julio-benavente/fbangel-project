@@ -38,17 +38,22 @@ router.post("/create-order", auth, async (req, res) => {
   const payments = await Promise.all(
     payees.map(async ({ id, referenceId, referenceReferral, concept: paymentConcept }) => {
       try {
-        const user = await User.findOne({ _id: id });
+        const user = await User.findOne({ _id: id }, (error, user) => {
+          if (error) {
+            // If the user entered and wrong referral code as his referral
+            // with this the reference will be 'paid' and will not longer appear again to be paid
+            if (product.abrv === "referral") {
+              User.findByIdAndUpdate(referenceId, {
+                $set: { referralHasBeenPaid: true },
+              }).exec();
+            }
+          }
+          return user;
+        });
+
+        console.log(user);
 
         if (!user) {
-          // If the user entered and wrong referral code as his referral
-          // with this the reference will be 'paid' and will not longer appear again to be paid
-          if (product.abrv === "referral") {
-            User.findByIdAndUpdate(referenceId, {
-              $set: { referralHasBeenPaid: true },
-            }).exec();
-          }
-
           throw Error("User doesn't exit or is not logged in");
         }
 
