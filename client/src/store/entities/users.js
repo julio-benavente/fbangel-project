@@ -1,7 +1,6 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { apiCallBegan } from "../actions/api";
 import { createSelector } from "reselect";
-import { tierAndFirstRentPaidAdded } from "./payments";
 import moment from "moment";
 const initialState = () => ({
   loading: false,
@@ -43,8 +42,6 @@ const slice = createSlice({
       const { user: userResponse } = action.payload;
       users.user = userResponse;
       users.loading = false;
-
-      tierAndFirstRentPaidAdded({ tier: userResponse.tier, firstRentPaid: userResponse.firstRentPaid });
 
       return users;
     },
