@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
 import { requestUsers, getUsers, getUsersState } from "../../../store/entities/users";
+import { requestPayments } from "../../../store/entities/payments";
 import { useDispatch, useSelector } from "react-redux";
 import Pagination from "rc-pagination";
 import { useTranslation } from "react-i18next";
@@ -102,6 +103,7 @@ const UsersPage = () => {
   const users = useSelector(getUsers);
   useEffect(() => {
     dispatch(requestUsers());
+    dispatch(requestPayments());
   }, []);
 
   // PAGINATION

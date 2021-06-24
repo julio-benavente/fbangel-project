@@ -61,6 +61,7 @@ export const NavLinks = styled.div`
 export const NavbarLink = styled.div`
   position: relative;
   align-self: center;
+  justify-self: center;
 
   @media screen and (max-width: 1000px) {
     margin-bottom: 20px;
@@ -167,9 +168,7 @@ export const Menu = styled.div`
   right: 40px;
   border-radius: 1000px;
   background: ${(props) =>
-    props.open
-      ? transparentize(0.5, props.theme.color.primary)
-      : transparentize(0.85, props.theme.color.white)};
+    props.open ? transparentize(0.5, props.theme.color.primary) : transparentize(0.85, props.theme.color.white)};
   transform: translateY(-50%);
   width: 40px;
   height: 40px;

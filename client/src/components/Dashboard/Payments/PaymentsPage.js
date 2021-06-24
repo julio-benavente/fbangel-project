@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import {
   requestUserPayments,
   requestPayments,
-  getUserPayments,
+  getUsersPayments,
   getPaymentsState,
 } from "../../../store/entities/payments";
 import { getUser as getUserInformation, requestUser as requestUserInformation } from "../../../store/entities/users";
@@ -24,7 +24,7 @@ const PaymentsPage = () => {
   const dispatch = useDispatch();
 
   const { loading } = useSelector(getPaymentsState);
-  const payments = useSelector(getUserPayments);
+  const payments = useSelector(getUsersPayments);
   const userInformation = useSelector(getUserInformation);
   const user = useSelector(getUser);
 

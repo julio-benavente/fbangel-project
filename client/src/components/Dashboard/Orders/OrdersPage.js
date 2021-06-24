@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../store/auth/auth";
 import { getOrders, getOrdersState, requestOrders } from "../../../store/entities/orders";
+import { requestUser } from "../../../store/entities/users";
 import { requestPayments } from "../../../store/entities/payments";
 import Pagination from "rc-pagination";
 import { useTranslation } from "react-i18next";

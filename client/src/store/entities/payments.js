@@ -5,8 +5,6 @@ import moment from "moment";
 
 const initialState = () => ({
   loading: false,
-  tier: "tierOne",
-  firstRentPaid: false,
   list: [],
   lastFetch: null,
 });
@@ -24,9 +22,8 @@ const slice = createSlice({
       const {
         payments: { list, firstRentPaid, tier },
       } = action.payload;
+
       payments.list = list || payments.list;
-      payments.tier = tier || payments.tier;
-      payments.firstRentPaid = firstRentPaid || payments.firstRentPaid;
       payments.lastFetch = Date.now();
       payments.loading = false;
 
@@ -61,6 +58,7 @@ export const {
   paymentsRequested,
   paymentsStatusChanged,
   paymentsCreated,
+  tierAndFirstRentPaidAdded,
 } = slice.actions;
 
 // Actions
@@ -105,10 +103,20 @@ export const requestPayments = () => (dispatch, getState) => {
 };
 
 // Selectors
-export const getUserPayments = createSelector(
+export const getUsersPayments = createSelector(
   (state) => state.entities.payments.list,
   (list) => list.slice().sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
 );
+
+export const getUserPayments = (id) =>
+  createSelector(
+    (state) => state.entities.payments.list,
+    (payments) =>
+      payments
+        .filter((payment) => payment.payee._id === id)
+        .slice()
+        .sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
+  );
 
 export const getPaymentsState = createSelector(
   (state) => state.entities.payments,

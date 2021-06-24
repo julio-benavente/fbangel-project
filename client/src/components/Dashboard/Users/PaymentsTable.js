@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { PaymentsTable } from "../../../styles/Dashboard/UsersPageStyles";
 import { useTranslation } from "react-i18next";
+import { getUserPayments } from "../../../store/entities/payments";
+import { useSelector } from "react-redux";
 
 const Table = (props) => {
   const [paymentsTableWidth, setPaymentsTableWidth] = useState(null);
 
-  const { payments } = props;
+  const { userid } = props;
+
+  const payments = useSelector(getUserPayments(userid));
 
   // This provides to the PAYMENT TABLE a table width behavior. All of the columns are going to have the same width
   useEffect(() => {
@@ -47,8 +51,7 @@ const Table = (props) => {
           var template = "";
           columns.map((column) => {
             const { width, min } = column;
-            const value =
-              (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
+            const value = (realWidth * width) / 100 > min ? `${width}%` : `${min}px`;
             template += `${value} `;
             return null;
           });
@@ -82,17 +85,9 @@ const Table = (props) => {
           </div>
         </div>
         <div className="tbody">
-          {payments.list.length !== 0 &&
-            payments.list.map((payment, index) => {
-              const {
-                amount,
-                concept,
-                id,
-                paymentDate,
-                paypalEmail,
-                paymentMethod,
-                status,
-              } = payment;
+          {payments.length !== 0 &&
+            payments.map((payment, index) => {
+              const { amount, concept, id, paymentDate, paypalEmail, paymentMethod, status } = payment;
 
               const date = new Date(paymentDate).toLocaleDateString([], {
                 day: "2-digit",
@@ -101,18 +96,12 @@ const Table = (props) => {
               });
 
               return (
-                <div
-                  className="tr"
-                  key={index}
-                  style={{ ...paymentsTableWidth }}
-                >
+                <div className="tr" key={index} style={{ ...paymentsTableWidth }}>
                   <div className="td concept">{concept}</div>
-                  <div className="td paymentMethod">{`${
-                    paymentMethod ? paymentMethod[0].toUpperCase() : ""
-                  }${paymentMethod ? paymentMethod.slice(1) : ""}`}</div>
-                  <div className="td paymentDate">
-                    {paymentDate ? date : "-"}
-                  </div>
+                  <div className="td paymentMethod">{`${paymentMethod ? paymentMethod[0].toUpperCase() : ""}${
+                    paymentMethod ? paymentMethod.slice(1) : ""
+                  }`}</div>
+                  <div className="td paymentDate">{paymentDate ? date : "-"}</div>
                   <div className={`td status ${status}`}>{status}</div>
                   <div className="td amount ">{`$ ${amount.toFixed(2)}`}</div>
                 </div>

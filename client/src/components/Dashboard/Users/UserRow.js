@@ -5,25 +5,11 @@ import { useTranslation } from "react-i18next";
 import PaymentsTable from "./PaymentsTable";
 
 // Styles
-import {
-  MoreInformationWrapper,
-  UserRowWrapper,
-} from "../../../styles/Dashboard/UsersPageStyles";
+import { MoreInformationWrapper, UserRowWrapper } from "../../../styles/Dashboard/UsersPageStyles";
 
 const UserRow = ({ ...props }) => {
   const { user, usersTableWidth } = props;
-  const {
-    id,
-    firstName,
-    lastName,
-    email,
-    status,
-    country,
-    phone,
-    payments,
-    userType,
-    ...moreInformation
-  } = user;
+  const { _id, firstName, lastName, email, status, country, phone, userType, ...moreInformation } = user;
 
   const [paymentsIsOpen, setPaymentsIsOpen] = useState(false);
   const [moreInformationIsOpen, setMoreInformationIsOpen] = useState(false);
@@ -34,31 +20,20 @@ const UserRow = ({ ...props }) => {
     <UserRowWrapper>
       <div className="tr" style={{ ...usersTableWidth }}>
         <div className="td name">{`${firstName} ${lastName}`}</div>
-        <div
-          className={`td status ${status}`}
-        >{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
+        <div className={`td status ${status}`}>{`${status[0].toUpperCase()}${status.slice(1)}`}</div>
         <div className={`td userType`}>{userType}</div>
         <div className="td email">{email}</div>
         <div className="td country">{country}</div>
         <div className="td phone">{phone}</div>
-        <button
-          type="button"
-          className="td payments"
-          onClick={() => setPaymentsIsOpen(!paymentsIsOpen)}
-        >
+        <button type="button" className="td payments" onClick={() => setPaymentsIsOpen(!paymentsIsOpen)}>
           {t("users.user_row.payments")}
         </button>
-        <button
-          className="td moreInformation"
-          onClick={() => setMoreInformationIsOpen(!moreInformationIsOpen)}
-        >
+        <button className="td moreInformation" onClick={() => setMoreInformationIsOpen(!moreInformationIsOpen)}>
           {t("users.user_row.more_information")}
         </button>
       </div>
-      {paymentsIsOpen && <PaymentsTable payments={payments} />}
-      {moreInformationIsOpen && (
-        <MoreInformation moreInformation={moreInformation} />
-      )}
+      {paymentsIsOpen && <PaymentsTable userid={_id} />}
+      {moreInformationIsOpen && <MoreInformation moreInformation={moreInformation} />}
     </UserRowWrapper>
   );
 };
@@ -101,9 +76,7 @@ export const MoreInformation = (props) => {
 
   return (
     <MoreInformationWrapper>
-      <div className="moreInformationTitle">
-        {t("users.user_row.more_information")}
-      </div>
+      <div className="moreInformationTitle">{t("users.user_row.more_information")}</div>
       <div className="information">
         <p>
           <b>{t("users.user_row.address")}: </b>

@@ -56,12 +56,12 @@
       "info": {
         "p_1": {
           "0": "Nous avons un programme de parrainage pour vous ! Si vous nous amenez de la famille ou des amis, vous pouvez gagner plus que",
-          "1": "1000 dollars",
+          "1": "$ 1000",
           "2": "par mois."
         },
         "p_2": {
           "0": "Activez votre code de parrainage et gagnez",
-          "1": "5 dollars",
+          "1": "$ 5",
           "2": "pour chaque parrainage valide. Aucune limite!"
         }
       },
@@ -1000,7 +1000,7 @@
     "info": {
       "0": "Inscrivez-vous ici",
       "1": "augmenter sérieusement vos revenus et obtenir",
-      "2": "5 dollars ",
+      "2": "$ 5 ",
       "3": "par référencement"
     },
     "list": {
