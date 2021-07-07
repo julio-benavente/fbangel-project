@@ -128,11 +128,24 @@ export const LanguageDropdown = styled.div`
 
 export const GlobalIcon = styled.div`
   cursor: pointer;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
   svg {
     width: 30px;
     height: 30px;
-    path {
-      fill: white;
+
+    &:first-of-type {
+      margin: 5px;
+    }
+
+    &.arrow {
+      width: 15px;
+      height: 15px;
+      transform: rotate(-90deg);
+      path {
+        fill: ${(props) => props.theme.color.white};
+      }
     }
   }
 `;

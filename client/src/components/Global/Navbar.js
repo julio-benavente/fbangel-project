@@ -21,7 +21,7 @@ import {
 // Assets
 import { ReactComponent as OpenNav } from "../../assets/svgs/menu.svg";
 import { ReactComponent as CloseNav } from "../../assets/svgs/close.svg";
-import { ReactComponent as GlobalSvg } from "../../assets/svgs/global.svg";
+import { ReactComponent as DownArrowSvg } from "../../assets/svgs/bold_arrow.svg";
 
 const hamburgerMenuVariants = {
   initial: { opacity: 0 },
@@ -147,18 +147,8 @@ const Navbar = () => {
               variants={navbarVariants}
             >
               {navLinks.map(({ link, to, active, className }, index) => (
-                <NavbarLink
-                  key={index}
-                  as={motion.div}
-                  variants={navLinkVariants}
-                  onClick={closeNavbar}
-                >
-                  <Link
-                    to={to}
-                    exact
-                    className={className}
-                    activeClassName={active}
-                  >
+                <NavbarLink key={index} as={motion.div} variants={navLinkVariants} onClick={closeNavbar}>
+                  <Link to={to} exact className={className} activeClassName={active}>
                     {link}
                   </Link>
                 </NavbarLink>
@@ -167,11 +157,15 @@ const Navbar = () => {
           )}
         </AnimatePresence>
 
-        <LanguageDropdown
-          onClick={() => setLanguageDropdownIsOn(!languageDropdownIsOn)}
-        >
+        <LanguageDropdown onClick={() => setLanguageDropdownIsOn(!languageDropdownIsOn)}>
           <GlobalIcon>
-            <GlobalSvg />
+            {languages.map((language) => {
+              if (language.code === i18next.language) {
+                console.log(language.code === i18next.language);
+                return language.flag;
+              }
+            })}
+            <DownArrowSvg className="arrow" />
           </GlobalIcon>
           {languageDropdownIsOn && (
             <Languages>
@@ -195,9 +189,7 @@ const Navbar = () => {
         {widthMark && (
           <Menu open={navIsOpen}>
             {!navIsOpen && <OpenNav className="openNav" onClick={openNavbar} />}
-            {navIsOpen && (
-              <CloseNav className="closeNav" onClick={closeNavbar} />
-            )}
+            {navIsOpen && <CloseNav className="closeNav" onClick={closeNavbar} />}
           </Menu>
         )}
       </NavbarWrapper>
