@@ -34,7 +34,9 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(3);
+
+  const devStep = 1;
+  const [formStep, setFormStep] = useState(process.env.NODE_ENV === "development" ? devStep : 1);
   const formData = useRef();
 
   const defaultValues = {
