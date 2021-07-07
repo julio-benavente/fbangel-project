@@ -289,7 +289,7 @@ const Form = () => {
         <Forms onSubmit={handleSubmit(onSubmit)} ref={formData}>
           {showStep(formStep)}
           {renderButton()}
-          <pre>{JSON.stringify(watch(), null, 2)}</pre>
+          {process.env.NODE_ENV === "development" && <pre>{JSON.stringify(watch(), null, 2)}</pre>}
         </Forms>
       </FormProvider>
     </FormsWrapper>
