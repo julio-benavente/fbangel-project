@@ -82,7 +82,7 @@ const Form = () => {
       stepFour: {
         referral: token,
       },
-      ...defaultValues,
+      defaultValues: process.env.NODE_ENV === "development" ? defaultValues : null,
     },
   });
 
