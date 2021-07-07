@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Lightbox } from "react-modal-image";
 import { useTranslation } from "react-i18next";
-import NumberFormat from "react-number-format";
+import { templateFormatter } from "input-format";
 
 // Components
 import FileInput from "../FileInput";
@@ -34,7 +34,7 @@ const StepThree = () => {
     formState: { errors },
   } = methods;
 
-  const [code2FA, setCode2FA] = useState(null);
+  const [code2FA, setCode2FA] = useState("");
 
   return (
     <FormThree>
@@ -282,10 +282,19 @@ const StepThree = () => {
             <InputWraper className="code2FA">
               <Question>{t("join_now.step_three.code2FA.question")}</Question>
 
-              <NumberFormat
-                format="####-####-####-####-####-####-####-####-####"
-                mask="_"
-                onValueChange={({ value }) => {
+              <input
+                type="text"
+                value={code2FA}
+                maxLength="39"
+                onChange={(e) => {
+                  const value = e.target.value.replace(/-/g, "");
+                  console.log("value", value);
+
+                  const TEMPLATE = "xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx";
+                  const format = templateFormatter(TEMPLATE);
+                  const { text } = format(value);
+
+                  setCode2FA(text);
                   onChange(value);
                 }}
               />

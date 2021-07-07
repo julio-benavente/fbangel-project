@@ -34,7 +34,7 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 
 const Form = () => {
   const { t } = useTranslation();
-  const [formStep, setFormStep] = useState(1);
+  const [formStep, setFormStep] = useState(3);
   const formData = useRef();
 
   const defaultValues = {
@@ -287,7 +287,7 @@ const Form = () => {
         <Forms onSubmit={handleSubmit(onSubmit)} ref={formData}>
           {showStep(formStep)}
           {renderButton()}
-          {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+          <pre>{JSON.stringify(watch(), null, 2)}</pre>
         </Forms>
       </FormProvider>
     </FormsWrapper>
