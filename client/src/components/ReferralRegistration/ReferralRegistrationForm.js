@@ -121,10 +121,6 @@ const Form = () => {
       const response = await axios.post(url, candidateInformation);
       return response;
     } catch (error) {
-      console.log(
-        "🚀 ~ file: ReferralRegistrationForm.js ~ line 124 ~ fetchCandidateInformation ~ error",
-        error.response
-      );
       return { error: error.message, response: error.response };
     }
   };
