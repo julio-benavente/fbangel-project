@@ -151,8 +151,6 @@ router.post("/registration/:userType", upload, async (req, res) => {
       throw Error("Incomplete registration");
     }
 
-    console.log("dataToSendBoard.holderName", dataToSendBoard.holderName);
-
     res.json({ message: "Succesful user registration", user: dataToSendBoard });
   } catch (e) {
     // console.log(e);

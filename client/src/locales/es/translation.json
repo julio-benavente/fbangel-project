@@ -566,7 +566,8 @@
       "paymentMethod": {
         "question": "Método de pago",
         "option_1": "Paypal",
-        "option_2": "Cuenta bancaria - Solo para Perú",
+        "option_2": "Otros bancos - Solo para Perú",
+        "option_3": "Banco BCP - Solo para Perú",
         "error_1": "Por favor, seleccione un método de pago"
       },
       "paypalEmail": {
@@ -593,9 +594,11 @@
       },
       "bankAccountCode": {
         "question": "Código de Cuenta Interbancaria",
+        "question_alt": "Código de Cuenta Bancaria BCP",
         "error_1": "Por favor, ingrese el código de cuenta interbancaria",
         "error_2": "El código solo debe contener números",
-        "error_3": "El código debe contar con 20 dígitos"
+        "error_3": "El código debe contar con 20 dígitos",
+        "error_4": "El código debe contar con 14 dígitos"
       },
       "bankMessage": {
         "p_1": "Solo válido para CCI peruano. Verifique que su CCI es 100% correcto. No nos hacemos responsables de datos incorrectos."
@@ -1384,7 +1387,8 @@
       "paymentMethod": {
         "question": "Método de pago",
         "option_1": "PayPal",
-        "option_2": "Cuenta bancaria - Solo para Perú",
+        "option_2": "Otros bancos - Solo para Perú",
+        "option_3": "Banco BCP - Solo para Perú",
         "error_1": "Por favor, seleccione un método de pago"
       },
       "paypalEmail": {
@@ -1411,9 +1415,11 @@
       },
       "bankAccountCode": {
         "question": "Código de Cuento Interbancaria",
+        "question_alt": "Código de Cuenta Bancaria BCP",
         "error_1": "Por favor, ingrese el código de cuenta interbancaria",
         "error_2": "El código solo debe contener números",
-        "error_3": "El código debe contar con 20 dígitos"
+        "error_3": "El código debe contar con 20 dígitos",
+        "error_4": "El código debe contar con 14 dígitos"
       },
       "bankMessage": {
         "p_1": "Solo válido para CCI peruano. Verifique que su CCI es 100% correcto. No nos hacemos responsables de datos incorrectos."

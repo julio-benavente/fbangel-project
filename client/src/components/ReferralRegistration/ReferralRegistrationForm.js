@@ -29,14 +29,15 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 const Form = () => {
   const { t } = useTranslation();
 
-  const [formStep, setFormStep] = useState(1);
+  const devStep = 2;
+  const [formStep, setFormStep] = useState(process.env.NODE_ENV === "development" ? devStep : 1);
   const formData = useRef();
   const defaultValues = {
     stepOne: {
-      firstName: "Lixeb",
-      lastName: "Loco",
+      firstName: "Test",
+      lastName: "Test",
       address: "Calle La loca vecindad 46",
-      email: "weravo8934@awinceo.com",
+      email: "neciyaj551@nhmty.com",
       country: "Peru",
       city: "Lima",
       zipCode: "16351",
@@ -47,8 +48,8 @@ const Form = () => {
     },
     stepTwo: {
       paymentMethod: "paypal",
-      paypalEmail: "weravo8934@awinceo.com",
-      paypalEmailConfirmation: "weravo8934@awinceo.com",
+      paypalEmail: "neciyaj551@nhmty.com",
+      paypalEmailConfirmation: "neciyaj551@nhmty.com",
       holderName: "Eloy",
       bankAngency: "El banco de Eloy",
       bankAccountCode: "13254132541325413254",
@@ -60,7 +61,7 @@ const Form = () => {
   };
   const methods = useForm({
     mode: "all",
-    // defaultValues,
+    defaultValues: process.env.NODE_ENV === "development" && defaultValues,
   });
 
   const {
@@ -120,6 +121,10 @@ const Form = () => {
       const response = await axios.post(url, candidateInformation);
       return response;
     } catch (error) {
+      console.log(
+        "🚀 ~ file: ReferralRegistrationForm.js ~ line 124 ~ fetchCandidateInformation ~ error",
+        error.response
+      );
       return { error: error.message, response: error.response };
     }
   };
@@ -236,7 +241,7 @@ const Form = () => {
         <Forms onSubmit={handleSubmit(onSubmit)} ref={formData}>
           {showStep(formStep)}
           {renderButton()}
-          {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+          {process.env.NODE_ENV === "development" && <pre>{JSON.stringify(watch(), null, 2)}</pre>}
         </Forms>
       </FormProvider>
     </FormsWrapper>

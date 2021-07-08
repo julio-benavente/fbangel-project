@@ -573,7 +573,8 @@
       "paymentMethod": {
         "question": "Mode de paiement",
         "option_1": "Paypal",
-        "option_2": "Compte bancaire - Uniquement pour le Pérou",
+        "option_2": "Autres banques - Uniquement pour le Pérou",
+        "option_3": "Banco BCP - Uniquement pour le Pérou",
         "error_1": "Veuillez sélectionner un mode de paiement"
       },
       "paypalEmail": {
@@ -600,9 +601,11 @@
       },
       "bankAccountCode": {
         "question": "Code de compte interbancaire",
+        "question_alt": "Code de compte bancaire BCP",
         "error_1": "Veuillez saisir le code du compte interbancaire",
         "error_2": "Le code ne doit contenir que des chiffres",
-        "error_3": "Le code doit avoir 20 chiffres"
+        "error_3": "Le code doit avoir 20 chiffres",
+        "error_4": "Le code doit avoir 14 chiffres"
       },
       "bankMessage": {
         "p_1": "Valable uniquement pour la CCI péruvienne. Vérifiez que votre CCI est correcte à 100 %. Nous ne sommes pas responsables des données incorrectes."
@@ -1392,7 +1395,8 @@
       "paymentMethod": {
         "question": "Mode de paiement",
         "option_1": "PayPal",
-        "option_2": "Compte bancaire - Uniquement pour le Pérou",
+        "option_2": "Autres banques - Uniquement pour le Pérou",
+        "option_3": "Banco BCP - Uniquement pour le Pérou",
         "error_1": "Veuillez sélectionner un mode de paiement"
       },
       "paypalEmail": {
@@ -1419,6 +1423,7 @@
       },
       "bankAccountCode": {
         "question": "Code de compte interbancaire",
+        "question_alt": "Code de compte bancaire BCP",
         "error_1": "Veuillez saisir le code du compte interbancaire",
         "error_2": "Le code ne doit contenir que des chiffres",
         "error_3": "Le code doit avoir 20 chiffres"

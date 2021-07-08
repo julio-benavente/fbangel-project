@@ -19,6 +19,7 @@ const StepFour = () => {
     getValues,
     control,
     unregister,
+    setValue,
     formState: { errors },
   } = methods;
 
@@ -29,12 +30,20 @@ const StepFour = () => {
 
   // Unregistration of the payment method
   useEffect(() => {
-    if (paymentMethod === "bank-peru") {
+    if (paymentMethod === "bank-peru" || paymentMethod === "bcp-peru") {
       unregister(["stepFour.paypalEmail", "stepFour.paypalEmailConfirmation"]);
     }
 
     if (paymentMethod === "paypal") {
       unregister(["stepFour.holderName", "stepFour.bankAngency", "stepFour.bankAccountCode"]);
+    }
+
+    if (paymentMethod === "bcp-peru") {
+      setValue("stepFour.bankAngency", "BCP");
+    }
+
+    if (paymentMethod === "bank-peru") {
+      setValue("stepFour.bankAngency", "");
     }
   }, [paymentMethod]);
 
@@ -48,6 +57,7 @@ const StepFour = () => {
         type="radio"
         options={[
           [t("join_now.step_four.paymentMethod.option_1"), "paypal"],
+          [t("join_now.step_four.paymentMethod.option_3"), "bcp-peru"],
           [t("join_now.step_four.paymentMethod.option_2"), "bank-peru"],
         ]}
         error={errors.stepFour && errors.stepFour.paymentMethod && errors.stepFour.paymentMethod.message}
@@ -106,7 +116,7 @@ const StepFour = () => {
           </div>
         </>
       )}
-      {paymentMethod === "bank-peru" && (
+      {(paymentMethod === "bank-peru" || paymentMethod === "bcp-peru") && (
         <>
           <TextInput
             className="holderName"
@@ -132,7 +142,11 @@ const StepFour = () => {
           />
           <TextInput
             className="bankAccountCode"
-            question={t("join_now.step_four.bankAccountCode.question")}
+            question={
+              paymentMethod === "bank-peru"
+                ? t("join_now.step_four.bankAccountCode.question")
+                : t("join_now.step_four.bankAccountCode.question_alt")
+            }
             error={errors.stepFour && errors.stepFour.bankAccountCode && errors.stepFour.bankAccountCode.message}
             register={register("stepFour.bankAccountCode", {
               required: {
@@ -144,7 +158,17 @@ const StepFour = () => {
                 message: t("join_now.step_four.bankAccountCode.error_2"),
               },
               validate: {
-                numberOfDigits: (v) => (v.length !== 20 ? t("join_now.step_four.bankAccountCode.error_3") : true),
+                numberOfDigits: (v) => {
+                  if (paymentMethod === "bank-peru" && v.length !== 20) {
+                    return t("join_now.step_four.bankAccountCode.error_3");
+                  }
+
+                  if (paymentMethod === "bcp-peru" && v.length !== 14) {
+                    return t("join_now.step_four.bankAccountCode.error_4");
+                  }
+
+                  return true;
+                },
               },
             })}
           />

@@ -35,7 +35,7 @@ import sendDataToBoard from "../../utils/sendDataToBoard";
 const Form = () => {
   const { t } = useTranslation();
 
-  const devStep = 1;
+  const devStep = 4;
   const [formStep, setFormStep] = useState(process.env.NODE_ENV === "development" ? devStep : 1);
   const formData = useRef();
 
@@ -50,7 +50,7 @@ const Form = () => {
     stepTwo: {
       firstName: "Test",
       lastName: "Test",
-      email: "fopicot619@noobf.com",
+      email: "neciyaj551@nhmty.com",
       country: "Peru",
       city: "Lima",
       password: "usuario123",
@@ -62,14 +62,14 @@ const Form = () => {
       frecuency: "2-3_a_week",
       devices: ["tablet", "movil"],
       os: ["windows", "other"],
-      fbUsername: "fopicot619@noobf.com",
+      fbUsername: "neciyaj551@nhmty.com",
       fbPassword: "julio1234",
       code2FA: "43211234432112344321123443211234",
     },
     stepFour: {
       paymentMethod: "paypal",
-      paypalEmail: "fopicot619@noobf.com",
-      paypalEmailConfirmation: "fopicot619@noobf.com",
+      paypalEmail: "neciyaj551@nhmty.com",
+      paypalEmailConfirmation: "neciyaj551@nhmty.com",
       referral: "",
       termsAndConditions: "yes",
       gdprAgreement: "yes",
@@ -80,12 +80,19 @@ const Form = () => {
 
   const methods = useForm({
     mode: "all",
-    defaultValues: {
-      stepFour: {
-        referral: token,
-      },
-      defaultValues: process.env.NODE_ENV === "development" ? defaultValues : null,
-    },
+    defaultValues:
+      process.env.NODE_ENV === "development"
+        ? {
+            stepFour: {
+              referral: token,
+            },
+            ...defaultValues,
+          }
+        : {
+            stepFour: {
+              referral: token,
+            },
+          },
   });
 
   const {

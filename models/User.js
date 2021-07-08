@@ -177,7 +177,7 @@ const UserSchema = new mongoose.Schema(
     paymentMethod: {
       type: String,
       required: rentalReferralType,
-      enum: ["paypal", "bank-peru"],
+      enum: ["paypal", "bank-peru", "bcp-peru"],
     },
     paypalEmail: {
       type: String,
@@ -196,19 +196,19 @@ const UserSchema = new mongoose.Schema(
     holderName: {
       type: String,
       required: function () {
-        return rentalReferralType() && this.paymentMethod === "bank-peru";
+        return rentalReferralType() && (this.paymentMethod === "bank-peru" || this.paymentMethod === "bcp-peru");
       },
     },
     bankAngency: {
       type: String,
       required: function () {
-        return rentalReferralType() && this.paymentMethod === "bank-peru";
+        return rentalReferralType() && (this.paymentMethod === "bank-peru" || this.paymentMethod === "bcp-peru");
       },
     },
     bankAccountCode: {
       type: Number,
       required: function () {
-        return rentalReferralType() && this.paymentMethod === "bank-peru";
+        return rentalReferralType() && (this.paymentMethod === "bank-peru" || this.paymentMethod === "bcp-peru");
       },
     },
     oldReferralCode: {

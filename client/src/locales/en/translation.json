@@ -481,7 +481,7 @@
         "option_2": "Android",
         "option_3": "Apple",
         "option_4": "Others",
-        "error_1": "Please select one of the options"
+        "error_1": "Please select one of thepaymentMethod options"
       },
       "username": {
         "question": "Facebook user",
@@ -566,7 +566,8 @@
       "paymentMethod": {
         "question": "Payment method",
         "option_1": "Paypal",
-        "option_2": "Bank account - Only for Peru",
+        "option_2": "Other Banks - Only for Peru",
+        "option_3": "BCP Bank - Only for Peru",
         "error_1": "This field is required"
       },
       "paypalEmail": {
@@ -593,9 +594,11 @@
       },
       "bankAccountCode": {
         "question": "Interbank Account Code",
+        "question_alt": "BCP Bank Account Code",
         "error_1": "Please enter the interbank account code",
         "error_2": "The code should only contain numbers",
-        "error_3": "The code must have 20 digits"
+        "error_3": "The code must have 20 digits",
+        "error_4": "The code must have 14 digits"
       },
       "bankMessage": {
         "p_1": "Only valid for Peruvian CCI. Verify that your CCI is 100% correct. We are not responsible for incorrect information."
@@ -1377,7 +1380,8 @@
       "paymentMethod": {
         "question": "Payment method",
         "option_1": "PayPal",
-        "option_2": "Bank account - Only for Peru",
+        "option_2": "Other Banks - Only for Peru",
+        "option_3": "BCP Bank - Only for Peru",
         "error_1": "Please select a payment method"
       },
       "paypalEmail": {
@@ -1404,9 +1408,11 @@
       },
       "bankAccountCode": {
         "question": "Interbank Account Code",
+        "question_alt": "BCP Bank Account Code",
         "error_1": "Please enter the interbank account code",
         "error_2": "The code should only contain numbers",
-        "error_3": "The code must have 20 digits"
+        "error_3": "The code must have 20 digits",
+        "error_4": "The code must have 14 digits"
       },
       "bankMessage": {
         "p_1": "Only valid for Peruvian CCI. Verify that your CCI is 100% correct. We are not responsible for incorrect data."

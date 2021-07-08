@@ -19,6 +19,7 @@ const Main = () => {
     register,
     control,
     unregister,
+    setValue,
     getValues,
     formState: { errors },
   } = methods;
@@ -30,12 +31,20 @@ const Main = () => {
 
   // Unregistration of the payment method
   useEffect(() => {
-    if (paymentMethod === "bank-peru") {
+    if (paymentMethod === "bank-peru" || paymentMethod === "bcp-peru") {
       unregister(["stepTwo.paypalEmail", "stepTwo.paypalEmailConfirmation"]);
     }
 
     if (paymentMethod === "paypal") {
       unregister(["stepTwo.holderName", "stepTwo.bankAngency", "stepTwo.bankAccountCode"]);
+    }
+
+    if (paymentMethod === "bcp-peru") {
+      setValue("stepTwo.bankAngency", "BCP");
+    }
+
+    if (paymentMethod === "bank-peru") {
+      setValue("stepTwo.bankAngency", "");
     }
   }, [paymentMethod]);
 
@@ -49,6 +58,7 @@ const Main = () => {
         type="radio"
         options={[
           [t("referral_registration.step_two.paymentMethod.option_1"), "paypal"],
+          [t("referral_registration.step_two.paymentMethod.option_3"), "bcp-peru"],
           [t("referral_registration.step_two.paymentMethod.option_2"), "bank-peru"],
         ]}
         error={errors.stepTwo && errors.stepTwo.paymentMethod && errors.stepTwo.paymentMethod.message}
@@ -105,7 +115,7 @@ const Main = () => {
           </div>
         </>
       )}
-      {paymentMethod === "bank-peru" && (
+      {(paymentMethod === "bank-peru" || paymentMethod === "bcp-peru") && (
         <>
           <TextInput
             className="holderName"
@@ -131,7 +141,11 @@ const Main = () => {
           />
           <TextInput
             className="bankAccountCode"
-            question={t("referral_registration.step_two.bankAccountCode.question")}
+            question={
+              paymentMethod === "bank-peru"
+                ? t("referral_registration.step_two.bankAccountCode.question")
+                : t("referral_registration.step_two.bankAccountCode.question_alt")
+            }
             error={errors.stepTwo && errors.stepTwo.bankAccountCode && errors.stepTwo.bankAccountCode.message}
             register={register("stepTwo.bankAccountCode", {
               required: {
@@ -143,8 +157,17 @@ const Main = () => {
                 message: t("referral_registration.step_two.bankAccountCode.error_2"),
               },
               validate: {
-                numberOfDigits: (v) =>
-                  v.length !== 20 ? t("referral_registration.step_two.bankAccountCode.error_3") : true,
+                numberOfDigits: (v) => {
+                  if (paymentMethod === "bank-peru" && v.length !== 20) {
+                    return t("referral_registration.step_two.bankAccountCode.error_3");
+                  }
+
+                  if (paymentMethod === "bcp-peru" && v.length !== 14) {
+                    return t("referral_registration.step_two.bankAccountCode.error_4");
+                  }
+
+                  return true;
+                },
               },
             })}
           />
