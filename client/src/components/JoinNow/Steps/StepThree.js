@@ -288,7 +288,6 @@ const StepThree = () => {
                 maxLength="39"
                 onChange={(e) => {
                   const value = e.target.value.replace(/-/g, "");
-                  console.log("value", value);
 
                   const TEMPLATE = "xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx-xxxx";
                   const format = templateFormatter(TEMPLATE);

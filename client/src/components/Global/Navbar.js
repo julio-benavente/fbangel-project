@@ -161,7 +161,6 @@ const Navbar = () => {
           <GlobalIcon>
             {languages.map((language) => {
               if (language.code === i18next.language) {
-                console.log(language.code === i18next.language);
                 return language.flag;
               }
             })}
