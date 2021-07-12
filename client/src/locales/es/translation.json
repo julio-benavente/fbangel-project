@@ -126,7 +126,10 @@
         "1": "TODOS",
         "2": "los requistos anteriormente expuestos debes completar 2 sencillos pasos antes de poder completar el formulario de registro."
       },
-      "list": ["Crear un Administrador Comercial (BM)", "Activar autenticación en dos pasos via App"],
+      "list": [
+        "Crear un Administrador Comercial (BM)",
+        "Activar autenticación en dos pasos via App"
+      ],
       "step_one": {
         "title": "Paso 1: Crear un Administrador Comercial (BM)",
         "list": {
@@ -266,7 +269,7 @@
           },
           "extra": {
             "p_1": "Código de confirmación",
-            "p_2": "Sin cerrar la página abrir otra http://2fa.live,pega tu Token y haz clic en “Submit”. Copia los ultimos 6 números del resultado.",
+            "p_2": "Sin cerrar la página abrir otra http://2fa.live,pega tu Token y haz clic en \"Submit\". Copia los ultimos 6 números del resultado.",
             "p_3": "También, si prefieres, puedes usar una App como Google Authenticator, Duo Mobile o LastPass."
           },
           "li_7": {
@@ -285,7 +288,7 @@
           "2": "para registrarse."
         },
         "p_2": {
-          "0": "Antes de tener acceso a llenar tus datos, tendrás que respondera a unas sencillas preguntas sobre tu perfil de Facebook para preevaluar si tu perfil cumple con los requisitos, cosas como“¿Qué edad tiene tu cuenta?”, “¿Cuántos amigos tienes en tu perfil de Facebook?”, etc."
+          "0": "Antes de tener acceso a llenar tus datos, tendrás que respondera a unas sencillas preguntas sobre tu perfil de Facebook para preevaluar si tu perfil cumple con los requisitos, cosas como\"¿Qué edad tiene tu cuenta?\", \"¿Cuántos amigos tienes en tu perfil de Facebook?\", etc."
         },
         "p_3": {
           "0": "No te preocupes, se hace en",
@@ -635,23 +638,23 @@
           "title": "Definiciones",
           "p": [
             "A los efectos de estos Términos y Condiciones:",
-            "“Alquiler” del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
-            "“FB4cash”, esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
-            "“Propietario” es la persona que proporcionó el perfil de Facebook que se está alquilando.",
-            "“Pago Mensual” es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
-            "“Comisión por referido” es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
-            "“Perfil de Facebook” es el acceso al Business Manager que se alquila.",
-            "“Business Manager” es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
-            "“Administrador de Business Manager” la persona que administra activamente el Business Manager en nombre de FB4cash y que se agregará para supervisar las cuentas publicitarias.",
-            "“Cuenta de anuncios” es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
-            "“Configuración de Business Manager” el proceso de configuración del Business Manager de Facebook que se alquilará.",
-            "“Página de Facebook” la página de Facebook creada con la cuenta del Propietario.",
-            "“Publicidad” los anuncios creados por FB4cash en la cuenta del Propietario.",
-            "“Comisión por configuración” es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
-            "“Servicio de redes sociales de terceros” significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
-            "“Sitio web” se refiere a Mi sitio, accesible desde FB4cash.com",
-            "“”Usted o el Propietario”” significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
-            "“Compañía” (denominada “la Compañía”, “Nosotros” o “Nuestro”  este Acuerdo) se refiere a FB4cash."
+            "\"Alquiler\" del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
+            "\"FB4cash\", esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
+            "\"Propietario\" es la persona que proporcionó el perfil de Facebook que se está alquilando.",
+            "\"Pago Mensual\" es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
+            "\"Comisión por referido\" es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
+            "\"Perfil de Facebook\" es el acceso al Business Manager que se alquila.",
+            "\"Business Manager\" es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
+            "\"Administrador de Business Manager\" la persona que administra activamente el Business Manager en nombre de FB4cash y que se agregará para supervisar las cuentas publicitarias.",
+            "\"Cuenta de anuncios\" es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
+            "\"Configuración de Business Manager\" el proceso de configuración del Business Manager de Facebook que se alquilará.",
+            "\"Página de Facebook\" la página de Facebook creada con la cuenta del Propietario.",
+            "\"Publicidad\" los anuncios creados por FB4cash en la cuenta del Propietario.",
+            "\"Comisión por configuración\" es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
+            "\"Servicio de redes sociales de terceros\" significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
+            "\"Sitio web\" se refiere a Mi sitio, accesible desde FB4cash.com",
+            "\"\"Usted o el Propietario\" significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
+            "\"Compañía\" (denominada \"la Compañía\", \"Nosotros\" o \"Nuestro\"  este Acuerdo) se refiere a FB4cash."
           ]
         },
         "recognition": {
@@ -748,7 +751,7 @@
         "disclaimer": {
           "title": "Limitación de responsabilidad",
           "p": [
-            "El Servicio se le proporciona “TAL CUAL” y “SEGÚN DISPONIBILIDAD” con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
+            "El Servicio se le proporciona \"TAL CUAL\" y \"SEGÚN DISPONIBILIDAD\" con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
             "Sin perjuicio de lo anterior, ni la Compañía ni ninguno de los proveedores de la compañía hace ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto al funcionamiento o disponibilidad del Servicio, o la información, contenido y materiales o productos. incluido en el mismo; (ii) que el Servicio será ininterrumpido o libre de errores; (iii) en cuanto a la precisión, confiabilidad o vigencia de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados desde o en nombre de la Compañía están libres de virus, scripts, troyanos, gusanos, malware, bombas de tiempo u otros componentes dañinos.",
             "Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones sobre los derechos legales aplicables de un consumidor, por lo que algunas o todas las exclusiones y limitaciones anteriores pueden no aplicarse a usted. Pero en tal caso, las exclusiones y limitaciones establecidas en esta sección se aplicarán en la mayor medida exigible según la ley aplicable."
           ]
@@ -797,7 +800,9 @@
         },
         "contact": {
           "title": "Contáctenos",
-          "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
+          "p": [
+            "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
+          ]
         }
       }
     },
@@ -825,23 +830,23 @@
       "title": "Definiciones",
       "p": [
         "A los efectos de estos Términos y Condiciones:",
-        "“Alquiler” del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
-        "“FB4cash”, esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
-        "“Propietario” es la persona que proporcionó el perfil de Facebook que se está alquilando.",
-        "“Pago Mensual” es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
-        "“Comisión por referido” es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
-        "“Perfil de Facebook” es el acceso al Business Manager que se alquila.",
-        "“Business Manager” es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
-        "“Administrador de Business Manager” la persona que administra activamente el Business Manager en nombre de FB4cash y que se agregará para supervisar las cuentas publicitarias.",
-        "“Cuenta de anuncios” es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
-        "“Configuración de Business Manager” el proceso de configuración del Business Manager de Facebook que se alquilará.",
-        "“Página de Facebook” la página de Facebook creada con la cuenta del Propietario.",
-        "“Publicidad” los anuncios creados por FB4cash en la cuenta del Propietario.",
-        "“Comisión por configuración” es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
-        "“Servicio de redes sociales de terceros” significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
-        "“Sitio web” se refiere a Mi sitio, accesible desde FB4cash.com",
-        "“”Usted o el Propietario”” significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
-        "“Compañía” (denominada “la Compañía”, “Nosotros” o “Nuestro”  este Acuerdo) se refiere a FB4cash."
+        "\"Alquiler\" del alquiler de su perfil de Facebook al que se aplican estos Términos y Condiciones.",
+        "\"FB4cash\", esta web, sus respectivos agentes, subcontratistas,   directores y empleados.",
+        "\"Propietario\" es la persona que proporcionó el perfil de Facebook que se está alquilando.",
+        "\"Pago Mensual\" es la cantidad pagada al propietario de la cuenta al final de cada mes que su cuenta está en uso.",
+        "\"Comisión por referido\" es la cantidad pagada a alguien por recomendar a otro propietario de perfil de Facebook que conluya en una configuración exitosa del Business Manager.",
+        "\"Perfil de Facebook\" es el acceso al Business Manager que se alquila.",
+        "\"Business Manager\" es una herramienta de Facebook que ayuda a organizar y administrar sus cuentas publicitarias completamente independientes de su perfil de Facebook.",
+        "\"Administrador de Business Manager\" la persona que administra activamente el Business Manager en nombre de FB4cash y que se agregará para supervisar las cuentas publicitarias.",
+        "\"Cuenta de anuncios\" es la cuenta publicitaria de Facebook que está configurada dentro de Business Manager.",
+        "\"Configuración de Business Manager\" el proceso de configuración del Business Manager de Facebook que se alquilará.",
+        "\"Página de Facebook\" la página de Facebook creada con la cuenta del Propietario.",
+        "\"Publicidad\" los anuncios creados por FB4cash en la cuenta del Propietario.",
+        "\"Comisión por configuración\" es el importe pagado al propietario de la cuenta para una configuración correcta del Business Manager.",
+        "\"Servicio de redes sociales de terceros\" significa cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que puede ser mostrado, incluido o puesto a disposición por el Servicio.",
+        "\"Sitio web\" se refiere a Mi sitio, accesible desde FB4cash.com",
+        "\"\"Usted o el Propietario\" significa la persona que proporcionó lacuenta de publicidad de Facebook que se está alquilando y, en cualquier caso, la persona que accede o usa el Servicio, o la empresa u otra entidad legal en nombre de la cual dicha persona accede o usa el Servicio, según corresponda.",
+        "\"Compañía\" (denominada \"la Compañía\", \"Nosotros\" o \"Nuestro\"  este Acuerdo) se refiere a FB4cash."
       ]
     },
     "recognition": {
@@ -938,7 +943,7 @@
     "disclaimer": {
       "title": "Limitación de responsabilidad",
       "p": [
-        "El Servicio se le proporciona “TAL CUAL” y “SEGÚN DISPONIBILIDAD” con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
+        "El Servicio se le proporciona \"TAL CUAL\" y \"SEGÚN DISPONIBILIDAD\" con todas las fallas y defectos sin garantía de ningún tipo. En la medida máxima permitida por la ley aplicable, la Compañía, en su propio nombre y en nombre de sus Afiliadas y sus respectivos licenciantes y proveedores de servicios, renuncia expresamente a todas las garantías, ya sean expresas, implícitas, legales o de otro tipo, con respecto a la Servicio, incluidas todas las garantías implícitas de comerciabilidad, idoneidad para un propósito particular, título y no infracción, y garantías que puedan surgir del curso del trato, el curso del desempeño, el uso o la práctica comercial. Sin limitación a lo anterior, la Compañía no ofrece garantía ni compromiso, y no hace ninguna representación de ningún tipo de que el Servicio cumplirá con Sus requisitos, logrará los resultados previstos, será compatible o funcionará con cualquier otro software, aplicación, sistema o servicio, operará sin interrupción, cumplir con los estándares de rendimiento o confiabilidad o estar libre de errores o que cualquier error o defecto pueda o será corregido.",
         "Sin perjuicio de lo anterior, ni la Compañía ni ninguno de los proveedores de la compañía hace ninguna representación o garantía de ningún tipo, expresa o implícita: (i) en cuanto al funcionamiento o disponibilidad del Servicio, o la información, contenido y materiales o productos. incluido en el mismo; (ii) que el Servicio será ininterrumpido o libre de errores; (iii) en cuanto a la precisión, confiabilidad o vigencia de cualquier información o contenido proporcionado a través del Servicio; o (iv) que el Servicio, sus servidores, el contenido o los correos electrónicos enviados desde o en nombre de la Compañía están libres de virus, scripts, troyanos, gusanos, malware, bombas de tiempo u otros componentes dañinos.",
         "Algunas jurisdicciones no permiten la exclusión de ciertos tipos de garantías o limitaciones sobre los derechos legales aplicables de un consumidor, por lo que algunas o todas las exclusiones y limitaciones anteriores pueden no aplicarse a usted. Pero en tal caso, las exclusiones y limitaciones establecidas en esta sección se aplicarán en la mayor medida exigible según la ley aplicable."
       ]
@@ -987,7 +992,9 @@
     },
     "contact": {
       "title": "Contáctenos",
-      "p": ["Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"]
+      "p": [
+        "Si tiene alguna pregunta sobre estos Términos y condiciones, puede contactarnos"
+      ]
     }
   },
   "referral_program": {
@@ -1001,7 +1008,7 @@
     "list": {
       "p_1": {
         "0": "Es muy fácil, solo tiene que compartir el enlace de nuestra página con tus amigos o conocidos y asegurarte que en el formulario de registro agreguen tu código de referente en la casilla",
-        "1": "“Si tienes referente añade aquí su código”."
+        "1": "\"Si tienes referente añade aquí su código\"."
       },
       "p_2": {
         "0": "Para obtener tu código",

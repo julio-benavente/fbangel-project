@@ -128,6 +128,7 @@ const Navbar = () => {
     { code: "es", name: "Español", flag: <Flags.ES /> },
     { code: "en", name: "English", flag: <Flags.GB /> },
     { code: "fr", name: "Français", flag: <Flags.FR /> },
+    { code: "nl", name: "Nederlands", flag: <Flags.NL /> },
   ];
 
   const [languageDropdownIsOn, setLanguageDropdownIsOn] = useState(false);
@@ -147,8 +148,18 @@ const Navbar = () => {
               variants={navbarVariants}
             >
               {navLinks.map(({ link, to, active, className }, index) => (
-                <NavbarLink key={index} as={motion.div} variants={navLinkVariants} onClick={closeNavbar}>
-                  <Link to={to} exact className={className} activeClassName={active}>
+                <NavbarLink
+                  key={index}
+                  as={motion.div}
+                  variants={navLinkVariants}
+                  onClick={closeNavbar}
+                >
+                  <Link
+                    to={to}
+                    exact
+                    className={className}
+                    activeClassName={active}
+                  >
                     {link}
                   </Link>
                 </NavbarLink>
@@ -157,7 +168,9 @@ const Navbar = () => {
           )}
         </AnimatePresence>
 
-        <LanguageDropdown onClick={() => setLanguageDropdownIsOn(!languageDropdownIsOn)}>
+        <LanguageDropdown
+          onClick={() => setLanguageDropdownIsOn(!languageDropdownIsOn)}
+        >
           <GlobalIcon>
             {languages.map((language) => {
               if (language.code === i18next.language) {
@@ -188,7 +201,9 @@ const Navbar = () => {
         {widthMark && (
           <Menu open={navIsOpen}>
             {!navIsOpen && <OpenNav className="openNav" onClick={openNavbar} />}
-            {navIsOpen && <CloseNav className="closeNav" onClick={closeNavbar} />}
+            {navIsOpen && (
+              <CloseNav className="closeNav" onClick={closeNavbar} />
+            )}
           </Menu>
         )}
       </NavbarWrapper>
