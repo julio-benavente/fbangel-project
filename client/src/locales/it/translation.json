@@ -1,0 +1,1468 @@
+{
+  "home": {
+    "banner": {
+      "headline": "Fai soldi con il tuo profilo Facebook! È un gioco da ragazzi!",
+      "sub_headline": "Continua a goderti il ​​tuo account Facebook come sempre e ogni mese riceverai i tuoi soldi. Li generiamo per te.",
+      "start_button": "Inizia a guadagnare"
+    },
+    "process": {
+      "cards": [
+        {
+          "number": "01",
+          "title": "Compila il modulo",
+          "info": "Ti proponiamo di aderire al nostro programma in pochi click e iniziare a guadagnare online, senza alcuno sforzo aggiuntivo!"
+        },
+        {
+          "number": "02",
+          "title": "Attendi la nostra conferma",
+          "info": "La conferma richiede 3-5 giorni lavorativi! * (Di solito entro 48 ore!)",
+          "disclaimer": "Dopo il primo accesso"
+        },
+        {
+          "number": "03",
+          "title": "Ricevi pagamenti mensili",
+          "info": "Mentre fai la tua vita normale, facciamo in modo che il tuo account Facebook generi profitti per te.!"
+        },
+        {
+          "number": "04",
+          "title": "Condividi con i tuoi amici",
+          "info": "Condividi con i tuoi amici e aumenta i tuoi guadagni. Riceverai un pagamento per ogni nuova registrazione da te segnalata. Nessun limite!"
+        }
+      ]
+    },
+    "requirements": {
+      "title": "Quanto guadagnerai?",
+      "info": {
+        "span": "Guadagna $ 30 ogni mese!",
+        "p": "Conferma di soddisfare i requisiti e prepara il tuo profilo. Fai clic sul pulsante e scopri come."
+      },
+      "how_it_works_btn": "Come funziona?",
+      "sub_title": "Requisiti per la validità del profilo",
+      "list": [
+        "Vero, attivo, con foto e vero nome",
+        "Con almeno 100 amici",
+        "Almeno un anno",
+        "Contenuto appropriato",
+        "Sii maggiorenne",
+        "Non deve essere stato precedentemente utilizzato o affittato ad altre società per uso pubblicitario",
+        "Avere un'email associata al tuo profilo",
+        "Creato amministratore commerciale (BM)",
+        "ID verificato",
+        "App 2FA attivata"
+      ]
+    },
+    "referral": {
+      "title": "Programma di riferimento",
+      "info": {
+        "p_1": {
+          "0": "Abbiamo un programma di riferimento per te! Se ci porti familiari o amici puoi guadagnare più di",
+          "1": "$ 1000",
+          "2": "al mese."
+        },
+        "p_2": {
+          "0": "Attiva il tuo codice di riferimento e vinci",
+          "1": "$ 5",
+          "2": "per ogni referral valido. Nessun limite!"
+        }
+      },
+      "register_btn": "Registrati qui",
+      "tiny": {
+        "p_1": "I piani verranno pagati dopo che il nostro team avrà confermato la validità del profilo.",
+        "p_2": "In tutti i piani, il nostro team deve essere in grado di contattare i proprietari per risolvere eventuali problemi che potrebbero verificarsi."
+      }
+    },
+    "testimonies": {
+      "title": "Cosa dice la gente?",
+      "info": "Persone che si sono unite a noi e stanno già guadagnando!",
+      "testimonies": [
+        {
+          "number": "1",
+          "testimony": "Ho collaborato con fb4cash per più di un anno, non ho avuto problemi. I soldi sono sempre puntuali e ricevo sempre risposte a tutte le mie domande. È fantastico che non devo fare nulla e inoltre non incide affatto sul mio profilo. Diciamo che guadagno solo affittando il mio account Facebook. Lo consiglio a tutti! ",
+          "author": "Ana Martin",
+          "membership": "Membro da maggio 2021"
+        },
+        {
+          "number": "2",
+          "testimony": "Ho deciso di provare a guadagnare con FB4cash, perché mi interessava sapere come funziona. Posso dire che è un ottimo modo per avere entrate aggiuntive. Ho semplicemente dovuto compilare il modulo E NIENTE ALTRO! Al resto ci pensano i ragazzi, io raccolgo solo i miei soldi sul mio conto PayPal",
+          "author": "Tony Smith",
+          "membership": "Membro da gennaio 2021"
+        },
+        {
+          "number": "3",
+          "testimony": "Quando nel mio paese siamo dovuti andare al confino a causa del covid-19, sono rimasta senza lavoro, e senza reddito, un'amica mi ha spiegato che aveva un reddito extra affittando il suo Facebook per fare pubblicità, Ero un po' scettico ma ho deciso di provare, e la verità è che finora non ho avuto problemi, i pagamenti sono sempre puntuali, e sono sempre stato pagato per tutti gli amici che mi sono portato. Lo consiglio!",
+          "author": "Alena Due",
+          "membership": "Membro da marzo 2020"
+        }
+      ]
+    }
+  },
+  "how_it_works": {
+    "how_it_works": {
+      "title": "Come funziona?",
+      "info": {
+        "p_1": "Il processo è davvero giusto. Se hai un account Facebook, probabilmente hai familiarità con gli annunci e i banner su Facebook. Sono ovunque, sempre e molte persone ci guadagnano.",
+        "p_2": "Quello che non sai è che puoi anche, e molto facilmente, affittare il tuo account Facebook, senza fare nulla.",
+        "p_3": "Poiché Facebook è un'entità aziendale protetta, che protegge l'attività e i diritti dei suoi utenti, ciò non influirà affatto su te o sulla tua attività online.",
+        "p_4": "Nessuno dei tuoi amici riceverà spam o vedrà i tuoi annunci e ti pagheremo comunque solo per l'utilizzo della parte pubblicitaria del tuo profilo."
+      },
+      "faq_link": "Controlla la nostra sezione FAQ per maggiori informazioni"
+    },
+    "requirements": {
+      "title": "Requisiti del profilo",
+      "list": [
+        "Deve essere reale, attivo, con una foto e un nome reale che corrisponda al nome del tuo documento",
+        "Con almeno 100 amici",
+        "Almeno un anno",
+        "Con contenuti appropriati, non amministrare foto che mostrino qualsiasi tipo di violenza contro persone o animali, foto di contenuto sessuale, scuse per il terrorismo o di alto significato politico, nonché qualsiasi altro tipo che possa essere considerato socialmente offensivo",
+        "Devi essere maggiorenne",
+        "Non deve essere stato precedentemente utilizzato o affittato ad altre società per uso pubblicitario",
+        "Devi avere un'email associata al tuo profilo"
+      ]
+    },
+    "configuration": {
+      "title": "Impostazioni",
+      "info": {
+        "0": "Se e solo se il tuo account Facebook è conforme",
+        "1": "TUTTI",
+        "2": "i requisiti di cui sopra è necessario completare 2 semplici passaggi prima di poter completare il modulo di registrazione."
+      },
+      "list": [
+        "Crea un amministratore commerciale (BM)",
+        "Attiva l'autenticazione in due passaggi tramite App"
+      ],
+      "step_one": {
+        "title": "Fase 1: creare un amministratore commerciale (BM)",
+        "list": {
+          "li_1": {
+            "0": "Vai a"
+          },
+          "li_2": {
+            "0": "Clicca su",
+            "1": "Crea account"
+          },
+          "li_3": {
+            "0": "Inserisci un nome per la tua attività, il tuo nome e un indirizzo email clicca",
+            "1": "Invia",
+            "2": "Fatto"
+          },
+          "li_4": {
+            "0": "Dopo aver cliccato",
+            "1": "Fatto",
+            "2": "Facebook può mostrarti le seguenti opzioni."
+          }
+        }
+      },
+      "option_one": {
+        "title": "Opzione 1 (non richiede la verifica dell'ID)",
+        "p_1": "A seconda della versione del tuo facebook vedrai una delle seguenti immagini.",
+        "p_2": "Per ottenere l'identificativo dell'amministratore commerciale (BM Id) che devi inviare nel modulo di registrazione, segui questi passaggi.",
+        "list_1": {
+          "li_1": {
+            "0": "Clicca su",
+            "1": "Configurazione aziendale"
+          },
+          "li_2": {
+            "0": "Scendi a",
+            "1": "Informazioni commerciali"
+          },
+          "li_3": {
+            "0": "Scatta una foto o uno screenshot del tuo",
+            "1": "Identificativo amministratore commerciale"
+          }
+        },
+        "p_3": "Prima chiudi la finestra popup, fai clic sulla X in alto a sinistra.",
+        "p_4": {
+          "0": "Per ottenere il",
+          "1": "Identificativo dell'amministratore commerciale",
+          "2": "(BM Id) che devi inviare nel modulo di registrazione, segui questi passaggi."
+        },
+        "list_2": {
+          "li_1": {
+            "0": "Clicca su",
+            "1": "Più strumenti"
+          },
+          "li_2": {
+            "0": "Clicca su",
+            "1": "Configurazione aziendale"
+          },
+          "li_3": {
+            "0": "Scendi a",
+            "1": "Informazioni commerciali"
+          },
+          "li_4": {
+            "0": "Scatta una foto o uno screenshot del tuo",
+            "1": "Identificativo amministratore commerciale"
+          }
+        }
+      },
+      "option_two": {
+        "title": "Opzione 2 (richiede la verifica dell'ID)",
+        "p_1": "Chiudi prima la finestra popup, fai clic sulla X in alto a sinistra.",
+        "p_2": "Devi seguire i seguenti passaggi per verificare la tua identità.",
+        "list_1": {
+          "li_1": {
+            "0": "Clicca su",
+            "1": "Vedi dettagli"
+          },
+          "li_2": {
+            "0": "Clicca su",
+            "1": "Richiedi revisione"
+          },
+          "li_3": {
+            "0": "Clicca su",
+            "1": "Continua"
+          },
+          "li_4": {
+            "0": "Carica il tuo documento di identità"
+          },
+          "li_5": {
+            "0": "Clicca su",
+            "1": "Continua"
+          }
+        },
+        "p_3": "In 24 o 48 ore Facebook di solito conferma la tua identità e ti avvisa tramite e-mail se qualcosa non va.",
+        "p_4": "Puoi verificare se la tua identità è stata verificata utilizzando il seguente link",
+        "p_5": {
+          "0": "Solo dopo che Facebook ha confermato che la tua identità è stata verificata, segui questi passaggi per ottenere il",
+          "1": "Identificativo dell'amministratore commerciale",
+          "2": "(BM Id) che devi inviare nel modulo di registrazione"
+        },
+        "list_2": {
+          "li_1": {
+            "0": "Vai a"
+          },
+          "li_2": {
+            "0": "Scendi a",
+            "1": "Informazioni commerciali"
+          },
+          "li_3": {
+            "0": "Scatta una foto o uno screenshot del tuo",
+            "1": "Identificativo amministratore commerciale"
+          }
+        }
+      },
+      "step_two": {
+        "title": "Passaggio 2: attiva l'autenticazione in due passaggi (2FA) tramite app",
+        "list": {
+          "li_1": {
+            "0": "Vai a",
+            "1": "Impostazioni e privacy"
+          },
+          "li_2": {
+            "0": "Seleziona",
+            "1": "Configurazione"
+          },
+          "li_3": {
+            "0": "Seleziona",
+            "1": "Sicurezza al login"
+          },
+          "li_4": {
+            "0": "Trova \"Usa autenticazione in due passaggi \" -",
+            "1": "Modifica"
+          },
+          "li_5": {
+            "0": "Seleziona",
+            "1": "Usa app di autenticazione"
+          },
+          "li_6": {
+            "0": "Copia codice - Token - Continua e chiedici il codice di conferma"
+          },
+          "extra": {
+            "p_1": "Codice di conferma",
+            "p_2": "Senza chiudere la pagina, apri un altro http://2fa.live, incolla il tuo Token e clicca su \"Invia\". Copia gli ultimi 6 numeri del risultato.",
+            "p_3": "Inoltre, se preferisci, puoi utilizzare un'app come Google Authenticator, Duo Mobile o LastPass."
+          },
+          "li_7": {
+            "0": "Torna su fb e inserisci il codice di conferma -",
+            "1": "Fatto"
+          }
+        }
+      }
+    },
+    "registration": {
+      "title": "Registrazione",
+      "info": {
+        "p_1": {
+          "0": "Utilizza",
+          "1": "questo modulo",
+          "2": "per registrarsi."
+        },
+        "p_2": {
+          "0": "Prima di avere accesso per compilare i tuoi dati, dovrai rispondere ad alcune semplici domande sul tuo profilo Facebook per valutare in anticipo se il tuo profilo soddisfa i requisiti, ad esempio \"Quanti anni ha il tuo account?\", \"Quanti amici hai sul tuo profilo Facebook?\", Etc. "
+        },
+        "p_3": {
+          "0": "Non preoccuparti, è finita",
+          "1": "meno di 1 minuto"
+        },
+        "p_4": {
+          "0": "Se il tuo profilo è idoneo, dovrai inserire i tuoi dati e allegare una foto di un documento per verificare che il tuo profilo sia reale e che tu sia maggiorenne."
+        },
+        "p_5": {
+          "0": "Avremo bisogno di una foto del tuo documento in alta risoluzione e leggibile, puoi coprire qualsiasi dettaglio desideri, tranne la foto, il nome completo e la data di nascita."
+        },
+        "p_6": {
+          "0": "Se decidi di coprire dei dati, non farlo modificando la foto o Facebook non lo ammetterà, usa le dita per esempio, o un pezzo di carta."
+        },
+        "p_7": {
+          "0": "Puoi usare, DNI, passaporto o patente di guida, se non ne hai nessuno per favore",
+          "1": "clicca qui per una guida con opzioni alternative"
+        },
+        "p_8": {
+          "0": "Durante il processo di registrazione devi anche allegare una tua foto",
+          "1": "Identificativo dell'amministratore commerciale",
+          "2": "che hai creato nel passaggio 1 e inserisci il",
+          "3": "Codice di autenticazione di 32 caratteri",
+          "4": "(Token) ottenuto nel passaggio 2"
+        }
+      }
+    },
+    "payment": {
+      "title": "Ricevi il pagamento",
+      "info": {
+        "p_1": {
+          "0": "Una volta che il nostro team avrà verificato che possiamo accedere al tuo profilo tramite 2FA e che effettivamente l'amministratore commerciale (BM) è stato creato e senza restrizioni, il nostro team terminerà la configurazione del BM e il tuo primo pagamento verrà elaborato tramite Paypal."
+        },
+        "p_2": {
+          "0": "Normalmente da 4 a 5 giorni lavorativi dopo aver ricevuto il modulo, a condizione che i dati siano corretti e che possiamo accedere al tuo profilo e che il Business Manager non sia limitato."
+        },
+        "p_3": {
+          "0": "Oh, e se ci mandi ai tuoi amici ottieni più soldi per ogni referral, dai un'occhiata al nostro",
+          "1": "Programma di riferimento"
+        },
+        "p_4": {
+          "0": "Riceverai il primo pagamento una volta che l'account è stato rivisto e un Business Manager è stato configurato correttamente."
+        },
+        "p_5": {
+          "0": "Dopo il primo pagamento vengono effettuati i seguenti pagamenti mensili come segue:"
+        },
+        "p_6": {
+          "0": "I profili attivati ​​nella prima quindicina del mese (prime 2 settimane) verranno pagati la settimana del 15 del mese successivo."
+        },
+        "p_7": {
+          "0": "I profili attivati ​​nella seconda metà del mese (ultime 2 settimane) verranno pagati a fine mese."
+        },
+        "p_8": {
+          "0": "Il pagamento dei referral viene sempre effettuato alla fine del mese, il nostro team ti contatterà per confermare il numero di referral da te registrati ed effettuare il pagamento corrispondente."
+        }
+      }
+    },
+    "support": {
+      "title": "Supporto",
+      "info": {
+        "p_1": {
+          "0": "Puoi contattarci in qualsiasi momento per risolvere qualsiasi domanda, e potrebbe anche essere che alla fine abbiamo bisogno di contattarti per risolvere qualsiasi cosa."
+        },
+        "p_2": {
+          "0": "Importante"
+        },
+        "p_3": {
+          "0": "Prima o poi Facebook ti chiederà di cambiare la password o magari deciderai di cambiarla, se ciò accade",
+          "1": "contattaci subito",
+          "2": ", altrimenti potresti crearci problemi in quanto non potremo utilizzare l'account e non potremo pagarti."
+        },
+        "p_4": {
+          "0": "Contattaci"
+        }
+      }
+    }
+  },
+  "join_now": {
+    "title": "Il tuo profilo Facebook è valido per il nostro programma di noleggio?",
+    "info": "Per sapere se è valido per il nostro programma di noleggio, compila questo semplice questionario.",
+    "button": {
+      "previous": "Precedente",
+      "next": "Successivo",
+      "send": "Invia"
+    },
+    "form_location": {
+      "title": "Modulo di registrazione",
+      "p_1": "Questionario di qualificazione",
+      "p_2": "Dati personali",
+      "p_3": "Dati dell'account Facebook",
+      "p_4": "Conferma e modalità di pagamento",
+      "p_5": "Congratulazioni"
+    },
+    "step_one": {
+      "isAdult": {
+        "question": "Sei maggiorenne?",
+        "option_1": "Sì",
+        "option_2": "No",
+        "error_1": "Questo campo è obbligatorio."
+      },
+      "accountIsReal": {
+        "question": "Stai creando la richiesta con il tuo vero profilo Facebook?",
+        "option_1": "Sì",
+        "option_2": "No",
+        "error_1": "Questo campo è obbligatorio."
+      },
+      "isFirstTime": {
+        "question": "Tu o qualcun altro ha utilizzato il tuo account per creare pubblicità prima?",
+        "option_1": "Sì",
+        "option_2": "No",
+        "error_1": "Questo campo è obbligatorio."
+      },
+      "isOneYear": {
+        "question": "Il tuo account ha più di un anno?",
+        "option_1": "Sì",
+        "option_2": "No",
+        "error_1": "Questo campo è obbligatorio."
+      },
+      "avere amici": {
+        "question": "Hai più di 100 amici su Facebook?",
+        "option_1": "Sì",
+        "option_2": "No",
+        "error_1": "Questo campo è obbligatorio."
+      }
+    },
+    "step_two": {
+      "name": {
+        "question": "Il tuo nome",
+        "error_1": "Inserisci il tuo nome",
+        "error_2": "Il nome contiene caratteri non validi"
+      },
+      "lastname": {
+        "question": "I vostri cognomi",
+        "error_1": "Inserisci il tuo cognome",
+        "error_2": "Il cognome contiene caratteri non validi"
+      },
+      "country": {
+        "question": "Il tuo paese di residenza",
+        "error_1": "Questo campo è obbligatorio"
+      },
+      "city": {
+        "question": "La tua città di residenza",
+        "error_1": "Questo campo è obbligatorio"
+      },
+      "birthday": {
+        "question": "Data di nascita",
+        "error_1": "Inserisci la tua data di nascita",
+        "error_2": "Devi avere più di 18 anni"
+      },
+      "phone": {
+        "question": "Il tuo cellulare",
+        "error_1": "Questo campo è obbligatorio",
+        "error_2": "Inserisci un numero di cellulare valido",
+        "max_error": "Massimo 15 numeri"
+      },
+      "email": {
+        "question": "E-mail",
+        "error_1": "Inserisci la tua email",
+        "error_2": "Inserisci un'email valida"
+      },
+      "password": {
+        "question": "Password",
+        "required_error": "Registra questo campo",
+        "min_error": "Minimo 8 caratteri",
+        "max_error": "Massimo 15 caratteri"
+      },
+      "password_confirmation": {
+        "question": "Conferma la tua password",
+        "required_error": "Registra questo campo",
+        "same_error": "Le password non corrispondono"
+      }
+    },
+    "step_three": {
+      "frequency": {
+        "question": "Quanto spesso usi Facebook?",
+        "option_1": "Ogni giorno",
+        "option_2": "2 - 3 volte a settimana",
+        "option_3": "1 - 2 volte a settimana",
+        "option_4": "1 - 2 volte al mese",
+        "error_1": "Seleziona una delle opzioni"
+      },
+      "devices": {
+        "question": "Quante volte usi Facebook? (Puoi selezionarne più di uno)",
+        "option_1": "PC desktop",
+        "option_2": "Tavoletta",
+        "option_3": "Cellulare",
+        "option_4": "Altri",
+        "error_1": "Seleziona una delle opzioni"
+      },
+      "os": {
+        "question": "Che sistema operativo usi con Facebook? (Puoi selezionarne più di uno)",
+        "option_1": "Windows",
+        "option_2": "Android",
+        "option_3": "Mela",
+        "option_4": "Altri",
+        "error_1": "Seleziona una delle opzioni"
+      },
+      "username": {
+        "question": "Utente Facebook",
+        "error_1": "Inserisci il tuo nome utente Facebook",
+        "error_2": "L'utente deve contenere almeno 6 caratteri"
+      },
+      "fbPassword": {
+        "question": "Password Facebook",
+        "error_1": "Inserisci la tua password di Facebook",
+        "error_2": "La tua password deve contenere almeno 8 caratteri"
+      },
+      "fbEmailImage": {
+        "question": "Conferma dell'email associata al tuo profilo",
+        "error_1": "Inserisci una foto che confermi l'email associata",
+        "error_2": "Il file può avere un massimo di 2 MB",
+        "error_3": "Il file può essere solo in formato PNG, JPG o JPEG",
+        "error_4": "Il nome del file non può contenere più di 20 caratteri",
+        "image_one": "Conferma e-mail di Facebook. Esempio 1.",
+        "image_two": "E-mail di conferma di Facebook. Esempio 2.",
+        "message": {
+          "p_1": {
+            "0": "Invia una foto per confermare l'email associata."
+          },
+          "p_2": {
+            "0": "Esempio 1 dal computer"
+          },
+          "p_3": {
+            "0": "Esempio 2 da cellulare"
+          },
+          "p_4": {
+            "0": "Cellulare:",
+            "1": "Configurazione",
+            "2": "Impostazioni account",
+            "3": "Informazioni personali",
+            "4": "Informazioni di contatto"
+          },
+          "p_5": {
+            "0": "Computer:",
+            "1": "Impostazioni e privacy",
+            "2": "Impostazioni",
+            "3": "Generale",
+            "4": "Contatto"
+          },
+          "p_6": {
+            "0": "Oppure vai a:"
+          }
+        }
+      },
+      "bmIdImage": {
+        "question": "Identificativo amministratore commerciale (ID BM)",
+        "error_1": "Inserisci una foto che confermi il numero del tuo amministratore commerciale",
+        "error_2": "Il file può avere un massimo di 2 MB",
+        "error_3": "Il file può essere solo in formato PNG, JPG o JPEG",
+        "error_4": "Il nome del file non può contenere più di 20 caratteri",
+        "image_one": "Amministratore commerciale. Esempio 1.",
+        "image_two": "Amministratore commerciale. Esempio 2.",
+        "message": {
+          "p_1": {
+            "0": "Invia una foto del numero del tuo amministratore commerciale."
+          },
+          "p_2": {
+            "0": "Esempio 1 dal computer"
+          },
+          "p_3": {
+            "0": "Esempio 2 da cellulare"
+          }
+        }
+      },
+      "code2FA": {
+        "question": "Codice 2FA (Token)",
+        "error_1": "Inserisci il tuo codice",
+        "error_2": "Il codice 2FA ha 32 cifre",
+        "message": {
+          "p_1": "Se non conosci il tuo codice, usa questo indirizzo",
+          "p_2": "e fai clic sul pulsante blu che dice \"Usa app di autenticazione\" copia il codice di 32 caratteri e incollalo qui. Oppure vai al passaggio 2 della nostra sezione",
+          "p_3": "Come funziona",
+          "p_4": "e controlla i video."
+        }
+      }
+    },
+    "step_four": {
+      "paymentMethod": {
+        "question": "Metodo di pagamento",
+        "option_1": "Paypal",
+        "option_2": "Altre banche - Solo per Perù",
+        "option_3": "Banco BCP - Solo per Perù",
+        "error_1": "Seleziona un metodo di pagamento"
+      },
+      "paypalEmail": {
+        "question": "e-mail PayPal",
+        "error_1": "Per favore, indica la tua email paypal",
+        "error_2": "Inserisci un'email valida",
+        "error_3": "Le email di PayPal hanno almeno 6 caratteri"
+      },
+      "paypalEmailConfirmation": {
+        "question": "Conferma la tua email Paypal",
+        "error_1": "Conferma la tua email paypal",
+        "error_2": "Le email non corrispondono"
+      },
+      "paypalMessage": {
+        "p_1": "Verifica che la tua email Paypal sia corretta al 100%. Non siamo responsabili per informazioni errate."
+      },
+      "holderName": {
+        "question": "Nome del titolare",
+        "error_1": "Inserisci il nome del titolare"
+      },
+      "bankAngency": {
+        "question": "Agenzia bancaria",
+        "error_1": "Inserisci l'agenzia bancaria"
+      },
+      "bankAccountCode": {
+        "question": "Codice conto interbancario",
+        "question_alt": "Codice conto bancario BCP",
+        "error_1": "Inserisci il codice del conto interbancario",
+        "error_2": "Il codice deve contenere solo numeri",
+        "error_3": "Il codice deve avere 20 cifre",
+        "error_4": "Il codice deve avere 14 cifre"
+      },
+      "bankMessage": {
+        "p_1": "Valido solo per la CCI peruviana. Verifica che la tua CCI sia corretta al 100%. Non siamo responsabili per i dati errati."
+      },
+      "documentImage": {
+        "question": "Prova di identità",
+        "error_1": "Inserisci una foto che confermi la tua identità",
+        "error_2": "Il file può avere un massimo di 2 MB",
+        "error_3": "Il file può essere solo in formato PNG, JPG o JPEG",
+        "error_4": "Il nome del file non può contenere più di 20 caratteri",
+        "message": "Invia una foto del tuo documento in alta risoluzione e leggibile, puoi coprire qualsiasi dettaglio desideri, eccetto la foto, il nome completo e la data di nascita. (Non modificare digitalmente) (Puoi usare, ID, passaporto o patente di guida)."
+      },
+      "referral": {
+        "question": "Se hai un referente aggiungi qui il suo codice",
+        "error_1": "Massimo 10 caratteri consentiti"
+      },
+      "termsAndConditions": {
+        "option_1": "Accetto i Termini e condizioni",
+        "error_1": "Accetta i Termini e condizioni"
+      },
+      "gdprAgreement": {
+        "option_1": "Acconsento a questo sito Web per memorizzare le informazioni inviate in modo che possano rispondere alla mia richiesta.",
+        "error_1": "Accetta l'accordo GDPR"
+      },
+      "emailDuplicateMessage": "L'email è già stata utilizzata",
+      "termsAndConditionsMessage": {
+        "intro": {
+          "title": "TERMINI E CONDIZIONI PER AFFITTI PUBBLICITARI FACEBOOK",
+          "p": [
+            "I seguenti Termini e Condizioni si applicano al noleggio del tuo profilo Facebook e con il tuo consenso accetti di essere collegato in questo modo."
+          ]
+        },
+        "definitions": {
+          "title": "Definizioni",
+          "p": [
+            "Ai fini dei presenti Termini e condizioni:",
+            "\"Noleggio\" del noleggio del tuo profilo Facebook a cui si applicano i presenti Termini e condizioni.",
+            "\"FB4cash\" , questo sito Web, i rispettivi agenti, subappaltatori, direttori e dipendenti.",
+            "\"Proprietario\" è la persona che ha fornito il profilo Facebook che viene affittato.",
+            "\"Pagamento mensile\" è l'importo pagato al proprietario dell'account alla fine di ogni mese in cui l'account è in uso.",
+            "\"Commissione di riferimento\" è l'importo pagato a qualcuno per aver consigliato a un altro proprietario del profilo Facebook di portare a una configurazione di Business Manager di successo.",
+            "\"Profilo Facebook\" è l'accesso al Business Manager che viene affittato.",
+            "\"Business Manager\" è uno strumento di Facebook che aiuta a organizzare e gestire i tuoi account pubblicitari in modo completamente indipendente dal tuo profilo Facebook.",
+            "\"Amministratore Business Manager\" la persona che gestisce attivamente il Business Manager per conto di FB4cash e che verrà aggiunta per monitorare gli account pubblicitari.",
+            "\"Account pubblicitario\" è l'account pubblicitario di Facebook configurato in Business Manager.",
+            "\"Impostazioni di Business Manager\" il processo di configurazione di Facebook Business Manager da affittare.",
+            "\"Pagina Facebook\" la pagina Facebook creata con l'account del Titolare.",
+            "\"Pubblicità\" gli annunci pubblicitari creati da FB4cash nell'account del proprietario.",
+            "\"Commissione per configurazione\" è l'importo pagato al titolare dell'account per una corretta configurazione del Business Manager.",
+            "\"Servizio di social media di terze parti\" indica qualsiasi servizio o contenuto (inclusi dati, informazioni, prodotti o servizi) fornito da una terza parte che può essere visualizzato, incluso o reso disponibile dal Servizio.",
+            "\"Sito Web\" si riferisce a Il mio sito, accessibile da FB4cash.com",
+            "\"\"Tu o il Titolare\" indica la persona che ha fornito l'account pubblicitario Facebook che viene affittato e, in ogni caso, la persona che accede o utilizza il Servizio, o la società o altra persona giuridica per conto della quale detta persona accede o utilizza il Servizio, a seconda dei casi.",
+            "\"Società\" (denominata \"la Società\" , \"Noi\" o \"Il nostro\" questo Accordo) si riferisce a FB4cash."
+          ]
+        },
+        "recognition": {
+          "title": "Riconoscimento",
+          "p": [
+            "Questi sono i Termini e Condizioni che regolano l'uso di questo Servizio e l'accordo che opera tra l'Utente e la Società. Questi Termini e Condizioni stabiliscono i diritti e gli obblighi di tutti gli utenti rispetto all'uso del Servizio.",
+            "L'accesso e l'utilizzo del Servizio sono subordinati all'accettazione e al rispetto dei presenti Termini e condizioni. I presenti Termini e condizioni si applicano a tutti i visitatori, utenti e altre persone che accedono o utilizzano il Servizio.",
+            "Accedendo o utilizzando il Servizio, accetti di essere vincolato da questi termini e condizioni. Se non accetti nessuna parte di questi Termini e condizioni, non sarai in grado di accedere al Servizio.",
+            "Dichiari di avere più di 18 anni. La Società non consente ai minori di 18 anni di utilizzare il Servizio.",
+            "Il tuo accesso e utilizzo del Servizio è inoltre condizionato all'accettazione e al rispetto dell'Informativa sulla privacy della Società. La nostra Informativa sulla privacy descrive le nostre politiche e procedure relative alla raccolta, all'uso e alla divulgazione delle tue informazioni personali quando utilizzi l'Applicazione o il Sito . sito web e ti informa sui tuoi diritti alla privacy e su come la legge ti protegge. Ti preghiamo di leggere attentamente la nostra Informativa sulla privacy prima di utilizzare il nostro servizio."
+          ]
+        },
+        "service_condition": {
+          "title": "Termini di servizio",
+          "p": [
+            "Il Titolare autorizza la Società, ad esercitare in via esclusiva, il diritto di accesso e di gestione dell'account commerciale solo ed esclusivamente per la realizzazione di campagne pubblicitarie legate al Social Network Facebook, a tempo indeterminato, salvo che le parti, di comune accordo, concordino ad una durata diversa.",
+            "In virtù del presente contratto, la Società ha il diritto di esercitare per proprio conto, per conto del Titolare, le azioni necessarie per perseguire lo scopo stabilito nel contratto, ovvero per la creazione, predisposizione, esecuzione e controllo di campagne pubblicitarie o di comunicazione. Azioni su Internet e sui siti social affidate dal Titolare."
+          ]
+        },
+        "privacy": {
+          "title": "Privacy",
+          "p": [
+            "Rispettiamo la tua privacy e non condivideremo mai la tua password o altre informazioni personali. Durante il processo di configurazione di Business Manager, utilizziamo un'applicazione sicura per consentirci di configurare i tuoi account pubblicitari, mantenendo le tue informazioni personali al sicuro."
+          ]
+        },
+        "property_promise": {
+          "title": "Promessa di proprietà",
+          "p": [
+            "Il Titolare garantisce e garantisce di essere il legittimo proprietario dell'Account Pubblicitario e di essere l'unico ad avere accesso. Il Titolare garantisce inoltre che non vi siano irregolarità nella creazione o acquisizione dell'account. Inoltre, il Titolare garantisce che non c'è Necessità o dipende dalla possibilità di fare pubblicità su Facebook."
+          ]
+        },
+        "compensation": {
+          "title": "Indennizzo",
+          "p": [
+            "Il Proprietario si impegna a risarcire FB4cash se ha in qualche modo violato la clausola della promessa di proprietà."
+          ]
+        },
+        "payment": {
+          "title": "Pagamento",
+          "p": [
+            "FB4cash pagherà al proprietario la commissione di installazione una volta che la prima revisione è stata eseguita e approvata e un Business Manager è stato configurato con successo."
+          ]
+        },
+        "payment_calendar": {
+          "title": "Calendario dei pagamenti",
+          "p": [
+            "FB4cash pagherà il Titolare come segue:",
+            "Primo pagamento subito dopo l'installazione riuscita e dopo come segue:",
+            "I profili attivati ​​nella prima quindicina del mese (prime 2 settimane) verranno pagati nella settimana del 15 del mese successivo",
+            "I profili attivati ​​entro la seconda metà del mese (ultime 2 settimane) verranno pagati nella settimana dell'ultima settimana del mese successivo.",
+            "Se l'ultimo giorno del mese cade in un fine settimana o in un giorno festivo, il pagamento verrà inviato il giorno lavorativo successivo.",
+            "FB4cash non pagherà un profilo Facebook in cui non è stato possibile configurare correttamente il Business Manager. FB4cash pagherà il pagamento mensile per un profilo Facebook attivo per metà mese o più per il mese in questione.",
+            "I pagamenti per ogni referral che si traduce in una configurazione riuscita vengono pagati alla fine del mese.",
+            "FB4cash non pagherà per un profilo Facebook dove non è stato possibile configurare correttamente il Business Manager."
+          ]
+        },
+        "payment_method": {
+          "title": "Metodo di pagamento",
+          "p": [
+            "FB4cash invierà i pagamenti tramite Paypal e bonifico bancario.",
+            "Per essere pagati con bonifico è necessario inviare copia di un documento per ottemperare ai requisiti della nostra banca."
+          ]
+        },
+        "rental_termination": {
+          "title": "Risoluzione del contratto di locazione",
+          "p": [
+            "Il periodo di noleggio terminerà il giorno in cui il Business Manager non sarà più in uso.",
+            "FB4cash, a suo insindacabile giudizio, può decidere di non richiedere più l'account e può interrompere il periodo di noleggio.",
+            "Il noleggio verrà annullato anche se il Business Manager viene disattivato dal Proprietario o da Facebook.",
+            "Se l'account è stato utilizzato per 15 giorni o più quel mese, FB4cash pagherà il pagamento mensile.",
+            "Il periodo di noleggio terminerà anche in caso di violazione sostanziale dei presenti Termini."
+          ]
+        },
+        "material_violation": {
+          "title": "Infrazione materiale",
+          "p": [
+            "In caso di inadempimento materiale, FB4cash non sarà responsabile del pagamento di eventuali pagamenti futuri.",
+            "Accedi all'account da qualsiasi dispositivo che non è stato utilizzato prima dell'inizio del periodo di noleggio. Metti in pausa, ferma, modifica o interferisci in qualsiasi modo con gli annunci di FB4cash.",
+            "Elimina o rimuovi FB4cash Business Manager o Amministratore dalla pagina Facebook.",
+            "Rimuovi o rimuovi l'Account Manager FB4cash dal ruolo di Ad Account Manager. Utilizzo del metodo di pagamento FB4cash per qualsiasi scopo diverso dal pagamento degli Annunci creati da FB4cash. Consenti a qualsiasi altra persona o azienda di accedere o utilizzare l'Account pubblicitario. ",
+            "Accedi a Facebook con un desktop o un laptop da una nuova posizione che non è stata collegata nel periodo precedente al periodo di noleggio.",
+            "Accedi a Business Manager per qualsiasi motivo."
+          ]
+        },
+        "limited_liability": {
+          "title": "Limitazione di responsabilità",
+          "p": [
+            "Il Titolare prende atto che la Società non è responsabile per incidenti che l'account possa subire per cause al di fuori del proprio controllo e della propria azione. Il Titolare dichiara di conoscere i rischi, i pericoli, nonché ogni altra eventualità e/o incidente che l'esposizione comporta. e utilizzo di un profilo personale e/o professionale in un Social Network che operi tramite Internet; allo stesso modo, rinuncia a qualsiasi pretesa amministrativa, procedurale penale, nonché a qualsiasi indennizzo.",
+            "Nonostante eventuali danni che potresti subire, la responsabilità totale della Società e dei suoi fornitori ai sensi di qualsiasi disposizione di questi Termini e il tuo ricorso esclusivo per tutto quanto precede sarà limitato all'importo effettivamente pagato da te tramite il Servizio. ",
+            "Nella misura massima consentita dalla legge applicabile, in nessun caso la Società o i suoi fornitori saranno responsabili per eventuali danni speciali, incidentali, indiretti o consequenziali (inclusi, ma non limitati a, danni per mancato guadagno, perdita di dati o altre informazioni , a causa di interruzione dell'attività, lesioni personali, perdita di privacy derivanti da o in qualsiasi modo correlati all'uso o all'impossibilità di utilizzare il Servizio, software di terze parti e/o hardware di terze parti utilizzato con il Servizio, o altrimenti in relazione a qualsiasi disposizione delle presenti Condizioni), anche se la Società o qualsiasi fornitore è stato informato della possibilità di tali danni e anche se il rimedio non soddisfa il suo scopo essenziale. ",
+            "Alcuni stati non consentono l'esclusione delle garanzie implicite o la limitazione di responsabilità per danni accidentali o consequenziali, il che significa che alcune delle limitazioni di cui sopra potrebbero non essere applicabili. In questi stati, la responsabilità di ciascuna parte sarà limitata nella misura massima consentita. dalla legge."
+          ]
+        },
+        "disclaimer": {
+          "title": "Limitazione di responsabilità",
+          "p": [
+            "Il Servizio è fornito all'utente \"COS COM'È\" e \"COME DISPONIBILE\" con tutti i vizi e difetti senza garanzia di alcun tipo. Nella misura massima consentita dalla legge applicabile, la Società, per proprio conto e in nome delle sue Affiliate e dei rispettivi licenziatari e fornitori di servizi, declina espressamente tutte le garanzie, esplicite, implicite, legali o di altro tipo, rispetto al Servizio, comprese tutte le garanzie implicite di commerciabilità, idoneità allo scopo e non violazione, e garanzie che possono derivare dal corso dell'affare, dal corso della prestazione, dall'uso o dalla pratica commerciale. Senza limitazione a quanto sopra, la Società non fornisce alcuna garanzia o impegno e non fornisce alcuna dichiarazione di alcun tipo che il Servizio soddisferà Le vostre esigenze, raggiungere i risultati previsti, essere compatibili o funzionare con qualsiasi altro software, applicazione, sistema o servizio, operare senza interruzioni, rispettare le s prestazioni o standard di affidabilità o essere esente da errori o che eventuali errori o difetti possono o saranno corretti. ",
+            "Nonostante quanto sopra, né la Società né alcuno dei fornitori della società rilasciano dichiarazioni o garanzie di alcun tipo, esplicite o implicite: (i) in merito al funzionamento o alla disponibilità del Servizio, o alle informazioni, ai contenuti e ai materiali o ai prodotti ivi inclusi ; (ii) che il Servizio sarà ininterrotto o privo di errori; (iii) per quanto riguarda l'accuratezza, l'affidabilità o la validità di qualsiasi informazione o contenuto fornito tramite il Servizio; o (iv) che il Servizio, i suoi server, i contenuti o le e-mail inviate da o per conto della Società sono privi di virus, script, trojan, worm, malware, bombe a tempo o altri componenti dannosi. ",
+            "Alcune giurisdizioni non consentono l'esclusione di determinati tipi di garanzie o limitazioni sui diritti legali applicabili di un consumatore, quindi alcune o tutte le esclusioni e limitazioni di cui sopra potrebbero non essere applicabili. Ma in tal caso, le esclusioni e le limitazioni indicate in questa sezione sarà applicato nella misura massima richiesta dalla legge applicabile. "
+          ]
+        },
+        "dispute_resolution": {
+          "title": "Risoluzione delle controversie",
+          "p": [
+            "Se hai un problema o una controversia sul Servizio, accetti di provare prima a risolvere la controversia in modo informale contattando la Società.",
+            "Per gli utenti nell'Unione Europea (UE).",
+            "Se sei un consumatore nell'Unione Europea, beneficerai delle disposizioni obbligatorie della legge del paese in cui risiedi."
+          ]
+        },
+        "severability_saiver": {
+          "title": "Separabilità e rinuncia",
+          "p": [
+            {
+              "tag": "i",
+              "message": "Separabilità"
+            },
+            {
+              "tag": "p",
+              "message": "Se una qualsiasi disposizione dei presenti Termini risulta inapplicabile o non valida, tale disposizione sarà modificata e interpretata per raggiungere gli obiettivi di tale disposizione nella misura massima possibile ai sensi della legge applicabile e le restanti disposizioni continueranno a essere pienamente in vigore ed effetto."
+            },
+            {
+              "tag": "i",
+              "message": "Dimissioni"
+            },
+            {
+              "tag": "p",
+              "message": "Fatta eccezione per quanto previsto nel presente documento, il mancato esercizio di un diritto o il mancato rispetto di un obbligo ai sensi dei presenti Termini non influirà sulla capacità di una parte di esercitare tale diritto o richiederà tale rispetto in qualsiasi momento. Né la rinuncia a un l'inadempimento costituisce una rinuncia a qualsiasi successivo inadempimento"
+            }
+          ]
+        },
+        "interpretation": {
+          "title": "Interpretazione della traduzione",
+          "p": [
+            "I presenti Termini e condizioni potrebbero essere stati tradotti se li abbiamo resi disponibili sul nostro Servizio. Accetti che il testo inglese originale prevarrà in caso di controversia. Accetti che il testo inglese originale prevarrà in caso di una disputa."
+          ]
+        },
+        "change_terms": {
+          "title": "Modifiche a questi termini e condizioni",
+          "p": [
+            "Ci riserviamo il diritto, a nostra esclusiva discrezione, di modificare o sostituire i presenti Termini in qualsiasi momento. Se una revisione è materiale, faremo il possibile per fornire un preavviso di almeno 30 giorni prima che i nuovi termini abbiano effetto. Che cosa costituisce un materiale il cambiamento sarà determinato a nostra esclusiva discrezione. ",
+            "Continuando ad accedere o utilizzare il nostro servizio dopo che tali revisioni sono diventate effettive, accetti di essere vincolato dai termini modificati. Se non accetti i nuovi termini, in tutto o in parte, interrompi l'utilizzo del sito Web e del servizio."
+          ]
+        },
+        "contact": {
+          "title": "Contattaci",
+          "p": [
+            "Se hai domande su questi Termini e condizioni, puoi contattarci"
+          ]
+        }
+      }
+    },
+    "step_five": {
+      "p_1": {
+        "0": "Congratulazioni per la registrazione.",
+        "1": "Il processo di registrazione non è completamente completato. È stata inviata un'e-mail di conferma alla tua e-mail",
+        "2": "Un'email di conferma è stata inviata anche alla tua email Paypal"
+      },
+      "p_2": {
+        "0": "Se non hai ricevuto l'email di conferma della registrazione, clicca qui"
+      },
+      "email_confirmation": "L'email è già stata inviata."
+    }
+  },
+  "terms_conditions": {
+    "title": "TERMINI E CONDIZIONI",
+    "intro": {
+      "title": "TERMINI E CONDIZIONI PER AFFITTI PUBBLICITARI FACEBOOK",
+      "p": [
+        "I seguenti Termini e Condizioni si applicano al noleggio del tuo profilo Facebook e con il tuo consenso accetti di essere collegato in questo modo."
+      ]
+    },
+    "definitions": {
+      "title": "Definizioni",
+      "p": [
+        "Ai fini dei presenti Termini e condizioni:",
+        "\"Noleggio\" del noleggio del tuo profilo Facebook a cui si applicano i presenti Termini e condizioni.",
+        "\"FB4cash\" , questo sito Web, i rispettivi agenti, subappaltatori, direttori e dipendenti.",
+        "\"Proprietario\" è la persona che ha fornito il profilo Facebook che viene affittato.",
+        "\"Pagamento mensile\" è l'importo pagato al proprietario dell'account alla fine di ogni mese in cui l'account è in uso.",
+        "\"Commissione di riferimento\" è l'importo pagato a qualcuno per aver consigliato a un altro proprietario del profilo Facebook di portare a una configurazione di Business Manager di successo.",
+        "\"Profilo Facebook\" è l'accesso al Business Manager che viene affittato.",
+        "\"Business Manager\" è uno strumento di Facebook che aiuta a organizzare e gestire i tuoi account pubblicitari in modo completamente indipendente dal tuo profilo Facebook.",
+        "\"Amministratore Business Manager\" la persona che gestisce attivamente il Business Manager per conto di FB4cash e che verrà aggiunta per monitorare gli account pubblicitari.",
+        "\"Account pubblicitario\" è l'account pubblicitario di Facebook configurato in Business Manager.",
+        "\"Impostazioni di Business Manager\" il processo di configurazione di Facebook Business Manager da affittare.",
+        "\"Pagina Facebook\" la pagina Facebook creata con l'account del Titolare.",
+        "\"Pubblicità\" gli annunci pubblicitari creati da FB4cash nell'account del proprietario.",
+        "\"Commissione per configurazione\" è l'importo pagato al titolare dell'account per una corretta configurazione del Business Manager.",
+        "\"Servizio di social media di terze parti\" indica qualsiasi servizio o contenuto (inclusi dati, informazioni, prodotti o servizi) fornito da una terza parte che può essere visualizzato, incluso o reso disponibile dal Servizio.",
+        "\"Sito Web\" si riferisce a Il mio sito, accessibile da FB4cash.com",
+        "\"\"Tu o il Titolare \" indica la persona che ha fornito l'account pubblicitario Facebook che viene affittato e, in ogni caso, la persona che accede o utilizza il Servizio, o la società o altra persona giuridica per conto della quale detta persona accede o utilizza il Servizio, a seconda dei casi.",
+        "\"Società\" (denominata \" la Società\" , \" Noi\" o \" Il nostro\" questo Accordo) si riferisce a FB4cash."
+      ]
+    },
+    "recognition": {
+      "title": "Riconoscimento",
+      "p": [
+        "Questi sono i Termini e Condizioni che regolano l'uso di questo Servizio e l'accordo che opera tra l'Utente e la Società. Questi Termini e Condizioni stabiliscono i diritti e gli obblighi di tutti gli utenti rispetto all'uso del Servizio.",
+        "L'accesso e l'utilizzo del Servizio sono subordinati all'accettazione e al rispetto dei presenti Termini e condizioni. I presenti Termini e condizioni si applicano a tutti i visitatori, utenti e altre persone che accedono o utilizzano il Servizio.",
+        "Accedendo o utilizzando il Servizio, accetti di essere vincolato da questi termini e condizioni. Se non accetti nessuna parte di questi Termini e condizioni, non sarai in grado di accedere al Servizio.",
+        "Dichiari di avere più di 18 anni. La Società non consente ai minori di 18 anni di utilizzare il Servizio.",
+        "Il tuo accesso e utilizzo del Servizio è inoltre condizionato all'accettazione e al rispetto dell'Informativa sulla privacy della Società. La nostra Informativa sulla privacy descrive le nostre politiche e procedure relative alla raccolta, all'uso e alla divulgazione delle tue informazioni personali quando utilizzi l'Applicazione o il Sito . sito web e ti informa sui tuoi diritti alla privacy e su come la legge ti protegge. Ti preghiamo di leggere attentamente la nostra Informativa sulla privacy prima di utilizzare il nostro servizio."
+      ]
+    },
+    "service_condition": {
+      "title": "Termini di servizio",
+      "p": [
+        "Il Titolare autorizza la Società, ad esercitare in via esclusiva, il diritto di accesso e di gestione dell'account commerciale solo ed esclusivamente per la realizzazione di campagne pubblicitarie legate al Social Network Facebook, a tempo indeterminato, salvo che le parti, di comune accordo, concordino ad una durata diversa.",
+        "In virtù del presente contratto, la Società ha il diritto di esercitare per proprio conto, per conto del Titolare, le azioni necessarie per perseguire lo scopo stabilito nel contratto, ovvero per la creazione, predisposizione, esecuzione e controllo di campagne pubblicitarie o di comunicazione. Azioni su Internet e sui siti social affidate dal Titolare."
+      ]
+    },
+    "privacy": {
+      "title": "Privacy",
+      "p": [
+        "Rispettiamo la tua privacy e non condivideremo mai la tua password o altre informazioni personali. Durante il processo di configurazione di Business Manager, utilizziamo un'applicazione sicura per consentirci di configurare i tuoi account pubblicitari, mantenendo le tue informazioni personali al sicuro."
+      ]
+    },
+    "property_promise": {
+      "title": "Promessa di proprietà",
+      "p": [
+        "Il Titolare garantisce e garantisce di essere il legittimo proprietario dell'Account Pubblicitario e di essere l'unico ad avere accesso. Il Titolare garantisce inoltre che non vi siano irregolarità nella creazione o acquisizione dell'account. Inoltre, il Titolare garantisce che non c'è Necessità o dipende dalla possibilità di fare pubblicità su Facebook."
+      ]
+    },
+    "compensation": {
+      "title": "Indennizzo",
+      "p": [
+        "Il Proprietario si impegna a risarcire FB4cash se ha in qualche modo violato la clausola della promessa di proprietà."
+      ]
+    },
+    "payment": {
+      "title": "Pagamento",
+      "p": [
+        "FB4cash pagherà al proprietario la commissione di installazione una volta che la prima revisione è stata eseguita e approvata e un Business Manager è stato configurato con successo."
+      ]
+    },
+    "payment_calendar": {
+      "title": "Calendario dei pagamenti",
+      "p": [
+        "FB4cash pagherà il Titolare come segue:",
+        "Primo pagamento subito dopo l'installazione riuscita e dopo come segue:",
+        "I profili attivati ​​nella prima quindicina del mese (prime 2 settimane) verranno pagati nella settimana del 15 del mese successivo",
+        "I profili attivati ​​entro la seconda metà del mese (ultime 2 settimane) verranno pagati nella settimana dell'ultima settimana del mese successivo.",
+        "Se l'ultimo giorno del mese cade in un fine settimana o in un giorno festivo, il pagamento verrà inviato il giorno lavorativo successivo.",
+        "FB4cash non pagherà un profilo Facebook in cui non è stato possibile configurare correttamente il Business Manager. FB4cash pagherà il pagamento mensile per un profilo Facebook attivo per metà mese o più per il mese in questione.",
+        "I pagamenti per ogni referral che si traduce in una configurazione riuscita vengono pagati alla fine del mese.",
+        "FB4cash non pagherà per un profilo Facebook dove non è stato possibile configurare correttamente il Business Manager."
+      ]
+    },
+    "payment_method": {
+      "title": "Metodo di pagamento",
+      "p": [
+        "FB4cash invierà i pagamenti tramite Paypal e bonifico bancario.",
+        "Per essere pagati con bonifico è necessario inviare copia di un documento per ottemperare ai requisiti della nostra banca."
+      ]
+    },
+    "rental_termination": {
+      "title": "Risoluzione del contratto di locazione",
+      "p": [
+        "Il periodo di noleggio terminerà il giorno in cui il Business Manager non sarà più in uso.",
+        "FB4cash, a suo insindacabile giudizio, può decidere di non richiedere più l'account e può interrompere il periodo di noleggio.",
+        "Il noleggio verrà annullato anche se il Business Manager viene disattivato dal Proprietario o da Facebook.",
+        "Se l'account è stato utilizzato per 15 giorni o più quel mese, FB4cash pagherà il pagamento mensile.",
+        "Il periodo di noleggio terminerà anche in caso di violazione sostanziale dei presenti Termini."
+      ]
+    },
+    "material_violation": {
+      "title": "Infrazione materiale",
+      "p": [
+        "In caso di inadempimento materiale, FB4cash non sarà responsabile del pagamento di eventuali pagamenti futuri.",
+        "Accedi all'account da qualsiasi dispositivo che non è stato utilizzato prima dell'inizio del periodo di noleggio. Metti in pausa, ferma, modifica o interferisci in qualsiasi modo con gli annunci di FB4cash.",
+        "Elimina o rimuovi FB4cash Business Manager o Amministratore dalla pagina Facebook.",
+        "Rimuovi o rimuovi l'Account Manager FB4cash dal ruolo di Ad Account Manager. Utilizzo del metodo di pagamento FB4cash per qualsiasi scopo diverso dal pagamento degli Annunci creati da FB4cash. Consenti a qualsiasi altra persona o azienda di accedere o utilizzare l'Account pubblicitario. ",
+        "Accedi a Facebook con un desktop o un laptop da una nuova posizione che non è stata collegata nel periodo precedente al periodo di noleggio.",
+        "Accedi a Business Manager per qualsiasi motivo."
+      ]
+    },
+    "limited_liability": {
+      "title": "Limitazione di responsabilità",
+      "p": [
+        "Il Titolare prende atto che la Società non è responsabile per incidenti che l'account possa subire per cause al di fuori del proprio controllo e della propria azione. Il Titolare dichiara di conoscere i rischi, i pericoli, nonché ogni altra eventualità e/o incidente che l'esposizione comporta. e utilizzo di un profilo personale e/o professionale in un Social Network che operi tramite Internet; allo stesso modo, rinuncia a qualsiasi pretesa amministrativa, procedurale penale, nonché a qualsiasi indennizzo.",
+        "Nonostante eventuali danni che potresti subire, la responsabilità totale della Società e dei suoi fornitori ai sensi di qualsiasi disposizione di questi Termini e il tuo ricorso esclusivo per tutto quanto precede sarà limitato all'importo effettivamente pagato da te tramite il Servizio. ",
+        "Nella misura massima consentita dalla legge applicabile, in nessun caso la Società o i suoi fornitori saranno responsabili per eventuali danni speciali, incidentali, indiretti o consequenziali (inclusi, ma non limitati a, danni per mancato guadagno, perdita di dati o altre informazioni , a causa di interruzione dell'attività, lesioni personali, perdita di privacy derivanti da o in qualsiasi modo correlati all'uso o all'impossibilità di utilizzare il Servizio, software di terze parti e/o hardware di terze parti utilizzato con il Servizio, o altrimenti in relazione a qualsiasi disposizione delle presenti Condizioni), anche se la Società o qualsiasi fornitore è stato informato della possibilità di tali danni e anche se il rimedio non soddisfa il suo scopo essenziale. ",
+        "Alcuni stati non consentono l'esclusione delle garanzie implicite o la limitazione di responsabilità per danni accidentali o consequenziali, il che significa che alcune delle limitazioni di cui sopra potrebbero non essere applicabili. In questi stati, la responsabilità di ciascuna parte sarà limitata nella misura massima consentita. dalla legge."
+      ]
+    },
+    "disclaimer": {
+      "title": "Limitazione di responsabilità",
+      "p": [
+        "Il Servizio è fornito all'utente \"COS COM'È\" e \"COME DISPONIBILE\" con tutti i vizi e difetti senza garanzia di alcun tipo. Nella misura massima consentita dalla legge applicabile, la Società, per proprio conto e in nome delle sue Affiliate e dei rispettivi licenziatari e fornitori di servizi, declina espressamente tutte le garanzie, esplicite, implicite, legali o di altro tipo, rispetto al Servizio, comprese tutte le garanzie implicite di commerciabilità, idoneità allo scopo e non violazione, e garanzie che possono derivare dal corso dell'affare, dal corso della prestazione, dall'uso o dalla pratica commerciale. Senza limitazione a quanto sopra, la Società non fornisce alcuna garanzia o impegno e non fornisce alcuna dichiarazione di alcun tipo che il Servizio soddisferà Le vostre esigenze, raggiungere i risultati previsti, essere compatibili o funzionare con qualsiasi altro software, applicazione, sistema o servizio, operare senza interruzioni, rispettare le s prestazioni o standard di affidabilità o essere esente da errori o che eventuali errori o difetti possono o saranno corretti. ",
+        "Nonostante quanto sopra, né la Società né alcuno dei fornitori della società rilasciano dichiarazioni o garanzie di alcun tipo, esplicite o implicite: (i) in merito al funzionamento o alla disponibilità del Servizio, o alle informazioni, ai contenuti e ai materiali o ai prodotti ivi inclusi ; (ii) che il Servizio sarà ininterrotto o privo di errori; (iii) per quanto riguarda l'accuratezza, l'affidabilità o la validità di qualsiasi informazione o contenuto fornito tramite il Servizio; o (iv) che il Servizio, i suoi server, i contenuti o le e-mail inviate da o per conto della Società sono privi di virus, script, trojan, worm, malware, bombe a tempo o altri componenti dannosi. ",
+        "Alcune giurisdizioni non consentono l'esclusione di determinati tipi di garanzie o limitazioni sui diritti legali applicabili di un consumatore, quindi alcune o tutte le esclusioni e limitazioni di cui sopra potrebbero non essere applicabili. Ma in tal caso, le esclusioni e le limitazioni indicate in questa sezione sarà applicato nella misura massima richiesta dalla legge applicabile. "
+      ]
+    },
+    "dispute_resolution": {
+      "title": "Risoluzione delle controversie",
+      "p": [
+        "Se hai un problema o una controversia sul Servizio, accetti di provare prima a risolvere la controversia in modo informale contattando la Società.",
+        "Per gli utenti nell'Unione Europea (UE).",
+        "Se sei un consumatore nell'Unione Europea, beneficerai delle disposizioni obbligatorie della legge del paese in cui risiedi."
+      ]
+    },
+    "severability_saiver": {
+      "title": "Separabilità e rinuncia",
+      "p": [
+        {
+          "tag": "i",
+          "message": "Separabilità"
+        },
+        {
+          "tag": "p",
+          "message": "Se una qualsiasi disposizione dei presenti Termini risulta inapplicabile o non valida, tale disposizione sarà modificata e interpretata per raggiungere gli obiettivi di tale disposizione nella misura massima possibile ai sensi della legge applicabile e le restanti disposizioni continueranno a essere pienamente in vigore ed effetto."
+        },
+        {
+          "tag": "i",
+          "message": "Dimissioni"
+        },
+        {
+          "tag": "p",
+          "message": "Fatta eccezione per quanto previsto nel presente documento, il mancato esercizio di un diritto o il mancato rispetto di un obbligo ai sensi dei presenti Termini non influirà sulla capacità di una parte di esercitare tale diritto o richiederà tale rispetto in qualsiasi momento. , né la rinuncia a un l'inadempimento costituisce una rinuncia a qualsiasi successivo inadempimento."
+        }
+      ]
+    },
+    "interpretation": {
+      "title": "Interpretazione della traduzione",
+      "p": [
+        "I presenti Termini e condizioni potrebbero essere stati tradotti se li abbiamo resi disponibili sul nostro Servizio. Accetti che il testo inglese originale prevarrà in caso di controversia. Accetti che il testo inglese originale prevarrà in caso di una disputa."
+      ]
+    },
+    "change_terms": {
+      "title": "Modifiche a questi termini e condizioni",
+      "p": [
+        "Ci riserviamo il diritto, a nostra esclusiva discrezione, di modificare o sostituire i presenti Termini in qualsiasi momento. Se una revisione è materiale, faremo il possibile per fornire un preavviso di almeno 30 giorni prima che i nuovi termini abbiano effetto. Che cosa costituisce un materiale il cambiamento sarà determinato a nostra esclusiva discrezione. ",
+        "Continuando ad accedere o utilizzare il nostro servizio dopo che tali revisioni sono diventate effettive, accetti di essere vincolato dai termini modificati. Se non accetti i nuovi termini, in tutto o in parte, interrompi l'utilizzo del sito Web e del servizio."
+      ]
+    },
+    "contact": {
+      "title": "Contattaci",
+      "p": ["Se hai domande su questi Termini e condizioni, puoi contattarci"]
+    }
+  },
+  "referral_program": {
+    "title": "Diventa un referente",
+    "info": {
+      "0": "Registrati qui",
+      "1": "aumenta seriamente i tuoi guadagni e ottieni",
+      "2": "$ 5",
+      "3": "per rinvio"
+    },
+    "list": {
+      "p_1": {
+        "0": "È molto semplice, devi solo condividere il link della nostra pagina con i tuoi amici o conoscenti e assicurarti che nel modulo di registrazione aggiungano il tuo codice di riferimento nella casella",
+        "1": "\"Se hai un riferimento, aggiungi qui il tuo codice\"."
+      },
+      "p_2": {
+        "0": "Per ottenere il tuo codice",
+        "1": "segui questo link",
+        "2": "e completa il",
+        "3": "forma",
+        "4": ". In cui puoi richiedere un codice personalizzato, il nostro team confermerà a breve la registrazione del tuo nuovo codice nel nostro sistema."
+      },
+      "p_3": {
+        "0": "Se il tuo profilo non è stato idoneo alla registrazione con noi, non preoccuparti, puoi comunque guadagnare presentandoci ad amici o conoscenti, semplicemente registrati su",
+        "1": "il seguente modulo",
+        "2": "e il nostro team confermerà la tua registrazione."
+      },
+      "p_4": {
+        "0": "Il pagamento dei referral viene sempre effettuato alla fine del mese, il nostro team ti contatterà per confermare il numero di referral da te registrati ed effettuare il pagamento corrispondente."
+      },
+      "p_5": {
+        "0": "Importante!",
+        "1": "Assicurati che i tuoi referral utilizzino sempre il tuo numero di codice quando completi il ​​modulo, per sapere che sono i tuoi referral e possiamo generare il tuo prossimo pagamento."
+      }
+    },
+    "register_btn": "Registrati qui",
+    "tiny": "Per ogni persona che registra il proprio profilo con noi ed è valido"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "questions": [
+      {
+        "question": "Perché non creiamo i nostri profili?",
+        "answer": [
+          "Stiamo utilizzando solo il tuo account pubblicitario FB, che ha un accesso separato dal tuo normale profilo FB."
+        ]
+      },
+      {
+        "question": "Come faccio a sapere che il mio profilo non verrà pubblicato e che le mie informazioni non saranno condivise?",
+        "answer": [
+          "Stiamo utilizzando solo il tuo account pubblicitario FB, che ha un accesso separato dal tuo normale profilo FB.",
+          "Facebook è un'entità aziendale protetta, che protegge l'attività e i diritti dei suoi utenti. Pertanto, esiste una netta separazione tra il tuo account personale e quello dell'azienda (pubblicità).",
+          "Così puoi essere sicuro che i tuoi amici non riceveranno spam né vedranno i tuoi annunci o le tue attività pubblicitarie"
+        ]
+      },
+      {
+        "question": "È una truffa? Sarò truffato?",
+        "answer": [
+          "No, questa non è una truffa e non ti trufferemo. Siamo inserzionisti online che utilizzano account Facebook per impostare annunci a pagamento. Facebook limita il numero di account pubblicitari che ogni utente riceve. Poiché questa è la nostra attività principale, siamo cercando di acquisire il maggior numero di account per poter pubblicare più annunci. Colleghiamo la carta di credito della nostra azienda all'account e tutti i pagamenti pubblicitari di Facebook passeranno attraverso di esso. Non sei a rischio. "
+        ]
+      },
+      {
+        "question": "Stiamo violando le regole?",
+        "answer": [
+          "No. Vendere il tuo profilo è contro la politica di Facebook. Non acquistiamo profili, li affittiamo semplicemente per accedere e utilizzare account pubblicitari che non vengono utilizzati."
+        ]
+      }
+    ],
+    "account_secure": {
+      "title": "Il tuo account è al sicuro, sappi che:",
+      "list": [
+        "Utilizziamo il tuo profilo solo per accedere a Facebook Business Manager, ( https://business.facebook.com/ ) che è completamente separato dal tuo profilo. La maggior parte degli utenti non sa nemmeno che esiste.",
+        "Puoi continuare a utilizzare il tuo account mentre testiamo e pubblichiamo annunci.",
+        "Nessuno saprà che gli annunci sono in esecuzione e i tuoi amici non vedranno mai nulla (a meno che tu non glielo dica e mostri loro i tuoi nuovi guadagni)",
+        "Nulla verrà mai pubblicato sulla tua bacheca.",
+        "Non guardiamo mai il tuo profilo personale, i messaggi o qualsiasi altra attività, utilizziamo solo l'account aziendale che abbiamo creato.",
+        "Non venderemo, trasferiremo o pubblicheremo mai le tue informazioni personali."
+      ]
+    }
+  },
+  "contact": {
+    "form": {
+      "title": "Lasciaci un messaggio",
+      "name": "Il tuo nome",
+      "name_error_required": "Inserisci il tuo nome",
+      "email": "La tua e-mail",
+      "email_error_required": "Inserisci la tua email",
+      "email_error_pattern": "Registra un'email valida",
+      "message": "Il tuo messaggio",
+      "message_error_required": "Scrivi un messaggio",
+      "send_button": "Invia",
+      "email_sent": "L'email è stata inviata"
+    },
+    "side": {
+      "title": "Contattaci",
+      "info": [
+        "Come possiamo aiutarti? Hai bisogno di aiuto con i tuoi pagamenti?",
+        "Per qualsiasi domanda relativa ai pagamenti o al tuo account, contatta il manager locale nella tua zona.",
+        "Puoi anche fare domande nel nostro gruppo Telegram"
+      ],
+      "join_button": "Unisciti al gruppo"
+    }
+  },
+  "login": {
+    "home_link": "Casa",
+    "title": "Accedi",
+    "email": "E-mail",
+    "email_error_required": "Compila questo campo",
+    "email_error_min": "Minimo 6 caratteri",
+    "email_error_pattern": "Inserisci un indirizzo email valido",
+    "password": "password",
+    "password_error_required": "Compila questo campo",
+    "password_error_min": "Minimo 8 caratteri",
+    "password_error_max": "Massimo 15 caratteri",
+    "email_verified_error": "Il tuo account non è verificato. Clicca qui per ricevere una nuova email di conferma",
+    "email_confirmation_sent_error": "L'email è già stata inviata",
+    "no_account": "Non hai un utente? Registrati qui",
+    "forgot_password": "Non ricordi la password? Clicca qui",
+    "login_button": "Avvia sessione"
+  },
+  "reset_password": {
+    "login_link": "Accedi",
+    "title": "Cambia password",
+    "password": "password",
+    "password_error_required": "Compila questo campo",
+    "password_error_min": "Minimo 8 caratteri",
+    "password_confirmation": "Conferma password",
+    "password_confirmation_error_required": "Compila questo campo",
+    "password_confirmation_error_same": "Le password non corrispondono",
+    "reset_confirmation_message": "La tua password è stata modificata",
+    "reset_password_confirmation": "L'URL per reimpostare la password non è corretto o è scaduto",
+    "submit_button": "Cambia password",
+    "submit_button_waiting": "In attesa"
+  },
+  "confirmation": {
+    "paypal": {
+      "page_title": "Conferma e-mail PayPal",
+      "message": "La tua email PayPal è in fase di verifica",
+      "confirmation_message": "La tua email Paypal è già stata verificata",
+      "error": "Si è verificato un problema, prova ad aggiornare la pagina o invia nuovamente l'e-mail di conferma"
+    },
+    "email": {
+      "page_title": "E-mail di conferma",
+      "message": "La tua email è in fase di verifica",
+      "confirmation_message": "La tua email è già stata verificata",
+      "error": "Si è verificato un problema, prova ad aggiornare la pagina o invia nuovamente l'e-mail di conferma"
+    }
+  },
+  "forgot_password": {
+    "login_link": "Accedi",
+    "title": "Reimposta password",
+    "email": "E-mail",
+    "email_error_required": "Compila questo campo",
+    "email_error_min": "Minimo 6 caratteri",
+    "email_sent": "L'email è stata inviata",
+    "submit_button": "Invia email",
+    "submit_button_waiting": "In attesa"
+  },
+  "no_valid": {
+    "page_title": "Non valido",
+    "p_1": {
+      "0": "Siamo spiacenti. Il tuo profilo Facebook non è un candidato valido per il nostro programma di noleggio."
+    },
+    "p_2": {
+      "0": "Ma non preoccuparti, hai ancora la possibilità di guadagnare con noi.",
+      "1": "Clicca qui",
+      "2": "e inizia a guadagnare soldi per ogni amico che ci presenta e si unisce a noi."
+    }
+  },
+  "not_found": "Pagina non trovata",
+  "loading": "Caricamento . . .",
+  "navbar": {
+    "home": "Casa",
+    "how_it_works": "Come funziona",
+    "referral_program": "Programma di riferimento",
+    "faq": "FAQ",
+    "contact": "contatto",
+    "join_now": "Unisciti ora",
+    "login": "Entra"
+  },
+  "footer": {
+    "contact": "Contatto",
+    "terms_conditions": "Termini e condizioni d'uso",
+    "copyright": {
+      "0": "Diritto d'autore",
+      "1": "Tutti i diritti riservati"
+    },
+    "detach": "Questo sito non fa parte di Facebook o Facebook Inc. Inoltre, questo sito NON è approvato da Facebook in alcun modo. Facebook è un marchio registrato di Facebook Inc."
+  },
+  "dashboard_navbar": {
+    "payments": "Pagamenti",
+    "referrals": "Riferimenti",
+    "profile": "profilo",
+    "users": "Utenti",
+    "orders": "ordini"
+  },
+  "dashboard_profile": {
+    "hi": "Ciao",
+    "logout": "Chiudi sessione"
+  },
+  "payments": {
+    "paypal_email_verified": {
+      "0": "La tua email PayPal non è stata verificata. Per favore,",
+      "1": "CLICCA QUI",
+      "2": "per inviare un'e-mail di conferma."
+    },
+    "email_sent": {
+      "0": "Un'e-mail è stata inviata alla tua e-mail Paypal. Controllala e verifica il tuo account Paypal. Se il messaggio non ti è arrivato",
+      "1": "CLICCA QUI."
+    },
+    "title": "Pagamenti",
+    "concept": "concetto",
+    "name": "Nome",
+    "user": "Utente",
+    "payment_method": "Metodo di pagamento",
+    "payment_date": "Data di pagamento",
+    "status": "Stato",
+    "amount": "Importo"
+  },
+  "referrals": {
+    "title": "Racconti",
+    "name": "Nome",
+    "email": "E-mail",
+    "creation_date": "Data di creazione",
+    "status": "stato",
+    "observation": "osservazione",
+    "update": "Aggiorna",
+    "accept": "Accetta",
+    "cancel": "Cancella"
+  },
+  "profile": {
+    "profile": {
+      "title": "Profilo",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "E-mail",
+      "birthday": "Data di nascita",
+      "phone": "Telefono",
+      "referral_code": "Codice di riferimento",
+      "referral_link": "Link di riferimento",
+      "status": "stato",
+      "payment_method": "Metodo di pagamento",
+      "paypal_email": "E-mail PayPal",
+      "holder_name": "Nome del titolare",
+      "bank_agency": "Agenzia bancaria",
+      "bank_account": "Conto bancario"
+    },
+    "configuration": {
+      "title": "Impostazioni",
+      "forgot_password_link": "Reimposta password",
+      "paypal_email_verified": "Conferma email da Paypal",
+      "paypal_email_sent": {
+        "0": "Un'e-mail è stata inviata a",
+        "1": "Controlla la tua email e conferma la tua email PayPal"
+      },
+      "change_paypal_email": "Cambia email PayPal"
+    }
+  },
+  "users": {
+    "title": "Utenti",
+    "name": "Nome",
+    "status": "stato",
+    "user_type": "Tipo utente",
+    "email": "E-mail",
+    "country": "Paese",
+    "phone": "Telefono",
+    "user_row": {
+      "payments": "Pagamenti",
+      "more_information": "Ulteriori informazioni",
+      "address": "indirizzo",
+      "city": "città",
+      "birthday": "Data di nascita",
+      "creation_date": "Data di creazione",
+      "ip": "IP",
+      "payment_method": "Metodo di pagamento",
+      "paypal_email": "E-mail PayPal",
+      "holder_name": "Nome del titolare",
+      "bank_account_code": "Codice conto bancario",
+      "bank_agency": "Agenzia bancaria",
+      "referral": "Rinvio",
+      "old_referral_code": "Vecchio codice di riferimento",
+      "referral_code": "Codice di riferimento",
+      "zip_code": "CAP"
+    },
+    "payments": {
+      "concept": "concetto",
+      "payment_method": "Metodo di pagamento",
+      "payment_date": "Data di pagamento",
+      "status": "stato",
+      "amount": "importo"
+    }
+  },
+  "orders": {
+    "title": "Ordini",
+    "create_order_button": "Crea ordine",
+    "concept": "concetto",
+    "status": "stato",
+    "creation_date": "Data di creazione",
+    "payments": "Pagamenti",
+    "update": "Aggiorna",
+    "update_button": "Aggiorna ordine",
+    "aprove_button": "Approva",
+    "reject_button": "Rifiuta",
+    "cancel_button": "Annulla",
+    "crea_ordine": {
+      "title": "Crea ordine",
+      "create_order_button": "Crea ordine",
+      "name": "Nome",
+      "email": "E-mail",
+      "payment_method": "Metodo di pagamento",
+      "concept": "concetto",
+      "amount": "importo",
+      "confirm_order_button": "Conferma ordine"
+    },
+    "payment_table": {
+      "name": "Nome",
+      "concept": "concetto",
+      "payment_method": "Metodo di pagamento",
+      "payment_date": "Data di pagamento",
+      "status": "stato",
+      "amount": "importo"
+    }
+  },
+  "actions": {
+    "title": "Azioni",
+    "create_action_button": "Crea azione",
+    "action": "Azione",
+    "creation_date": "Data di creazione",
+    "status": "Stato",
+    "Obiettivo": "Obiettivo",
+    "dettagli": "dettagli",
+    "user_row": {
+      "dettagli": "Dettagli",
+      "name": "Nome",
+      "action": "Azione",
+      "email": "E-mail"
+    },
+    "crea_azione": {
+      "title": "Crea azione",
+      "create_action_button": "Crea azione"
+    },
+    "change_user_status": {
+      "none": "Nessuno",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "E-mail",
+      "status": "Stato",
+      "referral_code": "Codice di riferimento",
+      "filtro": "Filtro",
+      "name": "Nome",
+      "show_selected": "Mostra selezionati",
+      "hide_selected": "Nascondi selezionati",
+      "users_selected": "Utenti selezionati",
+      "send": "Invia",
+      "observation": "Osservazione"
+    }
+  },
+  "referral_registration": {
+    "title": "Diventa un referente!",
+    "info": "Compila questo semplice questionario e inizia a guadagnare invitando i tuoi amici!",
+    "no_more_steps": "Non ci sono più passaggi",
+    "buttons": {
+      "previous": "Precedente",
+      "next": "Successivo",
+      "send": "Invia",
+      "sending": "Invio"
+    },
+    "locations": {
+      "title": "Modulo di registrazione",
+      "personal_information": "Dati personali",
+      "confirmation_payment_method": "Conferma e metodo di pagamento",
+      "congratulazioni": "Congratulazioni"
+    },
+    "step_one": {
+      "required_field": "Registra questo campo",
+      "first_name": "Il tuo nome",
+      "first_name_error_pattern": "Il nome contiene caratteri non validi",
+      "last_name": "I tuoi cognomi",
+      "last_name_error_pattern": "Il cognome contiene caratteri non validi",
+      "address": "Il tuo indirizzo",
+      "country": "Il tuo paese di residenza",
+      "city": "La tua città di residenza",
+      "zip_code": "CAP",
+      "birthday": "Data di nascita",
+      "birthday_error_old_enough": "Devi avere più di 18 anni",
+      "phone": "Il tuo telefono",
+      "phone_error_pattern": "Inserisci un numero di cellulare valido",
+      "email": "La tua e-mail",
+      "email_error_pattern": "Inserisci un indirizzo email valido",
+      "password": "Inserisci una password",
+      "password_error_min": "Minimo 8 caratteri",
+      "password_confirmation": "Conferma la tua password",
+      "password_confirmation_error_same": "Le password non corrispondono"
+    },
+    "step_two": {
+      "paymentMethod": {
+        "question": "Metodo di pagamento",
+        "option_1": "PayPal",
+        "option_2": "Altre banche - Solo per Perù",
+        "option_3": "Banco BCP - Solo per Perù",
+        "error_1": "Seleziona un metodo di pagamento"
+      },
+      "paypalEmail": {
+        "question": "E-mail PayPal",
+        "error_1": "Per favore, indica la tua email paypal",
+        "error_2": "Inserisci un'email valida",
+        "error_3": "Le email di PayPal hanno almeno 6 caratteri"
+      },
+      "paypalEmailConfirmation": {
+        "question": "Conferma la tua email Paypal",
+        "error_1": "Conferma la tua email paypal",
+        "error_2": "Le email non corrispondono"
+      },
+      "paypalMessage": {
+        "p_1": "Verifica che la tua email Paypal sia corretta al 100%. Non siamo responsabili per informazioni errate."
+      },
+      "holderName": {
+        "question": "Nome del titolare",
+        "error_1": "Inserisci il nome del titolare"
+      },
+      "bankAngency": {
+        "question": "Agenzia bancaria",
+        "error_1": "Inserisci l'agenzia bancaria"
+      },
+      "bankAccountCode": {
+        "question": "Codice conto interbancario",
+        "question_alt": "Codice conto bancario BCP",
+        "error_1": "Inserisci il codice del conto interbancario",
+        "error_2": "Il codice deve contenere solo numeri",
+        "error_3": "Il codice deve avere 20 cifre",
+        "error_4": "Il codice deve avere 14 cifre"
+      },
+      "bankMessage": {
+        "p_1": "Valido solo per la CCI peruviana. Verifica che la tua CCI sia corretta al 100%. Non siamo responsabili per i dati errati."
+      },
+      "documentImage": {
+        "question": "Prova di identità",
+        "error_1": "Inserisci una foto che confermi la tua identità",
+        "error_2": "Il file può avere un massimo di 2 MB",
+        "error_3": "Il file può essere solo in formato PNG, JPG o JPEG",
+        "error_4": "Il nome del file non può contenere più di 20 caratteri",
+        "message": "Invia una foto del tuo documento in alta risoluzione e leggibile, puoi coprire qualsiasi dettaglio desideri, eccetto la foto, il nome completo e la data di nascita. (Non modificare digitalmente) (Puoi usare, ID, passaporto o patente di guida)."
+      },
+      "old_referral_code": "Codice di riferimento attuale",
+      "old_referral_code_message": "Se sei già un nostro referente, inserisci il codice che utilizzi attualmente in modo che tutti i tuoi referral ti siano ancora assegnati. Grazie.",
+      "termsAndConditions": {
+        "option_1": {
+          "0": "Accetto il",
+          "1": "Termini e condizioni"
+        },
+        "error_1": "Accetta i Termini e condizioni"
+      },
+      "captcha_error": "Questo campo è obbligatorio",
+      "email_duplicate_message": "L'email è già stata utilizzata"
+    },
+    "step_three": {
+      "p_1": {
+        "0": "Congratulazioni per la registrazione.",
+        "1": "Il processo di registrazione non è completamente completato. È stata inviata un'e-mail di conferma alla tua e-mail",
+        "2": "Un'email di conferma è stata inviata anche alla tua email Paypal"
+      },
+      "p_2": {
+        "0": "Se non hai ricevuto l'email di conferma della registrazione, clicca qui"
+      },
+      "email_confirmation": "L'email è già stata inviata."
+    }
+  },
+  "cookie_consentment": {
+    "message": "Questo sito web utilizza i cookie per migliorare l'esperienza dell'utente.",
+    "accept": "Capisco",
+    "decline": "Declino"
+  }
+}

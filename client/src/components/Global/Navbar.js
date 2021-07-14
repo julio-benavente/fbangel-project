@@ -129,6 +129,9 @@ const Navbar = () => {
     { code: "en", name: "English", flag: <Flags.GB /> },
     { code: "fr", name: "Français", flag: <Flags.FR /> },
     { code: "nl", name: "Nederlands", flag: <Flags.NL /> },
+    { code: "it", name: "Italiano", flag: <Flags.IT /> },
+    { code: "de", name: "Deutsche", flag: <Flags.DE /> },
+    { code: "ro", name: "Română", flag: <Flags.RO /> },
   ];
 
   const [languageDropdownIsOn, setLanguageDropdownIsOn] = useState(false);

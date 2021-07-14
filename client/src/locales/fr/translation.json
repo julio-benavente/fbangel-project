@@ -32,7 +32,7 @@
     },
     "requirements": {
       "title": "Combien gagnerez-vous ?",
-      "Info": {
+      "info": {
         "span": "Gagnez 30 $ chaque mois!",
         "p": "Confirmez que vous répondez aux exigences et préparez votre profil. Cliquez sur le bouton et découvrez comment"
       },
@@ -100,7 +100,7 @@
   "how_it_works": {
     "how_it_works": {
       "title": "Comment ça marche ?",
-      "Info": {
+      "info": {
         "p_1": "Le processus est vraiment simple. Si vous avez un compte Facebook, vous connaissez probablement les publicités et les bannières sur Facebook. Elles sont partout, tout le temps, et beaucoup de gens en tirent de l'argent.",
         "p_2": "Ce que vous ne savez pas, c'est que vous pouvez aussi, et très facilement, louer votre compte Facebook, sans rien faire.",
         "p_3": "Puisque Facebook est une personne morale protégée, qui protège l'activité et les droits de ses utilisateurs, cela n'affectera pas du tout vous ou votre activité en ligne.",
@@ -122,7 +122,7 @@
     },
     "configuration": {
       "title": "Paramètres",
-      "Info": {
+      "info": {
         "0": "Si et seulement si votre compte Facebook est conforme",
         "1": "TOUS",
         "2": "les exigences énoncées ci-dessus, vous devez effectuer 2 étapes simples avant de pouvoir remplir le formulaire d'inscription."
@@ -583,7 +583,7 @@
         "error_2": "Entrez un email valide",
         "error_3": "Les e-mails Paypal ont au moins 6 caractères"
       },
-      "PaypalEmailConfirmation": {
+      "paypalEmailConfirmation": {
         "question": "Confirmez votre email Paypal",
         "error_1": "Veuillez confirmer votre email paypal",
         "error_2": "Les e-mails ne correspondent pas"
@@ -805,7 +805,9 @@
         },
         "contact": {
           "title": "Contactez-nous",
-          "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
+          "p": [
+            "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
+          ]
         }
       }
     },
@@ -995,7 +997,9 @@
     },
     "contact": {
       "title": "Contactez-nous",
-      "p": ["Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"]
+      "p": [
+        "Si vous avez des questions sur les présentes conditions générales, vous pouvez nous contacter"
+      ]
     }
   },
   "referral_program": {
@@ -1171,7 +1175,7 @@
     "home": "Début",
     "how_it_works": "Comment ça marche",
     "referral_program": "Programme de parrainage",
-    "FAQ": "FAQ",
+    "faq": "FAQ",
     "contact": "Contact",
     "join_now": "Inscrivez-vous maintenant",
     "login": "Connexion"
@@ -1208,11 +1212,11 @@
     },
     "title": "Paiements",
     "concept": "Concept",
-    "name:": "Nom",
+    "name": "Nom",
     "user": "Utilisateur",
     "payment_method": "Mode de paiement",
     "payment_date": "Date de paiement",
-    "statut": "Statut",
+    "status": "Statut",
     "amount": "Montant"
   },
   "referrals": {
@@ -1284,7 +1288,7 @@
       "concept": "Concept",
       "payment_method": "Mode de paiement",
       "payment_date": "Date de paiement",
-      "statut": "Statut",
+      "status": "Statut",
       "montant": "Montant"
     }
   },
@@ -1441,8 +1445,8 @@
       },
       "old_referral_code": "Code référent actuel",
       "old_referral_code_message": "Si vous êtes déjà l'un de nos parrains, veuillez saisir le code que vous utilisez actuellement afin que tous vos parrainages vous soient toujours attribués. Merci.",
-      "termes et conditions": {
-        "Option 1": {
+      "termsAndConditions": {
+        "option_1": {
           "0": "J'accepte le",
           "1": "Conditions générales"
         },

@@ -1,0 +1,1470 @@
+{
+  "home": {
+    "banner": {
+      "headline": "Faceți bani cu profilul dvs. de Facebook! Este jocul copiilor!",
+      "sub_headline": "Continuă să te bucuri de contul tău de Facebook ca întotdeauna și în fiecare lună vei primi banii tăi. Noi îi generăm pentru tine.",
+      "start_button": "Începeți să câștigați bani"
+    },
+    "process": {
+      "cards": [
+        {
+          "number": "01",
+          "title": "Completați formularul",
+          "info": "Vă oferim să vă alăturați programului nostru în câteva clicuri și să începeți să câștigați online, fără niciun efort suplimentar!"
+        },
+        {
+          "number": "02",
+          "title": "Așteptați confirmarea noastră",
+          "info": "Confirmarea durează 3-5 zile lucrătoare! * (De obicei în 48 de ore!)",
+          "disclaimer": "După prima autentificare"
+        },
+        {
+          "number": "03",
+          "title": "Primiți plăți lunare",
+          "info": "În timp ce vă faceți viața normală, vă facem contul de Facebook să genereze profituri pentru dvs.!"
+        },
+        {
+          "number": "04",
+          "title": "Distribuie prietenilor tăi",
+          "info": "Împărtășește-ți prietenii și mărește-ți câștigurile. Veți primi o plată pentru fiecare înregistrare nouă trimisă de dvs. Nu există limite!"
+        }
+      ]
+    },
+    "requirements": {
+      "title": "Cât veți câștiga?",
+      "info": {
+        "span": "Câștigă 30 USD în fiecare lună!",
+        "p": "Confirmați că îndepliniți cerințele și pregătiți profilul dvs. Faceți clic pe buton și aflați cum."
+      },
+      "how_it_works_btn": "Cum funcționează?",
+      "sub_title": "Cerințe pentru ca profilul să fie valid",
+      "list": [
+        "Real, activ, cu fotografie și nume real",
+        "Cu cel puțin 100 de prieteni",
+        "Cel puțin un an",
+        "Conținut adecvat",
+        "Fii majorat",
+        "Nu trebuie să fi fost folosit anterior sau închiriat către alte companii pentru utilizarea publicității",
+        "Aveți un e-mail asociat cu profilul dvs.",
+        "Administrator comercial (BM) creat",
+        "ID verificat",
+        "Aplicația 2FA activată"
+      ]
+    },
+    "referral": {
+      "title": "Program de recomandare",
+      "info": {
+        "p_1": {
+          "0": "Avem un program de recomandare pentru dvs.! Dacă ne aduceți familia sau prietenii, puteți câștiga mai mult decât",
+          "1": "1000 USD",
+          "2": "pe lună."
+        },
+        "p_2": {
+          "0": "Activați codul de recomandare și câștigați",
+          "1": "5 USD",
+          "2": "pentru fiecare recomandare validă. Fără limită!"
+        }
+      },
+      "register_btn": "Înregistrați-vă aici",
+      "tiny": {
+        "p_1": "Planurile vor fi plătite după ce echipa noastră a confirmat profilul ca fiind valid.",
+        "p_2": "În toate planurile, echipa noastră trebuie să poată contacta proprietarii pentru a rezolva orice eventuală problemă care ar putea apărea."
+      }
+    },
+    "testimonies": {
+      "title": "Ce spun oamenii?",
+      "info": "Oamenii care ni s-au alăturat și câștigă deja bani!",
+      "testimonies": [
+        {
+          "number": "1",
+          "testimony": "Am colaborat cu fb4cash de mai bine de un an, nu am avut probleme. Banii sunt întotdeauna la timp și primesc întotdeauna răspunsuri la toate întrebările mele. Este minunat că nu trebuie să fac nimic și, de asemenea, nu afectează deloc profilul meu. Să presupunem că câștig doar bani prin închirierea contului meu de Facebook. Îi recomand tuturor! ",
+          "autor": "Ana Martín",
+          "membership": "Membru din mai 2021"
+        },
+        {
+          "number": "2",
+          "testimony": "Am decis să încerc să câștig bani cu FB4cash, deoarece am fost interesat să știu cum funcționează. Pot spune că este o modalitate excelentă de a avea venituri suplimentare. Pur și simplu a trebuit să completez formularul ȘI NIMIC ALTE! Băieții se ocupă de restul, doar îmi strâng banii în contul meu PayPal ",
+          "autor": "Tony Smith",
+          "membership": "Membru din ianuarie 2021"
+        },
+        {
+          "number": "3",
+          "testimony": "Când în țara mea a trebuit să mergem la închisoare din cauza covid-19, am rămas fără muncă și fără venituri, o prietenă mi-a explicat că are un venit suplimentar închirierea Facebook-ului său pentru a face publicitate, Am fost un pic sceptic, dar am decis să încerc, iar adevărul este că până acum nu am avut probleme, plățile sunt întotdeauna punctuale și am fost întotdeauna plătit pentru toți prietenii pe care i-am adus. Îl recomand! ",
+          "author": "Alena Due",
+          "membership": "Membru din martie 2020"
+        }
+      ]
+    }
+  },
+  "how_it_works": {
+    "how_it_works": {
+      "title": "Cum funcționează?",
+      "info": {
+        "p_1": "Procesul este într-adevăr corect. Dacă aveți un cont Facebook, probabil că sunteți familiarizați cu reclame și bannere de pe Facebook. Sunt peste tot, tot timpul și o mulțime de oameni câștigă bani din acesta.",
+        "p_2": "Ceea ce nu știți este că puteți, și foarte ușor, să vă închiriați contul de Facebook, fără a face nimic.",
+        "p_3": "Deoarece Facebook este o entitate corporativă protejată, care protejează activitatea și drepturile utilizatorilor săi, acest lucru nu vă va afecta deloc pe dvs. sau activitatea dvs. online.",
+        "p_4": "Niciunul dintre prietenii dvs. nu va primi spam sau vă va vedea anunțurile și vă vom plăti în continuare, doar pentru utilizarea părții de publicitate a profilului dvs."
+      },
+      "faq_link": "Consultați secțiunea de întrebări frecvente pentru mai multe informații"
+    },
+    "requirements": {
+      "title": "Cerințe privind profilul",
+      "list": [
+        "Trebuie să fie real, activ, cu o fotografie și un nume real care să se potrivească cu numele documentului dvs.",
+        "Cu cel puțin 100 de prieteni",
+        "Cel puțin un an",
+        "Cu un conținut adecvat, nu administrați fotografii care să arate orice tip de violență împotriva oamenilor sau animalelor, fotografii cu conținut sexual, scuze pentru terorism sau cu semnificație politică ridicată, precum și orice alt tip care poate fi considerat ofensator social",
+        "Trebuie să aveți vârsta legală",
+        "Nu trebuie să fi fost folosit anterior sau închiriat către alte companii pentru utilizarea publicității",
+        "Trebuie să aveți un e-mail asociat cu profilul dvs."
+      ]
+    },
+    "configuration": {
+      "title": "Setări",
+      "info": {
+        "0": "Dacă și numai dacă contul dvs. Facebook respectă",
+        "1": "TOATE",
+        "2": "cerințele prezentate mai sus trebuie să parcurgeți 2 pași simpli înainte de a putea completa formularul de înregistrare."
+      },
+      "list": [
+        "Creați un administrator comercial (BM)",
+        "Activați autentificarea în doi pași prin aplicație"
+      ],
+      "step_one": {
+        "title": "Pasul 1: Creați un administrator comercial (BM)",
+        "list": {
+          "li_1": {
+            "0": "Accesați"
+          },
+          "li_2": {
+            "0": "Faceți clic pe",
+            "1": "Creați un cont"
+          },
+          "li_3": {
+            "0": "Introduceți un nume pentru afacerea dvs., numele dvs. și o adresă de e-mail faceți clic pe",
+            "1": "Trimiteți",
+            "2": "Terminat"
+          },
+          "li_4": {
+            "0": "După ce faceți clic",
+            "1": "Gata",
+            "2": "Facebook vă poate arăta următoarele opțiuni."
+          }
+        }
+      },
+      "option_one": {
+        "title": "Opțiunea 1 (nu necesită verificarea ID-ului)",
+        "p_1": "În funcție de versiunea facebook-ului dvs., veți vedea una dintre următoarele imagini.",
+        "p_2": "Pentru a obține identificatorul administratorului comercial (BM Id) pe care trebuie să îl trimiteți în formularul de înregistrare, urmați acești pași.",
+        "list_1": {
+          "li_1": {
+            "0": "Faceți clic pe",
+            "1": "Configurarea companiei"
+          },
+          "li_2": {
+            "0": "Coboară la",
+            "1": "Informații comerciale"
+          },
+          "li_3": {
+            "0": "Faceți o fotografie sau o captură de ecran a dvs.",
+            "1": "Identificator administrator comercial"
+          }
+        },
+        "p_3": "Mai întâi închideți fereastra pop-up, faceți clic pe X din stânga sus",
+        "p_4": {
+          "0": "Pentru a obține",
+          "1": "Identificatorul administratorului comercial",
+          "2": "(ID BM) pe care trebuie să îl trimiteți în formularul de înregistrare, urmați acești pași."
+        },
+        "list_2": {
+          "li_1": {
+            "0": "Faceți clic pe",
+            "1": "Mai multe instrumente"
+          },
+          "li_2": {
+            "0": "Faceți clic pe",
+            "1": "Configurarea companiei"
+          },
+          "li_3": {
+            "0": "Coboară la",
+            "1": "Informații comerciale"
+          },
+          "li_4": {
+            "0": "Faceți o fotografie sau o captură de ecran a dvs.",
+            "1": "Identificator administrator comercial"
+          }
+        }
+      },
+      "option_two": {
+        "title": "Opțiunea 2 (necesită verificarea ID-ului)",
+        "p_1": "Mai întâi închideți fereastra pop-up, faceți clic pe X din stânga sus",
+        "p_2": "Trebuie să urmați pașii următori pentru a vă verifica identitatea.",
+        "list_1": {
+          "li_1": {
+            "0": "Faceți clic pe",
+            "1": "Vezi detalii"
+          },
+          "li_2": {
+            "0": "Faceți clic pe",
+            "1": "Solicitați examinarea"
+          },
+          "li_3": {
+            "0": "Faceți clic pe",
+            "1": "Continuați"
+          },
+          "li_4": {
+            "0": "Încărcați documentul dvs. de identificare"
+          },
+          "li_5": {
+            "0": "Faceți clic pe",
+            "1": "Continuați"
+          }
+        },
+        "p_3": "În 24 sau 48 de ore, Facebook vă confirmă de obicei identitatea și vă avertizează cu privire la e-mail dacă ceva nu este în regulă.",
+        "p_4": "Puteți verifica dacă identitatea dvs. a fost verificată folosind următorul link",
+        "p_5": {
+          "0": "Doar după ce Facebook a confirmat că identitatea dvs. este verificată, urmați acești pași pentru a obține",
+          "1": "Identificatorul administratorului comercial",
+          "2": "(ID BM) pe care trebuie să îl trimiteți în formularul de înregistrare"
+        },
+        "list_2": {
+          "li_1": {
+            "0": "Accesați"
+          },
+          "li_2": {
+            "0": "Coboară la",
+            "1": "Informații comerciale"
+          },
+          "li_3": {
+            "0": "Faceți o fotografie sau o captură de ecran a dvs.",
+            "1": "Identificator administrator comercial"
+          }
+        }
+      },
+      "step_two": {
+        "title": "Pasul 2: activați autentificarea în doi pași (2FA) prin intermediul aplicației",
+        "list": {
+          "li_1": {
+            "0": "Accesați",
+            "1": "Setări și confidențialitate"
+          },
+          "li_2": {
+            "0": "Selectați",
+            "1": "Configurare"
+          },
+          "li_3": {
+            "0": "Selectați",
+            "1": "Securitate la conectare"
+          },
+          "li_4": {
+            "0": "Găsiți \"Utilizați autentificarea în doi pași\" -",
+            "1": "Editați"
+          },
+          "li_5": {
+            "0": "Selectați",
+            "1": "Utilizați aplicația de autentificare"
+          },
+          "li_6": {
+            "0": "Copiați codul - Token - Continuați și cereți-ne codul de confirmare"
+          },
+          "extra": {
+            "p_1": "Cod de confirmare",
+            "p_2": "Fără a închide pagina, deschideți un alt http://2fa.live, lipiți Token-ul și faceți clic pe \"Trimiteți\". Copiați ultimele 6 numere ale rezultatului.",
+            "p_3": "De asemenea, dacă preferați, puteți utiliza o aplicație precum Google Authenticator, Duo Mobile sau LastPass."
+          },
+          "li_7": {
+            "0": "Reveniți la fb și completați codul de confirmare -",
+            "1": "Terminat"
+          }
+        }
+      }
+    },
+    "registration": {
+      "title": "Înregistrare",
+      "info": {
+        "p_1": {
+          "0": "Utilizați",
+          "1": "acest formular",
+          "2": "să vă înregistrați."
+        },
+        "p_2": {
+          "0": "Înainte de a avea acces pentru a completa datele dvs., va trebui să răspundeți la câteva întrebări simple despre profilul dvs. Facebook pentru a evalua în prealabil dacă profilul dvs. îndeplinește cerințele, cum ar fi \"Cât de vechi este contul dvs.?\", \"Câți prieteni aveți în profilul dvs. de Facebook?\", Etc. "
+        },
+        "p_3": {
+          "0": "Nu vă faceți griji, se face în",
+          "1": "mai puțin de 1 minut"
+        },
+        "p_4": {
+          "0": "Dacă profilul dvs. se califică, va trebui să completați datele dvs. și să atașați o fotografie a unui document pentru a verifica dacă profilul dvs. este real și că aveți vârsta legală."
+        },
+        "p_5": {
+          "0": "Vom avea nevoie de o fotografie a documentului dvs. la rezoluție înaltă și lizibilă, puteți acoperi orice detaliu doriți, cu excepția fotografiei, numele complet și data nașterii."
+        },
+        "p_6": {
+          "0": "Dacă decideți să acoperiți orice date, nu o faceți editând fotografia sau Facebook nu o va admite, folosiți degetele de exemplu sau o bucată de hârtie."
+        },
+        "p_7": {
+          "0": "Puteți utiliza DNI, pașaport sau permis de conducere, dacă nu aveți niciunul dintre ele, vă rog",
+          "1": "faceți clic aici pentru un ghid cu opțiuni alternative"
+        },
+        "p_8": {
+          "0": "În timpul procesului de înregistrare trebuie să atașați și o fotografie cu dvs.",
+          "1": "Identificatorul administratorului comercial",
+          "2": "pe care l-ați creat la pasul 1 și introduceți",
+          "3": "Cod de autentificare cu 32 de caractere",
+          "4": "(Jeton) pe care l-ați obținut la pasul 2"
+        }
+      }
+    },
+    "payment": {
+      "title": "Primiți plata",
+      "info": {
+        "p_1": {
+          "0": "Odată ce echipa noastră verifică faptul că putem accesa profilul dvs. prin 2FA și că într-adevăr Administratorul Comercial (BM) este creat și nelimitat, echipa noastră va finaliza configurarea BM și prima dvs. plată va fi procesată prin Paypal."
+        },
+        "p_2": {
+          "0": "În mod normal, 4 până la 5 zile lucrătoare de la primirea formularului dvs., atât timp cât datele sunt corecte și putem accesa profilul dvs. și Managerul de afaceri nu este restricționat."
+        },
+        "p_3": {
+          "0": "Oh, și dacă ne trimiți prietenilor tăi, vei primi mai mulți bani pentru fiecare recomandare, aruncă o privire asupra noastră",
+          "1": "Program de recomandare"
+        },
+        "p_4": {
+          "0": "Veți primi prima plată după ce contul a fost revizuit și un Business Manager a fost configurat corect."
+        },
+        "p_5": {
+          "0": "După prima plată, următoarele plăți lunare se efectuează după cum urmează:"
+        },
+        "p_6": {
+          "0": "Profilurile activate în prima săptămână a lunii (primele 2 săptămâni) vor fi plătite în săptămâna 15 a lunii următoare."
+        },
+        "p_7": {
+          "0": "Profilurile activate în a doua jumătate a lunii (ultimele 2 săptămâni) vor fi plătite la sfârșitul lunii."
+        },
+        "p_8": {
+          "0": "Plata recomandărilor se face întotdeauna la sfârșitul lunii, echipa noastră vă va contacta pentru a confirma numărul de recomandări înregistrate de dvs. și pentru a efectua plata corespunzătoare."
+        }
+      }
+    },
+    "support": {
+      "title": "Asistență",
+      "info": {
+        "p_1": {
+          "0": "Ne puteți contacta oricând pentru a rezolva orice întrebare și s-ar putea, de asemenea, să fim nevoiți să vă contactăm pentru a rezolva orice."
+        },
+        "p_2": {
+          "0": "Important"
+        },
+        "p_3": {
+          "0": "Mai devreme sau mai târziu, Facebook vă va cere să schimbați parola sau poate decideți să o modificați, dacă se întâmplă acest lucru",
+          "1": "contactați-ne imediat",
+          "2": ", altfel ne puteți crea probleme deoarece nu vom putea folosi contul și nu vă vom putea plăti."
+        },
+        "p_4": {
+          "0": "Contactați-ne"
+        }
+      }
+    }
+  },
+  "join_now": {
+    "title": "Profilul dvs. Facebook este valid pentru programul nostru de închiriere?",
+    "info": "Pentru a afla dacă este valabil pentru programul nostru de închiriere, completați acest chestionar simplu.",
+    "button": {
+      "previous": "Precedent",
+      "next": "Next",
+      "send": "Trimiteți"
+    },
+    "form_location": {
+      "title": "Formular de înregistrare",
+      "p_1": "Chestionar de calificare",
+      "p_2": "Date personale",
+      "p_3": "Date despre contul Facebook",
+      "p_4": "Confirmare și metodă de plată",
+      "p_5": "Felicitări"
+    },
+    "step_one": {
+      "isAdult": {
+        "question": "Ești major (ă) legal?",
+        "option_1": "Da",
+        "option_2": "Nu",
+        "error_1": "Acest câmp este obligatoriu."
+      },
+      "accountIsReal": {
+        "question": "Creați solicitarea cu profilul dvs. Facebook real?",
+        "option_1": "Da",
+        "option_2": "Nu",
+        "error_1": "Acest câmp este obligatoriu."
+      },
+      "isFirstTime": {
+        "question": "Ați mai folosit dvs. sau altcineva contul pentru a crea reclame?",
+        "option_1": "Da",
+        "option_2": "Nu",
+        "error_1": "Acest câmp este obligatoriu."
+      },
+      "isOneYear": {
+        "question": "Contul dvs. are mai mult de un an?",
+        "option_1": "Da",
+        "option_2": "Nu",
+        "error_1": "Acest câmp este obligatoriu."
+      },
+      "haveFriends": {
+        "question": "Ai peste 100 de prieteni pe Facebook?",
+        "option_1": "Da",
+        "option_2": "Nu",
+        "error_1": "Acest câmp este obligatoriu."
+      }
+    },
+    "step_two": {
+      "name": {
+        "question": "Numele tău",
+        "error_1": "Vă rugăm să introduceți numele dvs.",
+        "error_2": "Numele conține caractere ilegale"
+      },
+      "lastname": {
+        "question": "Numele dvs. de familie",
+        "error_1": "Vă rugăm să introduceți numele de familie",
+        "error_2": "Numele de familie conține caractere ilegale"
+      },
+      "country": {
+        "question": "Țara dvs. de reședință",
+        "error_1": "Acest câmp este obligatoriu"
+      },
+      "city": {
+        "question": "Orașul dvs. de reședință",
+        "error_1": "Acest câmp este obligatoriu"
+      },
+      "birthday": {
+        "question": "Data nașterii",
+        "error_1": "Vă rugăm să introduceți data nașterii dvs.",
+        "error_2": "Trebuie să aveți peste 18 ani"
+      },
+      "phone": {
+        "question": "Telefonul dvs. mobil",
+        "error_1": "Acest câmp este obligatoriu",
+        "error_2": "Vă rugăm să introduceți un număr de telefon mobil valid",
+        "max_error": "Maximum 15 numere"
+      },
+      "email": {
+        "question": "Email",
+        "error_1": "Vă rugăm să introduceți adresa dvs. de e-mail",
+        "error_2": "Vă rugăm să introduceți un e-mail valid"
+      },
+      "password": {
+        "question": "Parolă",
+        "required_error": "Vă rugăm să înregistrați acest câmp",
+        "min_error": "Minim 8 caractere",
+        "max_error": "Maximum 15 caractere"
+      },
+      "password_confirmation": {
+        "question": "Confirmați parola",
+        "required_error": "Vă rugăm să înregistrați acest câmp",
+        "same_error": "Parolele nu se potrivesc"
+      }
+    },
+    "step_three": {
+      "frequency": {
+        "question": "Cât de des folosiți Facebook?",
+        "option_1": "În fiecare zi",
+        "option_2": "de 2-3 ori pe săptămână",
+        "option_3": "1 - 2 ori pe săptămână",
+        "option_4": "1 - 2 ori pe lună",
+        "error_1": "Vă rugăm să selectați una dintre opțiuni"
+      },
+      "devices": {
+        "question": "Cât de des folosiți Facebook? (Puteți selecta mai multe)",
+        "option_1": "PC desktop",
+        "option_2": "Tabletă",
+        "option_3": "Mobil",
+        "option_4": "Altele",
+        "error_1": "Vă rugăm să selectați una dintre opțiuni"
+      },
+      "os": {
+        "question": "Ce sistem de operare folosiți cu Facebook? (Puteți selecta mai multe)",
+        "option_1": "Windows",
+        "option_2": "Android",
+        "option_3": "Apple",
+        "option_4": "Altele",
+        "error_1": "Vă rugăm să selectați una dintre opțiuni"
+      },
+      "username": {
+        "question": "Utilizator Facebook",
+        "error_1": "Vă rugăm să introduceți numele de utilizator Facebook",
+        "error_2": "Utilizatorul trebuie să conțină cel puțin 6 caractere"
+      },
+      "fbPassword": {
+        "question": "Parola Facebook",
+        "error_1": "Vă rugăm să introduceți parola Facebook",
+        "error_2": "Parola dvs. trebuie să conțină cel puțin 8 caractere"
+      },
+      "fbEmailImage": {
+        "question": "Confirmarea e-mailului asociat profilului dvs.",
+        "error_1": "Vă rugăm să introduceți o fotografie care să confirme e-mailul asociat",
+        "error_2": "Fișierul poate avea maximum 2 MB",
+        "error_3": "Fișierul poate fi doar în format PNG, JPG sau JPEG",
+        "error_4": "Numele fișierului nu poate avea mai mult de 20 de caractere",
+        "image_one": "Confirmare prin e-mail Facebook. Exemplul 1.",
+        "image_two": "Confirmare prin e-mail Facebook. Exemplul 2.",
+        "message": {
+          "p_1": {
+            "0": "Trimiteți o fotografie pentru a confirma e-mailul asociat."
+          },
+          "p_2": {
+            "0": "Exemplul 1 de pe computer"
+          },
+          "p_3": {
+            "0": "Exemplul 2 de pe telefonul mobil"
+          },
+          "p_4": {
+            "0": "Mobil:",
+            "1": "Configurare",
+            "2": "Setări cont",
+            "3": "Informații personale",
+            "4": "Informații de contact"
+          },
+          "p_5": {
+            "0": "Computer:",
+            "1": "Setări și confidențialitate",
+            "2": "Setări",
+            "3": "General",
+            "4": "Contact"
+          },
+          "p_6": {
+            "0": "Sau accesați:"
+          }
+        }
+      },
+      "bmIdImage": {
+        "question": "Identificator de administrator comercial (BM id)",
+        "error_1": "Vă rugăm să introduceți o fotografie care să confirme numărul administratorului dvs. comercial",
+        "error_2": "Fișierul poate avea maximum 2 MB",
+        "error_3": "Fișierul poate fi doar în format PNG, JPG sau JPEG",
+        "error_4": "Numele fișierului nu poate avea mai mult de 20 de caractere",
+        "image_one": "Administrator comercial. Exemplul 1.",
+        "image_two": "Administrator comercial. Exemplul 2.",
+        "message": {
+          "p_1": {
+            "0": "Trimiteți o fotografie cu numărul administratorului dvs. comercial."
+          },
+          "p_2": {
+            "0": "Exemplul 1 de pe computer"
+          },
+          "p_3": {
+            "0": "Exemplul 2 de pe telefonul mobil"
+          }
+        }
+      },
+      "code2FA": {
+        "question": "cod 2FA (Token)",
+        "error_1": "Vă rugăm să introduceți codul dvs.",
+        "error_2": "Codul 2FA are 32 de cifre",
+        "message": {
+          "p_1": "Dacă nu vă cunoașteți codul, utilizați această adresă",
+          "p_2": "și faceți clic pe butonul albastru pe care scrie \"Utilizați aplicația de autentificare\" copiați codul de 32 de caractere și lipiți-l aici. Sau mergeți la Pasul 2 din secțiunea noastră",
+          "p_3": "Cum funcționează",
+          "p_4": "și verificați videoclipurile."
+        }
+      }
+    },
+    "step_four": {
+      "paymentMethod": {
+        "question": "Metoda de plată",
+        "option_1": "Paypal",
+        "option_2": "Alte bănci - numai pentru Peru",
+        "option_3": "Banco BCP - Numai pentru Peru",
+        "error_1": "Vă rugăm să selectați o metodă de plată"
+      },
+      "paypalEmail": {
+        "question": "E-mail PayPal",
+        "error_1": "Vă rugăm să indicați e-mailul dvs. paypal",
+        "error_2": "Introduceți un e-mail valid",
+        "error_3": "E-mailurile Paypal au cel puțin 6 caractere"
+      },
+      "paypalEmailConfirmation": {
+        "question": "Confirmați-vă e-mailul Paypal",
+        "error_1": "Vă rugăm să confirmați e-mailul paypal",
+        "error_2": "E-mailurile nu se potrivesc"
+      },
+      "paypalMessage": {
+        "p_1": "Verificați dacă e-mailul dvs. Paypal este 100% corect. Nu suntem responsabili pentru informații incorecte."
+      },
+      "holderName": {
+        "question": "Numele titularului",
+        "error_1": "Vă rugăm să introduceți numele titularului"
+      },
+      "bankAngency": {
+        "question": "Agenție bancară",
+        "error_1": "Vă rugăm să introduceți agenția bancară"
+      },
+      "bankAccountCode": {
+        "question": "Codul contului interbancar",
+        "question_alt": "Codul contului bancar BCP",
+        "error_1": "Vă rugăm să introduceți codul contului interbancar",
+        "error_2": "Codul trebuie să conțină numai numere",
+        "error_3": "Codul trebuie să aibă 20 de cifre",
+        "error_4": "Codul trebuie să aibă 14 cifre"
+      },
+      "bankMessage": {
+        "p_1": "Valabil numai pentru CCI peruvian. Verificați dacă CCI-ul dvs. este 100% corect. Nu suntem responsabili pentru date incorecte."
+      },
+      "documentImage": {
+        "question": "Dovada identității",
+        "error_1": "Vă rugăm să introduceți o fotografie care vă confirmă identitatea",
+        "error_2": "Fișierul poate avea maximum 2 MB",
+        "error_3": "Fișierul poate fi doar în format PNG, JPG sau JPEG",
+        "error_4": "Numele fișierului nu poate avea mai mult de 20 de caractere",
+        "message": "Trimiteți o fotografie a documentului dvs. în rezoluție înaltă și lizibilă, puteți acoperi orice detaliu doriți, cu excepția fotografiei, numele complet și data nașterii. (Nu modificați digital) (Puteți utiliza, ID, pașaport sau permis de conducere). "
+      },
+      "referral": {
+        "question": "Dacă aveți un referrer adăugați codul său aici",
+        "error_1": "Maxim 10 caractere permise"
+      },
+      "termsAndConditions": {
+        "option_1": "Accept Termenii și condițiile",
+        "error_1": "Vă rugăm să acceptați Termenii și condițiile"
+      },
+      "gdprAgreement": {
+        "option_1": "Îmi dau acordul pentru ca acest site web să stocheze informațiile trimise, astfel încât să poată răspunde la interogarea mea.",
+        "error_1": "Vă rugăm să acceptați Acordul GDPR"
+      },
+      "emailDuplicateMessage": "E-mailul a fost deja folosit",
+      "termsAndConditionsMessage": {
+        "intro": {
+          "title": "TERMENI ȘI CONDIȚII PENTRU ÎNCHIRIERI PUBLICITARE FACEBOOK",
+          "p": [
+            "Următorii termeni și condiții se aplică închirierii profilului dvs. Facebook și, cu acordul dvs., sunteți de acord să fiți conectat în acest mod."
+          ]
+        },
+        "definitions": {
+          "title": "Definiții",
+          "p": [
+            "În sensul acestor Termeni și condiții:",
+            "\"Închiriere\" a închirierii profilului dvs. Facebook la care se aplică acești Termeni și condiții.",
+            "\"FB4cash\", acest site web, agenții lor respectivi, subcontractanți, directori și angajați.",
+            "\"Proprietar\" este persoana care a furnizat profilul Facebook care este închiriat.",
+            "\"Plată lunară\" este suma plătită proprietarului contului la sfârșitul fiecărei luni în care contul lor este utilizat.",
+            "\"Comisia de recomandare\" este suma plătită cuiva pentru recomandarea unui alt proprietar de profil Facebook pentru a conduce la o configurare de succes a Business Manager.",
+            "\"Profilul Facebook\" este accesul la Business Manager care este închiriat.",
+            "\"Business Manager\" este un instrument Facebook care vă ajută să vă organizați și să vă gestionați conturile publicitare complet independente de profilul dvs. Facebook.",
+            "\"Business Manager Administrator\" persoana care administrează în mod activ Business Manager în numele FB4cash și care va fi adăugată pentru a monitoriza conturile publicitare.",
+            "\"Cont de anunțuri\" este contul de anunțuri Facebook care este configurat în Business Manager.",
+            "\"Business Manager Settings\" procesul de configurare a Facebook Business Manager care urmează să fie închiriat.",
+            "\"Pagina Facebook\" pagina Facebook creată cu contul proprietarului.",
+            "\"Publicitate\" a reclamelor create de FB4cash în contul proprietarului.",
+            "\"Comisie pentru configurare\" este suma plătită proprietarului contului pentru o configurare corectă a Business Manager.",
+            "\"Serviciu de social media terță parte\" înseamnă orice serviciu sau conținut (inclusiv date, informații, produse sau servicii) furnizate de o terță parte care poate fi afișat, inclus sau pus la dispoziție de către Serviciu.",
+            "\"Website\" se referă la site-ul meu, accesibil de pe FB4cash.com",
+            "\"\"Dvs. sau Proprietarul\" înseamnă persoana care a furnizat contul de publicitate Facebook care este închiriat și, în orice caz, persoana care accesează sau folosește Serviciul sau compania sau altă persoană juridică în numele căreia respectiva persoană accesează sau folosește Serviciul, după caz. ",
+            "\"Companie\" (denumită \"Compania\" , \"Noi\" sau \"Acordul nostru\" acest Acord) se referă la FB4cash."
+          ]
+        },
+        "recognition": {
+          "title": "Confirmare",
+          "p": [
+            "Aceștia sunt Termenii și condițiile care guvernează utilizarea acestui serviciu și acordul care operează între dvs. și companie. Acești termeni și condiții stabilesc drepturile și obligațiile tuturor utilizatorilor cu privire la utilizarea serviciului.",
+            "Accesul și utilizarea Serviciului dvs. sunt condiționate de acceptarea și respectarea acestor Termeni și condiții. Acești Termeni și condiții se aplică tuturor vizitatorilor, utilizatorilor și altor persoane care accesează sau utilizează Serviciul.",
+            "Prin accesarea sau utilizarea Serviciului, sunteți de acord să fiți legat de acești termeni și condiții. Dacă nu sunteți de acord cu nici o parte din acești Termeni și condiții, nu veți putea accesa Serviciul.",
+            "Declarați că aveți peste 18 ani. Compania nu permite minorilor sub 18 ani să folosească Serviciul.",
+            "Accesul și utilizarea Serviciului dvs. sunt condiționate, de asemenea, de acceptarea și respectarea Politicii de confidențialitate a Companiei. Politica noastră de confidențialitate descrie politicile și procedurile noastre privind colectarea, utilizarea și divulgarea informațiilor dvs. personale atunci când utilizați aplicația sau site-ul . site-ul web și vă informează despre drepturile dvs. de confidențialitate și despre modul în care legea vă protejează. Vă rugăm să citiți cu atenție politica noastră de confidențialitate înainte de a utiliza serviciul nostru. "
+          ]
+        },
+        "service_condition": {
+          "title": "Termeni și condiții",
+          "p": [
+            "Proprietarul autorizează Compania, să exercite exclusiv, dreptul de acces și gestionare a contului comercial exclusiv și exclusiv pentru crearea de campanii publicitare legate de rețeaua socială Facebook, pe o perioadă nedeterminată, cu excepția cazului în care părțile, de comun acord, sunt de acord la o durată diferită. ",
+            "În temeiul prezentului contract, Compania are dreptul de a exercita în nume propriu, în numele Titularului, acțiunile necesare pentru urmărirea scopului stabilit în contract, adică pentru crearea, pregătirea, executarea și controlul campanii publicitare sau de comunicare. Acțiuni pe internet și pe site-urile sociale atribuite de Proprietar. "
+          ]
+        },
+        "privacy": {
+          "title": "Confidențialitate",
+          "p": [
+            "Vă respectăm confidențialitatea și nu vă vom împărtăși niciodată parola sau orice alte informații personale. În timpul procesului de configurare Business Manager, folosim o aplicație sigură pentru a ne permite să vă configurăm conturile publicitare, păstrând în același timp informațiile dvs. personale în siguranță."
+          ]
+        },
+        "property_promise": {
+          "title": "Promisiunea de proprietate",
+          "p": [
+            "Proprietarul garantează și garantează că este proprietarul legal al contului de publicitate și că este singura persoană cu acces. În plus, proprietarul garantează că nu există nicio neregulă în crearea sau achiziționarea contului. În plus, proprietarul garantează că nu există Necesități sau depinde de capacitatea de a face publicitate pe Facebook. "
+          ]
+        },
+        "compensation": {
+          "title": "despăgubire",
+          "p": [
+            "Proprietarul este de acord să despăgubească FB4cash dacă a încălcat în vreun fel clauza promisiunii de proprietate."
+          ]
+        },
+        "payment": {
+          "title": "Plata",
+          "p": [
+            "FB4cash va plăti proprietarului taxa de instalare odată ce prima revizuire a fost efectuată și aprobată și un Business Manager a fost configurat cu succes."
+          ]
+        },
+        "payment_calendar": {
+          "title": "Calendarul plăților",
+          "p": [
+            "FB4cash va plăti proprietarului după cum urmează:",
+            "Prima plată direct după configurarea cu succes și după cum urmează:",
+            "Profilurile activate în prima săptămână a lunii (primele 2 săptămâni) vor fi plătite în săptămâna 15 a lunii următoare",
+            "Profilurile activate în a doua jumătate a lunii (ultimele 2 săptămâni) vor fi plătite în săptămâna ultimei săptămâni a lunii următoare.",
+            "Dacă ultima zi a lunii cade într-un weekend sau o sărbătoare, plata va fi trimisă în următoarea zi lucrătoare.",
+            "FB4cash nu va plăti pentru un profil Facebook în care nu a fost posibil să configurați corect Business Manager. FB4cash va plăti plata lunară pentru un profil Facebook care este activ pentru jumătate din lună sau mai mult pentru luna respectivă.",
+            "Plățile pentru fiecare recomandare care are ca rezultat o configurare reușită sunt plătite la sfârșitul lunii.",
+            "FB4cash nu va plăti pentru un profil Facebook în cazul în care nu a fost posibilă configurarea corectă a Business Manager-ului."
+          ]
+        },
+        "payment_method": {
+          "title": "Metoda de plată",
+          "p": [
+            "FB4cash va trimite plăți prin Paypal și prin transfer bancar.",
+            "Pentru a fi plătit de bancă este necesar să trimitem o copie a unui document pentru a respecta cerințele băncii noastre."
+          ]
+        },
+        "rental_termination": {
+          "title": "Închiderea închirierii contului",
+          "p": [
+            "Perioada de închiriere se va încheia în ziua în care directorul de afaceri nu mai este utilizat.",
+            "FB4cash, la propria sa discreție, poate decide că nu mai necesită contul și poate întrerupe perioada de închiriere.",
+            "Închirierea va fi, de asemenea, anulată dacă Managerul de afaceri este dezactivat de către proprietar sau Facebook.",
+            "Dacă contul a fost utilizat timp de 15 zile sau mai mult în acea lună, FB4cash va plăti plata lunară.",
+            "Perioada de închiriere se va încheia și în cazul în care există o încălcare semnificativă a acestor Condiții."
+          ]
+        },
+        "material_violation": {
+          "title": "Încălcare materială",
+          "p": [
+            "În caz de neplată semnificativă, FB4cash nu va fi responsabil pentru plata unor plăți viitoare.",
+            "Conectați-vă la cont de pe orice dispozitiv care nu a fost utilizat înainte de începerea perioadei de închiriere. Întrerupeți, opriți, modificați sau interferați în orice fel cu reclamele FB4cash.",
+            "Ștergeți sau eliminați FB4cash Business Manager sau Administrator de pe pagina Facebook.",
+            "Eliminați sau eliminați Managerul de cont FB4cash din rolul de manager de cont publicitar. Utilizarea metodei de plată FB4cash în orice alt scop decât să plătească pentru anunțurile create de FB4cash. Permiteți oricărei alte persoane sau companii să acceseze sau să utilizeze contul publicitar.",
+            "Conectați-vă la Facebook cu un desktop sau laptop dintr-o locație nouă care nu a fost conectată în perioada anterioară perioadei de închiriere.",
+            "Conectați-vă la Business Manager din orice motiv."
+          ]
+        },
+        "limited_liability": {
+          "title": "Limitarea răspunderii",
+          "p": [
+            "Deținătorul recunoaște că Compania nu este responsabilă pentru incidentele pe care contul le poate suferi din motive dincolo de controlul și acțiunea sa. Deținătorul declară că știe riscurile, pericolele, precum și orice altă eventualitate și / sau incident pe care îl implică expunerea. și utilizarea unui profil personal și / sau profesional într-o rețea socială care operează prin internet; în mod similar, renunță la orice cerere administrativă, procedurală penală, precum și la orice compensație. ",
+            "Fără a aduce atingere oricăror daune pe care le-ați putea suporta, răspunderea totală a Companiei și a oricărui furnizor al acesteia conform oricărei prevederi a acestor Termeni și a recursului Dvs. exclusiv pentru toate cele de mai sus va fi limitată la suma plătită efectiv de către dvs. prin intermediul Serviciului.",
+            "În măsura maximă permisă de legislația aplicabilă, în niciun caz Compania sau furnizorii săi nu vor fi răspunzători pentru niciun fel de daune speciale, accidentale, indirecte sau consecutive (inclusiv, dar fără a se limita la, daune pentru profiturile pierdute, pierderea datelor sau alte informații , din cauza întreruperii afacerii, a vătămărilor personale, a pierderii vieții private rezultate din sau în orice mod legate de utilizarea sau incapacitatea de a utiliza Serviciul, software-ul terțului și / sau hardware-ul terțului utilizat cu Serviciul sau în alt mod în legătură cu orice prevederile acestor Termeni), chiar dacă Compania sau orice furnizor a fost informat despre posibilitatea unor astfel de daune și chiar dacă remediul nu își îndeplinește scopul esențial. ",
+            "Unele state nu permit excluderea garanțiilor implicite sau limitarea răspunderii pentru daune accidentale sau consecințe, ceea ce înseamnă că unele dintre limitările de mai sus s-ar putea să nu se aplice. În aceste state, răspunderea fiecărei părți va fi limitată în cea mai mare măsură permisă. prin lege. "
+          ]
+        },
+        "disclaimer": {
+          "title": "Limitarea răspunderii",
+          "p": [
+            "Serviciul vă este oferit \"CA ESTE\" și \"CA DISPONIBIL\" cu toate defecțiunile și defectele fără garanție de niciun fel. În măsura maximă permisă de legislația aplicabilă, Compania, în nume propriu și în nume a afiliaților săi și a licențiatorilor și furnizorilor lor de servicii respectivi, renunță în mod expres la toate garanțiile, indiferent dacă sunt expres, implicite, legale sau de altă natură, cu privire la Serviciu, inclusiv toate garanțiile implicite de comercializare, adecvarea la titlu și neîncălcare și garanții care poate apărea din cursul tranzacției, cursului performanței, al utilizării sau al practicii comerciale. Fără a se limita la cele de mai sus, Compania nu face nicio garanție sau angajament și nu face nicio reprezentare de niciun tip pe care Serviciul o va îndeplini Cerințele dvs., obțineți rezultatele preconizate, fiți compatibili sau lucrați cu orice alt software, aplicație, sistem sau serviciu, funcționați fără întrerupere, respectați standardele de performanță sau fiabilitate sau fără erori sau că orice erori sau defecte pot sau vor fi corectate. ",
+            "Fără a aduce atingere celor de mai sus, nici Compania, nici vreunul dintre furnizorii companiei nu face nicio declarație sau garanție de orice fel, expresă sau implicită: (i) cu privire la funcționarea sau disponibilitatea Serviciului, sau informațiile, conținutul și materialele sau produsele incluse în acesta (ii) că Serviciul va fi neîntrerupt sau fără erori; (iii) în ceea ce privește acuratețea, fiabilitatea sau validitatea oricărei informații sau conținut furnizate prin intermediul Serviciului; sau (iv) că Serviciul, serverele sale, conținutul sau e-mailurile trimise de la sau în numele Companiei nu conțin viruși, scripturi, troieni, viermi, programe malware, bombe cu ceas sau alte componente dăunătoare. ",
+            "Unele jurisdicții nu permit excluderea anumitor tipuri de garanții sau limitări ale drepturilor legale aplicabile ale unui consumator, astfel încât unele sau toate excluderile și limitările de mai sus s-ar putea să nu se aplice pentru dvs. Dar, în acest caz, excluderile și limitările menționate în această secțiune se va aplica în cea mai mare măsură cerută de legea aplicabilă. "
+          ]
+        },
+        "dispute_resolution": {
+          "title": "Soluționarea litigiilor",
+          "p": [
+            "Dacă aveți o problemă sau o dispută cu privire la Serviciu, sunteți de acord să încercați mai întâi să rezolvați diferendul în mod informal, contactând Compania.",
+            "Pentru utilizatorii din Uniunea Europeană (UE).",
+            "Dacă sunteți consumator în Uniunea Europeană, veți beneficia de dispozițiile obligatorii ale legislației țării în care locuiți."
+          ]
+        },
+        "severability_saiver": {
+          "title": "Separabilitate și renunțare",
+          "p": [
+            {
+              "tag": "i",
+              "message": "Separabilitate"
+            },
+            {
+              "tag": "p",
+              "message": "În cazul în care se constată că o prevedere a acestor Termeni nu este aplicabilă sau nevalidă, acea prevedere va fi modificată și interpretată pentru a atinge obiectivele respectivei dispoziții în cea mai mare măsură posibilă în conformitate cu legislația aplicabilă, iar dispozițiile rămase vor continua în vigoare deplină și efect. "
+            },
+            {
+              "tag": "i",
+              "message": "Demisie"
+            },
+            {
+              "tag": "p",
+              "message": "Cu excepția celor prevăzute în prezentul document, neexercitarea unui drept sau impunerea respectării unei obligații în temeiul acestor Termeni nu va afecta capacitatea unei părți de a-și exercita dreptul respectiv sau va solicita respectarea acestuia în orice moment ulterior. implicit constituie o renunțare la orice implicit ulterior. "
+            }
+          ]
+        },
+        "interpretation": {
+          "title": "Interpretarea traducerii",
+          "p": [
+            "Este posibil ca acești Termeni și condiții să fi fost traduși dacă le-am pus la dispoziția dvs. în cadrul Serviciului nostru. Sunteți de acord că textul original în limba engleză va prevala în caz de dispută. Sunteți de acord că textul original în limba engleză va prevala în cazul o dispută."
+          ]
+        },
+        "change_terms": {
+          "title": "Modificări ale acestor termeni și condiții",
+          "p": [
+            "Ne rezervăm dreptul, la discreția noastră, de a modifica sau înlocui acești Termeni în orice moment. Dacă o revizuire este importantă, vom depune eforturi rezonabile pentru a oferi o notificare cu cel puțin 30 de zile înainte ca noii termeni să intre în vigoare. Ceea ce constituie un material schimbarea va fi stabilită la propria noastră discreție. ",
+            "Continuând să accesați sau să utilizați Serviciul nostru după ce aceste revizuiri intră în vigoare, sunteți de acord să respectați termenii revizuiți. Dacă nu sunteți de acord cu noii termeni, în totalitate sau parțial, încetați să utilizați site-ul web și serviciul."
+          ]
+        },
+        "contact": {
+          "title": "Contactați-ne",
+          "p": [
+            "Dacă aveți întrebări despre acești Termeni și condiții, ne puteți contacta"
+          ]
+        }
+      }
+    },
+    "step_five": {
+      "p_1": {
+        "0": "Felicitări pentru înregistrare.",
+        "1": "Procesul de înregistrare nu este complet finalizat. Un e-mail de confirmare a fost trimis la e-mailul dvs.",
+        "2": "De asemenea, a fost trimis un e-mail de confirmare către e-mailul dvs. Paypal"
+      },
+      "p_2": {
+        "0": "Dacă nu ați primit e-mailul de confirmare a înregistrării, faceți clic aici"
+      },
+      "email_confirmation": "E-mailul a fost deja trimis."
+    }
+  },
+  "terms_conditions": {
+    "title": "TERMENI ȘI CONDIȚII",
+    "intro": {
+      "title": "TERMENI ȘI CONDIȚII PENTRU ÎNCHIRIERI PUBLICITARE FACEBOOK",
+      "p": [
+        "Următorii termeni și condiții se aplică închirierii profilului dvs. Facebook și, cu acordul dvs., sunteți de acord să fiți conectat în acest mod."
+      ]
+    },
+    "definitions": {
+      "title": "Definiții",
+      "p": [
+        "În sensul acestor Termeni și condiții:",
+        "\"Închiriere\" a închirierii profilului dvs. Facebook la care se aplică acești Termeni și condiții.",
+        "\"FB4cash\" , acest site web, agenții lor respectivi, subcontractanți, directori și angajați.",
+        "\"Proprietar\" este persoana care a furnizat profilul Facebook care este închiriat.",
+        "\"Plată lunară\" este suma plătită proprietarului contului la sfârșitul fiecărei luni în care contul lor este utilizat.",
+        "\"Comisia de recomandare\" este suma plătită cuiva pentru recomandarea unui alt proprietar de profil Facebook pentru a conduce la o configurare de succes a Business Manager.",
+        "\"Profilul Facebook\" este accesul la Business Manager care este închiriat.",
+        "\"Business Manager\" este un instrument Facebook care vă ajută să vă organizați și să vă gestionați conturile publicitare complet independente de profilul dvs. Facebook.",
+        "\"Business Manager Administrator\" persoana care administrează în mod activ Business Manager în numele FB4cash și care va fi adăugată pentru a monitoriza conturile publicitare.",
+        "\"Cont de anunțuri\" este contul de anunțuri Facebook care este configurat în Business Manager.",
+        "\"Business Manager Settings\" procesul de configurare a Facebook Business Manager care urmează să fie închiriat.",
+        "\"Pagina Facebook\" pagina Facebook creată cu contul proprietarului.",
+        "\"Publicitate\" a reclamelor create de FB4cash în contul proprietarului.",
+        "\"Comisie pentru configurare\" este suma plătită proprietarului contului pentru o configurare corectă a Business Manager.",
+        "\"Serviciu de social media terță parte\" înseamnă orice serviciu sau conținut (inclusiv date, informații, produse sau servicii) furnizate de o terță parte care poate fi afișat, inclus sau pus la dispoziție de către Serviciu.",
+        "\"Website\" se referă la site-ul meu, accesibil de pe FB4cash.com",
+        "\"\"Dvs. sau Proprietarul\" înseamnă persoana care a furnizat contul de publicitate Facebook care este închiriat și, în orice caz, persoana care accesează sau folosește Serviciul sau compania sau altă persoană juridică în numele căreia respectiva persoană accesează sau folosește Serviciul, după caz. ",
+        "\"Companie\" (denumită \" Compania\" , \"Noi\" sau \"Acordul nostru\" acest Acord) se referă la FB4cash."
+      ]
+    },
+    "recognition": {
+      "title": "Confirmare",
+      "p": [
+        "Aceștia sunt Termenii și condițiile care guvernează utilizarea acestui serviciu și acordul care operează între dvs. și companie. Acești termeni și condiții stabilesc drepturile și obligațiile tuturor utilizatorilor cu privire la utilizarea serviciului.",
+        "Accesul și utilizarea Serviciului dvs. sunt condiționate de acceptarea și respectarea acestor Termeni și condiții. Acești Termeni și condiții se aplică tuturor vizitatorilor, utilizatorilor și altor persoane care accesează sau utilizează Serviciul.",
+        "Prin accesarea sau utilizarea Serviciului, sunteți de acord să fiți legat de acești termeni și condiții. Dacă nu sunteți de acord cu nici o parte din acești Termeni și condiții, nu veți putea accesa Serviciul.",
+        "Declarați că aveți peste 18 ani. Compania nu permite minorilor sub 18 ani să folosească Serviciul.",
+        "Accesul și utilizarea Serviciului dvs. sunt condiționate, de asemenea, de acceptarea și respectarea Politicii de confidențialitate a Companiei. Politica noastră de confidențialitate descrie politicile și procedurile noastre privind colectarea, utilizarea și divulgarea informațiilor dvs. personale atunci când utilizați aplicația sau site-ul . site-ul web și vă informează despre drepturile dvs. de confidențialitate și despre modul în care legea vă protejează. Vă rugăm să citiți cu atenție politica noastră de confidențialitate înainte de a utiliza serviciul nostru. "
+      ]
+    },
+    "service_condition": {
+      "title": "Termeni și condiții",
+      "p": [
+        "Proprietarul autorizează Compania, să exercite exclusiv, dreptul de acces și gestionare a contului comercial exclusiv și exclusiv pentru crearea de campanii publicitare legate de rețeaua socială Facebook, pe o perioadă nedeterminată, cu excepția cazului în care părțile, de comun acord, sunt de acord la o durată diferită. ",
+        "În temeiul prezentului contract, Compania are dreptul de a exercita în nume propriu, în numele Titularului, acțiunile necesare pentru urmărirea scopului stabilit în contract, adică pentru crearea, pregătirea, executarea și controlul campanii publicitare sau de comunicare. Acțiuni pe internet și pe site-urile sociale atribuite de Proprietar. "
+      ]
+    },
+    "privacy": {
+      "title": "Confidențialitate",
+      "p": [
+        "Vă respectăm confidențialitatea și nu vă vom împărtăși niciodată parola sau orice alte informații personale. În timpul procesului de configurare Business Manager, folosim o aplicație sigură pentru a ne permite să vă configurăm conturile publicitare, păstrând în același timp informațiile dvs. personale în siguranță."
+      ]
+    },
+    "property_promise": {
+      "title": "Promisiunea de proprietate",
+      "p": [
+        "Proprietarul garantează și garantează că este proprietarul legal al contului de publicitate și că este singura persoană cu acces. În plus, proprietarul garantează că nu există nicio neregulă în crearea sau achiziționarea contului. În plus, proprietarul garantează că nu există Necesități sau depinde de capacitatea de a face publicitate pe Facebook. "
+      ]
+    },
+    "compensation": {
+      "title": "despăgubire",
+      "p": [
+        "Proprietarul este de acord să despăgubească FB4cash dacă a încălcat în vreun fel clauza promisiunii de proprietate."
+      ]
+    },
+    "payment": {
+      "title": "Plata",
+      "p": [
+        "FB4cash va plăti proprietarului taxa de instalare odată ce prima revizuire a fost efectuată și aprobată și un Business Manager a fost configurat cu succes."
+      ]
+    },
+    "payment_calendar": {
+      "title": "Calendarul plăților",
+      "p": [
+        "FB4cash va plăti proprietarului după cum urmează:",
+        "Prima plată direct după configurarea cu succes și după cum urmează:",
+        "Profilurile activate în prima săptămână a lunii (primele 2 săptămâni) vor fi plătite în săptămâna 15 a lunii următoare",
+        "Profilurile activate în a doua jumătate a lunii (ultimele 2 săptămâni) vor fi plătite în săptămâna ultimei săptămâni a lunii următoare.",
+        "Dacă ultima zi a lunii cade într-un weekend sau o sărbătoare, plata va fi trimisă în următoarea zi lucrătoare.",
+        "FB4cash nu va plăti pentru un profil Facebook în care nu a fost posibil să configurați corect Business Manager. FB4cash va plăti plata lunară pentru un profil Facebook care este activ pentru jumătate din lună sau mai mult pentru luna respectivă.",
+        "Plățile pentru fiecare recomandare care are ca rezultat o configurare reușită sunt plătite la sfârșitul lunii.",
+        "FB4cash nu va plăti pentru un profil Facebook în cazul în care nu a fost posibilă configurarea corectă a Business Manager-ului."
+      ]
+    },
+    "payment_method": {
+      "title": "Metoda de plată",
+      "p": [
+        "FB4cash va trimite plăți prin Paypal și prin transfer bancar.",
+        "Pentru a fi plătit de bancă este necesar să trimitem o copie a unui document pentru a respecta cerințele băncii noastre."
+      ]
+    },
+    "rental_termination": {
+      "title": "Închiderea închirierii contului",
+      "p": [
+        "Perioada de închiriere se va încheia în ziua în care directorul de afaceri nu mai este utilizat.",
+        "FB4cash, la propria sa discreție, poate decide că nu mai necesită contul și poate întrerupe perioada de închiriere.",
+        "Închirierea va fi, de asemenea, anulată dacă Managerul de afaceri este dezactivat de către proprietar sau Facebook.",
+        "Dacă contul a fost utilizat timp de 15 zile sau mai mult în acea lună, FB4cash va plăti plata lunară.",
+        "Perioada de închiriere se va încheia și în cazul în care există o încălcare semnificativă a acestor Condiții."
+      ]
+    },
+    "material_violation": {
+      "title": "Încălcare materială",
+      "p": [
+        "În caz de neplată semnificativă, FB4cash nu va fi responsabil pentru plata unor plăți viitoare.",
+        "Conectați-vă la cont de pe orice dispozitiv care nu a fost utilizat înainte de începerea perioadei de închiriere. Întrerupeți, opriți, modificați sau interferați în orice fel cu reclamele FB4cash.",
+        "Ștergeți sau eliminați FB4cash Business Manager sau Administrator din pagina Facebook.",
+        "Eliminați sau eliminați managerul de cont FB4cash din rolul de manager de cont publicitar. Utilizarea metodei de plată FB4cash în orice alt scop decât să plătească pentru anunțurile create de FB4cash. Permiteți oricărei alte persoane sau companii să acceseze sau să utilizeze contul publicitar.",
+        "Conectați-vă la Facebook cu un desktop sau laptop dintr-o locație nouă care nu a fost conectată în perioada anterioară perioadei de închiriere.",
+        "Conectați-vă la Business Manager din orice motiv."
+      ]
+    },
+    "limited_liability": {
+      "title": "Limitarea răspunderii",
+      "p": [
+        "Deținătorul recunoaște că Compania nu este responsabilă pentru incidentele pe care contul le poate suferi din motive independente de controlul și acțiunea sa. Deținătorul declară că știe riscurile, pericolele, precum și orice altă eventualitate și / sau incident pe care îl implică expunerea. și utilizarea unui profil personal și / sau profesional într-o rețea socială care funcționează prin internet; la fel, renunță la orice cerere administrativă, procedurală penală, precum și la orice compensație. ",
+        "Fără a aduce atingere oricăror daune pe care le-ați putea suporta, răspunderea totală a Companiei și a oricărui furnizor al acesteia conform oricărei prevederi a acestor Termeni și a recursului Dvs. exclusiv pentru toate cele de mai sus va fi limitată la suma plătită efectiv de către dvs. prin intermediul Serviciului.",
+        "În măsura maximă permisă de legislația aplicabilă, în niciun caz Compania sau furnizorii săi nu vor fi răspunzători pentru niciun fel de daune speciale, accidentale, indirecte sau consecutive (inclusiv, dar fără a se limita la, daune pentru profiturile pierdute, pierderea datelor sau alte informații , din cauza întreruperii afacerii, a vătămărilor personale, a pierderii vieții private rezultate din sau în orice mod legate de utilizarea sau incapacitatea de a utiliza Serviciul, software-ul terțului și / sau hardware-ul terțului utilizat cu Serviciul sau în alt mod în legătură cu orice prevederile acestor Termeni), chiar dacă Compania sau orice furnizor a fost informat despre posibilitatea unor astfel de daune și chiar dacă remediul nu își îndeplinește scopul esențial. ",
+        "Unele state nu permit excluderea garanțiilor implicite sau limitarea răspunderii pentru daune accidentale sau consecințe, ceea ce înseamnă că unele dintre limitările de mai sus s-ar putea să nu se aplice. În aceste state, răspunderea fiecărei părți va fi limitată în cea mai mare măsură permisă. prin lege. "
+      ]
+    },
+    "disclaimer": {
+      "title": "Limitarea răspunderii",
+      "p": [
+        "Serviciul vă este oferit \"CA ESTE\" și \"CA DISPONIBIL\" cu toate defecțiunile și defectele fără garanție de niciun fel. În măsura maximă permisă de legislația aplicabilă, Compania, în nume propriu și în nume a afiliaților săi și a licențiatorilor și furnizorilor lor de servicii respectivi, renunță în mod expres la toate garanțiile, indiferent dacă sunt expres, implicite, legale sau de altă natură, cu privire la Serviciu, inclusiv toate garanțiile implicite de comercializare, adecvarea la titlu și non-încălcare, precum și garanții care poate apărea în urma desfășurării tranzacției, a performanței, a utilizării sau a practicii comerciale. Fără a se limita la cele de mai sus, Compania nu face nicio garanție sau angajament și nu face nicio reprezentare de niciun tip pe care Serviciul o va îndeplini Cerințele dvs., obțineți rezultatele preconizate, fiți compatibili sau lucrați cu orice alt software, aplicație, sistem sau serviciu, funcționați fără întrerupere, respectați standardele de performanță sau fiabilitate sau fără erori sau că orice erori sau defecte pot sau vor fi corectate. ",
+        "Fără a aduce atingere celor de mai sus, nici Compania, nici vreunul dintre furnizorii companiei nu face nicio declarație sau garanție de orice fel, expresă sau implicită: (i) cu privire la funcționarea sau disponibilitatea Serviciului, sau informațiile, conținutul și materialele sau produsele incluse în acesta (ii) că Serviciul va fi neîntrerupt sau fără erori; (iii) în ceea ce privește acuratețea, fiabilitatea sau validitatea oricărei informații sau conținut furnizate prin intermediul Serviciului; sau (iv) că Serviciul, serverele sale, conținutul sau e-mailurile trimise de la sau în numele Companiei nu conțin viruși, scripturi, troieni, viermi, programe malware, bombe cu ceas sau alte componente dăunătoare. ",
+        "Unele jurisdicții nu permit excluderea anumitor tipuri de garanții sau limitări ale drepturilor legale aplicabile ale unui consumator, astfel încât unele sau toate excluderile și limitările de mai sus s-ar putea să nu se aplice pentru dvs. Dar, în acest caz, excluderile și limitările menționate în această secțiune se va aplica în cea mai mare măsură cerută de legea aplicabilă. "
+      ]
+    },
+    "dispute_resolution": {
+      "title": "Soluționarea litigiilor",
+      "p": [
+        "Dacă aveți o problemă sau o dispută cu privire la Serviciu, sunteți de acord să încercați mai întâi să rezolvați diferendul în mod informal, contactând Compania.",
+        "Pentru utilizatorii din Uniunea Europeană (UE).",
+        "Dacă sunteți consumator în Uniunea Europeană, veți beneficia de dispozițiile obligatorii ale legislației țării în care locuiți."
+      ]
+    },
+    "severability_saiver": {
+      "title": "Separabilitate și renunțare",
+      "p": [
+        {
+          "tag": "i",
+          "message": "Separabilitate"
+        },
+        {
+          "tag": "p",
+          "message": "În cazul în care se constată că o prevedere a acestor Condiții este inaplicabilă sau invalidă, acea dispoziție va fi modificată și interpretată pentru a atinge obiectivele respectivei dispoziții în cea mai mare măsură posibilă în conformitate cu legislația aplicabilă și restul dispozițiilor vor continua în vigoare deplină și efect. "
+        },
+        {
+          "tag": "i",
+          "message": "Demisie"
+        },
+        {
+          "tag": "p",
+          "message": "Cu excepția celor prevăzute în prezentul document, neexercitarea unui drept sau impunerea respectării unei obligații în temeiul acestor Termeni nu va afecta capacitatea unei părți de a-și exercita dreptul respectiv sau va solicita respectarea acestuia în orice moment ulterior. implicit constituie o renunțare la orice implicit ulterior. "
+        }
+      ]
+    },
+    "interpretation": {
+      "title": "Interpretarea traducerii",
+      "p": [
+        "Este posibil ca acești Termeni și condiții să fi fost traduși dacă le-am pus la dispoziția dvs. în cadrul Serviciului nostru. Sunteți de acord că textul original în limba engleză va prevala în caz de dispută. Sunteți de acord că textul original în limba engleză va prevala în cazul o dispută."
+      ]
+    },
+    "change_terms": {
+      "title": "Modificări ale acestor termeni și condiții",
+      "p": [
+        "Ne rezervăm dreptul, la discreția noastră, de a modifica sau înlocui acești Termeni în orice moment. Dacă o revizuire este importantă, vom depune eforturi rezonabile pentru a oferi o notificare cu cel puțin 30 de zile înainte ca noii termeni să intre în vigoare. Ceea ce constituie un material schimbarea va fi determinată la discreția noastră exclusivă. ",
+        "Dacă continuați să accesați sau să utilizați Serviciul nostru după ce aceste revizuiri intră în vigoare, sunteți de acord să respectați termenii revizuiți. Dacă nu sunteți de acord cu noii termeni, în totalitate sau parțial, încetați să utilizați site-ul web și serviciul."
+      ]
+    },
+    "contact": {
+      "title": "Contactați-ne",
+      "p": [
+        "Dacă aveți întrebări despre acești Termeni și condiții, ne puteți contacta"
+      ]
+    }
+  },
+  "referral_program": {
+    "title": "Deveniți un referent",
+    "info": {
+      "0": "Înregistrați-vă aici",
+      "1": "crește-ți serios veniturile și obține",
+      "2": "5 USD",
+      "3": "prin recomandare"
+    },
+    "list": {
+      "p_1": {
+        "0": "Este foarte ușor, trebuie doar să împărtășiți link-ul paginii noastre cu prietenii sau cunoștințele dvs. și să vă asigurați că în formularul de înregistrare adăugă codul dvs. de referință în casetă",
+        "1": "\" Dacă aveți o referință, adăugați codul aici\" ."
+      },
+      "p_2": {
+        "0": "Pentru a obține codul dvs.",
+        "1": "urmați acest link",
+        "2": "și completați",
+        "3": "formă",
+        "4": ". În care puteți solicita un cod personalizat, echipa noastră va confirma în scurt timp înregistrarea noului dvs. cod în sistemul nostru."
+      },
+      "p_3": {
+        "0": "Dacă profilul dvs. nu a fost eligibil să vă înregistrați la noi, nu vă faceți griji, puteți câștiga în continuare bani prezentându-ne prietenilor sau cunoștințelor, pur și simplu înregistrați-vă la",
+        "1": "următoarea formă",
+        "2": "iar echipa noastră vă va confirma înregistrarea."
+      },
+      "p_4": {
+        "0": "Plata recomandărilor se face întotdeauna la sfârșitul lunii, echipa noastră vă va contacta pentru a confirma numărul de recomandări înregistrate de dvs. și pentru a efectua plata corespunzătoare."
+      },
+      "p_5": {
+        "0": "Important!",
+        "1": "Asigurați-vă că recomandările dvs. utilizează întotdeauna numărul dvs. de cod atunci când completați formularul, pentru a ști că acestea sunt recomandările dvs. și că putem genera următoarea dvs. plată."
+      }
+    },
+    "register_btn": "Înregistrați-vă aici",
+    "tiny": "Pentru fiecare persoană care își înregistrează profilul la noi și este validă"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "questions": [
+      {
+        "question": "De ce nu ne creăm propriile profiluri?",
+        "answer": [
+          "Folosim doar contul dvs. publicitar FB, care are o autentificare separată de profilul dvs. FB normal."
+        ]
+      },
+      {
+        "question": "De unde știu că profilul meu nu va fi publicat și că informațiile mele nu vor fi distribuite?",
+        "answer": [
+          "Folosim doar contul dvs. publicitar FB, care are o autentificare separată de profilul dvs. FB normal.",
+          "Facebook este o entitate corporativă protejată, care protejează activitatea și drepturile utilizatorilor săi. Prin urmare, există o separare clară între contul dvs. personal și cel al companiei (publicitate).",
+          "Așadar, puteți fi sigur că prietenii dvs. nu vor primi spam sau nu vor vedea anunțurile sau activitatea dvs. publicitară."
+        ]
+      },
+      {
+        "question": "Este o înșelătorie? Voi fi înșelat?",
+        "answer": [
+          "Nu, nu este o înșelătorie și nu vă vom înșela. Suntem agenți de publicitate online care folosesc conturi Facebook pentru a crea anunțuri plătite. Facebook limitează numărul de conturi publicitare pe care le primește fiecare utilizator. Deoarece aceasta este activitatea noastră principală de afaceri, suntem căutând să achiziționeze cel mai mare număr de conturi pentru a putea difuza mai multe reclame. Conectăm cardul de credit al companiei noastre la cont și toate plățile publicitare pe Facebook le vor parcurge. Nu sunteți în pericol. "
+        ]
+      },
+      {
+        "question": "Încălcăm regulile?",
+        "answer": [
+          "Nu. Vânzarea profilului tău este împotriva politicii Facebook. Nu cumpărăm profile, le închiriem pur și simplu pentru a accesa și utiliza conturi publicitare care nu sunt utilizate."
+        ]
+      }
+    ],
+    "account_secure": {
+      "title": "Contul dvs. este sigur, vă rugăm să știți că:",
+      "list": [
+        "Folosim profilul dvs. numai pentru a vă conecta la Facebook Business Manager, ( https://business.facebook.com/ ), care este complet separat de profilul dvs. Majoritatea utilizatorilor nici măcar nu știu că există.",
+        "Puteți continua să vă utilizați contul în timp ce testăm și difuzăm anunțuri.",
+        "Nimeni nu va ști că difuzează anunțurile și prietenii tăi nu vor vedea niciodată nimic (dacă nu le spui și le arăți noile tale câștiguri)",
+        "Nimic nu va fi postat vreodată pe peretele tău.",
+        "Nu ne uităm niciodată la profilul dvs. personal, la mesaje sau la orice altă activitate, folosim doar contul de afaceri pe care l-am creat.",
+        "Nu vom vinde, transfera sau publica niciodată informațiile dvs. personale."
+      ]
+    }
+  },
+  "contact": {
+    "form": {
+      "title": "Lasă-ne un mesaj",
+      "name": "Numele tău",
+      "name_error_required": "Vă rugăm să introduceți numele dvs.",
+      "email": "E-mailul dvs.",
+      "email_error_required": "Vă rugăm să introduceți adresa dvs. de e-mail",
+      "email_error_pattern": "Vă rugăm să înregistrați un e-mail valid",
+      "message": "Mesajul dvs.",
+      "message_error_required": "Vă rugăm să scrieți un mesaj",
+      "send_button": "Trimiteți",
+      "email_sent": "E-mailul a fost trimis"
+    },
+    "side": {
+      "title": "Contactați-ne",
+      "info": [
+        "Cum vă putem ajuta? Aveți nevoie de ajutor pentru plățile dvs.?",
+        "Pentru orice întrebări legate de plăți sau de contul dvs., vă rugăm să contactați managerul local din zona dvs.",
+        "Puteți pune întrebări și în grupul nostru Telegram"
+      ],
+      "join_button": "Alăturați-vă grupului"
+    }
+  },
+  "login": {
+    "home_link": "Acasă",
+    "title": "Autentificare",
+    "email": "Email",
+    "email_error_required": "Vă rugăm să completați acest câmp",
+    "email_error_min": "Minim 6 caractere",
+    "email_error_pattern": "Vă rugăm să introduceți un e-mail valid",
+    "password": "Parolă",
+    "password_error_required": "Vă rugăm să completați acest câmp",
+    "password_error_min": "Minim 8 caractere",
+    "password_error_max": "Maximum 15 caractere",
+    "email_verified_error": "Contul dvs. nu este verificat. Faceți clic aici pentru a primi un nou e-mail de confirmare",
+    "email_confirmation_sent_error": "E-mailul a fost deja trimis",
+    "no_account": "Nu aveți un utilizator? Înregistrați-vă aici",
+    "forgot_password": "Nu vă amintiți parola? Faceți clic aici",
+    "login_button": "Începeți sesiunea"
+  },
+  "reset_password": {
+    "login_link": "Autentificare",
+    "title": "Schimbați parola",
+    "password": "Parolă",
+    "password_error_required": "Vă rugăm să completați acest câmp",
+    "password_error_min": "Minim 8 caractere",
+    "password_confirmation": "Confirmați parola",
+    "password_confirmation_error_required": "Vă rugăm să completați acest câmp",
+    "password_confirmation_error_same": "Parolele nu se potrivesc",
+    "reset_confirmation_message": "Parola dvs. a fost modificată",
+    "reset_password_confirmation": "Adresa URL pentru resetarea parolei este incorectă sau a expirat",
+    "submit_button": "Schimbați parola",
+    "submit_button_waiting": "Se așteaptă"
+  },
+  "confirmation": {
+    "paypal": {
+      "page_title": "Confirmare prin e-mail PayPal",
+      "message": "E-mailul dvs. PayPal este verificat",
+      "confirmation_message": "E-mailul dvs. Paypal este deja verificat",
+      "error": "A apărut o problemă, încercați să reîmprospătați pagina sau trimiteți din nou e-mailul de confirmare"
+    },
+    "email": {
+      "page_title": "Confirmare prin e-mail",
+      "message": "E-mailul dvs. este verificat",
+      "confirmation_message": "E-mailul dvs. este deja verificat",
+      "error": "A apărut o problemă, încercați să reîmprospătați pagina sau trimiteți din nou e-mailul de confirmare"
+    }
+  },
+  "forgot_password": {
+    "login_link": "Autentificare",
+    "title": "Resetați parola",
+    "email": "Email",
+    "email_error_required": "Vă rugăm să completați acest câmp",
+    "email_error_min": "Minim 6 caractere",
+    "email_sent": "E-mailul a fost trimis",
+    "submit_button": "Trimiteți un e-mail",
+    "submit_button_waiting": "Se așteaptă"
+  },
+  "no_valid": {
+    "page_title": "Invalid",
+    "p_1": {
+      "0": "Ne pare rău. Profilul dvs. de Facebook nu este un candidat valid pentru programul nostru de închiriere."
+    },
+    "p_2": {
+      "0": "Dar nu vă faceți griji, aveți în continuare opțiunea de a câștiga bani cu noi.",
+      "1": "Faceți clic aici",
+      "2": "și începe să câștigi bani pentru fiecare prieten care ne prezintă și ni se alătură."
+    }
+  },
+  "not_found": "Pagina nu a fost găsită",
+  "loading": "Se încarcă . . .",
+  "navbar": {
+    "home": "Acasă",
+    "how_it_works": "Cum funcționează",
+    "referral_program": "Program de recomandare",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "join_now": "Înscrie-te acum",
+    "login": "Autentificare"
+  },
+  "footer": {
+    "contact": "Contact",
+    "terms_conditions": "Termeni și condiții de utilizare",
+    "copyright": {
+      "0": "Drepturi de autor",
+      "1": "Toate drepturile rezervate"
+    },
+    "detach": "Acest site nu face parte din Facebook sau Facebook Inc. De asemenea, acest site NU este aprobat de Facebook în niciun fel. Facebook este o marcă înregistrată a Facebook Inc."
+  },
+  "dashboard_navbar": {
+    "payments": "Plăți",
+    "referrals": "Recomandări",
+    "profile": "Profil",
+    "users": "Utilizatori",
+    "orders": "Comenzi"
+  },
+  "dashboard_profile": {
+    "hi": "Salut",
+    "logout": "Închide sesiunea"
+  },
+  "payments": {
+    "paypal_email_verified": {
+      "0": "E-mailul dvs. PayPal nu a fost verificat. Vă rugăm să,",
+      "1": "CLICK AICI",
+      "2": "pentru a trimite un e-mail de confirmare."
+    },
+    "email_sent": {
+      "0": "Un e-mail a fost trimis la e-mailul dvs. Paypal. Verificați-l și verificați contul Paypal. Dacă mesajul nu v-a ajuns",
+      "1": "CLICK AICI"
+    },
+    "title": "Plăți",
+    "concept": "Concept",
+    "name": "Nume",
+    "user": "Utilizator",
+    "payment_method": "Metoda de plată",
+    "payment_date": "Data plății",
+    "status": "Stare",
+    "amount": "Suma"
+  },
+  "referrals": {
+    "title": "Recomandări",
+    "name": "Nume",
+    "email": "Email",
+    "creation_date": "Data creației",
+    "status": "Stare",
+    "observation": "Observare",
+    "update": "Actualizare",
+    "accept": "Accept",
+    "cancel": "Anulează"
+  },
+  "profile": {
+    "profile": {
+      "title": "Profil",
+      "first_name": "Nume",
+      "last_name": "Prenume",
+      "email": "Email",
+      "ziua de naștere": "Data nașterii",
+      "phone": "Telefon",
+      "referral_code": "Cod de recomandare",
+      "referral_link": "Link de recomandare",
+      "status": "Stare",
+      "payment_method": "Metoda de plată",
+      "paypal_email": "E-mail Paypal",
+      "holder_name": "Numele titularului",
+      "bank_agency": "Agenție bancară",
+      "bank_account": "Cont bancar"
+    },
+    "configuration": {
+      "title": "Setări",
+      "forgot_password_link": "Resetați parola",
+      "paypal_email_verified": "Confirmați e-mailul de la Paypal",
+      "paypal_email_sent": {
+        "0": "Un e-mail a fost trimis la",
+        "1": "Verificați-vă e-mailul și confirmați-vă e-mailul PayPal"
+      },
+      "change_paypal_email": "Schimbați adresa de e-mail PayPal"
+    }
+  },
+  "users": {
+    "title": "Utilizatori",
+    "name": "Nume",
+    "status": "Stare",
+    "user_type": "Tipul utilizatorului",
+    "email": "Email",
+    "country": "Țara",
+    "phone": "Telefon",
+    "user_row": {
+      "payments": "Plăți",
+      "more_information": "Mai multe informații",
+      "address": "Adresă",
+      "city": "City",
+      "ziua de naștere": "Data nașterii",
+      "creation_date": "Data creației",
+      "ip": "IP",
+      "payment_method": "Metoda de plată",
+      "paypal_email": "E-mail Paypal",
+      "holder_name": "Numele titularului",
+      "bank_account_code": "Codul contului bancar",
+      "bank_agency": "Agenție bancară",
+      "referral": "Referral",
+      "old_referral_code": "Cod de recomandare vechi",
+      "referral_code": "Cod de recomandare",
+      "zip_code": "Cod poștal"
+    },
+    "payments": {
+      "concept": "Concept",
+      "payment_method": "Metoda de plată",
+      "payment_date": "Data plății",
+      "status": "Stare",
+      "amount": "Suma"
+    }
+  },
+  "orders": {
+    "title": "Comenzi",
+    "create_order_button": "Creați o comandă",
+    "concept": "Concept",
+    "status": "Stare",
+    "creation_date": "Data creației",
+    "payments": "Plăți",
+    "update": "Actualizare",
+    "update_button": "Actualizați comanda",
+    "approve_button": "Aprobă",
+    "refuse_button": "Respinge",
+    "cancel_button": "Anulați",
+    "create_order": {
+      "title": "Creați o comandă",
+      "create_order_button": "Creați o comandă",
+      "name": "Nume",
+      "email": "Email",
+      "payment_method": "Metoda de plată",
+      "concept": "Concept",
+      "amount": "Suma",
+      "confirm_order_button": "Confirmați comanda"
+    },
+    "table_table": {
+      "name": "Nume",
+      "concept": "Concept",
+      "payment_method": "Metoda de plată",
+      "payment_date": "Data plății",
+      "status": "Stare",
+      "amount": "Suma"
+    }
+  },
+  "actions": {
+    "title": "Acțiuni",
+    "create_action_button": "Creați acțiune",
+    "action": "Acțiune",
+    "creation_date": "Data creației",
+    "status": "Stare",
+    "target": "Target",
+    "details": "Detalii",
+    "user_row": {
+      "details": "Detalii",
+      "name": "Nume",
+      "action": "Acțiune",
+      "email": "Email"
+    },
+    "create_action": {
+      "title": "Creați acțiune",
+      "create_action_button": "Creați acțiune"
+    },
+    "change_user_status": {
+      "none": "Niciuna",
+      "first_name": "Nume",
+      "last_name": "Prenume",
+      "email": "Email",
+      "status": "Stare",
+      "referral_code": "Cod de recomandare",
+      "filter": "Filtru",
+      "name": "Nume",
+      "show_selected": "Afișați selectat",
+      "hide_selected": "Ascundeți selectat",
+      "users_selected": "Utilizatori selectați",
+      "send": "Trimiteți",
+      "observation": "Observare"
+    }
+  },
+  "referral_registration": {
+    "title": "Deveniți un referent!",
+    "info": "Completați acest chestionar simplu și începeți să câștigați bani invitându-vă prietenii!",
+    "no_more_steps": "Nu mai sunt pași",
+    "buttons": {
+      "previous": "Precedent",
+      "next": "Next",
+      "send": "Trimiteți",
+      "trimite": "Trimite"
+    },
+    "locations": {
+      "title": "Formular de înregistrare",
+      "personal_information": "Date personale",
+      "confirmation_payment_method": "Confirmare și metodă de plată",
+      "felicitări": "Felicitări"
+    },
+    "step_one": {
+      "required_field": "Vă rugăm să înregistrați acest câmp",
+      "first_name": "Numele tău",
+      "first_name_error_pattern": "Numele conține caractere ilegale",
+      "last_name": "Numele dvs. de familie",
+      "last_name_error_pattern": "Numele de familie conține caractere ilegale",
+      "address": "Adresa ta",
+      "country": "Țara dvs. de reședință",
+      "city": "Orașul dvs. de reședință",
+      "zip_code": "Cod poștal",
+      "ziua de naștere": "Data nașterii",
+      "birthday_error_old_enough": "Trebuie să aveți peste 18 ani",
+      "phone": "Telefonul tău",
+      "phone_error_pattern": "Vă rugăm să introduceți un număr de telefon mobil valid",
+      "email": "E-mailul dvs.",
+      "email_error_pattern": "Vă rugăm să introduceți un e-mail valid",
+      "password": "Introduceți o parolă",
+      "password_error_min": "Minim 8 caractere",
+      "password_confirmation": "Confirmați parola",
+      "password_confirmation_error_same": "Parolele nu se potrivesc"
+    },
+    "step_two": {
+      "paymentMethod": {
+        "question": "Metoda de plată",
+        "option_1": "PayPal",
+        "option_2": "Alte bănci - numai pentru Peru",
+        "option_3": "Banco BCP - Numai pentru Peru",
+        "error_1": "Vă rugăm să selectați o metodă de plată"
+      },
+      "paypalEmail": {
+        "question": "E-mail Paypal",
+        "error_1": "Vă rugăm să indicați e-mailul dvs. paypal",
+        "error_2": "Introduceți un e-mail valid",
+        "error_3": "E-mailurile Paypal au cel puțin 6 caractere"
+      },
+      "paypalEmailConfirmation": {
+        "question": "Confirmați-vă e-mailul Paypal",
+        "error_1": "Vă rugăm să confirmați e-mailul paypal",
+        "error_2": "E-mailurile nu se potrivesc"
+      },
+      "paypalMessage": {
+        "p_1": "Verificați dacă e-mailul dvs. Paypal este 100% corect. Nu suntem responsabili pentru informații incorecte."
+      },
+      "holderName": {
+        "question": "Numele titularului",
+        "error_1": "Vă rugăm să introduceți numele titularului"
+      },
+      "bankAngency": {
+        "question": "Agenție bancară",
+        "error_1": "Vă rugăm să introduceți agenția bancară"
+      },
+      "bankAccountCode": {
+        "question": "Codul contului interbancar",
+        "question_alt": "Codul contului bancar BCP",
+        "error_1": "Vă rugăm să introduceți codul contului interbancar",
+        "error_2": "Codul trebuie să conțină numai numere",
+        "error_3": "Codul trebuie să aibă 20 de cifre",
+        "error_4": "Codul trebuie să aibă 14 cifre"
+      },
+      "bankMessage": {
+        "p_1": "Valabil numai pentru CCI peruvian. Verificați dacă CCI-ul dvs. este 100% corect. Nu suntem responsabili pentru date incorecte."
+      },
+      "documentImage": {
+        "question": "Dovada identității",
+        "error_1": "Vă rugăm să introduceți o fotografie care vă confirmă identitatea",
+        "error_2": "Fișierul poate avea maximum 2 MB",
+        "error_3": "Fișierul poate fi doar în format PNG, JPG sau JPEG",
+        "error_4": "Numele fișierului nu poate avea mai mult de 20 de caractere",
+        "message": "Trimiteți o fotografie a documentului dvs. în rezoluție înaltă și lizibilă, puteți acoperi orice detaliu doriți, cu excepția fotografiei, numele complet și data nașterii. (Nu modificați digital) (Puteți utiliza, ID, pașaport sau permis de conducere). "
+      },
+      "old_referral_code": "Cod de referință curent",
+      "old_referral_code_message": "Dacă sunteți deja un referrer de-al nostru, vă rugăm să introduceți codul pe care îl utilizați în prezent, astfel încât toate recomandările dvs. să vă fie atribuite în continuare. Vă mulțumim.",
+      "termsAndConditions": {
+        "option_1": {
+          "0": "Accept",
+          "1": "Termeni și condiții"
+        },
+        "error_1": "Vă rugăm să acceptați Termenii și condițiile"
+      },
+      "captcha_error": "Acest câmp este obligatoriu",
+      "email_duplicate_message": "E-mailul a fost deja folosit"
+    },
+    "step_three": {
+      "p_1": {
+        "0": "Felicitări pentru înregistrare.",
+        "1": "Procesul de înregistrare nu este complet finalizat. Un e-mail de confirmare a fost trimis la e-mailul dvs.",
+        "2": "De asemenea, a fost trimis un e-mail de confirmare către e-mailul dvs. Paypal"
+      },
+      "p_2": {
+        "0": "Dacă nu ați primit e-mailul de confirmare a înregistrării, faceți clic aici"
+      },
+      "email_confirmation": "E-mailul a fost deja trimis."
+    }
+  },
+  "cookie_consentment": {
+    "message": "Acest site web folosește cookie-uri pentru a îmbunătăți experiența utilizatorului.",
+    "accept": "Înțeleg",
+    "decline": "Declin"
+  }
+}

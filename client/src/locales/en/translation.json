@@ -266,7 +266,7 @@
           },
           "extra": {
             "p_1": "Código de confirmación",
-            "p_2": "Without closing the page, open another http: //2fa.live, paste your Token and click “Submit”. Copy the last 6 numbers of the result.",
+            "p_2": "Without closing the page, open another http://2fa.live, paste your Token and click “Submit”. Copy the last 6 numbers of the result.",
             "p_3": "Also, if you prefer, you can use an App like Google Authenticator, Duo Mobile or LastPass.."
           },
           "li_7": {
