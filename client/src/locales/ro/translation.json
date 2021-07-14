@@ -450,7 +450,7 @@
         "error_2": "Vă rugăm să introduceți un e-mail valid"
       },
       "password": {
-        "question": "Parolă",
+        "question": "Introduceți o parolă",
         "required_error": "Vă rugăm să înregistrați acest câmp",
         "min_error": "Minim 8 caractere",
         "max_error": "Maximum 15 caractere"

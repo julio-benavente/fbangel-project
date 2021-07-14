@@ -450,7 +450,7 @@
         "error_2": "Inserisci un'email valida"
       },
       "password": {
-        "question": "Password",
+        "question": "Inserisci una password",
         "required_error": "Registra questo campo",
         "min_error": "Minimo 8 caratteri",
         "max_error": "Massimo 15 caratteri"

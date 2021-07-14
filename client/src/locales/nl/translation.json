@@ -450,7 +450,7 @@
         "error_2": "Voer een geldig e-mailadres in"
       },
       "password": {
-        "question": "Wachtwoord",
+        "question": "Voer een wachtwoord in",
         "required_error": "Registreer dit veld aub",
         "min_error": "Minimaal 8 tekens",
         "max_error": "Maximaal 15 tekens"

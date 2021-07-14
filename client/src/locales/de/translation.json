@@ -450,7 +450,7 @@
         "error_2": "Bitte geben Sie eine gültige E-Mail ein"
       },
       "password": {
-        "question": "Passwort",
+        "question": "Geben Sie ein Passwort ein",
         "required_error": "Bitte dieses Feld registrieren",
         "min_error": "Mindestens 8 Zeichen",
         "max_error": "Maximal 15 Zeichen"

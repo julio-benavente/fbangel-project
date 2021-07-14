@@ -450,7 +450,7 @@
         "error_2": "Ingrese un email válido"
       },
       "password": {
-        "question": "Contraseña",
+        "question": "Ingrese una contraseña",
         "required_error": "Por favor, registre este campo",
         "min_error": "Mínimo 8 caracteres",
         "max_error": "Máximo 15 caracteres"

@@ -454,7 +454,7 @@
         "error_2": "Veuillez entrer un email valide"
       },
       "password": {
-        "question": "Mot de passe",
+        "question": "Entrez un mot de passe",
         "required_error": "Veuillez enregistrer ce champ",
         "min_error": "Minimum 8 caractères",
         "max_error": "Maximum 15 caractères"

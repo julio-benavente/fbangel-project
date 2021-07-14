@@ -447,7 +447,7 @@
         "error_2": "Enter a valid email"
       },
       "password": {
-        "question": "Password",
+        "question": "Enter a password",
         "required_error": "This field is required",
         "min_error": "Minimum 8 characters",
         "max_error": "Maximum 15 characters"
